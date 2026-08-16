@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>S.u.G BODY MANAGEMENT SYSTEM V2</title>
 <style>
 :root{
@@ -71,7 +74,7 @@ window.SUG_CLOUD_CONFIG = {
 <div id="authGate" class="authGate">
   <div class="authBox">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V3.4 CLOUD / MEMBERS ONLY</div>
+    <div class="sub">V4 CLOUD / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -203,8 +206,6 @@ window.SUG_CLOUD_CONFIG = {
 
 <script>
 let sb = null;
-let dataSb = null;
-let currentAccessToken = null;
 let sessionUser = null;
 let currentRole = "member";
 let accessibleProfiles = [];
@@ -244,23 +245,15 @@ async function initCloud(){
 
     sb=window.supabase.createClient(cfg.url,cfg.publishableKey,{
       auth:{
+        storageKey:"sug-body-management-v4-auth",
         persistSession:true,
         autoRefreshToken:true,
         detectSessionInUrl:false
       }
     });
 
-    // テスト段階では古いローカルセッションを必ず破棄し、
-    // signInWithPasswordで新しいJWTを取り直す。
-    try{
-      await sb.auth.signOut({scope:"local"});
-    }catch(_e){}
-
-    sessionUser=null;
-    cloudReady=false;
-    db={current:null,members:{}};
-
-    err.textContent="接続OK。メールアドレスとパスワードを入力してください。";
+    // 旧V3系のセッションは storageKey が違うので一切拾わない。
+    err.textContent="接続OK。ログインしてください。";
     setStatus("接続済");
     if(btn){btn.disabled=false;btn.textContent="ログイン";}
   }catch(e){
@@ -276,122 +269,107 @@ async function login(){
   const btn=document.getElementById("loginBtn");
 
   if(!sb){
-    err.textContent="まだSupabaseへ接続できていません。";
+    err.textContent="Supabaseへ接続できていません。";
     return;
   }
 
-  err.textContent="ログイン確認中...";
-  if(btn) btn.disabled=true;
+  const email=loginEmail.value.trim();
+  const password=loginPassword.value;
+
+  if(!email||!password){
+    err.textContent="メールアドレスとパスワードを入力してください。";
+    return;
+  }
+
+  err.textContent="ログイン中...";
+  btn.disabled=true;
 
   try{
-    const email=loginEmail.value.trim();
-    const password=loginPassword.value;
-
-    if(!email||!password){
-      err.textContent="メールアドレスとパスワードを入力してください。";
-      if(btn) btn.disabled=false;
-      return;
-    }
-
     const {data,error}=await sb.auth.signInWithPassword({email,password});
 
     if(error){
       err.textContent="ログイン失敗："+error.message;
-      setStatus("未ログイン");
-      if(btn) btn.disabled=false;
+      btn.disabled=false;
       return;
     }
 
-    if(!data?.user || !data?.session?.access_token){
+    if(!data?.session?.access_token || !data?.user){
       err.textContent="ログインセッションを取得できませんでした。";
-      if(btn) btn.disabled=false;
+      btn.disabled=false;
       return;
     }
 
-    currentAccessToken=data.session.access_token;
+    // Supabase公式推奨のJWT検証。
+    const {data:claimData,error:claimError}=await sb.auth.getClaims();
+    if(claimError){
+      err.textContent="認証トークン確認失敗："+claimError.message;
+      btn.disabled=false;
+      return;
+    }
 
-    // DB / Storage用。ユーザーJWTを明示的にAuthorizationへ載せる。
-    dataSb=window.supabase.createClient(
-      window.SUG_CLOUD_CONFIG.url,
-      window.SUG_CLOUD_CONFIG.publishableKey,
-      {
-        accessToken: async () => currentAccessToken
-      }
-    );
+    const claims=claimData?.claims||{};
+    if(claims.sub!==data.user.id || claims.role!=="authenticated"){
+      err.textContent="認証情報不一致｜role:"+(claims.role||"なし")+"｜sub:"+(claims.sub||"なし");
+      btn.disabled=false;
+      return;
+    }
 
     await onSignedIn(data.user);
   }catch(e){
     console.error(e);
     err.textContent="ログイン処理エラー："+(e?.message||String(e));
-    if(btn) btn.disabled=false;
+    btn.disabled=false;
   }
 }
 async function logout(){
-  if(sb) await sb.auth.signOut();
-  dataSb=null;
-  currentAccessToken=null;
+  if(sb) await sb.auth.signOut({scope:"local"});
   showLogin();
-}
-
-function showLogin(){
-  sessionUser=null;dataSb=null;currentAccessToken=null;cloudReady=false;db={current:null,members:{}};
-  authGate.classList.remove("hidden");logoutBtn.style.display="none";setStatus("未ログイン");
-  const btn=document.getElementById("loginBtn");
-  if(btn && sb){btn.disabled=false;btn.textContent="ログイン";}
 }
 function showApp(){authGate.classList.add("hidden");logoutBtn.style.display="inline-block";}
 
 async function onSignedIn(user){
-  if(!dataSb){
-    document.getElementById("authError").textContent="認証済みデータ接続を作成できませんでした。";
-    return;
-  }
   sessionUser=user;
   setStatus("同期中");
+
   const errEl=document.getElementById("authError");
   const btn=document.getElementById("loginBtn");
 
-  const {data:rows,error}=await dataSb
+  const {data:me,error}=await sb
     .from("profiles")
     .select("id,display_name,role")
-    .eq("id",user.id);
+    .eq("id",user.id)
+    .maybeSingle();
 
   if(error){
     errEl.textContent="プロフィール取得失敗："+error.message;
-    if(btn){btn.disabled=false;btn.textContent="ログイン";}
+    btn.disabled=false;
     return;
   }
 
-  if(!rows || rows.length===0){
-    errEl.textContent="プロフィール0件｜ログインID："+user.id;
-    if(btn){btn.disabled=false;btn.textContent="ログイン";}
+  if(!me){
+    errEl.textContent="プロフィールが見つかりません｜ログインID："+user.id;
+    btn.disabled=false;
     return;
   }
 
-  if(rows.length>1){
-    errEl.textContent="プロフィールが重複しています："+rows.length+"件";
-    if(btn){btn.disabled=false;btn.textContent="ログイン";}
-    return;
-  }
-
-  const me=rows[0];
   currentRole=me.role||"member";
 
   const q=currentRole==="trainer"
-    ? dataSb.from("profiles").select("id,display_name,role").order("display_name")
-    : dataSb.from("profiles").select("id,display_name,role").eq("id",user.id);
+    ? sb.from("profiles").select("id,display_name,role").order("display_name")
+    : sb.from("profiles").select("id,display_name,role").eq("id",user.id);
 
   const {data:profiles,error:pe}=await q;
+
   if(pe){
     errEl.textContent="会員一覧取得失敗："+pe.message;
-    if(btn){btn.disabled=false;btn.textContent="ログイン";}
+    btn.disabled=false;
     return;
   }
 
   accessibleProfiles=profiles||[];
   if(!accessibleProfiles.length){
     errEl.textContent="アクセス可能な会員がありません。";
-    if(btn){btn.disabled=false;btn.textContent="ログイン";}
+    btn.disabled=false;
     return;
   }
 
@@ -404,7 +382,7 @@ async function onSignedIn(user){
 async function loadMember(id){
   setStatus("読込中");
   const p=accessibleProfiles.find(x=>x.id===id);
-  const {data,error}=await dataSb.from("member_data").select("data").eq("user_id",id).maybeSingle();
+  const {data,error}=await sb.from("member_data").select("data").eq("user_id",id).maybeSingle();
   if(error){alert("会員データを読み込めませんでした");console.error(error);return}
   db.current=id;
   db.members[id]=(data?.data && Object.keys(data.data).length)?data.data:baseMember(p?.display_name||"会員");
@@ -418,7 +396,7 @@ async function saveCloud(){
   if(!cloudReady||!sb||!db.current||!m()) return;
   setStatus("保存中");
   const payload=JSON.parse(JSON.stringify(m()));
-  const {error}=await dataSb.from("member_data").upsert({user_id:db.current,data:payload,updated_at:new Date().toISOString()},{onConflict:"user_id"});
+  const {error}=await sb.from("member_data").upsert({user_id:db.current,data:payload,updated_at:new Date().toISOString()},{onConflict:"user_id"});
   if(error){setStatus("保存失敗");console.error(error);return}
   setStatus("同期済");
 }
@@ -429,7 +407,7 @@ function persist(){
 function saveRender(){persist();renderAll()}
 
 function newMember(){
-  alert("V3では会員アカウントを先に発行してから管理します。管理者用の会員招待機能は次の段階で追加します。");
+  alert("V4では会員アカウントを先に発行してから管理します。管理者用の会員招待機能は次の段階で追加します。");
 }
 async function switchMember(id){
   if(id===db.current)return;
@@ -453,7 +431,7 @@ function addRecovery(){m().recovery.push({date:rDate.value,sleep:n("rSleep"),fat
 async function remove(type,i){
   if(type==="photos"){
     const ph=m().photos[i];
-    if(ph?.path && dataSb){await dataSb.storage.from("body-photos").remove([ph.path])}
+    if(ph?.path && sb){await sb.storage.from("body-photos").remove([ph.path])}
   }
   m()[type].splice(i,1);saveRender();
 }
@@ -478,7 +456,7 @@ async function addPhoto(){
     setStatus("写真保存中");
     const blob=await compressImage(f);
     const path=`${db.current}/${Date.now()}.jpg`;
-    const {error}=await dataSb.storage.from("body-photos").upload(path,blob,{contentType:"image/jpeg",upsert:false});
+    const {error}=await sb.storage.from("body-photos").upload(path,blob,{contentType:"image/jpeg",upsert:false});
     if(error)throw error;
     m().photos.push({date:pDate.value,path,memo:pMemo.value});
     pFile.value="";pMemo.value="";await saveCloud();renderAll();
@@ -512,7 +490,7 @@ async function renderPhotos(){
     const x=m().photos[ri];
     let url="";
     if(x.path){
-      const {data}=await dataSb.storage.from("body-photos").createSignedUrl(x.path,3600);
+      const {data}=await sb.storage.from("body-photos").createSignedUrl(x.path,3600);
       url=data?.signedUrl||"";
     } else if(x.data){url=x.data}
     items.push(`<div class="photo">${url?`<img src="${url}">`:""}<p>${esc(x.date)}<br>${esc(x.memo)}</p><button class="danger" style="width:100%;border-radius:0" onclick="remove('photos',${ri})">削除</button></div>`);
