@@ -64,6 +64,7 @@ window.SUG_CLOUD_CONFIG = {
   publishableKey: "sb_publishable_zcn7r2YSKDZa1lXJvmk3sg_GulOJXwI"
 };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
 
@@ -75,7 +76,7 @@ window.SUG_CLOUD_CONFIG = {
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
     <input id="loginPassword" type="password" autocomplete="current-password" placeholder="Password">
-    <button class="primary" onclick="login()">ログイン</button>
+    <button id="loginBtn" class="primary" onclick="login()" disabled>接続中...</button>
     <div id="authError" class="authError"></div>
     <div class="setupNote">S.u.G会員限定。アカウントは管理者が発行します。</div>
   </div>
@@ -224,57 +225,118 @@ function setStatus(t){document.getElementById("cloudStatus").textContent=t}
 
 async function initCloud(){
   const cfg=window.SUG_CLOUD_CONFIG||{};
+  const err=document.getElementById("authError");
+  const btn=document.getElementById("loginBtn");
+
   if(!cfg.url || !cfg.publishableKey || cfg.publishableKey.includes("YOUR_")){
-    authError.textContent="Cloud設定が未入力です。config.js にSupabase Publishable Keyを設定してください。";
+    err.textContent="Cloud設定が未入力です。";
     setStatus("未設定");
+    if(btn){btn.disabled=true;btn.textContent="設定未完了";}
     return;
   }
+
   try{
-    const mod=await import("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm");
-    sb=mod.createClient(cfg.url,cfg.publishableKey);
-    const {data}=await sb.auth.getSession();
-    if(data.session) await onSignedIn(data.session.user);
+    if(!window.supabase || typeof window.supabase.createClient!=="function"){
+      throw new Error("Supabaseライブラリを読み込めませんでした");
+    }
+
+    sb=window.supabase.createClient(cfg.url,cfg.publishableKey,{
+      auth:{
+        persistSession:true,
+        autoRefreshToken:true,
+        detectSessionInUrl:true
+      }
+    });
+
+    const {data,error}=await sb.auth.getSession();
+    if(error) throw error;
+
+    if(data.session){
+      await onSignedIn(data.session.user);
+    }else{
+      err.textContent="接続OK。メールアドレスとパスワードを入力してください。";
+      setStatus("接続済");
+      if(btn){btn.disabled=false;btn.textContent="ログイン";}
+    }
+
     sb.auth.onAuthStateChange(async(_event,session)=>{
       if(session?.user && sessionUser?.id!==session.user.id) await onSignedIn(session.user);
       if(!session?.user) showLogin();
     });
   }catch(e){
-    authError.textContent="クラウド接続の初期化に失敗しました。";
-    setStatus("接続失敗");
     console.error(e);
+    err.textContent="接続エラー："+(e?.message||String(e));
+    setStatus("接続失敗");
+    if(btn){btn.disabled=true;btn.textContent="接続失敗";}
   }
 }
 
 async function login(){
-  if(!sb) return;
-  authError.textContent="";
-  setStatus("ログイン中");
-  const email=loginEmail.value.trim(), password=loginPassword.value;
-  if(!email||!password){authError.textContent="メールアドレスとパスワードを入力してください。";return}
-  const {data,error}=await sb.auth.signInWithPassword({email,password});
-  if(error){authError.textContent="ログインできませんでした。入力内容を確認してください。";setStatus("未ログイン");return}
-  await onSignedIn(data.user);
+  const err=document.getElementById("authError");
+  const btn=document.getElementById("loginBtn");
+
+  if(!sb){
+    err.textContent="まだSupabaseへ接続できていません。";
+    return;
+  }
+
+  err.textContent="ログイン確認中...";
+  if(btn) btn.disabled=true;
+
+  try{
+    const email=loginEmail.value.trim();
+    const password=loginPassword.value;
+
+    if(!email||!password){
+      err.textContent="メールアドレスとパスワードを入力してください。";
+      if(btn) btn.disabled=false;
+      return;
+    }
+
+    const {data,error}=await sb.auth.signInWithPassword({email,password});
+
+    if(error){
+      err.textContent="ログイン失敗："+error.message;
+      setStatus("未ログイン");
+      if(btn) btn.disabled=false;
+      return;
+    }
+
+    if(!data?.user){
+      err.textContent="ログイン情報を取得できませんでした。";
+      if(btn) btn.disabled=false;
+      return;
+    }
+
+    await onSignedIn(data.user);
+  }catch(e){
+    console.error(e);
+    err.textContent="ログイン処理エラー："+(e?.message||String(e));
+    if(btn) btn.disabled=false;
+  }
 }
 async function logout(){ if(sb) await sb.auth.signOut(); showLogin(); }
 
 function showLogin(){
   sessionUser=null;cloudReady=false;db={current:null,members:{}};
   authGate.classList.remove("hidden");logoutBtn.style.display="none";setStatus("未ログイン");
+  const btn=document.getElementById("loginBtn");
+  if(btn && sb){btn.disabled=false;btn.textContent="ログイン";}
 }
 function showApp(){authGate.classList.add("hidden");logoutBtn.style.display="inline-block";}
 
 async function onSignedIn(user){
   sessionUser=user; setStatus("同期中");
   const {data:me,error}=await sb.from("profiles").select("id,display_name,role").eq("id",user.id).single();
-  if(error||!me){authError.textContent="会員プロフィールがありません。管理者へ連絡してください。";return}
+  if(error||!me){authError.textContent="プロフィール取得失敗："+(error?.message||"profilesにデータがありません");document.getElementById("loginBtn").disabled=false;return}
   currentRole=me.role||"member";
   const q=currentRole==="trainer"
     ? sb.from("profiles").select("id,display_name,role").order("display_name")
     : sb.from("profiles").select("id,display_name,role").eq("id",user.id);
   const {data:profiles,error:pe}=await q;
-  if(pe){authError.textContent="会員一覧を取得できませんでした。";return}
+  if(pe){authError.textContent="会員一覧取得失敗："+pe.message;document.getElementById("loginBtn").disabled=false;return}
   accessibleProfiles=profiles||[];
-  if(!accessibleProfiles.length){authError.textContent="アクセス可能な会員がありません。";return}
+  if(!accessibleProfiles.length){authError.textContent="アクセス可能な会員がありません。";document.getElementById("loginBtn").disabled=false;return}
   showApp();
   await loadMember(accessibleProfiles[0].id);
   cloudReady=true;setStatus("同期済");
