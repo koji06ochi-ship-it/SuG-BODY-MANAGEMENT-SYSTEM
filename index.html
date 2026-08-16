@@ -71,7 +71,7 @@ window.SUG_CLOUD_CONFIG = {
 <div id="authGate" class="authGate">
   <div class="authBox">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V3 CLOUD / MEMBERS ONLY</div>
+    <div class="sub">V3.3 CLOUD / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -244,25 +244,23 @@ async function initCloud(){
       auth:{
         persistSession:true,
         autoRefreshToken:true,
-        detectSessionInUrl:true
+        detectSessionInUrl:false
       }
     });
 
-    const {data,error}=await sb.auth.getSession();
-    if(error) throw error;
+    // テスト段階では古いローカルセッションを必ず破棄し、
+    // signInWithPasswordで新しいJWTを取り直す。
+    try{
+      await sb.auth.signOut({scope:"local"});
+    }catch(_e){}
 
-    if(data.session){
-      await onSignedIn(data.session.user);
-    }else{
-      err.textContent="接続OK。メールアドレスとパスワードを入力してください。";
-      setStatus("接続済");
-      if(btn){btn.disabled=false;btn.textContent="ログイン";}
-    }
+    sessionUser=null;
+    cloudReady=false;
+    db={current:null,members:{}};
 
-    sb.auth.onAuthStateChange(async(_event,session)=>{
-      if(session?.user && sessionUser?.id!==session.user.id) await onSignedIn(session.user);
-      if(!session?.user) showLogin();
-    });
+    err.textContent="接続OK。メールアドレスとパスワードを入力してください。";
+    setStatus("接続済");
+    if(btn){btn.disabled=false;btn.textContent="ログイン";}
   }catch(e){
     console.error(e);
     err.textContent="接続エラー："+(e?.message||String(e));
@@ -326,20 +324,59 @@ function showLogin(){
 function showApp(){authGate.classList.add("hidden");logoutBtn.style.display="inline-block";}
 
 async function onSignedIn(user){
-  sessionUser=user; setStatus("同期中");
-  const {data:me,error}=await sb.from("profiles").select("id,display_name,role").eq("id",user.id).single();
-  if(error||!me){authError.textContent="プロフィール取得失敗："+(error?.message||"profilesにデータがありません");document.getElementById("loginBtn").disabled=false;return}
+  sessionUser=user;
+  setStatus("同期中");
+  const errEl=document.getElementById("authError");
+  const btn=document.getElementById("loginBtn");
+
+  const {data:rows,error}=await sb
+    .from("profiles")
+    .select("id,display_name,role")
+    .eq("id",user.id);
+
+  if(error){
+    errEl.textContent="プロフィール取得失敗："+error.message;
+    if(btn){btn.disabled=false;btn.textContent="ログイン";}
+    return;
+  }
+
+  if(!rows || rows.length===0){
+    errEl.textContent="プロフィール0件｜ログインID："+user.id;
+    if(btn){btn.disabled=false;btn.textContent="ログイン";}
+    return;
+  }
+
+  if(rows.length>1){
+    errEl.textContent="プロフィールが重複しています："+rows.length+"件";
+    if(btn){btn.disabled=false;btn.textContent="ログイン";}
+    return;
+  }
+
+  const me=rows[0];
   currentRole=me.role||"member";
+
   const q=currentRole==="trainer"
     ? sb.from("profiles").select("id,display_name,role").order("display_name")
     : sb.from("profiles").select("id,display_name,role").eq("id",user.id);
+
   const {data:profiles,error:pe}=await q;
-  if(pe){authError.textContent="会員一覧取得失敗："+pe.message;document.getElementById("loginBtn").disabled=false;return}
+  if(pe){
+    errEl.textContent="会員一覧取得失敗："+pe.message;
+    if(btn){btn.disabled=false;btn.textContent="ログイン";}
+    return;
+  }
+
   accessibleProfiles=profiles||[];
-  if(!accessibleProfiles.length){authError.textContent="アクセス可能な会員がありません。";document.getElementById("loginBtn").disabled=false;return}
+  if(!accessibleProfiles.length){
+    errEl.textContent="アクセス可能な会員がありません。";
+    if(btn){btn.disabled=false;btn.textContent="ログイン";}
+    return;
+  }
+
   showApp();
   await loadMember(accessibleProfiles[0].id);
-  cloudReady=true;setStatus("同期済");
+  cloudReady=true;
+  setStatus("同期済");
 }
 
 async function loadMember(id){
