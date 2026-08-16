@@ -74,7 +74,7 @@ window.SUG_CLOUD_CONFIG = {
 <div id="authGate" class="authGate">
   <div class="authBox">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V4 CLOUD / MEMBERS ONLY</div>
+    <div class="sub">V5 CLOUD / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -206,6 +206,7 @@ window.SUG_CLOUD_CONFIG = {
 
 <script>
 let sb = null;
+let accessToken = null;
 let sessionUser = null;
 let currentRole = "member";
 let accessibleProfiles = [];
@@ -264,6 +265,39 @@ async function initCloud(){
   }
 }
 
+
+async function apiGet(path){
+  const cfg=window.SUG_CLOUD_CONFIG;
+  const res=await fetch(cfg.url+path,{
+    method:"GET",
+    headers:{
+      "apikey":cfg.publishableKey,
+      "Authorization":"Bearer "+accessToken,
+      "Accept":"application/json"
+    }
+  });
+  const text=await res.text();
+  let body=null;
+  try{body=text?JSON.parse(text):null}catch(_e){body=text}
+  return {ok:res.ok,status:res.status,body,text};
+}
+
+async function apiUpsert(path, payload){
+  const cfg=window.SUG_CLOUD_CONFIG;
+  const res=await fetch(cfg.url+path,{
+    method:"POST",
+    headers:{
+      "apikey":cfg.publishableKey,
+      "Authorization":"Bearer "+accessToken,
+      "Content-Type":"application/json",
+      "Prefer":"resolution=merge-duplicates,return=minimal"
+    },
+    body:JSON.stringify(payload)
+  });
+  const text=await res.text();
+  return {ok:res.ok,status:res.status,text};
+}
+
 async function login(){
   const err=document.getElementById("authError");
   const btn=document.getElementById("loginBtn");
@@ -314,6 +348,7 @@ async function login(){
       return;
     }
 
+    accessToken=data.session.access_token;
     await onSignedIn(data.user);
   }catch(e){
     console.error(e);
@@ -323,6 +358,7 @@ async function login(){
 }
 async function logout(){
   if(sb) await sb.auth.signOut({scope:"local"});
+  accessToken=null;
   showLogin();
 }
 function showApp(){authGate.classList.add("hidden");logoutBtn.style.display="inline-block";}
@@ -334,39 +370,40 @@ async function onSignedIn(user){
   const errEl=document.getElementById("authError");
   const btn=document.getElementById("loginBtn");
 
-  const {data:me,error}=await sb
-    .from("profiles")
-    .select("id,display_name,role")
-    .eq("id",user.id)
-    .maybeSingle();
+  const self=await apiGet(
+    "/rest/v1/profiles?select=id,display_name,role&id=eq."+encodeURIComponent(user.id)
+  );
 
-  if(error){
-    errEl.textContent="プロフィール取得失敗："+error.message;
+  if(!self.ok){
+    errEl.textContent="プロフィールAPI失敗｜HTTP "+self.status+"｜"+self.text;
     btn.disabled=false;
     return;
   }
 
-  if(!me){
-    errEl.textContent="プロフィールが見つかりません｜ログインID："+user.id;
+  const rows=Array.isArray(self.body)?self.body:[];
+  if(rows.length===0){
+    errEl.textContent="プロフィール0件｜ログインID："+user.id;
     btn.disabled=false;
     return;
   }
 
+  const me=rows[0];
   currentRole=me.role||"member";
 
-  const q=currentRole==="trainer"
-    ? sb.from("profiles").select("id,display_name,role").order("display_name")
-    : sb.from("profiles").select("id,display_name,role").eq("id",user.id);
-
-  const {data:profiles,error:pe}=await q;
-
-  if(pe){
-    errEl.textContent="会員一覧取得失敗："+pe.message;
-    btn.disabled=false;
-    return;
+  if(currentRole==="trainer"){
+    const all=await apiGet(
+      "/rest/v1/profiles?select=id,display_name,role&order=display_name.asc"
+    );
+    if(!all.ok){
+      errEl.textContent="会員一覧API失敗｜HTTP "+all.status+"｜"+all.text;
+      btn.disabled=false;
+      return;
+    }
+    accessibleProfiles=Array.isArray(all.body)?all.body:[];
+  }else{
+    accessibleProfiles=[me];
   }
 
-  accessibleProfiles=profiles||[];
   if(!accessibleProfiles.length){
     errEl.textContent="アクセス可能な会員がありません。";
     btn.disabled=false;
@@ -382,22 +419,59 @@ async function onSignedIn(user){
 async function loadMember(id){
   setStatus("読込中");
   const p=accessibleProfiles.find(x=>x.id===id);
-  const {data,error}=await sb.from("member_data").select("data").eq("user_id",id).maybeSingle();
-  if(error){alert("会員データを読み込めませんでした");console.error(error);return}
+
+  const r=await apiGet(
+    "/rest/v1/member_data?select=data&user_id=eq."+encodeURIComponent(id)
+  );
+
+  if(!r.ok){
+    alert("会員データ読込失敗｜HTTP "+r.status);
+    console.error(r);
+    return;
+  }
+
+  const row=Array.isArray(r.body)?r.body[0]:null;
   db.current=id;
-  db.members[id]=(data?.data && Object.keys(data.data).length)?data.data:baseMember(p?.display_name||"会員");
-  if(!db.members[id].profile) db.members[id].profile=baseMember(p?.display_name||"会員").profile;
-  if(!db.members[id].profile.name) db.members[id].profile.name=p?.display_name||"会員";
-  ["weights","meals","training","recovery","photos"].forEach(k=>{if(!Array.isArray(db.members[id][k]))db.members[id][k]=[]});
-  loadProfile();renderAll();setStatus("同期済");
+  db.members[id]=(row?.data && Object.keys(row.data).length)
+    ? row.data
+    : baseMember(p?.display_name||"会員");
+
+  if(!db.members[id].profile)
+    db.members[id].profile=baseMember(p?.display_name||"会員").profile;
+
+  if(!db.members[id].profile.name)
+    db.members[id].profile.name=p?.display_name||"会員";
+
+  ["weights","meals","training","recovery","photos"].forEach(k=>{
+    if(!Array.isArray(db.members[id][k]))db.members[id][k]=[];
+  });
+
+  loadProfile();
+  renderAll();
+  setStatus("同期済");
 }
 
 async function saveCloud(){
-  if(!cloudReady||!sb||!db.current||!m()) return;
+  if(!cloudReady||!accessToken||!db.current||!m()) return;
+
   setStatus("保存中");
   const payload=JSON.parse(JSON.stringify(m()));
-  const {error}=await sb.from("member_data").upsert({user_id:db.current,data:payload,updated_at:new Date().toISOString()},{onConflict:"user_id"});
-  if(error){setStatus("保存失敗");console.error(error);return}
+
+  const r=await apiUpsert(
+    "/rest/v1/member_data?on_conflict=user_id",
+    {
+      user_id:db.current,
+      data:payload,
+      updated_at:new Date().toISOString()
+    }
+  );
+
+  if(!r.ok){
+    setStatus("保存失敗");
+    console.error(r);
+    return;
+  }
+
   setStatus("同期済");
 }
 function persist(){
