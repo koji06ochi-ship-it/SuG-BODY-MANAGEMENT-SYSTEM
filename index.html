@@ -71,7 +71,7 @@ window.SUG_CLOUD_CONFIG = {
 <div id="authGate" class="authGate">
   <div class="authBox">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V3.3 CLOUD / MEMBERS ONLY</div>
+    <div class="sub">V3.4 CLOUD / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -203,6 +203,8 @@ window.SUG_CLOUD_CONFIG = {
 
 <script>
 let sb = null;
+let dataSb = null;
+let currentAccessToken = null;
 let sessionUser = null;
 let currentRole = "member";
 let accessibleProfiles = [];
@@ -300,11 +302,22 @@ async function login(){
       return;
     }
 
-    if(!data?.user){
-      err.textContent="ログイン情報を取得できませんでした。";
+    if(!data?.user || !data?.session?.access_token){
+      err.textContent="ログインセッションを取得できませんでした。";
       if(btn) btn.disabled=false;
       return;
     }
+
+    currentAccessToken=data.session.access_token;
+
+    // DB / Storage用。ユーザーJWTを明示的にAuthorizationへ載せる。
+    dataSb=window.supabase.createClient(
+      window.SUG_CLOUD_CONFIG.url,
+      window.SUG_CLOUD_CONFIG.publishableKey,
+      {
+        accessToken: async () => currentAccessToken
+      }
+    );
 
     await onSignedIn(data.user);
   }catch(e){
@@ -313,10 +326,15 @@ async function login(){
     if(btn) btn.disabled=false;
   }
 }
-async function logout(){ if(sb) await sb.auth.signOut(); showLogin(); }
+async function logout(){
+  if(sb) await sb.auth.signOut();
+  dataSb=null;
+  currentAccessToken=null;
+  showLogin();
+}
 
 function showLogin(){
-  sessionUser=null;cloudReady=false;db={current:null,members:{}};
+  sessionUser=null;dataSb=null;currentAccessToken=null;cloudReady=false;db={current:null,members:{}};
   authGate.classList.remove("hidden");logoutBtn.style.display="none";setStatus("未ログイン");
   const btn=document.getElementById("loginBtn");
   if(btn && sb){btn.disabled=false;btn.textContent="ログイン";}
@@ -324,12 +342,16 @@ function showLogin(){
 function showApp(){authGate.classList.add("hidden");logoutBtn.style.display="inline-block";}
 
 async function onSignedIn(user){
+  if(!dataSb){
+    document.getElementById("authError").textContent="認証済みデータ接続を作成できませんでした。";
+    return;
+  }
   sessionUser=user;
   setStatus("同期中");
   const errEl=document.getElementById("authError");
   const btn=document.getElementById("loginBtn");
 
-  const {data:rows,error}=await sb
+  const {data:rows,error}=await dataSb
     .from("profiles")
     .select("id,display_name,role")
     .eq("id",user.id);
@@ -356,8 +378,8 @@ async function onSignedIn(user){
   currentRole=me.role||"member";
 
   const q=currentRole==="trainer"
-    ? sb.from("profiles").select("id,display_name,role").order("display_name")
-    : sb.from("profiles").select("id,display_name,role").eq("id",user.id);
+    ? dataSb.from("profiles").select("id,display_name,role").order("display_name")
+    : dataSb.from("profiles").select("id,display_name,role").eq("id",user.id);
 
   const {data:profiles,error:pe}=await q;
   if(pe){
@@ -382,7 +404,7 @@ async function onSignedIn(user){
 async function loadMember(id){
   setStatus("読込中");
   const p=accessibleProfiles.find(x=>x.id===id);
-  const {data,error}=await sb.from("member_data").select("data").eq("user_id",id).maybeSingle();
+  const {data,error}=await dataSb.from("member_data").select("data").eq("user_id",id).maybeSingle();
   if(error){alert("会員データを読み込めませんでした");console.error(error);return}
   db.current=id;
   db.members[id]=(data?.data && Object.keys(data.data).length)?data.data:baseMember(p?.display_name||"会員");
@@ -396,7 +418,7 @@ async function saveCloud(){
   if(!cloudReady||!sb||!db.current||!m()) return;
   setStatus("保存中");
   const payload=JSON.parse(JSON.stringify(m()));
-  const {error}=await sb.from("member_data").upsert({user_id:db.current,data:payload,updated_at:new Date().toISOString()},{onConflict:"user_id"});
+  const {error}=await dataSb.from("member_data").upsert({user_id:db.current,data:payload,updated_at:new Date().toISOString()},{onConflict:"user_id"});
   if(error){setStatus("保存失敗");console.error(error);return}
   setStatus("同期済");
 }
@@ -431,7 +453,7 @@ function addRecovery(){m().recovery.push({date:rDate.value,sleep:n("rSleep"),fat
 async function remove(type,i){
   if(type==="photos"){
     const ph=m().photos[i];
-    if(ph?.path && sb){await sb.storage.from("body-photos").remove([ph.path])}
+    if(ph?.path && dataSb){await dataSb.storage.from("body-photos").remove([ph.path])}
   }
   m()[type].splice(i,1);saveRender();
 }
@@ -456,7 +478,7 @@ async function addPhoto(){
     setStatus("写真保存中");
     const blob=await compressImage(f);
     const path=`${db.current}/${Date.now()}.jpg`;
-    const {error}=await sb.storage.from("body-photos").upload(path,blob,{contentType:"image/jpeg",upsert:false});
+    const {error}=await dataSb.storage.from("body-photos").upload(path,blob,{contentType:"image/jpeg",upsert:false});
     if(error)throw error;
     m().photos.push({date:pDate.value,path,memo:pMemo.value});
     pFile.value="";pMemo.value="";await saveCloud();renderAll();
@@ -490,7 +512,7 @@ async function renderPhotos(){
     const x=m().photos[ri];
     let url="";
     if(x.path){
-      const {data}=await sb.storage.from("body-photos").createSignedUrl(x.path,3600);
+      const {data}=await dataSb.storage.from("body-photos").createSignedUrl(x.path,3600);
       url=data?.signedUrl||"";
     } else if(x.data){url=x.data}
     items.push(`<div class="photo">${url?`<img src="${url}">`:""}<p>${esc(x.date)}<br>${esc(x.memo)}</p><button class="danger" style="width:100%;border-radius:0" onclick="remove('photos',${ri})">削除</button></div>`);
