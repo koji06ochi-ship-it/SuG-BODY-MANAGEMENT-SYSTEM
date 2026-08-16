@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>S.u.G BODY MANAGEMENT SYSTEM V2</title>
+<style>
+:root{
+  --bg:#09090a;--card:#141417;--card2:#1a1a1f;--gold:#d8b35b;--gold2:#f3d98b;
+  --text:#f7f7f7;--muted:#a8a8ad;--line:#303037;--ok:#86d7a8;--warn:#ffd166;--bad:#ff8181;
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#070708,#101013 55%,#0a0a0b);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif}
+header{position:sticky;top:0;z-index:40;background:rgba(7,7,8,.96);backdrop-filter:blur(12px);border-bottom:1px solid #26262b;padding:12px}
+.head{max-width:1050px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.brand h1{margin:0;font-size:16px;letter-spacing:.09em}.brand small{color:var(--gold2)}
+.wrap{max-width:1050px;margin:auto;padding:12px 10px 100px}
+.toolbar{display:grid;grid-template-columns:1fr auto;gap:8px;margin-bottom:10px}
+select,input,textarea,button{font:inherit}
+select,input,textarea{width:100%;background:#0d0d10;border:1px solid #36363c;color:#fff;border-radius:10px;padding:10px}
+textarea{min-height:78px;resize:vertical}
+button{cursor:pointer}
+button.primary{background:linear-gradient(180deg,#e7c873,#b88c32);color:#090909;font-weight:800;border:0;border-radius:11px;padding:11px 13px}
+button.secondary{background:#202026;color:#eee;border:1px solid #3b3b42;border-radius:10px;padding:9px 11px}
+button.danger{background:#2a1718;color:#ffc0c0;border:1px solid #6b3336;border-radius:9px;padding:7px 9px}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:8px 0 12px}
+.tab{border:1px solid var(--line);background:#151518;color:#ddd;border-radius:10px;padding:9px 4px;font-size:11px}
+.tab.active{background:#211d14;color:var(--gold2);border-color:var(--gold)}
+.panel{display:none}.panel.active{display:block}
+.card{background:linear-gradient(180deg,var(--card),#101012);border:1px solid var(--line);border-radius:16px;padding:13px;margin-bottom:11px;box-shadow:0 8px 28px rgba(0,0,0,.22)}
+.card h2{font-size:14px;color:var(--gold2);margin:0 0 10px}.card h3{font-size:12px;color:#ddd;margin:10px 0 7px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+label{display:block;color:#b8b8bd;font-size:10px;margin:0 0 4px}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}.kpi{background:#0d0d10;border:1px solid #2b2b31;border-radius:11px;padding:9px}.kpi span{font-size:9px;color:#aaa}.kpi b{display:block;font-size:18px;color:var(--gold2);margin-top:2px}
+.item{background:#0d0d10;border:1px solid #2c2c32;border-radius:11px;padding:9px;margin-bottom:7px}.row{display:flex;justify-content:space-between;gap:7px;align-items:flex-start}.item strong{font-size:12px}.item small{color:#aaa}
+.badge{display:inline-block;padding:3px 7px;border-radius:999px;border:1px solid #494950;font-size:9px;margin-top:5px}.ok{color:var(--ok);border-color:#315a43}.warn{color:var(--warn);border-color:#6a5627}.bad{color:var(--bad);border-color:#713436}
+canvas{width:100%;height:210px;background:#0c0c0f;border:1px solid #28282e;border-radius:12px}
+hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-size:10px}.gold{color:var(--gold2)}
+.photoGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.photo{background:#0c0c0f;border:1px solid #303038;border-radius:10px;overflow:hidden}.photo img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}.photo p{font-size:9px;margin:5px;color:#aaa}
+.table{width:100%;border-collapse:collapse;font-size:10px}.table th,.table td{padding:7px 5px;border-bottom:1px solid #29292f;text-align:right}.table th:first-child,.table td:first-child{text-align:left}
+.notice{border:1px solid #5a4a25;background:#1f1a10;color:#f2d98b;border-radius:11px;padding:9px;font-size:10px}
+@media(min-width:720px){.tabs{grid-template-columns:repeat(8,1fr)}.kpis{grid-template-columns:repeat(4,1fr)}}
+
+.authGate{
+  position:fixed;inset:0;z-index:9999;background:linear-gradient(180deg,#070708,#101013);
+  display:flex;align-items:center;justify-content:center;padding:20px
+}
+.authBox{width:min(430px,100%);background:linear-gradient(180deg,#151518,#0f0f12);
+  border:1px solid #3a3320;border-radius:20px;padding:20px;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+.authBox h1{font-size:20px;margin:0 0 4px;letter-spacing:.08em}
+.authBox .sub{color:var(--gold2);font-size:11px;margin-bottom:18px}
+.authBox input{margin-top:7px}
+.authBox button{width:100%;margin-top:10px}
+.authError{min-height:18px;color:#ff9d9d;font-size:11px;margin-top:9px}
+.cloudStatus{font-size:9px;color:#aaa;margin-right:5px}
+.headActions{display:flex;align-items:center;gap:6px}
+.hidden{display:none!important}
+.setupNote{font-size:10px;line-height:1.7;color:#aaa;margin-top:12px}
+
+</style>
+<script>
+window.SUG_CLOUD_CONFIG = {
+  url: "https://nnqzxcgkqjnmtzcvorha.supabase.co",
+  publishableKey: "sb_publishable_zcn7r2YSKDZa1lXJvmk3sg_GulOJXwI"
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+<div id="authGate" class="authGate">
+  <div class="authBox">
+    <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
+    <div class="sub">V5 CLOUD / MEMBERS ONLY</div>
+    <label>メールアドレス</label>
+    <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
+    <label style="margin-top:10px">パスワード</label>
+    <input id="loginPassword" type="password" autocomplete="current-password" placeholder="Password">
+    <button id="loginBtn" class="primary" onclick="login()" disabled>接続中...</button>
+    <div id="authError" class="authError"></div>
+    <div class="setupNote">S.u.G会員限定。アカウントは管理者が発行します。</div>
+  </div>
+</div>
+
+<header>
+  <div class="head">
+    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V2 / Member Intelligence</small></div>
+    <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button class="secondary" onclick="exportAll()">データ出力</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="toolbar">
+    <select id="memberSelect" onchange="switchMember(this.value)"></select>
+    <button class="primary" onclick="newMember()">＋会員</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="dash">概要</button>
+    <button class="tab" data-tab="weight">体重</button>
+    <button class="tab" data-tab="meal">食事</button>
+    <button class="tab" data-tab="training">トレ</button>
+    <button class="tab" data-tab="recovery">回復</button>
+    <button class="tab" data-tab="photos">写真</button>
+    <button class="tab" data-tab="report">レポート</button>
+    <button class="tab" data-tab="profile">会員情報</button>
+  </div>
+
+  <section id="dash" class="panel active">
+    <div class="card">
+      <h2>現在の状態</h2>
+      <div class="kpis">
+        <div class="kpi"><span>最新体重</span><b id="dWeight">--</b></div>
+        <div class="kpi"><span>7日平均</span><b id="dAvg">--</b></div>
+        <div class="kpi"><span>今日の摂取</span><b id="dKcal">0 kcal</b></div>
+        <div class="kpi"><span>回復スコア</span><b id="dRec">--</b></div>
+      </div>
+    </div>
+    <div class="card"><h2>体重トレンド</h2><canvas id="weightChart" width="900" height="270"></canvas><div id="weightJudge" class="notice" style="margin-top:8px"></div></div>
+    <div class="card"><h2>栄養・体重連動</h2><div id="nutritionInsight" class="item"></div></div>
+    <div class="card"><h2>オーバーロード状況</h2><div id="dashOverload"></div></div>
+    <div class="card"><h2>今日の推奨</h2><div id="todayAdvice" class="item"></div></div>
+  </section>
+
+  <section id="weight" class="panel">
+    <div class="card">
+      <h2>体重記録</h2>
+      <div class="grid2"><div><label>日付</label><input id="wDate" type="date"></div><div><label>体重 kg</label><input id="wWeight" type="number" step="0.1"></div></div>
+      <div class="grid2" style="margin-top:8px"><div><label>体脂肪率 %</label><input id="wFat" type="number" step="0.1"></div><div><label>メモ</label><input id="wMemo"></div></div>
+      <button class="primary" style="width:100%;margin-top:9px" onclick="addWeight()">記録</button>
+    </div>
+    <div class="card"><h2>履歴</h2><div id="weightList"></div></div>
+  </section>
+
+  <section id="meal" class="panel">
+    <div class="card">
+      <h2>食事記録</h2>
+      <div class="grid2"><div><label>日付</label><input id="mDate" type="date"></div><div><label>食事名</label><input id="mName" placeholder="鶏胸肉200g＋白米150g"></div></div>
+      <div class="grid4" style="margin-top:8px"><div><label>kcal</label><input id="mKcal" type="number"></div><div><label>P</label><input id="mP" type="number" step="0.1"></div><div><label>F</label><input id="mF" type="number" step="0.1"></div><div><label>C</label><input id="mC" type="number" step="0.1"></div></div>
+      <button class="primary" style="width:100%;margin-top:9px" onclick="addMeal()">追加</button>
+    </div>
+    <div class="card"><h2>今日の合計</h2><div class="kpis"><div class="kpi"><span>kcal</span><b id="mtKcal">0</b></div><div class="kpi"><span>P</span><b id="mtP">0g</b></div><div class="kpi"><span>F</span><b id="mtF">0g</b></div><div class="kpi"><span>C</span><b id="mtC">0g</b></div></div><div id="mealTarget" class="notice" style="margin-top:8px"></div></div>
+    <div class="card"><h2>履歴</h2><div id="mealList"></div></div>
+  </section>
+
+  <section id="training" class="panel">
+    <div class="card">
+      <h2>トレーニング記録</h2>
+      <div class="grid2"><div><label>日付</label><input id="tDate" type="date"></div><div><label>種目</label><input id="tExercise" placeholder="スミススクワット"></div></div>
+      <div class="grid4" style="margin-top:8px"><div><label>重量</label><input id="tWeight" type="number" step="0.5"></div><div><label>REP</label><input id="tReps" type="number"></div><div><label>SET</label><input id="tSets" type="number"></div><div><label>RIR</label><input id="tRir" type="number" step="0.5"></div></div>
+      <div style="margin-top:8px"><label>メモ</label><input id="tMemo"></div>
+      <button class="primary" style="width:100%;margin-top:9px" onclick="addTraining()">記録して比較</button>
+    </div>
+    <div class="card"><h2>PR / オーバーロード</h2><div id="prTable"></div></div>
+    <div class="card"><h2>履歴</h2><div id="trainingList"></div></div>
+  </section>
+
+  <section id="recovery" class="panel">
+    <div class="card">
+      <h2>回復・コンディション</h2>
+      <div class="grid2"><div><label>日付</label><input id="rDate" type="date"></div><div><label>睡眠時間</label><input id="rSleep" type="number" step="0.1"></div></div>
+      <div class="grid3" style="margin-top:8px"><div><label>疲労 1-10</label><input id="rFatigue" type="number" min="1" max="10"></div><div><label>ストレス 1-10</label><input id="rStress" type="number" min="1" max="10"></div><div><label>痛み 0-10</label><input id="rPain" type="number" min="0" max="10"></div></div>
+      <div style="margin-top:8px"><label>メモ</label><textarea id="rMemo"></textarea></div>
+      <button class="primary" style="width:100%;margin-top:9px" onclick="addRecovery()">記録</button>
+    </div>
+    <div class="card"><h2>判定</h2><div id="recoveryJudge" class="item"></div></div>
+    <div class="card"><h2>履歴</h2><div id="recoveryList"></div></div>
+  </section>
+
+  <section id="photos" class="panel">
+    <div class="card">
+      <h2>身体写真</h2>
+      <div class="notice">V2では端末内に圧縮保存します。大量保存には向きません。クラウド版では会員ごとの安全な保存領域に移行します。</div>
+      <div class="grid2" style="margin-top:9px"><div><label>日付</label><input id="pDate" type="date"></div><div><label>写真</label><input id="pFile" type="file" accept="image/*"></div></div>
+      <div style="margin-top:8px"><label>メモ</label><input id="pMemo" placeholder="正面、背面、減量4週目など"></div>
+      <button class="primary" style="width:100%;margin-top:9px" onclick="addPhoto()">写真を保存</button>
+    </div>
+    <div class="card"><h2>写真履歴</h2><div id="photoGrid" class="photoGrid"></div></div>
+  </section>
+
+  <section id="report" class="panel">
+    <div class="card"><h2>月間レポート</h2><div class="grid2"><div><label>対象月</label><input id="reportMonth" type="month"></div><div style="display:flex;align-items:end"><button class="primary" style="width:100%" onclick="renderReport()">集計</button></div></div></div>
+    <div class="card"><h2>集計結果</h2><div id="reportBody"></div><button class="secondary" style="width:100%;margin-top:10px" onclick="copyReport()">レポート文をコピー</button></div>
+  </section>
+
+  <section id="profile" class="panel">
+    <div class="card">
+      <h2>会員情報</h2>
+      <div class="grid2"><div><label>氏名</label><input id="pfName"></div><div><label>目的</label><select id="pfGoal"><option>筋肥大</option><option>減量</option><option>増量</option><option>健康維持</option><option>姿勢改善</option></select></div></div>
+      <div class="grid2" style="margin-top:8px"><div><label>目標体重</label><input id="pfTargetWeight" type="number" step="0.1"></div><div><label>目標kcal</label><input id="pfTargetKcal" type="number"></div></div>
+      <div class="grid3" style="margin-top:8px"><div><label>目標P</label><input id="pfP" type="number"></div><div><label>目標F</label><input id="pfF" type="number"></div><div><label>目標C</label><input id="pfC" type="number"></div></div>
+      <div style="margin-top:8px"><label>注意事項 / 既往歴</label><textarea id="pfNotes"></textarea></div>
+      <button class="primary" style="width:100%;margin-top:9px" onclick="saveProfile()">保存</button>
+    </div>
+    <div class="card">
+      <h2>会員データ管理</h2>
+      <button class="secondary" style="width:100%" onclick="exportMember()">この会員だけ出力</button>
+      <button class="danger" style="width:100%;margin-top:8px" onclick="deleteMember()">この会員を削除</button>
+    </div>
+  </section>
+</div>
+
+
+<script>
+let sb = null;
+let accessToken = null;
+let sessionUser = null;
+let currentRole = "member";
+let accessibleProfiles = [];
+let saveTimer = null;
+let cloudReady = false;
+
+const today=()=>new Date().toISOString().slice(0,10);
+const monthNow=()=>today().slice(0,7);
+let db={current:null,members:{}};
+
+function baseMember(name="新規会員"){
+  return {profile:{name,goal:"筋肥大",targetWeight:0,targetKcal:0,targetP:0,targetF:0,targetC:0,notes:""},
+    weights:[],meals:[],training:[],recovery:[],photos:[]}
+}
+function m(){return db.members[db.current]}
+function esc(s){return String(s??"").replace(/[&<>"']/g,x=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[x]))}
+function n(id){return Number(document.getElementById(id).value||0)}
+function avg(a){return a.length?a.reduce((s,x)=>s+x,0)/a.length:0}
+function setStatus(t){document.getElementById("cloudStatus").textContent=t}
+
+async function initCloud(){
+  const cfg=window.SUG_CLOUD_CONFIG||{};
+  const err=document.getElementById("authError");
+  const btn=document.getElementById("loginBtn");
+
+  if(!cfg.url || !cfg.publishableKey || cfg.publishableKey.includes("YOUR_")){
+    err.textContent="Cloud設定が未入力です。";
+    setStatus("未設定");
+    if(btn){btn.disabled=true;btn.textContent="設定未完了";}
+    return;
+  }
+
+  try{
+    if(!window.supabase || typeof window.supabase.createClient!=="function"){
+      throw new Error("Supabaseライブラリを読み込めませんでした");
+    }
+
+    sb=window.supabase.createClient(cfg.url,cfg.publishableKey,{
+      auth:{
+        storageKey:"sug-body-management-v4-auth",
+        persistSession:true,
+        autoRefreshToken:true,
+        detectSessionInUrl:false
+      }
+    });
+
+    // 旧V3系のセッションは storageKey が違うので一切拾わない。
+    err.textContent="接続OK。ログインしてください。";
+    setStatus("接続済");
+    if(btn){btn.disabled=false;btn.textContent="ログイン";}
+  }catch(e){
+    console.error(e);
+    err.textContent="接続エラー："+(e?.message||String(e));
+    setStatus("接続失敗");
+    if(btn){btn.disabled=true;btn.textContent="接続失敗";}
+  }
+}
+
+
+async function apiGet(path){
+  const cfg=window.SUG_CLOUD_CONFIG;
+  const res=await fetch(cfg.url+path,{
+    method:"GET",
+    headers:{
+      "apikey":cfg.publishableKey,
+      "Authorization":"Bearer "+accessToken,
+      "Accept":"application/json"
+    }
+  });
+  const text=await res.text();
+  let body=null;
+  try{body=text?JSON.parse(text):null}catch(_e){body=text}
+  return {ok:res.ok,status:res.status,body,text};
+}
+
+async function apiUpsert(path, payload){
+  const cfg=window.SUG_CLOUD_CONFIG;
+  const res=await fetch(cfg.url+path,{
+    method:"POST",
+    headers:{
+      "apikey":cfg.publishableKey,
+      "Authorization":"Bearer "+accessToken,
+      "Content-Type":"application/json",
+      "Prefer":"resolution=merge-duplicates,return=minimal"
+    },
+    body:JSON.stringify(payload)
+  });
+  const text=await res.text();
+  return {ok:res.ok,status:res.status,text};
+}
+
+async function login(){
+  const err=document.getElementById("authError");
+  const btn=document.getElementById("loginBtn");
+
+  if(!sb){
+    err.textContent="Supabaseへ接続できていません。";
+    return;
+  }
+
+  const email=loginEmail.value.trim();
+  const password=loginPassword.value;
+
+  if(!email||!password){
+    err.textContent="メールアドレスとパスワードを入力してください。";
+    return;
+  }
+
+  err.textContent="ログイン中...";
+  btn.disabled=true;
+
+  try{
+    const {data,error}=await sb.auth.signInWithPassword({email,password});
+
+    if(error){
+      err.textContent="ログイン失敗："+error.message;
+      btn.disabled=false;
+      return;
+    }
+
+    if(!data?.session?.access_token || !data?.user){
+      err.textContent="ログインセッションを取得できませんでした。";
+      btn.disabled=false;
+      return;
+    }
+
+    // Supabase公式推奨のJWT検証。
+    const {data:claimData,error:claimError}=await sb.auth.getClaims();
+    if(claimError){
+      err.textContent="認証トークン確認失敗："+claimError.message;
+      btn.disabled=false;
+      return;
+    }
+
+    const claims=claimData?.claims||{};
+    if(claims.sub!==data.user.id || claims.role!=="authenticated"){
+      err.textContent="認証情報不一致｜role:"+(claims.role||"なし")+"｜sub:"+(claims.sub||"なし");
+      btn.disabled=false;
+      return;
+    }
+
+    accessToken=data.session.access_token;
+    await onSignedIn(data.user);
+  }catch(e){
+    console.error(e);
+    err.textContent="ログイン処理エラー："+(e?.message||String(e));
+    btn.disabled=false;
+  }
+}
+async function logout(){
+  if(sb) await sb.auth.signOut({scope:"local"});
+  accessToken=null;
+  showLogin();
+}
+function showApp(){authGate.classList.add("hidden");logoutBtn.style.display="inline-block";}
+
+async function onSignedIn(user){
+  sessionUser=user;
+  setStatus("同期中");
+
+  const errEl=document.getElementById("authError");
+  const btn=document.getElementById("loginBtn");
+
+  const self=await apiGet(
+    "/rest/v1/profiles?select=id,display_name,role&id=eq."+encodeURIComponent(user.id)
+  );
+
+  if(!self.ok){
+    errEl.textContent="プロフィールAPI失敗｜HTTP "+self.status+"｜"+self.text;
+    btn.disabled=false;
+    return;
+  }
+
+  const rows=Array.isArray(self.body)?self.body:[];
+  if(rows.length===0){
+    errEl.textContent="プロフィール0件｜ログインID："+user.id;
+    btn.disabled=false;
+    return;
+  }
+
+  const me=rows[0];
+  currentRole=me.role||"member";
+
+  if(currentRole==="trainer"){
+    const all=await apiGet(
+      "/rest/v1/profiles?select=id,display_name,role&order=display_name.asc"
+    );
+    if(!all.ok){
+      errEl.textContent="会員一覧API失敗｜HTTP "+all.status+"｜"+all.text;
+      btn.disabled=false;
+      return;
+    }
+    accessibleProfiles=Array.isArray(all.body)?all.body:[];
+  }else{
+    accessibleProfiles=[me];
+  }
+
+  if(!accessibleProfiles.length){
+    errEl.textContent="アクセス可能な会員がありません。";
+    btn.disabled=false;
+    return;
+  }
+
+  showApp();
+  await loadMember(accessibleProfiles[0].id);
+  cloudReady=true;
+  setStatus("同期済");
+}
+
+async function loadMember(id){
+  setStatus("読込中");
+  const p=accessibleProfiles.find(x=>x.id===id);
+
+  const r=await apiGet(
+    "/rest/v1/member_data?select=data&user_id=eq."+encodeURIComponent(id)
+  );
+
+  if(!r.ok){
+    alert("会員データ読込失敗｜HTTP "+r.status);
+    console.error(r);
+    return;
+  }
+
+  const row=Array.isArray(r.body)?r.body[0]:null;
+  db.current=id;
+  db.members[id]=(row?.data && Object.keys(row.data).length)
+    ? row.data
+    : baseMember(p?.display_name||"会員");
+
+  if(!db.members[id].profile)
+    db.members[id].profile=baseMember(p?.display_name||"会員").profile;
+
+  if(!db.members[id].profile.name)
+    db.members[id].profile.name=p?.display_name||"会員";
+
+  ["weights","meals","training","recovery","photos"].forEach(k=>{
+    if(!Array.isArray(db.members[id][k]))db.members[id][k]=[];
+  });
+
+  loadProfile();
+  renderAll();
+  setStatus("同期済");
+}
+
+async function saveCloud(){
+  if(!cloudReady||!accessToken||!db.current||!m()) return;
+
+  setStatus("保存中");
+  const payload=JSON.parse(JSON.stringify(m()));
+
+  const r=await apiUpsert(
+    "/rest/v1/member_data?on_conflict=user_id",
+    {
+      user_id:db.current,
+      data:payload,
+      updated_at:new Date().toISOString()
+    }
+  );
+
+  if(!r.ok){
+    setStatus("保存失敗");
+    console.error(r);
+    return;
+  }
+
+  setStatus("同期済");
+}
+function persist(){
+  clearTimeout(saveTimer);
+  saveTimer=setTimeout(()=>saveCloud(),250);
+}
+function saveRender(){persist();renderAll()}
+
+function newMember(){
+  alert("V4では会員アカウントを先に発行してから管理します。管理者用の会員招待機能は次の段階で追加します。");
+}
+async function switchMember(id){
+  if(id===db.current)return;
+  if(saveTimer){clearTimeout(saveTimer);await saveCloud()}
+  await loadMember(id);
+}
+function deleteMember(){
+  alert("クラウド版の会員削除は誤削除防止のため管理者側で行います。");
+}
+function renderMemberSelect(){
+  memberSelect.innerHTML=accessibleProfiles.map(x=>`<option value="${x.id}" ${x.id===db.current?"selected":""}>${esc(x.display_name||"無名")}${x.role==="trainer"?"（管理者）":""}</option>`).join("");
+  const addBtn=document.querySelector('.toolbar .primary');
+  if(addBtn) addBtn.style.display=currentRole==="trainer"?"block":"none";
+}
+
+function addWeight(){if(!n("wWeight"))return alert("体重を入力");m().weights.push({date:wDate.value,weight:n("wWeight"),fat:n("wFat")||null,memo:wMemo.value});m().weights.sort((a,b)=>a.date.localeCompare(b.date));wWeight.value=wFat.value=wMemo.value="";saveRender()}
+function addMeal(){if(!mName.value&&!n("mKcal"))return alert("食事を入力");m().meals.push({date:mDate.value,name:mName.value||"食事",kcal:n("mKcal"),p:n("mP"),f:n("mF"),c:n("mC")});mName.value=mKcal.value=mP.value=mF.value=mC.value="";saveRender()}
+function addTraining(){if(!tExercise.value)return alert("種目名を入力");m().training.push({date:tDate.value,exercise:tExercise.value.trim(),weight:n("tWeight"),reps:n("tReps"),sets:n("tSets"),rir:n("tRir"),memo:tMemo.value});m().training.sort((a,b)=>a.date.localeCompare(b.date));tWeight.value=tReps.value=tSets.value=tRir.value=tMemo.value="";saveRender()}
+function addRecovery(){m().recovery.push({date:rDate.value,sleep:n("rSleep"),fatigue:n("rFatigue"),stress:n("rStress"),pain:n("rPain"),memo:rMemo.value});m().recovery.sort((a,b)=>a.date.localeCompare(b.date));rSleep.value=rFatigue.value=rStress.value=rPain.value=rMemo.value="";saveRender()}
+
+async function remove(type,i){
+  if(type==="photos"){
+    const ph=m().photos[i];
+    if(ph?.path && sb){await sb.storage.from("body-photos").remove([ph.path])}
+  }
+  m()[type].splice(i,1);saveRender();
+}
+
+function compressImage(file){
+  return new Promise((resolve,reject)=>{
+    const img=new Image(),reader=new FileReader();
+    reader.onerror=reject;
+    reader.onload=e=>img.src=e.target.result;
+    img.onload=()=>{
+      let max=1200,scale=Math.min(1,max/img.width),c=document.createElement("canvas");
+      c.width=Math.round(img.width*scale);c.height=Math.round(img.height*scale);
+      c.getContext("2d").drawImage(img,0,0,c.width,c.height);
+      c.toBlob(b=>b?resolve(b):reject(new Error("image compress failed")),"image/jpeg",.78);
+    };
+    reader.readAsDataURL(file);
+  });
+}
+async function addPhoto(){
+  const f=pFile.files[0];if(!f)return alert("写真を選択");
+  try{
+    setStatus("写真保存中");
+    const blob=await compressImage(f);
+    const path=`${db.current}/${Date.now()}.jpg`;
+    const {error}=await sb.storage.from("body-photos").upload(path,blob,{contentType:"image/jpeg",upsert:false});
+    if(error)throw error;
+    m().photos.push({date:pDate.value,path,memo:pMemo.value});
+    pFile.value="";pMemo.value="";await saveCloud();renderAll();
+  }catch(e){console.error(e);alert("写真を保存できませんでした。");setStatus("保存失敗")}
+}
+
+function loadProfile(){if(!m())return;let p=m().profile;pfName.value=p.name||"";pfGoal.value=p.goal||"筋肥大";pfTargetWeight.value=p.targetWeight||"";pfTargetKcal.value=p.targetKcal||"";pfP.value=p.targetP||"";pfF.value=p.targetF||"";pfC.value=p.targetC||"";pfNotes.value=p.notes||""}
+function saveProfile(){let p=m().profile;p.name=pfName.value||p.name;p.goal=pfGoal.value;p.targetWeight=n("pfTargetWeight");p.targetKcal=n("pfTargetKcal");p.targetP=n("pfP");p.targetF=n("pfF");p.targetC=n("pfC");p.notes=pfNotes.value;saveRender()}
+
+function mealTotals(date=today()){return m().meals.filter(x=>x.date===date).reduce((a,x)=>({kcal:a.kcal+x.kcal,p:a.p+x.p,f:a.f+x.f,c:a.c+x.c}),{kcal:0,p:0,f:0,c:0})}
+function recScore(r){if(!r)return null;let s=100;if(r.sleep<7)s-=Math.min(25,(7-r.sleep)*8);s-=Math.max(0,r.fatigue-3)*5;s-=Math.max(0,r.stress-3)*4;s-=r.pain*5;return Math.max(0,Math.round(s))}
+function recAdvice(r){if(!r)return {txt:"回復データ未入力",cls:""};let s=recScore(r);if(r.pain>=6)return {txt:`${s}点｜痛み優先。高負荷回避・種目変更/評価。`,cls:"bad"};if(s>=80)return {txt:`${s}点｜通常〜高強度。前回超えを狙える。`,cls:"ok"};if(s>=60)return {txt:`${s}点｜中強度。RIRを1〜2多めに。`,cls:"warn"};return {txt:`${s}点｜回復優先。低強度または休養。`,cls:"bad"}}
+function vol(x){return x.weight*x.reps*x.sets}
+function e1rm(x){return x.weight*(1+x.reps/30)}
+function exerciseData(ex){return m().training.filter(x=>x.exercise.toLowerCase()===ex.toLowerCase())}
+function overload(ex){let a=exerciseData(ex);if(a.length<2)return {txt:"比較データ不足",cls:""};let p=a[a.length-2],c=a[a.length-1],r=[];if(c.weight>p.weight)r.push("重量↑");if(c.weight===p.weight&&c.reps>p.reps)r.push("REP↑");if(vol(c)>vol(p))r.push("ボリューム↑");if(c.weight===p.weight&&c.reps===p.reps&&c.sets===p.sets&&c.rir>p.rir)r.push("RIR改善");if(r.length)return {txt:"達成｜"+r.join("・"),cls:"ok"};if(vol(c)<vol(p))return {txt:"前回比低下｜疲労/減量/フォーム確認",cls:"warn"};return {txt:"同等｜次回は重量・REP・RIR更新",cls:""}}
+function pr(ex){let a=exerciseData(ex);if(!a.length)return null;return a.reduce((best,x)=>e1rm(x)>e1rm(best)?x:best,a[0])}
+
+function weightStats(){let a=m().weights.slice(-14),last=a.slice(-7),prev=a.slice(-14,-7),l=avg(last.map(x=>x.weight)),p=avg(prev.map(x=>x.weight));return {last,prev,l,p,delta:(l&&p)?l-p:null}}
+function weightJudgement(){let s=weightStats(),g=m().profile.goal;if(s.delta==null)return "7日平均を判定するには体重データがもう少し必要。";let d=s.delta,txt=`7日平均の前週比 ${d>=0?"+":""}${d.toFixed(2)}kg。`;if(g==="減量"){if(d<-0.2&&d>-0.9)txt+=" 減量ペースは概ね良好。";else if(d<=-0.9)txt+=" 落ち幅が大きい。回復・筋力維持を確認。";else if(d>=0)txt+=" 減量停滞。摂取量・活動量・水分変動を確認。"}else if(g==="増量"||g==="筋肥大"){if(d>0&&d<0.6)txt+=" 増量ペースは穏やか。パフォーマンスの伸びも確認。";else if(d>=0.6)txt+=" 増加が速い。脂肪増加も確認。";else txt+=" 体重増加なし。摂取量とトレーニング進捗を確認。"}return txt}
+function nutritionInsightText(){let w=m().weights.slice(-14),meals=m().meals;if(w.length<4)return "体重と食事の記録が増えると、摂取量と体重変化を横断して判定します。";let dates=[...new Set(meals.map(x=>x.date))].slice(-7);let kcal=dates.map(d=>mealTotals(d).kcal).filter(x=>x>0);let ak=avg(kcal),s=weightStats();if(!ak)return "直近の食事記録が不足しています。";let txt=`記録日の平均摂取 ${Math.round(ak)}kcal。`;if(s.delta!=null)txt+=` 体重7日平均は前週比 ${s.delta>=0?"+":""}${s.delta.toFixed(2)}kg。`;if(m().profile.targetKcal)txt+=` 目標 ${m().profile.targetKcal}kcalとの差は平均 ${Math.round(ak-m().profile.targetKcal)}kcal。`;return txt}
+
+function drawChart(){let c=weightChart,ctx=c.getContext("2d"),a=m().weights.slice(-30);ctx.clearRect(0,0,c.width,c.height);if(a.length<2){ctx.fillStyle="#888";ctx.font="22px sans-serif";ctx.fillText("体重データを2件以上記録",30,135);return}let vals=a.map(x=>x.weight),min=Math.min(...vals)-.5,max=Math.max(...vals)+.5,px=45,py=28,w=c.width-75,h=c.height-65;ctx.strokeStyle="#303037";ctx.lineWidth=1;for(let i=0;i<5;i++){let y=py+h*i/4;ctx.beginPath();ctx.moveTo(px,y);ctx.lineTo(px+w,y);ctx.stroke()}ctx.strokeStyle="#d8b35b";ctx.lineWidth=4;ctx.beginPath();a.forEach((x,i)=>{let X=px+w*i/(a.length-1),Y=py+h-(x.weight-min)/(max-min)*h;i?ctx.lineTo(X,Y):ctx.moveTo(X,Y)});ctx.stroke();ctx.fillStyle="#aaa";ctx.font="17px sans-serif";ctx.fillText(max.toFixed(1),3,py+5);ctx.fillText(min.toFixed(1),3,py+h)}
+
+async function renderPhotos(){
+  if(!m())return;
+  if(!m().photos.length){photoGrid.innerHTML='<span class="muted">写真なし</span>';return}
+  photoGrid.innerHTML='<span class="muted">写真を読み込み中...</span>';
+  const items=[];
+  for(let ri=m().photos.length-1;ri>=0;ri--){
+    const x=m().photos[ri];
+    let url="";
+    if(x.path){
+      const {data}=await sb.storage.from("body-photos").createSignedUrl(x.path,3600);
+      url=data?.signedUrl||"";
+    } else if(x.data){url=x.data}
+    items.push(`<div class="photo">${url?`<img src="${url}">`:""}<p>${esc(x.date)}<br>${esc(x.memo)}</p><button class="danger" style="width:100%;border-radius:0" onclick="remove('photos',${ri})">削除</button></div>`);
+  }
+  photoGrid.innerHTML=items.join("");
+}
+
+function renderAll(){
+  if(!m())return;
+  renderMemberSelect();
+  let mm=m(),ws=mm.weights,latest=ws.at(-1),s=weightStats(),mt=mealTotals(),rr=mm.recovery.filter(x=>x.date===today()).at(-1)||mm.recovery.at(-1);
+  dWeight.textContent=latest?latest.weight.toFixed(1)+"kg":"--";dAvg.textContent=s.l?s.l.toFixed(1)+"kg":"--";dKcal.textContent=Math.round(mt.kcal)+" kcal";dRec.textContent=rr?recScore(rr)+"点":"--";
+  weightJudge.textContent=weightJudgement();nutritionInsight.textContent=nutritionInsightText();
+  let adv=recAdvice(rr);todayAdvice.innerHTML=`<span class="badge ${adv.cls}">${esc(adv.txt)}</span>`;
+  let exs=[...new Set(mm.training.map(x=>x.exercise))].slice(-6).reverse();dashOverload.innerHTML=exs.map(ex=>{let o=overload(ex);return `<div class="item"><strong>${esc(ex)}</strong><br><span class="badge ${o.cls}">${esc(o.txt)}</span></div>`}).join("")||'<span class="muted">トレーニングを記録してください</span>';
+
+  mtKcal.textContent=Math.round(mt.kcal);mtP.textContent=mt.p.toFixed(0)+"g";mtF.textContent=mt.f.toFixed(0)+"g";mtC.textContent=mt.c.toFixed(0)+"g";
+  let p=mm.profile,diff=p.targetKcal?Math.round(mt.kcal-p.targetKcal):null;mealTarget.textContent=p.targetKcal?`目標 ${p.targetKcal}kcal｜現在 ${Math.round(mt.kcal)}kcal｜差 ${diff>=0?"+":""}${diff}kcal`:"会員情報で目標kcalを設定してください";
+
+  weightList.innerHTML=[...mm.weights].reverse().map((x,ri)=>{let i=mm.weights.length-1-ri;return `<div class="item"><div class="row"><div><strong>${x.date}｜${x.weight.toFixed(1)}kg</strong><br><small>${x.fat?x.fat+"% ":""}${esc(x.memo)}</small></div><button class="danger" onclick="remove('weights',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
+  mealList.innerHTML=[...mm.meals].reverse().map((x,ri)=>{let i=mm.meals.length-1-ri;return `<div class="item"><div class="row"><div><strong>${x.date}｜${esc(x.name)}</strong><br><small>${x.kcal}kcal / P${x.p} F${x.f} C${x.c}</small></div><button class="danger" onclick="remove('meals',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
+  trainingList.innerHTML=[...mm.training].reverse().map((x,ri)=>{let i=mm.training.length-1-ri,o=overload(x.exercise);return `<div class="item"><div class="row"><div><strong>${x.date}｜${esc(x.exercise)}</strong><br><small>${x.weight}kg × ${x.reps}rep × ${x.sets}set / RIR ${x.rir}</small><br><span class="badge ${o.cls}">${esc(o.txt)}</span></div><button class="danger" onclick="remove('training',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
+  prTable.innerHTML=exs.length?`<table class="table"><tr><th>種目</th><th>PR</th><th>推定1RM</th></tr>${exs.map(ex=>{let x=pr(ex);return `<tr><td>${esc(ex)}</td><td>${x.weight}kg×${x.reps}</td><td>${e1rm(x).toFixed(1)}kg</td></tr>`}).join("")}</table>`:'<span class="muted">記録なし</span>';
+  recoveryJudge.innerHTML=`<span class="badge ${adv.cls}">${esc(adv.txt)}</span>`;
+  recoveryList.innerHTML=[...mm.recovery].reverse().map((x,ri)=>{let i=mm.recovery.length-1-ri,a=recAdvice(x);return `<div class="item"><div class="row"><div><strong>${x.date}｜睡眠 ${x.sleep}h</strong><br><small>疲労${x.fatigue} / ストレス${x.stress} / 痛み${x.pain}</small><br><span class="badge ${a.cls}">${recScore(x)}点</span></div><button class="danger" onclick="remove('recovery',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
+  drawChart();renderReport();renderPhotos();
+}
+
+function renderReport(){
+  if(!m())return;
+  let mon=reportMonth.value||monthNow(),mm=m(),ws=mm.weights.filter(x=>x.date.startsWith(mon)),ms=mm.meals.filter(x=>x.date.startsWith(mon)),ts=mm.training.filter(x=>x.date.startsWith(mon)),rs=mm.recovery.filter(x=>x.date.startsWith(mon));
+  let first=ws[0],last=ws.at(-1),mealDays=[...new Set(ms.map(x=>x.date))],avgK=avg(mealDays.map(d=>mm.meals.filter(x=>x.date===d).reduce((s,x)=>s+x.kcal,0))),avgRec=avg(rs.map(recScore));
+  let ex=[...new Set(ts.map(x=>x.exercise))],improved=ex.filter(e=>overload(e).cls==="ok").length;
+  let txt=`${mon}｜体重 ${first&&last?(first.weight.toFixed(1)+"kg → "+last.weight.toFixed(1)+"kg（"+((last.weight-first.weight)>=0?"+":"")+(last.weight-first.weight).toFixed(1)+"kg）"):"データ不足"}。平均摂取 ${avgK?Math.round(avgK)+"kcal":"データ不足"}。トレーニング ${ts.length}記録、対象種目 ${ex.length}、直近オーバーロード達成 ${improved}種目。平均回復スコア ${avgRec?Math.round(avgRec)+"点":"データ不足"}。`;
+  reportBody.innerHTML=`<div class="kpis"><div class="kpi"><span>体重変化</span><b>${first&&last?((last.weight-first.weight)>=0?"+":"")+(last.weight-first.weight).toFixed(1)+"kg":"--"}</b></div><div class="kpi"><span>平均摂取</span><b>${avgK?Math.round(avgK)+"kcal":"--"}</b></div><div class="kpi"><span>トレ記録</span><b>${ts.length}</b></div><div class="kpi"><span>平均回復</span><b>${avgRec?Math.round(avgRec)+"点":"--"}</b></div></div><div id="reportText" class="notice" style="margin-top:9px">${esc(txt)}</div>`;
+}
+function copyReport(){let t=document.getElementById("reportText")?.textContent||"";navigator.clipboard?.writeText(t).then(()=>alert("コピーしました")).catch(()=>prompt("コピーしてください",t))}
+function exportMember(){download(`${m().profile.name||"member"}_${today()}.json`,JSON.stringify(m(),null,2))}
+function exportAll(){download(`SUG_BODY_MANAGEMENT_${today()}.json`,JSON.stringify(db,null,2))}
+function download(name,text){let b=new Blob([text],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.getElementById(b.dataset.tab).classList.add("active");if(b.dataset.tab==="profile")loadProfile();renderAll()});
+["wDate","mDate","tDate","rDate","pDate"].forEach(id=>document.getElementById(id).value=today());
+reportMonth.value=monthNow();
+initCloud();
+</script>
+</body>
+</html>
