@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>S.u.G BODY MANAGEMENT SYSTEM V10</title>
+<title>S.u.G BODY MANAGEMENT SYSTEM V11</title>
 <style>
 :root{
   --bg:#09090a;--card:#141417;--card2:#1a1a1f;--gold:#d8b35b;--gold2:#f3d98b;
@@ -43,7 +43,14 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 .photoCompareGrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}.photoCompareBox{background:#0c0c0f;border:1px solid #303038;border-radius:12px;overflow:hidden}.photoCompareBox img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}.photoCompareMeta{padding:8px;font-size:10px;color:#aaa;line-height:1.5}.photoCompareTag{display:block;color:var(--gold2);font-size:10px;font-weight:800;letter-spacing:.08em;margin-bottom:3px}.compareDelta{text-align:center;margin-top:9px;color:var(--gold2);font-size:11px;font-weight:700}
 .table{width:100%;border-collapse:collapse;font-size:10px}.table th,.table td{padding:7px 5px;border-bottom:1px solid #29292f;text-align:right}.table th:first-child,.table td:first-child{text-align:left}
 .notice{border:1px solid #5a4a25;background:#1f1a10;color:#f2d98b;border-radius:11px;padding:9px;font-size:10px}
-@media(min-width:720px){.tabs{grid-template-columns:repeat(8,1fr)}.kpis{grid-template-columns:repeat(4,1fr)}}
+.adminBoardGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}
+.adminMember{background:#0d0d10;border:1px solid #2c2c32;border-radius:13px;padding:10px;margin-bottom:8px}
+.adminMemberTop{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.adminMemberName{font-size:13px;font-weight:800;color:#fff}.adminMemberMeta{font-size:9px;color:#999;line-height:1.6;margin-top:4px}
+.adminMemberStats{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:8px}.adminMini{background:#141419;border:1px solid #292930;border-radius:9px;padding:6px;text-align:center}.adminMini span{display:block;color:#929299;font-size:8px}.adminMini b{display:block;color:#eee;font-size:11px;margin-top:2px}
+.adminActions{display:grid;grid-template-columns:1fr auto;gap:7px;align-items:center;margin-top:8px}.adminReason{font-size:9px;color:#bbb;line-height:1.5}
+@media(min-width:720px){.adminBoardGrid{grid-template-columns:repeat(4,1fr)}.adminMemberStats{grid-template-columns:repeat(5,1fr)}}
+@media(min-width:720px){.tabs{grid-template-columns:repeat(9,1fr)}.kpis{grid-template-columns:repeat(4,1fr)}}
 
 .authGate{
   position:fixed;inset:0;z-index:9999;background:linear-gradient(180deg,#070708,#101013);
@@ -93,7 +100,7 @@ window.SUG_CLOUD_CONFIG = {
 <div id="authGate" class="authGate">
   <div class="authBox">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V10 CLOUD / MEMBERS ONLY</div>
+    <div class="sub">V11 CLOUD / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -133,7 +140,7 @@ window.SUG_CLOUD_CONFIG = {
 
 <header>
   <div class="head">
-    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V10 CLOUD / Member Intelligence</small></div>
+    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V11 CLOUD / Member Intelligence</small></div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="exportAll()">データ出力</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
 </header>
@@ -145,6 +152,7 @@ window.SUG_CLOUD_CONFIG = {
   </div>
 
   <div class="tabs">
+    <button id="adminTab" class="tab" data-tab="adminBoard">管理</button>
     <button class="tab active" data-tab="dash">概要</button>
     <button class="tab" data-tab="weight">体重</button>
     <button class="tab" data-tab="meal">食事</button>
@@ -154,6 +162,26 @@ window.SUG_CLOUD_CONFIG = {
     <button class="tab" data-tab="report">レポート</button>
     <button class="tab" data-tab="profile">会員情報</button>
   </div>
+
+  <section id="adminBoard" class="panel">
+    <div class="card">
+      <div class="row" style="align-items:center">
+        <div><h2 style="margin-bottom:3px">管理者ダッシュボード</h2><div class="muted">会員の記録・回復・体重推移を横断チェック</div></div>
+        <button class="secondary" onclick="refreshAdminBoard()">再集計</button>
+      </div>
+      <div class="adminBoardGrid" style="margin-top:10px">
+        <div class="kpi"><span>会員数</span><b id="admTotal">0</b></div>
+        <div class="kpi"><span>要対応</span><b id="admAttention">0</b></div>
+        <div class="kpi"><span>回復低下</span><b id="admRecovery">0</b></div>
+        <div class="kpi"><span>記録不足</span><b id="admMissing">0</b></div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>会員コンディション一覧</h2>
+      <div class="notice">自動判定は管理の優先順位づけ用です。痛みや体調の診断ではありません。</div>
+      <div id="adminBoardList" style="margin-top:9px"><span class="muted">読み込み中...</span></div>
+    </div>
+  </section>
 
   <section id="dash" class="panel active">
     <div class="card">
@@ -219,7 +247,7 @@ window.SUG_CLOUD_CONFIG = {
   <section id="photos" class="panel">
     <div class="card">
       <h2>身体写真</h2>
-      <div class="notice">V2では端末内に圧縮保存します。大量保存には向きません。クラウド版では会員ごとの安全な保存領域に移行します。</div>
+      <div class="notice">写真は会員ごとのクラウド領域に保存します。管理者は担当会員の写真を確認できます。</div>
       <div class="grid2" style="margin-top:9px"><div><label>日付</label><input id="pDate" type="date"></div><div><label>写真</label><input id="pFile" type="file" accept="image/*"></div></div>
       <div style="margin-top:8px"><label>メモ</label><input id="pMemo" placeholder="正面、背面、減量4週目など"></div>
       <button class="primary" style="width:100%;margin-top:9px" onclick="addPhoto()">写真を保存</button>
@@ -282,6 +310,7 @@ let currentRole = "member";
 let accessibleProfiles = [];
 let saveTimer = null;
 let cloudReady = false;
+let adminRows = [];
 
 const today=()=>new Date().toISOString().slice(0,10);
 const monthNow=()=>today().slice(0,7);
@@ -485,6 +514,11 @@ async function onSignedIn(user){
   await loadMember(accessibleProfiles[0].id);
   cloudReady=true;
   setStatus("同期済");
+  if(currentRole==="trainer"){
+    await refreshAdminBoard();
+    const adminTabEl=document.querySelector('.tab[data-tab="adminBoard"]');
+    if(adminTabEl)adminTabEl.click();
+  }
 }
 
 async function loadMember(id){
@@ -588,6 +622,7 @@ async function refreshMemberProfiles(selectId=null){
   if(!all.ok)throw new Error("会員一覧を更新できません｜HTTP "+all.status);
   accessibleProfiles=Array.isArray(all.body)?all.body:[];
   renderMemberSelect();
+  if(currentRole==="trainer")await refreshAdminBoard();
 
   if(selectId && accessibleProfiles.some(x=>x.id===selectId)){
     await switchMember(selectId);
@@ -706,6 +741,103 @@ async function deleteMember(){
     applyRoleUI();
   }
 }
+function dateAgeDays(dateStr){
+  if(!dateStr)return 9999;
+  const a=new Date(dateStr+"T00:00:00");
+  const b=new Date(today()+"T00:00:00");
+  return Math.max(0,Math.floor((b-a)/86400000));
+}
+function latestRecordDate(mm){
+  if(!mm)return "";
+  const dates=[];
+  ["weights","meals","training","recovery"].forEach(k=>(mm[k]||[]).forEach(x=>{if(x?.date)dates.push(x.date)}));
+  (mm.photos||[]).forEach(x=>{if(x?.date)dates.push(x.date)});
+  return dates.sort().at(-1)||"";
+}
+function memberWeightTrend(mm){
+  const w=(mm?.weights||[]).slice().sort((a,b)=>a.date.localeCompare(b.date));
+  if(w.length<8)return {delta:null,label:"--"};
+  const last=w.slice(-7),prev=w.slice(-14,-7);
+  if(!prev.length)return {delta:null,label:"--"};
+  const l=avg(last.map(x=>Number(x.weight||0))),p=avg(prev.map(x=>Number(x.weight||0)));
+  const d=l-p;
+  return {delta:d,label:(d>=0?"+":"")+d.toFixed(1)+"kg"};
+}
+function adminStatusFor(mm){
+  const lastDate=latestRecordDate(mm);
+  const age=dateAgeDays(lastDate);
+  const r=(mm?.recovery||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
+  const rAge=r?dateAgeDays(r.date):9999;
+  const score=r?recScore(r):null;
+  const cutoff7=new Date();cutoff7.setDate(cutoff7.getDate()-6);const c7=cutoff7.toISOString().slice(0,10);
+  const cutoff14=new Date();cutoff14.setDate(cutoff14.getDate()-13);const c14=cutoff14.toISOString().slice(0,10);
+  const w7=(mm?.weights||[]).filter(x=>x.date>=c7).length;
+  const mealDays7=new Set((mm?.meals||[]).filter(x=>x.date>=c7).map(x=>x.date)).size;
+  const rec7=(mm?.recovery||[]).filter(x=>x.date>=c7).length;
+  const train14=new Set((mm?.training||[]).filter(x=>x.date>=c14).map(x=>x.date)).size;
+  const wt=memberWeightTrend(mm);
+  const goal=mm?.profile?.goal||"";
+
+  if(r && rAge<=7 && (Number(r.pain||0)>=6 || score<45)){
+    return {key:"attention",label:"要対応",cls:"bad",reason:Number(r.pain||0)>=6?`痛み ${r.pain}/10`:`回復 ${score}点`,score,age,wt};
+  }
+  if(r && rAge<=7 && (score<65 || Number(r.sleep||0)<6 || Number(r.fatigue||0)>=7 || Number(r.stress||0)>=7 || Number(r.pain||0)>=4)){
+    const reasons=[]; if(score<65)reasons.push(`回復 ${score}点`); if(Number(r.sleep||0)<6)reasons.push(`睡眠 ${r.sleep}h`); if(Number(r.fatigue||0)>=7)reasons.push(`疲労 ${r.fatigue}`); if(Number(r.stress||0)>=7)reasons.push(`ストレス ${r.stress}`); if(Number(r.pain||0)>=4)reasons.push(`痛み ${r.pain}`);
+    return {key:"recovery",label:"回復低下",cls:"warn",reason:reasons.slice(0,2).join(" / "),score,age,wt};
+  }
+  if(!lastDate || age>=7 || (w7<2 && mealDays7<2 && rec7<1 && train14<1)){
+    return {key:"missing",label:"記録不足",cls:"warn",reason:!lastDate?"記録なし":`最終記録 ${age}日前`,score,age,wt};
+  }
+  if((goal==="減量" || goal==="増量" || goal==="筋肥大") && wt.delta!=null && Math.abs(wt.delta)<0.2){
+    return {key:"stagnant",label:"体重停滞",cls:"warn",reason:`7日平均差 ${wt.label}`,score,age,wt};
+  }
+  return {key:"ok",label:"順調",cls:"ok",reason:"大きな警告なし",score,age,wt};
+}
+function adminPriority(key){return ({attention:0,recovery:1,missing:2,stagnant:3,ok:4})[key]??9}
+async function refreshAdminBoard(){
+  if(currentRole!=="trainer")return;
+  const list=document.getElementById("adminBoardList");
+  if(list)list.innerHTML='<span class="muted">集計中...</span>';
+  try{
+    const r=await apiGet("/rest/v1/member_data?select=user_id,data,updated_at&order=updated_at.desc");
+    if(!r.ok)throw new Error("HTTP "+r.status+"｜"+r.text);
+    const byId=new Map((Array.isArray(r.body)?r.body:[]).map(x=>[x.user_id,x]));
+    const members=accessibleProfiles.filter(p=>p.role!=="trainer").map(p=>{
+      const row=byId.get(p.id);
+      const mm=row?.data&&Object.keys(row.data).length?row.data:baseMember(p.display_name||"会員");
+      ["weights","meals","training","recovery","photos"].forEach(k=>{if(!Array.isArray(mm[k]))mm[k]=[]});
+      if(!mm.profile)mm.profile=baseMember(p.display_name||"会員").profile;
+      const st=adminStatusFor(mm);
+      return {profile:p,mm,row,st,lastDate:latestRecordDate(mm)};
+    }).sort((a,b)=>adminPriority(a.st.key)-adminPriority(b.st.key) || (b.lastDate||"").localeCompare(a.lastDate||""));
+    adminRows=members;
+    const total=members.length,attention=members.filter(x=>x.st.key==="attention").length,recovery=members.filter(x=>x.st.key==="recovery").length,missing=members.filter(x=>x.st.key==="missing").length;
+    const totalEl=document.getElementById("admTotal"),attentionEl=document.getElementById("admAttention"),recoveryEl=document.getElementById("admRecovery"),missingEl=document.getElementById("admMissing");
+    if(totalEl)totalEl.textContent=total;
+    if(attentionEl)attentionEl.textContent=attention;
+    if(recoveryEl)recoveryEl.textContent=recovery;
+    if(missingEl)missingEl.textContent=missing;
+    if(!list)return;
+    if(!members.length){list.innerHTML='<span class="muted">会員がまだ登録されていません。</span>';return;}
+    list.innerHTML=members.map(x=>{
+      const mm=x.mm,st=x.st;
+      const latestW=(mm.weights||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
+      const latestR=(mm.recovery||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
+      const goal=mm.profile?.goal||"--";
+      const last=x.lastDate?`${x.lastDate}（${st.age===0?"今日":st.age+"日前"}）`:"記録なし";
+      return `<div class="adminMember"><div class="adminMemberTop"><div><div class="adminMemberName">${esc(x.profile.display_name||mm.profile?.name||"会員")}</div><div class="adminMemberMeta">目的 ${esc(goal)}｜最終記録 ${esc(last)}</div></div><span class="badge ${st.cls}">${esc(st.label)}</span></div><div class="adminMemberStats"><div class="adminMini"><span>体重</span><b>${latestW?Number(latestW.weight).toFixed(1)+"kg":"--"}</b></div><div class="adminMini"><span>7日差</span><b>${esc(st.wt.label)}</b></div><div class="adminMini"><span>回復</span><b>${st.score!=null?st.score+"点":"--"}</b></div><div class="adminMini"><span>睡眠</span><b>${latestR?Number(latestR.sleep||0).toFixed(1)+"h":"--"}</b></div><div class="adminMini"><span>トレ記録</span><b>${(mm.training||[]).length}</b></div></div><div class="adminActions"><div class="adminReason">${esc(st.reason)}</div><button class="primary" onclick="openMemberFromAdmin('${x.profile.id}')">開く</button></div></div>`;
+    }).join("");
+  }catch(e){
+    console.error(e);
+    if(list)list.innerHTML='<span class="bad">管理一覧を取得できませんでした。</span>';
+  }
+}
+async function openMemberFromAdmin(id){
+  await switchMember(id);
+  const tab=document.querySelector('.tab[data-tab="dash"]');
+  if(tab)tab.click();
+}
+
 function applyRoleUI(){
   const isTrainer=currentRole==="trainer";
   const toolbar=document.getElementById("memberToolbar");
@@ -713,6 +845,7 @@ function applyRoleUI(){
   const exportAllBtn=document.getElementById("exportAllBtn");
   const exportMemberBtn=document.getElementById("exportMemberBtn");
   const deleteMemberBtn=document.getElementById("deleteMemberBtn");
+  const adminTab=document.getElementById("adminTab");
   const selectedProfile=accessibleProfiles.find(x=>x.id===db.current);
   const canDelete=isTrainer && selectedProfile && selectedProfile.role!=="trainer" && db.current!==sessionUser?.id;
 
@@ -721,6 +854,10 @@ function applyRoleUI(){
   if(exportAllBtn) exportAllBtn.style.display=isTrainer?"inline-block":"none";
   if(exportMemberBtn) exportMemberBtn.style.display=isTrainer?"block":"none";
   if(deleteMemberBtn) deleteMemberBtn.style.display=canDelete?"block":"none";
+  if(adminTab) adminTab.style.display=isTrainer?"block":"none";
+  if(!isTrainer && document.getElementById("adminBoard")?.classList.contains("active")){
+    const dashTab=document.querySelector('.tab[data-tab="dash"]');if(dashTab)dashTab.click();
+  }
 }
 
 function renderMemberSelect(){
@@ -1010,7 +1147,7 @@ function exportMember(){download(`${m().profile.name||"member"}_${today()}.json`
 function exportAll(){download(`SUG_BODY_MANAGEMENT_${today()}.json`,JSON.stringify(db,null,2))}
 function download(name,text){let b=new Blob([text],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
 
-document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.getElementById(b.dataset.tab).classList.add("active");if(b.dataset.tab==="profile")loadProfile();renderAll()});
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.getElementById(b.dataset.tab).classList.add("active");if(b.dataset.tab==="profile")loadProfile();if(b.dataset.tab==="adminBoard")refreshAdminBoard();renderAll()});
 ["wDate","mDate","tDate","rDate","pDate"].forEach(id=>document.getElementById(id).value=today());
 reportMonth.value=monthNow();
 initCloud();
