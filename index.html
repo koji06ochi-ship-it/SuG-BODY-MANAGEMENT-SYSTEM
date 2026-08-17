@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>S.u.G BODY MANAGEMENT SYSTEM V2</title>
+<title>S.u.G BODY MANAGEMENT SYSTEM V10</title>
 <style>
 :root{
   --bg:#09090a;--card:#141417;--card2:#1a1a1f;--gold:#d8b35b;--gold2:#f3d98b;
@@ -40,6 +40,7 @@ label{display:block;color:#b8b8bd;font-size:10px;margin:0 0 4px}
 canvas{width:100%;height:210px;background:#0c0c0f;border:1px solid #28282e;border-radius:12px}
 hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-size:10px}.gold{color:var(--gold2)}
 .photoGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.photo{background:#0c0c0f;border:1px solid #303038;border-radius:10px;overflow:hidden}.photo img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}.photo p{font-size:9px;margin:5px;color:#aaa}
+.photoCompareGrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}.photoCompareBox{background:#0c0c0f;border:1px solid #303038;border-radius:12px;overflow:hidden}.photoCompareBox img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}.photoCompareMeta{padding:8px;font-size:10px;color:#aaa;line-height:1.5}.photoCompareTag{display:block;color:var(--gold2);font-size:10px;font-weight:800;letter-spacing:.08em;margin-bottom:3px}.compareDelta{text-align:center;margin-top:9px;color:var(--gold2);font-size:11px;font-weight:700}
 .table{width:100%;border-collapse:collapse;font-size:10px}.table th,.table td{padding:7px 5px;border-bottom:1px solid #29292f;text-align:right}.table th:first-child,.table td:first-child{text-align:left}
 .notice{border:1px solid #5a4a25;background:#1f1a10;color:#f2d98b;border-radius:11px;padding:9px;font-size:10px}
 @media(min-width:720px){.tabs{grid-template-columns:repeat(8,1fr)}.kpis{grid-template-columns:repeat(4,1fr)}}
@@ -92,7 +93,7 @@ window.SUG_CLOUD_CONFIG = {
 <div id="authGate" class="authGate">
   <div class="authBox">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V9 CLOUD / MEMBERS ONLY</div>
+    <div class="sub">V10 CLOUD / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -132,7 +133,7 @@ window.SUG_CLOUD_CONFIG = {
 
 <header>
   <div class="head">
-    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V9 CLOUD / Member Intelligence</small></div>
+    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V10 CLOUD / Member Intelligence</small></div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="exportAll()">データ出力</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
 </header>
@@ -224,6 +225,16 @@ window.SUG_CLOUD_CONFIG = {
       <button class="primary" style="width:100%;margin-top:9px" onclick="addPhoto()">写真を保存</button>
     </div>
     <div class="card"><h2>写真履歴</h2><div id="photoGrid" class="photoGrid"></div></div>
+    <div class="card">
+      <h2>写真比較 BEFORE / AFTER</h2>
+      <div class="grid2">
+        <div><label>BEFORE</label><select id="photoBefore"></select></div>
+        <div><label>AFTER</label><select id="photoAfter"></select></div>
+      </div>
+      <button class="primary" style="width:100%;margin-top:9px" onclick="comparePhotos()">2枚を比較</button>
+      <div id="photoCompareDelta" class="compareDelta"></div>
+      <div id="photoCompareView" class="photoCompareGrid"></div>
+    </div>
   </section>
 
   <section id="report" class="panel">
@@ -775,8 +786,57 @@ function nutritionInsightText(){let w=m().weights.slice(-14),meals=m().meals;if(
 
 function drawChart(){let c=weightChart,ctx=c.getContext("2d"),a=m().weights.slice(-30);ctx.clearRect(0,0,c.width,c.height);if(a.length<2){ctx.fillStyle="#888";ctx.font="22px sans-serif";ctx.fillText("体重データを2件以上記録",30,135);return}let vals=a.map(x=>x.weight),min=Math.min(...vals)-.5,max=Math.max(...vals)+.5,px=45,py=28,w=c.width-75,h=c.height-65;ctx.strokeStyle="#303037";ctx.lineWidth=1;for(let i=0;i<5;i++){let y=py+h*i/4;ctx.beginPath();ctx.moveTo(px,y);ctx.lineTo(px+w,y);ctx.stroke()}ctx.strokeStyle="#d8b35b";ctx.lineWidth=4;ctx.beginPath();a.forEach((x,i)=>{let X=px+w*i/(a.length-1),Y=py+h-(x.weight-min)/(max-min)*h;i?ctx.lineTo(X,Y):ctx.moveTo(X,Y)});ctx.stroke();ctx.fillStyle="#aaa";ctx.font="17px sans-serif";ctx.fillText(max.toFixed(1),3,py+5);ctx.fillText(min.toFixed(1),3,py+h)}
 
+function renderPhotoCompareOptions(){
+  if(!m() || !document.getElementById("photoBefore") || !document.getElementById("photoAfter"))return;
+  const ps=m().photos||[];
+  const before=document.getElementById("photoBefore"),after=document.getElementById("photoAfter");
+  const oldB=before.value,oldA=after.value;
+  const opts=ps.map((x,i)=>`<option value="${i}">${esc(x.date||"")}｜${esc(x.memo||"写真")}</option>`).join("");
+  before.innerHTML=opts;after.innerHTML=opts;
+  if(!ps.length){
+    document.getElementById("photoCompareView").innerHTML='<span class="muted">写真を2枚以上保存すると比較できます。</span>';
+    document.getElementById("photoCompareDelta").textContent="";
+    return;
+  }
+  before.value=(oldB!=="" && ps[Number(oldB)])?oldB:"0";
+  after.value=(oldA!=="" && ps[Number(oldA)])?oldA:String(ps.length-1);
+}
+
+async function getPhotoSignedUrl(ph){
+  if(!ph)return "";
+  if(ph.path){
+    const {data,error}=await sb.storage.from("body-photos").createSignedUrl(ph.path,3600);
+    if(error)throw error;
+    return data?.signedUrl||"";
+  }
+  return ph.data||"";
+}
+
+async function comparePhotos(){
+  const ps=m()?.photos||[];
+  if(ps.length<2)return alert("比較するには写真を2枚以上保存してください。");
+  const bi=Number(document.getElementById("photoBefore").value),ai=Number(document.getElementById("photoAfter").value);
+  if(bi===ai)return alert("BEFOREとAFTERは別の写真を選んでください。");
+  const b=ps[bi],a=ps[ai];
+  const view=document.getElementById("photoCompareView"),delta=document.getElementById("photoCompareDelta");
+  view.innerHTML='<span class="muted">写真を読み込み中...</span>';
+  delta.textContent="";
+  try{
+    const [bu,au]=await Promise.all([getPhotoSignedUrl(b),getPhotoSignedUrl(a)]);
+    const bd=new Date((b.date||"")+"T00:00:00"),ad=new Date((a.date||"")+"T00:00:00");
+    const days=(isNaN(bd)||isNaN(ad))?null:Math.round((ad-bd)/86400000);
+    delta.textContent=days===null?"":`${days>=0?"+":""}${days}日間の変化`;
+    view.innerHTML=`
+      <div class="photoCompareBox">${bu?`<img src="${bu}">`:""}<div class="photoCompareMeta"><span class="photoCompareTag">BEFORE</span>${esc(b.date||"")}<br>${esc(b.memo||"")}</div></div>
+      <div class="photoCompareBox">${au?`<img src="${au}">`:""}<div class="photoCompareMeta"><span class="photoCompareTag">AFTER</span>${esc(a.date||"")}<br>${esc(a.memo||"")}</div></div>`;
+  }catch(e){
+    console.error(e);view.innerHTML='<span class="muted">写真比較を読み込めませんでした。</span>';
+  }
+}
+
 async function renderPhotos(){
   if(!m())return;
+  renderPhotoCompareOptions();
   if(!m().photos.length){photoGrid.innerHTML='<span class="muted">写真なし</span>';return}
   photoGrid.innerHTML='<span class="muted">写真を読み込み中...</span>';
   const items=[];
