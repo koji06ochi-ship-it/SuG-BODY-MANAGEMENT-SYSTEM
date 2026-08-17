@@ -92,7 +92,7 @@ window.SUG_CLOUD_CONFIG = {
 <div id="authGate" class="authGate">
   <div class="authBox">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V8 CLOUD / MEMBERS ONLY</div>
+    <div class="sub">V9 CLOUD / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -132,7 +132,7 @@ window.SUG_CLOUD_CONFIG = {
 
 <header>
   <div class="head">
-    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V8 CLOUD / Member Intelligence</small></div>
+    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V9 CLOUD / Member Intelligence</small></div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="exportAll()">データ出力</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
 </header>
@@ -227,8 +227,22 @@ window.SUG_CLOUD_CONFIG = {
   </section>
 
   <section id="report" class="panel">
-    <div class="card"><h2>月間レポート</h2><div class="grid2"><div><label>対象月</label><input id="reportMonth" type="month"></div><div style="display:flex;align-items:end"><button class="primary" style="width:100%" onclick="renderReport()">集計</button></div></div></div>
-    <div class="card"><h2>集計結果</h2><div id="reportBody"></div><button class="secondary" style="width:100%;margin-top:10px" onclick="copyReport()">レポート文をコピー</button></div>
+    <div class="card">
+      <h2>月間レポート</h2>
+      <div class="grid2">
+        <div><label>対象月</label><input id="reportMonth" type="month"></div>
+        <div style="display:flex;align-items:end"><button class="primary" style="width:100%" onclick="renderReport()">集計</button></div>
+      </div>
+      <div class="notice" style="margin-top:9px">体重・食事・トレーニング・回復を1か月単位で横断集計します。</div>
+    </div>
+    <div class="card">
+      <h2>集計結果</h2>
+      <div id="reportBody"></div>
+      <div class="grid2" style="margin-top:10px">
+        <button class="secondary" style="width:100%" onclick="copyReport()">レポート文をコピー</button>
+        <button class="primary" style="width:100%" onclick="shareReport()">LINE / 共有</button>
+      </div>
+    </div>
   </section>
 
   <section id="profile" class="panel">
@@ -799,15 +813,139 @@ function renderAll(){
   drawChart();renderReport();renderPhotos();
 }
 
+function monthLabel(mon){
+  const [y,mo]=String(mon||"").split("-");
+  return y&&mo?`${y}年${Number(mo)}月`:mon;
+}
+function monthDailyMealTotals(mm,mon){
+  const days=[...new Set(mm.meals.filter(x=>x.date.startsWith(mon)).map(x=>x.date))].sort();
+  return days.map(date=>{
+    const rows=mm.meals.filter(x=>x.date===date);
+    return {date,kcal:rows.reduce((s,x)=>s+Number(x.kcal||0),0),p:rows.reduce((s,x)=>s+Number(x.p||0),0),f:rows.reduce((s,x)=>s+Number(x.f||0),0),c:rows.reduce((s,x)=>s+Number(x.c||0),0)};
+  });
+}
+function monthlyPRCount(mm,mon,ts){
+  let count=0;
+  const exercises=[...new Set(ts.map(x=>x.exercise))];
+  exercises.forEach(ex=>{
+    const before=mm.training.filter(x=>x.exercise===ex && x.date<`${mon}-01`);
+    const current=ts.filter(x=>x.exercise===ex);
+    if(!current.length)return;
+    const bestCurrent=Math.max(...current.map(e1rm));
+    const bestBefore=before.length?Math.max(...before.map(e1rm)):0;
+    if(bestCurrent>bestBefore && bestBefore>0)count++;
+  });
+  return count;
+}
+function reportJudgement(mm,delta,avgK,avgSleep,avgRec){
+  const notes=[];
+  const goal=mm.profile.goal||"";
+  if(delta!=null){
+    if(goal==="減量"){
+      if(delta<=-0.3)notes.push("体重は減量方向に推移");
+      else if(delta>=0.3)notes.push("体重は増加傾向。摂取量と活動量を確認");
+      else notes.push("体重変化は小さく、維持に近い推移");
+    }else if(goal==="増量" || goal==="筋肥大"){
+      if(delta>=0.2)notes.push("体重は増量方向に推移");
+      else if(delta<=-0.3)notes.push("体重は減少傾向。エネルギー不足を確認");
+      else notes.push("体重変化は小さく、維持に近い推移");
+    }else{
+      notes.push(`月内の体重変化 ${delta>=0?"+":""}${delta.toFixed(1)}kg`);
+    }
+  }
+  if(mm.profile.targetKcal && avgK){
+    const diff=avgK-mm.profile.targetKcal;
+    if(Math.abs(diff)>=250)notes.push(`平均摂取は目標より${diff>0?"約"+Math.round(diff)+"kcal多い":"約"+Math.abs(Math.round(diff))+"kcal少ない"}`);
+  }
+  if(avgSleep && avgSleep<6.5)notes.push("平均睡眠が6.5時間未満。回復優先");
+  if(avgRec && avgRec<60)notes.push("回復スコア低下傾向。強度・休養を調整");
+  if(!notes.length)notes.push("記録を継続し、翌月の変化と比較");
+  return notes.join("。")+"。";
+}
 function renderReport(){
   if(!m())return;
-  let mon=reportMonth.value||monthNow(),mm=m(),ws=mm.weights.filter(x=>x.date.startsWith(mon)),ms=mm.meals.filter(x=>x.date.startsWith(mon)),ts=mm.training.filter(x=>x.date.startsWith(mon)),rs=mm.recovery.filter(x=>x.date.startsWith(mon));
-  let first=ws[0],last=ws.at(-1),mealDays=[...new Set(ms.map(x=>x.date))],avgK=avg(mealDays.map(d=>mm.meals.filter(x=>x.date===d).reduce((s,x)=>s+x.kcal,0))),avgRec=avg(rs.map(recScore));
-  let ex=[...new Set(ts.map(x=>x.exercise))],improved=ex.filter(e=>overload(e).cls==="ok").length;
-  let txt=`${mon}｜体重 ${first&&last?(first.weight.toFixed(1)+"kg → "+last.weight.toFixed(1)+"kg（"+((last.weight-first.weight)>=0?"+":"")+(last.weight-first.weight).toFixed(1)+"kg）"):"データ不足"}。平均摂取 ${avgK?Math.round(avgK)+"kcal":"データ不足"}。トレーニング ${ts.length}記録、対象種目 ${ex.length}、直近オーバーロード達成 ${improved}種目。平均回復スコア ${avgRec?Math.round(avgRec)+"点":"データ不足"}。`;
-  reportBody.innerHTML=`<div class="kpis"><div class="kpi"><span>体重変化</span><b>${first&&last?((last.weight-first.weight)>=0?"+":"")+(last.weight-first.weight).toFixed(1)+"kg":"--"}</b></div><div class="kpi"><span>平均摂取</span><b>${avgK?Math.round(avgK)+"kcal":"--"}</b></div><div class="kpi"><span>トレ記録</span><b>${ts.length}</b></div><div class="kpi"><span>平均回復</span><b>${avgRec?Math.round(avgRec)+"点":"--"}</b></div></div><div id="reportText" class="notice" style="margin-top:9px">${esc(txt)}</div>`;
+  const mon=reportMonth.value||monthNow(),mm=m();
+  const ws=mm.weights.filter(x=>x.date.startsWith(mon)).sort((a,b)=>a.date.localeCompare(b.date));
+  const ms=mm.meals.filter(x=>x.date.startsWith(mon));
+  const ts=mm.training.filter(x=>x.date.startsWith(mon));
+  const rs=mm.recovery.filter(x=>x.date.startsWith(mon));
+  const ps=mm.photos.filter(x=>x.date.startsWith(mon));
+  const first=ws[0],last=ws.at(-1),delta=first&&last?last.weight-first.weight:null;
+  const weightAvg=avg(ws.map(x=>Number(x.weight||0)).filter(Boolean));
+  const mealDays=monthDailyMealTotals(mm,mon);
+  const avgK=avg(mealDays.map(x=>x.kcal)),avgP=avg(mealDays.map(x=>x.p)),avgF=avg(mealDays.map(x=>x.f)),avgC=avg(mealDays.map(x=>x.c));
+  const trainDays=[...new Set(ts.map(x=>x.date))];
+  const exercises=[...new Set(ts.map(x=>x.exercise))];
+  const totalSets=ts.reduce((s,x)=>s+Number(x.sets||0),0);
+  const prCount=monthlyPRCount(mm,mon,ts);
+  const avgRec=avg(rs.map(recScore));
+  const avgSleep=avg(rs.map(x=>Number(x.sleep||0)).filter(x=>x>0));
+  const avgFatigue=avg(rs.map(x=>Number(x.fatigue||0)).filter(x=>x>0));
+  const avgStress=avg(rs.map(x=>Number(x.stress||0)).filter(x=>x>0));
+  const avgPain=avg(rs.map(x=>Number(x.pain||0)));
+  const judge=reportJudgement(mm,delta,avgK,avgSleep,avgRec);
+  const weightText=first&&last?`${first.weight.toFixed(1)}kg → ${last.weight.toFixed(1)}kg（${delta>=0?"+":""}${delta.toFixed(1)}kg）`:"データ不足";
+  const nutritionText=mealDays.length?`平均 ${Math.round(avgK)}kcal / P${Math.round(avgP)}g F${Math.round(avgF)}g C${Math.round(avgC)}g（${mealDays.length}日記録）`:"データ不足";
+  const trainingText=ts.length?`${trainDays.length}日 / ${ts.length}記録 / ${totalSets}set / ${exercises.length}種目 / PR更新 ${prCount}種目`:"データ不足";
+  const recoveryText=rs.length?`回復 ${Math.round(avgRec)}点 / 睡眠 ${avgSleep.toFixed(1)}h / 疲労 ${avgFatigue.toFixed(1)} / ストレス ${avgStress.toFixed(1)} / 痛み ${avgPain.toFixed(1)}（${rs.length}記録）`:"データ不足";
+  const txt=`【S.u.G 月次レポート｜${monthLabel(mon)}】
+会員：${mm.profile.name||"--"}
+目的：${mm.profile.goal||"--"}
+
+■ 体重
+${weightText}${weightAvg?` / 月平均 ${weightAvg.toFixed(1)}kg`:""}
+
+■ 食事
+${nutritionText}
+
+■ トレーニング
+${trainingText}
+
+■ 回復
+${recoveryText}
+
+■ 写真
+${ps.length}件
+
+■ 判定
+${judge}`;
+  reportBody.innerHTML=`
+    <div class="kpis">
+      <div class="kpi"><span>体重変化</span><b>${delta!=null?`${delta>=0?"+":""}${delta.toFixed(1)}kg`:"--"}</b></div>
+      <div class="kpi"><span>平均摂取</span><b>${avgK?Math.round(avgK)+"kcal":"--"}</b></div>
+      <div class="kpi"><span>トレ日数</span><b>${trainDays.length}</b></div>
+      <div class="kpi"><span>平均回復</span><b>${avgRec?Math.round(avgRec)+"点":"--"}</b></div>
+    </div>
+    <div class="item" style="margin-top:9px"><strong>体重</strong><br><small>${esc(weightText)}${weightAvg?` / 月平均 ${weightAvg.toFixed(1)}kg`:""}</small></div>
+    <div class="item"><strong>食事</strong><br><small>${esc(nutritionText)}</small></div>
+    <div class="item"><strong>トレーニング</strong><br><small>${esc(trainingText)}</small></div>
+    <div class="item"><strong>回復</strong><br><small>${esc(recoveryText)}</small></div>
+    <div class="notice"><strong>月次判定</strong><br>${esc(judge)}</div>
+    <div id="reportText" class="item" style="margin-top:9px;white-space:pre-wrap;line-height:1.7">${esc(txt)}</div>`;
 }
-function copyReport(){let t=document.getElementById("reportText")?.textContent||"";navigator.clipboard?.writeText(t).then(()=>alert("コピーしました")).catch(()=>prompt("コピーしてください",t))}
+function copyReport(){
+  const t=document.getElementById("reportText")?.textContent||"";
+  if(!t)return alert("先に集計してください");
+  navigator.clipboard?.writeText(t).then(()=>alert("レポート文をコピーしました")).catch(()=>prompt("コピーしてください",t));
+}
+async function shareReport(){
+  let t=document.getElementById("reportText")?.textContent||"";
+  if(!t){renderReport();t=document.getElementById("reportText")?.textContent||"";}
+  if(!t)return alert("レポートを作成できませんでした");
+  try{
+    if(navigator.share){
+      await navigator.share({title:"S.u.G 月次レポート",text:t});
+      return;
+    }
+    await navigator.clipboard.writeText(t);
+    alert("レポート文をコピーしました。LINEに貼り付けてください。");
+  }catch(e){
+    if(e?.name!=="AbortError"){
+      try{await navigator.clipboard.writeText(t);alert("共有できなかったためコピーしました。LINEに貼り付けてください。");}
+      catch(_){prompt("コピーしてください",t)}
+    }
+  }
+}
 function exportMember(){download(`${m().profile.name||"member"}_${today()}.json`,JSON.stringify(m(),null,2))}
 function exportAll(){download(`SUG_BODY_MANAGEMENT_${today()}.json`,JSON.stringify(db,null,2))}
 function download(name,text){let b=new Blob([text],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
