@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>S.u.G BODY MANAGEMENT SYSTEM V16</title>
+<title>S.u.G BODY MANAGEMENT SYSTEM V17</title>
 <style>
 :root{
   --bg:#09090a;--card:#141417;--card2:#1a1a1f;--gold:#d8b35b;--gold2:#f3d98b;
@@ -80,6 +80,10 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 .coachPlanTarget{background:#0d0d10;border:1px solid #2d2a22;border-radius:10px;padding:8px;text-align:center}.coachPlanTarget span{display:block;color:#999;font-size:8px}.coachPlanTarget b{display:block;color:var(--gold2);font-size:12px;margin-top:3px}
 .coachPlanEditor{margin-top:10px}.coachPlanEditor textarea{min-height:78px}
 @media(max-width:540px){.coachPlanTargets{grid-template-columns:1fr 1fr 1fr}}
+.coachAdminMeta{margin-top:7px;padding:8px;background:#15130e;border:1px solid #39301c;border-radius:10px;font-size:9px;line-height:1.6;color:#aaa}
+.coachAdminMeta b{color:#f3d98b}.coachDone{color:var(--ok)!important}.coachOpen{color:var(--warn)!important}.coachUnset{color:#999!important}
+.coachFocus{margin-top:4px;color:#ddd}.coachAction{margin-top:3px;color:#bbb}
+
 .restorePreview{margin-top:9px;padding:10px;background:#111116;border:1px solid #3b3320;border-radius:11px;font-size:10px;line-height:1.7}
 .restorePreview strong{color:var(--gold2)}
 .backupDanger{border-color:#6b3336;background:#1d1213}
@@ -133,7 +137,7 @@ window.SUG_CLOUD_CONFIG = {
 <div id="authGate" class="authGate">
   <div class="authBox">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V16 CLOUD / MEMBERS ONLY</div>
+    <div class="sub">V17 CLOUD / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -206,7 +210,7 @@ window.SUG_CLOUD_CONFIG = {
 
 <header>
   <div class="head">
-    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V16 CLOUD / Member Intelligence</small></div>
+    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V17 CLOUD / Member Intelligence</small></div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
 </header>
@@ -232,7 +236,7 @@ window.SUG_CLOUD_CONFIG = {
   <section id="adminBoard" class="panel">
     <div class="card">
       <div class="row" style="align-items:center">
-        <div><h2 style="margin-bottom:3px">管理者ダッシュボード</h2><div class="muted">会員の記録・回復・体重推移・フォロー対応を横断管理</div></div>
+        <div><h2 style="margin-bottom:3px">管理者ダッシュボード</h2><div class="muted">会員の記録・回復・コーチプラン・フォロー対応を横断管理</div></div>
         <button class="secondary" onclick="refreshAdminBoard()">再集計</button>
       </div>
       <div class="adminBoardGrid" style="margin-top:10px">
@@ -244,6 +248,9 @@ window.SUG_CLOUD_CONFIG = {
         <div class="kpi"><span>期限超過</span><b id="admOverdue">0</b></div>
         <div class="kpi"><span>今日フォロー</span><b id="admToday">0</b></div>
         <div class="kpi"><span>明日フォロー</span><b id="admTomorrow">0</b></div>
+        <div class="kpi"><span>課題未完了</span><b id="admCoachOpen">0</b></div>
+        <div class="kpi"><span>課題完了</span><b id="admCoachDone">0</b></div>
+        <div class="kpi"><span>プラン未設定</span><b id="admCoachUnset">0</b></div>
       </div>
       <div class="followAlertGrid">
         <div class="followAlertCard"><span>期限超過</span><b id="followAlertOverdue" class="dueOverdue">0</b></div>
@@ -262,6 +269,9 @@ window.SUG_CLOUD_CONFIG = {
             <option value="today">今日フォロー</option>
             <option value="tomorrow">明日フォロー</option>
             <option value="done">対応済みのみ</option>
+            <option value="coach-open">課題未完了のみ</option>
+            <option value="coach-done">課題完了のみ</option>
+            <option value="coach-unset">コーチプラン未設定</option>
           </select>
         </div>
         <div id="followupSetupStatus" class="muted">フォロー管理を確認中...</div>
@@ -1030,6 +1040,10 @@ function followupPass(row){
   if(followupFilter==="today")return followupDueKind(f)==="today";
   if(followupFilter==="tomorrow")return followupDueKind(f)==="tomorrow";
   if(followupFilter==="done")return f.status==="done";
+  const cp=coachAdminState(row.mm);
+  if(followupFilter==="coach-open")return cp.key==="open";
+  if(followupFilter==="coach-done")return cp.key==="done";
+  if(followupFilter==="coach-unset")return cp.key==="unset";
   return true;
 }
 function setFollowupFilter(v){
@@ -1153,6 +1167,25 @@ async function saveFollowupFromModal(){
     btn.disabled=false;btn.textContent="保存";
   }
 }
+function coachAdminState(mm){
+  const cp=(mm && cpObj(mm))||{};
+  const has=!!(cp.weeklyFocus||cp.nextAction||cp.nextSessionDate||cp.targetTrainingDays||cp.targetSleep||cp.targetSteps);
+  if(!has)return {key:"unset",label:"未設定",cls:"coachUnset",session:"--",focus:"",action:""};
+  const done=!!cp.completedAt;
+  return {
+    key:done?"done":"open",
+    label:done?"課題完了":"課題未完了",
+    cls:done?"coachDone":"coachOpen",
+    session:coachPlanSessionLabel(cp.nextSessionDate),
+    focus:cp.weeklyFocus||"--",
+    action:cp.nextAction||"--"
+  };
+}
+function cpObj(mm){
+  const base={weeklyFocus:"",nextAction:"",nextSessionDate:"",targetTrainingDays:0,targetSleep:0,targetSteps:0,completedAt:null,updatedAt:null};
+  return {...base,...((mm&&mm.coachPlan&&typeof mm.coachPlan==="object")?mm.coachPlan:{})};
+}
+
 async function refreshAdminBoard(){
   if(currentRole!=="trainer")return;
   const list=document.getElementById("adminBoardList");
@@ -1212,7 +1245,10 @@ function renderAdminBoardRows(){
   const overdue=members.filter(x=>followupDueKind(followupState(x.profile.id))==="overdue").length;
   const dueToday=members.filter(x=>followupDueKind(followupState(x.profile.id))==="today").length;
   const dueTomorrow=members.filter(x=>followupDueKind(followupState(x.profile.id))==="tomorrow").length;
-  const ids={admTotal:total,admAttention:attention,admRecovery:recovery,admMissing:missing,admOpen:open,admOverdue:overdue,admToday:dueToday,admTomorrow:dueTomorrow,followAlertOverdue:overdue,followAlertToday:dueToday,followAlertTomorrow:dueTomorrow};
+  const coachOpen=members.filter(x=>coachAdminState(x.mm).key==="open").length;
+  const coachDone=members.filter(x=>coachAdminState(x.mm).key==="done").length;
+  const coachUnset=members.filter(x=>coachAdminState(x.mm).key==="unset").length;
+  const ids={admTotal:total,admAttention:attention,admRecovery:recovery,admMissing:missing,admOpen:open,admOverdue:overdue,admToday:dueToday,admTomorrow:dueTomorrow,admCoachOpen:coachOpen,admCoachDone:coachDone,admCoachUnset:coachUnset,followAlertOverdue:overdue,followAlertToday:dueToday,followAlertTomorrow:dueTomorrow};
   Object.entries(ids).forEach(([id,v])=>{const el=document.getElementById(id);if(el)el.textContent=v});
   renderFollowupAlerts(members);
   if(!list)return;
@@ -1220,7 +1256,7 @@ function renderAdminBoardRows(){
   const shown=members.filter(followupPass);
   if(!shown.length){list.innerHTML='<span class="muted">条件に該当する会員はいません。</span>';return;}
   list.innerHTML=shown.map(x=>{
-    const mm=x.mm,st=x.st,f=followupState(x.profile.id);
+    const mm=x.mm,st=x.st,f=followupState(x.profile.id),cp=coachAdminState(mm);
     const latestW=(mm.weights||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
     const latestR=(mm.recovery||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
     const goal=mm.profile?.goal||"--";
@@ -1232,7 +1268,7 @@ function renderAdminBoardRows(){
     const dueMark=dueKind==="today"?"｜<b class=\"dueToday\">今日対応</b>":dueKind==="tomorrow"?"｜<b class=\"dueTomorrow\">明日対応</b>":dueKind==="overdue"?"｜<b class=\"dueOverdue\">期限超過</b>":"";
     const contact=f.last_contact_at?followupDateLabel(f.last_contact_at):"--";
     const memo=f.memo?`｜メモ ${esc(f.memo)}`:"";
-    return `<div class="adminMember"><div class="adminMemberTop"><div><div class="adminMemberName">${esc(x.profile.display_name||mm.profile?.name||"会員")}</div><div class="adminMemberMeta">目的 ${esc(goal)}｜最終記録 ${esc(last)}</div></div><span class="badge ${st.cls}">${esc(st.label)}</span></div><div class="adminMemberStats"><div class="adminMini"><span>体重</span><b>${latestW?Number(latestW.weight).toFixed(1)+"kg":"--"}</b></div><div class="adminMini"><span>7日差</span><b>${esc(st.wt.label)}</b></div><div class="adminMini"><span>回復</span><b>${st.score!=null?st.score+"点":"--"}</b></div><div class="adminMini"><span>睡眠</span><b>${latestR?Number(latestR.sleep||0).toFixed(1)+"h":"--"}</b></div><div class="adminMini"><span>トレ記録</span><b>${(mm.training||[]).length}</b></div></div><div class="followMeta"><b class="${followClass}">${followStatus}</b>｜最終連絡 ${esc(contact)}｜次回 ${esc(next)}${dueMark}${memo}</div><div class="adminActions"><div class="adminReason"><b>理由：</b>${esc(st.reason)}</div><button class="lineBtn" onclick="lineFollowup('${x.profile.id}')">LINE連絡</button><button class="secondary" onclick="openFollowupModal('${x.profile.id}')">対応記録</button><button class="primary" onclick="openMemberFromAdmin('${x.profile.id}')">開く</button></div></div>`;
+    return `<div class="adminMember"><div class="adminMemberTop"><div><div class="adminMemberName">${esc(x.profile.display_name||mm.profile?.name||"会員")}</div><div class="adminMemberMeta">目的 ${esc(goal)}｜最終記録 ${esc(last)}</div></div><span class="badge ${st.cls}">${esc(st.label)}</span></div><div class="adminMemberStats"><div class="adminMini"><span>体重</span><b>${latestW?Number(latestW.weight).toFixed(1)+"kg":"--"}</b></div><div class="adminMini"><span>7日差</span><b>${esc(st.wt.label)}</b></div><div class="adminMini"><span>回復</span><b>${st.score!=null?st.score+"点":"--"}</b></div><div class="adminMini"><span>睡眠</span><b>${latestR?Number(latestR.sleep||0).toFixed(1)+"h":"--"}</b></div><div class="adminMini"><span>トレ記録</span><b>${(mm.training||[]).length}</b></div></div><div class="coachAdminMeta"><b class="${cp.cls}">${esc(cp.label)}</b>｜次回セッション ${esc(cp.session)}<div class="coachFocus"><b>重点：</b>${esc(cp.focus)}</div><div class="coachAction"><b>課題：</b>${esc(cp.action)}</div></div><div class="followMeta"><b class="${followClass}">${followStatus}</b>｜最終連絡 ${esc(contact)}｜次回 ${esc(next)}${dueMark}${memo}</div><div class="adminActions"><div class="adminReason"><b>理由：</b>${esc(st.reason)}</div><button class="lineBtn" onclick="lineFollowup('${x.profile.id}')">LINE連絡</button><button class="secondary" onclick="openFollowupModal('${x.profile.id}')">対応記録</button><button class="primary" onclick="openMemberFromAdmin('${x.profile.id}')">開く</button></div></div>`;
   }).join("");
 }
 async function openMemberFromAdmin(id){
