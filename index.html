@@ -48,7 +48,7 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 .adminMemberTop{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
 .adminMemberName{font-size:13px;font-weight:800;color:#fff}.adminMemberMeta{font-size:9px;color:#999;line-height:1.6;margin-top:4px}
 .adminMemberStats{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:8px}.adminMini{background:#141419;border:1px solid #292930;border-radius:9px;padding:6px;text-align:center}.adminMini span{display:block;color:#929299;font-size:8px}.adminMini b{display:block;color:#eee;font-size:11px;margin-top:2px}
-.adminActions{display:grid;grid-template-columns:1fr auto;gap:7px;align-items:center;margin-top:8px}.adminReason{font-size:9px;color:#bbb;line-height:1.5}
+.adminActions{display:grid;grid-template-columns:1fr auto auto;gap:7px;align-items:center;margin-top:8px}.adminReason{font-size:9px;color:#bbb;line-height:1.55}.lineBtn{background:#1d1d22;border:1px solid #4a4a52;color:#fff;border-radius:10px;padding:8px 10px;font-weight:800;font-size:10px;white-space:nowrap}.lineBtn:active{transform:translateY(1px)}
 @media(min-width:720px){.adminBoardGrid{grid-template-columns:repeat(4,1fr)}.adminMemberStats{grid-template-columns:repeat(5,1fr)}}
 @media(min-width:720px){.tabs{grid-template-columns:repeat(9,1fr)}.kpis{grid-template-columns:repeat(4,1fr)}}
 
@@ -100,7 +100,7 @@ window.SUG_CLOUD_CONFIG = {
 <div id="authGate" class="authGate">
   <div class="authBox">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V11 CLOUD / MEMBERS ONLY</div>
+    <div class="sub">V12 CLOUD / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -140,7 +140,7 @@ window.SUG_CLOUD_CONFIG = {
 
 <header>
   <div class="head">
-    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V11 CLOUD / Member Intelligence</small></div>
+    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V12 CLOUD / Member Intelligence</small></div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="exportAll()">データ出力</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
 </header>
@@ -777,23 +777,60 @@ function adminStatusFor(mm){
   const train14=new Set((mm?.training||[]).filter(x=>x.date>=c14).map(x=>x.date)).size;
   const wt=memberWeightTrend(mm);
   const goal=mm?.profile?.goal||"";
+  const reasons=[];
 
-  if(r && rAge<=7 && (Number(r.pain||0)>=6 || score<45)){
-    return {key:"attention",label:"要対応",cls:"bad",reason:Number(r.pain||0)>=6?`痛み ${r.pain}/10`:`回復 ${score}点`,score,age,wt};
+  if(r && rAge<=7){
+    if(Number(r.pain||0)>=6) reasons.push(`痛み ${r.pain}/10`);
+    if(score!=null && score<45) reasons.push(`回復 ${score}点`);
+    if(Number(r.sleep||0)>0 && Number(r.sleep||0)<6) reasons.push(`睡眠 ${Number(r.sleep).toFixed(1)}h`);
+    if(Number(r.fatigue||0)>=7) reasons.push(`疲労 ${r.fatigue}/10`);
+    if(Number(r.stress||0)>=7) reasons.push(`ストレス ${r.stress}/10`);
+    if(Number(r.pain||0)>=4 && Number(r.pain||0)<6) reasons.push(`痛み ${r.pain}/10`);
+    if(score!=null && score>=45 && score<65) reasons.push(`回復 ${score}点`);
   }
-  if(r && rAge<=7 && (score<65 || Number(r.sleep||0)<6 || Number(r.fatigue||0)>=7 || Number(r.stress||0)>=7 || Number(r.pain||0)>=4)){
-    const reasons=[]; if(score<65)reasons.push(`回復 ${score}点`); if(Number(r.sleep||0)<6)reasons.push(`睡眠 ${r.sleep}h`); if(Number(r.fatigue||0)>=7)reasons.push(`疲労 ${r.fatigue}`); if(Number(r.stress||0)>=7)reasons.push(`ストレス ${r.stress}`); if(Number(r.pain||0)>=4)reasons.push(`痛み ${r.pain}`);
-    return {key:"recovery",label:"回復低下",cls:"warn",reason:reasons.slice(0,2).join(" / "),score,age,wt};
-  }
-  if(!lastDate || age>=7 || (w7<2 && mealDays7<2 && rec7<1 && train14<1)){
-    return {key:"missing",label:"記録不足",cls:"warn",reason:!lastDate?"記録なし":`最終記録 ${age}日前`,score,age,wt};
-  }
+  if(!lastDate) reasons.push("記録なし");
+  else if(age>=3) reasons.push(`記録 ${age}日なし`);
+  if(w7<2) reasons.push(`体重記録 ${w7}件/7日`);
+  if(mealDays7<2) reasons.push(`食事記録 ${mealDays7}日/7日`);
+  if(rec7<1) reasons.push("回復記録なし/7日");
+  if(train14<1) reasons.push("トレ記録なし/14日");
   if((goal==="減量" || goal==="増量" || goal==="筋肥大") && wt.delta!=null && Math.abs(wt.delta)<0.2){
-    return {key:"stagnant",label:"体重停滞",cls:"warn",reason:`7日平均差 ${wt.label}`,score,age,wt};
+    reasons.push(`体重停滞 ${wt.label}`);
   }
-  return {key:"ok",label:"順調",cls:"ok",reason:"大きな警告なし",score,age,wt};
+
+  let key="ok",label="順調",cls="ok";
+  if(r && rAge<=7 && (Number(r.pain||0)>=6 || (score!=null && score<45))){
+    key="attention";label="要対応";cls="bad";
+  }else if(r && rAge<=7 && ((score!=null && score<65) || (Number(r.sleep||0)>0 && Number(r.sleep||0)<6) || Number(r.fatigue||0)>=7 || Number(r.stress||0)>=7 || Number(r.pain||0)>=4)){
+    key="recovery";label="回復低下";cls="warn";
+  }else if(!lastDate || age>=3 || (w7<2 && mealDays7<2 && rec7<1 && train14<1)){
+    key="missing";label="記録不足";cls="warn";
+  }else if((goal==="減量" || goal==="増量" || goal==="筋肥大") && wt.delta!=null && Math.abs(wt.delta)<0.2){
+    key="stagnant";label="体重停滞";cls="warn";
+  }
+  const unique=[...new Set(reasons)];
+  if(key==="ok") unique.splice(0,unique.length,"大きな警告なし");
+  return {key,label,cls,reason:unique.slice(0,4).join(" / "),reasons:unique,score,age,wt};
 }
 function adminPriority(key){return ({attention:0,recovery:1,missing:2,stagnant:3,ok:4})[key]??9}
+function adminContactText(row){
+  const name=row?.profile?.display_name||row?.mm?.profile?.name||"会員";
+  const st=row?.st||{key:"ok",label:"順調",reasons:["大きな警告なし"]};
+  const rs=(st.reasons||[st.reason]).filter(Boolean).slice(0,4).join(" / ");
+  let action="今の流れを継続していきましょう。";
+  if(st.key==="attention") action="痛みや回復状態が気になるため、無理に追い込まず、今日の体調と痛みの場所・強さを教えてください。内容を確認して次回の負荷を調整します。";
+  if(st.key==="recovery") action="今日は回復を優先したい状態です。睡眠・疲労感・ストレスの変化を教えてください。必要ならトレーニング強度を調整します。";
+  if(st.key==="missing") action="最近の記録が少なく状態を判断しにくいため、体重・食事・睡眠・体調のうち分かるものだけで大丈夫なので入力をお願いします。";
+  if(st.key==="stagnant") action="体重推移が横ばいなので、食事量・活動量・トレーニングの進み具合を一度確認して次の調整を決めましょう。";
+  return `${name}さん、お疲れさまです。S.u.Gです。\n\n現在の記録を確認したところ「${st.label}」の判定です。\n確認ポイント：${rs}\n\n${action}`;
+}
+function lineFollowup(userId){
+  const row=adminRows.find(x=>x.profile?.id===userId);
+  if(!row){alert("会員情報を取得できませんでした。");return;}
+  const text=adminContactText(row);
+  const url="https://line.me/R/share?text="+encodeURIComponent(text);
+  window.location.href=url;
+}
 async function refreshAdminBoard(){
   if(currentRole!=="trainer")return;
   const list=document.getElementById("adminBoardList");
@@ -825,7 +862,7 @@ async function refreshAdminBoard(){
       const latestR=(mm.recovery||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
       const goal=mm.profile?.goal||"--";
       const last=x.lastDate?`${x.lastDate}（${st.age===0?"今日":st.age+"日前"}）`:"記録なし";
-      return `<div class="adminMember"><div class="adminMemberTop"><div><div class="adminMemberName">${esc(x.profile.display_name||mm.profile?.name||"会員")}</div><div class="adminMemberMeta">目的 ${esc(goal)}｜最終記録 ${esc(last)}</div></div><span class="badge ${st.cls}">${esc(st.label)}</span></div><div class="adminMemberStats"><div class="adminMini"><span>体重</span><b>${latestW?Number(latestW.weight).toFixed(1)+"kg":"--"}</b></div><div class="adminMini"><span>7日差</span><b>${esc(st.wt.label)}</b></div><div class="adminMini"><span>回復</span><b>${st.score!=null?st.score+"点":"--"}</b></div><div class="adminMini"><span>睡眠</span><b>${latestR?Number(latestR.sleep||0).toFixed(1)+"h":"--"}</b></div><div class="adminMini"><span>トレ記録</span><b>${(mm.training||[]).length}</b></div></div><div class="adminActions"><div class="adminReason">${esc(st.reason)}</div><button class="primary" onclick="openMemberFromAdmin('${x.profile.id}')">開く</button></div></div>`;
+      return `<div class="adminMember"><div class="adminMemberTop"><div><div class="adminMemberName">${esc(x.profile.display_name||mm.profile?.name||"会員")}</div><div class="adminMemberMeta">目的 ${esc(goal)}｜最終記録 ${esc(last)}</div></div><span class="badge ${st.cls}">${esc(st.label)}</span></div><div class="adminMemberStats"><div class="adminMini"><span>体重</span><b>${latestW?Number(latestW.weight).toFixed(1)+"kg":"--"}</b></div><div class="adminMini"><span>7日差</span><b>${esc(st.wt.label)}</b></div><div class="adminMini"><span>回復</span><b>${st.score!=null?st.score+"点":"--"}</b></div><div class="adminMini"><span>睡眠</span><b>${latestR?Number(latestR.sleep||0).toFixed(1)+"h":"--"}</b></div><div class="adminMini"><span>トレ記録</span><b>${(mm.training||[]).length}</b></div></div><div class="adminActions"><div class="adminReason"><b>理由：</b>${esc(st.reason)}</div><button class="lineBtn" onclick="lineFollowup('${x.profile.id}')">LINE連絡</button><button class="primary" onclick="openMemberFromAdmin('${x.profile.id}')">開く</button></div></div>`;
     }).join("");
   }catch(e){
     console.error(e);
