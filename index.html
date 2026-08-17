@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>S.u.G BODY MANAGEMENT SYSTEM V13</title>
+<title>S.u.G BODY MANAGEMENT SYSTEM V14</title>
 <style>
 :root{
   --bg:#09090a;--card:#141417;--card2:#1a1a1f;--gold:#d8b35b;--gold2:#f3d98b;
@@ -54,8 +54,15 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 .followToolbar{display:grid;grid-template-columns:1fr auto;gap:7px;align-items:end;margin-top:10px}
 .followHistory{max-height:180px;overflow:auto;margin-top:9px}.followHistory .item{font-size:9px;line-height:1.55}
 .followupBox textarea{min-height:92px}
+.followAlertGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:10px}
+.followAlertCard{background:#0d0d10;border:1px solid #2c2c32;border-radius:11px;padding:9px}
+.followAlertCard span{display:block;font-size:9px;color:#999}.followAlertCard b{display:block;font-size:17px;margin-top:2px}
+.followAlertList{margin-top:9px}
+.followAlertItem{display:grid;grid-template-columns:auto 1fr auto auto;gap:7px;align-items:center;background:#0d0d10;border:1px solid #2c2c32;border-radius:10px;padding:8px;margin-bottom:6px}
+.followAlertDue{font-size:9px;font-weight:800;white-space:nowrap}.followAlertName{font-size:11px;font-weight:800}.followAlertMeta{font-size:8px;color:#999;margin-top:2px}
+.dueOverdue{color:var(--bad)}.dueToday{color:var(--warn)}.dueTomorrow{color:var(--gold2)}
 .adminActions{grid-template-columns:1fr auto auto auto}
-@media(max-width:719px){.adminActions{grid-template-columns:1fr 1fr 1fr}.adminReason{grid-column:1/-1}.followToolbar{grid-template-columns:1fr}}
+@media(max-width:719px){.adminActions{grid-template-columns:1fr 1fr 1fr}.adminReason{grid-column:1/-1}.followToolbar{grid-template-columns:1fr}.followAlertGrid{grid-template-columns:1fr 1fr 1fr}.followAlertItem{grid-template-columns:auto 1fr}.followAlertItem .lineBtn,.followAlertItem .secondary{width:100%}}
 
 @media(min-width:720px){.adminBoardGrid{grid-template-columns:repeat(4,1fr)}.adminMemberStats{grid-template-columns:repeat(5,1fr)}}
 @media(min-width:720px){.tabs{grid-template-columns:repeat(9,1fr)}.kpis{grid-template-columns:repeat(4,1fr)}}
@@ -108,7 +115,7 @@ window.SUG_CLOUD_CONFIG = {
 <div id="authGate" class="authGate">
   <div class="authBox">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V13 CLOUD / MEMBERS ONLY</div>
+    <div class="sub">V14 CLOUD / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -181,7 +188,7 @@ window.SUG_CLOUD_CONFIG = {
 
 <header>
   <div class="head">
-    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V13 CLOUD / Member Intelligence</small></div>
+    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V14 CLOUD / Member Intelligence</small></div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="exportAll()">データ出力</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
 </header>
@@ -217,7 +224,15 @@ window.SUG_CLOUD_CONFIG = {
         <div class="kpi"><span>記録不足</span><b id="admMissing">0</b></div>
         <div class="kpi"><span>未対応</span><b id="admOpen">0</b></div>
         <div class="kpi"><span>期限超過</span><b id="admOverdue">0</b></div>
+        <div class="kpi"><span>今日フォロー</span><b id="admToday">0</b></div>
+        <div class="kpi"><span>明日フォロー</span><b id="admTomorrow">0</b></div>
       </div>
+      <div class="followAlertGrid">
+        <div class="followAlertCard"><span>期限超過</span><b id="followAlertOverdue" class="dueOverdue">0</b></div>
+        <div class="followAlertCard"><span>今日対応</span><b id="followAlertToday" class="dueToday">0</b></div>
+        <div class="followAlertCard"><span>明日対応</span><b id="followAlertTomorrow" class="dueTomorrow">0</b></div>
+      </div>
+      <div id="followAlertList" class="followAlertList"></div>
       <div class="followToolbar">
         <div>
           <label>表示する会員</label>
@@ -226,6 +241,8 @@ window.SUG_CLOUD_CONFIG = {
             <option value="needs">要対応のみ</option>
             <option value="open">未対応のみ</option>
             <option value="overdue">フォロー期限超過</option>
+            <option value="today">今日フォロー</option>
+            <option value="tomorrow">明日フォロー</option>
             <option value="done">対応済みのみ</option>
           </select>
         </div>
@@ -372,8 +389,13 @@ let followupFilter = "all";
 let followupEditUserId = null;
 let followupTableReady = true;
 
-const today=()=>new Date().toISOString().slice(0,10);
+const dateISO=(d)=>{
+  const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,"0"),day=String(d.getDate()).padStart(2,"0");
+  return `${y}-${m}-${day}`;
+};
+const today=()=>dateISO(new Date());
 const monthNow=()=>today().slice(0,7);
+const shiftDate=(days)=>{const d=new Date();d.setHours(0,0,0,0);d.setDate(d.getDate()+days);return dateISO(d)};
 let db={current:null,members:{}};
 
 function baseMember(name="新規会員"){
@@ -906,8 +928,24 @@ function followupDefault(memberId){
 function followupState(memberId){
   return followupByMember.get(memberId)||followupDefault(memberId);
 }
-function followupIsOverdue(f){
-  return !!(f?.next_followup && f.status!=="done" && f.next_followup<today());
+function followupDueKind(f){
+  if(!f?.next_followup || f.status==="done")return "none";
+  const d=f.next_followup;
+  if(d<today())return "overdue";
+  if(d===today())return "today";
+  if(d===shiftDate(1))return "tomorrow";
+  return "upcoming";
+}
+function followupIsOverdue(f){return followupDueKind(f)==="overdue"}
+function followupDueLabel(f){
+  const k=followupDueKind(f);
+  if(k==="overdue")return "期限超過";
+  if(k==="today")return "今日";
+  if(k==="tomorrow")return "明日";
+  return f?.next_followup||"--";
+}
+function followupUrgency(f){
+  return ({overdue:0,today:1,tomorrow:2,upcoming:3,none:4})[followupDueKind(f)]??9;
 }
 function followupDateLabel(v){
   if(!v)return "--";
@@ -919,7 +957,9 @@ function followupPass(row){
   const f=followupState(row.profile.id);
   if(followupFilter==="needs")return row.st.key!=="ok";
   if(followupFilter==="open")return f.status!=="done";
-  if(followupFilter==="overdue")return followupIsOverdue(f);
+  if(followupFilter==="overdue")return followupDueKind(f)==="overdue";
+  if(followupFilter==="today")return followupDueKind(f)==="today";
+  if(followupFilter==="tomorrow")return followupDueKind(f)==="tomorrow";
   if(followupFilter==="done")return f.status==="done";
   return true;
 }
@@ -999,7 +1039,7 @@ function openFollowupModal(userId){
   document.getElementById("followupStatus").value=f.status||"open";
   document.getElementById("followupNext").value=f.next_followup||"";
   document.getElementById("followupMemo").value=f.memo||"";
-  document.getElementById("followupError").textContent=followupTableReady?"":"先にV13用SQLを実行してください。";
+  document.getElementById("followupError").textContent=followupTableReady?"":"フォロー管理SQLを確認してください。";
   const hist=Array.isArray(f.history)?f.history:[];
   document.getElementById("followupHistory").innerHTML=hist.length
     ? hist.slice(0,8).map(h=>`<div class="item"><b>${esc(h.type||"対応")}｜${esc(followupDateLabel(h.at))}</b><br><span class="muted">${esc(h.note||"")}</span></div>`).join("")
@@ -1014,7 +1054,7 @@ async function saveFollowupFromModal(){
   const userId=followupEditUserId;
   if(!userId)return;
   if(!followupTableReady){
-    document.getElementById("followupError").textContent="V13用SQLが未設定です。";
+    document.getElementById("followupError").textContent="フォロー管理SQLが未設定です。";
     return;
   }
   const status=document.getElementById("followupStatus").value;
@@ -1060,13 +1100,37 @@ async function refreshAdminBoard(){
       if(!mm.profile)mm.profile=baseMember(p.display_name||"会員").profile;
       const st=adminStatusFor(mm);
       return {profile:p,mm,row,st,lastDate:latestRecordDate(mm)};
-    }).sort((a,b)=>adminPriority(a.st.key)-adminPriority(b.st.key) || (b.lastDate||"").localeCompare(a.lastDate||""));
+    }).sort((a,b)=>{
+      const fa=followupState(a.profile.id),fb=followupState(b.profile.id);
+      return followupUrgency(fa)-followupUrgency(fb)
+        || adminPriority(a.st.key)-adminPriority(b.st.key)
+        || (b.lastDate||"").localeCompare(a.lastDate||"");
+    });
     adminRows=members;
     renderAdminBoardRows();
   }catch(e){
     console.error(e);
     if(list)list.innerHTML='<span class="bad">管理一覧を取得できませんでした。</span>';
   }
+}
+function renderFollowupAlerts(members){
+  const box=document.getElementById("followAlertList");
+  if(!box)return;
+  const alerts=(members||[])
+    .map(row=>({row,f:followupState(row.profile.id),kind:followupDueKind(followupState(row.profile.id))}))
+    .filter(x=>["overdue","today","tomorrow"].includes(x.kind))
+    .sort((a,b)=>followupUrgency(a.f)-followupUrgency(b.f) || (a.f.next_followup||"").localeCompare(b.f.next_followup||""));
+  if(!alerts.length){
+    box.innerHTML='<div class="notice">今日・明日・期限超過のフォロー予定はありません。</div>';
+    return;
+  }
+  box.innerHTML=alerts.map(({row,f,kind})=>{
+    const name=row.profile.display_name||row.mm?.profile?.name||"会員";
+    const cls=kind==="overdue"?"dueOverdue":kind==="today"?"dueToday":"dueTomorrow";
+    const due=kind==="overdue"?`期限超過 ${f.next_followup}`:kind==="today"?"今日対応":`明日 ${f.next_followup}`;
+    const reason=row.st?.reason||"";
+    return `<div class="followAlertItem"><div class="followAlertDue ${cls}">${esc(due)}</div><div><div class="followAlertName">${esc(name)}</div><div class="followAlertMeta">${esc(reason)}${f.memo?`｜${esc(f.memo)}`:""}</div></div><button class="lineBtn" onclick="lineFollowup('${row.profile.id}')">LINE</button><button class="secondary" onclick="openFollowupModal('${row.profile.id}')">対応</button></div>`;
+  }).join("");
 }
 function renderAdminBoardRows(){
   const list=document.getElementById("adminBoardList");
@@ -1076,9 +1140,12 @@ function renderAdminBoardRows(){
   const recovery=members.filter(x=>x.st.key==="recovery").length;
   const missing=members.filter(x=>x.st.key==="missing").length;
   const open=members.filter(x=>followupState(x.profile.id).status!=="done").length;
-  const overdue=members.filter(x=>followupIsOverdue(followupState(x.profile.id))).length;
-  const ids={admTotal:total,admAttention:attention,admRecovery:recovery,admMissing:missing,admOpen:open,admOverdue:overdue};
+  const overdue=members.filter(x=>followupDueKind(followupState(x.profile.id))==="overdue").length;
+  const dueToday=members.filter(x=>followupDueKind(followupState(x.profile.id))==="today").length;
+  const dueTomorrow=members.filter(x=>followupDueKind(followupState(x.profile.id))==="tomorrow").length;
+  const ids={admTotal:total,admAttention:attention,admRecovery:recovery,admMissing:missing,admOpen:open,admOverdue:overdue,admToday:dueToday,admTomorrow:dueTomorrow,followAlertOverdue:overdue,followAlertToday:dueToday,followAlertTomorrow:dueTomorrow};
   Object.entries(ids).forEach(([id,v])=>{const el=document.getElementById(id);if(el)el.textContent=v});
+  renderFollowupAlerts(members);
   if(!list)return;
   if(!members.length){list.innerHTML='<span class="muted">会員がまだ登録されていません。</span>';return;}
   const shown=members.filter(followupPass);
@@ -1090,11 +1157,13 @@ function renderAdminBoardRows(){
     const goal=mm.profile?.goal||"--";
     const last=x.lastDate?`${x.lastDate}（${st.age===0?"今日":st.age+"日前"}）`:"記録なし";
     const followStatus=f.status==="done"?"対応済":"未対応";
-    const followClass=followupIsOverdue(f)?"followOverdue":(f.status==="done"?"followDone":"followOpen");
-    const next=f.next_followup||"--";
+    const dueKind=followupDueKind(f);
+    const followClass=dueKind==="overdue"?"followOverdue":(f.status==="done"?"followDone":"followOpen");
+    const next=followupDueLabel(f);
+    const dueMark=dueKind==="today"?"｜<b class=\"dueToday\">今日対応</b>":dueKind==="tomorrow"?"｜<b class=\"dueTomorrow\">明日対応</b>":dueKind==="overdue"?"｜<b class=\"dueOverdue\">期限超過</b>":"";
     const contact=f.last_contact_at?followupDateLabel(f.last_contact_at):"--";
     const memo=f.memo?`｜メモ ${esc(f.memo)}`:"";
-    return `<div class="adminMember"><div class="adminMemberTop"><div><div class="adminMemberName">${esc(x.profile.display_name||mm.profile?.name||"会員")}</div><div class="adminMemberMeta">目的 ${esc(goal)}｜最終記録 ${esc(last)}</div></div><span class="badge ${st.cls}">${esc(st.label)}</span></div><div class="adminMemberStats"><div class="adminMini"><span>体重</span><b>${latestW?Number(latestW.weight).toFixed(1)+"kg":"--"}</b></div><div class="adminMini"><span>7日差</span><b>${esc(st.wt.label)}</b></div><div class="adminMini"><span>回復</span><b>${st.score!=null?st.score+"点":"--"}</b></div><div class="adminMini"><span>睡眠</span><b>${latestR?Number(latestR.sleep||0).toFixed(1)+"h":"--"}</b></div><div class="adminMini"><span>トレ記録</span><b>${(mm.training||[]).length}</b></div></div><div class="followMeta"><b class="${followClass}">${followStatus}</b>｜最終連絡 ${esc(contact)}｜次回 ${esc(next)}${memo}</div><div class="adminActions"><div class="adminReason"><b>理由：</b>${esc(st.reason)}</div><button class="lineBtn" onclick="lineFollowup('${x.profile.id}')">LINE連絡</button><button class="secondary" onclick="openFollowupModal('${x.profile.id}')">対応記録</button><button class="primary" onclick="openMemberFromAdmin('${x.profile.id}')">開く</button></div></div>`;
+    return `<div class="adminMember"><div class="adminMemberTop"><div><div class="adminMemberName">${esc(x.profile.display_name||mm.profile?.name||"会員")}</div><div class="adminMemberMeta">目的 ${esc(goal)}｜最終記録 ${esc(last)}</div></div><span class="badge ${st.cls}">${esc(st.label)}</span></div><div class="adminMemberStats"><div class="adminMini"><span>体重</span><b>${latestW?Number(latestW.weight).toFixed(1)+"kg":"--"}</b></div><div class="adminMini"><span>7日差</span><b>${esc(st.wt.label)}</b></div><div class="adminMini"><span>回復</span><b>${st.score!=null?st.score+"点":"--"}</b></div><div class="adminMini"><span>睡眠</span><b>${latestR?Number(latestR.sleep||0).toFixed(1)+"h":"--"}</b></div><div class="adminMini"><span>トレ記録</span><b>${(mm.training||[]).length}</b></div></div><div class="followMeta"><b class="${followClass}">${followStatus}</b>｜最終連絡 ${esc(contact)}｜次回 ${esc(next)}${dueMark}${memo}</div><div class="adminActions"><div class="adminReason"><b>理由：</b>${esc(st.reason)}</div><button class="lineBtn" onclick="lineFollowup('${x.profile.id}')">LINE連絡</button><button class="secondary" onclick="openFollowupModal('${x.profile.id}')">対応記録</button><button class="primary" onclick="openMemberFromAdmin('${x.profile.id}')">開く</button></div></div>`;
   }).join("");
 }
 async function openMemberFromAdmin(id){
