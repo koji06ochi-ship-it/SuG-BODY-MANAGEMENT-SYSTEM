@@ -60,6 +60,24 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 .hidden{display:none!important}
 .setupNote{font-size:10px;line-height:1.7;color:#aaa;margin-top:12px}
 
+
+.memberModal{
+  position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.78);
+  display:flex;align-items:center;justify-content:center;padding:18px
+}
+.memberBox{
+  width:min(460px,100%);background:linear-gradient(180deg,#161619,#101012);
+  border:1px solid #5a4a25;border-radius:18px;padding:18px;
+  box-shadow:0 24px 80px rgba(0,0,0,.55)
+}
+.memberBox h2{margin:0 0 4px;color:var(--gold2);font-size:17px}
+.memberBox .sub{font-size:10px;color:#aaa;margin-bottom:14px}
+.memberBox input{margin-bottom:9px}
+.memberActions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.memberError{min-height:18px;color:#ff9d9d;font-size:10px;margin-top:8px;line-height:1.5}
+.passRow{display:grid;grid-template-columns:1fr auto;gap:7px;align-items:center}
+.passRow button{height:42px;padding:0 10px}
+
 </style>
 <script>
 window.SUG_CLOUD_CONFIG = {
@@ -74,7 +92,7 @@ window.SUG_CLOUD_CONFIG = {
 <div id="authGate" class="authGate">
   <div class="authBox">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V5 CLOUD / MEMBERS ONLY</div>
+    <div class="sub">V6 CLOUD / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -85,9 +103,36 @@ window.SUG_CLOUD_CONFIG = {
   </div>
 </div>
 
+
+<div id="memberModal" class="memberModal hidden">
+  <div class="memberBox">
+    <h2>会員アカウント作成</h2>
+    <div class="sub">S.u.G管理者専用｜作成後、会員本人が同じURLからログインできます。</div>
+
+    <label>氏名</label>
+    <input id="newMemberName" autocomplete="name" placeholder="例：山田 太郎">
+
+    <label>メールアドレス</label>
+    <input id="newMemberEmail" type="email" autocomplete="email" placeholder="member@example.com">
+
+    <label>仮パスワード</label>
+    <div class="passRow">
+      <input id="newMemberPassword" type="text" autocomplete="off" placeholder="8文字以上">
+      <button class="secondary" type="button" onclick="generateTempPassword()">自動作成</button>
+    </div>
+
+    <div id="memberCreateError" class="memberError"></div>
+
+    <div class="memberActions">
+      <button class="secondary" type="button" onclick="closeMemberModal()">キャンセル</button>
+      <button id="createMemberBtn" class="primary" type="button" onclick="createMemberAccount()">会員を作成</button>
+    </div>
+  </div>
+</div>
+
 <header>
   <div class="head">
-    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V2 / Member Intelligence</small></div>
+    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V6 CLOUD / Member Intelligence</small></div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button class="secondary" onclick="exportAll()">データ出力</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
 </header>
@@ -481,7 +526,104 @@ function persist(){
 function saveRender(){persist();renderAll()}
 
 function newMember(){
-  alert("V4では会員アカウントを先に発行してから管理します。管理者用の会員招待機能は次の段階で追加します。");
+  if(currentRole!=="trainer"){
+    alert("会員追加は管理者のみ利用できます。");
+    return;
+  }
+  newMemberName.value="";
+  newMemberEmail.value="";
+  newMemberPassword.value="";
+  memberCreateError.textContent="";
+  createMemberBtn.disabled=false;
+  createMemberBtn.textContent="会員を作成";
+  memberModal.classList.remove("hidden");
+}
+
+function closeMemberModal(){
+  memberModal.classList.add("hidden");
+}
+
+function generateTempPassword(){
+  const chars="ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789";
+  const symbols="!@#$%";
+  const a=new Uint32Array(12);
+  crypto.getRandomValues(a);
+  let s="";
+  for(let i=0;i<10;i++)s+=chars[a[i]%chars.length];
+  s+=symbols[a[10]%symbols.length];
+  s+=String(a[11]%10);
+  newMemberPassword.value=s;
+}
+
+async function refreshMemberProfiles(selectId=null){
+  const all=await apiGet(
+    "/rest/v1/profiles?select=id,display_name,role&order=display_name.asc"
+  );
+  if(!all.ok)throw new Error("会員一覧を更新できません｜HTTP "+all.status);
+  accessibleProfiles=Array.isArray(all.body)?all.body:[];
+  renderMemberSelect();
+
+  if(selectId && accessibleProfiles.some(x=>x.id===selectId)){
+    await switchMember(selectId);
+  }
+}
+
+async function createMemberAccount(){
+  if(currentRole!=="trainer")return;
+
+  const displayName=newMemberName.value.trim();
+  const email=newMemberEmail.value.trim().toLowerCase();
+  const password=newMemberPassword.value;
+
+  if(!displayName){
+    memberCreateError.textContent="氏名を入力してください。";
+    return;
+  }
+  if(!email || !email.includes("@")){
+    memberCreateError.textContent="メールアドレスを確認してください。";
+    return;
+  }
+  if(password.length<8){
+    memberCreateError.textContent="仮パスワードは8文字以上にしてください。";
+    return;
+  }
+
+  createMemberBtn.disabled=true;
+  createMemberBtn.textContent="作成中...";
+  memberCreateError.textContent="";
+
+  try{
+    const cfg=window.SUG_CLOUD_CONFIG;
+    const res=await fetch(
+      cfg.url+"/functions/v1/create-member",
+      {
+        method:"POST",
+        headers:{
+          "apikey":cfg.publishableKey,
+          "Authorization":"Bearer "+accessToken,
+          "Content-Type":"application/json"
+        },
+        body:JSON.stringify({displayName,email,password})
+      }
+    );
+
+    const text=await res.text();
+    let body={};
+    try{body=text?JSON.parse(text):{}}catch(_e){body={message:text}}
+
+    if(!res.ok){
+      throw new Error(body?.message||body?.error||("HTTP "+res.status));
+    }
+
+    closeMemberModal();
+    await refreshMemberProfiles(body.user?.id||null);
+    alert("会員アカウントを作成しました。");
+  }catch(e){
+    console.error(e);
+    memberCreateError.textContent="作成失敗："+(e?.message||String(e));
+    createMemberBtn.disabled=false;
+    createMemberBtn.textContent="会員を作成";
+  }
 }
 async function switchMember(id){
   if(id===db.current)return;
