@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>S.u.G BODY MANAGEMENT SYSTEM V15</title>
+<title>S.u.G BODY MANAGEMENT SYSTEM V16</title>
 <style>
 :root{
   --bg:#09090a;--card:#141417;--card2:#1a1a1f;--gold:#d8b35b;--gold2:#f3d98b;
@@ -70,6 +70,16 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 .backupGrid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:9px}
 .backupStatus{margin-top:9px;padding:9px;background:#0d0d10;border:1px solid #2c2c32;border-radius:11px;font-size:10px;line-height:1.7;color:#aaa}
 .backupStatus b{color:var(--gold2)}
+
+.coachPlanCard{border-color:#5a4a25;background:linear-gradient(180deg,#18150e,#101012)}
+.coachPlanTop{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.coachPlanTitle{font-size:16px;font-weight:900;color:var(--gold2)}
+.coachPlanBody{display:grid;gap:7px;margin-top:10px}
+.coachPlanLine{background:#0d0d10;border:1px solid #2d2a22;border-radius:10px;padding:9px;font-size:11px;line-height:1.6}
+.coachPlanLine b{color:#fff}.coachPlanTargets{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.coachPlanTarget{background:#0d0d10;border:1px solid #2d2a22;border-radius:10px;padding:8px;text-align:center}.coachPlanTarget span{display:block;color:#999;font-size:8px}.coachPlanTarget b{display:block;color:var(--gold2);font-size:12px;margin-top:3px}
+.coachPlanEditor{margin-top:10px}.coachPlanEditor textarea{min-height:78px}
+@media(max-width:540px){.coachPlanTargets{grid-template-columns:1fr 1fr 1fr}}
 .restorePreview{margin-top:9px;padding:10px;background:#111116;border:1px solid #3b3320;border-radius:11px;font-size:10px;line-height:1.7}
 .restorePreview strong{color:var(--gold2)}
 .backupDanger{border-color:#6b3336;background:#1d1213}
@@ -123,7 +133,7 @@ window.SUG_CLOUD_CONFIG = {
 <div id="authGate" class="authGate">
   <div class="authBox">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V15 CLOUD / MEMBERS ONLY</div>
+    <div class="sub">V16 CLOUD / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -196,7 +206,7 @@ window.SUG_CLOUD_CONFIG = {
 
 <header>
   <div class="head">
-    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V15 CLOUD / Member Intelligence</small></div>
+    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V16 CLOUD / Member Intelligence</small></div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
 </header>
@@ -286,6 +296,22 @@ window.SUG_CLOUD_CONFIG = {
         <div class="kpi"><span>7日平均</span><b id="dAvg">--</b></div>
         <div class="kpi"><span>今日の摂取</span><b id="dKcal">0 kcal</b></div>
         <div class="kpi"><span>回復スコア</span><b id="dRec">--</b></div>
+      </div>
+    </div>
+    <div id="coachPlanView" class="card coachPlanCard">
+      <div class="coachPlanTop">
+        <div><div class="coachPlanTitle">今週のコーチプラン</div><div id="coachPlanUpdated" class="muted">未設定</div></div>
+        <span id="coachPlanStatus" class="badge">未設定</span>
+      </div>
+      <div class="coachPlanBody">
+        <div class="coachPlanLine"><b>今週の重点</b><br><span id="coachPlanFocus" class="muted">まだ設定されていません。</span></div>
+        <div class="coachPlanLine"><b>次回までの課題</b><br><span id="coachPlanAction" class="muted">まだ設定されていません。</span></div>
+        <div class="coachPlanTargets">
+          <div class="coachPlanTarget"><span>次回セッション</span><b id="coachPlanSession">--</b></div>
+          <div class="coachPlanTarget"><span>週間トレ目標</span><b id="coachPlanTrainDays">--</b></div>
+          <div class="coachPlanTarget"><span>睡眠目標</span><b id="coachPlanSleep">--</b></div>
+        </div>
+        <button id="coachPlanCompleteBtn" class="secondary" style="width:100%" onclick="toggleCoachPlanComplete()">課題を完了にする</button>
       </div>
     </div>
     <div class="card"><h2>体重トレンド</h2><canvas id="weightChart" width="900" height="270"></canvas><div id="weightJudge" class="notice" style="margin-top:8px"></div></div>
@@ -388,6 +414,21 @@ window.SUG_CLOUD_CONFIG = {
       <div style="margin-top:8px"><label>注意事項 / 既往歴</label><textarea id="pfNotes"></textarea></div>
       <button class="primary" style="width:100%;margin-top:9px" onclick="saveProfile()">保存</button>
     </div>
+    <div id="coachPlanEditorCard" class="card coachPlanEditor">
+      <h2>コーチプラン設定</h2>
+      <div class="notice">会員の「概要」に表示する今週の重点・次回課題・目標です。管理者だけ編集できます。</div>
+      <div style="margin-top:9px"><label>今週の重点</label><textarea id="cpFocus" placeholder="例：睡眠を確保しながら、胸・肩のフォーム安定を優先"></textarea></div>
+      <div style="margin-top:8px"><label>次回までの課題</label><textarea id="cpAction" placeholder="例：体重を朝3回記録、トレ2回、痛みが出た種目はメモ"></textarea></div>
+      <div class="grid2" style="margin-top:8px">
+        <div><label>次回セッション日</label><input id="cpSession" type="date"></div>
+        <div><label>週間トレ目標 回</label><input id="cpTrainDays" type="number" min="0" max="14" step="1"></div>
+      </div>
+      <div class="grid2" style="margin-top:8px">
+        <div><label>睡眠目標 h</label><input id="cpSleep" type="number" min="0" max="12" step="0.5"></div>
+        <div><label>歩数目標 / 日</label><input id="cpSteps" type="number" min="0" step="500"></div>
+      </div>
+      <button class="primary" style="width:100%;margin-top:9px" onclick="saveCoachPlan()">コーチプランを保存</button>
+    </div>
     <div class="card">
       <h2>会員データ管理</h2>
       <button id="exportMemberBtn" class="secondary" style="width:100%" onclick="backupCurrentMember()">この会員をバックアップ</button>
@@ -423,6 +464,7 @@ let db={current:null,members:{}};
 
 function baseMember(name="新規会員"){
   return {profile:{name,goal:"筋肥大",targetWeight:0,targetKcal:0,targetP:0,targetF:0,targetC:0,notes:""},
+    coachPlan:{weeklyFocus:"",nextAction:"",nextSessionDate:"",targetTrainingDays:0,targetSleep:0,targetSteps:0,completedAt:null,updatedAt:null},
     weights:[],meals:[],training:[],recovery:[],photos:[]}
 }
 function m(){return db.members[db.current]}
@@ -672,8 +714,11 @@ async function loadMember(id){
   ["weights","meals","training","recovery","photos"].forEach(k=>{
     if(!Array.isArray(db.members[id][k]))db.members[id][k]=[];
   });
+  if(!db.members[id].coachPlan || typeof db.members[id].coachPlan!=="object") db.members[id].coachPlan=baseMember(p?.display_name||"会員").coachPlan;
+  db.members[id].coachPlan={...baseMember(p?.display_name||"会員").coachPlan,...db.members[id].coachPlan};
 
   loadProfile();
+  loadCoachPlanEditor();
   renderAll();
   setStatus("同期済");
 }
@@ -1204,6 +1249,7 @@ function applyRoleUI(){
   const exportMemberBtn=document.getElementById("exportMemberBtn");
   const deleteMemberBtn=document.getElementById("deleteMemberBtn");
   const adminTab=document.getElementById("adminTab");
+  const coachEditor=document.getElementById("coachPlanEditorCard");
   const selectedProfile=accessibleProfiles.find(x=>x.id===db.current);
   const canDelete=isTrainer && selectedProfile && selectedProfile.role!=="trainer" && db.current!==sessionUser?.id;
 
@@ -1213,6 +1259,7 @@ function applyRoleUI(){
   if(exportMemberBtn) exportMemberBtn.style.display=isTrainer?"block":"none";
   if(deleteMemberBtn) deleteMemberBtn.style.display=canDelete?"block":"none";
   if(adminTab) adminTab.style.display=isTrainer?"block":"none";
+  if(coachEditor) coachEditor.style.display=isTrainer?"block":"none";
   if(!isTrainer && document.getElementById("adminBoard")?.classList.contains("active")){
     const dashTab=document.querySelector('.tab[data-tab="dash"]');if(dashTab)dashTab.click();
   }
@@ -1265,6 +1312,64 @@ async function addPhoto(){
 
 function loadProfile(){if(!m())return;let p=m().profile;pfName.value=p.name||"";pfGoal.value=p.goal||"筋肥大";pfTargetWeight.value=p.targetWeight||"";pfTargetKcal.value=p.targetKcal||"";pfP.value=p.targetP||"";pfF.value=p.targetF||"";pfC.value=p.targetC||"";pfNotes.value=p.notes||""}
 function saveProfile(){let p=m().profile;p.name=pfName.value||p.name;p.goal=pfGoal.value;p.targetWeight=n("pfTargetWeight");p.targetKcal=n("pfTargetKcal");p.targetP=n("pfP");p.targetF=n("pfF");p.targetC=n("pfC");p.notes=pfNotes.value;saveRender()}
+
+function coachPlan(){
+  if(!m())return null;
+  if(!m().coachPlan || typeof m().coachPlan!=="object")m().coachPlan=baseMember(m().profile?.name||"会員").coachPlan;
+  m().coachPlan={...baseMember(m().profile?.name||"会員").coachPlan,...m().coachPlan};
+  return m().coachPlan;
+}
+function loadCoachPlanEditor(){
+  if(!m())return;
+  const cp=coachPlan();
+  const vals={cpFocus:cp.weeklyFocus||"",cpAction:cp.nextAction||"",cpSession:cp.nextSessionDate||"",cpTrainDays:cp.targetTrainingDays||"",cpSleep:cp.targetSleep||"",cpSteps:cp.targetSteps||""};
+  Object.entries(vals).forEach(([id,v])=>{const el=document.getElementById(id);if(el)el.value=v});
+}
+function saveCoachPlan(){
+  if(currentRole!=="trainer")return alert("コーチプランの編集は管理者のみです。");
+  const cp=coachPlan();
+  const nextAction=(document.getElementById("cpAction")?.value||"").trim();
+  const actionChanged=nextAction!==(cp.nextAction||"");
+  cp.weeklyFocus=(document.getElementById("cpFocus")?.value||"").trim();
+  cp.nextAction=nextAction;
+  cp.nextSessionDate=document.getElementById("cpSession")?.value||"";
+  cp.targetTrainingDays=Number(document.getElementById("cpTrainDays")?.value||0);
+  cp.targetSleep=Number(document.getElementById("cpSleep")?.value||0);
+  cp.targetSteps=Number(document.getElementById("cpSteps")?.value||0);
+  if(actionChanged)cp.completedAt=null;
+  cp.updatedAt=new Date().toISOString();
+  persist();renderCoachPlan();
+  alert("コーチプランを保存しました。");
+}
+function coachPlanSessionLabel(dateStr){
+  if(!dateStr)return "--";
+  const a=new Date(today()+"T00:00:00"),b=new Date(dateStr+"T00:00:00");
+  const d=Math.round((b-a)/86400000);
+  if(d===0)return "今日";if(d===1)return "明日";if(d>1)return `${dateStr.slice(5).replace("-","/")}（あと${d}日）`;if(d<0)return `${dateStr.slice(5).replace("-","/")}（${Math.abs(d)}日超過）`;
+  return dateStr;
+}
+function renderCoachPlan(){
+  if(!m())return;
+  const cp=coachPlan();
+  const has=!!(cp.weeklyFocus||cp.nextAction||cp.nextSessionDate||cp.targetTrainingDays||cp.targetSleep||cp.targetSteps);
+  const set=(id,txt)=>{const el=document.getElementById(id);if(el)el.textContent=txt};
+  set("coachPlanFocus",cp.weeklyFocus||"まだ設定されていません。");
+  set("coachPlanAction",cp.nextAction||"まだ設定されていません。");
+  set("coachPlanSession",coachPlanSessionLabel(cp.nextSessionDate));
+  set("coachPlanTrainDays",cp.targetTrainingDays?`${cp.targetTrainingDays}回/週`:"--");
+  set("coachPlanSleep",cp.targetSleep?`${Number(cp.targetSleep).toFixed(1)}h`:"--");
+  const updated=document.getElementById("coachPlanUpdated");
+  if(updated)updated.textContent=cp.updatedAt?`更新 ${new Date(cp.updatedAt).toLocaleString("ja-JP",{month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"})}`:"未設定";
+  const status=document.getElementById("coachPlanStatus");
+  if(status){status.textContent=!has?"未設定":cp.completedAt?"完了":"実行中";status.className=`badge ${!has?"":cp.completedAt?"ok":"warn"}`;}
+  const btn=document.getElementById("coachPlanCompleteBtn");
+  if(btn){btn.style.display=cp.nextAction?"block":"none";btn.textContent=cp.completedAt?"完了を取り消す":"課題を完了にする";}
+}
+function toggleCoachPlanComplete(){
+  const cp=coachPlan();if(!cp?.nextAction)return;
+  cp.completedAt=cp.completedAt?null:new Date().toISOString();
+  persist();renderCoachPlan();
+}
 
 function mealTotals(date=today()){return m().meals.filter(x=>x.date===date).reduce((a,x)=>({kcal:a.kcal+x.kcal,p:a.p+x.p,f:a.f+x.f,c:a.c+x.c}),{kcal:0,p:0,f:0,c:0})}
 function recScore(r){if(!r)return null;let s=100;if(r.sleep<7)s-=Math.min(25,(7-r.sleep)*8);s-=Math.max(0,r.fatigue-3)*5;s-=Math.max(0,r.stress-3)*4;s-=r.pain*5;return Math.max(0,Math.round(s))}
@@ -1365,7 +1470,7 @@ function renderAll(){
   prTable.innerHTML=exs.length?`<table class="table"><tr><th>種目</th><th>PR</th><th>推定1RM</th></tr>${exs.map(ex=>{let x=pr(ex);return `<tr><td>${esc(ex)}</td><td>${x.weight}kg×${x.reps}</td><td>${e1rm(x).toFixed(1)}kg</td></tr>`}).join("")}</table>`:'<span class="muted">記録なし</span>';
   recoveryJudge.innerHTML=`<span class="badge ${adv.cls}">${esc(adv.txt)}</span>`;
   recoveryList.innerHTML=[...mm.recovery].reverse().map((x,ri)=>{let i=mm.recovery.length-1-ri,a=recAdvice(x);return `<div class="item"><div class="row"><div><strong>${x.date}｜睡眠 ${x.sleep}h</strong><br><small>疲労${x.fatigue} / ストレス${x.stress} / 痛み${x.pain}</small><br><span class="badge ${a.cls}">${recScore(x)}点</span></div><button class="danger" onclick="remove('recovery',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
-  drawChart();renderReport();renderPhotos();
+  renderCoachPlan();drawChart();renderReport();renderPhotos();
 }
 
 function monthLabel(mon){
@@ -1543,7 +1648,7 @@ async function backupAll(){
     const members=accessibleProfiles.filter(p=>p.role!=="trainer");
     const ids=new Set(members.map(p=>p.id));
     const payload={
-      schema:"SUG_BODY_MANAGEMENT_BACKUP",version:15,kind:"all",created_at:backupStamp(),created_by:sessionUser?.id||null,
+      schema:"SUG_BODY_MANAGEMENT_BACKUP",version:16,kind:"all",created_at:backupStamp(),created_by:sessionUser?.id||null,
       profiles:members.map(p=>({id:p.id,display_name:p.display_name||"",role:p.role||"member"})),
       member_data:rows.filter(x=>ids.has(x.user_id)).map(x=>({user_id:x.user_id,data:normalizeMemberData(x.data,members.find(p=>p.id===x.user_id)?.display_name||"会員"),updated_at:x.updated_at||null})),
       followups:fu.rows.filter(x=>ids.has(x.member_id)),
@@ -1567,7 +1672,7 @@ async function backupCurrentMember(){
     const row=Array.isArray(r.body)?r.body[0]:null;
     const fu=await apiGet("/rest/v1/trainer_followup_state?select=member_id,status,last_contact_at,memo,next_followup,history,updated_at&member_id=eq."+encodeURIComponent(p.id));
     const payload={
-      schema:"SUG_BODY_MANAGEMENT_BACKUP",version:15,kind:"member",created_at:backupStamp(),created_by:sessionUser?.id||null,
+      schema:"SUG_BODY_MANAGEMENT_BACKUP",version:16,kind:"member",created_at:backupStamp(),created_by:sessionUser?.id||null,
       profile:{id:p.id,display_name:p.display_name||"",role:p.role||"member"},
       member_data:{user_id:p.id,data:normalizeMemberData(row?.data||m(),p.display_name||"会員"),updated_at:row?.updated_at||null},
       followup:fu.ok&&Array.isArray(fu.body)?fu.body[0]||null:null,
@@ -1648,7 +1753,7 @@ function exportMember(){backupCurrentMember()}
 function exportAll(){backupAll()}
 function download(name,text){let b=new Blob([text],{type:"application/json"}),a=document.createElement("a"),u=URL.createObjectURL(b);a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000)}
 
-document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.getElementById(b.dataset.tab).classList.add("active");if(b.dataset.tab==="profile")loadProfile();if(b.dataset.tab==="adminBoard")refreshAdminBoard();renderAll()});
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.getElementById(b.dataset.tab).classList.add("active");if(b.dataset.tab==="profile"){loadProfile();loadCoachPlanEditor();}if(b.dataset.tab==="adminBoard")refreshAdminBoard();renderAll()});
 ["wDate","mDate","tDate","rDate","pDate"].forEach(id=>document.getElementById(id).value=today());
 reportMonth.value=monthNow();
 initCloud();
