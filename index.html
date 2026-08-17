@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>S.u.G BODY MANAGEMENT SYSTEM V14</title>
+<title>S.u.G BODY MANAGEMENT SYSTEM V15</title>
 <style>
 :root{
   --bg:#09090a;--card:#141417;--card2:#1a1a1f;--gold:#d8b35b;--gold2:#f3d98b;
@@ -67,6 +67,14 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 @media(min-width:720px){.adminBoardGrid{grid-template-columns:repeat(4,1fr)}.adminMemberStats{grid-template-columns:repeat(5,1fr)}}
 @media(min-width:720px){.tabs{grid-template-columns:repeat(9,1fr)}.kpis{grid-template-columns:repeat(4,1fr)}}
 
+.backupGrid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:9px}
+.backupStatus{margin-top:9px;padding:9px;background:#0d0d10;border:1px solid #2c2c32;border-radius:11px;font-size:10px;line-height:1.7;color:#aaa}
+.backupStatus b{color:var(--gold2)}
+.restorePreview{margin-top:9px;padding:10px;background:#111116;border:1px solid #3b3320;border-radius:11px;font-size:10px;line-height:1.7}
+.restorePreview strong{color:var(--gold2)}
+.backupDanger{border-color:#6b3336;background:#1d1213}
+@media(max-width:520px){.backupGrid{grid-template-columns:1fr}}
+
 .authGate{
   position:fixed;inset:0;z-index:9999;background:linear-gradient(180deg,#070708,#101013);
   display:flex;align-items:center;justify-content:center;padding:20px
@@ -115,7 +123,7 @@ window.SUG_CLOUD_CONFIG = {
 <div id="authGate" class="authGate">
   <div class="authBox">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V14 CLOUD / MEMBERS ONLY</div>
+    <div class="sub">V15 CLOUD / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -188,8 +196,8 @@ window.SUG_CLOUD_CONFIG = {
 
 <header>
   <div class="head">
-    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V14 CLOUD / Member Intelligence</small></div>
-    <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="exportAll()">データ出力</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
+    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V15 CLOUD / Member Intelligence</small></div>
+    <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
 </header>
 
@@ -253,6 +261,20 @@ window.SUG_CLOUD_CONFIG = {
       <h2>会員コンディション一覧</h2>
       <div class="notice">自動判定は管理の優先順位づけ用です。痛みや体調の診断ではありません。</div>
       <div id="adminBoardList" style="margin-top:9px"><span class="muted">読み込み中...</span></div>
+    </div>
+    <div id="backupAdminCard" class="card">
+      <h2>バックアップ / 復元</h2>
+      <div class="notice">クラウドの会員データとフォロー履歴をJSONで退避します。写真はStorage上のパス情報を保存しますが、画像ファイル本体はJSONには含みません。</div>
+      <div class="backupGrid">
+        <button class="primary" onclick="backupAll()">全会員をバックアップ</button>
+        <button class="secondary" onclick="backupCurrentMember()">選択会員をバックアップ</button>
+      </div>
+      <div id="backupLastStatus" class="backupStatus"><b>最終バックアップ</b><br>この端末ではまだ実行されていません。</div>
+      <hr>
+      <label>バックアップJSONから復元</label>
+      <input id="restoreFile" type="file" accept="application/json,.json" onchange="previewRestoreFile(this)">
+      <div id="restorePreview" class="restorePreview hidden"></div>
+      <button id="restoreApplyBtn" class="danger" style="width:100%;margin-top:9px" onclick="applyRestore()" disabled>内容を確認して復元</button>
     </div>
   </section>
 
@@ -368,7 +390,7 @@ window.SUG_CLOUD_CONFIG = {
     </div>
     <div class="card">
       <h2>会員データ管理</h2>
-      <button id="exportMemberBtn" class="secondary" style="width:100%" onclick="exportMember()">この会員だけ出力</button>
+      <button id="exportMemberBtn" class="secondary" style="width:100%" onclick="backupCurrentMember()">この会員をバックアップ</button>
       <button id="deleteMemberBtn" class="danger" style="width:100%;margin-top:8px" onclick="deleteMember()">この会員を削除</button>
     </div>
   </section>
@@ -388,6 +410,7 @@ let followupByMember = new Map();
 let followupFilter = "all";
 let followupEditUserId = null;
 let followupTableReady = true;
+let restorePreviewData = null;
 
 const dateISO=(d)=>{
   const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,"0"),day=String(d.getDate()).padStart(2,"0");
@@ -609,6 +632,7 @@ async function onSignedIn(user){
 
   showApp();
   applyRoleUI();
+  renderBackupStatus();
   await loadMember(accessibleProfiles[0].id);
   cloudReady=true;
   setStatus("同期済");
@@ -1477,9 +1501,152 @@ async function shareReport(){
     }
   }
 }
-function exportMember(){download(`${m().profile.name||"member"}_${today()}.json`,JSON.stringify(m(),null,2))}
-function exportAll(){download(`SUG_BODY_MANAGEMENT_${today()}.json`,JSON.stringify(db,null,2))}
-function download(name,text){let b=new Blob([text],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+function safeFilePart(v){
+  return String(v||"member").trim().replace(/[\\/:*?"<>|\s]+/g,"_").slice(0,60)||"member";
+}
+function normalizeMemberData(data,name="会員"){
+  const base=baseMember(name),x=(data&&typeof data==="object"&&!Array.isArray(data))?JSON.parse(JSON.stringify(data)):base;
+  if(!x.profile||typeof x.profile!=="object")x.profile=base.profile;
+  if(!x.profile.name)x.profile.name=name||"会員";
+  ["weights","meals","training","recovery","photos"].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});
+  return x;
+}
+function backupStamp(){return new Date().toISOString()}
+function rememberBackup(kind,count){
+  const info={at:backupStamp(),kind,count:Number(count||0)};
+  try{localStorage.setItem("sug-v15-last-backup",JSON.stringify(info))}catch(_e){}
+  renderBackupStatus(info);
+}
+function renderBackupStatus(info=null){
+  const el=document.getElementById("backupLastStatus");if(!el)return;
+  if(!info){try{info=JSON.parse(localStorage.getItem("sug-v15-last-backup")||"null")}catch(_e){info=null}}
+  if(!info?.at){el.innerHTML='<b>最終バックアップ</b><br>この端末ではまだ実行されていません。';return;}
+  const dt=new Date(info.at).toLocaleString("ja-JP");
+  const label=info.kind==="all"?"全会員":"会員単位";
+  el.innerHTML=`<b>最終バックアップ</b><br>${esc(dt)}｜${esc(label)}${info.count?`｜${info.count}名`:""}`;
+}
+async function fetchAllMemberRows(){
+  const r=await apiGet("/rest/v1/member_data?select=user_id,data,updated_at&order=updated_at.desc");
+  if(!r.ok)throw new Error("会員データ取得失敗｜HTTP "+r.status+"｜"+r.text);
+  return Array.isArray(r.body)?r.body:[];
+}
+async function fetchFollowupBackupRows(){
+  const r=await apiGet("/rest/v1/trainer_followup_state?select=member_id,status,last_contact_at,memo,next_followup,history,updated_at");
+  if(!r.ok)return {rows:[],warning:"フォロー履歴は取得できませんでした"};
+  return {rows:Array.isArray(r.body)?r.body:[],warning:""};
+}
+async function backupAll(){
+  if(currentRole!=="trainer")return alert("全会員バックアップは管理者のみ利用できます。");
+  setStatus("バックアップ中");
+  try{
+    const [rows,fu]=await Promise.all([fetchAllMemberRows(),fetchFollowupBackupRows()]);
+    const members=accessibleProfiles.filter(p=>p.role!=="trainer");
+    const ids=new Set(members.map(p=>p.id));
+    const payload={
+      schema:"SUG_BODY_MANAGEMENT_BACKUP",version:15,kind:"all",created_at:backupStamp(),created_by:sessionUser?.id||null,
+      profiles:members.map(p=>({id:p.id,display_name:p.display_name||"",role:p.role||"member"})),
+      member_data:rows.filter(x=>ids.has(x.user_id)).map(x=>({user_id:x.user_id,data:normalizeMemberData(x.data,members.find(p=>p.id===x.user_id)?.display_name||"会員"),updated_at:x.updated_at||null})),
+      followups:fu.rows.filter(x=>ids.has(x.member_id)),
+      storage_note:"写真JSONにはStorageパスとメタデータのみを含み、画像ファイル本体は含みません。",
+      warning:fu.warning||""
+    };
+    download(`SUG_FULL_BACKUP_${today()}_${Date.now()}.json`,JSON.stringify(payload,null,2));
+    rememberBackup("all",payload.member_data.length);
+    setStatus("同期済");
+    if(fu.warning)alert("バックアップを保存しました。\n※ "+fu.warning);
+  }catch(e){console.error(e);setStatus("バックアップ失敗");alert("バックアップできませんでした："+(e?.message||String(e)))}
+}
+async function backupCurrentMember(){
+  if(currentRole!=="trainer")return alert("会員バックアップは管理者のみ利用できます。");
+  const p=accessibleProfiles.find(x=>x.id===db.current);
+  if(!p||p.role==="trainer")return alert("バックアップする会員を選択してください。");
+  setStatus("バックアップ中");
+  try{
+    const r=await apiGet("/rest/v1/member_data?select=user_id,data,updated_at&user_id=eq."+encodeURIComponent(p.id));
+    if(!r.ok)throw new Error("HTTP "+r.status+"｜"+r.text);
+    const row=Array.isArray(r.body)?r.body[0]:null;
+    const fu=await apiGet("/rest/v1/trainer_followup_state?select=member_id,status,last_contact_at,memo,next_followup,history,updated_at&member_id=eq."+encodeURIComponent(p.id));
+    const payload={
+      schema:"SUG_BODY_MANAGEMENT_BACKUP",version:15,kind:"member",created_at:backupStamp(),created_by:sessionUser?.id||null,
+      profile:{id:p.id,display_name:p.display_name||"",role:p.role||"member"},
+      member_data:{user_id:p.id,data:normalizeMemberData(row?.data||m(),p.display_name||"会員"),updated_at:row?.updated_at||null},
+      followup:fu.ok&&Array.isArray(fu.body)?fu.body[0]||null:null,
+      storage_note:"写真JSONにはStorageパスとメタデータのみを含み、画像ファイル本体は含みません。"
+    };
+    download(`SUG_MEMBER_${safeFilePart(p.display_name)}_${today()}_${Date.now()}.json`,JSON.stringify(payload,null,2));
+    rememberBackup("member",1);setStatus("同期済");
+  }catch(e){console.error(e);setStatus("バックアップ失敗");alert("会員バックアップできませんでした："+(e?.message||String(e)))}
+}
+function validateRestoreObject(obj){
+  const allowed=new Map(accessibleProfiles.filter(p=>p.role!=="trainer").map(p=>[p.id,p]));
+  if(obj?.schema==="SUG_BODY_MANAGEMENT_BACKUP" && Number(obj.version)>=15){
+    if(obj.kind==="all"){
+      const rows=Array.isArray(obj.member_data)?obj.member_data:[];
+      const usable=rows.filter(x=>x?.user_id&&allowed.has(x.user_id)&&x.data);
+      const skipped=rows.filter(x=>!x?.user_id||!allowed.has(x.user_id)||!x.data).length;
+      const followups=Array.isArray(obj.followups)?obj.followups.filter(x=>x?.member_id&&allowed.has(x.member_id)):[];
+      return {kind:"all",created_at:obj.created_at||null,memberRows:usable,followups,skipped,sourceVersion:obj.version};
+    }
+    if(obj.kind==="member"){
+      const row=obj.member_data;
+      if(!row?.user_id||!allowed.has(row.user_id)||!row.data)throw new Error("このバックアップの会員アカウントは現在の会員一覧に存在しません。");
+      return {kind:"member",created_at:obj.created_at||null,memberRows:[row],followups:obj.followup?[obj.followup]:[],skipped:0,sourceVersion:obj.version};
+    }
+  }
+  // 旧「この会員だけ出力」JSONの互換読込：現在選択中の会員へ復元
+  if(obj?.profile && Array.isArray(obj.weights)&&Array.isArray(obj.meals)&&Array.isArray(obj.training)&&Array.isArray(obj.recovery)){
+    const p=accessibleProfiles.find(x=>x.id===db.current);
+    if(!p||p.role==="trainer")throw new Error("旧会員JSONを復元するには、先に復元先の会員を選択してください。");
+    return {kind:"legacy-member",created_at:null,memberRows:[{user_id:p.id,data:obj}],followups:[],skipped:0,sourceVersion:"legacy"};
+  }
+  throw new Error("S.u.GのバックアップJSONとして認識できません。");
+}
+async function previewRestoreFile(input){
+  const box=document.getElementById("restorePreview"),btn=document.getElementById("restoreApplyBtn");
+  restorePreviewData=null;btn.disabled=true;box.classList.add("hidden");box.innerHTML="";
+  const file=input?.files?.[0];if(!file)return;
+  try{
+    const text=await file.text(),obj=JSON.parse(text),preview=validateRestoreObject(obj);
+    restorePreviewData=preview;
+    const created=preview.created_at?new Date(preview.created_at).toLocaleString("ja-JP"):"旧形式 / 日時なし";
+    const names=preview.memberRows.map(r=>accessibleProfiles.find(p=>p.id===r.user_id)?.display_name||r.user_id).slice(0,6);
+    const more=preview.memberRows.length>6?` ほか${preview.memberRows.length-6}名`:"";
+    box.innerHTML=`<strong>復元前確認</strong><br>種類：${preview.kind==="all"?"全会員":"会員単位"}<br>バックアップ日時：${esc(created)}<br>復元対象：${preview.memberRows.length}名<br>${esc(names.join(" / "))}${esc(more)}<br>フォロー履歴：${preview.followups.length}件${preview.skipped?`<br><span class="bad">現在存在しない会員など ${preview.skipped}件は復元対象外</span>`:""}<br><span class="muted">既存の対象会員データをバックアップ内容で上書きします。会員アカウント自体の新規作成は行いません。</span>`;
+    box.classList.remove("hidden");btn.disabled=preview.memberRows.length===0;
+  }catch(e){console.error(e);box.innerHTML=`<span class="bad">読込エラー：${esc(e?.message||String(e))}</span>`;box.classList.remove("hidden")}
+}
+async function applyRestore(){
+  if(currentRole!=="trainer"||!restorePreviewData)return;
+  const p=restorePreviewData;
+  if(!confirm(`バックアップから ${p.memberRows.length}名のデータを復元します。\n現在の対象データは上書きされます。\n\n実行しますか？`))return;
+  const btn=document.getElementById("restoreApplyBtn");btn.disabled=true;btn.textContent="復元中...";setStatus("復元中");
+  let restored=0,followRestored=0;
+  try{
+    for(const row of p.memberRows){
+      const prof=accessibleProfiles.find(x=>x.id===row.user_id);
+      const data=normalizeMemberData(row.data,prof?.display_name||"会員");
+      const r=await apiUpsert("/rest/v1/member_data?on_conflict=user_id",{user_id:row.user_id,data,updated_at:new Date().toISOString()});
+      if(!r.ok)throw new Error(`会員データ復元失敗｜${prof?.display_name||row.user_id}｜HTTP ${r.status}`);
+      db.members[row.user_id]=data;restored++;
+    }
+    if(followupTableReady){
+      for(const f of p.followups){
+        if(!f?.member_id||!accessibleProfiles.some(x=>x.id===f.member_id&&x.role!=="trainer"))continue;
+        const payload={member_id:f.member_id,status:f.status==="done"?"done":"open",last_contact_at:f.last_contact_at||null,memo:String(f.memo||""),next_followup:f.next_followup||null,history:Array.isArray(f.history)?f.history.slice(0,50):[],updated_by:sessionUser?.id||null,updated_at:new Date().toISOString()};
+        const rr=await apiUpsert("/rest/v1/trainer_followup_state?on_conflict=member_id",payload);
+        if(rr.ok){followupByMember.set(f.member_id,payload);followRestored++}
+      }
+    }
+    if(db.current&&db.members[db.current]){loadProfile();renderAll()}
+    await refreshAdminBoard();setStatus("同期済");
+    alert(`復元完了｜会員 ${restored}名${p.followups.length?`｜フォロー履歴 ${followRestored}件`:""}`);
+    restorePreviewData=null;document.getElementById("restoreFile").value="";document.getElementById("restorePreview").classList.add("hidden");
+  }catch(e){console.error(e);setStatus("復元失敗");alert("復元を完了できませんでした："+(e?.message||String(e)))}
+  finally{btn.disabled=!restorePreviewData;btn.textContent="内容を確認して復元"}
+}
+function exportMember(){backupCurrentMember()}
+function exportAll(){backupAll()}
+function download(name,text){let b=new Blob([text],{type:"application/json"}),a=document.createElement("a"),u=URL.createObjectURL(b);a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000)}
 
 document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.getElementById(b.dataset.tab).classList.add("active");if(b.dataset.tab==="profile")loadProfile();if(b.dataset.tab==="adminBoard")refreshAdminBoard();renderAll()});
 ["wDate","mDate","tDate","rDate","pDate"].forEach(id=>document.getElementById(id).value=today());
