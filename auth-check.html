@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>S.u.G Auth Check</title>
+<style>
+body{margin:0;background:#09090a;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif}
+.wrap{max-width:520px;margin:auto;padding:24px}
+.card{margin-top:80px;background:#151518;border:1px solid #4b4125;border-radius:18px;padding:18px}
+h1{font-size:20px;margin:0 0 6px} .gold{color:#f3d98b}
+input,button{width:100%;box-sizing:border-box;padding:13px;border-radius:11px;font:inherit}
+input{background:#0d0d10;border:1px solid #36363c;color:#fff;margin:6px 0 10px}
+button{border:0;background:linear-gradient(180deg,#e7c873,#b88c32);font-weight:800;margin-top:6px}
+pre{white-space:pre-wrap;word-break:break-word;background:#0d0d10;border:1px solid #303037;border-radius:12px;padding:12px;min-height:120px}
+label{font-size:12px;color:#aaa}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<div class="wrap"><div class="card">
+<h1>S.u.G <span class="gold">AUTH CHECK</span></h1>
+<p>JWT / RLS 診断専用</p>
+<label>メール</label><input id="email" value="koji06ochi@gmail.com">
+<label>パスワード</label><input id="password" type="password">
+<button id="run">診断する</button>
+<pre id="out">待機中</pre>
+</div></div>
+<script>
+const sb=window.supabase.createClient("https://nnqzxcgkqjnmtzcvorha.supabase.co","sb_publishable_zcn7r2YSKDZa1lXJvmk3sg_GulOJXwI",{
+  auth:{persistSession:false,autoRefreshToken:false,detectSessionInUrl:false}
+});
+const out=document.getElementById("out");
+document.getElementById("run").onclick=async()=>{
+  out.textContent="診断中...";
+  const email=document.getElementById("email").value.trim();
+  const password=document.getElementById("password").value;
+  const {data:login,error:loginError}=await sb.auth.signInWithPassword({email,password});
+  if(loginError){out.textContent="LOGIN ERROR\n"+loginError.message;return;}
+  const {data:claims,error:claimsError}=await sb.auth.getClaims();
+  const {data:rpc,error:rpcError}=await sb.rpc("sug_auth_check");
+  const {data:profiles,error:profilesError}=await sb
+    .from("profiles")
+    .select("id,display_name,role")
+    .eq("id",login.user.id);
+  out.textContent=JSON.stringify({
+    login_user_id:login.user?.id,
+    claims: claimsError ? {error:claimsError.message} : claims?.claims,
+    rpc: rpcError ? {error:rpcError.message,code:rpcError.code,details:rpcError.details} : rpc,
+    profiles: profilesError ? {error:profilesError.message,code:profilesError.code,details:profilesError.details} : profiles
+  },null,2);
+};
+</script>
+</body>
+</html>
