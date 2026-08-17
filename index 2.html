@@ -1,0 +1,1762 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>S.u.G BODY MANAGEMENT SYSTEM V16</title>
+<style>
+:root{
+  --bg:#09090a;--card:#141417;--card2:#1a1a1f;--gold:#d8b35b;--gold2:#f3d98b;
+  --text:#f7f7f7;--muted:#a8a8ad;--line:#303037;--ok:#86d7a8;--warn:#ffd166;--bad:#ff8181;
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#070708,#101013 55%,#0a0a0b);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif}
+header{position:sticky;top:0;z-index:40;background:rgba(7,7,8,.96);backdrop-filter:blur(12px);border-bottom:1px solid #26262b;padding:12px}
+.head{max-width:1050px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.brand h1{margin:0;font-size:16px;letter-spacing:.09em}.brand small{color:var(--gold2)}
+.wrap{max-width:1050px;margin:auto;padding:12px 10px 100px}
+.toolbar{display:grid;grid-template-columns:1fr auto;gap:8px;margin-bottom:10px}
+select,input,textarea,button{font:inherit}
+select,input,textarea{width:100%;background:#0d0d10;border:1px solid #36363c;color:#fff;border-radius:10px;padding:10px}
+textarea{min-height:78px;resize:vertical}
+button{cursor:pointer}
+button.primary{background:linear-gradient(180deg,#e7c873,#b88c32);color:#090909;font-weight:800;border:0;border-radius:11px;padding:11px 13px}
+button.secondary{background:#202026;color:#eee;border:1px solid #3b3b42;border-radius:10px;padding:9px 11px}
+button.danger{background:#2a1718;color:#ffc0c0;border:1px solid #6b3336;border-radius:9px;padding:7px 9px}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:8px 0 12px}
+.tab{border:1px solid var(--line);background:#151518;color:#ddd;border-radius:10px;padding:9px 4px;font-size:11px}
+.tab.active{background:#211d14;color:var(--gold2);border-color:var(--gold)}
+.panel{display:none}.panel.active{display:block}
+.card{background:linear-gradient(180deg,var(--card),#101012);border:1px solid var(--line);border-radius:16px;padding:13px;margin-bottom:11px;box-shadow:0 8px 28px rgba(0,0,0,.22)}
+.card h2{font-size:14px;color:var(--gold2);margin:0 0 10px}.card h3{font-size:12px;color:#ddd;margin:10px 0 7px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+label{display:block;color:#b8b8bd;font-size:10px;margin:0 0 4px}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}.kpi{background:#0d0d10;border:1px solid #2b2b31;border-radius:11px;padding:9px}.kpi span{font-size:9px;color:#aaa}.kpi b{display:block;font-size:18px;color:var(--gold2);margin-top:2px}
+.item{background:#0d0d10;border:1px solid #2c2c32;border-radius:11px;padding:9px;margin-bottom:7px}.row{display:flex;justify-content:space-between;gap:7px;align-items:flex-start}.item strong{font-size:12px}.item small{color:#aaa}
+.badge{display:inline-block;padding:3px 7px;border-radius:999px;border:1px solid #494950;font-size:9px;margin-top:5px}.ok{color:var(--ok);border-color:#315a43}.warn{color:var(--warn);border-color:#6a5627}.bad{color:var(--bad);border-color:#713436}
+canvas{width:100%;height:210px;background:#0c0c0f;border:1px solid #28282e;border-radius:12px}
+hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-size:10px}.gold{color:var(--gold2)}
+.photoGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.photo{background:#0c0c0f;border:1px solid #303038;border-radius:10px;overflow:hidden}.photo img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}.photo p{font-size:9px;margin:5px;color:#aaa}
+.photoCompareGrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}.photoCompareBox{background:#0c0c0f;border:1px solid #303038;border-radius:12px;overflow:hidden}.photoCompareBox img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}.photoCompareMeta{padding:8px;font-size:10px;color:#aaa;line-height:1.5}.photoCompareTag{display:block;color:var(--gold2);font-size:10px;font-weight:800;letter-spacing:.08em;margin-bottom:3px}.compareDelta{text-align:center;margin-top:9px;color:var(--gold2);font-size:11px;font-weight:700}
+.table{width:100%;border-collapse:collapse;font-size:10px}.table th,.table td{padding:7px 5px;border-bottom:1px solid #29292f;text-align:right}.table th:first-child,.table td:first-child{text-align:left}
+.notice{border:1px solid #5a4a25;background:#1f1a10;color:#f2d98b;border-radius:11px;padding:9px;font-size:10px}
+.adminBoardGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}
+.adminMember{background:#0d0d10;border:1px solid #2c2c32;border-radius:13px;padding:10px;margin-bottom:8px}
+.adminMemberTop{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.adminMemberName{font-size:13px;font-weight:800;color:#fff}.adminMemberMeta{font-size:9px;color:#999;line-height:1.6;margin-top:4px}
+.adminMemberStats{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:8px}.adminMini{background:#141419;border:1px solid #292930;border-radius:9px;padding:6px;text-align:center}.adminMini span{display:block;color:#929299;font-size:8px}.adminMini b{display:block;color:#eee;font-size:11px;margin-top:2px}
+.adminActions{display:grid;grid-template-columns:1fr auto auto;gap:7px;align-items:center;margin-top:8px}.adminReason{font-size:9px;color:#bbb;line-height:1.55}.lineBtn{background:#1d1d22;border:1px solid #4a4a52;color:#fff;border-radius:10px;padding:8px 10px;font-weight:800;font-size:10px;white-space:nowrap}.lineBtn:active{transform:translateY(1px)}
+.followMeta{margin-top:7px;padding:7px 8px;background:#111116;border:1px solid #292930;border-radius:9px;font-size:9px;color:#aaa;line-height:1.6}
+.followMeta b{color:#eee}.followOpen{color:var(--warn)}.followDone{color:var(--ok)}.followOverdue{color:var(--bad)}
+.followToolbar{display:grid;grid-template-columns:1fr auto;gap:7px;align-items:end;margin-top:10px}
+.followHistory{max-height:180px;overflow:auto;margin-top:9px}.followHistory .item{font-size:9px;line-height:1.55}
+.followupBox textarea{min-height:92px}
+.followAlertGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:10px}
+.followAlertCard{background:#0d0d10;border:1px solid #2c2c32;border-radius:11px;padding:9px}
+.followAlertCard span{display:block;font-size:9px;color:#999}.followAlertCard b{display:block;font-size:17px;margin-top:2px}
+.followAlertList{margin-top:9px}
+.followAlertItem{display:grid;grid-template-columns:auto 1fr auto auto;gap:7px;align-items:center;background:#0d0d10;border:1px solid #2c2c32;border-radius:10px;padding:8px;margin-bottom:6px}
+.followAlertDue{font-size:9px;font-weight:800;white-space:nowrap}.followAlertName{font-size:11px;font-weight:800}.followAlertMeta{font-size:8px;color:#999;margin-top:2px}
+.dueOverdue{color:var(--bad)}.dueToday{color:var(--warn)}.dueTomorrow{color:var(--gold2)}
+.adminActions{grid-template-columns:1fr auto auto auto}
+@media(max-width:719px){.adminActions{grid-template-columns:1fr 1fr 1fr}.adminReason{grid-column:1/-1}.followToolbar{grid-template-columns:1fr}.followAlertGrid{grid-template-columns:1fr 1fr 1fr}.followAlertItem{grid-template-columns:auto 1fr}.followAlertItem .lineBtn,.followAlertItem .secondary{width:100%}}
+
+@media(min-width:720px){.adminBoardGrid{grid-template-columns:repeat(4,1fr)}.adminMemberStats{grid-template-columns:repeat(5,1fr)}}
+@media(min-width:720px){.tabs{grid-template-columns:repeat(9,1fr)}.kpis{grid-template-columns:repeat(4,1fr)}}
+
+.backupGrid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:9px}
+.backupStatus{margin-top:9px;padding:9px;background:#0d0d10;border:1px solid #2c2c32;border-radius:11px;font-size:10px;line-height:1.7;color:#aaa}
+.backupStatus b{color:var(--gold2)}
+
+.coachPlanCard{border-color:#5a4a25;background:linear-gradient(180deg,#18150e,#101012)}
+.coachPlanTop{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.coachPlanTitle{font-size:16px;font-weight:900;color:var(--gold2)}
+.coachPlanBody{display:grid;gap:7px;margin-top:10px}
+.coachPlanLine{background:#0d0d10;border:1px solid #2d2a22;border-radius:10px;padding:9px;font-size:11px;line-height:1.6}
+.coachPlanLine b{color:#fff}.coachPlanTargets{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.coachPlanTarget{background:#0d0d10;border:1px solid #2d2a22;border-radius:10px;padding:8px;text-align:center}.coachPlanTarget span{display:block;color:#999;font-size:8px}.coachPlanTarget b{display:block;color:var(--gold2);font-size:12px;margin-top:3px}
+.coachPlanEditor{margin-top:10px}.coachPlanEditor textarea{min-height:78px}
+@media(max-width:540px){.coachPlanTargets{grid-template-columns:1fr 1fr 1fr}}
+.restorePreview{margin-top:9px;padding:10px;background:#111116;border:1px solid #3b3320;border-radius:11px;font-size:10px;line-height:1.7}
+.restorePreview strong{color:var(--gold2)}
+.backupDanger{border-color:#6b3336;background:#1d1213}
+@media(max-width:520px){.backupGrid{grid-template-columns:1fr}}
+
+.authGate{
+  position:fixed;inset:0;z-index:9999;background:linear-gradient(180deg,#070708,#101013);
+  display:flex;align-items:center;justify-content:center;padding:20px
+}
+.authBox{width:min(430px,100%);background:linear-gradient(180deg,#151518,#0f0f12);
+  border:1px solid #3a3320;border-radius:20px;padding:20px;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+.authBox h1{font-size:20px;margin:0 0 4px;letter-spacing:.08em}
+.authBox .sub{color:var(--gold2);font-size:11px;margin-bottom:18px}
+.authBox input{margin-top:7px}
+.authBox button{width:100%;margin-top:10px}
+.authError{min-height:18px;color:#ff9d9d;font-size:11px;margin-top:9px}
+.cloudStatus{font-size:9px;color:#aaa;margin-right:5px}
+.headActions{display:flex;align-items:center;gap:6px}
+.hidden{display:none!important}
+.setupNote{font-size:10px;line-height:1.7;color:#aaa;margin-top:12px}
+
+
+.memberModal{
+  position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.78);
+  display:flex;align-items:center;justify-content:center;padding:18px
+}
+.memberBox{
+  width:min(460px,100%);background:linear-gradient(180deg,#161619,#101012);
+  border:1px solid #5a4a25;border-radius:18px;padding:18px;
+  box-shadow:0 24px 80px rgba(0,0,0,.55)
+}
+.memberBox h2{margin:0 0 4px;color:var(--gold2);font-size:17px}
+.memberBox .sub{font-size:10px;color:#aaa;margin-bottom:14px}
+.memberBox input{margin-bottom:9px}
+.memberActions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.memberError{min-height:18px;color:#ff9d9d;font-size:10px;margin-top:8px;line-height:1.5}
+.passRow{display:grid;grid-template-columns:1fr auto;gap:7px;align-items:center}
+.passRow button{height:42px;padding:0 10px}
+
+</style>
+<script>
+window.SUG_CLOUD_CONFIG = {
+  url: "https://nnqzxcgkqjnmtzcvorha.supabase.co",
+  publishableKey: "sb_publishable_zcn7r2YSKDZa1lXJvmk3sg_GulOJXwI"
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+<div id="authGate" class="authGate">
+  <div class="authBox">
+    <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
+    <div class="sub">V16 CLOUD / MEMBERS ONLY</div>
+    <label>メールアドレス</label>
+    <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
+    <label style="margin-top:10px">パスワード</label>
+    <input id="loginPassword" type="password" autocomplete="current-password" placeholder="Password">
+    <button id="loginBtn" class="primary" onclick="login()" disabled>接続中...</button>
+    <div id="authError" class="authError"></div>
+    <div class="setupNote">S.u.G会員限定。アカウントは管理者が発行します。</div>
+  </div>
+</div>
+
+
+<div id="memberModal" class="memberModal hidden">
+  <div class="memberBox">
+    <h2>会員アカウント作成</h2>
+    <div class="sub">S.u.G管理者専用｜作成後、会員本人が同じURLからログインできます。</div>
+
+    <label>氏名</label>
+    <input id="newMemberName" autocomplete="name" placeholder="例：山田 太郎">
+
+    <label>メールアドレス</label>
+    <input id="newMemberEmail" type="email" autocomplete="email" placeholder="member@example.com">
+
+    <label>仮パスワード</label>
+    <div class="passRow">
+      <input id="newMemberPassword" type="text" autocomplete="off" placeholder="8文字以上">
+      <button class="secondary" type="button" onclick="generateTempPassword()">自動作成</button>
+    </div>
+
+    <div id="memberCreateError" class="memberError"></div>
+
+    <div class="memberActions">
+      <button class="secondary" type="button" onclick="closeMemberModal()">キャンセル</button>
+      <button id="createMemberBtn" class="primary" type="button" onclick="createMemberAccount()">会員を作成</button>
+    </div>
+  </div>
+</div>
+
+
+<div id="followupModal" class="memberModal hidden">
+  <div class="memberBox followupBox">
+    <h2>フォロー対応記録</h2>
+    <div id="followupMemberName" class="sub">会員</div>
+
+    <div class="grid2">
+      <div>
+        <label>対応状況</label>
+        <select id="followupStatus">
+          <option value="open">未対応</option>
+          <option value="done">対応済み</option>
+        </select>
+      </div>
+      <div>
+        <label>次回フォロー日</label>
+        <input id="followupNext" type="date">
+      </div>
+    </div>
+
+    <label style="margin-top:10px">対応メモ</label>
+    <textarea id="followupMemo" placeholder="例：睡眠不足のため負荷を調整。次回、痛みと睡眠時間を確認。"></textarea>
+
+    <div id="followupHistory" class="followHistory"></div>
+    <div id="followupError" class="memberError"></div>
+
+    <div class="memberActions">
+      <button class="secondary" type="button" onclick="closeFollowupModal()">キャンセル</button>
+      <button id="saveFollowupBtn" class="primary" type="button" onclick="saveFollowupFromModal()">保存</button>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="head">
+    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V16 CLOUD / Member Intelligence</small></div>
+    <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div id="memberToolbar" class="toolbar">
+    <select id="memberSelect" onchange="switchMember(this.value)"></select>
+    <button id="addMemberBtn" class="primary" onclick="newMember()">＋会員</button>
+  </div>
+
+  <div class="tabs">
+    <button id="adminTab" class="tab" data-tab="adminBoard">管理</button>
+    <button class="tab active" data-tab="dash">概要</button>
+    <button class="tab" data-tab="weight">体重</button>
+    <button class="tab" data-tab="meal">食事</button>
+    <button class="tab" data-tab="training">トレ</button>
+    <button class="tab" data-tab="recovery">回復</button>
+    <button class="tab" data-tab="photos">写真</button>
+    <button class="tab" data-tab="report">レポート</button>
+    <button class="tab" data-tab="profile">会員情報</button>
+  </div>
+
+  <section id="adminBoard" class="panel">
+    <div class="card">
+      <div class="row" style="align-items:center">
+        <div><h2 style="margin-bottom:3px">管理者ダッシュボード</h2><div class="muted">会員の記録・回復・体重推移・フォロー対応を横断管理</div></div>
+        <button class="secondary" onclick="refreshAdminBoard()">再集計</button>
+      </div>
+      <div class="adminBoardGrid" style="margin-top:10px">
+        <div class="kpi"><span>会員数</span><b id="admTotal">0</b></div>
+        <div class="kpi"><span>要対応</span><b id="admAttention">0</b></div>
+        <div class="kpi"><span>回復低下</span><b id="admRecovery">0</b></div>
+        <div class="kpi"><span>記録不足</span><b id="admMissing">0</b></div>
+        <div class="kpi"><span>未対応</span><b id="admOpen">0</b></div>
+        <div class="kpi"><span>期限超過</span><b id="admOverdue">0</b></div>
+        <div class="kpi"><span>今日フォロー</span><b id="admToday">0</b></div>
+        <div class="kpi"><span>明日フォロー</span><b id="admTomorrow">0</b></div>
+      </div>
+      <div class="followAlertGrid">
+        <div class="followAlertCard"><span>期限超過</span><b id="followAlertOverdue" class="dueOverdue">0</b></div>
+        <div class="followAlertCard"><span>今日対応</span><b id="followAlertToday" class="dueToday">0</b></div>
+        <div class="followAlertCard"><span>明日対応</span><b id="followAlertTomorrow" class="dueTomorrow">0</b></div>
+      </div>
+      <div id="followAlertList" class="followAlertList"></div>
+      <div class="followToolbar">
+        <div>
+          <label>表示する会員</label>
+          <select id="followupFilter" onchange="setFollowupFilter(this.value)">
+            <option value="all">全員</option>
+            <option value="needs">要対応のみ</option>
+            <option value="open">未対応のみ</option>
+            <option value="overdue">フォロー期限超過</option>
+            <option value="today">今日フォロー</option>
+            <option value="tomorrow">明日フォロー</option>
+            <option value="done">対応済みのみ</option>
+          </select>
+        </div>
+        <div id="followupSetupStatus" class="muted">フォロー管理を確認中...</div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>会員コンディション一覧</h2>
+      <div class="notice">自動判定は管理の優先順位づけ用です。痛みや体調の診断ではありません。</div>
+      <div id="adminBoardList" style="margin-top:9px"><span class="muted">読み込み中...</span></div>
+    </div>
+    <div id="backupAdminCard" class="card">
+      <h2>バックアップ / 復元</h2>
+      <div class="notice">クラウドの会員データとフォロー履歴をJSONで退避します。写真はStorage上のパス情報を保存しますが、画像ファイル本体はJSONには含みません。</div>
+      <div class="backupGrid">
+        <button class="primary" onclick="backupAll()">全会員をバックアップ</button>
+        <button class="secondary" onclick="backupCurrentMember()">選択会員をバックアップ</button>
+      </div>
+      <div id="backupLastStatus" class="backupStatus"><b>最終バックアップ</b><br>この端末ではまだ実行されていません。</div>
+      <hr>
+      <label>バックアップJSONから復元</label>
+      <input id="restoreFile" type="file" accept="application/json,.json" onchange="previewRestoreFile(this)">
+      <div id="restorePreview" class="restorePreview hidden"></div>
+      <button id="restoreApplyBtn" class="danger" style="width:100%;margin-top:9px" onclick="applyRestore()" disabled>内容を確認して復元</button>
+    </div>
+  </section>
+
+  <section id="dash" class="panel active">
+    <div class="card">
+      <h2>現在の状態</h2>
+      <div class="kpis">
+        <div class="kpi"><span>最新体重</span><b id="dWeight">--</b></div>
+        <div class="kpi"><span>7日平均</span><b id="dAvg">--</b></div>
+        <div class="kpi"><span>今日の摂取</span><b id="dKcal">0 kcal</b></div>
+        <div class="kpi"><span>回復スコア</span><b id="dRec">--</b></div>
+      </div>
+    </div>
+    <div id="coachPlanView" class="card coachPlanCard">
+      <div class="coachPlanTop">
+        <div><div class="coachPlanTitle">今週のコーチプラン</div><div id="coachPlanUpdated" class="muted">未設定</div></div>
+        <span id="coachPlanStatus" class="badge">未設定</span>
+      </div>
+      <div class="coachPlanBody">
+        <div class="coachPlanLine"><b>今週の重点</b><br><span id="coachPlanFocus" class="muted">まだ設定されていません。</span></div>
+        <div class="coachPlanLine"><b>次回までの課題</b><br><span id="coachPlanAction" class="muted">まだ設定されていません。</span></div>
+        <div class="coachPlanTargets">
+          <div class="coachPlanTarget"><span>次回セッション</span><b id="coachPlanSession">--</b></div>
+          <div class="coachPlanTarget"><span>週間トレ目標</span><b id="coachPlanTrainDays">--</b></div>
+          <div class="coachPlanTarget"><span>睡眠目標</span><b id="coachPlanSleep">--</b></div>
+        </div>
+        <button id="coachPlanCompleteBtn" class="secondary" style="width:100%" onclick="toggleCoachPlanComplete()">課題を完了にする</button>
+      </div>
+    </div>
+    <div class="card"><h2>体重トレンド</h2><canvas id="weightChart" width="900" height="270"></canvas><div id="weightJudge" class="notice" style="margin-top:8px"></div></div>
+    <div class="card"><h2>栄養・体重連動</h2><div id="nutritionInsight" class="item"></div></div>
+    <div class="card"><h2>オーバーロード状況</h2><div id="dashOverload"></div></div>
+    <div class="card"><h2>今日の推奨</h2><div id="todayAdvice" class="item"></div></div>
+  </section>
+
+  <section id="weight" class="panel">
+    <div class="card">
+      <h2>体重記録</h2>
+      <div class="grid2"><div><label>日付</label><input id="wDate" type="date"></div><div><label>体重 kg</label><input id="wWeight" type="number" step="0.1"></div></div>
+      <div class="grid2" style="margin-top:8px"><div><label>体脂肪率 %</label><input id="wFat" type="number" step="0.1"></div><div><label>メモ</label><input id="wMemo"></div></div>
+      <button class="primary" style="width:100%;margin-top:9px" onclick="addWeight()">記録</button>
+    </div>
+    <div class="card"><h2>履歴</h2><div id="weightList"></div></div>
+  </section>
+
+  <section id="meal" class="panel">
+    <div class="card">
+      <h2>食事記録</h2>
+      <div class="grid2"><div><label>日付</label><input id="mDate" type="date"></div><div><label>食事名</label><input id="mName" placeholder="鶏胸肉200g＋白米150g"></div></div>
+      <div class="grid4" style="margin-top:8px"><div><label>kcal</label><input id="mKcal" type="number"></div><div><label>P</label><input id="mP" type="number" step="0.1"></div><div><label>F</label><input id="mF" type="number" step="0.1"></div><div><label>C</label><input id="mC" type="number" step="0.1"></div></div>
+      <button class="primary" style="width:100%;margin-top:9px" onclick="addMeal()">追加</button>
+    </div>
+    <div class="card"><h2>今日の合計</h2><div class="kpis"><div class="kpi"><span>kcal</span><b id="mtKcal">0</b></div><div class="kpi"><span>P</span><b id="mtP">0g</b></div><div class="kpi"><span>F</span><b id="mtF">0g</b></div><div class="kpi"><span>C</span><b id="mtC">0g</b></div></div><div id="mealTarget" class="notice" style="margin-top:8px"></div></div>
+    <div class="card"><h2>履歴</h2><div id="mealList"></div></div>
+  </section>
+
+  <section id="training" class="panel">
+    <div class="card">
+      <h2>トレーニング記録</h2>
+      <div class="grid2"><div><label>日付</label><input id="tDate" type="date"></div><div><label>種目</label><input id="tExercise" placeholder="スミススクワット"></div></div>
+      <div class="grid4" style="margin-top:8px"><div><label>重量</label><input id="tWeight" type="number" step="0.5"></div><div><label>REP</label><input id="tReps" type="number"></div><div><label>SET</label><input id="tSets" type="number"></div><div><label>RIR</label><input id="tRir" type="number" step="0.5"></div></div>
+      <div style="margin-top:8px"><label>メモ</label><input id="tMemo"></div>
+      <button class="primary" style="width:100%;margin-top:9px" onclick="addTraining()">記録して比較</button>
+    </div>
+    <div class="card"><h2>PR / オーバーロード</h2><div id="prTable"></div></div>
+    <div class="card"><h2>履歴</h2><div id="trainingList"></div></div>
+  </section>
+
+  <section id="recovery" class="panel">
+    <div class="card">
+      <h2>回復・コンディション</h2>
+      <div class="grid2"><div><label>日付</label><input id="rDate" type="date"></div><div><label>睡眠時間</label><input id="rSleep" type="number" step="0.1"></div></div>
+      <div class="grid3" style="margin-top:8px"><div><label>疲労 1-10</label><input id="rFatigue" type="number" min="1" max="10"></div><div><label>ストレス 1-10</label><input id="rStress" type="number" min="1" max="10"></div><div><label>痛み 0-10</label><input id="rPain" type="number" min="0" max="10"></div></div>
+      <div style="margin-top:8px"><label>メモ</label><textarea id="rMemo"></textarea></div>
+      <button class="primary" style="width:100%;margin-top:9px" onclick="addRecovery()">記録</button>
+    </div>
+    <div class="card"><h2>判定</h2><div id="recoveryJudge" class="item"></div></div>
+    <div class="card"><h2>履歴</h2><div id="recoveryList"></div></div>
+  </section>
+
+  <section id="photos" class="panel">
+    <div class="card">
+      <h2>身体写真</h2>
+      <div class="notice">写真は会員ごとのクラウド領域に保存します。管理者は担当会員の写真を確認できます。</div>
+      <div class="grid2" style="margin-top:9px"><div><label>日付</label><input id="pDate" type="date"></div><div><label>写真</label><input id="pFile" type="file" accept="image/*"></div></div>
+      <div style="margin-top:8px"><label>メモ</label><input id="pMemo" placeholder="正面、背面、減量4週目など"></div>
+      <button class="primary" style="width:100%;margin-top:9px" onclick="addPhoto()">写真を保存</button>
+    </div>
+    <div class="card"><h2>写真履歴</h2><div id="photoGrid" class="photoGrid"></div></div>
+    <div class="card">
+      <h2>写真比較 BEFORE / AFTER</h2>
+      <div class="grid2">
+        <div><label>BEFORE</label><select id="photoBefore"></select></div>
+        <div><label>AFTER</label><select id="photoAfter"></select></div>
+      </div>
+      <button class="primary" style="width:100%;margin-top:9px" onclick="comparePhotos()">2枚を比較</button>
+      <div id="photoCompareDelta" class="compareDelta"></div>
+      <div id="photoCompareView" class="photoCompareGrid"></div>
+    </div>
+  </section>
+
+  <section id="report" class="panel">
+    <div class="card">
+      <h2>月間レポート</h2>
+      <div class="grid2">
+        <div><label>対象月</label><input id="reportMonth" type="month"></div>
+        <div style="display:flex;align-items:end"><button class="primary" style="width:100%" onclick="renderReport()">集計</button></div>
+      </div>
+      <div class="notice" style="margin-top:9px">体重・食事・トレーニング・回復を1か月単位で横断集計します。</div>
+    </div>
+    <div class="card">
+      <h2>集計結果</h2>
+      <div id="reportBody"></div>
+      <div class="grid2" style="margin-top:10px">
+        <button class="secondary" style="width:100%" onclick="copyReport()">レポート文をコピー</button>
+        <button class="primary" style="width:100%" onclick="shareReport()">LINE / 共有</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="profile" class="panel">
+    <div class="card">
+      <h2>会員情報</h2>
+      <div class="grid2"><div><label>氏名</label><input id="pfName"></div><div><label>目的</label><select id="pfGoal"><option>筋肥大</option><option>減量</option><option>増量</option><option>健康維持</option><option>姿勢改善</option></select></div></div>
+      <div class="grid2" style="margin-top:8px"><div><label>目標体重</label><input id="pfTargetWeight" type="number" step="0.1"></div><div><label>目標kcal</label><input id="pfTargetKcal" type="number"></div></div>
+      <div class="grid3" style="margin-top:8px"><div><label>目標P</label><input id="pfP" type="number"></div><div><label>目標F</label><input id="pfF" type="number"></div><div><label>目標C</label><input id="pfC" type="number"></div></div>
+      <div style="margin-top:8px"><label>注意事項 / 既往歴</label><textarea id="pfNotes"></textarea></div>
+      <button class="primary" style="width:100%;margin-top:9px" onclick="saveProfile()">保存</button>
+    </div>
+    <div id="coachPlanEditorCard" class="card coachPlanEditor">
+      <h2>コーチプラン設定</h2>
+      <div class="notice">会員の「概要」に表示する今週の重点・次回課題・目標です。管理者だけ編集できます。</div>
+      <div style="margin-top:9px"><label>今週の重点</label><textarea id="cpFocus" placeholder="例：睡眠を確保しながら、胸・肩のフォーム安定を優先"></textarea></div>
+      <div style="margin-top:8px"><label>次回までの課題</label><textarea id="cpAction" placeholder="例：体重を朝3回記録、トレ2回、痛みが出た種目はメモ"></textarea></div>
+      <div class="grid2" style="margin-top:8px">
+        <div><label>次回セッション日</label><input id="cpSession" type="date"></div>
+        <div><label>週間トレ目標 回</label><input id="cpTrainDays" type="number" min="0" max="14" step="1"></div>
+      </div>
+      <div class="grid2" style="margin-top:8px">
+        <div><label>睡眠目標 h</label><input id="cpSleep" type="number" min="0" max="12" step="0.5"></div>
+        <div><label>歩数目標 / 日</label><input id="cpSteps" type="number" min="0" step="500"></div>
+      </div>
+      <button class="primary" style="width:100%;margin-top:9px" onclick="saveCoachPlan()">コーチプランを保存</button>
+    </div>
+    <div class="card">
+      <h2>会員データ管理</h2>
+      <button id="exportMemberBtn" class="secondary" style="width:100%" onclick="backupCurrentMember()">この会員をバックアップ</button>
+      <button id="deleteMemberBtn" class="danger" style="width:100%;margin-top:8px" onclick="deleteMember()">この会員を削除</button>
+    </div>
+  </section>
+</div>
+
+
+<script>
+let sb = null;
+let accessToken = null;
+let sessionUser = null;
+let currentRole = "member";
+let accessibleProfiles = [];
+let saveTimer = null;
+let cloudReady = false;
+let adminRows = [];
+let followupByMember = new Map();
+let followupFilter = "all";
+let followupEditUserId = null;
+let followupTableReady = true;
+let restorePreviewData = null;
+
+const dateISO=(d)=>{
+  const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,"0"),day=String(d.getDate()).padStart(2,"0");
+  return `${y}-${m}-${day}`;
+};
+const today=()=>dateISO(new Date());
+const monthNow=()=>today().slice(0,7);
+const shiftDate=(days)=>{const d=new Date();d.setHours(0,0,0,0);d.setDate(d.getDate()+days);return dateISO(d)};
+let db={current:null,members:{}};
+
+function baseMember(name="新規会員"){
+  return {profile:{name,goal:"筋肥大",targetWeight:0,targetKcal:0,targetP:0,targetF:0,targetC:0,notes:""},
+    coachPlan:{weeklyFocus:"",nextAction:"",nextSessionDate:"",targetTrainingDays:0,targetSleep:0,targetSteps:0,completedAt:null,updatedAt:null},
+    weights:[],meals:[],training:[],recovery:[],photos:[]}
+}
+function m(){return db.members[db.current]}
+function esc(s){return String(s??"").replace(/[&<>"']/g,x=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[x]))}
+function n(id){return Number(document.getElementById(id).value||0)}
+function avg(a){return a.length?a.reduce((s,x)=>s+x,0)/a.length:0}
+function setStatus(t){document.getElementById("cloudStatus").textContent=t}
+
+async function initCloud(){
+  const cfg=window.SUG_CLOUD_CONFIG||{};
+  const err=document.getElementById("authError");
+  const btn=document.getElementById("loginBtn");
+
+  if(!cfg.url || !cfg.publishableKey || cfg.publishableKey.includes("YOUR_")){
+    err.textContent="Cloud設定が未入力です。";
+    setStatus("未設定");
+    if(btn){btn.disabled=true;btn.textContent="設定未完了";}
+    return;
+  }
+
+  try{
+    if(!window.supabase || typeof window.supabase.createClient!=="function"){
+      throw new Error("Supabaseライブラリを読み込めませんでした");
+    }
+
+    sb=window.supabase.createClient(cfg.url,cfg.publishableKey,{
+      auth:{
+        storageKey:"sug-body-management-v4-auth",
+        persistSession:true,
+        autoRefreshToken:true,
+        detectSessionInUrl:false
+      }
+    });
+
+    // 旧V3系のセッションは storageKey が違うので一切拾わない。
+    err.textContent="接続OK。ログインしてください。";
+    setStatus("接続済");
+    if(btn){btn.disabled=false;btn.textContent="ログイン";}
+  }catch(e){
+    console.error(e);
+    err.textContent="接続エラー："+(e?.message||String(e));
+    setStatus("接続失敗");
+    if(btn){btn.disabled=true;btn.textContent="接続失敗";}
+  }
+}
+
+
+async function apiGet(path){
+  const cfg=window.SUG_CLOUD_CONFIG;
+  const res=await fetch(cfg.url+path,{
+    method:"GET",
+    headers:{
+      "apikey":cfg.publishableKey,
+      "Authorization":"Bearer "+accessToken,
+      "Accept":"application/json"
+    }
+  });
+  const text=await res.text();
+  let body=null;
+  try{body=text?JSON.parse(text):null}catch(_e){body=text}
+  return {ok:res.ok,status:res.status,body,text};
+}
+
+async function apiUpsert(path, payload){
+  const cfg=window.SUG_CLOUD_CONFIG;
+  const res=await fetch(cfg.url+path,{
+    method:"POST",
+    headers:{
+      "apikey":cfg.publishableKey,
+      "Authorization":"Bearer "+accessToken,
+      "Content-Type":"application/json",
+      "Prefer":"resolution=merge-duplicates,return=minimal"
+    },
+    body:JSON.stringify(payload)
+  });
+  const text=await res.text();
+  return {ok:res.ok,status:res.status,text};
+}
+
+async function apiPatch(path, payload){
+  const cfg=window.SUG_CLOUD_CONFIG;
+  const res=await fetch(cfg.url+path,{
+    method:"PATCH",
+    headers:{
+      "apikey":cfg.publishableKey,
+      "Authorization":"Bearer "+accessToken,
+      "Content-Type":"application/json",
+      "Prefer":"return=minimal"
+    },
+    body:JSON.stringify(payload)
+  });
+  const text=await res.text();
+  return {ok:res.ok,status:res.status,text};
+}
+
+async function login(){
+  const err=document.getElementById("authError");
+  const btn=document.getElementById("loginBtn");
+
+  if(!sb){
+    err.textContent="Supabaseへ接続できていません。";
+    return;
+  }
+
+  const email=loginEmail.value.trim();
+  const password=loginPassword.value;
+
+  if(!email||!password){
+    err.textContent="メールアドレスとパスワードを入力してください。";
+    return;
+  }
+
+  err.textContent="ログイン中...";
+  btn.disabled=true;
+
+  try{
+    const {data,error}=await sb.auth.signInWithPassword({email,password});
+
+    if(error){
+      err.textContent="ログイン失敗："+error.message;
+      btn.disabled=false;
+      return;
+    }
+
+    if(!data?.session?.access_token || !data?.user){
+      err.textContent="ログインセッションを取得できませんでした。";
+      btn.disabled=false;
+      return;
+    }
+
+    // Supabase公式推奨のJWT検証。
+    const {data:claimData,error:claimError}=await sb.auth.getClaims();
+    if(claimError){
+      err.textContent="認証トークン確認失敗："+claimError.message;
+      btn.disabled=false;
+      return;
+    }
+
+    const claims=claimData?.claims||{};
+    if(claims.sub!==data.user.id || claims.role!=="authenticated"){
+      err.textContent="認証情報不一致｜role:"+(claims.role||"なし")+"｜sub:"+(claims.sub||"なし");
+      btn.disabled=false;
+      return;
+    }
+
+    accessToken=data.session.access_token;
+    await onSignedIn(data.user);
+  }catch(e){
+    console.error(e);
+    err.textContent="ログイン処理エラー："+(e?.message||String(e));
+    btn.disabled=false;
+  }
+}
+async function logout(){
+  if(sb) await sb.auth.signOut({scope:"local"});
+  accessToken=null;
+  showLogin();
+}
+function showApp(){authGate.classList.add("hidden");logoutBtn.style.display="inline-block";}
+
+async function onSignedIn(user){
+  sessionUser=user;
+  setStatus("同期中");
+
+  const errEl=document.getElementById("authError");
+  const btn=document.getElementById("loginBtn");
+
+  const self=await apiGet(
+    "/rest/v1/profiles?select=id,display_name,role&id=eq."+encodeURIComponent(user.id)
+  );
+
+  if(!self.ok){
+    errEl.textContent="プロフィールAPI失敗｜HTTP "+self.status+"｜"+self.text;
+    btn.disabled=false;
+    return;
+  }
+
+  const rows=Array.isArray(self.body)?self.body:[];
+  if(rows.length===0){
+    errEl.textContent="プロフィール0件｜ログインID："+user.id;
+    btn.disabled=false;
+    return;
+  }
+
+  const me=rows[0];
+  currentRole=me.role||"member";
+
+  if(currentRole==="trainer"){
+    const all=await apiGet(
+      "/rest/v1/profiles?select=id,display_name,role&order=display_name.asc"
+    );
+    if(!all.ok){
+      errEl.textContent="会員一覧API失敗｜HTTP "+all.status+"｜"+all.text;
+      btn.disabled=false;
+      return;
+    }
+    accessibleProfiles=Array.isArray(all.body)?all.body:[];
+  }else{
+    accessibleProfiles=[me];
+  }
+
+  if(!accessibleProfiles.length){
+    errEl.textContent="アクセス可能な会員がありません。";
+    btn.disabled=false;
+    return;
+  }
+
+  showApp();
+  applyRoleUI();
+  renderBackupStatus();
+  await loadMember(accessibleProfiles[0].id);
+  cloudReady=true;
+  setStatus("同期済");
+  if(currentRole==="trainer"){
+    await refreshAdminBoard();
+    const adminTabEl=document.querySelector('.tab[data-tab="adminBoard"]');
+    if(adminTabEl)adminTabEl.click();
+  }
+}
+
+async function loadMember(id){
+  setStatus("読込中");
+  const p=accessibleProfiles.find(x=>x.id===id);
+
+  const r=await apiGet(
+    "/rest/v1/member_data?select=data&user_id=eq."+encodeURIComponent(id)
+  );
+
+  if(!r.ok){
+    alert("会員データ読込失敗｜HTTP "+r.status);
+    console.error(r);
+    return;
+  }
+
+  const row=Array.isArray(r.body)?r.body[0]:null;
+  db.current=id;
+  db.members[id]=(row?.data && Object.keys(row.data).length)
+    ? row.data
+    : baseMember(p?.display_name||"会員");
+
+  if(!db.members[id].profile)
+    db.members[id].profile=baseMember(p?.display_name||"会員").profile;
+
+  if(!db.members[id].profile.name)
+    db.members[id].profile.name=p?.display_name||"会員";
+
+  ["weights","meals","training","recovery","photos"].forEach(k=>{
+    if(!Array.isArray(db.members[id][k]))db.members[id][k]=[];
+  });
+  if(!db.members[id].coachPlan || typeof db.members[id].coachPlan!=="object") db.members[id].coachPlan=baseMember(p?.display_name||"会員").coachPlan;
+  db.members[id].coachPlan={...baseMember(p?.display_name||"会員").coachPlan,...db.members[id].coachPlan};
+
+  loadProfile();
+  loadCoachPlanEditor();
+  renderAll();
+  setStatus("同期済");
+}
+
+async function saveCloud(){
+  if(!cloudReady||!accessToken||!db.current||!m()) return;
+
+  setStatus("保存中");
+  const payload=JSON.parse(JSON.stringify(m()));
+
+  const r=await apiUpsert(
+    "/rest/v1/member_data?on_conflict=user_id",
+    {
+      user_id:db.current,
+      data:payload,
+      updated_at:new Date().toISOString()
+    }
+  );
+
+  if(!r.ok){
+    setStatus("保存失敗");
+    console.error(r);
+    return;
+  }
+
+  setStatus("同期済");
+}
+function persist(){
+  clearTimeout(saveTimer);
+  saveTimer=setTimeout(()=>saveCloud(),250);
+}
+function saveRender(){persist();renderAll()}
+
+function newMember(){
+  if(currentRole!=="trainer"){
+    alert("会員追加は管理者のみ利用できます。");
+    return;
+  }
+  newMemberName.value="";
+  newMemberEmail.value="";
+  newMemberPassword.value="";
+  memberCreateError.textContent="";
+  createMemberBtn.disabled=false;
+  createMemberBtn.textContent="会員を作成";
+  memberModal.classList.remove("hidden");
+}
+
+function closeMemberModal(){
+  memberModal.classList.add("hidden");
+}
+
+function generateTempPassword(){
+  const chars="ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789";
+  const symbols="!@#$%";
+  const a=new Uint32Array(12);
+  crypto.getRandomValues(a);
+  let s="";
+  for(let i=0;i<10;i++)s+=chars[a[i]%chars.length];
+  s+=symbols[a[10]%symbols.length];
+  s+=String(a[11]%10);
+  newMemberPassword.value=s;
+}
+
+async function refreshMemberProfiles(selectId=null){
+  const all=await apiGet(
+    "/rest/v1/profiles?select=id,display_name,role&order=display_name.asc"
+  );
+  if(!all.ok)throw new Error("会員一覧を更新できません｜HTTP "+all.status);
+  accessibleProfiles=Array.isArray(all.body)?all.body:[];
+  renderMemberSelect();
+  if(currentRole==="trainer")await refreshAdminBoard();
+
+  if(selectId && accessibleProfiles.some(x=>x.id===selectId)){
+    await switchMember(selectId);
+  }
+}
+
+async function createMemberAccount(){
+  if(currentRole!=="trainer")return;
+
+  const displayName=newMemberName.value.trim();
+  const email=newMemberEmail.value.trim().toLowerCase();
+  const password=newMemberPassword.value;
+
+  if(!displayName){
+    memberCreateError.textContent="氏名を入力してください。";
+    return;
+  }
+  if(!email || !email.includes("@")){
+    memberCreateError.textContent="メールアドレスを確認してください。";
+    return;
+  }
+  if(password.length<8){
+    memberCreateError.textContent="仮パスワードは8文字以上にしてください。";
+    return;
+  }
+
+  createMemberBtn.disabled=true;
+  createMemberBtn.textContent="作成中...";
+  memberCreateError.textContent="";
+
+  try{
+    const cfg=window.SUG_CLOUD_CONFIG;
+    const res=await fetch(
+      cfg.url+"/functions/v1/create-member",
+      {
+        method:"POST",
+        headers:{
+          "apikey":cfg.publishableKey,
+          "Authorization":"Bearer "+accessToken,
+          "Content-Type":"application/json"
+        },
+        body:JSON.stringify({displayName,email,password})
+      }
+    );
+
+    const text=await res.text();
+    let body={};
+    try{body=text?JSON.parse(text):{}}catch(_e){body={message:text}}
+
+    if(!res.ok){
+      throw new Error(body?.message||body?.error||("HTTP "+res.status));
+    }
+
+    closeMemberModal();
+    await refreshMemberProfiles(body.user?.id||null);
+    alert("会員アカウントを作成しました。");
+  }catch(e){
+    console.error(e);
+    memberCreateError.textContent="作成失敗："+(e?.message||String(e));
+    createMemberBtn.disabled=false;
+    createMemberBtn.textContent="会員を作成";
+  }
+}
+async function switchMember(id){
+  if(id===db.current)return;
+  if(saveTimer){clearTimeout(saveTimer);await saveCloud()}
+  await loadMember(id);
+}
+async function deleteMember(){
+  if(currentRole!=="trainer")return;
+
+  const targetId=db.current;
+  const target=accessibleProfiles.find(x=>x.id===targetId);
+  if(!targetId || !target){
+    alert("削除する会員を確認できません。");
+    return;
+  }
+  if(target.role==="trainer" || targetId===sessionUser?.id){
+    alert("管理者アカウントは削除できません。");
+    return;
+  }
+
+  const name=target.display_name||"この会員";
+  if(!confirm(`${name} を完全に削除します。\n体重・食事・トレーニング・回復・写真・ログインアカウントも削除されます。\n\n本当に削除しますか？`))return;
+
+  const btn=document.getElementById("deleteMemberBtn");
+  if(btn){btn.disabled=true;btn.textContent="削除中...";}
+
+  try{
+    if(saveTimer){clearTimeout(saveTimer);saveTimer=null;}
+    const cfg=window.SUG_CLOUD_CONFIG;
+    const res=await fetch(cfg.url+"/functions/v1/delete-member",{
+      method:"POST",
+      headers:{
+        "apikey":cfg.publishableKey,
+        "Authorization":"Bearer "+accessToken,
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify({userId:targetId})
+    });
+
+    const text=await res.text();
+    let body={};
+    try{body=text?JSON.parse(text):{}}catch(_e){body={message:text}}
+    if(!res.ok)throw new Error(body?.message||body?.error||("HTTP "+res.status));
+
+    delete db.members[targetId];
+    db.current=sessionUser.id;
+    await refreshMemberProfiles(sessionUser.id);
+    alert(`${name} を削除しました。`);
+  }catch(e){
+    console.error(e);
+    alert("会員を削除できませんでした："+(e?.message||String(e)));
+  }finally{
+    if(btn){btn.disabled=false;btn.textContent="この会員を削除";}
+    applyRoleUI();
+  }
+}
+function dateAgeDays(dateStr){
+  if(!dateStr)return 9999;
+  const a=new Date(dateStr+"T00:00:00");
+  const b=new Date(today()+"T00:00:00");
+  return Math.max(0,Math.floor((b-a)/86400000));
+}
+function latestRecordDate(mm){
+  if(!mm)return "";
+  const dates=[];
+  ["weights","meals","training","recovery"].forEach(k=>(mm[k]||[]).forEach(x=>{if(x?.date)dates.push(x.date)}));
+  (mm.photos||[]).forEach(x=>{if(x?.date)dates.push(x.date)});
+  return dates.sort().at(-1)||"";
+}
+function memberWeightTrend(mm){
+  const w=(mm?.weights||[]).slice().sort((a,b)=>a.date.localeCompare(b.date));
+  if(w.length<8)return {delta:null,label:"--"};
+  const last=w.slice(-7),prev=w.slice(-14,-7);
+  if(!prev.length)return {delta:null,label:"--"};
+  const l=avg(last.map(x=>Number(x.weight||0))),p=avg(prev.map(x=>Number(x.weight||0)));
+  const d=l-p;
+  return {delta:d,label:(d>=0?"+":"")+d.toFixed(1)+"kg"};
+}
+function adminStatusFor(mm){
+  const lastDate=latestRecordDate(mm);
+  const age=dateAgeDays(lastDate);
+  const r=(mm?.recovery||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
+  const rAge=r?dateAgeDays(r.date):9999;
+  const score=r?recScore(r):null;
+  const cutoff7=new Date();cutoff7.setDate(cutoff7.getDate()-6);const c7=cutoff7.toISOString().slice(0,10);
+  const cutoff14=new Date();cutoff14.setDate(cutoff14.getDate()-13);const c14=cutoff14.toISOString().slice(0,10);
+  const w7=(mm?.weights||[]).filter(x=>x.date>=c7).length;
+  const mealDays7=new Set((mm?.meals||[]).filter(x=>x.date>=c7).map(x=>x.date)).size;
+  const rec7=(mm?.recovery||[]).filter(x=>x.date>=c7).length;
+  const train14=new Set((mm?.training||[]).filter(x=>x.date>=c14).map(x=>x.date)).size;
+  const wt=memberWeightTrend(mm);
+  const goal=mm?.profile?.goal||"";
+  const reasons=[];
+
+  if(r && rAge<=7){
+    if(Number(r.pain||0)>=6) reasons.push(`痛み ${r.pain}/10`);
+    if(score!=null && score<45) reasons.push(`回復 ${score}点`);
+    if(Number(r.sleep||0)>0 && Number(r.sleep||0)<6) reasons.push(`睡眠 ${Number(r.sleep).toFixed(1)}h`);
+    if(Number(r.fatigue||0)>=7) reasons.push(`疲労 ${r.fatigue}/10`);
+    if(Number(r.stress||0)>=7) reasons.push(`ストレス ${r.stress}/10`);
+    if(Number(r.pain||0)>=4 && Number(r.pain||0)<6) reasons.push(`痛み ${r.pain}/10`);
+    if(score!=null && score>=45 && score<65) reasons.push(`回復 ${score}点`);
+  }
+  if(!lastDate) reasons.push("記録なし");
+  else if(age>=3) reasons.push(`記録 ${age}日なし`);
+  if(w7<2) reasons.push(`体重記録 ${w7}件/7日`);
+  if(mealDays7<2) reasons.push(`食事記録 ${mealDays7}日/7日`);
+  if(rec7<1) reasons.push("回復記録なし/7日");
+  if(train14<1) reasons.push("トレ記録なし/14日");
+  if((goal==="減量" || goal==="増量" || goal==="筋肥大") && wt.delta!=null && Math.abs(wt.delta)<0.2){
+    reasons.push(`体重停滞 ${wt.label}`);
+  }
+
+  let key="ok",label="順調",cls="ok";
+  if(r && rAge<=7 && (Number(r.pain||0)>=6 || (score!=null && score<45))){
+    key="attention";label="要対応";cls="bad";
+  }else if(r && rAge<=7 && ((score!=null && score<65) || (Number(r.sleep||0)>0 && Number(r.sleep||0)<6) || Number(r.fatigue||0)>=7 || Number(r.stress||0)>=7 || Number(r.pain||0)>=4)){
+    key="recovery";label="回復低下";cls="warn";
+  }else if(!lastDate || age>=3 || (w7<2 && mealDays7<2 && rec7<1 && train14<1)){
+    key="missing";label="記録不足";cls="warn";
+  }else if((goal==="減量" || goal==="増量" || goal==="筋肥大") && wt.delta!=null && Math.abs(wt.delta)<0.2){
+    key="stagnant";label="体重停滞";cls="warn";
+  }
+  const unique=[...new Set(reasons)];
+  if(key==="ok") unique.splice(0,unique.length,"大きな警告なし");
+  return {key,label,cls,reason:unique.slice(0,4).join(" / "),reasons:unique,score,age,wt};
+}
+function adminPriority(key){return ({attention:0,recovery:1,missing:2,stagnant:3,ok:4})[key]??9}
+function adminContactText(row){
+  const name=row?.profile?.display_name||row?.mm?.profile?.name||"会員";
+  const st=row?.st||{key:"ok",label:"順調",reasons:["大きな警告なし"]};
+  const rs=(st.reasons||[st.reason]).filter(Boolean).slice(0,4).join(" / ");
+  let action="今の流れを継続していきましょう。";
+  if(st.key==="attention") action="痛みや回復状態が気になるため、無理に追い込まず、今日の体調と痛みの場所・強さを教えてください。内容を確認して次回の負荷を調整します。";
+  if(st.key==="recovery") action="今日は回復を優先したい状態です。睡眠・疲労感・ストレスの変化を教えてください。必要ならトレーニング強度を調整します。";
+  if(st.key==="missing") action="最近の記録が少なく状態を判断しにくいため、体重・食事・睡眠・体調のうち分かるものだけで大丈夫なので入力をお願いします。";
+  if(st.key==="stagnant") action="体重推移が横ばいなので、食事量・活動量・トレーニングの進み具合を一度確認して次の調整を決めましょう。";
+  return `${name}さん、お疲れさまです。S.u.Gです。\n\n現在の記録を確認したところ「${st.label}」の判定です。\n確認ポイント：${rs}\n\n${action}`;
+}
+function followupDefault(memberId){
+  return {member_id:memberId,status:"open",last_contact_at:null,memo:"",next_followup:null,history:[],updated_at:null};
+}
+function followupState(memberId){
+  return followupByMember.get(memberId)||followupDefault(memberId);
+}
+function followupDueKind(f){
+  if(!f?.next_followup || f.status==="done")return "none";
+  const d=f.next_followup;
+  if(d<today())return "overdue";
+  if(d===today())return "today";
+  if(d===shiftDate(1))return "tomorrow";
+  return "upcoming";
+}
+function followupIsOverdue(f){return followupDueKind(f)==="overdue"}
+function followupDueLabel(f){
+  const k=followupDueKind(f);
+  if(k==="overdue")return "期限超過";
+  if(k==="today")return "今日";
+  if(k==="tomorrow")return "明日";
+  return f?.next_followup||"--";
+}
+function followupUrgency(f){
+  return ({overdue:0,today:1,tomorrow:2,upcoming:3,none:4})[followupDueKind(f)]??9;
+}
+function followupDateLabel(v){
+  if(!v)return "--";
+  const d=new Date(v);
+  if(Number.isNaN(d.getTime()))return String(v).slice(0,10);
+  return d.toLocaleString("ja-JP",{month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"});
+}
+function followupPass(row){
+  const f=followupState(row.profile.id);
+  if(followupFilter==="needs")return row.st.key!=="ok";
+  if(followupFilter==="open")return f.status!=="done";
+  if(followupFilter==="overdue")return followupDueKind(f)==="overdue";
+  if(followupFilter==="today")return followupDueKind(f)==="today";
+  if(followupFilter==="tomorrow")return followupDueKind(f)==="tomorrow";
+  if(followupFilter==="done")return f.status==="done";
+  return true;
+}
+function setFollowupFilter(v){
+  followupFilter=v||"all";
+  renderAdminBoardRows();
+}
+async function loadFollowupStates(){
+  const statusEl=document.getElementById("followupSetupStatus");
+  try{
+    const r=await apiGet("/rest/v1/trainer_followup_state?select=member_id,status,last_contact_at,memo,next_followup,history,updated_at");
+    if(!r.ok){
+      followupTableReady=false;
+      followupByMember=new Map();
+      if(statusEl)statusEl.textContent="フォロー管理：SQL設定が必要";
+      return false;
+    }
+    const rows=Array.isArray(r.body)?r.body:[];
+    followupByMember=new Map(rows.map(x=>[x.member_id,{...followupDefault(x.member_id),...x,history:Array.isArray(x.history)?x.history:[]}]));
+    followupTableReady=true;
+    if(statusEl)statusEl.textContent="フォロー管理：同期済";
+    return true;
+  }catch(e){
+    console.error(e);
+    followupTableReady=false;
+    if(statusEl)statusEl.textContent="フォロー管理：読込失敗";
+    return false;
+  }
+}
+async function upsertFollowupState(memberId, patch={}, historyEvent=null){
+  const current=followupState(memberId);
+  const history=Array.isArray(current.history)?[...current.history]:[];
+  if(historyEvent)history.unshift(historyEvent);
+  const next={
+    ...current,
+    ...patch,
+    member_id:memberId,
+    history:history.slice(0,50),
+    updated_by:sessionUser?.id||null,
+    updated_at:new Date().toISOString()
+  };
+  const r=await apiUpsert("/rest/v1/trainer_followup_state?on_conflict=member_id",next);
+  if(!r.ok)throw new Error("HTTP "+r.status+"｜"+r.text);
+  followupByMember.set(memberId,next);
+  return next;
+}
+async function lineFollowup(userId){
+  const row=adminRows.find(x=>x.profile?.id===userId);
+  if(!row){alert("会員情報を取得できませんでした。");return;}
+  const text=adminContactText(row);
+  const now=new Date().toISOString();
+  try{
+    if(followupTableReady){
+      await upsertFollowupState(userId,{
+        status:"done",
+        last_contact_at:now
+      },{
+        at:now,
+        type:"LINE",
+        note:row.st.reason||"",
+        status:"done"
+      });
+    }
+  }catch(e){
+    console.error(e);
+  }
+  const url="https://line.me/R/share?text="+encodeURIComponent(text);
+  window.location.href=url;
+}
+function openFollowupModal(userId){
+  if(currentRole!=="trainer")return;
+  const row=adminRows.find(x=>x.profile?.id===userId);
+  if(!row)return;
+  followupEditUserId=userId;
+  const f=followupState(userId);
+  document.getElementById("followupMemberName").textContent=(row.profile.display_name||"会員")+"｜"+row.st.label+"｜"+row.st.reason;
+  document.getElementById("followupStatus").value=f.status||"open";
+  document.getElementById("followupNext").value=f.next_followup||"";
+  document.getElementById("followupMemo").value=f.memo||"";
+  document.getElementById("followupError").textContent=followupTableReady?"":"フォロー管理SQLを確認してください。";
+  const hist=Array.isArray(f.history)?f.history:[];
+  document.getElementById("followupHistory").innerHTML=hist.length
+    ? hist.slice(0,8).map(h=>`<div class="item"><b>${esc(h.type||"対応")}｜${esc(followupDateLabel(h.at))}</b><br><span class="muted">${esc(h.note||"")}</span></div>`).join("")
+    : '<span class="muted">対応履歴なし</span>';
+  document.getElementById("followupModal").classList.remove("hidden");
+}
+function closeFollowupModal(){
+  document.getElementById("followupModal").classList.add("hidden");
+  followupEditUserId=null;
+}
+async function saveFollowupFromModal(){
+  const userId=followupEditUserId;
+  if(!userId)return;
+  if(!followupTableReady){
+    document.getElementById("followupError").textContent="フォロー管理SQLが未設定です。";
+    return;
+  }
+  const status=document.getElementById("followupStatus").value;
+  const next_followup=document.getElementById("followupNext").value||null;
+  const memo=document.getElementById("followupMemo").value.trim();
+  const btn=document.getElementById("saveFollowupBtn");
+  btn.disabled=true;btn.textContent="保存中...";
+  try{
+    const now=new Date().toISOString();
+    const old=followupState(userId);
+    const changes=[];
+    if(old.status!==status)changes.push(status==="done"?"対応済みに変更":"未対応に戻す");
+    if((old.next_followup||null)!==next_followup)changes.push(next_followup?`次回 ${next_followup}`:"次回日を解除");
+    if((old.memo||"")!==memo && memo)changes.push(memo);
+    await upsertFollowupState(userId,{status,next_followup,memo},{
+      at:now,
+      type:"対応記録",
+      note:changes.join(" / ")||"更新",
+      status
+    });
+    closeFollowupModal();
+    renderAdminBoardRows();
+  }catch(e){
+    console.error(e);
+    document.getElementById("followupError").textContent="保存失敗："+(e?.message||String(e));
+  }finally{
+    btn.disabled=false;btn.textContent="保存";
+  }
+}
+async function refreshAdminBoard(){
+  if(currentRole!=="trainer")return;
+  const list=document.getElementById("adminBoardList");
+  if(list)list.innerHTML='<span class="muted">集計中...</span>';
+  try{
+    const r=await apiGet("/rest/v1/member_data?select=user_id,data,updated_at&order=updated_at.desc");
+    if(!r.ok)throw new Error("HTTP "+r.status+"｜"+r.text);
+    await loadFollowupStates();
+    const byId=new Map((Array.isArray(r.body)?r.body:[]).map(x=>[x.user_id,x]));
+    const members=accessibleProfiles.filter(p=>p.role!=="trainer").map(p=>{
+      const row=byId.get(p.id);
+      const mm=row?.data&&Object.keys(row.data).length?row.data:baseMember(p.display_name||"会員");
+      ["weights","meals","training","recovery","photos"].forEach(k=>{if(!Array.isArray(mm[k]))mm[k]=[]});
+      if(!mm.profile)mm.profile=baseMember(p.display_name||"会員").profile;
+      const st=adminStatusFor(mm);
+      return {profile:p,mm,row,st,lastDate:latestRecordDate(mm)};
+    }).sort((a,b)=>{
+      const fa=followupState(a.profile.id),fb=followupState(b.profile.id);
+      return followupUrgency(fa)-followupUrgency(fb)
+        || adminPriority(a.st.key)-adminPriority(b.st.key)
+        || (b.lastDate||"").localeCompare(a.lastDate||"");
+    });
+    adminRows=members;
+    renderAdminBoardRows();
+  }catch(e){
+    console.error(e);
+    if(list)list.innerHTML='<span class="bad">管理一覧を取得できませんでした。</span>';
+  }
+}
+function renderFollowupAlerts(members){
+  const box=document.getElementById("followAlertList");
+  if(!box)return;
+  const alerts=(members||[])
+    .map(row=>({row,f:followupState(row.profile.id),kind:followupDueKind(followupState(row.profile.id))}))
+    .filter(x=>["overdue","today","tomorrow"].includes(x.kind))
+    .sort((a,b)=>followupUrgency(a.f)-followupUrgency(b.f) || (a.f.next_followup||"").localeCompare(b.f.next_followup||""));
+  if(!alerts.length){
+    box.innerHTML='<div class="notice">今日・明日・期限超過のフォロー予定はありません。</div>';
+    return;
+  }
+  box.innerHTML=alerts.map(({row,f,kind})=>{
+    const name=row.profile.display_name||row.mm?.profile?.name||"会員";
+    const cls=kind==="overdue"?"dueOverdue":kind==="today"?"dueToday":"dueTomorrow";
+    const due=kind==="overdue"?`期限超過 ${f.next_followup}`:kind==="today"?"今日対応":`明日 ${f.next_followup}`;
+    const reason=row.st?.reason||"";
+    return `<div class="followAlertItem"><div class="followAlertDue ${cls}">${esc(due)}</div><div><div class="followAlertName">${esc(name)}</div><div class="followAlertMeta">${esc(reason)}${f.memo?`｜${esc(f.memo)}`:""}</div></div><button class="lineBtn" onclick="lineFollowup('${row.profile.id}')">LINE</button><button class="secondary" onclick="openFollowupModal('${row.profile.id}')">対応</button></div>`;
+  }).join("");
+}
+function renderAdminBoardRows(){
+  const list=document.getElementById("adminBoardList");
+  const members=adminRows||[];
+  const total=members.length;
+  const attention=members.filter(x=>x.st.key==="attention").length;
+  const recovery=members.filter(x=>x.st.key==="recovery").length;
+  const missing=members.filter(x=>x.st.key==="missing").length;
+  const open=members.filter(x=>followupState(x.profile.id).status!=="done").length;
+  const overdue=members.filter(x=>followupDueKind(followupState(x.profile.id))==="overdue").length;
+  const dueToday=members.filter(x=>followupDueKind(followupState(x.profile.id))==="today").length;
+  const dueTomorrow=members.filter(x=>followupDueKind(followupState(x.profile.id))==="tomorrow").length;
+  const ids={admTotal:total,admAttention:attention,admRecovery:recovery,admMissing:missing,admOpen:open,admOverdue:overdue,admToday:dueToday,admTomorrow:dueTomorrow,followAlertOverdue:overdue,followAlertToday:dueToday,followAlertTomorrow:dueTomorrow};
+  Object.entries(ids).forEach(([id,v])=>{const el=document.getElementById(id);if(el)el.textContent=v});
+  renderFollowupAlerts(members);
+  if(!list)return;
+  if(!members.length){list.innerHTML='<span class="muted">会員がまだ登録されていません。</span>';return;}
+  const shown=members.filter(followupPass);
+  if(!shown.length){list.innerHTML='<span class="muted">条件に該当する会員はいません。</span>';return;}
+  list.innerHTML=shown.map(x=>{
+    const mm=x.mm,st=x.st,f=followupState(x.profile.id);
+    const latestW=(mm.weights||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
+    const latestR=(mm.recovery||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
+    const goal=mm.profile?.goal||"--";
+    const last=x.lastDate?`${x.lastDate}（${st.age===0?"今日":st.age+"日前"}）`:"記録なし";
+    const followStatus=f.status==="done"?"対応済":"未対応";
+    const dueKind=followupDueKind(f);
+    const followClass=dueKind==="overdue"?"followOverdue":(f.status==="done"?"followDone":"followOpen");
+    const next=followupDueLabel(f);
+    const dueMark=dueKind==="today"?"｜<b class=\"dueToday\">今日対応</b>":dueKind==="tomorrow"?"｜<b class=\"dueTomorrow\">明日対応</b>":dueKind==="overdue"?"｜<b class=\"dueOverdue\">期限超過</b>":"";
+    const contact=f.last_contact_at?followupDateLabel(f.last_contact_at):"--";
+    const memo=f.memo?`｜メモ ${esc(f.memo)}`:"";
+    return `<div class="adminMember"><div class="adminMemberTop"><div><div class="adminMemberName">${esc(x.profile.display_name||mm.profile?.name||"会員")}</div><div class="adminMemberMeta">目的 ${esc(goal)}｜最終記録 ${esc(last)}</div></div><span class="badge ${st.cls}">${esc(st.label)}</span></div><div class="adminMemberStats"><div class="adminMini"><span>体重</span><b>${latestW?Number(latestW.weight).toFixed(1)+"kg":"--"}</b></div><div class="adminMini"><span>7日差</span><b>${esc(st.wt.label)}</b></div><div class="adminMini"><span>回復</span><b>${st.score!=null?st.score+"点":"--"}</b></div><div class="adminMini"><span>睡眠</span><b>${latestR?Number(latestR.sleep||0).toFixed(1)+"h":"--"}</b></div><div class="adminMini"><span>トレ記録</span><b>${(mm.training||[]).length}</b></div></div><div class="followMeta"><b class="${followClass}">${followStatus}</b>｜最終連絡 ${esc(contact)}｜次回 ${esc(next)}${dueMark}${memo}</div><div class="adminActions"><div class="adminReason"><b>理由：</b>${esc(st.reason)}</div><button class="lineBtn" onclick="lineFollowup('${x.profile.id}')">LINE連絡</button><button class="secondary" onclick="openFollowupModal('${x.profile.id}')">対応記録</button><button class="primary" onclick="openMemberFromAdmin('${x.profile.id}')">開く</button></div></div>`;
+  }).join("");
+}
+async function openMemberFromAdmin(id){
+  await switchMember(id);
+  const tab=document.querySelector('.tab[data-tab="dash"]');
+  if(tab)tab.click();
+}
+
+function applyRoleUI(){
+  const isTrainer=currentRole==="trainer";
+  const toolbar=document.getElementById("memberToolbar");
+  const addBtn=document.getElementById("addMemberBtn");
+  const exportAllBtn=document.getElementById("exportAllBtn");
+  const exportMemberBtn=document.getElementById("exportMemberBtn");
+  const deleteMemberBtn=document.getElementById("deleteMemberBtn");
+  const adminTab=document.getElementById("adminTab");
+  const coachEditor=document.getElementById("coachPlanEditorCard");
+  const selectedProfile=accessibleProfiles.find(x=>x.id===db.current);
+  const canDelete=isTrainer && selectedProfile && selectedProfile.role!=="trainer" && db.current!==sessionUser?.id;
+
+  if(toolbar) toolbar.style.display=isTrainer?"grid":"none";
+  if(addBtn) addBtn.style.display=isTrainer?"block":"none";
+  if(exportAllBtn) exportAllBtn.style.display=isTrainer?"inline-block":"none";
+  if(exportMemberBtn) exportMemberBtn.style.display=isTrainer?"block":"none";
+  if(deleteMemberBtn) deleteMemberBtn.style.display=canDelete?"block":"none";
+  if(adminTab) adminTab.style.display=isTrainer?"block":"none";
+  if(coachEditor) coachEditor.style.display=isTrainer?"block":"none";
+  if(!isTrainer && document.getElementById("adminBoard")?.classList.contains("active")){
+    const dashTab=document.querySelector('.tab[data-tab="dash"]');if(dashTab)dashTab.click();
+  }
+}
+
+function renderMemberSelect(){
+  memberSelect.innerHTML=accessibleProfiles.map(x=>`<option value="${x.id}" ${x.id===db.current?"selected":""}>${esc(x.display_name||"無名")}${x.role==="trainer"?"（管理者）":""}</option>`).join("");
+  applyRoleUI();
+}
+
+function addWeight(){if(!n("wWeight"))return alert("体重を入力");m().weights.push({date:wDate.value,weight:n("wWeight"),fat:n("wFat")||null,memo:wMemo.value});m().weights.sort((a,b)=>a.date.localeCompare(b.date));wWeight.value=wFat.value=wMemo.value="";saveRender()}
+function addMeal(){if(!mName.value&&!n("mKcal"))return alert("食事を入力");m().meals.push({date:mDate.value,name:mName.value||"食事",kcal:n("mKcal"),p:n("mP"),f:n("mF"),c:n("mC")});mName.value=mKcal.value=mP.value=mF.value=mC.value="";saveRender()}
+function addTraining(){if(!tExercise.value)return alert("種目名を入力");m().training.push({date:tDate.value,exercise:tExercise.value.trim(),weight:n("tWeight"),reps:n("tReps"),sets:n("tSets"),rir:n("tRir"),memo:tMemo.value});m().training.sort((a,b)=>a.date.localeCompare(b.date));tWeight.value=tReps.value=tSets.value=tRir.value=tMemo.value="";saveRender()}
+function addRecovery(){m().recovery.push({date:rDate.value,sleep:n("rSleep"),fatigue:n("rFatigue"),stress:n("rStress"),pain:n("rPain"),memo:rMemo.value});m().recovery.sort((a,b)=>a.date.localeCompare(b.date));rSleep.value=rFatigue.value=rStress.value=rPain.value=rMemo.value="";saveRender()}
+
+async function remove(type,i){
+  if(type==="photos"){
+    const ph=m().photos[i];
+    if(ph?.path && sb){await sb.storage.from("body-photos").remove([ph.path])}
+  }
+  m()[type].splice(i,1);saveRender();
+}
+
+function compressImage(file){
+  return new Promise((resolve,reject)=>{
+    const img=new Image(),reader=new FileReader();
+    reader.onerror=reject;
+    reader.onload=e=>img.src=e.target.result;
+    img.onload=()=>{
+      let max=1200,scale=Math.min(1,max/img.width),c=document.createElement("canvas");
+      c.width=Math.round(img.width*scale);c.height=Math.round(img.height*scale);
+      c.getContext("2d").drawImage(img,0,0,c.width,c.height);
+      c.toBlob(b=>b?resolve(b):reject(new Error("image compress failed")),"image/jpeg",.78);
+    };
+    reader.readAsDataURL(file);
+  });
+}
+async function addPhoto(){
+  const f=pFile.files[0];if(!f)return alert("写真を選択");
+  try{
+    setStatus("写真保存中");
+    const blob=await compressImage(f);
+    const path=`${db.current}/${Date.now()}.jpg`;
+    const {error}=await sb.storage.from("body-photos").upload(path,blob,{contentType:"image/jpeg",upsert:false});
+    if(error)throw error;
+    m().photos.push({date:pDate.value,path,memo:pMemo.value});
+    pFile.value="";pMemo.value="";await saveCloud();renderAll();
+  }catch(e){console.error(e);alert("写真を保存できませんでした。");setStatus("保存失敗")}
+}
+
+function loadProfile(){if(!m())return;let p=m().profile;pfName.value=p.name||"";pfGoal.value=p.goal||"筋肥大";pfTargetWeight.value=p.targetWeight||"";pfTargetKcal.value=p.targetKcal||"";pfP.value=p.targetP||"";pfF.value=p.targetF||"";pfC.value=p.targetC||"";pfNotes.value=p.notes||""}
+function saveProfile(){let p=m().profile;p.name=pfName.value||p.name;p.goal=pfGoal.value;p.targetWeight=n("pfTargetWeight");p.targetKcal=n("pfTargetKcal");p.targetP=n("pfP");p.targetF=n("pfF");p.targetC=n("pfC");p.notes=pfNotes.value;saveRender()}
+
+function coachPlan(){
+  if(!m())return null;
+  if(!m().coachPlan || typeof m().coachPlan!=="object")m().coachPlan=baseMember(m().profile?.name||"会員").coachPlan;
+  m().coachPlan={...baseMember(m().profile?.name||"会員").coachPlan,...m().coachPlan};
+  return m().coachPlan;
+}
+function loadCoachPlanEditor(){
+  if(!m())return;
+  const cp=coachPlan();
+  const vals={cpFocus:cp.weeklyFocus||"",cpAction:cp.nextAction||"",cpSession:cp.nextSessionDate||"",cpTrainDays:cp.targetTrainingDays||"",cpSleep:cp.targetSleep||"",cpSteps:cp.targetSteps||""};
+  Object.entries(vals).forEach(([id,v])=>{const el=document.getElementById(id);if(el)el.value=v});
+}
+function saveCoachPlan(){
+  if(currentRole!=="trainer")return alert("コーチプランの編集は管理者のみです。");
+  const cp=coachPlan();
+  const nextAction=(document.getElementById("cpAction")?.value||"").trim();
+  const actionChanged=nextAction!==(cp.nextAction||"");
+  cp.weeklyFocus=(document.getElementById("cpFocus")?.value||"").trim();
+  cp.nextAction=nextAction;
+  cp.nextSessionDate=document.getElementById("cpSession")?.value||"";
+  cp.targetTrainingDays=Number(document.getElementById("cpTrainDays")?.value||0);
+  cp.targetSleep=Number(document.getElementById("cpSleep")?.value||0);
+  cp.targetSteps=Number(document.getElementById("cpSteps")?.value||0);
+  if(actionChanged)cp.completedAt=null;
+  cp.updatedAt=new Date().toISOString();
+  persist();renderCoachPlan();
+  alert("コーチプランを保存しました。");
+}
+function coachPlanSessionLabel(dateStr){
+  if(!dateStr)return "--";
+  const a=new Date(today()+"T00:00:00"),b=new Date(dateStr+"T00:00:00");
+  const d=Math.round((b-a)/86400000);
+  if(d===0)return "今日";if(d===1)return "明日";if(d>1)return `${dateStr.slice(5).replace("-","/")}（あと${d}日）`;if(d<0)return `${dateStr.slice(5).replace("-","/")}（${Math.abs(d)}日超過）`;
+  return dateStr;
+}
+function renderCoachPlan(){
+  if(!m())return;
+  const cp=coachPlan();
+  const has=!!(cp.weeklyFocus||cp.nextAction||cp.nextSessionDate||cp.targetTrainingDays||cp.targetSleep||cp.targetSteps);
+  const set=(id,txt)=>{const el=document.getElementById(id);if(el)el.textContent=txt};
+  set("coachPlanFocus",cp.weeklyFocus||"まだ設定されていません。");
+  set("coachPlanAction",cp.nextAction||"まだ設定されていません。");
+  set("coachPlanSession",coachPlanSessionLabel(cp.nextSessionDate));
+  set("coachPlanTrainDays",cp.targetTrainingDays?`${cp.targetTrainingDays}回/週`:"--");
+  set("coachPlanSleep",cp.targetSleep?`${Number(cp.targetSleep).toFixed(1)}h`:"--");
+  const updated=document.getElementById("coachPlanUpdated");
+  if(updated)updated.textContent=cp.updatedAt?`更新 ${new Date(cp.updatedAt).toLocaleString("ja-JP",{month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"})}`:"未設定";
+  const status=document.getElementById("coachPlanStatus");
+  if(status){status.textContent=!has?"未設定":cp.completedAt?"完了":"実行中";status.className=`badge ${!has?"":cp.completedAt?"ok":"warn"}`;}
+  const btn=document.getElementById("coachPlanCompleteBtn");
+  if(btn){btn.style.display=cp.nextAction?"block":"none";btn.textContent=cp.completedAt?"完了を取り消す":"課題を完了にする";}
+}
+function toggleCoachPlanComplete(){
+  const cp=coachPlan();if(!cp?.nextAction)return;
+  cp.completedAt=cp.completedAt?null:new Date().toISOString();
+  persist();renderCoachPlan();
+}
+
+function mealTotals(date=today()){return m().meals.filter(x=>x.date===date).reduce((a,x)=>({kcal:a.kcal+x.kcal,p:a.p+x.p,f:a.f+x.f,c:a.c+x.c}),{kcal:0,p:0,f:0,c:0})}
+function recScore(r){if(!r)return null;let s=100;if(r.sleep<7)s-=Math.min(25,(7-r.sleep)*8);s-=Math.max(0,r.fatigue-3)*5;s-=Math.max(0,r.stress-3)*4;s-=r.pain*5;return Math.max(0,Math.round(s))}
+function recAdvice(r){if(!r)return {txt:"回復データ未入力",cls:""};let s=recScore(r);if(r.pain>=6)return {txt:`${s}点｜痛み優先。高負荷回避・種目変更/評価。`,cls:"bad"};if(s>=80)return {txt:`${s}点｜通常〜高強度。前回超えを狙える。`,cls:"ok"};if(s>=60)return {txt:`${s}点｜中強度。RIRを1〜2多めに。`,cls:"warn"};return {txt:`${s}点｜回復優先。低強度または休養。`,cls:"bad"}}
+function vol(x){return x.weight*x.reps*x.sets}
+function e1rm(x){return x.weight*(1+x.reps/30)}
+function exerciseData(ex){return m().training.filter(x=>x.exercise.toLowerCase()===ex.toLowerCase())}
+function overload(ex){let a=exerciseData(ex);if(a.length<2)return {txt:"比較データ不足",cls:""};let p=a[a.length-2],c=a[a.length-1],r=[];if(c.weight>p.weight)r.push("重量↑");if(c.weight===p.weight&&c.reps>p.reps)r.push("REP↑");if(vol(c)>vol(p))r.push("ボリューム↑");if(c.weight===p.weight&&c.reps===p.reps&&c.sets===p.sets&&c.rir>p.rir)r.push("RIR改善");if(r.length)return {txt:"達成｜"+r.join("・"),cls:"ok"};if(vol(c)<vol(p))return {txt:"前回比低下｜疲労/減量/フォーム確認",cls:"warn"};return {txt:"同等｜次回は重量・REP・RIR更新",cls:""}}
+function pr(ex){let a=exerciseData(ex);if(!a.length)return null;return a.reduce((best,x)=>e1rm(x)>e1rm(best)?x:best,a[0])}
+
+function weightStats(){let a=m().weights.slice(-14),last=a.slice(-7),prev=a.slice(-14,-7),l=avg(last.map(x=>x.weight)),p=avg(prev.map(x=>x.weight));return {last,prev,l,p,delta:(l&&p)?l-p:null}}
+function weightJudgement(){let s=weightStats(),g=m().profile.goal;if(s.delta==null)return "7日平均を判定するには体重データがもう少し必要。";let d=s.delta,txt=`7日平均の前週比 ${d>=0?"+":""}${d.toFixed(2)}kg。`;if(g==="減量"){if(d<-0.2&&d>-0.9)txt+=" 減量ペースは概ね良好。";else if(d<=-0.9)txt+=" 落ち幅が大きい。回復・筋力維持を確認。";else if(d>=0)txt+=" 減量停滞。摂取量・活動量・水分変動を確認。"}else if(g==="増量"||g==="筋肥大"){if(d>0&&d<0.6)txt+=" 増量ペースは穏やか。パフォーマンスの伸びも確認。";else if(d>=0.6)txt+=" 増加が速い。脂肪増加も確認。";else txt+=" 体重増加なし。摂取量とトレーニング進捗を確認。"}return txt}
+function nutritionInsightText(){let w=m().weights.slice(-14),meals=m().meals;if(w.length<4)return "体重と食事の記録が増えると、摂取量と体重変化を横断して判定します。";let dates=[...new Set(meals.map(x=>x.date))].slice(-7);let kcal=dates.map(d=>mealTotals(d).kcal).filter(x=>x>0);let ak=avg(kcal),s=weightStats();if(!ak)return "直近の食事記録が不足しています。";let txt=`記録日の平均摂取 ${Math.round(ak)}kcal。`;if(s.delta!=null)txt+=` 体重7日平均は前週比 ${s.delta>=0?"+":""}${s.delta.toFixed(2)}kg。`;if(m().profile.targetKcal)txt+=` 目標 ${m().profile.targetKcal}kcalとの差は平均 ${Math.round(ak-m().profile.targetKcal)}kcal。`;return txt}
+
+function drawChart(){let c=weightChart,ctx=c.getContext("2d"),a=m().weights.slice(-30);ctx.clearRect(0,0,c.width,c.height);if(a.length<2){ctx.fillStyle="#888";ctx.font="22px sans-serif";ctx.fillText("体重データを2件以上記録",30,135);return}let vals=a.map(x=>x.weight),min=Math.min(...vals)-.5,max=Math.max(...vals)+.5,px=45,py=28,w=c.width-75,h=c.height-65;ctx.strokeStyle="#303037";ctx.lineWidth=1;for(let i=0;i<5;i++){let y=py+h*i/4;ctx.beginPath();ctx.moveTo(px,y);ctx.lineTo(px+w,y);ctx.stroke()}ctx.strokeStyle="#d8b35b";ctx.lineWidth=4;ctx.beginPath();a.forEach((x,i)=>{let X=px+w*i/(a.length-1),Y=py+h-(x.weight-min)/(max-min)*h;i?ctx.lineTo(X,Y):ctx.moveTo(X,Y)});ctx.stroke();ctx.fillStyle="#aaa";ctx.font="17px sans-serif";ctx.fillText(max.toFixed(1),3,py+5);ctx.fillText(min.toFixed(1),3,py+h)}
+
+function renderPhotoCompareOptions(){
+  if(!m() || !document.getElementById("photoBefore") || !document.getElementById("photoAfter"))return;
+  const ps=m().photos||[];
+  const before=document.getElementById("photoBefore"),after=document.getElementById("photoAfter");
+  const oldB=before.value,oldA=after.value;
+  const opts=ps.map((x,i)=>`<option value="${i}">${esc(x.date||"")}｜${esc(x.memo||"写真")}</option>`).join("");
+  before.innerHTML=opts;after.innerHTML=opts;
+  if(!ps.length){
+    document.getElementById("photoCompareView").innerHTML='<span class="muted">写真を2枚以上保存すると比較できます。</span>';
+    document.getElementById("photoCompareDelta").textContent="";
+    return;
+  }
+  before.value=(oldB!=="" && ps[Number(oldB)])?oldB:"0";
+  after.value=(oldA!=="" && ps[Number(oldA)])?oldA:String(ps.length-1);
+}
+
+async function getPhotoSignedUrl(ph){
+  if(!ph)return "";
+  if(ph.path){
+    const {data,error}=await sb.storage.from("body-photos").createSignedUrl(ph.path,3600);
+    if(error)throw error;
+    return data?.signedUrl||"";
+  }
+  return ph.data||"";
+}
+
+async function comparePhotos(){
+  const ps=m()?.photos||[];
+  if(ps.length<2)return alert("比較するには写真を2枚以上保存してください。");
+  const bi=Number(document.getElementById("photoBefore").value),ai=Number(document.getElementById("photoAfter").value);
+  if(bi===ai)return alert("BEFOREとAFTERは別の写真を選んでください。");
+  const b=ps[bi],a=ps[ai];
+  const view=document.getElementById("photoCompareView"),delta=document.getElementById("photoCompareDelta");
+  view.innerHTML='<span class="muted">写真を読み込み中...</span>';
+  delta.textContent="";
+  try{
+    const [bu,au]=await Promise.all([getPhotoSignedUrl(b),getPhotoSignedUrl(a)]);
+    const bd=new Date((b.date||"")+"T00:00:00"),ad=new Date((a.date||"")+"T00:00:00");
+    const days=(isNaN(bd)||isNaN(ad))?null:Math.round((ad-bd)/86400000);
+    delta.textContent=days===null?"":`${days>=0?"+":""}${days}日間の変化`;
+    view.innerHTML=`
+      <div class="photoCompareBox">${bu?`<img src="${bu}">`:""}<div class="photoCompareMeta"><span class="photoCompareTag">BEFORE</span>${esc(b.date||"")}<br>${esc(b.memo||"")}</div></div>
+      <div class="photoCompareBox">${au?`<img src="${au}">`:""}<div class="photoCompareMeta"><span class="photoCompareTag">AFTER</span>${esc(a.date||"")}<br>${esc(a.memo||"")}</div></div>`;
+  }catch(e){
+    console.error(e);view.innerHTML='<span class="muted">写真比較を読み込めませんでした。</span>';
+  }
+}
+
+async function renderPhotos(){
+  if(!m())return;
+  renderPhotoCompareOptions();
+  if(!m().photos.length){photoGrid.innerHTML='<span class="muted">写真なし</span>';return}
+  photoGrid.innerHTML='<span class="muted">写真を読み込み中...</span>';
+  const items=[];
+  for(let ri=m().photos.length-1;ri>=0;ri--){
+    const x=m().photos[ri];
+    let url="";
+    if(x.path){
+      const {data}=await sb.storage.from("body-photos").createSignedUrl(x.path,3600);
+      url=data?.signedUrl||"";
+    } else if(x.data){url=x.data}
+    items.push(`<div class="photo">${url?`<img src="${url}">`:""}<p>${esc(x.date)}<br>${esc(x.memo)}</p><button class="danger" style="width:100%;border-radius:0" onclick="remove('photos',${ri})">削除</button></div>`);
+  }
+  photoGrid.innerHTML=items.join("");
+}
+
+function renderAll(){
+  if(!m())return;
+  renderMemberSelect();
+  let mm=m(),ws=mm.weights,latest=ws.at(-1),s=weightStats(),mt=mealTotals(),rr=mm.recovery.filter(x=>x.date===today()).at(-1)||mm.recovery.at(-1);
+  dWeight.textContent=latest?latest.weight.toFixed(1)+"kg":"--";dAvg.textContent=s.l?s.l.toFixed(1)+"kg":"--";dKcal.textContent=Math.round(mt.kcal)+" kcal";dRec.textContent=rr?recScore(rr)+"点":"--";
+  weightJudge.textContent=weightJudgement();nutritionInsight.textContent=nutritionInsightText();
+  let adv=recAdvice(rr);todayAdvice.innerHTML=`<span class="badge ${adv.cls}">${esc(adv.txt)}</span>`;
+  let exs=[...new Set(mm.training.map(x=>x.exercise))].slice(-6).reverse();dashOverload.innerHTML=exs.map(ex=>{let o=overload(ex);return `<div class="item"><strong>${esc(ex)}</strong><br><span class="badge ${o.cls}">${esc(o.txt)}</span></div>`}).join("")||'<span class="muted">トレーニングを記録してください</span>';
+
+  mtKcal.textContent=Math.round(mt.kcal);mtP.textContent=mt.p.toFixed(0)+"g";mtF.textContent=mt.f.toFixed(0)+"g";mtC.textContent=mt.c.toFixed(0)+"g";
+  let p=mm.profile,diff=p.targetKcal?Math.round(mt.kcal-p.targetKcal):null;mealTarget.textContent=p.targetKcal?`目標 ${p.targetKcal}kcal｜現在 ${Math.round(mt.kcal)}kcal｜差 ${diff>=0?"+":""}${diff}kcal`:"会員情報で目標kcalを設定してください";
+
+  weightList.innerHTML=[...mm.weights].reverse().map((x,ri)=>{let i=mm.weights.length-1-ri;return `<div class="item"><div class="row"><div><strong>${x.date}｜${x.weight.toFixed(1)}kg</strong><br><small>${x.fat?x.fat+"% ":""}${esc(x.memo)}</small></div><button class="danger" onclick="remove('weights',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
+  mealList.innerHTML=[...mm.meals].reverse().map((x,ri)=>{let i=mm.meals.length-1-ri;return `<div class="item"><div class="row"><div><strong>${x.date}｜${esc(x.name)}</strong><br><small>${x.kcal}kcal / P${x.p} F${x.f} C${x.c}</small></div><button class="danger" onclick="remove('meals',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
+  trainingList.innerHTML=[...mm.training].reverse().map((x,ri)=>{let i=mm.training.length-1-ri,o=overload(x.exercise);return `<div class="item"><div class="row"><div><strong>${x.date}｜${esc(x.exercise)}</strong><br><small>${x.weight}kg × ${x.reps}rep × ${x.sets}set / RIR ${x.rir}</small><br><span class="badge ${o.cls}">${esc(o.txt)}</span></div><button class="danger" onclick="remove('training',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
+  prTable.innerHTML=exs.length?`<table class="table"><tr><th>種目</th><th>PR</th><th>推定1RM</th></tr>${exs.map(ex=>{let x=pr(ex);return `<tr><td>${esc(ex)}</td><td>${x.weight}kg×${x.reps}</td><td>${e1rm(x).toFixed(1)}kg</td></tr>`}).join("")}</table>`:'<span class="muted">記録なし</span>';
+  recoveryJudge.innerHTML=`<span class="badge ${adv.cls}">${esc(adv.txt)}</span>`;
+  recoveryList.innerHTML=[...mm.recovery].reverse().map((x,ri)=>{let i=mm.recovery.length-1-ri,a=recAdvice(x);return `<div class="item"><div class="row"><div><strong>${x.date}｜睡眠 ${x.sleep}h</strong><br><small>疲労${x.fatigue} / ストレス${x.stress} / 痛み${x.pain}</small><br><span class="badge ${a.cls}">${recScore(x)}点</span></div><button class="danger" onclick="remove('recovery',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
+  renderCoachPlan();drawChart();renderReport();renderPhotos();
+}
+
+function monthLabel(mon){
+  const [y,mo]=String(mon||"").split("-");
+  return y&&mo?`${y}年${Number(mo)}月`:mon;
+}
+function monthDailyMealTotals(mm,mon){
+  const days=[...new Set(mm.meals.filter(x=>x.date.startsWith(mon)).map(x=>x.date))].sort();
+  return days.map(date=>{
+    const rows=mm.meals.filter(x=>x.date===date);
+    return {date,kcal:rows.reduce((s,x)=>s+Number(x.kcal||0),0),p:rows.reduce((s,x)=>s+Number(x.p||0),0),f:rows.reduce((s,x)=>s+Number(x.f||0),0),c:rows.reduce((s,x)=>s+Number(x.c||0),0)};
+  });
+}
+function monthlyPRCount(mm,mon,ts){
+  let count=0;
+  const exercises=[...new Set(ts.map(x=>x.exercise))];
+  exercises.forEach(ex=>{
+    const before=mm.training.filter(x=>x.exercise===ex && x.date<`${mon}-01`);
+    const current=ts.filter(x=>x.exercise===ex);
+    if(!current.length)return;
+    const bestCurrent=Math.max(...current.map(e1rm));
+    const bestBefore=before.length?Math.max(...before.map(e1rm)):0;
+    if(bestCurrent>bestBefore && bestBefore>0)count++;
+  });
+  return count;
+}
+function reportJudgement(mm,delta,avgK,avgSleep,avgRec){
+  const notes=[];
+  const goal=mm.profile.goal||"";
+  if(delta!=null){
+    if(goal==="減量"){
+      if(delta<=-0.3)notes.push("体重は減量方向に推移");
+      else if(delta>=0.3)notes.push("体重は増加傾向。摂取量と活動量を確認");
+      else notes.push("体重変化は小さく、維持に近い推移");
+    }else if(goal==="増量" || goal==="筋肥大"){
+      if(delta>=0.2)notes.push("体重は増量方向に推移");
+      else if(delta<=-0.3)notes.push("体重は減少傾向。エネルギー不足を確認");
+      else notes.push("体重変化は小さく、維持に近い推移");
+    }else{
+      notes.push(`月内の体重変化 ${delta>=0?"+":""}${delta.toFixed(1)}kg`);
+    }
+  }
+  if(mm.profile.targetKcal && avgK){
+    const diff=avgK-mm.profile.targetKcal;
+    if(Math.abs(diff)>=250)notes.push(`平均摂取は目標より${diff>0?"約"+Math.round(diff)+"kcal多い":"約"+Math.abs(Math.round(diff))+"kcal少ない"}`);
+  }
+  if(avgSleep && avgSleep<6.5)notes.push("平均睡眠が6.5時間未満。回復優先");
+  if(avgRec && avgRec<60)notes.push("回復スコア低下傾向。強度・休養を調整");
+  if(!notes.length)notes.push("記録を継続し、翌月の変化と比較");
+  return notes.join("。")+"。";
+}
+function renderReport(){
+  if(!m())return;
+  const mon=reportMonth.value||monthNow(),mm=m();
+  const ws=mm.weights.filter(x=>x.date.startsWith(mon)).sort((a,b)=>a.date.localeCompare(b.date));
+  const ms=mm.meals.filter(x=>x.date.startsWith(mon));
+  const ts=mm.training.filter(x=>x.date.startsWith(mon));
+  const rs=mm.recovery.filter(x=>x.date.startsWith(mon));
+  const ps=mm.photos.filter(x=>x.date.startsWith(mon));
+  const first=ws[0],last=ws.at(-1),delta=first&&last?last.weight-first.weight:null;
+  const weightAvg=avg(ws.map(x=>Number(x.weight||0)).filter(Boolean));
+  const mealDays=monthDailyMealTotals(mm,mon);
+  const avgK=avg(mealDays.map(x=>x.kcal)),avgP=avg(mealDays.map(x=>x.p)),avgF=avg(mealDays.map(x=>x.f)),avgC=avg(mealDays.map(x=>x.c));
+  const trainDays=[...new Set(ts.map(x=>x.date))];
+  const exercises=[...new Set(ts.map(x=>x.exercise))];
+  const totalSets=ts.reduce((s,x)=>s+Number(x.sets||0),0);
+  const prCount=monthlyPRCount(mm,mon,ts);
+  const avgRec=avg(rs.map(recScore));
+  const avgSleep=avg(rs.map(x=>Number(x.sleep||0)).filter(x=>x>0));
+  const avgFatigue=avg(rs.map(x=>Number(x.fatigue||0)).filter(x=>x>0));
+  const avgStress=avg(rs.map(x=>Number(x.stress||0)).filter(x=>x>0));
+  const avgPain=avg(rs.map(x=>Number(x.pain||0)));
+  const judge=reportJudgement(mm,delta,avgK,avgSleep,avgRec);
+  const weightText=first&&last?`${first.weight.toFixed(1)}kg → ${last.weight.toFixed(1)}kg（${delta>=0?"+":""}${delta.toFixed(1)}kg）`:"データ不足";
+  const nutritionText=mealDays.length?`平均 ${Math.round(avgK)}kcal / P${Math.round(avgP)}g F${Math.round(avgF)}g C${Math.round(avgC)}g（${mealDays.length}日記録）`:"データ不足";
+  const trainingText=ts.length?`${trainDays.length}日 / ${ts.length}記録 / ${totalSets}set / ${exercises.length}種目 / PR更新 ${prCount}種目`:"データ不足";
+  const recoveryText=rs.length?`回復 ${Math.round(avgRec)}点 / 睡眠 ${avgSleep.toFixed(1)}h / 疲労 ${avgFatigue.toFixed(1)} / ストレス ${avgStress.toFixed(1)} / 痛み ${avgPain.toFixed(1)}（${rs.length}記録）`:"データ不足";
+  const txt=`【S.u.G 月次レポート｜${monthLabel(mon)}】
+会員：${mm.profile.name||"--"}
+目的：${mm.profile.goal||"--"}
+
+■ 体重
+${weightText}${weightAvg?` / 月平均 ${weightAvg.toFixed(1)}kg`:""}
+
+■ 食事
+${nutritionText}
+
+■ トレーニング
+${trainingText}
+
+■ 回復
+${recoveryText}
+
+■ 写真
+${ps.length}件
+
+■ 判定
+${judge}`;
+  reportBody.innerHTML=`
+    <div class="kpis">
+      <div class="kpi"><span>体重変化</span><b>${delta!=null?`${delta>=0?"+":""}${delta.toFixed(1)}kg`:"--"}</b></div>
+      <div class="kpi"><span>平均摂取</span><b>${avgK?Math.round(avgK)+"kcal":"--"}</b></div>
+      <div class="kpi"><span>トレ日数</span><b>${trainDays.length}</b></div>
+      <div class="kpi"><span>平均回復</span><b>${avgRec?Math.round(avgRec)+"点":"--"}</b></div>
+    </div>
+    <div class="item" style="margin-top:9px"><strong>体重</strong><br><small>${esc(weightText)}${weightAvg?` / 月平均 ${weightAvg.toFixed(1)}kg`:""}</small></div>
+    <div class="item"><strong>食事</strong><br><small>${esc(nutritionText)}</small></div>
+    <div class="item"><strong>トレーニング</strong><br><small>${esc(trainingText)}</small></div>
+    <div class="item"><strong>回復</strong><br><small>${esc(recoveryText)}</small></div>
+    <div class="notice"><strong>月次判定</strong><br>${esc(judge)}</div>
+    <div id="reportText" class="item" style="margin-top:9px;white-space:pre-wrap;line-height:1.7">${esc(txt)}</div>`;
+}
+function copyReport(){
+  const t=document.getElementById("reportText")?.textContent||"";
+  if(!t)return alert("先に集計してください");
+  navigator.clipboard?.writeText(t).then(()=>alert("レポート文をコピーしました")).catch(()=>prompt("コピーしてください",t));
+}
+async function shareReport(){
+  let t=document.getElementById("reportText")?.textContent||"";
+  if(!t){renderReport();t=document.getElementById("reportText")?.textContent||"";}
+  if(!t)return alert("レポートを作成できませんでした");
+  try{
+    if(navigator.share){
+      await navigator.share({title:"S.u.G 月次レポート",text:t});
+      return;
+    }
+    await navigator.clipboard.writeText(t);
+    alert("レポート文をコピーしました。LINEに貼り付けてください。");
+  }catch(e){
+    if(e?.name!=="AbortError"){
+      try{await navigator.clipboard.writeText(t);alert("共有できなかったためコピーしました。LINEに貼り付けてください。");}
+      catch(_){prompt("コピーしてください",t)}
+    }
+  }
+}
+function safeFilePart(v){
+  return String(v||"member").trim().replace(/[\\/:*?"<>|\s]+/g,"_").slice(0,60)||"member";
+}
+function normalizeMemberData(data,name="会員"){
+  const base=baseMember(name),x=(data&&typeof data==="object"&&!Array.isArray(data))?JSON.parse(JSON.stringify(data)):base;
+  if(!x.profile||typeof x.profile!=="object")x.profile=base.profile;
+  if(!x.profile.name)x.profile.name=name||"会員";
+  ["weights","meals","training","recovery","photos"].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});
+  return x;
+}
+function backupStamp(){return new Date().toISOString()}
+function rememberBackup(kind,count){
+  const info={at:backupStamp(),kind,count:Number(count||0)};
+  try{localStorage.setItem("sug-v15-last-backup",JSON.stringify(info))}catch(_e){}
+  renderBackupStatus(info);
+}
+function renderBackupStatus(info=null){
+  const el=document.getElementById("backupLastStatus");if(!el)return;
+  if(!info){try{info=JSON.parse(localStorage.getItem("sug-v15-last-backup")||"null")}catch(_e){info=null}}
+  if(!info?.at){el.innerHTML='<b>最終バックアップ</b><br>この端末ではまだ実行されていません。';return;}
+  const dt=new Date(info.at).toLocaleString("ja-JP");
+  const label=info.kind==="all"?"全会員":"会員単位";
+  el.innerHTML=`<b>最終バックアップ</b><br>${esc(dt)}｜${esc(label)}${info.count?`｜${info.count}名`:""}`;
+}
+async function fetchAllMemberRows(){
+  const r=await apiGet("/rest/v1/member_data?select=user_id,data,updated_at&order=updated_at.desc");
+  if(!r.ok)throw new Error("会員データ取得失敗｜HTTP "+r.status+"｜"+r.text);
+  return Array.isArray(r.body)?r.body:[];
+}
+async function fetchFollowupBackupRows(){
+  const r=await apiGet("/rest/v1/trainer_followup_state?select=member_id,status,last_contact_at,memo,next_followup,history,updated_at");
+  if(!r.ok)return {rows:[],warning:"フォロー履歴は取得できませんでした"};
+  return {rows:Array.isArray(r.body)?r.body:[],warning:""};
+}
+async function backupAll(){
+  if(currentRole!=="trainer")return alert("全会員バックアップは管理者のみ利用できます。");
+  setStatus("バックアップ中");
+  try{
+    const [rows,fu]=await Promise.all([fetchAllMemberRows(),fetchFollowupBackupRows()]);
+    const members=accessibleProfiles.filter(p=>p.role!=="trainer");
+    const ids=new Set(members.map(p=>p.id));
+    const payload={
+      schema:"SUG_BODY_MANAGEMENT_BACKUP",version:16,kind:"all",created_at:backupStamp(),created_by:sessionUser?.id||null,
+      profiles:members.map(p=>({id:p.id,display_name:p.display_name||"",role:p.role||"member"})),
+      member_data:rows.filter(x=>ids.has(x.user_id)).map(x=>({user_id:x.user_id,data:normalizeMemberData(x.data,members.find(p=>p.id===x.user_id)?.display_name||"会員"),updated_at:x.updated_at||null})),
+      followups:fu.rows.filter(x=>ids.has(x.member_id)),
+      storage_note:"写真JSONにはStorageパスとメタデータのみを含み、画像ファイル本体は含みません。",
+      warning:fu.warning||""
+    };
+    download(`SUG_FULL_BACKUP_${today()}_${Date.now()}.json`,JSON.stringify(payload,null,2));
+    rememberBackup("all",payload.member_data.length);
+    setStatus("同期済");
+    if(fu.warning)alert("バックアップを保存しました。\n※ "+fu.warning);
+  }catch(e){console.error(e);setStatus("バックアップ失敗");alert("バックアップできませんでした："+(e?.message||String(e)))}
+}
+async function backupCurrentMember(){
+  if(currentRole!=="trainer")return alert("会員バックアップは管理者のみ利用できます。");
+  const p=accessibleProfiles.find(x=>x.id===db.current);
+  if(!p||p.role==="trainer")return alert("バックアップする会員を選択してください。");
+  setStatus("バックアップ中");
+  try{
+    const r=await apiGet("/rest/v1/member_data?select=user_id,data,updated_at&user_id=eq."+encodeURIComponent(p.id));
+    if(!r.ok)throw new Error("HTTP "+r.status+"｜"+r.text);
+    const row=Array.isArray(r.body)?r.body[0]:null;
+    const fu=await apiGet("/rest/v1/trainer_followup_state?select=member_id,status,last_contact_at,memo,next_followup,history,updated_at&member_id=eq."+encodeURIComponent(p.id));
+    const payload={
+      schema:"SUG_BODY_MANAGEMENT_BACKUP",version:16,kind:"member",created_at:backupStamp(),created_by:sessionUser?.id||null,
+      profile:{id:p.id,display_name:p.display_name||"",role:p.role||"member"},
+      member_data:{user_id:p.id,data:normalizeMemberData(row?.data||m(),p.display_name||"会員"),updated_at:row?.updated_at||null},
+      followup:fu.ok&&Array.isArray(fu.body)?fu.body[0]||null:null,
+      storage_note:"写真JSONにはStorageパスとメタデータのみを含み、画像ファイル本体は含みません。"
+    };
+    download(`SUG_MEMBER_${safeFilePart(p.display_name)}_${today()}_${Date.now()}.json`,JSON.stringify(payload,null,2));
+    rememberBackup("member",1);setStatus("同期済");
+  }catch(e){console.error(e);setStatus("バックアップ失敗");alert("会員バックアップできませんでした："+(e?.message||String(e)))}
+}
+function validateRestoreObject(obj){
+  const allowed=new Map(accessibleProfiles.filter(p=>p.role!=="trainer").map(p=>[p.id,p]));
+  if(obj?.schema==="SUG_BODY_MANAGEMENT_BACKUP" && Number(obj.version)>=15){
+    if(obj.kind==="all"){
+      const rows=Array.isArray(obj.member_data)?obj.member_data:[];
+      const usable=rows.filter(x=>x?.user_id&&allowed.has(x.user_id)&&x.data);
+      const skipped=rows.filter(x=>!x?.user_id||!allowed.has(x.user_id)||!x.data).length;
+      const followups=Array.isArray(obj.followups)?obj.followups.filter(x=>x?.member_id&&allowed.has(x.member_id)):[];
+      return {kind:"all",created_at:obj.created_at||null,memberRows:usable,followups,skipped,sourceVersion:obj.version};
+    }
+    if(obj.kind==="member"){
+      const row=obj.member_data;
+      if(!row?.user_id||!allowed.has(row.user_id)||!row.data)throw new Error("このバックアップの会員アカウントは現在の会員一覧に存在しません。");
+      return {kind:"member",created_at:obj.created_at||null,memberRows:[row],followups:obj.followup?[obj.followup]:[],skipped:0,sourceVersion:obj.version};
+    }
+  }
+  // 旧「この会員だけ出力」JSONの互換読込：現在選択中の会員へ復元
+  if(obj?.profile && Array.isArray(obj.weights)&&Array.isArray(obj.meals)&&Array.isArray(obj.training)&&Array.isArray(obj.recovery)){
+    const p=accessibleProfiles.find(x=>x.id===db.current);
+    if(!p||p.role==="trainer")throw new Error("旧会員JSONを復元するには、先に復元先の会員を選択してください。");
+    return {kind:"legacy-member",created_at:null,memberRows:[{user_id:p.id,data:obj}],followups:[],skipped:0,sourceVersion:"legacy"};
+  }
+  throw new Error("S.u.GのバックアップJSONとして認識できません。");
+}
+async function previewRestoreFile(input){
+  const box=document.getElementById("restorePreview"),btn=document.getElementById("restoreApplyBtn");
+  restorePreviewData=null;btn.disabled=true;box.classList.add("hidden");box.innerHTML="";
+  const file=input?.files?.[0];if(!file)return;
+  try{
+    const text=await file.text(),obj=JSON.parse(text),preview=validateRestoreObject(obj);
+    restorePreviewData=preview;
+    const created=preview.created_at?new Date(preview.created_at).toLocaleString("ja-JP"):"旧形式 / 日時なし";
+    const names=preview.memberRows.map(r=>accessibleProfiles.find(p=>p.id===r.user_id)?.display_name||r.user_id).slice(0,6);
+    const more=preview.memberRows.length>6?` ほか${preview.memberRows.length-6}名`:"";
+    box.innerHTML=`<strong>復元前確認</strong><br>種類：${preview.kind==="all"?"全会員":"会員単位"}<br>バックアップ日時：${esc(created)}<br>復元対象：${preview.memberRows.length}名<br>${esc(names.join(" / "))}${esc(more)}<br>フォロー履歴：${preview.followups.length}件${preview.skipped?`<br><span class="bad">現在存在しない会員など ${preview.skipped}件は復元対象外</span>`:""}<br><span class="muted">既存の対象会員データをバックアップ内容で上書きします。会員アカウント自体の新規作成は行いません。</span>`;
+    box.classList.remove("hidden");btn.disabled=preview.memberRows.length===0;
+  }catch(e){console.error(e);box.innerHTML=`<span class="bad">読込エラー：${esc(e?.message||String(e))}</span>`;box.classList.remove("hidden")}
+}
+async function applyRestore(){
+  if(currentRole!=="trainer"||!restorePreviewData)return;
+  const p=restorePreviewData;
+  if(!confirm(`バックアップから ${p.memberRows.length}名のデータを復元します。\n現在の対象データは上書きされます。\n\n実行しますか？`))return;
+  const btn=document.getElementById("restoreApplyBtn");btn.disabled=true;btn.textContent="復元中...";setStatus("復元中");
+  let restored=0,followRestored=0;
+  try{
+    for(const row of p.memberRows){
+      const prof=accessibleProfiles.find(x=>x.id===row.user_id);
+      const data=normalizeMemberData(row.data,prof?.display_name||"会員");
+      const r=await apiUpsert("/rest/v1/member_data?on_conflict=user_id",{user_id:row.user_id,data,updated_at:new Date().toISOString()});
+      if(!r.ok)throw new Error(`会員データ復元失敗｜${prof?.display_name||row.user_id}｜HTTP ${r.status}`);
+      db.members[row.user_id]=data;restored++;
+    }
+    if(followupTableReady){
+      for(const f of p.followups){
+        if(!f?.member_id||!accessibleProfiles.some(x=>x.id===f.member_id&&x.role!=="trainer"))continue;
+        const payload={member_id:f.member_id,status:f.status==="done"?"done":"open",last_contact_at:f.last_contact_at||null,memo:String(f.memo||""),next_followup:f.next_followup||null,history:Array.isArray(f.history)?f.history.slice(0,50):[],updated_by:sessionUser?.id||null,updated_at:new Date().toISOString()};
+        const rr=await apiUpsert("/rest/v1/trainer_followup_state?on_conflict=member_id",payload);
+        if(rr.ok){followupByMember.set(f.member_id,payload);followRestored++}
+      }
+    }
+    if(db.current&&db.members[db.current]){loadProfile();renderAll()}
+    await refreshAdminBoard();setStatus("同期済");
+    alert(`復元完了｜会員 ${restored}名${p.followups.length?`｜フォロー履歴 ${followRestored}件`:""}`);
+    restorePreviewData=null;document.getElementById("restoreFile").value="";document.getElementById("restorePreview").classList.add("hidden");
+  }catch(e){console.error(e);setStatus("復元失敗");alert("復元を完了できませんでした："+(e?.message||String(e)))}
+  finally{btn.disabled=!restorePreviewData;btn.textContent="内容を確認して復元"}
+}
+function exportMember(){backupCurrentMember()}
+function exportAll(){backupAll()}
+function download(name,text){let b=new Blob([text],{type:"application/json"}),a=document.createElement("a"),u=URL.createObjectURL(b);a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000)}
+
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.getElementById(b.dataset.tab).classList.add("active");if(b.dataset.tab==="profile"){loadProfile();loadCoachPlanEditor();}if(b.dataset.tab==="adminBoard")refreshAdminBoard();renderAll()});
+["wDate","mDate","tDate","rDate","pDate"].forEach(id=>document.getElementById(id).value=today());
+reportMonth.value=monthNow();
+initCloud();
+</script>
+</body>
+</html>
