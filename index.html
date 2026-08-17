@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>S.u.G BODY MANAGEMENT SYSTEM V11</title>
+<title>S.u.G BODY MANAGEMENT SYSTEM V13</title>
 <style>
 :root{
   --bg:#09090a;--card:#141417;--card2:#1a1a1f;--gold:#d8b35b;--gold2:#f3d98b;
@@ -49,6 +49,14 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 .adminMemberName{font-size:13px;font-weight:800;color:#fff}.adminMemberMeta{font-size:9px;color:#999;line-height:1.6;margin-top:4px}
 .adminMemberStats{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:8px}.adminMini{background:#141419;border:1px solid #292930;border-radius:9px;padding:6px;text-align:center}.adminMini span{display:block;color:#929299;font-size:8px}.adminMini b{display:block;color:#eee;font-size:11px;margin-top:2px}
 .adminActions{display:grid;grid-template-columns:1fr auto auto;gap:7px;align-items:center;margin-top:8px}.adminReason{font-size:9px;color:#bbb;line-height:1.55}.lineBtn{background:#1d1d22;border:1px solid #4a4a52;color:#fff;border-radius:10px;padding:8px 10px;font-weight:800;font-size:10px;white-space:nowrap}.lineBtn:active{transform:translateY(1px)}
+.followMeta{margin-top:7px;padding:7px 8px;background:#111116;border:1px solid #292930;border-radius:9px;font-size:9px;color:#aaa;line-height:1.6}
+.followMeta b{color:#eee}.followOpen{color:var(--warn)}.followDone{color:var(--ok)}.followOverdue{color:var(--bad)}
+.followToolbar{display:grid;grid-template-columns:1fr auto;gap:7px;align-items:end;margin-top:10px}
+.followHistory{max-height:180px;overflow:auto;margin-top:9px}.followHistory .item{font-size:9px;line-height:1.55}
+.followupBox textarea{min-height:92px}
+.adminActions{grid-template-columns:1fr auto auto auto}
+@media(max-width:719px){.adminActions{grid-template-columns:1fr 1fr 1fr}.adminReason{grid-column:1/-1}.followToolbar{grid-template-columns:1fr}}
+
 @media(min-width:720px){.adminBoardGrid{grid-template-columns:repeat(4,1fr)}.adminMemberStats{grid-template-columns:repeat(5,1fr)}}
 @media(min-width:720px){.tabs{grid-template-columns:repeat(9,1fr)}.kpis{grid-template-columns:repeat(4,1fr)}}
 
@@ -100,7 +108,7 @@ window.SUG_CLOUD_CONFIG = {
 <div id="authGate" class="authGate">
   <div class="authBox">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V12 CLOUD / MEMBERS ONLY</div>
+    <div class="sub">V13 CLOUD / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -138,9 +146,42 @@ window.SUG_CLOUD_CONFIG = {
   </div>
 </div>
 
+
+<div id="followupModal" class="memberModal hidden">
+  <div class="memberBox followupBox">
+    <h2>フォロー対応記録</h2>
+    <div id="followupMemberName" class="sub">会員</div>
+
+    <div class="grid2">
+      <div>
+        <label>対応状況</label>
+        <select id="followupStatus">
+          <option value="open">未対応</option>
+          <option value="done">対応済み</option>
+        </select>
+      </div>
+      <div>
+        <label>次回フォロー日</label>
+        <input id="followupNext" type="date">
+      </div>
+    </div>
+
+    <label style="margin-top:10px">対応メモ</label>
+    <textarea id="followupMemo" placeholder="例：睡眠不足のため負荷を調整。次回、痛みと睡眠時間を確認。"></textarea>
+
+    <div id="followupHistory" class="followHistory"></div>
+    <div id="followupError" class="memberError"></div>
+
+    <div class="memberActions">
+      <button class="secondary" type="button" onclick="closeFollowupModal()">キャンセル</button>
+      <button id="saveFollowupBtn" class="primary" type="button" onclick="saveFollowupFromModal()">保存</button>
+    </div>
+  </div>
+</div>
+
 <header>
   <div class="head">
-    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V12 CLOUD / Member Intelligence</small></div>
+    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V13 CLOUD / Member Intelligence</small></div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="exportAll()">データ出力</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
 </header>
@@ -166,7 +207,7 @@ window.SUG_CLOUD_CONFIG = {
   <section id="adminBoard" class="panel">
     <div class="card">
       <div class="row" style="align-items:center">
-        <div><h2 style="margin-bottom:3px">管理者ダッシュボード</h2><div class="muted">会員の記録・回復・体重推移を横断チェック</div></div>
+        <div><h2 style="margin-bottom:3px">管理者ダッシュボード</h2><div class="muted">会員の記録・回復・体重推移・フォロー対応を横断管理</div></div>
         <button class="secondary" onclick="refreshAdminBoard()">再集計</button>
       </div>
       <div class="adminBoardGrid" style="margin-top:10px">
@@ -174,6 +215,21 @@ window.SUG_CLOUD_CONFIG = {
         <div class="kpi"><span>要対応</span><b id="admAttention">0</b></div>
         <div class="kpi"><span>回復低下</span><b id="admRecovery">0</b></div>
         <div class="kpi"><span>記録不足</span><b id="admMissing">0</b></div>
+        <div class="kpi"><span>未対応</span><b id="admOpen">0</b></div>
+        <div class="kpi"><span>期限超過</span><b id="admOverdue">0</b></div>
+      </div>
+      <div class="followToolbar">
+        <div>
+          <label>表示する会員</label>
+          <select id="followupFilter" onchange="setFollowupFilter(this.value)">
+            <option value="all">全員</option>
+            <option value="needs">要対応のみ</option>
+            <option value="open">未対応のみ</option>
+            <option value="overdue">フォロー期限超過</option>
+            <option value="done">対応済みのみ</option>
+          </select>
+        </div>
+        <div id="followupSetupStatus" class="muted">フォロー管理を確認中...</div>
       </div>
     </div>
     <div class="card">
@@ -311,6 +367,10 @@ let accessibleProfiles = [];
 let saveTimer = null;
 let cloudReady = false;
 let adminRows = [];
+let followupByMember = new Map();
+let followupFilter = "all";
+let followupEditUserId = null;
+let followupTableReady = true;
 
 const today=()=>new Date().toISOString().slice(0,10);
 const monthNow=()=>today().slice(0,7);
@@ -390,6 +450,22 @@ async function apiUpsert(path, payload){
       "Authorization":"Bearer "+accessToken,
       "Content-Type":"application/json",
       "Prefer":"resolution=merge-duplicates,return=minimal"
+    },
+    body:JSON.stringify(payload)
+  });
+  const text=await res.text();
+  return {ok:res.ok,status:res.status,text};
+}
+
+async function apiPatch(path, payload){
+  const cfg=window.SUG_CLOUD_CONFIG;
+  const res=await fetch(cfg.url+path,{
+    method:"PATCH",
+    headers:{
+      "apikey":cfg.publishableKey,
+      "Authorization":"Bearer "+accessToken,
+      "Content-Type":"application/json",
+      "Prefer":"return=minimal"
     },
     body:JSON.stringify(payload)
   });
@@ -824,12 +900,149 @@ function adminContactText(row){
   if(st.key==="stagnant") action="体重推移が横ばいなので、食事量・活動量・トレーニングの進み具合を一度確認して次の調整を決めましょう。";
   return `${name}さん、お疲れさまです。S.u.Gです。\n\n現在の記録を確認したところ「${st.label}」の判定です。\n確認ポイント：${rs}\n\n${action}`;
 }
-function lineFollowup(userId){
+function followupDefault(memberId){
+  return {member_id:memberId,status:"open",last_contact_at:null,memo:"",next_followup:null,history:[],updated_at:null};
+}
+function followupState(memberId){
+  return followupByMember.get(memberId)||followupDefault(memberId);
+}
+function followupIsOverdue(f){
+  return !!(f?.next_followup && f.status!=="done" && f.next_followup<today());
+}
+function followupDateLabel(v){
+  if(!v)return "--";
+  const d=new Date(v);
+  if(Number.isNaN(d.getTime()))return String(v).slice(0,10);
+  return d.toLocaleString("ja-JP",{month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"});
+}
+function followupPass(row){
+  const f=followupState(row.profile.id);
+  if(followupFilter==="needs")return row.st.key!=="ok";
+  if(followupFilter==="open")return f.status!=="done";
+  if(followupFilter==="overdue")return followupIsOverdue(f);
+  if(followupFilter==="done")return f.status==="done";
+  return true;
+}
+function setFollowupFilter(v){
+  followupFilter=v||"all";
+  renderAdminBoardRows();
+}
+async function loadFollowupStates(){
+  const statusEl=document.getElementById("followupSetupStatus");
+  try{
+    const r=await apiGet("/rest/v1/trainer_followup_state?select=member_id,status,last_contact_at,memo,next_followup,history,updated_at");
+    if(!r.ok){
+      followupTableReady=false;
+      followupByMember=new Map();
+      if(statusEl)statusEl.textContent="フォロー管理：SQL設定が必要";
+      return false;
+    }
+    const rows=Array.isArray(r.body)?r.body:[];
+    followupByMember=new Map(rows.map(x=>[x.member_id,{...followupDefault(x.member_id),...x,history:Array.isArray(x.history)?x.history:[]}]));
+    followupTableReady=true;
+    if(statusEl)statusEl.textContent="フォロー管理：同期済";
+    return true;
+  }catch(e){
+    console.error(e);
+    followupTableReady=false;
+    if(statusEl)statusEl.textContent="フォロー管理：読込失敗";
+    return false;
+  }
+}
+async function upsertFollowupState(memberId, patch={}, historyEvent=null){
+  const current=followupState(memberId);
+  const history=Array.isArray(current.history)?[...current.history]:[];
+  if(historyEvent)history.unshift(historyEvent);
+  const next={
+    ...current,
+    ...patch,
+    member_id:memberId,
+    history:history.slice(0,50),
+    updated_by:sessionUser?.id||null,
+    updated_at:new Date().toISOString()
+  };
+  const r=await apiUpsert("/rest/v1/trainer_followup_state?on_conflict=member_id",next);
+  if(!r.ok)throw new Error("HTTP "+r.status+"｜"+r.text);
+  followupByMember.set(memberId,next);
+  return next;
+}
+async function lineFollowup(userId){
   const row=adminRows.find(x=>x.profile?.id===userId);
   if(!row){alert("会員情報を取得できませんでした。");return;}
   const text=adminContactText(row);
+  const now=new Date().toISOString();
+  try{
+    if(followupTableReady){
+      await upsertFollowupState(userId,{
+        status:"done",
+        last_contact_at:now
+      },{
+        at:now,
+        type:"LINE",
+        note:row.st.reason||"",
+        status:"done"
+      });
+    }
+  }catch(e){
+    console.error(e);
+  }
   const url="https://line.me/R/share?text="+encodeURIComponent(text);
   window.location.href=url;
+}
+function openFollowupModal(userId){
+  if(currentRole!=="trainer")return;
+  const row=adminRows.find(x=>x.profile?.id===userId);
+  if(!row)return;
+  followupEditUserId=userId;
+  const f=followupState(userId);
+  document.getElementById("followupMemberName").textContent=(row.profile.display_name||"会員")+"｜"+row.st.label+"｜"+row.st.reason;
+  document.getElementById("followupStatus").value=f.status||"open";
+  document.getElementById("followupNext").value=f.next_followup||"";
+  document.getElementById("followupMemo").value=f.memo||"";
+  document.getElementById("followupError").textContent=followupTableReady?"":"先にV13用SQLを実行してください。";
+  const hist=Array.isArray(f.history)?f.history:[];
+  document.getElementById("followupHistory").innerHTML=hist.length
+    ? hist.slice(0,8).map(h=>`<div class="item"><b>${esc(h.type||"対応")}｜${esc(followupDateLabel(h.at))}</b><br><span class="muted">${esc(h.note||"")}</span></div>`).join("")
+    : '<span class="muted">対応履歴なし</span>';
+  document.getElementById("followupModal").classList.remove("hidden");
+}
+function closeFollowupModal(){
+  document.getElementById("followupModal").classList.add("hidden");
+  followupEditUserId=null;
+}
+async function saveFollowupFromModal(){
+  const userId=followupEditUserId;
+  if(!userId)return;
+  if(!followupTableReady){
+    document.getElementById("followupError").textContent="V13用SQLが未設定です。";
+    return;
+  }
+  const status=document.getElementById("followupStatus").value;
+  const next_followup=document.getElementById("followupNext").value||null;
+  const memo=document.getElementById("followupMemo").value.trim();
+  const btn=document.getElementById("saveFollowupBtn");
+  btn.disabled=true;btn.textContent="保存中...";
+  try{
+    const now=new Date().toISOString();
+    const old=followupState(userId);
+    const changes=[];
+    if(old.status!==status)changes.push(status==="done"?"対応済みに変更":"未対応に戻す");
+    if((old.next_followup||null)!==next_followup)changes.push(next_followup?`次回 ${next_followup}`:"次回日を解除");
+    if((old.memo||"")!==memo && memo)changes.push(memo);
+    await upsertFollowupState(userId,{status,next_followup,memo},{
+      at:now,
+      type:"対応記録",
+      note:changes.join(" / ")||"更新",
+      status
+    });
+    closeFollowupModal();
+    renderAdminBoardRows();
+  }catch(e){
+    console.error(e);
+    document.getElementById("followupError").textContent="保存失敗："+(e?.message||String(e));
+  }finally{
+    btn.disabled=false;btn.textContent="保存";
+  }
 }
 async function refreshAdminBoard(){
   if(currentRole!=="trainer")return;
@@ -838,6 +1051,7 @@ async function refreshAdminBoard(){
   try{
     const r=await apiGet("/rest/v1/member_data?select=user_id,data,updated_at&order=updated_at.desc");
     if(!r.ok)throw new Error("HTTP "+r.status+"｜"+r.text);
+    await loadFollowupStates();
     const byId=new Map((Array.isArray(r.body)?r.body:[]).map(x=>[x.user_id,x]));
     const members=accessibleProfiles.filter(p=>p.role!=="trainer").map(p=>{
       const row=byId.get(p.id);
@@ -848,26 +1062,40 @@ async function refreshAdminBoard(){
       return {profile:p,mm,row,st,lastDate:latestRecordDate(mm)};
     }).sort((a,b)=>adminPriority(a.st.key)-adminPriority(b.st.key) || (b.lastDate||"").localeCompare(a.lastDate||""));
     adminRows=members;
-    const total=members.length,attention=members.filter(x=>x.st.key==="attention").length,recovery=members.filter(x=>x.st.key==="recovery").length,missing=members.filter(x=>x.st.key==="missing").length;
-    const totalEl=document.getElementById("admTotal"),attentionEl=document.getElementById("admAttention"),recoveryEl=document.getElementById("admRecovery"),missingEl=document.getElementById("admMissing");
-    if(totalEl)totalEl.textContent=total;
-    if(attentionEl)attentionEl.textContent=attention;
-    if(recoveryEl)recoveryEl.textContent=recovery;
-    if(missingEl)missingEl.textContent=missing;
-    if(!list)return;
-    if(!members.length){list.innerHTML='<span class="muted">会員がまだ登録されていません。</span>';return;}
-    list.innerHTML=members.map(x=>{
-      const mm=x.mm,st=x.st;
-      const latestW=(mm.weights||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
-      const latestR=(mm.recovery||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
-      const goal=mm.profile?.goal||"--";
-      const last=x.lastDate?`${x.lastDate}（${st.age===0?"今日":st.age+"日前"}）`:"記録なし";
-      return `<div class="adminMember"><div class="adminMemberTop"><div><div class="adminMemberName">${esc(x.profile.display_name||mm.profile?.name||"会員")}</div><div class="adminMemberMeta">目的 ${esc(goal)}｜最終記録 ${esc(last)}</div></div><span class="badge ${st.cls}">${esc(st.label)}</span></div><div class="adminMemberStats"><div class="adminMini"><span>体重</span><b>${latestW?Number(latestW.weight).toFixed(1)+"kg":"--"}</b></div><div class="adminMini"><span>7日差</span><b>${esc(st.wt.label)}</b></div><div class="adminMini"><span>回復</span><b>${st.score!=null?st.score+"点":"--"}</b></div><div class="adminMini"><span>睡眠</span><b>${latestR?Number(latestR.sleep||0).toFixed(1)+"h":"--"}</b></div><div class="adminMini"><span>トレ記録</span><b>${(mm.training||[]).length}</b></div></div><div class="adminActions"><div class="adminReason"><b>理由：</b>${esc(st.reason)}</div><button class="lineBtn" onclick="lineFollowup('${x.profile.id}')">LINE連絡</button><button class="primary" onclick="openMemberFromAdmin('${x.profile.id}')">開く</button></div></div>`;
-    }).join("");
+    renderAdminBoardRows();
   }catch(e){
     console.error(e);
     if(list)list.innerHTML='<span class="bad">管理一覧を取得できませんでした。</span>';
   }
+}
+function renderAdminBoardRows(){
+  const list=document.getElementById("adminBoardList");
+  const members=adminRows||[];
+  const total=members.length;
+  const attention=members.filter(x=>x.st.key==="attention").length;
+  const recovery=members.filter(x=>x.st.key==="recovery").length;
+  const missing=members.filter(x=>x.st.key==="missing").length;
+  const open=members.filter(x=>followupState(x.profile.id).status!=="done").length;
+  const overdue=members.filter(x=>followupIsOverdue(followupState(x.profile.id))).length;
+  const ids={admTotal:total,admAttention:attention,admRecovery:recovery,admMissing:missing,admOpen:open,admOverdue:overdue};
+  Object.entries(ids).forEach(([id,v])=>{const el=document.getElementById(id);if(el)el.textContent=v});
+  if(!list)return;
+  if(!members.length){list.innerHTML='<span class="muted">会員がまだ登録されていません。</span>';return;}
+  const shown=members.filter(followupPass);
+  if(!shown.length){list.innerHTML='<span class="muted">条件に該当する会員はいません。</span>';return;}
+  list.innerHTML=shown.map(x=>{
+    const mm=x.mm,st=x.st,f=followupState(x.profile.id);
+    const latestW=(mm.weights||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
+    const latestR=(mm.recovery||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
+    const goal=mm.profile?.goal||"--";
+    const last=x.lastDate?`${x.lastDate}（${st.age===0?"今日":st.age+"日前"}）`:"記録なし";
+    const followStatus=f.status==="done"?"対応済":"未対応";
+    const followClass=followupIsOverdue(f)?"followOverdue":(f.status==="done"?"followDone":"followOpen");
+    const next=f.next_followup||"--";
+    const contact=f.last_contact_at?followupDateLabel(f.last_contact_at):"--";
+    const memo=f.memo?`｜メモ ${esc(f.memo)}`:"";
+    return `<div class="adminMember"><div class="adminMemberTop"><div><div class="adminMemberName">${esc(x.profile.display_name||mm.profile?.name||"会員")}</div><div class="adminMemberMeta">目的 ${esc(goal)}｜最終記録 ${esc(last)}</div></div><span class="badge ${st.cls}">${esc(st.label)}</span></div><div class="adminMemberStats"><div class="adminMini"><span>体重</span><b>${latestW?Number(latestW.weight).toFixed(1)+"kg":"--"}</b></div><div class="adminMini"><span>7日差</span><b>${esc(st.wt.label)}</b></div><div class="adminMini"><span>回復</span><b>${st.score!=null?st.score+"点":"--"}</b></div><div class="adminMini"><span>睡眠</span><b>${latestR?Number(latestR.sleep||0).toFixed(1)+"h":"--"}</b></div><div class="adminMini"><span>トレ記録</span><b>${(mm.training||[]).length}</b></div></div><div class="followMeta"><b class="${followClass}">${followStatus}</b>｜最終連絡 ${esc(contact)}｜次回 ${esc(next)}${memo}</div><div class="adminActions"><div class="adminReason"><b>理由：</b>${esc(st.reason)}</div><button class="lineBtn" onclick="lineFollowup('${x.profile.id}')">LINE連絡</button><button class="secondary" onclick="openFollowupModal('${x.profile.id}')">対応記録</button><button class="primary" onclick="openMemberFromAdmin('${x.profile.id}')">開く</button></div></div>`;
+  }).join("");
 }
 async function openMemberFromAdmin(id){
   await switchMember(id);
