@@ -132,15 +132,15 @@ window.SUG_CLOUD_CONFIG = {
 
 <header>
   <div class="head">
-    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V6 CLOUD / Member Intelligence</small></div>
-    <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button class="secondary" onclick="exportAll()">データ出力</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
+    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V7 CLOUD / Member Intelligence</small></div>
+    <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="exportAll()">データ出力</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
 </header>
 
 <div class="wrap">
-  <div class="toolbar">
+  <div id="memberToolbar" class="toolbar">
     <select id="memberSelect" onchange="switchMember(this.value)"></select>
-    <button class="primary" onclick="newMember()">＋会員</button>
+    <button id="addMemberBtn" class="primary" onclick="newMember()">＋会員</button>
   </div>
 
   <div class="tabs">
@@ -242,8 +242,8 @@ window.SUG_CLOUD_CONFIG = {
     </div>
     <div class="card">
       <h2>会員データ管理</h2>
-      <button class="secondary" style="width:100%" onclick="exportMember()">この会員だけ出力</button>
-      <button class="danger" style="width:100%;margin-top:8px" onclick="deleteMember()">この会員を削除</button>
+      <button id="exportMemberBtn" class="secondary" style="width:100%" onclick="exportMember()">この会員だけ出力</button>
+      <button id="deleteMemberBtn" class="danger" style="width:100%;margin-top:8px" onclick="deleteMember()">この会員を削除</button>
     </div>
   </section>
 </div>
@@ -456,6 +456,7 @@ async function onSignedIn(user){
   }
 
   showApp();
+  applyRoleUI();
   await loadMember(accessibleProfiles[0].id);
   cloudReady=true;
   setStatus("同期済");
@@ -633,10 +634,24 @@ async function switchMember(id){
 function deleteMember(){
   alert("クラウド版の会員削除は誤削除防止のため管理者側で行います。");
 }
+function applyRoleUI(){
+  const isTrainer=currentRole==="trainer";
+  const toolbar=document.getElementById("memberToolbar");
+  const addBtn=document.getElementById("addMemberBtn");
+  const exportAllBtn=document.getElementById("exportAllBtn");
+  const exportMemberBtn=document.getElementById("exportMemberBtn");
+  const deleteMemberBtn=document.getElementById("deleteMemberBtn");
+
+  if(toolbar) toolbar.style.display=isTrainer?"grid":"none";
+  if(addBtn) addBtn.style.display=isTrainer?"block":"none";
+  if(exportAllBtn) exportAllBtn.style.display=isTrainer?"inline-block":"none";
+  if(exportMemberBtn) exportMemberBtn.style.display=isTrainer?"block":"none";
+  if(deleteMemberBtn) deleteMemberBtn.style.display=isTrainer?"block":"none";
+}
+
 function renderMemberSelect(){
   memberSelect.innerHTML=accessibleProfiles.map(x=>`<option value="${x.id}" ${x.id===db.current?"selected":""}>${esc(x.display_name||"無名")}${x.role==="trainer"?"（管理者）":""}</option>`).join("");
-  const addBtn=document.querySelector('.toolbar .primary');
-  if(addBtn) addBtn.style.display=currentRole==="trainer"?"block":"none";
+  applyRoleUI();
 }
 
 function addWeight(){if(!n("wWeight"))return alert("体重を入力");m().weights.push({date:wDate.value,weight:n("wWeight"),fat:n("wFat")||null,memo:wMemo.value});m().weights.sort((a,b)=>a.date.localeCompare(b.date));wWeight.value=wFat.value=wMemo.value="";saveRender()}
