@@ -92,7 +92,7 @@ window.SUG_CLOUD_CONFIG = {
 <div id="authGate" class="authGate">
   <div class="authBox">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V7 CLOUD / MEMBERS ONLY</div>
+    <div class="sub">V8 CLOUD / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -132,7 +132,7 @@ window.SUG_CLOUD_CONFIG = {
 
 <header>
   <div class="head">
-    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V7 CLOUD / Member Intelligence</small></div>
+    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V8 CLOUD / Member Intelligence</small></div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="exportAll()">データ出力</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
 </header>
@@ -631,8 +631,55 @@ async function switchMember(id){
   if(saveTimer){clearTimeout(saveTimer);await saveCloud()}
   await loadMember(id);
 }
-function deleteMember(){
-  alert("クラウド版の会員削除は誤削除防止のため管理者側で行います。");
+async function deleteMember(){
+  if(currentRole!=="trainer")return;
+
+  const targetId=db.current;
+  const target=accessibleProfiles.find(x=>x.id===targetId);
+  if(!targetId || !target){
+    alert("削除する会員を確認できません。");
+    return;
+  }
+  if(target.role==="trainer" || targetId===sessionUser?.id){
+    alert("管理者アカウントは削除できません。");
+    return;
+  }
+
+  const name=target.display_name||"この会員";
+  if(!confirm(`${name} を完全に削除します。\n体重・食事・トレーニング・回復・写真・ログインアカウントも削除されます。\n\n本当に削除しますか？`))return;
+
+  const btn=document.getElementById("deleteMemberBtn");
+  if(btn){btn.disabled=true;btn.textContent="削除中...";}
+
+  try{
+    if(saveTimer){clearTimeout(saveTimer);saveTimer=null;}
+    const cfg=window.SUG_CLOUD_CONFIG;
+    const res=await fetch(cfg.url+"/functions/v1/delete-member",{
+      method:"POST",
+      headers:{
+        "apikey":cfg.publishableKey,
+        "Authorization":"Bearer "+accessToken,
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify({userId:targetId})
+    });
+
+    const text=await res.text();
+    let body={};
+    try{body=text?JSON.parse(text):{}}catch(_e){body={message:text}}
+    if(!res.ok)throw new Error(body?.message||body?.error||("HTTP "+res.status));
+
+    delete db.members[targetId];
+    db.current=sessionUser.id;
+    await refreshMemberProfiles(sessionUser.id);
+    alert(`${name} を削除しました。`);
+  }catch(e){
+    console.error(e);
+    alert("会員を削除できませんでした："+(e?.message||String(e)));
+  }finally{
+    if(btn){btn.disabled=false;btn.textContent="この会員を削除";}
+    applyRoleUI();
+  }
 }
 function applyRoleUI(){
   const isTrainer=currentRole==="trainer";
@@ -641,12 +688,14 @@ function applyRoleUI(){
   const exportAllBtn=document.getElementById("exportAllBtn");
   const exportMemberBtn=document.getElementById("exportMemberBtn");
   const deleteMemberBtn=document.getElementById("deleteMemberBtn");
+  const selectedProfile=accessibleProfiles.find(x=>x.id===db.current);
+  const canDelete=isTrainer && selectedProfile && selectedProfile.role!=="trainer" && db.current!==sessionUser?.id;
 
   if(toolbar) toolbar.style.display=isTrainer?"grid":"none";
   if(addBtn) addBtn.style.display=isTrainer?"block":"none";
   if(exportAllBtn) exportAllBtn.style.display=isTrainer?"inline-block":"none";
   if(exportMemberBtn) exportMemberBtn.style.display=isTrainer?"block":"none";
-  if(deleteMemberBtn) deleteMemberBtn.style.display=isTrainer?"block":"none";
+  if(deleteMemberBtn) deleteMemberBtn.style.display=canDelete?"block":"none";
 }
 
 function renderMemberSelect(){
