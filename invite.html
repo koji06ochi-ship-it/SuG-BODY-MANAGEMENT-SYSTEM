@@ -14,7 +14,7 @@
 </head>
 <body>
 <main class="card">
-  <img class="logo" src="./brand-header.png?v=24-6-qr-register" alt="S.u.G OSAKA">
+  <img class="logo" src="./brand-header.png?v=25-smart-core" alt="S.u.G OSAKA">
   <div class="kicker">S.u.G MEMBERS ONLY</div>
   <div class="title">会員登録のご案内</div>
   <p class="desc">管理者に登録されたメールアドレスと<br>「登録コード」を入力してください。<br>確認後、ご自身のパスワード設定へ進みます。</p>
@@ -26,8 +26,8 @@
   </div>
   <button id="startBtn" class="btn" type="button">登録をはじめる</button>
   <div id="msg" class="err"></div>
-  <a class="login" href="./?v=24-6-qr-register">登録済みの方はこちら → ログイン</a>
-  <img class="mascot" src="./mascot-highfive.png?v=24-6-qr-register" alt="">
+  <a class="login" href="./?v=25-smart-core">登録済みの方はこちら → ログイン</a>
+  <img class="mascot" src="./mascot-highfive.png?v=25-smart-core" alt="">
   <p class="note">このQR／ページだけでは登録できません。<br>初回登録には、S.u.G管理者が発行した登録コードが必要です。</p>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -57,7 +57,7 @@ btn.addEventListener('click',async()=>{
     if(!data?.session?.user)throw new Error('会員情報を確認できませんでした。');
     try{sessionStorage.setItem('sug-invite-pending','1')}catch(_e){}
     msg.className='err ok';msg.textContent='確認できました。パスワード設定画面を開きます。';
-    location.href='./?invite=1&v=24-6-qr-register';
+    location.href='./?invite=1&v=25-smart-core';
   }catch(e){
     console.error(e);
     msg.className='err';msg.textContent='メールアドレスまたは登録コードを確認してください。';
