@@ -12,9 +12,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="S.u.G BODY">
-<link rel="manifest" href="./manifest.webmanifest?v=25-joint-by-joint">
-<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png?v=25-joint-by-joint">
-<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=25-joint-by-joint">
+<link rel="manifest" href="./manifest.webmanifest?v=25-shr-auto-tap">
+<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png?v=25-shr-auto-tap">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=25-shr-auto-tap">
 <style>
 :root{
   --bg:#09090a;--card:#141417;--card2:#1a1a1f;--gold:#d8b35b;--gold2:#f3d98b;
@@ -265,6 +265,21 @@ button.primary{box-shadow:0 5px 18px rgba(184,140,50,.10)}
 .jbjEvidence{font-size:9px;color:#aaa;line-height:1.6}
 .jbjPriority{margin-top:9px;padding:10px;border-radius:12px;background:#15120c;border:1px solid #5a4a25;font-size:10px;line-height:1.65}
 .jbjPriority b{color:var(--gold2)}
+.shrPhotoGrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:9px}
+.shrPhotoBox{background:#0c0c0f;border:1px solid #303038;border-radius:13px;padding:9px}
+.shrPhotoBox h3{font-size:11px;margin:0 0 6px;color:#f2f2f4}
+.shrCanvasWrap{position:relative;border-radius:11px;overflow:hidden;background:#050506;border:1px solid #29292f;margin-top:7px}
+.shrCanvas{display:block;width:100%;height:auto;touch-action:manipulation}
+.shrReadout{font-size:9px;line-height:1.6;color:#aaa;margin-top:6px}
+.shrReadout b{color:#f2d77e}
+.shrTapStep{margin-top:8px;padding:9px;border-radius:11px;border:1px solid #5a4a25;background:#15120c;font-size:10px;line-height:1.65}
+.shrTapStep b{color:#f1d77c}
+.shrAutoValues{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:9px}
+.shrAutoValue{background:#0c0c0f;border:1px solid #303038;border-radius:11px;padding:9px;text-align:center}
+.shrAutoValue span{display:block;font-size:8px;color:#8d8d93}
+.shrAutoValue b{display:block;margin-top:3px;font-size:14px}
+@media(max-width:620px){.shrPhotoGrid{grid-template-columns:1fr}.shrAutoValues{grid-template-columns:1fr 1fr}}
+
 @media(max-width:520px){.jbjGrid{grid-template-columns:1fr}}
 @media(max-width:620px){.romMetrics{grid-template-columns:1fr 1fr}}@media(max-width:620px){.smartGrid{grid-template-columns:1fr}.selfCareChoice{grid-template-columns:1fr}.tabs{grid-template-columns:repeat(4,1fr)}}
 @media(min-width:720px){.tabs{grid-template-columns:repeat(8,1fr)}}
@@ -282,7 +297,7 @@ window.SUG_CLOUD_CONFIG = {
 
 <div id="authGate" class="authGate">
   <div class="authBox">
-    <img class="authBrandLogo" src="./brand-header.png?v=25-joint-by-joint" alt="S.u.G OSAKA">
+    <img class="authBrandLogo" src="./brand-header.png?v=25-shr-auto-tap" alt="S.u.G OSAKA">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
     <div class="sub">V25 SMART CORE / MEMBERS ONLY</div>
     <label>メールアドレス</label>
@@ -293,7 +308,7 @@ window.SUG_CLOUD_CONFIG = {
     <div class="authLinks"><button class="linkBtn" type="button" onclick="requestPasswordReset()">パスワードを忘れた方</button></div>
     <div id="authError" class="authError"></div>
     <div class="setupNote">S.u.G会員限定。管理者から届いた招待リンクで初回登録してください。</div>
-    <img class="authMascot" src="./mascot-highfive.png?v=25-joint-by-joint" alt="">
+    <img class="authMascot" src="./mascot-highfive.png?v=25-shr-auto-tap" alt="">
     <div id="pwaGuide" class="pwaGuide hidden"><b>iPhoneホーム画面対応</b><br>Safariの共有ボタン →「ホーム画面に追加」で、アプリのように起動できます。</div>
   </div>
 </div>
@@ -398,7 +413,7 @@ window.SUG_CLOUD_CONFIG = {
 <header>
   <div class="head">
     <div class="brandIdentity">
-      <img class="brandHeaderLogo" src="./brand-header.png?v=25-joint-by-joint" alt="S.u.G OSAKA">
+      <img class="brandHeaderLogo" src="./brand-header.png?v=25-shr-auto-tap" alt="S.u.G OSAKA">
       <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V25.1 SMART CORE / MANAGEMENT 1.1</small></div>
     </div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
@@ -431,7 +446,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="adminBoard" class="panel">
     <div id="adminBrandHero" class="card adminBrandHero">
-      <img class="adminOfficialLogo" src="./brand-official.jpg?v=25-joint-by-joint" alt="S.u.G OSAKA official brand">
+      <img class="adminOfficialLogo" src="./brand-official.jpg?v=25-shr-auto-tap" alt="S.u.G OSAKA official brand">
       <div class="adminBrandText"><h2>S.u.G OSAKA</h2><p>PERSONAL TRAINING × PERSONAL STRETCH × CONDITIONING<br>会員管理・予約・フォロー・コンディションを一つの運営画面へ。</p></div>
     </div>
     <div class="card dailyOpsCard">
@@ -556,11 +571,11 @@ window.SUG_CLOUD_CONFIG = {
   <section id="dash" class="panel active">
     <div class="card sugHero">
       <div>
-        <img class="sugHeroLogo" src="./brand-header.png?v=25-joint-by-joint" alt="S.u.G OSAKA">
+        <img class="sugHeroLogo" src="./brand-header.png?v=25-shr-auto-tap" alt="S.u.G OSAKA">
         <div class="sugHeroTitle">鍛える。整える。魅せる。</div>
         <div class="sugHeroSub">TRAINING / CONDITIONING / STYLE UPDATE<br>記録して、管理して、次の身体へ。</div>
       </div>
-      <img class="sugHeroMascot" src="./mascot-highfive.png?v=25-joint-by-joint" alt="">
+      <img class="sugHeroMascot" src="./mascot-highfive.png?v=25-shr-auto-tap" alt="">
     </div>
     <div class="card">
       <h2>現在の状態</h2>
@@ -612,7 +627,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="smart" class="panel">
     <div class="card smartHero">
-      <div class="sectionLead"><div><div class="smartHeroTitle">S.u.G SMART PLAN</div><div class="smartHeroSub">外部AI・APIなし。会員データとS.u.Gルールから「今日の優先順位」を自動計算します。</div></div><img class="sectionMascot" src="./mascot-highfive.png?v=25-joint-by-joint" alt=""></div>
+      <div class="sectionLead"><div><div class="smartHeroTitle">S.u.G SMART PLAN</div><div class="smartHeroSub">外部AI・APIなし。会員データとS.u.Gルールから「今日の優先順位」を自動計算します。</div></div><img class="sectionMascot" src="./mascot-highfive.png?v=25-shr-auto-tap" alt=""></div>
       <div id="smartTargetNotice" class="notice" style="margin-top:9px">分析対象を確認中...</div>
       <div class="grid2" style="margin-top:10px">
         <div><label>今日の食欲</label><select id="smartAppetite" onchange="saveSmartContext()"><option value="normal">普通</option><option value="low">低い</option><option value="high">強い</option></select></div>
@@ -654,7 +669,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="activity" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>歩数・活動</h2><div class="muted">現行V25は手入力。Apple Health / HealthKit自動連携は次段階で接続。</div></div><img class="sectionMascot" src="./mascot-jumprope.png?v=25-joint-by-joint" alt=""></div>
+      <div class="sectionLead"><div><h2>歩数・活動</h2><div class="muted">現行V25は手入力。Apple Health / HealthKit自動連携は次段階で接続。</div></div><img class="sectionMascot" src="./mascot-jumprope.png?v=25-shr-auto-tap" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="aDate" type="date"></div><div><label>歩数</label><input id="aSteps" type="number" min="0" step="100"></div></div>
       <div style="margin-top:8px"><label>メモ</label><input id="aMemo" placeholder="例：通勤＋散歩、脚トレ日、外出少なめ"></div>
       <button class="primary" style="width:100%;margin-top:9px" onclick="addActivity()">歩数を記録</button>
@@ -665,7 +680,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="care" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>症状別セルフケア</h2><div class="muted">腰・首・肩・膝・足首・手首・肘。診断ではなく、痛む場所と動作 → 危険サイン確認 → 軽いセルフケア → 前後評価。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-joint-by-joint" alt=""></div>
+      <div class="sectionLead"><div><h2>症状別セルフケア</h2><div class="muted">腰・首・肩・膝・足首・手首・肘。診断ではなく、痛む場所と動作 → 危険サイン確認 → 軽いセルフケア → 前後評価。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-shr-auto-tap" alt=""></div>
       <div class="notice">強い症状・外傷・神経症状などがある場合はセルフケアより医療評価を優先します。痛みやしびれが増える動きは中止してください。</div>
       <div class="selfCareChoice" style="margin-top:9px"><div><label>部位</label><select id="careArea" onchange="renderCareQuestions()"><option value="lowback">腰</option><option value="neck">首</option><option value="shoulder">肩</option><option value="knee">膝</option><option value="ankle">足首</option><option value="wrist">手首</option><option value="elbow">肘</option></select></div><div><label>痛み BEFORE 0-10</label><input id="carePainBefore" type="number" min="0" max="10" value="3"></div></div>
       <div class="selfCareChoice" style="margin-top:8px"><div><label>痛む場所</label><select id="careLocation"></select></div><div><label>痛む動作</label><select id="careMovement"></select></div></div>
@@ -681,7 +696,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="weight" class="panel">
     <div class="card">
-      <img class="mascotMini" src="./mascot-jumprope.png?v=25-joint-by-joint" alt="">
+      <img class="mascotMini" src="./mascot-jumprope.png?v=25-shr-auto-tap" alt="">
       <h2>体重記録</h2>
       <div class="grid2"><div><label>日付</label><input id="wDate" type="date"></div><div><label>体重 kg</label><input id="wWeight" type="number" step="0.1"></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>体脂肪率 %</label><input id="wFat" type="number" step="0.1"></div><div><label>メモ</label><input id="wMemo"></div></div>
@@ -703,7 +718,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="training" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>トレーニング記録</h2><div class="muted">重量・REP・SET・RIR・総重量・推定1RMを記録し、前回からの進歩を確認。</div></div><img class="sectionMascot" src="./mascot-basketball.png?v=25-joint-by-joint" alt=""></div>
+      <div class="sectionLead"><div><h2>トレーニング記録</h2><div class="muted">重量・REP・SET・RIR・総重量・推定1RMを記録し、前回からの進歩を確認。</div></div><img class="sectionMascot" src="./mascot-basketball.png?v=25-shr-auto-tap" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="tDate" type="date"></div><div><label>種目</label><input id="tExercise" placeholder="スミススクワット"></div></div>
       <div class="grid4" style="margin-top:8px"><div><label>重量</label><input id="tWeight" type="number" step="0.5" oninput="renderTrainingPreview()"></div><div><label>REP</label><input id="tReps" type="number" oninput="renderTrainingPreview()"></div><div><label>SET</label><input id="tSets" type="number" oninput="renderTrainingPreview()"></div><div><label>RIR</label><input id="tRir" type="number" step="0.5"></div></div>
       <div class="kpis" style="margin-top:8px"><div class="kpi"><span>総重量</span><b id="tVolumePreview">0kg</b></div><div class="kpi"><span>推定1RM</span><b id="tE1rmPreview">0kg</b></div></div>
@@ -717,7 +732,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="rom" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>ROMスクリーニング</h2><div class="muted">V25初期版：スクワットの側面画像から、2DランドマークでボトムROMを数値化。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-joint-by-joint" alt=""></div>
+      <div class="sectionLead"><div><h2>ROMスクリーニング</h2><div class="muted">V25初期版：スクワットの側面画像から、2DランドマークでボトムROMを数値化。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-shr-auto-tap" alt=""></div>
       <div class="notice">撮影：真横から全身を入れ、スクワット最下点で撮影。カメラは傾けず、肩・股関節・膝・足首・つま先が見える状態を推奨。</div>
       <div class="grid2" style="margin-top:9px">
         <div><label>日付</label><input id="romDate" type="date"></div>
@@ -734,7 +749,7 @@ window.SUG_CLOUD_CONFIG = {
       <div id="romResult"><span class="muted">画像を解析すると結果が表示されます。</span></div>
     </div>
     <div class="card">
-      <div class="sectionLead"><div><h2>関節 AROM / PROM</h2><div class="muted">ストレッチ・コンディショニング側の関節可動域評価。AROM＝自力、PROM＝外力補助で確認。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-joint-by-joint" alt=""></div>
+      <div class="sectionLead"><div><h2>関節 AROM / PROM</h2><div class="muted">ストレッチ・コンディショニング側の関節可動域評価。AROM＝自力、PROM＝外力補助で確認。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-shr-auto-tap" alt=""></div>
       <div class="notice">PROMは痛みを押して無理に測らないでください。AROMだけでも判定可能。伸展は0°を基準とし、伸展不足はマイナス入力（例：膝伸展10°不足＝-10°）。</div>
       <div class="grid2" style="margin-top:9px">
         <div><label>日付</label><input id="aromDate" type="date"></div>
@@ -793,56 +808,74 @@ window.SUG_CLOUD_CONFIG = {
       <div id="aromResult"><span class="muted">数値を入力すると、参考帯・AROM/PROM差・機能への影響候補を表示します。</span></div>
     </div>
     <div class="card">
-      <div class="sectionLead"><div><h2>肩甲上腕リズム（SHR）</h2><div class="muted">「腕が何度上がったか」と「その間に肩甲骨が何度上方回旋したか」を分けて記録。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-joint-by-joint" alt=""></div>
+      <div class="sectionLead"><div><h2>肩甲上腕リズム（SHR）</h2><div class="muted">写真で腕の挙上角を自動検出＋肩甲骨だけ2点タップ。数字を自分で測らなくてOK。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-shr-auto-tap" alt=""></div>
 
-      <div class="aromPattern" style="margin-top:8px">
-        <strong>測り方ガイド</strong><br>
-        ① 腕を体側に下ろした姿勢を <b>腕 0°</b> とする。<br>
-        ② 体幹線と上腕骨の角度を測る。<b>肩の高さ＝90°／そこから30°上＝120°／真上＝180°</b>。<br>
-        ③ 肩甲骨は開始時と挙上時を別々に測る。<b>上方回旋量＝挙上時角度 − 開始時角度</b>。<br>
-        ④ V25が <b>GH推定寄与＝腕挙上角 − 肩甲骨上方回旋量</b>、SHR＝GH/ST を自動計算。
-      </div>
-
-      <div class="notice" style="margin-top:8px">
-        肩甲骨角度は、後方から肩甲棘の根部〜肩峰後外側を目安に同じ測定法で追跡。MediaPipeだけでは肩甲骨の骨指標を直接取れないため、現段階は手動測定値を入力。
+      <div class="notice">
+        <b>撮影：</b>後ろから、全身または腰〜頭まで入るように撮影。①腕を体側に下ろした写真 ②同じ位置から腕を上げた写真。肩甲面挙上か外転が一番測りやすい。
       </div>
 
       <div class="grid2" style="margin-top:9px">
         <div><label>日付</label><input id="shrDate" type="date"></div>
-        <div><label>左右</label><select id="shrSide"><option value="right">右</option><option value="left">左</option></select></div>
+        <div><label>測る側</label><select id="shrSide" onchange="window.resetShrAutoTap?.()"><option value="right">右</option><option value="left">左</option></select></div>
       </div>
 
       <div class="grid2" style="margin-top:8px">
-        <div><label>挙上面</label><select id="shrPlane"><option value="scaption">肩甲面挙上</option><option value="abduction">外転</option><option value="flexion">屈曲</option></select></div>
+        <div><label>挙上面</label><select id="shrPlane"><option value="scaption">肩甲面挙上</option><option value="abduction">外転</option><option value="flexion">屈曲（後面写真では参考）</option></select></div>
         <div><label>局面</label><select id="shrPhase"><option value="raising">挙上</option><option value="lowering">下降</option></select></div>
       </div>
 
-      <div style="margin-top:8px">
-        <label>腕の挙上角 °（体側＝0°）</label>
-        <div class="row" style="gap:6px;flex-wrap:wrap;margin:5px 0">
-          <button type="button" class="secondary" style="padding:7px 10px" onclick="setShrArm(60)">60°</button>
-          <button type="button" class="secondary" style="padding:7px 10px" onclick="setShrArm(90)">90°</button>
-          <button type="button" class="secondary" style="padding:7px 10px" onclick="setShrArm(120)">120°</button>
-          <button type="button" class="secondary" style="padding:7px 10px" onclick="setShrArm(150)">150°</button>
-          <button type="button" class="secondary" style="padding:7px 10px" onclick="setShrArm(180)">180°</button>
+      <div id="shrModelStatus" class="romStatus" style="margin-top:8px">Poseモデル：未読込</div>
+
+      <div class="shrPhotoGrid">
+        <div class="shrPhotoBox">
+          <h3>① START｜腕を下ろす</h3>
+          <input type="file" accept="image/*" onchange="window.loadShrPhoto?.('start',this)">
+          <div class="shrCanvasWrap"><canvas id="shrCanvasStart" class="shrCanvas" width="720" height="960"></canvas></div>
+          <div id="shrStartReadout" class="shrReadout">写真を選択してください。</div>
         </div>
-        <input id="shrArm" type="number" min="0" max="180" step="1" placeholder="例：肩の高さなら90">
-        <small class="muted">0°＝腕を下ろす｜90°＝肩の高さ｜120°＝水平より30°上｜180°＝真上</small>
+        <div class="shrPhotoBox">
+          <h3>② UP｜腕を上げる</h3>
+          <input type="file" accept="image/*" onchange="window.loadShrPhoto?.('end',this)">
+          <div class="shrCanvasWrap"><canvas id="shrCanvasEnd" class="shrCanvas" width="720" height="960"></canvas></div>
+          <div id="shrEndReadout" class="shrReadout">写真を選択してください。</div>
+        </div>
       </div>
 
-      <div class="grid3" style="margin-top:8px">
-        <div><label>肩甲骨角度｜開始時 °</label><input id="shrScapStart" type="number" min="-30" max="90" step="1" placeholder="例 5"></div>
-        <div><label>肩甲骨角度｜挙上時 °</label><input id="shrScapEnd" type="number" min="-30" max="120" step="1" placeholder="例 40"></div>
+      <button id="shrAutoBtn" class="primary" style="width:100%;margin-top:9px" onclick="window.analyzeShrPhotos?.()">写真から腕角度を自動検出</button>
+
+      <div id="shrTapGuide" class="shrTapStep">
+        <b>次：</b> 自動検出後、START写真で「肩甲棘の根元 → 肩峰の後外側」の順に2点タップ。次にUP写真も同じ順で2点タップ。
+      </div>
+
+      <div class="shrAutoValues">
+        <div class="shrAutoValue"><span>腕の挙上角｜自動</span><b id="shrArmAuto">--</b></div>
+        <div class="shrAutoValue"><span>肩甲骨 START｜タップ</span><b id="shrScapStartAuto">--</b></div>
+        <div class="shrAutoValue"><span>肩甲骨 UP｜タップ</span><b id="shrScapEndAuto">--</b></div>
+      </div>
+
+      <input id="shrArm" type="hidden">
+      <input id="shrScapStart" type="hidden">
+      <input id="shrScapEnd" type="hidden">
+
+      <div class="row" style="gap:7px;margin-top:9px">
+        <button type="button" class="secondary" style="flex:1" onclick="window.resetShrTaps?.()">タップだけリセット</button>
+        <button type="button" class="secondary" style="flex:1" onclick="window.resetShrAutoTap?.()">写真評価をリセット</button>
+      </div>
+
+      <div class="grid2" style="margin-top:8px">
         <div><label>痛み 0-10</label><input id="shrPain" type="number" min="0" max="10" value="0"></div>
+        <div><label>メモ</label><input id="shrMemo" placeholder="例：90°から肩すくみ"></div>
       </div>
-      <div class="notice" style="margin-top:7px">例：開始 5° → 120°挙上時 40°なら、肩甲骨上方回旋量は <b>35°</b>。入力は開始5／挙上40。</div>
 
-      <div style="margin-top:8px"><label>メモ</label><input id="shrMemo" placeholder="例：90°付近から肩すくみ、右だけ引っかかり"></div>
       <button class="primary" style="width:100%;margin-top:9px" onclick="analyzeShr()">肩甲上腕リズムを判定</button>
+
+      <div class="romLegend">
+        ※ 腕角度はPose推定。肩甲骨は骨指標が通常のPoseモデルでは直接取れないため2点タップで補正します。写真角度・衣服・触診位置で誤差が出るため、診断ではなく同条件での左右/前回比較に使用。
+      </div>
     </div>
     <div class="card">
       <h2>SHR判定</h2>
-      <div id="shrResult"><span class="muted">腕の挙上角と肩甲骨の開始/挙上時角度を入力すると、上方回旋量・GH推定寄与・SHR比を表示します。</span></div>
+      <div id="shrResult"><span class="muted">写真の自動検出＋4点タップが完了したら、上方回旋量・GH推定寄与・SHR比を表示します。</span></div>
     </div>
     <div class="card">
       <h2>SHR履歴</h2>
@@ -856,7 +889,7 @@ window.SUG_CLOUD_CONFIG = {
       <div class="muted">同日・同動作で左右を保存すると、自動で差が大きい順に表示。</div>
       <div id="aromAsymmetry" style="margin-top:8px"><span class="muted">左右データなし</span></div>
     </div>    <div class="card">
-      <div class="sectionLead"><div><h2>Joint by Joint MAP</h2><div class="muted">関節可動域・左右差・CARE・SHRを統合して、次に見る場所を自動整理。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-joint-by-joint" alt=""></div>
+      <div class="sectionLead"><div><h2>Joint by Joint MAP</h2><div class="muted">関節可動域・左右差・CARE・SHRを統合して、次に見る場所を自動整理。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-shr-auto-tap" alt=""></div>
       <div class="notice">S.u.Gの運動スクリーニング用フレーム。ROMだけで「安定性不足」や原因筋を断定しません。膝・腰などの安定性は次の動作スクリーンと合わせて評価します。</div>
       <button class="secondary" style="width:100%;margin-top:9px" onclick="renderJointByJoint()">最新データで更新</button>
       <div id="jbjPriority" class="jbjPriority"><b>優先候補</b><br>評価データを入力すると表示します。</div>
@@ -871,7 +904,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="recovery" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>回復・コンディション</h2><div class="muted">睡眠・疲労・ストレス・痛みから、その日の負荷を調整。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-joint-by-joint" alt=""></div>
+      <div class="sectionLead"><div><h2>回復・コンディション</h2><div class="muted">睡眠・疲労・ストレス・痛みから、その日の負荷を調整。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-shr-auto-tap" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="rDate" type="date"></div><div><label>睡眠時間</label><input id="rSleep" type="number" step="0.1"></div></div>
       <div class="grid3" style="margin-top:8px"><div><label>疲労 1-10</label><input id="rFatigue" type="number" min="1" max="10"></div><div><label>ストレス 1-10</label><input id="rStress" type="number" min="1" max="10"></div><div><label>痛み 0-10</label><input id="rPain" type="number" min="0" max="10"></div></div>
       <div style="margin-top:8px"><label>メモ</label><textarea id="rMemo"></textarea></div>
@@ -883,7 +916,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="checkin" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>週間チェックイン</h2><div class="muted">今週の身体と生活を短時間で共有。コーチングの調整材料にします。</div></div><img class="sectionMascot" src="./mascot-running.png?v=25-joint-by-joint" alt=""></div>
+      <div class="sectionLead"><div><h2>週間チェックイン</h2><div class="muted">今週の身体と生活を短時間で共有。コーチングの調整材料にします。</div></div><img class="sectionMascot" src="./mascot-running.png?v=25-shr-auto-tap" alt=""></div>
       <div class="notice">週1回の自己申告です。数値は管理の目安として使い、体調の診断には使用しません。</div>
       <div class="grid2" style="margin-top:9px"><div><label>日付</label><input id="ciDate" type="date"></div><div><label>体調 1-5</label><input id="ciCondition" type="number" min="1" max="5" value="3"></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>睡眠満足度 1-5</label><input id="ciSleep" type="number" min="1" max="5" value="3"></div><div><label>痛み 0-10</label><input id="ciPain" type="number" min="0" max="10" value="0"></div></div>
@@ -937,7 +970,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="profile" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>会員情報</h2><div class="muted">目標・栄養・注意事項をS.u.Gの管理基準として保存。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-joint-by-joint" alt=""></div>
+      <div class="sectionLead"><div><h2>会員情報</h2><div class="muted">目標・栄養・注意事項をS.u.Gの管理基準として保存。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-shr-auto-tap" alt=""></div>
       <div class="grid2"><div><label>氏名</label><input id="pfName"></div><div><label>目的</label><select id="pfGoal"><option>筋肥大</option><option>減量</option><option>増量</option><option>健康維持</option><option>姿勢改善</option></select></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>目標体重</label><input id="pfTargetWeight" type="number" step="0.1"></div><div><label>目標kcal</label><input id="pfTargetKcal" type="number"></div></div>
       <div class="grid3" style="margin-top:8px"><div><label>目標P</label><input id="pfP" type="number"></div><div><label>目標F</label><input id="pfF" type="number"></div><div><label>目標C</label><input id="pfC" type="number"></div></div>
@@ -1609,7 +1642,7 @@ async function refreshMemberProfiles(selectId=null){
 }
 
 function inviteRedirectUrl(){
-  return location.origin+location.pathname+"?invite=1&v=25-joint-by-joint";
+  return location.origin+location.pathname+"?invite=1&v=25-shr-auto-tap";
 }
 
 async function createMemberInvite(){
@@ -2851,13 +2884,13 @@ const CARE_ROUTINE={
   ]
 };
 const CARE_IMAGES={
-  lowback:"./care-lowback-hyottoko.png?v=25-joint-by-joint",
-  neck:"./care-neck-hyottoko.png?v=25-joint-by-joint",
-  shoulder:"./care-shoulder-hyottoko.png?v=25-joint-by-joint",
-  knee:"./care-knee-hyottoko.png?v=25-joint-by-joint",
-  ankle:"./care-ankle-hyottoko.png?v=25-joint-by-joint",
-  wrist:"./care-wrist-hyottoko.png?v=25-joint-by-joint",
-  elbow:"./care-elbow-hyottoko.png?v=25-joint-by-joint"
+  lowback:"./care-lowback-hyottoko.png?v=25-shr-auto-tap",
+  neck:"./care-neck-hyottoko.png?v=25-shr-auto-tap",
+  shoulder:"./care-shoulder-hyottoko.png?v=25-shr-auto-tap",
+  knee:"./care-knee-hyottoko.png?v=25-shr-auto-tap",
+  ankle:"./care-ankle-hyottoko.png?v=25-shr-auto-tap",
+  wrist:"./care-wrist-hyottoko.png?v=25-shr-auto-tap",
+  elbow:"./care-elbow-hyottoko.png?v=25-shr-auto-tap"
 };
 function carePosterHTML(area){
   const label=CARE_AREA_LABELS[area]||'セルフケア';
@@ -3989,7 +4022,7 @@ function setShrArm(v){
 function analyzeShr(){
   if(!m())return;
   const armEl=document.getElementById("shrArm"),startEl=document.getElementById("shrScapStart"),endEl=document.getElementById("shrScapEnd");
-  if(!armEl || armEl.value==="" || !startEl || startEl.value==="" || !endEl || endEl.value==="") return alert("腕の挙上角・肩甲骨の開始時角度・挙上時角度を入力してください");
+  if(!armEl || armEl.value==="" || !startEl || startEl.value==="" || !endEl || endEl.value==="") return alert("先に写真を自動解析して、STARTとUPそれぞれ肩甲骨を2点タップしてください");
   const arm=Number(armEl.value),scapStart=Number(startEl.value),scapEnd=Number(endEl.value);
   const scap=scapEnd-scapStart;
   if(arm<=0 || arm>180) return alert("腕の挙上角は1〜180°で入力してください");
@@ -4496,7 +4529,7 @@ renderCareQuestions();
 // V25 SMART CORE PWA: network-only service worker to avoid stale app versions.
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=25-joint-by-joint").catch(err => console.warn("SW register failed", err));
+    navigator.serviceWorker.register("./sw.js?v=25-shr-auto-tap").catch(err => console.warn("SW register failed", err));
   });
 }
 (function(){
@@ -4516,8 +4549,10 @@ let poseLandmarker=null;
 let poseInitPromise=null;
 
 function status(text, cls=""){
-  const el=document.getElementById("romModelStatus");
-  if(el){el.textContent=text;el.className="romStatus "+cls;}
+  ["romModelStatus","shrModelStatus"].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el){el.textContent=text;el.className="romStatus "+cls;}
+  });
 }
 async function ensurePose(){
   if(poseLandmarker)return poseLandmarker;
@@ -4587,6 +4622,227 @@ function drawLabel(ctx,text,x,y){
   ctx.fillStyle="rgba(0,0,0,.78)";ctx.fillRect(x-4,y-25,w,31);
   ctx.fillStyle="#f1d77c";ctx.fillText(text,x+pad-4,y-2);
 }
+
+
+const SHR_IDX={
+  left:{shoulder:11,elbow:13,wrist:15,hip:23},
+  right:{shoulder:12,elbow:14,wrist:16,hip:24}
+};
+const shrAutoState={
+  start:{img:null,url:null,lm:null,taps:[],arm:null,scapAngle:null,confidence:null},
+  end:{img:null,url:null,lm:null,taps:[],arm:null,scapAngle:null,confidence:null}
+};
+
+function shrCanvas(which){return document.getElementById(which==="start"?"shrCanvasStart":"shrCanvasEnd")}
+function shrReadout(which){return document.getElementById(which==="start"?"shrStartReadout":"shrEndReadout")}
+function shrSideKey(){return document.getElementById("shrSide")?.value==="left"?"left":"right"}
+
+function fitCanvasToImage(canvas,img){
+  const maxW=900,maxH=1100;
+  let w=img.naturalWidth,h=img.naturalHeight;
+  const s=Math.min(1,maxW/w,maxH/h);
+  canvas.width=Math.max(1,Math.round(w*s));
+  canvas.height=Math.max(1,Math.round(h*s));
+}
+
+function shrMid(a,b){return{x:(a.x+b.x)/2,y:(a.y+b.y)/2}}
+function shrNorm(v){
+  const m=Math.hypot(v.x,v.y)||1;
+  return{x:v.x/m,y:v.y/m}
+}
+function shrDot(a,b){return a.x*b.x+a.y*b.y}
+function shrAngleBetween(a,b){
+  const na=shrNorm(a),nb=shrNorm(b);
+  return Math.acos(Math.max(-1,Math.min(1,shrDot(na,nb))))*180/Math.PI;
+}
+function shrPointFromLm(lm,idx,canvas){
+  return{x:lm[idx].x*canvas.width,y:lm[idx].y*canvas.height,v:Number(lm[idx]?.visibility??1)}
+}
+function shrBodyBasis(lm,canvas){
+  const ls=shrPointFromLm(lm,11,canvas),rs=shrPointFromLm(lm,12,canvas),
+        lh=shrPointFromLm(lm,23,canvas),rh=shrPointFromLm(lm,24,canvas);
+  const sh=shrMid(ls,rs),hip=shrMid(lh,rh);
+  const down=shrNorm({x:hip.x-sh.x,y:hip.y-sh.y});
+  const right=shrNorm({x:down.y,y:-down.x});
+  const up={x:-down.x,y:-down.y};
+  return{sh,hip,down,right,up};
+}
+function shrArmElevation(lm,canvas,side){
+  const s=SHR_IDX[side];
+  const shoulder=shrPointFromLm(lm,s.shoulder,canvas),
+        elbow=shrPointFromLm(lm,s.elbow,canvas),
+        hip=shrPointFromLm(lm,s.hip,canvas);
+  const arm={x:elbow.x-shoulder.x,y:elbow.y-shoulder.y};
+  const trunk={x:hip.x-shoulder.x,y:hip.y-shoulder.y};
+  const angle=shrAngleBetween(arm,trunk);
+  const confidence=Math.min(shoulder.v,elbow.v,hip.v);
+  return{angle,confidence,shoulder,elbow,hip};
+}
+function shrScapAngle(which){
+  const st=shrAutoState[which],canvas=shrCanvas(which);
+  if(!st.lm||st.taps.length<2)return null;
+  const side=shrSideKey(),basis=shrBodyBasis(st.lm,canvas);
+  const outward=side==="right"?basis.right:{x:-basis.right.x,y:-basis.right.y};
+  const up=basis.up;
+  const a=st.taps[0],b=st.taps[1]; // root -> acromion
+  const line=shrNorm({x:b.x-a.x,y:b.y-a.y});
+  const x=shrDot(line,outward),y=shrDot(line,up);
+  return Math.atan2(y,x)*180/Math.PI;
+}
+function shrDraw(which){
+  const st=shrAutoState[which],canvas=shrCanvas(which);
+  if(!canvas)return;
+  const ctx=canvas.getContext("2d");
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  if(st.img)ctx.drawImage(st.img,0,0,canvas.width,canvas.height);
+
+  if(st.lm){
+    const side=shrSideKey(),s=SHR_IDX[side];
+    const shoulder=shrPointFromLm(st.lm,s.shoulder,canvas),
+          elbow=shrPointFromLm(st.lm,s.elbow,canvas),
+          wrist=shrPointFromLm(st.lm,s.wrist,canvas),
+          hip=shrPointFromLm(st.lm,s.hip,canvas);
+    drawLine(ctx,shoulder,elbow,"#d6b75a",5);
+    drawLine(ctx,elbow,wrist,"#d6b75a",4);
+    drawLine(ctx,shoulder,hip,"#8f8f98",3);
+    [shoulder,elbow,wrist,hip].forEach(q=>drawDot(ctx,q,"#fff"));
+    if(st.arm!=null)drawLabel(ctx,`腕 ${Math.round(st.arm)}°`,shoulder.x+12,shoulder.y-10);
+  }
+
+  if(st.taps.length){
+    st.taps.forEach((q,i)=>{
+      ctx.fillStyle=i===0?"#ffd86b":"#79d6ff";
+      ctx.beginPath();ctx.arc(q.x,q.y,9,0,Math.PI*2);ctx.fill();
+      ctx.strokeStyle="#111";ctx.lineWidth=2;ctx.stroke();
+      drawLabel(ctx,i===0?"①根元":"②肩峰",q.x+10,q.y-8);
+    });
+    if(st.taps.length===2){
+      drawLine(ctx,st.taps[0],st.taps[1],"#ffcf55",5);
+      const a=shrScapAngle(which);
+      if(a!=null)drawLabel(ctx,`肩甲骨 ${a.toFixed(1)}°`,st.taps[1].x+10,st.taps[1].y+22);
+    }
+  }
+}
+function shrUpdateUI(){
+  const start=shrAutoState.start,end=shrAutoState.end;
+  const aStart=shrScapAngle("start"),aEnd=shrScapAngle("end");
+
+  const armEl=document.getElementById("shrArm");
+  const ssEl=document.getElementById("shrScapStart");
+  const seEl=document.getElementById("shrScapEnd");
+  if(armEl)armEl.value=end.arm==null?"":end.arm.toFixed(2);
+  if(ssEl)ssEl.value=aStart==null?"":aStart.toFixed(2);
+  if(seEl)seEl.value=aEnd==null?"":aEnd.toFixed(2);
+
+  const armOut=document.getElementById("shrArmAuto"),
+        ssOut=document.getElementById("shrScapStartAuto"),
+        seOut=document.getElementById("shrScapEndAuto");
+  if(armOut)armOut.textContent=end.arm==null?"--":`${end.arm.toFixed(1)}°`;
+  if(ssOut)ssOut.textContent=aStart==null?"--":`${aStart.toFixed(1)}°`;
+  if(seOut)seOut.textContent=aEnd==null?"--":`${aEnd.toFixed(1)}°`;
+
+  const sr=shrReadout("start"),er=shrReadout("end");
+  if(sr){
+    if(!start.img)sr.textContent="写真を選択してください。";
+    else if(!start.lm)sr.innerHTML="写真OK｜<b>自動解析待ち</b>";
+    else sr.innerHTML=`開始腕角 ${start.arm?.toFixed(1)??"--"}°｜信頼度 ${Math.round((start.confidence||0)*100)}%｜タップ ${start.taps.length}/2`;
+  }
+  if(er){
+    if(!end.img)er.textContent="写真を選択してください。";
+    else if(!end.lm)er.innerHTML="写真OK｜<b>自動解析待ち</b>";
+    else er.innerHTML=`挙上角 <b>${end.arm?.toFixed(1)??"--"}°</b>｜信頼度 ${Math.round((end.confidence||0)*100)}%｜タップ ${end.taps.length}/2`;
+  }
+
+  const guide=document.getElementById("shrTapGuide");
+  if(guide){
+    if(!start.lm||!end.lm)guide.innerHTML="<b>次：</b> START・UPの写真を選び「写真から腕角度を自動検出」。";
+    else if(start.taps.length<2)guide.innerHTML="<b>START写真：</b> ①肩甲棘の根元 → ②肩峰の後外側 の順にタップ。";
+    else if(end.taps.length<2)guide.innerHTML="<b>UP写真：</b> ①肩甲棘の根元 → ②肩峰の後外側 の順にタップ。";
+    else{
+      const excursion=(aStart!=null&&aEnd!=null)?aEnd-aStart:null;
+      guide.innerHTML=`<b>完了：</b> 腕 ${end.arm?.toFixed(1)??"--"}°｜肩甲骨 ${aStart?.toFixed(1)??"--"}° → ${aEnd?.toFixed(1)??"--"}°${excursion!=null?`｜上方回旋量 ${excursion.toFixed(1)}°`:""}。下の「肩甲上腕リズムを判定」を押してください。`;
+    }
+  }
+}
+function shrCanvasPoint(evt,canvas){
+  const r=canvas.getBoundingClientRect();
+  const clientX=evt.touches?.[0]?.clientX??evt.clientX;
+  const clientY=evt.touches?.[0]?.clientY??evt.clientY;
+  return{x:(clientX-r.left)*(canvas.width/r.width),y:(clientY-r.top)*(canvas.height/r.height)}
+}
+function shrTap(which,evt){
+  const st=shrAutoState[which],canvas=shrCanvas(which);
+  if(!st.lm)return alert("先に写真の自動解析をしてください");
+  if(st.taps.length>=2)return;
+  const q=shrCanvasPoint(evt,canvas);
+  st.taps.push(q);
+  st.scapAngle=shrScapAngle(which);
+  shrDraw(which);shrUpdateUI();
+}
+["start","end"].forEach(which=>{
+  const c=shrCanvas(which);
+  if(c)c.addEventListener("click",e=>shrTap(which,e));
+});
+
+window.loadShrPhoto=function(which,input){
+  const file=input?.files?.[0];if(!file)return;
+  const st=shrAutoState[which];
+  if(st.url)URL.revokeObjectURL(st.url);
+  st.url=URL.createObjectURL(file);
+  st.lm=null;st.taps=[];st.arm=null;st.scapAngle=null;st.confidence=null;
+  const img=new Image();
+  img.onload=()=>{
+    st.img=img;
+    const canvas=shrCanvas(which);fitCanvasToImage(canvas,img);
+    shrDraw(which);shrUpdateUI();
+  };
+  img.src=st.url;
+};
+
+window.analyzeShrPhotos=async function(){
+  const start=shrAutoState.start,end=shrAutoState.end;
+  if(!start.img||!end.img)return alert("STARTとUPの2枚の写真を選択してください");
+  const btn=document.getElementById("shrAutoBtn");
+  if(btn){btn.disabled=true;btn.textContent="自動解析中...";}
+  try{
+    const model=await ensurePose();
+    const side=shrSideKey();
+    for(const which of ["start","end"]){
+      const st=shrAutoState[which],canvas=shrCanvas(which);
+      const res=model.detect(st.img),lm=res?.landmarks?.[0];
+      if(!lm)throw new Error(`${which==="start"?"START":"UP"}写真で人物姿勢を検出できません`);
+      const arm=shrArmElevation(lm,canvas,side);
+      if(arm.confidence<.35)throw new Error(`${which==="start"?"START":"UP"}写真の肩・肘・股関節の検出信頼度が低いです`);
+      st.lm=lm;st.arm=arm.angle;st.confidence=arm.confidence;st.taps=[];st.scapAngle=null;
+      shrDraw(which);
+    }
+    shrUpdateUI();
+    if(start.arm>35){
+      const g=document.getElementById("shrTapGuide");
+      if(g)g.innerHTML=`<b>確認：</b> START写真の腕角が ${start.arm.toFixed(1)}° あります。できれば腕を体側に下ろした写真にすると比較しやすいです。<br>そのまま測る場合はSTART写真を2点タップしてください。`;
+    }
+  }catch(e){
+    alert("SHR写真解析：" + (e?.message||e));
+  }finally{
+    if(btn){btn.disabled=false;btn.textContent="写真から腕角度を自動検出";}
+  }
+};
+
+window.resetShrTaps=function(){
+  ["start","end"].forEach(which=>{
+    shrAutoState[which].taps=[];shrAutoState[which].scapAngle=null;shrDraw(which);
+  });
+  shrUpdateUI();
+};
+window.resetShrAutoTap=function(){
+  ["start","end"].forEach(which=>{
+    const st=shrAutoState[which];
+    st.lm=null;st.taps=[];st.arm=null;st.scapAngle=null;st.confidence=null;
+    shrDraw(which);
+  });
+  ["shrArm","shrScapStart","shrScapEnd"].forEach(id=>{const e=document.getElementById(id);if(e)e.value=""});
+  shrUpdateUI();
+};
 
 window.analyzeSquatRom=async function(){
   const img=document.getElementById("romSourceImage");
