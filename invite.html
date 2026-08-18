@@ -6,44 +6,63 @@
 <meta name="theme-color" content="#09090a">
 <title>S.u.G 会員登録</title>
 <style>
-:root{--bg:#09090a;--card:#151517;--line:#5c4820;--gold:#e9c45a;--text:#f5f3ee;--muted:#aaa7a0}
+:root{--bg:#09090a;--card:#151517;--line:#5c4820;--gold:#e9c45a;--text:#f5f3ee;--muted:#aaa7a0;--danger:#ff9393}
 *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 50% 0,#211b10 0,#09090a 42%,#060607 100%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif;display:flex;align-items:center;justify-content:center;padding:22px}
 .card{width:min(560px,100%);background:linear-gradient(180deg,#171719,#101012);border:1px solid var(--line);border-radius:28px;padding:28px 22px;box-shadow:0 24px 70px rgba(0,0,0,.45);text-align:center}
-.logo{width:min(360px,92%);height:auto;margin:2px auto 18px;display:block}.kicker{color:var(--gold);font-weight:800;letter-spacing:.08em;font-size:13px}.title{font-size:26px;font-weight:900;margin:12px 0 10px}.desc{font-size:16px;line-height:1.8;color:#d6d2ca;margin:0 auto 22px;max-width:430px}.note{font-size:13px;line-height:1.65;color:var(--muted);margin:18px auto 0;max-width:430px}.btn{width:100%;border:0;border-radius:16px;padding:17px 18px;font-size:20px;font-weight:900;background:linear-gradient(180deg,#f1d574,#c99d31);color:#080808;box-shadow:0 8px 22px rgba(202,158,49,.22)}.btn:disabled{opacity:.45}.err{margin-top:14px;color:#ff9393;font-weight:700;line-height:1.55}.mascot{width:150px;max-width:42%;margin:22px auto 2px;display:block}
+.logo{width:min(360px,92%);height:auto;margin:2px auto 18px;display:block}.kicker{color:var(--gold);font-weight:800;letter-spacing:.08em;font-size:13px}.title{font-size:28px;font-weight:900;margin:12px 0 10px}.desc{font-size:15px;line-height:1.8;color:#d6d2ca;margin:0 auto 20px;max-width:450px}.form{text-align:left}.form label{display:block;color:#d8d3c9;font-size:14px;margin:12px 2px 7px}.form input{width:100%;border:1px solid #3e3c42;background:#0d0d0f;color:#fff;border-radius:15px;padding:15px 14px;font-size:17px;outline:none}.form input:focus{border-color:#c99d31;box-shadow:0 0 0 2px rgba(201,157,49,.16)}#code{letter-spacing:.16em;font-weight:900;font-size:21px}.btn{width:100%;border:0;border-radius:16px;padding:17px 18px;margin-top:18px;font-size:20px;font-weight:900;background:linear-gradient(180deg,#f1d574,#c99d31);color:#080808;box-shadow:0 8px 22px rgba(202,158,49,.22)}.btn:disabled{opacity:.48}.err{margin-top:14px;color:var(--danger);font-weight:700;line-height:1.55;text-align:left}.ok{color:#98e3ad}.mascot{width:150px;max-width:42%;margin:22px auto 2px;display:block}.note{font-size:13px;line-height:1.65;color:var(--muted);margin:18px auto 0;max-width:430px}.login{display:inline-block;margin-top:15px;color:var(--gold);font-weight:700;text-decoration:none}
 </style>
 </head>
 <body>
 <main class="card">
-  <img class="logo" src="./brand-header.png?v=24-5-line-safe" alt="S.u.G OSAKA">
+  <img class="logo" src="./brand-header.png?v=24-6-qr-register" alt="S.u.G OSAKA">
   <div class="kicker">S.u.G MEMBERS ONLY</div>
   <div class="title">会員登録のご案内</div>
-  <p class="desc">下のボタンを押すと、S.u.G会員登録を開始します。<br>次の画面でご自身のパスワードを設定してください。</p>
+  <p class="desc">管理者に登録されたメールアドレスと<br>「登録コード」を入力してください。<br>確認後、ご自身のパスワード設定へ進みます。</p>
+  <div class="form">
+    <label for="email">登録メールアドレス</label>
+    <input id="email" type="email" autocomplete="email" placeholder="member@example.com">
+    <label for="code">登録コード</label>
+    <input id="code" autocomplete="one-time-code" inputmode="numeric" maxlength="8" placeholder="登録コード">
+  </div>
   <button id="startBtn" class="btn" type="button">登録をはじめる</button>
-  <div id="err" class="err"></div>
-  <img class="mascot" src="./mascot-highfive.png?v=24-5-line-safe" alt="">
-  <p class="note">このページを開いただけでは登録は進みません。<br>「登録をはじめる」を押したときだけ登録処理を開始します。</p>
+  <div id="msg" class="err"></div>
+  <a class="login" href="./?v=24-6-qr-register">登録済みの方はこちら → ログイン</a>
+  <img class="mascot" src="./mascot-highfive.png?v=24-6-qr-register" alt="">
+  <p class="note">このQR／ページだけでは登録できません。<br>初回登録には、S.u.G管理者が発行した登録コードが必要です。</p>
 </main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-function decodeLink(){
-  const raw=(location.hash||'').replace(/^#/,'');
-  const p=new URLSearchParams(raw);
-  const token=p.get('t');
-  if(!token)return '';
-  try{
-    let b64=token.replace(/-/g,'+').replace(/_/g,'/');
-    while(b64.length%4)b64+='=';
-    return atob(b64);
-  }catch(_e){return ''}
-}
-const actionLink=decodeLink();
+const SUPABASE_URL='https://nnqzxcgkqjnmtzcvorha.supabase.co';
+const PUBLISHABLE_KEY='sb_publishable_zcn7r2YSKDZa1lXJvmk3sg_GulOJXwI';
+const sb=window.supabase.createClient(SUPABASE_URL,PUBLISHABLE_KEY,{
+  auth:{storageKey:'sug-body-management-v4-auth',persistSession:true,autoRefreshToken:true,detectSessionInUrl:false}
+});
 const btn=document.getElementById('startBtn');
-const err=document.getElementById('err');
-if(!actionLink){btn.disabled=true;err.textContent='招待リンクを確認できません。管理者から届いた新しいリンクを開いてください。'}
-btn.addEventListener('click',()=>{
-  if(!actionLink)return;
-  btn.disabled=true;
-  btn.textContent='登録画面を開いています…';
-  location.href=actionLink;
+const msg=document.getElementById('msg');
+const emailEl=document.getElementById('email');
+const codeEl=document.getElementById('code');
+const qs=new URLSearchParams(location.search);
+if(qs.get('email'))emailEl.value=qs.get('email');
+codeEl.addEventListener('input',()=>{codeEl.value=codeEl.value.replace(/\D/g,'')});
+btn.addEventListener('click',async()=>{
+  const email=emailEl.value.trim().toLowerCase();
+  const code=codeEl.value.trim();
+  msg.className='err';msg.textContent='';
+  if(!email || !email.includes('@')){msg.textContent='登録メールアドレスを確認してください。';return}
+  if(code.length<6){msg.textContent='登録コードを確認してください。';return}
+  btn.disabled=true;btn.textContent='確認中…';
+  try{
+    const {data,error}=await sb.auth.verifyOtp({email,token:code,type:'invite'});
+    if(error)throw error;
+    if(!data?.session?.user)throw new Error('会員情報を確認できませんでした。');
+    try{sessionStorage.setItem('sug-invite-pending','1')}catch(_e){}
+    msg.className='err ok';msg.textContent='確認できました。パスワード設定画面を開きます。';
+    location.href='./?invite=1&v=24-6-qr-register';
+  }catch(e){
+    console.error(e);
+    msg.className='err';msg.textContent='メールアドレスまたは登録コードを確認してください。';
+    btn.disabled=false;btn.textContent='登録をはじめる';
+  }
 });
 </script>
 </body>
