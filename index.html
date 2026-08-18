@@ -12,9 +12,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="S.u.G BODY">
-<link rel="manifest" href="./manifest.webmanifest?v=25-training-metrics">
-<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png?v=25-training-metrics">
-<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=25-training-metrics">
+<link rel="manifest" href="./manifest.webmanifest?v=25-rom-squat">
+<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png?v=25-rom-squat">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=25-rom-squat">
 <style>
 :root{
   --bg:#09090a;--card:#141417;--card2:#1a1a1f;--gold:#d8b35b;--gold2:#f3d98b;
@@ -252,7 +252,7 @@ button.primary{box-shadow:0 5px 18px rgba(184,140,50,.10)}
 .stepProgress{height:9px;background:#0d0d10;border:1px solid #303037;border-radius:999px;overflow:hidden;margin-top:8px}.stepProgress>i{display:block;height:100%;background:linear-gradient(90deg,#b88c32,#f3d98b);width:0}
 .selfCareChoice{display:grid;grid-template-columns:1fr 1fr;gap:8px}.selfCareFlag{display:flex;align-items:flex-start;gap:8px;background:#0d0d10;border:1px solid #303037;border-radius:10px;padding:9px;margin-bottom:6px}.selfCareFlag input{width:auto;margin-top:2px}.selfCareFlag span{font-size:10px;line-height:1.55;color:#ddd}.selfCareRoutine{counter-reset:care}.selfCareStep{position:relative;padding:9px 9px 9px 38px;background:#0d0d10;border:1px solid #2c2c32;border-radius:10px;margin-bottom:7px;font-size:10px;line-height:1.65}.selfCareStep:before{counter-increment:care;content:counter(care);position:absolute;left:9px;top:9px;width:21px;height:21px;border-radius:50%;display:grid;place-items:center;background:#211d14;border:1px solid #5a4a25;color:var(--gold2);font-weight:900}.carePosterWrap{margin-top:10px}.carePosterBox{background:#0d0d10;border:1px solid #2c2c32;border-radius:14px;padding:10px}.carePosterBox img{display:block;width:100%;border-radius:10px;border:1px solid #2f2f35;background:#fff}.carePosterCap{font-size:10px;color:#aaa;line-height:1.55;margin-top:7px}.carePosterTitle{font-size:11px;font-weight:800;color:var(--gold2);margin-bottom:6px;letter-spacing:.04em}
 .smartWarn{border:1px solid #713436;background:#211214;color:#ffc0c0;border-radius:11px;padding:10px;font-size:10px;line-height:1.65}.smartOk{border:1px solid #315a43;background:#102017;color:#a8e9c0;border-radius:11px;padding:10px;font-size:10px;line-height:1.65}
-@media(max-width:620px){.smartGrid{grid-template-columns:1fr}.selfCareChoice{grid-template-columns:1fr}.tabs{grid-template-columns:repeat(4,1fr)}}
+.romStage{position:relative;margin-top:10px;background:#08080a;border:1px solid #303038;border-radius:14px;overflow:hidden;min-height:240px;display:grid;place-items:center}.romStage canvas{display:block;width:100%;height:auto;max-height:70vh;object-fit:contain}.romEmpty{padding:36px 18px;text-align:center;color:#888;font-size:11px;line-height:1.7}.romMetrics{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:9px}.romMetric{background:#0c0c0f;border:1px solid #303038;border-radius:12px;padding:10px}.romMetric span{display:block;color:#888;font-size:9px}.romMetric b{display:block;margin-top:3px;font-size:16px;color:#fff}.romMetric small{display:block;margin-top:3px;color:#aaa;font-size:9px;line-height:1.4}.romResultMain{padding:11px;border:1px solid #5a4a25;background:#15120c;border-radius:12px;line-height:1.65}.romResultMain b{color:var(--gold2)}.romGuide{font-size:10px;line-height:1.65}.romStatus{font-size:10px;margin-top:7px;color:#aaa}.romStatus.ok{color:#83d79d}.romStatus.bad{color:#ff8f8f}.romLegend{font-size:9px;color:#8c8c92;line-height:1.55;margin-top:7px}@media(max-width:620px){.romMetrics{grid-template-columns:1fr 1fr}}@media(max-width:620px){.smartGrid{grid-template-columns:1fr}.selfCareChoice{grid-template-columns:1fr}.tabs{grid-template-columns:repeat(4,1fr)}}
 @media(min-width:720px){.tabs{grid-template-columns:repeat(8,1fr)}}
 
 </style>
@@ -268,7 +268,7 @@ window.SUG_CLOUD_CONFIG = {
 
 <div id="authGate" class="authGate">
   <div class="authBox">
-    <img class="authBrandLogo" src="./brand-header.png?v=25-training-metrics" alt="S.u.G OSAKA">
+    <img class="authBrandLogo" src="./brand-header.png?v=25-rom-squat" alt="S.u.G OSAKA">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
     <div class="sub">V25 SMART CORE / MEMBERS ONLY</div>
     <label>メールアドレス</label>
@@ -279,7 +279,7 @@ window.SUG_CLOUD_CONFIG = {
     <div class="authLinks"><button class="linkBtn" type="button" onclick="requestPasswordReset()">パスワードを忘れた方</button></div>
     <div id="authError" class="authError"></div>
     <div class="setupNote">S.u.G会員限定。管理者から届いた招待リンクで初回登録してください。</div>
-    <img class="authMascot" src="./mascot-highfive.png?v=25-training-metrics" alt="">
+    <img class="authMascot" src="./mascot-highfive.png?v=25-rom-squat" alt="">
     <div id="pwaGuide" class="pwaGuide hidden"><b>iPhoneホーム画面対応</b><br>Safariの共有ボタン →「ホーム画面に追加」で、アプリのように起動できます。</div>
   </div>
 </div>
@@ -384,7 +384,7 @@ window.SUG_CLOUD_CONFIG = {
 <header>
   <div class="head">
     <div class="brandIdentity">
-      <img class="brandHeaderLogo" src="./brand-header.png?v=25-training-metrics" alt="S.u.G OSAKA">
+      <img class="brandHeaderLogo" src="./brand-header.png?v=25-rom-squat" alt="S.u.G OSAKA">
       <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V25.1 SMART CORE / MANAGEMENT 1.1</small></div>
     </div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
@@ -406,6 +406,7 @@ window.SUG_CLOUD_CONFIG = {
     <button class="tab" data-tab="weight">体重</button>
     <button class="tab" data-tab="meal">食事</button>
     <button class="tab" data-tab="training">トレ</button>
+    <button class="tab" data-tab="rom">ROM</button>
     <button class="tab" data-tab="recovery">回復</button>
     <button class="tab" data-tab="checkin">チェックイン</button>
     <button class="tab" data-tab="photos">写真</button>
@@ -416,7 +417,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="adminBoard" class="panel">
     <div id="adminBrandHero" class="card adminBrandHero">
-      <img class="adminOfficialLogo" src="./brand-official.jpg?v=25-training-metrics" alt="S.u.G OSAKA official brand">
+      <img class="adminOfficialLogo" src="./brand-official.jpg?v=25-rom-squat" alt="S.u.G OSAKA official brand">
       <div class="adminBrandText"><h2>S.u.G OSAKA</h2><p>PERSONAL TRAINING × PERSONAL STRETCH × CONDITIONING<br>会員管理・予約・フォロー・コンディションを一つの運営画面へ。</p></div>
     </div>
     <div class="card dailyOpsCard">
@@ -541,11 +542,11 @@ window.SUG_CLOUD_CONFIG = {
   <section id="dash" class="panel active">
     <div class="card sugHero">
       <div>
-        <img class="sugHeroLogo" src="./brand-header.png?v=25-training-metrics" alt="S.u.G OSAKA">
+        <img class="sugHeroLogo" src="./brand-header.png?v=25-rom-squat" alt="S.u.G OSAKA">
         <div class="sugHeroTitle">鍛える。整える。魅せる。</div>
         <div class="sugHeroSub">TRAINING / CONDITIONING / STYLE UPDATE<br>記録して、管理して、次の身体へ。</div>
       </div>
-      <img class="sugHeroMascot" src="./mascot-highfive.png?v=25-training-metrics" alt="">
+      <img class="sugHeroMascot" src="./mascot-highfive.png?v=25-rom-squat" alt="">
     </div>
     <div class="card">
       <h2>現在の状態</h2>
@@ -597,7 +598,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="smart" class="panel">
     <div class="card smartHero">
-      <div class="sectionLead"><div><div class="smartHeroTitle">S.u.G SMART PLAN</div><div class="smartHeroSub">外部AI・APIなし。会員データとS.u.Gルールから「今日の優先順位」を自動計算します。</div></div><img class="sectionMascot" src="./mascot-highfive.png?v=25-training-metrics" alt=""></div>
+      <div class="sectionLead"><div><div class="smartHeroTitle">S.u.G SMART PLAN</div><div class="smartHeroSub">外部AI・APIなし。会員データとS.u.Gルールから「今日の優先順位」を自動計算します。</div></div><img class="sectionMascot" src="./mascot-highfive.png?v=25-rom-squat" alt=""></div>
       <div id="smartTargetNotice" class="notice" style="margin-top:9px">分析対象を確認中...</div>
       <div class="grid2" style="margin-top:10px">
         <div><label>今日の食欲</label><select id="smartAppetite" onchange="saveSmartContext()"><option value="normal">普通</option><option value="low">低い</option><option value="high">強い</option></select></div>
@@ -639,7 +640,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="activity" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>歩数・活動</h2><div class="muted">現行V25は手入力。Apple Health / HealthKit自動連携は次段階で接続。</div></div><img class="sectionMascot" src="./mascot-jumprope.png?v=25-training-metrics" alt=""></div>
+      <div class="sectionLead"><div><h2>歩数・活動</h2><div class="muted">現行V25は手入力。Apple Health / HealthKit自動連携は次段階で接続。</div></div><img class="sectionMascot" src="./mascot-jumprope.png?v=25-rom-squat" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="aDate" type="date"></div><div><label>歩数</label><input id="aSteps" type="number" min="0" step="100"></div></div>
       <div style="margin-top:8px"><label>メモ</label><input id="aMemo" placeholder="例：通勤＋散歩、脚トレ日、外出少なめ"></div>
       <button class="primary" style="width:100%;margin-top:9px" onclick="addActivity()">歩数を記録</button>
@@ -650,7 +651,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="care" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>症状別セルフケア</h2><div class="muted">腰・首・肩・膝・足首・手首・肘。診断ではなく、痛む場所と動作 → 危険サイン確認 → 軽いセルフケア → 前後評価。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-training-metrics" alt=""></div>
+      <div class="sectionLead"><div><h2>症状別セルフケア</h2><div class="muted">腰・首・肩・膝・足首・手首・肘。診断ではなく、痛む場所と動作 → 危険サイン確認 → 軽いセルフケア → 前後評価。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-rom-squat" alt=""></div>
       <div class="notice">強い症状・外傷・神経症状などがある場合はセルフケアより医療評価を優先します。痛みやしびれが増える動きは中止してください。</div>
       <div class="selfCareChoice" style="margin-top:9px"><div><label>部位</label><select id="careArea" onchange="renderCareQuestions()"><option value="lowback">腰</option><option value="neck">首</option><option value="shoulder">肩</option><option value="knee">膝</option><option value="ankle">足首</option><option value="wrist">手首</option><option value="elbow">肘</option></select></div><div><label>痛み BEFORE 0-10</label><input id="carePainBefore" type="number" min="0" max="10" value="3"></div></div>
       <div class="selfCareChoice" style="margin-top:8px"><div><label>痛む場所</label><select id="careLocation"></select></div><div><label>痛む動作</label><select id="careMovement"></select></div></div>
@@ -666,7 +667,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="weight" class="panel">
     <div class="card">
-      <img class="mascotMini" src="./mascot-jumprope.png?v=25-training-metrics" alt="">
+      <img class="mascotMini" src="./mascot-jumprope.png?v=25-rom-squat" alt="">
       <h2>体重記録</h2>
       <div class="grid2"><div><label>日付</label><input id="wDate" type="date"></div><div><label>体重 kg</label><input id="wWeight" type="number" step="0.1"></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>体脂肪率 %</label><input id="wFat" type="number" step="0.1"></div><div><label>メモ</label><input id="wMemo"></div></div>
@@ -688,7 +689,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="training" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>トレーニング記録</h2><div class="muted">重量・REP・SET・RIR・総重量・推定1RMを記録し、前回からの進歩を確認。</div></div><img class="sectionMascot" src="./mascot-basketball.png?v=25-training-metrics" alt=""></div>
+      <div class="sectionLead"><div><h2>トレーニング記録</h2><div class="muted">重量・REP・SET・RIR・総重量・推定1RMを記録し、前回からの進歩を確認。</div></div><img class="sectionMascot" src="./mascot-basketball.png?v=25-rom-squat" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="tDate" type="date"></div><div><label>種目</label><input id="tExercise" placeholder="スミススクワット"></div></div>
       <div class="grid4" style="margin-top:8px"><div><label>重量</label><input id="tWeight" type="number" step="0.5" oninput="renderTrainingPreview()"></div><div><label>REP</label><input id="tReps" type="number" oninput="renderTrainingPreview()"></div><div><label>SET</label><input id="tSets" type="number" oninput="renderTrainingPreview()"></div><div><label>RIR</label><input id="tRir" type="number" step="0.5"></div></div>
       <div class="kpis" style="margin-top:8px"><div class="kpi"><span>総重量</span><b id="tVolumePreview">0kg</b></div><div class="kpi"><span>推定1RM</span><b id="tE1rmPreview">0kg</b></div></div>
@@ -700,9 +701,34 @@ window.SUG_CLOUD_CONFIG = {
     <div class="card"><h2>履歴</h2><div id="trainingList"></div></div>
   </section>
 
+  <section id="rom" class="panel">
+    <div class="card">
+      <div class="sectionLead"><div><h2>ROMスクリーニング</h2><div class="muted">V25初期版：スクワットの側面画像から、2DランドマークでボトムROMを数値化。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-rom-squat" alt=""></div>
+      <div class="notice">撮影：真横から全身を入れ、スクワット最下点で撮影。カメラは傾けず、肩・股関節・膝・足首・つま先が見える状態を推奨。</div>
+      <div class="grid2" style="margin-top:9px">
+        <div><label>日付</label><input id="romDate" type="date"></div>
+        <div><label>種目</label><select id="romExercise"><option value="squat">スクワット</option></select></div>
+      </div>
+      <div style="margin-top:8px"><label>側面画像</label><input id="romFile" type="file" accept="image/*" onchange="loadRomImage(this)"></div>
+      <div id="romModelStatus" class="romStatus">Poseモデル：未初期化</div>
+      <div id="romStage" class="romStage"><div class="romEmpty">スクワット最下点の側面画像を選択してください。<br>画像上に関節点と角度を描画します。</div></div>
+      <button id="romAnalyzeBtn" class="primary" style="width:100%;margin-top:9px" onclick="analyzeSquatRom()" disabled>スクワットROMを自動判定</button>
+      <div class="romLegend">※ 医療診断・競技審判ではありません。カメラ位置、衣服、身体の回旋、ランドマーク検出誤差の影響を受ける2Dトレーニングスクリーニングです。</div>
+    </div>
+    <div class="card">
+      <h2>ROM判定</h2>
+      <div id="romResult"><span class="muted">画像を解析すると結果が表示されます。</span></div>
+    </div>
+    <div class="card">
+      <h2>ROM履歴</h2>
+      <div id="romHistory"><span class="muted">履歴なし</span></div>
+    </div>
+    <img id="romSourceImage" alt="" style="display:none">
+  </section>
+
   <section id="recovery" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>回復・コンディション</h2><div class="muted">睡眠・疲労・ストレス・痛みから、その日の負荷を調整。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-training-metrics" alt=""></div>
+      <div class="sectionLead"><div><h2>回復・コンディション</h2><div class="muted">睡眠・疲労・ストレス・痛みから、その日の負荷を調整。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-rom-squat" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="rDate" type="date"></div><div><label>睡眠時間</label><input id="rSleep" type="number" step="0.1"></div></div>
       <div class="grid3" style="margin-top:8px"><div><label>疲労 1-10</label><input id="rFatigue" type="number" min="1" max="10"></div><div><label>ストレス 1-10</label><input id="rStress" type="number" min="1" max="10"></div><div><label>痛み 0-10</label><input id="rPain" type="number" min="0" max="10"></div></div>
       <div style="margin-top:8px"><label>メモ</label><textarea id="rMemo"></textarea></div>
@@ -714,7 +740,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="checkin" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>週間チェックイン</h2><div class="muted">今週の身体と生活を短時間で共有。コーチングの調整材料にします。</div></div><img class="sectionMascot" src="./mascot-running.png?v=25-training-metrics" alt=""></div>
+      <div class="sectionLead"><div><h2>週間チェックイン</h2><div class="muted">今週の身体と生活を短時間で共有。コーチングの調整材料にします。</div></div><img class="sectionMascot" src="./mascot-running.png?v=25-rom-squat" alt=""></div>
       <div class="notice">週1回の自己申告です。数値は管理の目安として使い、体調の診断には使用しません。</div>
       <div class="grid2" style="margin-top:9px"><div><label>日付</label><input id="ciDate" type="date"></div><div><label>体調 1-5</label><input id="ciCondition" type="number" min="1" max="5" value="3"></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>睡眠満足度 1-5</label><input id="ciSleep" type="number" min="1" max="5" value="3"></div><div><label>痛み 0-10</label><input id="ciPain" type="number" min="0" max="10" value="0"></div></div>
@@ -768,7 +794,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="profile" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>会員情報</h2><div class="muted">目標・栄養・注意事項をS.u.Gの管理基準として保存。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-training-metrics" alt=""></div>
+      <div class="sectionLead"><div><h2>会員情報</h2><div class="muted">目標・栄養・注意事項をS.u.Gの管理基準として保存。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-rom-squat" alt=""></div>
       <div class="grid2"><div><label>氏名</label><input id="pfName"></div><div><label>目的</label><select id="pfGoal"><option>筋肥大</option><option>減量</option><option>増量</option><option>健康維持</option><option>姿勢改善</option></select></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>目標体重</label><input id="pfTargetWeight" type="number" step="0.1"></div><div><label>目標kcal</label><input id="pfTargetKcal" type="number"></div></div>
       <div class="grid3" style="margin-top:8px"><div><label>目標P</label><input id="pfP" type="number"></div><div><label>目標F</label><input id="pfF" type="number"></div><div><label>目標C</label><input id="pfC" type="number"></div></div>
@@ -893,7 +919,7 @@ function baseMember(name="新規会員"){
   return {profile:{name,goal:"筋肥大",targetWeight:0,targetKcal:0,targetP:0,targetF:0,targetC:0,experience:"intermediate",trainingDays:3,priorityPart:"全身",sessionMinutes:60,notes:""},
     coachPlan:{weeklyFocus:"",nextAction:"",nextSessionDate:"",targetTrainingDays:0,targetSleep:0,targetSteps:0,completedAt:null,updatedAt:null},
     smartContext:{appetite:"normal",dayType:"training",updatedAt:null},
-    weights:[],meals:[],training:[],recovery:[],checkins:[],activity:[],selfCare:[],smartPlans:[],photos:[]}
+    weights:[],meals:[],training:[],recovery:[],checkins:[],activity:[],selfCare:[],smartPlans:[],romAssessments:[],photos:[]}
 }
 function m(){return db.members[db.current]}
 function esc(s){return String(s??"").replace(/[&<>"']/g,x=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[x]))}
@@ -1362,7 +1388,7 @@ async function loadMember(id){
   if(!db.members[id].smartContext || typeof db.members[id].smartContext!=="object") db.members[id].smartContext=baseMember(p?.display_name||"会員").smartContext;
   db.members[id].smartContext={...baseMember(p?.display_name||"会員").smartContext,...db.members[id].smartContext};
 
-  ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","photos"].forEach(k=>{
+  ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","photos"].forEach(k=>{
     if(!Array.isArray(db.members[id][k]))db.members[id][k]=[];
   });
   if(!db.members[id].coachPlan || typeof db.members[id].coachPlan!=="object") db.members[id].coachPlan=baseMember(p?.display_name||"会員").coachPlan;
@@ -1440,7 +1466,7 @@ async function refreshMemberProfiles(selectId=null){
 }
 
 function inviteRedirectUrl(){
-  return location.origin+location.pathname+"?invite=1&v=25-training-metrics";
+  return location.origin+location.pathname+"?invite=1&v=25-rom-squat";
 }
 
 async function createMemberInvite(){
@@ -1873,7 +1899,7 @@ async function refreshAdminBoard(){
     const members=accessibleProfiles.filter(p=>p.role!=="trainer").map(p=>{
       const row=byId.get(p.id);
       const mm=row?.data&&Object.keys(row.data).length?row.data:baseMember(p.display_name||"会員");
-      ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","photos"].forEach(k=>{if(!Array.isArray(mm[k]))mm[k]=[]});
+      ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","photos"].forEach(k=>{if(!Array.isArray(mm[k]))mm[k]=[]});
       if(!mm.profile)mm.profile=baseMember(p.display_name||"会員").profile;
       const st=adminStatusFor(mm);
       return {profile:p,mm,row,st,lastDate:latestRecordDate(mm)};
@@ -2682,13 +2708,13 @@ const CARE_ROUTINE={
   ]
 };
 const CARE_IMAGES={
-  lowback:"./care-lowback-hyottoko.png?v=25-training-metrics",
-  neck:"./care-neck-hyottoko.png?v=25-training-metrics",
-  shoulder:"./care-shoulder-hyottoko.png?v=25-training-metrics",
-  knee:"./care-knee-hyottoko.png?v=25-training-metrics",
-  ankle:"./care-ankle-hyottoko.png?v=25-training-metrics",
-  wrist:"./care-wrist-hyottoko.png?v=25-training-metrics",
-  elbow:"./care-elbow-hyottoko.png?v=25-training-metrics"
+  lowback:"./care-lowback-hyottoko.png?v=25-rom-squat",
+  neck:"./care-neck-hyottoko.png?v=25-rom-squat",
+  shoulder:"./care-shoulder-hyottoko.png?v=25-rom-squat",
+  knee:"./care-knee-hyottoko.png?v=25-rom-squat",
+  ankle:"./care-ankle-hyottoko.png?v=25-rom-squat",
+  wrist:"./care-wrist-hyottoko.png?v=25-rom-squat",
+  elbow:"./care-elbow-hyottoko.png?v=25-rom-squat"
 };
 function carePosterHTML(area){
   const label=CARE_AREA_LABELS[area]||'セルフケア';
@@ -3333,6 +3359,87 @@ async function renderPhotos(){
   photoGrid.innerHTML=items.join("");
 }
 
+
+let currentRomResult=null;
+let romImageObjectUrl=null;
+
+function loadRomImage(input){
+  const file=input?.files?.[0];
+  if(!file)return;
+  if(romImageObjectUrl)URL.revokeObjectURL(romImageObjectUrl);
+  romImageObjectUrl=URL.createObjectURL(file);
+  const img=document.getElementById("romSourceImage");
+  img.onload=()=>{
+    drawRomBaseImage();
+    const btn=document.getElementById("romAnalyzeBtn");if(btn)btn.disabled=false;
+    const r=document.getElementById("romResult");if(r)r.innerHTML='<span class="muted">画像を読み込みました。「スクワットROMを自動判定」を押してください。</span>';
+  };
+  img.src=romImageObjectUrl;
+}
+
+function drawRomBaseImage(){
+  const img=document.getElementById("romSourceImage"),stage=document.getElementById("romStage");
+  if(!img?.naturalWidth||!stage)return;
+  stage.innerHTML='<canvas id="romCanvas"></canvas>';
+  const c=document.getElementById("romCanvas"),ctx=c.getContext("2d");
+  const maxW=1100,scale=Math.min(1,maxW/img.naturalWidth);
+  c.width=Math.round(img.naturalWidth*scale);c.height=Math.round(img.naturalHeight*scale);
+  ctx.drawImage(img,0,0,c.width,c.height);
+}
+
+function angle3(a,b,c){
+  const v1={x:a.x-b.x,y:a.y-b.y},v2={x:c.x-b.x,y:c.y-b.y};
+  const dot=v1.x*v2.x+v1.y*v2.y;
+  const m1=Math.hypot(v1.x,v1.y),m2=Math.hypot(v2.x,v2.y);
+  if(!m1||!m2)return null;
+  return Math.acos(Math.max(-1,Math.min(1,dot/(m1*m2))))*180/Math.PI;
+}
+function trunkFromVertical(shoulder,hip){
+  const dx=shoulder.x-hip.x,dy=shoulder.y-hip.y;
+  if(!dx&&!dy)return null;
+  return Math.atan2(Math.abs(dx),Math.abs(dy))*180/Math.PI;
+}
+function romDepthLabel(hip,knee,h){
+  const d=(hip.y-knee.y)/h;
+  if(d>=0.015)return {key:"below",label:"ランドマーク上は平行以下",cls:"ok",delta:d};
+  if(d>=-0.02)return {key:"parallel",label:"ほぼ平行",cls:"ok",delta:d};
+  return {key:"above",label:"平行より浅め",cls:"warn",delta:d};
+}
+function romRound(v){return v==null?"--":`${Math.round(v)}°`;}
+function renderRomHistory(){
+  const box=document.getElementById("romHistory");if(!box||!m())return;
+  const rows=m().romAssessments||[];
+  box.innerHTML=[...rows].reverse().slice(0,20).map((x,ri)=>{
+    const i=rows.length-1-ri;
+    return `<div class="item"><div class="row"><div><strong>${esc(x.date)}｜スクワットROM</strong><br><small>${esc(x.sideLabel||"側面")}｜深度 ${esc(x.depthLabel||"--")}｜膝 ${Math.round(x.kneeAngle||0)}°｜股 ${Math.round(x.hipAngle||0)}°｜足関節 ${Math.round(x.ankleAngle||0)}°｜体幹 ${Math.round(x.trunkAngle||0)}°</small>${x.lrKneeDiff!=null?`<br><small>左右膝角差 ${x.lrKneeDiff.toFixed(1)}°</small>`:""}</div><button class="danger" onclick="remove('romAssessments',${i})">削除</button></div></div>`;
+  }).join("")||'<span class="muted">履歴なし</span>';
+}
+function saveRomResult(){
+  if(!currentRomResult||!m())return alert("先にROM解析を行ってください");
+  m().romAssessments.push({...currentRomResult,date:document.getElementById("romDate")?.value||today(),savedAt:new Date().toISOString()});
+  persist();renderRomHistory();
+  alert("ROM判定を保存しました");
+}
+window.__SUG_ROM_RESULT__=function(payload){
+  currentRomResult=payload;
+  const box=document.getElementById("romResult");if(!box)return;
+  const lr=payload.lrKneeDiff==null?"判定保留":`${payload.lrKneeDiff.toFixed(1)}°`;
+  box.innerHTML=`<div class="romResultMain"><b>${esc(payload.depthLabel)}</b><br>検出側：${esc(payload.sideLabel)}｜ランドマーク信頼度 ${Math.round(payload.visibility*100)}%</div>
+  <div class="romMetrics">
+    <div class="romMetric"><span>膝関節角度</span><b>${romRound(payload.kneeAngle)}</b><small>股関節−膝−足首</small></div>
+    <div class="romMetric"><span>股関節角度</span><b>${romRound(payload.hipAngle)}</b><small>肩−股関節−膝</small></div>
+    <div class="romMetric"><span>足関節角度</span><b>${romRound(payload.ankleAngle)}</b><small>膝−足首−つま先</small></div>
+    <div class="romMetric"><span>体幹前傾</span><b>${romRound(payload.trunkAngle)}</b><small>体幹線と鉛直の角度</small></div>
+    <div class="romMetric"><span>左右膝角差</span><b>${lr}</b><small>両側が十分見える場合のみ参考表示</small></div>
+    <div class="romMetric"><span>深度差</span><b>${(payload.depthDelta*100).toFixed(1)}%</b><small>画像高に対する股関節−膝の縦差</small></div>
+  </div>
+  <div class="notice" style="margin-top:9px"><b>V25判定：</b>${esc(payload.advice)}</div>
+  <button class="secondary" style="width:100%;margin-top:9px" onclick="saveRomResult()">このROM判定を保存</button>`;
+  renderRomHistory();
+}
+window.__SUG_ROM_ERROR__=function(msg){
+  const box=document.getElementById("romResult");if(box)box.innerHTML=`<div class="smartWarn"><b>ROM解析できませんでした</b><br>${esc(msg)}</div>`;
+}
 function renderAll(){
   if(!m())return;
   const ciDateEl=document.getElementById("ciDate");if(ciDateEl&&!ciDateEl.value)ciDateEl.value=today();
@@ -3352,7 +3459,7 @@ function renderAll(){
   prTable.innerHTML=exs.length?`<div style="overflow-x:auto"><table class="table"><tr><th>種目</th><th>最新</th><th>総重量</th><th>推定1RM</th><th>前回比</th></tr>${exs.map(ex=>{const t=trainingTrend(ex),x=t?.cur;if(!x)return"";const prx=pr(ex);const isPr=Math.abs(e1rm(x)-e1rm(prx))<0.0001;return `<tr><td>${esc(ex)}</td><td>${x.weight}kg×${x.reps}×${x.sets}</td><td>${Math.round(t.curVol).toLocaleString()}kg</td><td>${t.curE1.toFixed(1)}kg${isPr?' PR':''}</td><td><small>総 ${fmtPct(t.volPct)}<br>1RM ${fmtPct(t.e1Pct)}</small></td></tr>`}).join("")}</table></div>`:'<span class="muted">記録なし</span>';
   recoveryJudge.innerHTML=`<span class="badge ${adv.cls}">${esc(adv.txt)}</span>`;
   recoveryList.innerHTML=[...mm.recovery].reverse().map((x,ri)=>{let i=mm.recovery.length-1-ri,a=recAdvice(x);return `<div class="item"><div class="row"><div><strong>${x.date}｜睡眠 ${x.sleep}h</strong><br><small>疲労${x.fatigue} / ストレス${x.stress} / 痛み${x.pain}</small><br><span class="badge ${a.cls}">${recScore(x)}点</span></div><button class="danger" onclick="remove('recovery',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
-  renderTrainingPreview();renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();renderCheckin();renderSmartCore();renderActivity();renderCareHistory();drawChart();renderReport();renderPhotos();
+  renderTrainingPreview();renderRomHistory();renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();renderCheckin();renderSmartCore();renderActivity();renderCareHistory();drawChart();renderReport();renderPhotos();
 }
 
 function monthLabel(mon){
@@ -3503,7 +3610,7 @@ function normalizeMemberData(data,name="会員"){
   if(!x.profile.name)x.profile.name=name||"会員";
   if(!x.coachPlan||typeof x.coachPlan!=="object")x.coachPlan=base.coachPlan; else x.coachPlan={...base.coachPlan,...x.coachPlan};
   if(!x.smartContext||typeof x.smartContext!=="object")x.smartContext=base.smartContext; else x.smartContext={...base.smartContext,...x.smartContext};
-  ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","photos"].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});
+  ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","photos"].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});
   return x;
 }
 function backupStamp(){return new Date().toISOString()}
@@ -3644,7 +3751,7 @@ function exportAll(){backupAll()}
 function download(name,text){let b=new Blob([text],{type:"application/json"}),a=document.createElement("a"),u=URL.createObjectURL(b);a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000)}
 
 document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.getElementById(b.dataset.tab).classList.add("active");if(b.dataset.tab==="profile"){loadProfile();loadCoachPlanEditor();}if(b.dataset.tab==="security")loadSecurityPanel();if(b.dataset.tab==="adminBoard")refreshAdminBoard();if(b.dataset.tab==="smart")loadSmartContext();if(b.dataset.tab==="care")renderCareQuestions();renderAll()});
-["wDate","mDate","tDate","rDate","pDate","apptDate"].forEach(id=>{const el=document.getElementById(id);if(el)el.value=today()});
+["wDate","mDate","tDate","romDate","rDate","pDate","apptDate"].forEach(id=>{const el=document.getElementById(id);if(el)el.value=today()});
 if(document.getElementById("apptTime"))document.getElementById("apptTime").value="10:00";
 reportMonth.value=monthNow();
 renderCareQuestions();
@@ -3652,7 +3759,7 @@ renderCareQuestions();
 // V25 SMART CORE PWA: network-only service worker to avoid stale app versions.
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=25-training-metrics").catch(err => console.warn("SW register failed", err));
+    navigator.serviceWorker.register("./sw.js?v=25-rom-squat").catch(err => console.warn("SW register failed", err));
   });
 }
 (function(){
@@ -3664,5 +3771,148 @@ if ("serviceWorker" in navigator) {
 
 initCloud();
 </script>
+
+<script type="module">
+import { FilesetResolver, PoseLandmarker } from "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision/vision_bundle.mjs";
+
+let poseLandmarker=null;
+let poseInitPromise=null;
+
+function status(text, cls=""){
+  const el=document.getElementById("romModelStatus");
+  if(el){el.textContent=text;el.className="romStatus "+cls;}
+}
+async function ensurePose(){
+  if(poseLandmarker)return poseLandmarker;
+  if(poseInitPromise)return poseInitPromise;
+  poseInitPromise=(async()=>{
+    status("Poseモデル：読み込み中...");
+    try{
+      const vision=await FilesetResolver.forVisionTasks("https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/wasm");
+      try{
+        poseLandmarker=await PoseLandmarker.createFromOptions(vision,{
+          baseOptions:{
+            modelAssetPath:"https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task",
+            delegate:"GPU"
+          },
+          runningMode:"IMAGE",
+          numPoses:1,
+          minPoseDetectionConfidence:.5,
+          minPosePresenceConfidence:.5,
+          minTrackingConfidence:.5
+        });
+      }catch(gpuErr){
+        poseLandmarker=await PoseLandmarker.createFromOptions(vision,{
+          baseOptions:{
+            modelAssetPath:"https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task"
+          },
+          runningMode:"IMAGE",
+          numPoses:1,
+          minPoseDetectionConfidence:.5,
+          minPosePresenceConfidence:.5,
+          minTrackingConfidence:.5
+        });
+      }
+      status("Poseモデル：準備OK","ok");
+      return poseLandmarker;
+    }catch(e){
+      status("Poseモデル：読込失敗","bad");
+      poseInitPromise=null;
+      throw e;
+    }
+  })();
+  return poseInitPromise;
+}
+
+const LEFT={shoulder:11,hip:23,knee:25,ankle:27,heel:29,foot:31};
+const RIGHT={shoulder:12,hip:24,knee:26,ankle:28,heel:30,foot:32};
+
+function vis(lm,idx){return Number(lm[idx]?.visibility??1)}
+function sideScore(lm,s){return [s.shoulder,s.hip,s.knee,s.ankle,s.foot].reduce((a,i)=>a+vis(lm,i),0)/5}
+function pt(lm,idx,w,h){return {x:lm[idx].x*w,y:lm[idx].y*h,v:vis(lm,idx)}}
+function angle3(a,b,c){
+  const v1={x:a.x-b.x,y:a.y-b.y},v2={x:c.x-b.x,y:c.y-b.y};
+  const dot=v1.x*v2.x+v1.y*v2.y,m1=Math.hypot(v1.x,v1.y),m2=Math.hypot(v2.x,v2.y);
+  if(!m1||!m2)return null;
+  return Math.acos(Math.max(-1,Math.min(1,dot/(m1*m2))))*180/Math.PI;
+}
+function trunkAngle(sh,hip){return Math.atan2(Math.abs(sh.x-hip.x),Math.abs(sh.y-hip.y))*180/Math.PI}
+function depthInfo(hip,knee,h){
+  const d=(hip.y-knee.y)/h;
+  if(d>=.015)return {label:"ランドマーク上は平行以下",delta:d};
+  if(d>=-.02)return {label:"ほぼ平行",delta:d};
+  return {label:"平行より浅め",delta:d};
+}
+function drawLine(ctx,a,b,color="#d6b75a",width=5){ctx.strokeStyle=color;ctx.lineWidth=width;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}
+function drawDot(ctx,p,color="#fff"){ctx.fillStyle=color;ctx.beginPath();ctx.arc(p.x,p.y,7,0,Math.PI*2);ctx.fill();ctx.strokeStyle="#111";ctx.lineWidth=2;ctx.stroke()}
+function drawLabel(ctx,text,x,y){
+  ctx.font="700 22px system-ui";const pad=8,w=ctx.measureText(text).width+pad*2;
+  ctx.fillStyle="rgba(0,0,0,.78)";ctx.fillRect(x-4,y-25,w,31);
+  ctx.fillStyle="#f1d77c";ctx.fillText(text,x+pad-4,y-2);
+}
+
+window.analyzeSquatRom=async function(){
+  const img=document.getElementById("romSourceImage");
+  if(!img?.naturalWidth)return window.__SUG_ROM_ERROR__?.("先に側面画像を選択してください。");
+  const btn=document.getElementById("romAnalyzeBtn");
+  btn.disabled=true;btn.textContent="解析中...";
+  try{
+    const model=await ensurePose();
+    const result=model.detect(img);
+    const lm=result?.landmarks?.[0];
+    if(!lm)throw new Error("人物の姿勢を検出できません。全身が見える側面画像で再撮影してください。");
+
+    const canvas=document.getElementById("romCanvas");
+    if(!canvas)throw new Error("画像キャンバスを準備できませんでした。");
+    const ctx=canvas.getContext("2d");
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.drawImage(img,0,0,canvas.width,canvas.height);
+
+    const lScore=sideScore(lm,LEFT),rScore=sideScore(lm,RIGHT);
+    const s=lScore>=rScore?LEFT:RIGHT,sideLabel=lScore>=rScore?"左側ランドマーク":"右側ランドマーク";
+    const sh=pt(lm,s.shoulder,canvas.width,canvas.height),hip=pt(lm,s.hip,canvas.width,canvas.height),
+          knee=pt(lm,s.knee,canvas.width,canvas.height),ankle=pt(lm,s.ankle,canvas.width,canvas.height),
+          foot=pt(lm,s.foot,canvas.width,canvas.height);
+
+    const confidence=Math.min(sh.v,hip.v,knee.v,ankle.v,foot.v);
+    if(confidence<.35)throw new Error("主要関節の検出信頼度が低いです。身体の側面全体が明るく見える画像で再撮影してください。");
+
+    const kneeA=angle3(hip,knee,ankle),hipA=angle3(sh,hip,knee),ankleA=angle3(knee,ankle,foot),trunk=trunkAngle(sh,hip);
+    const depth=depthInfo(hip,knee,canvas.height);
+
+    // Reference left-right knee difference only when both sides are reasonably visible.
+    let lrDiff=null;
+    const minLR=Math.min(vis(lm,LEFT.hip),vis(lm,LEFT.knee),vis(lm,LEFT.ankle),vis(lm,RIGHT.hip),vis(lm,RIGHT.knee),vis(lm,RIGHT.ankle));
+    if(minLR>=.55){
+      const lk=angle3(pt(lm,LEFT.hip,canvas.width,canvas.height),pt(lm,LEFT.knee,canvas.width,canvas.height),pt(lm,LEFT.ankle,canvas.width,canvas.height));
+      const rk=angle3(pt(lm,RIGHT.hip,canvas.width,canvas.height),pt(lm,RIGHT.knee,canvas.width,canvas.height),pt(lm,RIGHT.ankle,canvas.width,canvas.height));
+      if(lk!=null&&rk!=null)lrDiff=Math.abs(lk-rk);
+    }
+
+    [ [sh,hip],[hip,knee],[knee,ankle],[ankle,foot] ].forEach(([a,b])=>drawLine(ctx,a,b));
+    [sh,hip,knee,ankle,foot].forEach(p=>drawDot(ctx,p));
+    drawLabel(ctx,`股 ${Math.round(hipA)}°`,hip.x+12,hip.y-8);
+    drawLabel(ctx,`膝 ${Math.round(kneeA)}°`,knee.x+12,knee.y-8);
+    drawLabel(ctx,`足 ${Math.round(ankleA)}°`,ankle.x+12,ankle.y-8);
+
+    let advice="";
+    if(depth.label==="平行より浅め")advice="今回のボトムはランドマーク基準で平行より浅め。重量を上げる前に、狙うROMを再現できるか確認。";
+    else if(depth.label==="ほぼ平行")advice="ランドマーク基準ではほぼ平行。次回も同じカメラ位置で再現性を比較。";
+    else advice="ランドマーク基準では平行以下まで到達。深さだけでなく、膝・股関節角度とフォーム再現性を継続比較。";
+    if(lrDiff!=null&&lrDiff>=10)advice+=` 左右膝角差が約${lrDiff.toFixed(0)}°あるため、正面撮影でも左右差を確認候補。`;
+
+    window.__SUG_ROM_RESULT__?.({
+      exercise:"squat",sideLabel,visibility:confidence,kneeAngle:kneeA,hipAngle:hipA,
+      ankleAngle:ankleA,trunkAngle:trunk,depthLabel:depth.label,depthDelta:depth.delta,
+      lrKneeDiff:lrDiff,advice
+    });
+  }catch(e){
+    console.error(e);window.__SUG_ROM_ERROR__?.(e?.message||String(e));
+  }finally{
+    btn.disabled=false;btn.textContent="スクワットROMを自動判定";
+  }
+};
+</script>
+
 </body>
 </html>
