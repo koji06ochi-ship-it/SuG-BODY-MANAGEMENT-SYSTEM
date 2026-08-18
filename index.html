@@ -12,9 +12,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="S.u.G BODY">
-<link rel="manifest" href="./manifest.webmanifest?v=25-movement-screen-fix">
-<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png?v=25-movement-screen-fix">
-<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=25-movement-screen-fix">
+<link rel="manifest" href="./manifest.webmanifest?v=25-integrated-assessment">
+<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png?v=25-integrated-assessment">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=25-integrated-assessment">
 <style>
 :root{
   --bg:#09090a;--card:#141417;--card2:#1a1a1f;--gold:#d8b35b;--gold2:#f3d98b;
@@ -275,6 +275,34 @@ button.primary{box-shadow:0 5px 18px rgba(184,140,50,.10)}
 .moveFlag.warn{background:#211c10;border:1px solid #6a5727;color:#f0d88a}
 .moveFlag.bad{background:#211214;border:1px solid #713436;color:#ffc0c0}
 .moveFlag.info{background:#15151a;border:1px solid #3b3b44;color:#c9c9d2}
+.integratedHero{border:1px solid #5a4a25;background:linear-gradient(180deg,#18140d,#100e0a);border-radius:15px;padding:13px;margin-top:9px}
+.integratedHero.good{border-color:#315a43;background:linear-gradient(180deg,#102017,#0c1510)}
+.integratedHero.warn{border-color:#6a5727}
+.integratedHero.bad{border-color:#713436;background:linear-gradient(180deg,#211214,#150d0e)}
+.integratedHeroTop{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.integratedHeroTitle{font-size:18px;font-weight:900;color:#f1d77c}
+.integratedHero.good .integratedHeroTitle{color:#a8e9c0}
+.integratedHero.bad .integratedHeroTitle{color:#ffc0c0}
+.integratedHero small{display:block;color:#aaa;font-size:9px;line-height:1.6;margin-top:5px}
+.integratedStats{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:10px}
+.integratedStat{background:#0c0c0f;border:1px solid #303038;border-radius:11px;padding:9px;text-align:center}
+.integratedStat span{display:block;color:#8d8d93;font-size:8px}
+.integratedStat b{display:block;font-size:13px;margin-top:3px}
+.integratedPriority{display:grid;grid-template-columns:34px 1fr;gap:9px;background:#0c0c0f;border:1px solid #303038;border-radius:13px;padding:10px;margin-top:8px}
+.integratedNo{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#211d14;border:1px solid #5a4a25;color:#f1d77c;font-weight:900}
+.integratedPriority.bad{border-color:#713436}.integratedPriority.warn{border-color:#6a5727}.integratedPriority.good{border-color:#315a43}
+.integratedPriority h3{font-size:11px;margin:0;color:#f2f2f4}
+.integratedPriority p{font-size:9px;line-height:1.6;color:#aaa;margin:4px 0 0}
+.integratedNext{margin-top:6px;font-size:9px;line-height:1.6;color:#ddd}
+.integratedNext b{color:#f1d77c}
+.integratedSource{display:inline-block;margin-top:5px;font-size:8px;padding:2px 6px;border-radius:999px;border:1px solid #3b3b44;color:#aaa}
+.integratedPlan{margin-top:9px;background:#15120c;border:1px solid #5a4a25;border-radius:13px;padding:11px;font-size:10px;line-height:1.7}
+.integratedPlan b{color:#f1d77c}
+.integratedDataGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin-top:9px}
+.integratedData{background:#0c0c0f;border:1px solid #303038;border-radius:11px;padding:9px;font-size:9px;line-height:1.55;color:#aaa}
+.integratedData b{display:block;color:#eee;font-size:10px;margin-bottom:3px}
+@media(max-width:620px){.integratedStats{grid-template-columns:repeat(2,1fr)}.integratedDataGrid{grid-template-columns:1fr}}
+
 @media(max-width:520px){.moveScreenGrid{grid-template-columns:1fr}}
 
 .shrPhotoGrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:9px}
@@ -309,7 +337,7 @@ window.SUG_CLOUD_CONFIG = {
 
 <div id="authGate" class="authGate">
   <div class="authBox">
-    <img class="authBrandLogo" src="./brand-header.png?v=25-movement-screen-fix" alt="S.u.G OSAKA">
+    <img class="authBrandLogo" src="./brand-header.png?v=25-integrated-assessment" alt="S.u.G OSAKA">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
     <div class="sub">V25 SMART CORE / MEMBERS ONLY</div>
     <label>メールアドレス</label>
@@ -320,7 +348,7 @@ window.SUG_CLOUD_CONFIG = {
     <div class="authLinks"><button class="linkBtn" type="button" onclick="requestPasswordReset()">パスワードを忘れた方</button></div>
     <div id="authError" class="authError"></div>
     <div class="setupNote">S.u.G会員限定。管理者から届いた招待リンクで初回登録してください。</div>
-    <img class="authMascot" src="./mascot-highfive.png?v=25-movement-screen-fix" alt="">
+    <img class="authMascot" src="./mascot-highfive.png?v=25-integrated-assessment" alt="">
     <div id="pwaGuide" class="pwaGuide hidden"><b>iPhoneホーム画面対応</b><br>Safariの共有ボタン →「ホーム画面に追加」で、アプリのように起動できます。</div>
   </div>
 </div>
@@ -425,7 +453,7 @@ window.SUG_CLOUD_CONFIG = {
 <header>
   <div class="head">
     <div class="brandIdentity">
-      <img class="brandHeaderLogo" src="./brand-header.png?v=25-movement-screen-fix" alt="S.u.G OSAKA">
+      <img class="brandHeaderLogo" src="./brand-header.png?v=25-integrated-assessment" alt="S.u.G OSAKA">
       <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V25.1 SMART CORE / MANAGEMENT 1.1</small></div>
     </div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
@@ -458,7 +486,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="adminBoard" class="panel">
     <div id="adminBrandHero" class="card adminBrandHero">
-      <img class="adminOfficialLogo" src="./brand-official.jpg?v=25-movement-screen-fix" alt="S.u.G OSAKA official brand">
+      <img class="adminOfficialLogo" src="./brand-official.jpg?v=25-integrated-assessment" alt="S.u.G OSAKA official brand">
       <div class="adminBrandText"><h2>S.u.G OSAKA</h2><p>PERSONAL TRAINING × PERSONAL STRETCH × CONDITIONING<br>会員管理・予約・フォロー・コンディションを一つの運営画面へ。</p></div>
     </div>
     <div class="card dailyOpsCard">
@@ -583,11 +611,11 @@ window.SUG_CLOUD_CONFIG = {
   <section id="dash" class="panel active">
     <div class="card sugHero">
       <div>
-        <img class="sugHeroLogo" src="./brand-header.png?v=25-movement-screen-fix" alt="S.u.G OSAKA">
+        <img class="sugHeroLogo" src="./brand-header.png?v=25-integrated-assessment" alt="S.u.G OSAKA">
         <div class="sugHeroTitle">鍛える。整える。魅せる。</div>
         <div class="sugHeroSub">TRAINING / CONDITIONING / STYLE UPDATE<br>記録して、管理して、次の身体へ。</div>
       </div>
-      <img class="sugHeroMascot" src="./mascot-highfive.png?v=25-movement-screen-fix" alt="">
+      <img class="sugHeroMascot" src="./mascot-highfive.png?v=25-integrated-assessment" alt="">
     </div>
     <div class="card">
       <h2>現在の状態</h2>
@@ -639,7 +667,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="smart" class="panel">
     <div class="card smartHero">
-      <div class="sectionLead"><div><div class="smartHeroTitle">S.u.G SMART PLAN</div><div class="smartHeroSub">外部AI・APIなし。会員データとS.u.Gルールから「今日の優先順位」を自動計算します。</div></div><img class="sectionMascot" src="./mascot-highfive.png?v=25-movement-screen-fix" alt=""></div>
+      <div class="sectionLead"><div><div class="smartHeroTitle">S.u.G SMART PLAN</div><div class="smartHeroSub">外部AI・APIなし。会員データとS.u.Gルールから「今日の優先順位」を自動計算します。</div></div><img class="sectionMascot" src="./mascot-highfive.png?v=25-integrated-assessment" alt=""></div>
       <div id="smartTargetNotice" class="notice" style="margin-top:9px">分析対象を確認中...</div>
       <div class="grid2" style="margin-top:10px">
         <div><label>今日の食欲</label><select id="smartAppetite" onchange="saveSmartContext()"><option value="normal">普通</option><option value="low">低い</option><option value="high">強い</option></select></div>
@@ -681,7 +709,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="activity" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>歩数・活動</h2><div class="muted">現行V25は手入力。Apple Health / HealthKit自動連携は次段階で接続。</div></div><img class="sectionMascot" src="./mascot-jumprope.png?v=25-movement-screen-fix" alt=""></div>
+      <div class="sectionLead"><div><h2>歩数・活動</h2><div class="muted">現行V25は手入力。Apple Health / HealthKit自動連携は次段階で接続。</div></div><img class="sectionMascot" src="./mascot-jumprope.png?v=25-integrated-assessment" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="aDate" type="date"></div><div><label>歩数</label><input id="aSteps" type="number" min="0" step="100"></div></div>
       <div style="margin-top:8px"><label>メモ</label><input id="aMemo" placeholder="例：通勤＋散歩、脚トレ日、外出少なめ"></div>
       <button class="primary" style="width:100%;margin-top:9px" onclick="addActivity()">歩数を記録</button>
@@ -692,7 +720,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="care" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>症状別セルフケア</h2><div class="muted">腰・首・肩・膝・足首・手首・肘。診断ではなく、痛む場所と動作 → 危険サイン確認 → 軽いセルフケア → 前後評価。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-movement-screen-fix" alt=""></div>
+      <div class="sectionLead"><div><h2>症状別セルフケア</h2><div class="muted">腰・首・肩・膝・足首・手首・肘。診断ではなく、痛む場所と動作 → 危険サイン確認 → 軽いセルフケア → 前後評価。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-integrated-assessment" alt=""></div>
       <div class="notice">強い症状・外傷・神経症状などがある場合はセルフケアより医療評価を優先します。痛みやしびれが増える動きは中止してください。</div>
       <div class="selfCareChoice" style="margin-top:9px"><div><label>部位</label><select id="careArea" onchange="renderCareQuestions()"><option value="lowback">腰</option><option value="neck">首</option><option value="shoulder">肩</option><option value="knee">膝</option><option value="ankle">足首</option><option value="wrist">手首</option><option value="elbow">肘</option></select></div><div><label>痛み BEFORE 0-10</label><input id="carePainBefore" type="number" min="0" max="10" value="3"></div></div>
       <div class="selfCareChoice" style="margin-top:8px"><div><label>痛む場所</label><select id="careLocation"></select></div><div><label>痛む動作</label><select id="careMovement"></select></div></div>
@@ -708,7 +736,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="weight" class="panel">
     <div class="card">
-      <img class="mascotMini" src="./mascot-jumprope.png?v=25-movement-screen-fix" alt="">
+      <img class="mascotMini" src="./mascot-jumprope.png?v=25-integrated-assessment" alt="">
       <h2>体重記録</h2>
       <div class="grid2"><div><label>日付</label><input id="wDate" type="date"></div><div><label>体重 kg</label><input id="wWeight" type="number" step="0.1"></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>体脂肪率 %</label><input id="wFat" type="number" step="0.1"></div><div><label>メモ</label><input id="wMemo"></div></div>
@@ -730,7 +758,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="training" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>トレーニング記録</h2><div class="muted">重量・REP・SET・RIR・総重量・推定1RMを記録し、前回からの進歩を確認。</div></div><img class="sectionMascot" src="./mascot-basketball.png?v=25-movement-screen-fix" alt=""></div>
+      <div class="sectionLead"><div><h2>トレーニング記録</h2><div class="muted">重量・REP・SET・RIR・総重量・推定1RMを記録し、前回からの進歩を確認。</div></div><img class="sectionMascot" src="./mascot-basketball.png?v=25-integrated-assessment" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="tDate" type="date"></div><div><label>種目</label><input id="tExercise" placeholder="スミススクワット"></div></div>
       <div class="grid4" style="margin-top:8px"><div><label>重量</label><input id="tWeight" type="number" step="0.5" oninput="renderTrainingPreview()"></div><div><label>REP</label><input id="tReps" type="number" oninput="renderTrainingPreview()"></div><div><label>SET</label><input id="tSets" type="number" oninput="renderTrainingPreview()"></div><div><label>RIR</label><input id="tRir" type="number" step="0.5"></div></div>
       <div class="kpis" style="margin-top:8px"><div class="kpi"><span>総重量</span><b id="tVolumePreview">0kg</b></div><div class="kpi"><span>推定1RM</span><b id="tE1rmPreview">0kg</b></div></div>
@@ -744,7 +772,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="rom" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>ROMスクリーニング</h2><div class="muted">V25初期版：スクワットの側面画像から、2DランドマークでボトムROMを数値化。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-movement-screen-fix" alt=""></div>
+      <div class="sectionLead"><div><h2>ROMスクリーニング</h2><div class="muted">V25初期版：スクワットの側面画像から、2DランドマークでボトムROMを数値化。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-integrated-assessment" alt=""></div>
       <div class="notice">撮影：真横から全身を入れ、スクワット最下点で撮影。カメラは傾けず、肩・股関節・膝・足首・つま先が見える状態を推奨。</div>
       <div class="grid2" style="margin-top:9px">
         <div><label>日付</label><input id="romDate" type="date"></div>
@@ -761,7 +789,7 @@ window.SUG_CLOUD_CONFIG = {
       <div id="romResult"><span class="muted">画像を解析すると結果が表示されます。</span></div>
     </div>
     <div class="card">
-      <div class="sectionLead"><div><h2>関節 AROM / PROM</h2><div class="muted">ストレッチ・コンディショニング側の関節可動域評価。AROM＝自力、PROM＝外力補助で確認。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-movement-screen-fix" alt=""></div>
+      <div class="sectionLead"><div><h2>関節 AROM / PROM</h2><div class="muted">ストレッチ・コンディショニング側の関節可動域評価。AROM＝自力、PROM＝外力補助で確認。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-integrated-assessment" alt=""></div>
       <div class="notice">PROMは痛みを押して無理に測らないでください。AROMだけでも判定可能。伸展は0°を基準とし、伸展不足はマイナス入力（例：膝伸展10°不足＝-10°）。</div>
       <div class="grid2" style="margin-top:9px">
         <div><label>日付</label><input id="aromDate" type="date"></div>
@@ -820,7 +848,7 @@ window.SUG_CLOUD_CONFIG = {
       <div id="aromResult"><span class="muted">数値を入力すると、参考帯・AROM/PROM差・機能への影響候補を表示します。</span></div>
     </div>
     <div class="card">
-      <div class="sectionLead"><div><h2>肩甲上腕リズム（SHR）</h2><div class="muted">写真で腕の挙上角を自動検出＋肩甲骨だけ2点タップ。数字を自分で測らなくてOK。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-movement-screen-fix" alt=""></div>
+      <div class="sectionLead"><div><h2>肩甲上腕リズム（SHR）</h2><div class="muted">写真で腕の挙上角を自動検出＋肩甲骨だけ2点タップ。数字を自分で測らなくてOK。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-integrated-assessment" alt=""></div>
 
       <div class="notice">
         <b>撮影：</b>後ろから、全身または腰〜頭まで入るように撮影。①腕を体側に下ろした写真 ②同じ位置から腕を上げた写真。肩甲面挙上か外転が一番測りやすい。
@@ -901,7 +929,7 @@ window.SUG_CLOUD_CONFIG = {
       <div class="muted">同日・同動作で左右を保存すると、自動で差が大きい順に表示。</div>
       <div id="aromAsymmetry" style="margin-top:8px"><span class="muted">左右データなし</span></div>
     </div>    <div class="card">
-      <div class="sectionLead"><div><h2>Joint by Joint MAP</h2><div class="muted">関節可動域・左右差・CARE・SHRを統合して、次に見る場所を自動整理。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-movement-screen-fix" alt=""></div>
+      <div class="sectionLead"><div><h2>Joint by Joint MAP</h2><div class="muted">関節可動域・左右差・CARE・SHRを統合して、次に見る場所を自動整理。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-integrated-assessment" alt=""></div>
       <div class="notice">S.u.Gの運動スクリーニング用フレーム。ROMだけで「安定性不足」や原因筋を断定しません。膝・腰などの安定性は次の動作スクリーンと合わせて評価します。</div>
       <button class="secondary" style="width:100%;margin-top:9px" onclick="renderJointByJoint()">最新データで更新</button>
       <div id="jbjPriority" class="jbjPriority"><b>優先候補</b><br>評価データを入力すると表示します。</div>
@@ -909,7 +937,7 @@ window.SUG_CLOUD_CONFIG = {
     </div>
 
     <div class="card">
-      <div class="sectionLead"><div><h2>動作スクリーン</h2><div class="muted">写真1枚からPoseを自動解析。動作の「傾向」を数値化して、ROM・CARE・Joint by Jointとつなげます。</div></div><img class="sectionMascot" src="./mascot-running.png?v=25-movement-screen-fix" alt=""></div>
+      <div class="sectionLead"><div><h2>動作スクリーン</h2><div class="muted">写真1枚からPoseを自動解析。動作の「傾向」を数値化して、ROM・CARE・Joint by Jointとつなげます。</div></div><img class="sectionMascot" src="./mascot-running.png?v=25-integrated-assessment" alt=""></div>
       <div class="notice"><b>診断ではありません。</b> 2D写真はカメラ位置・奥行き・動作の瞬間で数値が変わります。同じ撮影条件で左右・前回比較を優先します。</div>
 
       <div class="grid2" style="margin-top:9px">
@@ -944,6 +972,19 @@ window.SUG_CLOUD_CONFIG = {
     </div>
 
     <div class="card">
+      <div class="sectionLead"><div><h2>S.u.G 統合判定</h2><div class="muted">CARE・回復・ROM・AROM/PROM・SHR・動作スクリーン・トレーニングを横断し、今の優先課題TOP3を自動整理。</div></div><img class="sectionMascot" src="./mascot-highfive.png?v=25-integrated-assessment" alt=""></div>
+      <div class="notice">各評価の「診断」を行う機能ではありません。記録間の組み合わせから、次に確認・調整する優先順位を作るS.u.G運用支援です。</div>
+      <button class="primary" style="width:100%;margin-top:9px" onclick="renderIntegratedAssessment(true)">最新データで統合判定</button>
+      <div id="integratedResult"><span class="muted">記録を入力すると自動で統合します。</span></div>
+      <button id="integratedSaveBtn" class="secondary" style="width:100%;margin-top:9px" onclick="saveIntegratedAssessment()">この統合判定を保存</button>
+    </div>
+
+    <div class="card">
+      <h2>統合判定履歴</h2>
+      <div id="integratedHistory"><span class="muted">履歴なし</span></div>
+    </div>
+
+    <div class="card">
       <h2>動作スクリーン履歴</h2>
       <div id="moveHistory"><span class="muted">履歴なし</span></div>
     </div>
@@ -957,7 +998,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="recovery" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>回復・コンディション</h2><div class="muted">睡眠・疲労・ストレス・痛みから、その日の負荷を調整。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-movement-screen-fix" alt=""></div>
+      <div class="sectionLead"><div><h2>回復・コンディション</h2><div class="muted">睡眠・疲労・ストレス・痛みから、その日の負荷を調整。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-integrated-assessment" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="rDate" type="date"></div><div><label>睡眠時間</label><input id="rSleep" type="number" step="0.1"></div></div>
       <div class="grid3" style="margin-top:8px"><div><label>疲労 1-10</label><input id="rFatigue" type="number" min="1" max="10"></div><div><label>ストレス 1-10</label><input id="rStress" type="number" min="1" max="10"></div><div><label>痛み 0-10</label><input id="rPain" type="number" min="0" max="10"></div></div>
       <div style="margin-top:8px"><label>メモ</label><textarea id="rMemo"></textarea></div>
@@ -969,7 +1010,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="checkin" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>週間チェックイン</h2><div class="muted">今週の身体と生活を短時間で共有。コーチングの調整材料にします。</div></div><img class="sectionMascot" src="./mascot-running.png?v=25-movement-screen-fix" alt=""></div>
+      <div class="sectionLead"><div><h2>週間チェックイン</h2><div class="muted">今週の身体と生活を短時間で共有。コーチングの調整材料にします。</div></div><img class="sectionMascot" src="./mascot-running.png?v=25-integrated-assessment" alt=""></div>
       <div class="notice">週1回の自己申告です。数値は管理の目安として使い、体調の診断には使用しません。</div>
       <div class="grid2" style="margin-top:9px"><div><label>日付</label><input id="ciDate" type="date"></div><div><label>体調 1-5</label><input id="ciCondition" type="number" min="1" max="5" value="3"></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>睡眠満足度 1-5</label><input id="ciSleep" type="number" min="1" max="5" value="3"></div><div><label>痛み 0-10</label><input id="ciPain" type="number" min="0" max="10" value="0"></div></div>
@@ -1023,7 +1064,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="profile" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>会員情報</h2><div class="muted">目標・栄養・注意事項をS.u.Gの管理基準として保存。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-movement-screen-fix" alt=""></div>
+      <div class="sectionLead"><div><h2>会員情報</h2><div class="muted">目標・栄養・注意事項をS.u.Gの管理基準として保存。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-integrated-assessment" alt=""></div>
       <div class="grid2"><div><label>氏名</label><input id="pfName"></div><div><label>目的</label><select id="pfGoal"><option>筋肥大</option><option>減量</option><option>増量</option><option>健康維持</option><option>姿勢改善</option></select></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>目標体重</label><input id="pfTargetWeight" type="number" step="0.1"></div><div><label>目標kcal</label><input id="pfTargetKcal" type="number"></div></div>
       <div class="grid3" style="margin-top:8px"><div><label>目標P</label><input id="pfP" type="number"></div><div><label>目標F</label><input id="pfF" type="number"></div><div><label>目標C</label><input id="pfC" type="number"></div></div>
@@ -1148,7 +1189,7 @@ function baseMember(name="新規会員"){
   return {profile:{name,goal:"筋肥大",targetWeight:0,targetKcal:0,targetP:0,targetF:0,targetC:0,experience:"intermediate",trainingDays:3,priorityPart:"全身",sessionMinutes:60,notes:""},
     coachPlan:{weeklyFocus:"",nextAction:"",nextSessionDate:"",targetTrainingDays:0,targetSleep:0,targetSteps:0,completedAt:null,updatedAt:null},
     smartContext:{appetite:"normal",dayType:"training",updatedAt:null},
-    weights:[],meals:[],training:[],recovery:[],checkins:[],activity:[],selfCare:[],smartPlans:[],romAssessments:[],aromAssessments:[],shrAssessments:[],movementScreens:[],photos:[]}
+    weights:[],meals:[],training:[],recovery:[],checkins:[],activity:[],selfCare:[],smartPlans:[],romAssessments:[],aromAssessments:[],shrAssessments:[],movementScreens:[],integratedAssessments:[],photos:[]}
 }
 function m(){return db.members[db.current]}
 function esc(s){return String(s??"").replace(/[&<>"']/g,x=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[x]))}
@@ -1617,7 +1658,7 @@ async function loadMember(id){
   if(!db.members[id].smartContext || typeof db.members[id].smartContext!=="object") db.members[id].smartContext=baseMember(p?.display_name||"会員").smartContext;
   db.members[id].smartContext={...baseMember(p?.display_name||"会員").smartContext,...db.members[id].smartContext};
 
-  ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","photos"].forEach(k=>{
+  ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","photos"].forEach(k=>{
     if(!Array.isArray(db.members[id][k]))db.members[id][k]=[];
   });
   if(!db.members[id].coachPlan || typeof db.members[id].coachPlan!=="object") db.members[id].coachPlan=baseMember(p?.display_name||"会員").coachPlan;
@@ -1695,7 +1736,7 @@ async function refreshMemberProfiles(selectId=null){
 }
 
 function inviteRedirectUrl(){
-  return location.origin+location.pathname+"?invite=1&v=25-movement-screen-fix";
+  return location.origin+location.pathname+"?invite=1&v=25-integrated-assessment";
 }
 
 async function createMemberInvite(){
@@ -2128,7 +2169,7 @@ async function refreshAdminBoard(){
     const members=accessibleProfiles.filter(p=>p.role!=="trainer").map(p=>{
       const row=byId.get(p.id);
       const mm=row?.data&&Object.keys(row.data).length?row.data:baseMember(p.display_name||"会員");
-      ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","photos"].forEach(k=>{if(!Array.isArray(mm[k]))mm[k]=[]});
+      ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","photos"].forEach(k=>{if(!Array.isArray(mm[k]))mm[k]=[]});
       if(!mm.profile)mm.profile=baseMember(p.display_name||"会員").profile;
       const st=adminStatusFor(mm);
       return {profile:p,mm,row,st,lastDate:latestRecordDate(mm)};
@@ -2937,13 +2978,13 @@ const CARE_ROUTINE={
   ]
 };
 const CARE_IMAGES={
-  lowback:"./care-lowback-hyottoko.png?v=25-movement-screen-fix",
-  neck:"./care-neck-hyottoko.png?v=25-movement-screen-fix",
-  shoulder:"./care-shoulder-hyottoko.png?v=25-movement-screen-fix",
-  knee:"./care-knee-hyottoko.png?v=25-movement-screen-fix",
-  ankle:"./care-ankle-hyottoko.png?v=25-movement-screen-fix",
-  wrist:"./care-wrist-hyottoko.png?v=25-movement-screen-fix",
-  elbow:"./care-elbow-hyottoko.png?v=25-movement-screen-fix"
+  lowback:"./care-lowback-hyottoko.png?v=25-integrated-assessment",
+  neck:"./care-neck-hyottoko.png?v=25-integrated-assessment",
+  shoulder:"./care-shoulder-hyottoko.png?v=25-integrated-assessment",
+  knee:"./care-knee-hyottoko.png?v=25-integrated-assessment",
+  ankle:"./care-ankle-hyottoko.png?v=25-integrated-assessment",
+  wrist:"./care-wrist-hyottoko.png?v=25-integrated-assessment",
+  elbow:"./care-elbow-hyottoko.png?v=25-integrated-assessment"
 };
 function carePosterHTML(area){
   const label=CARE_AREA_LABELS[area]||'セルフケア';
@@ -3371,7 +3412,7 @@ function saveSelfCareResult(){
   const box=document.getElementById("careAfterJudge");
   const pct=currentCareAssessment.painBefore>0?Math.round((currentCareAssessment.painBefore-after)/currentCareAssessment.painBefore*100):0;
   box.textContent=delta<0?`改善：${currentCareAssessment.painBefore} → ${after}（${Math.abs(delta)}ポイント低下 / ${pct}%改善）`:delta>0?`悪化：${currentCareAssessment.painBefore} → ${after}。セルフケアを中止して状態を再確認。`:`変化なし：${after}/10。無理に追加せず経過を確認。`;
-  persist();renderCareHistory();renderSmartCore();renderJointByJoint();
+  persist();renderCareHistory();renderSmartCore();renderJointByJoint();renderIntegratedAssessment();
 }
 function renderCareHistory(){
   const box=document.getElementById("careHistory");if(!box||!m())return;
@@ -3901,7 +3942,7 @@ function analyzeAromProm(){
 function saveAromResult(){
   if(!currentAromResult||!m())return alert("先にAROM / PROM判定を行ってください");
   m().aromAssessments.push({...currentAromResult,savedAt:new Date().toISOString()});
-  persist();renderAromHistory();renderAromAsymmetry();renderJointByJoint();
+  persist();renderAromHistory();renderAromAsymmetry();renderJointByJoint();renderIntegratedAssessment();
   alert("AROM / PROM判定を保存しました");
 }
 
@@ -3997,7 +4038,7 @@ function renderMoveGuide(){
 function saveMovementScreen(){
   if(!currentMovementResult||!m())return alert("先に動作スクリーンを解析してください");
   m().movementScreens.push({...currentMovementResult,savedAt:new Date().toISOString()});
-  persist();renderMovementHistory();renderJointByJoint();
+  persist();renderMovementHistory();renderJointByJoint();renderIntegratedAssessment();
   alert("動作スクリーンを保存しました");
 }
 function renderMovementHistory(){
@@ -4011,6 +4052,232 @@ function renderMovementHistory(){
 function latestMovement(type){
   const rows=(m()?.movementScreens||[]).filter(x=>x.type===type);
   return rows.slice().sort((a,b)=>String(a.savedAt||a.date||"").localeCompare(String(b.savedAt||b.date||""))).at(-1)||null;
+}
+
+
+let currentIntegratedAssessment=null;
+
+const INTEGRATED_REGION_MAP={
+  cervical_flex:"頸椎",cervical_ext:"頸椎",cervical_rot:"頸椎",cervical_lat:"頸椎",
+  shoulder_flex:"肩関節",shoulder_ext:"肩関節",shoulder_abd:"肩関節",shoulder_er:"肩関節",shoulder_ir:"肩関節",shoulder_hflex:"肩関節",shoulder_hext:"肩関節",
+  thoracic_rot:"胸椎",thoracic_flex:"胸椎",thoracic_ext:"胸椎",thoracic_lat:"胸椎",
+  hip_flex:"股関節",hip_ext:"股関節",hip_abd:"股関節",hip_add:"股関節",hip_er:"股関節",hip_ir:"股関節",
+  knee_flex:"膝",knee_ext:"膝",
+  ankle_df:"足部・足関節",ankle_pf:"足部・足関節",foot_inv:"足部・足関節",foot_ev:"足部・足関節",
+  elbow_flex:"肘・前腕",elbow_ext:"肘・前腕",forearm_pron:"肘・前腕",forearm_sup:"肘・前腕",
+  wrist_flex:"手関節",wrist_ext:"手関節",wrist_radial:"手関節",wrist_ulnar:"手関節"
+};
+const INTEGRATED_CARE_REGION={lowback:"腰・骨盤",neck:"頸椎",shoulder:"肩・肩甲帯",knee:"膝",ankle:"足部・足関節",wrist:"手関節",elbow:"肘・前腕"};
+
+function intLatestByDate(rows=[]){
+  return rows.slice().sort((a,b)=>String(a.savedAt||a.date||"").localeCompare(String(b.savedAt||b.date||""))).at(-1)||null;
+}
+function intPriority(title,score,evidence,next,source,level="warn"){
+  return {title,score:Number(score||0),evidence,next,source,level};
+}
+function intLevel(score){
+  return score>=85?"bad":score>=45?"warn":"good";
+}
+function intLatestTrainingDate(){
+  return (m()?.training||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1)?.date||null;
+}
+function intDaysSince(date){
+  if(!date)return null;
+  const a=new Date(`${date}T12:00:00`),b=new Date(`${today()}T12:00:00`);
+  return Math.max(0,Math.round((b-a)/86400000));
+}
+function intAromRegionPriorities(){
+  const rows=m()?.aromAssessments||[], latest={};
+  rows.forEach(x=>{
+    const k=`${x.key}__${x.side}`;
+    if(!latest[k] || String(latest[k].savedAt||latest[k].date||"")<String(x.savedAt||x.date||"")) latest[k]=x;
+  });
+  const regions={};
+  Object.values(latest).forEach(x=>{
+    const ref=AROM_REFERENCE[x.key],region=INTEGRATED_REGION_MAP[x.key]||"関節ROM";
+    if(!regions[region])regions[region]={score:0,evidence:[],next:""};
+    const v=Number(x.active),side=x.side==="right"?"右":"左";
+    if(ref && ref.hasNorm!==false){
+      if(v<ref.warn[0] || v>ref.warn[1]){
+        regions[region].score=Math.max(regions[region].score,70);
+        regions[region].evidence.push(`${side} ${x.label||ref.label} ${v.toFixed(0)}°｜参考帯外`);
+      }else if(v<ref.ideal[0] || v>ref.ideal[1]){
+        regions[region].score=Math.max(regions[region].score,45);
+        regions[region].evidence.push(`${side} ${x.label||ref.label} ${v.toFixed(0)}°｜参考帯付近`);
+      }
+    }
+  });
+  const pairMap={};
+  Object.values(latest).forEach(x=>{
+    const k=x.key;pairMap[k]=pairMap[k]||{};pairMap[k][x.side]=x;
+  });
+  Object.entries(pairMap).forEach(([key,pair])=>{
+    if(!pair.left||!pair.right)return;
+    const d=Math.abs(Number(pair.left.active)-Number(pair.right.active));
+    const region=INTEGRATED_REGION_MAP[key]||"関節ROM";
+    if(!regions[region])regions[region]={score:0,evidence:[],next:""};
+    if(d>=15){
+      regions[region].score=Math.max(regions[region].score,65);
+      regions[region].evidence.push(`${AROM_REFERENCE[key]?.label||key} 左右差 ${d.toFixed(0)}°`);
+    }else if(d>=10){
+      regions[region].score=Math.max(regions[region].score,45);
+      regions[region].evidence.push(`${AROM_REFERENCE[key]?.label||key} 左右差 ${d.toFixed(0)}°`);
+    }
+  });
+  return Object.entries(regions).filter(([,v])=>v.score>0).map(([region,v])=>
+    intPriority(`${region}の可動域`,v.score,v.evidence.slice(0,3).join("｜"),"同じ測定法で左右・前回差を再確認し、関連する動作スクリーンと照合。","AROM/PROM",intLevel(v.score))
+  );
+}
+function intCarePriorities(){
+  const areas=["lowback","neck","shoulder","knee","ankle","wrist","elbow"],out=[];
+  areas.forEach(area=>{
+    const c=jbjLatestCare(area);if(!c)return;
+    const after=c.painAfter==null?Number(c.painBefore||0):Number(c.painAfter);
+    let score=0;
+    if(c.result==="medical"||c.result==="stop")score=100;
+    else if(after>=6)score=100;
+    else if(after>=4)score=88;
+    else if(after>=2)score=58;
+    else score=10;
+    if(score<45)return;
+    const before=Number(c.painBefore||0),region=INTEGRATED_CARE_REGION[area]||CARE_AREA_LABELS[area]||area;
+    out.push(intPriority(`${region}の痛み`,score,`CARE ${before}→${after}/10${c.location?`｜${c.location}`:""}${c.movement?`｜${c.movement}`:""}`,score>=85?"高負荷を避け、症状の反応を優先。必要に応じて医療評価。":"該当部位は軽負荷・RIR多めで反応を再確認。","CARE",intLevel(score)));
+  });
+  return out;
+}
+function intRecoveryPriority(){
+  const r=latestRecovery();if(!r)return null;
+  const sc=recScore(r),st=smartRecoveryState();
+  let score=10;
+  if(Number(r.pain||0)>=6||sc<45)score=100;
+  else if(Number(r.pain||0)>=4||sc<60||Number(r.sleep||0)<5)score=85;
+  else if(sc<75||Number(r.fatigue||0)>=7||Number(r.stress||0)>=7||Number(r.sleep||0)<6)score=55;
+  if(score<45)return null;
+  return intPriority("回復・コンディション",score,`回復 ${sc}点｜睡眠 ${Number(r.sleep||0).toFixed(1)}h｜疲労 ${r.fatigue}/10｜ストレス ${r.stress}/10｜痛み ${r.pain}/10`,`SMART推奨：VOLUME ${st.volume}%｜${st.rir}｜${st.stepTarget?st.stepTarget.toLocaleString()+"歩":"歩数ノルマなし"}`,"回復",intLevel(score));
+}
+function intMovementPriorities(){
+  const types=["sls_front","lunge_side","hinge_side","overhead_front"],out=[];
+  types.forEach(type=>{
+    const x=latestMovement(type);if(!x)return;
+    let score=Number(x.jbjScore||0);
+    if(Number(x.pain||0)>=4)score=Math.max(score,90);
+    if(score<20)return;
+    let title=moveLabel(type),next="左右同条件・前回差を確認し、関連する関節ROMと照合。";
+    if(type==="sls_front")title="片脚スクワットの制御";
+    if(type==="hinge_side")title="ヒップヒンジの制御";
+    if(type==="overhead_front")title="両腕挙上の左右差";
+    if(type==="lunge_side")title="ランジ動作";
+    out.push(intPriority(title,Math.min(80,score+20),x.summary||"",next,"動作スクリーン",intLevel(Math.min(80,score+20))));
+  });
+  return out;
+}
+function intShrPriority(){
+  const x=jbjLatestShr();if(!x)return null;
+  const pain=Number(x.pain||0),scap=Number(x.scap||0);
+  if(pain>=4)return intPriority("肩甲帯・SHR",85,`痛み ${pain}/10｜SHR ${Number(x.ratio||0).toFixed(2)}:1`,"比率より症状を優先し、肩AROM/PROM・胸椎ROM・CAREと統合。","SHR","bad");
+  if(scap<5)return intPriority("SHR測定の再確認",40,`肩甲骨上方回旋量 ${scap.toFixed(1)}°`,"タップ位置・写真条件をそろえて再測定。","SHR","warn");
+  return null;
+}
+function intSquatRomPriority(){
+  const x=intLatestByDate(m()?.romAssessments||[]);if(!x)return null;
+  let score=0,e=[];
+  if(x.depthKey==="above"||String(x.depthLabel||"").includes("浅")){score=Math.max(score,45);e.push(`深度 ${x.depthLabel}`)}
+  [["kneeAngle","knee","膝"],["hipAngle","hip","股"],["ankleAngle","ankle","足関節"],["trunkAngle","trunk","体幹"]].forEach(([prop,key,label])=>{
+    const b=romBand(Number(x[prop]),key);
+    if(b.symbol==="△"){score=Math.max(score,45);e.push(`${label} ${Math.round(Number(x[prop]))}°`)}
+  });
+  if(score<45)return null;
+  return intPriority("スクワットROM",score,e.join("｜"),"同じカメラ位置・同じ深さで再測定し、足関節/股関節AROMと照合。","動作ROM","warn");
+}
+function intTrainingSummary(){
+  const rows=m()?.training||[];
+  if(!rows.length)return {label:"記録なし",detail:"トレーニング記録を作ると進行度を統合できます。"};
+  const exs=[...new Set(rows.map(x=>x.exercise))].slice(-3).reverse();
+  const details=exs.map(ex=>`${ex}：${nextOverload(ex).txt}`);
+  const last=intLatestTrainingDate(),days=intDaysSince(last);
+  return {label:last?`最終 ${days===0?"今日":days+"日前"}`:"記録なし",detail:details.join("｜")};
+}
+function buildIntegratedAssessment(){
+  const st=smartRecoveryState(),care=intCarePriorities(),arom=intAromRegionPriorities(),move=intMovementPriorities(),
+        rec=intRecoveryPriority(),shr=intShrPriority(),sq=intSquatRomPriority(),train=intTrainingSummary();
+  let priorities=[...care,...arom,...move];
+  if(rec)priorities.push(rec);if(shr)priorities.push(shr);if(sq)priorities.push(sq);
+  priorities.sort((a,b)=>b.score-a.score);
+
+  // de-duplicate near-identical body regions: keep highest scoring title/source combination.
+  const seen=new Set(),dedup=[];
+  priorities.forEach(x=>{
+    const key=x.title.replace(/の痛み|の可動域|の制御/g,"");
+    if(seen.has(key) && x.score<80)return;
+    seen.add(key);dedup.push(x);
+  });
+  const top=dedup.slice(0,3);
+  let overallScore=top[0]?.score||0;
+  let overall={label:"通常運用候補",cls:"good",detail:"強い注意項目は現時点で少ない。未測定項目は順次追加。"};
+  if(overallScore>=85)overall={label:"優先調整あり",cls:"bad",detail:"痛み・回復・高スコア項目を先に処理してから負荷を決める。"};
+  else if(overallScore>=45)overall={label:"調整候補あり",cls:"warn",detail:"一部の可動域・動作・回復項目を確認しながら運用。"};
+
+  const coverage={
+    care:(m()?.selfCare||[]).length,
+    arom:(m()?.aromAssessments||[]).length,
+    rom:(m()?.romAssessments||[]).length,
+    shr:(m()?.shrAssessments||[]).length,
+    movement:(m()?.movementScreens||[]).length,
+    recovery:(m()?.recovery||[]).length,
+    training:(m()?.training||[]).length
+  };
+  const careState=smartCareState();
+  const plan=`SMART：${st.label}｜VOLUME ${st.volume}%｜${st.rir}｜歩数 ${st.stepTarget?st.stepTarget.toLocaleString()+"歩":"ノルマなし"}${careState.active?`｜CARE ${careState.areaLabel} ${careState.painAfter}/10`:""}`;
+
+  return {
+    date:today(),createdAt:new Date().toISOString(),overall,top,plan,coverage,training:train,
+    recoveryScore:latestRecovery()?recScore(latestRecovery()):null,
+    volume:st.volume,rir:st.rir,stepTarget:st.stepTarget||0
+  };
+}
+function renderIntegratedAssessment(force=false){
+  const box=document.getElementById("integratedResult");if(!box||!m())return;
+  const a=buildIntegratedAssessment();currentIntegratedAssessment=a;
+  const cov=a.coverage;
+  const painPriority=a.top.find(x=>x.source==="CARE");
+  box.innerHTML=`<div class="integratedHero ${a.overall.cls}">
+    <div class="integratedHeroTop"><div><div class="integratedHeroTitle">${esc(a.overall.label)}</div><small>${esc(a.overall.detail)}</small></div><span class="badge ${a.overall.cls}">TOP ${a.top.length}</span></div>
+    <div class="integratedStats">
+      <div class="integratedStat"><span>回復</span><b>${a.recoveryScore==null?"--":a.recoveryScore+"点"}</b></div>
+      <div class="integratedStat"><span>推奨VOLUME</span><b>${a.volume}%</b></div>
+      <div class="integratedStat"><span>CARE</span><b>${painPriority?esc(painPriority.title):"強い項目なし"}</b></div>
+      <div class="integratedStat"><span>歩数</span><b>${a.stepTarget?a.stepTarget.toLocaleString()+"歩":"FREE"}</b></div>
+    </div>
+  </div>
+  <div style="margin-top:10px"><b style="color:#f1d77c">現在の優先課題 TOP3</b></div>
+  ${a.top.length?a.top.map((x,i)=>`<div class="integratedPriority ${x.level}">
+    <div class="integratedNo">${i+1}</div>
+    <div><h3>${esc(x.title)}</h3><p>${esc(x.evidence||"")}</p><div class="integratedNext"><b>次：</b>${esc(x.next||"")}</div><span class="integratedSource">${esc(x.source||"")}</span></div>
+  </div>`).join(""):`<div class="integratedPriority good"><div class="integratedNo">✓</div><div><h3>強い優先課題なし</h3><p>保存データ上では強い注意項目は出ていません。未測定部位は順次追加してください。</p></div></div>`}
+  <div class="integratedPlan"><b>今日の運用</b><br>${esc(a.plan)}<br><br><b>トレーニング進行</b><br>${esc(a.training.label)}｜${esc(a.training.detail)}</div>
+  <div class="integratedDataGrid">
+    <div class="integratedData"><b>身体評価データ</b>AROM/PROM ${cov.arom}件｜ROM ${cov.rom}件｜SHR ${cov.shr}件｜動作スクリーン ${cov.movement}件</div>
+    <div class="integratedData"><b>コンディションデータ</b>CARE ${cov.care}件｜回復 ${cov.recovery}件｜トレーニング ${cov.training}件</div>
+  </div>
+  <div class="romLegend">※ 優先順位はS.u.Gの管理用ルール。医療診断・傷病名の推定ではありません。痛み増悪、外傷、しびれ・脱力等の警告症状はCAREの安全分岐を優先します。</div>`;
+}
+function saveIntegratedAssessment(){
+  if(!m())return;
+  if(!currentIntegratedAssessment)renderIntegratedAssessment(true);
+  if(!currentIntegratedAssessment)return;
+  m().integratedAssessments=m().integratedAssessments||[];
+  m().integratedAssessments.push(JSON.parse(JSON.stringify(currentIntegratedAssessment)));
+  persist();renderIntegratedHistory();
+  alert("統合判定を保存しました");
+}
+function renderIntegratedHistory(){
+  const box=document.getElementById("integratedHistory");if(!box||!m())return;
+  const rows=m().integratedAssessments||[];
+  box.innerHTML=[...rows].reverse().slice(0,20).map((x,ri)=>{
+    const i=rows.length-1-ri;
+    const top=(x.top||[]).map((p,j)=>`${j+1}.${p.title}`).join("｜")||"強い優先課題なし";
+    return `<div class="item"><div class="row"><div><strong>${esc(x.date)}｜${esc(x.overall?.label||"統合判定")}</strong><br><small>${esc(top)}</small><br><small>VOLUME ${Number(x.volume||0)}%｜回復 ${x.recoveryScore==null?"--":x.recoveryScore+"点"}</small></div><button class="danger" onclick="remove('integratedAssessments',${i})">削除</button></div></div>`;
+  }).join("")||'<span class="muted">履歴なし</span>';
 }
 
 function renderJointByJoint(){
@@ -4184,7 +4451,7 @@ function analyzeShr(){
 function saveShrResult(){
   if(!currentShrResult||!m())return alert("先にSHR判定を行ってください");
   m().shrAssessments.push({...currentShrResult,savedAt:new Date().toISOString()});
-  persist();renderShrHistory();renderJointByJoint();
+  persist();renderShrHistory();renderJointByJoint();renderIntegratedAssessment();
   alert("SHR判定を保存しました");
 }
 
@@ -4254,7 +4521,7 @@ function renderRomHistory(){
 function saveRomResult(){
   if(!currentRomResult||!m())return alert("先にROM解析を行ってください");
   m().romAssessments.push({...currentRomResult,date:document.getElementById("romDate")?.value||today(),savedAt:new Date().toISOString()});
-  persist();renderRomHistory();
+  persist();renderRomHistory();renderIntegratedAssessment();
   alert("ROM判定を保存しました");
 }
 
@@ -4331,7 +4598,7 @@ function renderAll(){
   prTable.innerHTML=exs.length?`<div style="overflow-x:auto"><table class="table"><tr><th>種目</th><th>最新</th><th>総重量</th><th>推定1RM</th><th>前回比</th></tr>${exs.map(ex=>{const t=trainingTrend(ex),x=t?.cur;if(!x)return"";const prx=pr(ex);const isPr=Math.abs(e1rm(x)-e1rm(prx))<0.0001;return `<tr><td>${esc(ex)}</td><td>${x.weight}kg×${x.reps}×${x.sets}</td><td>${Math.round(t.curVol).toLocaleString()}kg</td><td>${t.curE1.toFixed(1)}kg${isPr?' PR':''}</td><td><small>総 ${fmtPct(t.volPct)}<br>1RM ${fmtPct(t.e1Pct)}</small></td></tr>`}).join("")}</table></div>`:'<span class="muted">記録なし</span>';
   recoveryJudge.innerHTML=`<span class="badge ${adv.cls}">${esc(adv.txt)}</span>`;
   recoveryList.innerHTML=[...mm.recovery].reverse().map((x,ri)=>{let i=mm.recovery.length-1-ri,a=recAdvice(x);return `<div class="item"><div class="row"><div><strong>${x.date}｜睡眠 ${x.sleep}h</strong><br><small>疲労${x.fatigue} / ストレス${x.stress} / 痛み${x.pain}</small><br><span class="badge ${a.cls}">${recScore(x)}点</span></div><button class="danger" onclick="remove('recovery',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
-  renderTrainingPreview();renderRomHistory();renderAromHistory();renderAromAsymmetry();renderAromReference();renderShrHistory();renderMovementHistory();renderMoveGuide();renderJointByJoint();renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();renderCheckin();renderSmartCore();renderActivity();renderCareHistory();drawChart();renderReport();renderPhotos();
+  renderTrainingPreview();renderRomHistory();renderAromHistory();renderAromAsymmetry();renderAromReference();renderShrHistory();renderMovementHistory();renderMoveGuide();renderJointByJoint();renderIntegratedAssessment();renderIntegratedHistory();renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();renderCheckin();renderSmartCore();renderActivity();renderCareHistory();drawChart();renderReport();renderPhotos();
 }
 
 function monthLabel(mon){
@@ -4482,7 +4749,7 @@ function normalizeMemberData(data,name="会員"){
   if(!x.profile.name)x.profile.name=name||"会員";
   if(!x.coachPlan||typeof x.coachPlan!=="object")x.coachPlan=base.coachPlan; else x.coachPlan={...base.coachPlan,...x.coachPlan};
   if(!x.smartContext||typeof x.smartContext!=="object")x.smartContext=base.smartContext; else x.smartContext={...base.smartContext,...x.smartContext};
-  ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","photos"].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});
+  ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","photos"].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});
   return x;
 }
 function backupStamp(){return new Date().toISOString()}
@@ -4631,7 +4898,7 @@ renderCareQuestions();
 // V25 SMART CORE PWA: network-only service worker to avoid stale app versions.
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=25-movement-screen-fix").catch(err => console.warn("SW register failed", err));
+    navigator.serviceWorker.register("./sw.js?v=25-integrated-assessment").catch(err => console.warn("SW register failed", err));
   });
 }
 (function(){
