@@ -12,9 +12,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="S.u.G BODY">
-<link rel="manifest" href="./manifest.webmanifest?v=25-shr-interpret-fix">
-<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png?v=25-shr-interpret-fix">
-<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=25-shr-interpret-fix">
+<link rel="manifest" href="./manifest.webmanifest?v=25-movement-screen">
+<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png?v=25-movement-screen">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=25-movement-screen">
 <style>
 :root{
   --bg:#09090a;--card:#141417;--card2:#1a1a1f;--gold:#d8b35b;--gold2:#f3d98b;
@@ -265,6 +265,18 @@ button.primary{box-shadow:0 5px 18px rgba(184,140,50,.10)}
 .jbjEvidence{font-size:9px;color:#aaa;line-height:1.6}
 .jbjPriority{margin-top:9px;padding:10px;border-radius:12px;background:#15120c;border:1px solid #5a4a25;font-size:10px;line-height:1.65}
 .jbjPriority b{color:var(--gold2)}
+.moveScreenGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:9px}
+.moveMetric{background:#0c0c0f;border:1px solid #303038;border-radius:12px;padding:10px}
+.moveMetric span{display:block;color:#8d8d93;font-size:9px}
+.moveMetric b{display:block;margin-top:3px;font-size:16px}
+.moveMetric small{display:block;margin-top:5px;color:#aaa;font-size:9px;line-height:1.5}
+.moveFlag{display:inline-block;margin-top:5px;padding:3px 7px;border-radius:999px;font-size:8px;font-weight:900}
+.moveFlag.good{background:#102017;border:1px solid #315a43;color:#a8e9c0}
+.moveFlag.warn{background:#211c10;border:1px solid #6a5727;color:#f0d88a}
+.moveFlag.bad{background:#211214;border:1px solid #713436;color:#ffc0c0}
+.moveFlag.info{background:#15151a;border:1px solid #3b3b44;color:#c9c9d2}
+@media(max-width:520px){.moveScreenGrid{grid-template-columns:1fr}}
+
 .shrPhotoGrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:9px}
 .shrPhotoBox{background:#0c0c0f;border:1px solid #303038;border-radius:13px;padding:9px}
 .shrPhotoBox h3{font-size:11px;margin:0 0 6px;color:#f2f2f4}
@@ -297,7 +309,7 @@ window.SUG_CLOUD_CONFIG = {
 
 <div id="authGate" class="authGate">
   <div class="authBox">
-    <img class="authBrandLogo" src="./brand-header.png?v=25-shr-interpret-fix" alt="S.u.G OSAKA">
+    <img class="authBrandLogo" src="./brand-header.png?v=25-movement-screen" alt="S.u.G OSAKA">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
     <div class="sub">V25 SMART CORE / MEMBERS ONLY</div>
     <label>メールアドレス</label>
@@ -308,7 +320,7 @@ window.SUG_CLOUD_CONFIG = {
     <div class="authLinks"><button class="linkBtn" type="button" onclick="requestPasswordReset()">パスワードを忘れた方</button></div>
     <div id="authError" class="authError"></div>
     <div class="setupNote">S.u.G会員限定。管理者から届いた招待リンクで初回登録してください。</div>
-    <img class="authMascot" src="./mascot-highfive.png?v=25-shr-interpret-fix" alt="">
+    <img class="authMascot" src="./mascot-highfive.png?v=25-movement-screen" alt="">
     <div id="pwaGuide" class="pwaGuide hidden"><b>iPhoneホーム画面対応</b><br>Safariの共有ボタン →「ホーム画面に追加」で、アプリのように起動できます。</div>
   </div>
 </div>
@@ -413,7 +425,7 @@ window.SUG_CLOUD_CONFIG = {
 <header>
   <div class="head">
     <div class="brandIdentity">
-      <img class="brandHeaderLogo" src="./brand-header.png?v=25-shr-interpret-fix" alt="S.u.G OSAKA">
+      <img class="brandHeaderLogo" src="./brand-header.png?v=25-movement-screen" alt="S.u.G OSAKA">
       <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V25.1 SMART CORE / MANAGEMENT 1.1</small></div>
     </div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
@@ -446,7 +458,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="adminBoard" class="panel">
     <div id="adminBrandHero" class="card adminBrandHero">
-      <img class="adminOfficialLogo" src="./brand-official.jpg?v=25-shr-interpret-fix" alt="S.u.G OSAKA official brand">
+      <img class="adminOfficialLogo" src="./brand-official.jpg?v=25-movement-screen" alt="S.u.G OSAKA official brand">
       <div class="adminBrandText"><h2>S.u.G OSAKA</h2><p>PERSONAL TRAINING × PERSONAL STRETCH × CONDITIONING<br>会員管理・予約・フォロー・コンディションを一つの運営画面へ。</p></div>
     </div>
     <div class="card dailyOpsCard">
@@ -571,11 +583,11 @@ window.SUG_CLOUD_CONFIG = {
   <section id="dash" class="panel active">
     <div class="card sugHero">
       <div>
-        <img class="sugHeroLogo" src="./brand-header.png?v=25-shr-interpret-fix" alt="S.u.G OSAKA">
+        <img class="sugHeroLogo" src="./brand-header.png?v=25-movement-screen" alt="S.u.G OSAKA">
         <div class="sugHeroTitle">鍛える。整える。魅せる。</div>
         <div class="sugHeroSub">TRAINING / CONDITIONING / STYLE UPDATE<br>記録して、管理して、次の身体へ。</div>
       </div>
-      <img class="sugHeroMascot" src="./mascot-highfive.png?v=25-shr-interpret-fix" alt="">
+      <img class="sugHeroMascot" src="./mascot-highfive.png?v=25-movement-screen" alt="">
     </div>
     <div class="card">
       <h2>現在の状態</h2>
@@ -627,7 +639,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="smart" class="panel">
     <div class="card smartHero">
-      <div class="sectionLead"><div><div class="smartHeroTitle">S.u.G SMART PLAN</div><div class="smartHeroSub">外部AI・APIなし。会員データとS.u.Gルールから「今日の優先順位」を自動計算します。</div></div><img class="sectionMascot" src="./mascot-highfive.png?v=25-shr-interpret-fix" alt=""></div>
+      <div class="sectionLead"><div><div class="smartHeroTitle">S.u.G SMART PLAN</div><div class="smartHeroSub">外部AI・APIなし。会員データとS.u.Gルールから「今日の優先順位」を自動計算します。</div></div><img class="sectionMascot" src="./mascot-highfive.png?v=25-movement-screen" alt=""></div>
       <div id="smartTargetNotice" class="notice" style="margin-top:9px">分析対象を確認中...</div>
       <div class="grid2" style="margin-top:10px">
         <div><label>今日の食欲</label><select id="smartAppetite" onchange="saveSmartContext()"><option value="normal">普通</option><option value="low">低い</option><option value="high">強い</option></select></div>
@@ -669,7 +681,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="activity" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>歩数・活動</h2><div class="muted">現行V25は手入力。Apple Health / HealthKit自動連携は次段階で接続。</div></div><img class="sectionMascot" src="./mascot-jumprope.png?v=25-shr-interpret-fix" alt=""></div>
+      <div class="sectionLead"><div><h2>歩数・活動</h2><div class="muted">現行V25は手入力。Apple Health / HealthKit自動連携は次段階で接続。</div></div><img class="sectionMascot" src="./mascot-jumprope.png?v=25-movement-screen" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="aDate" type="date"></div><div><label>歩数</label><input id="aSteps" type="number" min="0" step="100"></div></div>
       <div style="margin-top:8px"><label>メモ</label><input id="aMemo" placeholder="例：通勤＋散歩、脚トレ日、外出少なめ"></div>
       <button class="primary" style="width:100%;margin-top:9px" onclick="addActivity()">歩数を記録</button>
@@ -680,7 +692,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="care" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>症状別セルフケア</h2><div class="muted">腰・首・肩・膝・足首・手首・肘。診断ではなく、痛む場所と動作 → 危険サイン確認 → 軽いセルフケア → 前後評価。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-shr-interpret-fix" alt=""></div>
+      <div class="sectionLead"><div><h2>症状別セルフケア</h2><div class="muted">腰・首・肩・膝・足首・手首・肘。診断ではなく、痛む場所と動作 → 危険サイン確認 → 軽いセルフケア → 前後評価。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-movement-screen" alt=""></div>
       <div class="notice">強い症状・外傷・神経症状などがある場合はセルフケアより医療評価を優先します。痛みやしびれが増える動きは中止してください。</div>
       <div class="selfCareChoice" style="margin-top:9px"><div><label>部位</label><select id="careArea" onchange="renderCareQuestions()"><option value="lowback">腰</option><option value="neck">首</option><option value="shoulder">肩</option><option value="knee">膝</option><option value="ankle">足首</option><option value="wrist">手首</option><option value="elbow">肘</option></select></div><div><label>痛み BEFORE 0-10</label><input id="carePainBefore" type="number" min="0" max="10" value="3"></div></div>
       <div class="selfCareChoice" style="margin-top:8px"><div><label>痛む場所</label><select id="careLocation"></select></div><div><label>痛む動作</label><select id="careMovement"></select></div></div>
@@ -696,7 +708,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="weight" class="panel">
     <div class="card">
-      <img class="mascotMini" src="./mascot-jumprope.png?v=25-shr-interpret-fix" alt="">
+      <img class="mascotMini" src="./mascot-jumprope.png?v=25-movement-screen" alt="">
       <h2>体重記録</h2>
       <div class="grid2"><div><label>日付</label><input id="wDate" type="date"></div><div><label>体重 kg</label><input id="wWeight" type="number" step="0.1"></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>体脂肪率 %</label><input id="wFat" type="number" step="0.1"></div><div><label>メモ</label><input id="wMemo"></div></div>
@@ -718,7 +730,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="training" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>トレーニング記録</h2><div class="muted">重量・REP・SET・RIR・総重量・推定1RMを記録し、前回からの進歩を確認。</div></div><img class="sectionMascot" src="./mascot-basketball.png?v=25-shr-interpret-fix" alt=""></div>
+      <div class="sectionLead"><div><h2>トレーニング記録</h2><div class="muted">重量・REP・SET・RIR・総重量・推定1RMを記録し、前回からの進歩を確認。</div></div><img class="sectionMascot" src="./mascot-basketball.png?v=25-movement-screen" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="tDate" type="date"></div><div><label>種目</label><input id="tExercise" placeholder="スミススクワット"></div></div>
       <div class="grid4" style="margin-top:8px"><div><label>重量</label><input id="tWeight" type="number" step="0.5" oninput="renderTrainingPreview()"></div><div><label>REP</label><input id="tReps" type="number" oninput="renderTrainingPreview()"></div><div><label>SET</label><input id="tSets" type="number" oninput="renderTrainingPreview()"></div><div><label>RIR</label><input id="tRir" type="number" step="0.5"></div></div>
       <div class="kpis" style="margin-top:8px"><div class="kpi"><span>総重量</span><b id="tVolumePreview">0kg</b></div><div class="kpi"><span>推定1RM</span><b id="tE1rmPreview">0kg</b></div></div>
@@ -732,7 +744,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="rom" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>ROMスクリーニング</h2><div class="muted">V25初期版：スクワットの側面画像から、2DランドマークでボトムROMを数値化。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-shr-interpret-fix" alt=""></div>
+      <div class="sectionLead"><div><h2>ROMスクリーニング</h2><div class="muted">V25初期版：スクワットの側面画像から、2DランドマークでボトムROMを数値化。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-movement-screen" alt=""></div>
       <div class="notice">撮影：真横から全身を入れ、スクワット最下点で撮影。カメラは傾けず、肩・股関節・膝・足首・つま先が見える状態を推奨。</div>
       <div class="grid2" style="margin-top:9px">
         <div><label>日付</label><input id="romDate" type="date"></div>
@@ -749,7 +761,7 @@ window.SUG_CLOUD_CONFIG = {
       <div id="romResult"><span class="muted">画像を解析すると結果が表示されます。</span></div>
     </div>
     <div class="card">
-      <div class="sectionLead"><div><h2>関節 AROM / PROM</h2><div class="muted">ストレッチ・コンディショニング側の関節可動域評価。AROM＝自力、PROM＝外力補助で確認。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-shr-interpret-fix" alt=""></div>
+      <div class="sectionLead"><div><h2>関節 AROM / PROM</h2><div class="muted">ストレッチ・コンディショニング側の関節可動域評価。AROM＝自力、PROM＝外力補助で確認。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-movement-screen" alt=""></div>
       <div class="notice">PROMは痛みを押して無理に測らないでください。AROMだけでも判定可能。伸展は0°を基準とし、伸展不足はマイナス入力（例：膝伸展10°不足＝-10°）。</div>
       <div class="grid2" style="margin-top:9px">
         <div><label>日付</label><input id="aromDate" type="date"></div>
@@ -808,7 +820,7 @@ window.SUG_CLOUD_CONFIG = {
       <div id="aromResult"><span class="muted">数値を入力すると、参考帯・AROM/PROM差・機能への影響候補を表示します。</span></div>
     </div>
     <div class="card">
-      <div class="sectionLead"><div><h2>肩甲上腕リズム（SHR）</h2><div class="muted">写真で腕の挙上角を自動検出＋肩甲骨だけ2点タップ。数字を自分で測らなくてOK。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-shr-interpret-fix" alt=""></div>
+      <div class="sectionLead"><div><h2>肩甲上腕リズム（SHR）</h2><div class="muted">写真で腕の挙上角を自動検出＋肩甲骨だけ2点タップ。数字を自分で測らなくてOK。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-movement-screen" alt=""></div>
 
       <div class="notice">
         <b>撮影：</b>後ろから、全身または腰〜頭まで入るように撮影。①腕を体側に下ろした写真 ②同じ位置から腕を上げた写真。肩甲面挙上か外転が一番測りやすい。
@@ -889,12 +901,53 @@ window.SUG_CLOUD_CONFIG = {
       <div class="muted">同日・同動作で左右を保存すると、自動で差が大きい順に表示。</div>
       <div id="aromAsymmetry" style="margin-top:8px"><span class="muted">左右データなし</span></div>
     </div>    <div class="card">
-      <div class="sectionLead"><div><h2>Joint by Joint MAP</h2><div class="muted">関節可動域・左右差・CARE・SHRを統合して、次に見る場所を自動整理。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-shr-interpret-fix" alt=""></div>
+      <div class="sectionLead"><div><h2>Joint by Joint MAP</h2><div class="muted">関節可動域・左右差・CARE・SHRを統合して、次に見る場所を自動整理。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-movement-screen" alt=""></div>
       <div class="notice">S.u.Gの運動スクリーニング用フレーム。ROMだけで「安定性不足」や原因筋を断定しません。膝・腰などの安定性は次の動作スクリーンと合わせて評価します。</div>
       <button class="secondary" style="width:100%;margin-top:9px" onclick="renderJointByJoint()">最新データで更新</button>
       <div id="jbjPriority" class="jbjPriority"><b>優先候補</b><br>評価データを入力すると表示します。</div>
       <div id="jbjMap" class="jbjGrid"><span class="muted">評価データなし</span></div>
     </div>
+
+    <div class="card">
+      <div class="sectionLead"><div><h2>動作スクリーン</h2><div class="muted">写真1枚からPoseを自動解析。動作の「傾向」を数値化して、ROM・CARE・Joint by Jointとつなげます。</div></div><img class="sectionMascot" src="./mascot-running.png?v=25-movement-screen" alt=""></div>
+      <div class="notice"><b>診断ではありません。</b> 2D写真はカメラ位置・奥行き・動作の瞬間で数値が変わります。同じ撮影条件で左右・前回比較を優先します。</div>
+
+      <div class="grid2" style="margin-top:9px">
+        <div><label>日付</label><input id="moveDate" type="date"></div>
+        <div><label>動作</label>
+          <select id="moveType" onchange="window.renderMoveGuide?.()">
+            <option value="sls_front">片脚スクワット｜正面</option>
+            <option value="lunge_side">ランジ｜側面</option>
+            <option value="hinge_side">ヒップヒンジ｜側面</option>
+            <option value="overhead_front">両腕挙上｜正面/背面</option>
+          </select>
+        </div>
+      </div>
+      <div class="grid2" style="margin-top:8px">
+        <div><label>評価側</label><select id="moveSide"><option value="right">右</option><option value="left">左</option></select></div>
+        <div><label>痛み 0-10</label><input id="movePain" type="number" min="0" max="10" value="0"></div>
+      </div>
+
+      <div id="moveGuide" class="aromPattern" style="margin-top:8px"></div>
+
+      <div style="margin-top:8px"><label>写真</label><input id="moveFile" type="file" accept="image/*" onchange="window.loadMovementPhoto?.(this)"></div>
+      <div id="moveModelStatus" class="romStatus" style="margin-top:8px">Poseモデル：未読込</div>
+      <div class="romCanvasWrap" style="margin-top:8px"><canvas id="moveCanvas" width="900" height="900"></canvas></div>
+
+      <button id="moveAnalyzeBtn" class="primary" style="width:100%;margin-top:9px" onclick="window.analyzeMovementScreen?.()">動作を自動解析</button>
+      <div style="margin-top:8px"><label>メモ</label><input id="moveMemo" placeholder="例：右膝が内側に入りやすい、腰に違和感など"></div>
+    </div>
+
+    <div class="card">
+      <h2>動作スクリーン判定</h2>
+      <div id="moveResult"><span class="muted">写真を選択して自動解析してください。</span></div>
+    </div>
+
+    <div class="card">
+      <h2>動作スクリーン履歴</h2>
+      <div id="moveHistory"><span class="muted">履歴なし</span></div>
+    </div>
+
     <div class="card">
       <h2>動作ROM履歴</h2>
       <div id="romHistory"><span class="muted">履歴なし</span></div>
@@ -904,7 +957,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="recovery" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>回復・コンディション</h2><div class="muted">睡眠・疲労・ストレス・痛みから、その日の負荷を調整。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-shr-interpret-fix" alt=""></div>
+      <div class="sectionLead"><div><h2>回復・コンディション</h2><div class="muted">睡眠・疲労・ストレス・痛みから、その日の負荷を調整。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-movement-screen" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="rDate" type="date"></div><div><label>睡眠時間</label><input id="rSleep" type="number" step="0.1"></div></div>
       <div class="grid3" style="margin-top:8px"><div><label>疲労 1-10</label><input id="rFatigue" type="number" min="1" max="10"></div><div><label>ストレス 1-10</label><input id="rStress" type="number" min="1" max="10"></div><div><label>痛み 0-10</label><input id="rPain" type="number" min="0" max="10"></div></div>
       <div style="margin-top:8px"><label>メモ</label><textarea id="rMemo"></textarea></div>
@@ -916,7 +969,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="checkin" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>週間チェックイン</h2><div class="muted">今週の身体と生活を短時間で共有。コーチングの調整材料にします。</div></div><img class="sectionMascot" src="./mascot-running.png?v=25-shr-interpret-fix" alt=""></div>
+      <div class="sectionLead"><div><h2>週間チェックイン</h2><div class="muted">今週の身体と生活を短時間で共有。コーチングの調整材料にします。</div></div><img class="sectionMascot" src="./mascot-running.png?v=25-movement-screen" alt=""></div>
       <div class="notice">週1回の自己申告です。数値は管理の目安として使い、体調の診断には使用しません。</div>
       <div class="grid2" style="margin-top:9px"><div><label>日付</label><input id="ciDate" type="date"></div><div><label>体調 1-5</label><input id="ciCondition" type="number" min="1" max="5" value="3"></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>睡眠満足度 1-5</label><input id="ciSleep" type="number" min="1" max="5" value="3"></div><div><label>痛み 0-10</label><input id="ciPain" type="number" min="0" max="10" value="0"></div></div>
@@ -970,7 +1023,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="profile" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>会員情報</h2><div class="muted">目標・栄養・注意事項をS.u.Gの管理基準として保存。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-shr-interpret-fix" alt=""></div>
+      <div class="sectionLead"><div><h2>会員情報</h2><div class="muted">目標・栄養・注意事項をS.u.Gの管理基準として保存。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-movement-screen" alt=""></div>
       <div class="grid2"><div><label>氏名</label><input id="pfName"></div><div><label>目的</label><select id="pfGoal"><option>筋肥大</option><option>減量</option><option>増量</option><option>健康維持</option><option>姿勢改善</option></select></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>目標体重</label><input id="pfTargetWeight" type="number" step="0.1"></div><div><label>目標kcal</label><input id="pfTargetKcal" type="number"></div></div>
       <div class="grid3" style="margin-top:8px"><div><label>目標P</label><input id="pfP" type="number"></div><div><label>目標F</label><input id="pfF" type="number"></div><div><label>目標C</label><input id="pfC" type="number"></div></div>
@@ -1095,7 +1148,7 @@ function baseMember(name="新規会員"){
   return {profile:{name,goal:"筋肥大",targetWeight:0,targetKcal:0,targetP:0,targetF:0,targetC:0,experience:"intermediate",trainingDays:3,priorityPart:"全身",sessionMinutes:60,notes:""},
     coachPlan:{weeklyFocus:"",nextAction:"",nextSessionDate:"",targetTrainingDays:0,targetSleep:0,targetSteps:0,completedAt:null,updatedAt:null},
     smartContext:{appetite:"normal",dayType:"training",updatedAt:null},
-    weights:[],meals:[],training:[],recovery:[],checkins:[],activity:[],selfCare:[],smartPlans:[],romAssessments:[],aromAssessments:[],shrAssessments:[],photos:[]}
+    weights:[],meals:[],training:[],recovery:[],checkins:[],activity:[],selfCare:[],smartPlans:[],romAssessments:[],aromAssessments:[],shrAssessments:[],movementScreens:[],photos:[]}
 }
 function m(){return db.members[db.current]}
 function esc(s){return String(s??"").replace(/[&<>"']/g,x=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[x]))}
@@ -1564,7 +1617,7 @@ async function loadMember(id){
   if(!db.members[id].smartContext || typeof db.members[id].smartContext!=="object") db.members[id].smartContext=baseMember(p?.display_name||"会員").smartContext;
   db.members[id].smartContext={...baseMember(p?.display_name||"会員").smartContext,...db.members[id].smartContext};
 
-  ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","photos"].forEach(k=>{
+  ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","photos"].forEach(k=>{
     if(!Array.isArray(db.members[id][k]))db.members[id][k]=[];
   });
   if(!db.members[id].coachPlan || typeof db.members[id].coachPlan!=="object") db.members[id].coachPlan=baseMember(p?.display_name||"会員").coachPlan;
@@ -1642,7 +1695,7 @@ async function refreshMemberProfiles(selectId=null){
 }
 
 function inviteRedirectUrl(){
-  return location.origin+location.pathname+"?invite=1&v=25-shr-interpret-fix";
+  return location.origin+location.pathname+"?invite=1&v=25-movement-screen";
 }
 
 async function createMemberInvite(){
@@ -2075,7 +2128,7 @@ async function refreshAdminBoard(){
     const members=accessibleProfiles.filter(p=>p.role!=="trainer").map(p=>{
       const row=byId.get(p.id);
       const mm=row?.data&&Object.keys(row.data).length?row.data:baseMember(p.display_name||"会員");
-      ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","photos"].forEach(k=>{if(!Array.isArray(mm[k]))mm[k]=[]});
+      ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","photos"].forEach(k=>{if(!Array.isArray(mm[k]))mm[k]=[]});
       if(!mm.profile)mm.profile=baseMember(p.display_name||"会員").profile;
       const st=adminStatusFor(mm);
       return {profile:p,mm,row,st,lastDate:latestRecordDate(mm)};
@@ -2884,13 +2937,13 @@ const CARE_ROUTINE={
   ]
 };
 const CARE_IMAGES={
-  lowback:"./care-lowback-hyottoko.png?v=25-shr-interpret-fix",
-  neck:"./care-neck-hyottoko.png?v=25-shr-interpret-fix",
-  shoulder:"./care-shoulder-hyottoko.png?v=25-shr-interpret-fix",
-  knee:"./care-knee-hyottoko.png?v=25-shr-interpret-fix",
-  ankle:"./care-ankle-hyottoko.png?v=25-shr-interpret-fix",
-  wrist:"./care-wrist-hyottoko.png?v=25-shr-interpret-fix",
-  elbow:"./care-elbow-hyottoko.png?v=25-shr-interpret-fix"
+  lowback:"./care-lowback-hyottoko.png?v=25-movement-screen",
+  neck:"./care-neck-hyottoko.png?v=25-movement-screen",
+  shoulder:"./care-shoulder-hyottoko.png?v=25-movement-screen",
+  knee:"./care-knee-hyottoko.png?v=25-movement-screen",
+  ankle:"./care-ankle-hyottoko.png?v=25-movement-screen",
+  wrist:"./care-wrist-hyottoko.png?v=25-movement-screen",
+  elbow:"./care-elbow-hyottoko.png?v=25-movement-screen"
 };
 function carePosterHTML(area){
   const label=CARE_AREA_LABELS[area]||'セルフケア';
@@ -3918,6 +3971,48 @@ function jbjStatus(score,data,stabilityWait=false){
   if(data)return {label:"大きな乖離少",cls:"good"};
   return {label:"未測定",cls:"wait"};
 }
+
+let currentMovementResult=null;
+const MOVE_LABELS={
+  sls_front:"片脚スクワット｜正面",
+  lunge_side:"ランジ｜側面",
+  hinge_side:"ヒップヒンジ｜側面",
+  overhead_front:"両腕挙上｜正面/背面"
+};
+function moveLabel(v){return MOVE_LABELS[v]||v}
+function moveFlagHtml(label,level="info"){
+  return `<span class="moveFlag ${level}">${esc(label)}</span>`;
+}
+function renderMoveGuide(){
+  const type=document.getElementById("moveType")?.value||"sls_front";
+  const box=document.getElementById("moveGuide"); if(!box)return;
+  const map={
+    sls_front:"<b>撮影：</b>正面から、支持脚の足〜頭まで入れる。ボトム付近を撮影。V25は膝屈曲・前額面膝偏位・骨盤傾斜・体幹側屈を確認。",
+    lunge_side:"<b>撮影：</b>真横から、前脚側の肩〜足先まで入れる。ボトム付近。V25は膝/股関節屈曲・下腿傾斜・体幹前傾を確認。",
+    hinge_side:"<b>撮影：</b>真横から、ヒンジの最深部。肩〜足まで入れる。V25は股関節屈曲・膝屈曲・体幹/下腿傾斜を確認。",
+    overhead_front:"<b>撮影：</b>正面または背面から、両腕と骨盤まで入れる。両腕をできる範囲で挙上。V25は左右挙上角差・肩ライン傾斜・体幹側屈を確認。"
+  };
+  box.innerHTML=map[type];
+}
+function saveMovementScreen(){
+  if(!currentMovementResult||!m())return alert("先に動作スクリーンを解析してください");
+  m().movementScreens.push({...currentMovementResult,savedAt:new Date().toISOString()});
+  persist();renderMovementHistory();renderJointByJoint();
+  alert("動作スクリーンを保存しました");
+}
+function renderMovementHistory(){
+  const box=document.getElementById("moveHistory");if(!box||!m())return;
+  const rows=m().movementScreens||[];
+  box.innerHTML=[...rows].reverse().slice(0,30).map((x,ri)=>{
+    const i=rows.length-1-ri, side=x.side==="right"?"右":"左";
+    return `<div class="item"><div class="row"><div><strong>${esc(x.date)}｜${esc(moveLabel(x.type))}${x.type==="overhead_front"?"":`｜${side}`}</strong><br><small>${esc(x.summary||"")}</small></div><button class="danger" onclick="remove('movementScreens',${i})">削除</button></div></div>`;
+  }).join("")||'<span class="muted">履歴なし</span>';
+}
+function latestMovement(type){
+  const rows=(m()?.movementScreens||[]).filter(x=>x.type===type);
+  return rows.slice().sort((a,b)=>String(a.savedAt||a.date||"").localeCompare(String(b.savedAt||b.date||""))).at(-1)||null;
+}
+
 function renderJointByJoint(){
   const map=document.getElementById("jbjMap"),pri=document.getElementById("jbjPriority");
   if(!map||!pri||!m())return;
@@ -3933,6 +4028,7 @@ function renderJointByJoint(){
         careShoulder=jbjCareState("shoulder"),careNeck=jbjCareState("neck");
 
   const shr=jbjLatestShr();
+  const sls=latestMovement("sls_front"),hinge=latestMovement("hinge_side"),overhead=latestMovement("overhead_front");
   let scapScore=0,scapEv=[],scapData=0;
   if(shr){
     scapData=1;
@@ -3945,11 +4041,19 @@ function renderJointByJoint(){
 
   const regions=[
     {name:"足部・足関節",role:"主に可動性",raw:ankle,care:careAnkle,next:"背屈・底屈・内外がえし → スクワット/片脚動作と照合"},
-    {name:"膝",role:"主に安定性＋必要ROM",raw:kneeMob,care:careKnee,wait:true,next:"片脚スクワット・ランジでニーイン/左右制御を確認"},
+    {name:"膝",role:"主に安定性＋必要ROM",
+      raw:{evidence:[...(kneeMob.evidence||[]),...(sls?[`片脚SQ：膝偏位 ${Number(sls.metrics?.kneeDeviationPct||0).toFixed(1)}%｜骨盤 ${Number(sls.metrics?.pelvicTilt||0).toFixed(1)}°`]:[])],
+           score:Math.max(kneeMob.score||0,sls?Number(sls.jbjScore||0):0),data:(kneeMob.data||0)+(sls?1:0)},
+      care:careKnee,wait:!sls,next:sls?"片脚SQの左右/前回差を継続比較":"片脚スクワット・ランジでニーイン/左右制御を確認"},
     {name:"股関節",role:"主に可動性",raw:hip,care:{score:0,text:""},next:"内外旋・屈伸・左右差 → ヒンジ/片脚動作と照合"},
-    {name:"腰椎・骨盤",role:"主に安定性",raw:{evidence:[],score:0,data:0},care:careLow,wait:true,next:"ヒップヒンジ・スクワットで腰椎/骨盤代償を確認"},
+    {name:"腰椎・骨盤",role:"主に安定性",
+      raw:{evidence:hinge?[`ヒンジ：股 ${Number(hinge.metrics?.hipFlex||0).toFixed(0)}°｜膝 ${Number(hinge.metrics?.kneeFlex||0).toFixed(0)}°｜体幹 ${Number(hinge.metrics?.trunkLean||0).toFixed(0)}°`]:[],score:hinge?Number(hinge.jbjScore||0):0,data:hinge?1:0},
+      care:careLow,wait:!hinge,next:hinge?"ヒンジの前回差・痛み・股関節ROMと統合":"ヒップヒンジ・スクワットで腰椎/骨盤代償を確認"},
     {name:"胸椎",role:"主に可動性",raw:thor,care:{score:0,text:""},next:"回旋・伸展 → 肩挙上/SHRとの関連を確認"},
-    {name:"肩甲帯",role:"可動性＋協調/安定",raw:{evidence:scapEv,score:scapScore,data:scapData},care:careShoulder,next:"SHR＋肩すくみ＋上方回旋を肩/胸椎ROMと統合"},
+    {name:"肩甲帯",role:"可動性＋協調/安定",
+      raw:{evidence:[...scapEv,...(overhead?[`両腕挙上：左右差 ${Number(overhead.metrics?.armAsym||0).toFixed(1)}°｜体幹側屈 ${Number(overhead.metrics?.trunkLean||0).toFixed(1)}°`]:[])],
+           score:Math.max(scapScore,overhead?Number(overhead.jbjScore||0):0),data:scapData+(overhead?1:0)},
+      care:careShoulder,next:"SHR＋両腕挙上＋胸椎/肩ROMを統合"},
     {name:"肩関節",role:"可動性＋安定",raw:shoulder,care:careShoulder,next:"屈曲・外転・内外旋をSHR/胸椎と統合"},
     {name:"頸椎",role:"可動性＋制御",raw:neck,care:careNeck,next:"屈伸・回旋・側屈を胸椎/肩甲帯と照合"}
   ].map(r=>{
@@ -4227,7 +4331,7 @@ function renderAll(){
   prTable.innerHTML=exs.length?`<div style="overflow-x:auto"><table class="table"><tr><th>種目</th><th>最新</th><th>総重量</th><th>推定1RM</th><th>前回比</th></tr>${exs.map(ex=>{const t=trainingTrend(ex),x=t?.cur;if(!x)return"";const prx=pr(ex);const isPr=Math.abs(e1rm(x)-e1rm(prx))<0.0001;return `<tr><td>${esc(ex)}</td><td>${x.weight}kg×${x.reps}×${x.sets}</td><td>${Math.round(t.curVol).toLocaleString()}kg</td><td>${t.curE1.toFixed(1)}kg${isPr?' PR':''}</td><td><small>総 ${fmtPct(t.volPct)}<br>1RM ${fmtPct(t.e1Pct)}</small></td></tr>`}).join("")}</table></div>`:'<span class="muted">記録なし</span>';
   recoveryJudge.innerHTML=`<span class="badge ${adv.cls}">${esc(adv.txt)}</span>`;
   recoveryList.innerHTML=[...mm.recovery].reverse().map((x,ri)=>{let i=mm.recovery.length-1-ri,a=recAdvice(x);return `<div class="item"><div class="row"><div><strong>${x.date}｜睡眠 ${x.sleep}h</strong><br><small>疲労${x.fatigue} / ストレス${x.stress} / 痛み${x.pain}</small><br><span class="badge ${a.cls}">${recScore(x)}点</span></div><button class="danger" onclick="remove('recovery',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
-  renderTrainingPreview();renderRomHistory();renderAromHistory();renderAromAsymmetry();renderAromReference();renderShrHistory();renderJointByJoint();renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();renderCheckin();renderSmartCore();renderActivity();renderCareHistory();drawChart();renderReport();renderPhotos();
+  renderTrainingPreview();renderRomHistory();renderAromHistory();renderAromAsymmetry();renderAromReference();renderShrHistory();renderMovementHistory();renderMoveGuide();renderJointByJoint();renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();renderCheckin();renderSmartCore();renderActivity();renderCareHistory();drawChart();renderReport();renderPhotos();
 }
 
 function monthLabel(mon){
@@ -4378,7 +4482,7 @@ function normalizeMemberData(data,name="会員"){
   if(!x.profile.name)x.profile.name=name||"会員";
   if(!x.coachPlan||typeof x.coachPlan!=="object")x.coachPlan=base.coachPlan; else x.coachPlan={...base.coachPlan,...x.coachPlan};
   if(!x.smartContext||typeof x.smartContext!=="object")x.smartContext=base.smartContext; else x.smartContext={...base.smartContext,...x.smartContext};
-  ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","photos"].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});
+  ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","photos"].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});
   return x;
 }
 function backupStamp(){return new Date().toISOString()}
@@ -4519,7 +4623,7 @@ function exportAll(){backupAll()}
 function download(name,text){let b=new Blob([text],{type:"application/json"}),a=document.createElement("a"),u=URL.createObjectURL(b);a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000)}
 
 document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.getElementById(b.dataset.tab).classList.add("active");if(b.dataset.tab==="profile"){loadProfile();loadCoachPlanEditor();}if(b.dataset.tab==="security")loadSecurityPanel();if(b.dataset.tab==="adminBoard")refreshAdminBoard();if(b.dataset.tab==="smart")loadSmartContext();if(b.dataset.tab==="care")renderCareQuestions();renderAll()});
-["wDate","mDate","tDate","romDate","aromDate","shrDate","rDate","pDate","apptDate"].forEach(id=>{const el=document.getElementById(id);if(el)el.value=today()});
+["wDate","mDate","tDate","romDate","aromDate","shrDate","moveDate","rDate","pDate","apptDate"].forEach(id=>{const el=document.getElementById(id);if(el)el.value=today()});
 if(document.getElementById("apptTime"))document.getElementById("apptTime").value="10:00";
 reportMonth.value=monthNow();
 renderCareQuestions();
@@ -4527,7 +4631,7 @@ renderCareQuestions();
 // V25 SMART CORE PWA: network-only service worker to avoid stale app versions.
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=25-shr-interpret-fix").catch(err => console.warn("SW register failed", err));
+    navigator.serviceWorker.register("./sw.js?v=25-movement-screen").catch(err => console.warn("SW register failed", err));
   });
 }
 (function(){
@@ -4861,6 +4965,198 @@ window.resetShrAutoTap=function(){
   });
   ["shrArm","shrScapStart","shrScapEnd"].forEach(id=>{const e=document.getElementById(id);if(e)e.value=""});
   shrUpdateUI();
+};
+
+
+const moveState={img:null,url:null,lm:null};
+
+function moveCanvas(){
+  return document.getElementById("moveCanvas");
+}
+function movePt(lm,idx,canvas){
+  return {x:lm[idx].x*canvas.width,y:lm[idx].y*canvas.height,v:Number(lm[idx]?.visibility??1)};
+}
+function moveMid(a,b){return{x:(a.x+b.x)/2,y:(a.y+b.y)/2,v:Math.min(a.v??1,b.v??1)}}
+function moveLineAngleToHorizontal(a,b){
+  return Math.abs(Math.atan2(b.y-a.y,b.x-a.x)*180/Math.PI);
+}
+function moveLineAngleToVertical(a,b){
+  const dx=b.x-a.x,dy=b.y-a.y;
+  return Math.atan2(Math.abs(dx),Math.abs(dy)||1e-9)*180/Math.PI;
+}
+function movePointLineDistance(p,a,b){
+  const vx=b.x-a.x,vy=b.y-a.y,wx=p.x-a.x,wy=p.y-a.y;
+  const den=Math.hypot(vx,vy)||1;
+  return Math.abs(vx*wy-vy*wx)/den;
+}
+function moveFlag(value,good,warn){
+  if(value<=good)return {label:"偏位小",level:"good"};
+  if(value<=warn)return {label:"軽度確認",level:"warn"};
+  return {label:"要確認",level:"bad"};
+}
+function drawMoveSkeleton(ctx,lm,canvas){
+  const pairs=[[11,12],[11,13],[13,15],[12,14],[14,16],[11,23],[12,24],[23,24],[23,25],[25,27],[27,31],[24,26],[26,28],[28,32]];
+  pairs.forEach(([a,b])=>{
+    const pa=movePt(lm,a,canvas),pb=movePt(lm,b,canvas);
+    if(Math.min(pa.v,pb.v)>=.3)drawLine(ctx,pa,pb,"#d6b75a",3);
+  });
+}
+function movementConfidence(lm,idxs){
+  return Math.min(...idxs.map(i=>Number(lm[i]?.visibility??0)));
+}
+
+window.renderMoveGuide=window.renderMoveGuide||function(){};
+
+window.loadMovementPhoto=function(input){
+  const file=input?.files?.[0];if(!file)return;
+  if(moveState.url)URL.revokeObjectURL(moveState.url);
+  moveState.url=URL.createObjectURL(file);moveState.lm=null;
+  const img=new Image();
+  img.onload=()=>{
+    moveState.img=img;
+    const canvas=moveCanvas();
+    fitCanvasToImage(canvas,img);
+    const ctx=canvas.getContext("2d");
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.drawImage(img,0,0,canvas.width,canvas.height);
+  };
+  img.src=moveState.url;
+};
+
+window.analyzeMovementScreen=async function(){
+  const img=moveState.img,canvas=moveCanvas(),btn=document.getElementById("moveAnalyzeBtn");
+  if(!img?.naturalWidth)return alert("先に写真を選択してください");
+  const type=document.getElementById("moveType")?.value||"sls_front";
+  const side=document.getElementById("moveSide")?.value||"right";
+  const pain=Math.max(0,Math.min(10,Number(document.getElementById("movePain")?.value||0)));
+  if(btn){btn.disabled=true;btn.textContent="解析中...";}
+  try{
+    const model=await ensurePose();
+    const res=model.detect(img),lm=res?.landmarks?.[0];
+    if(!lm)throw new Error("人物姿勢を検出できません。身体全体が見える写真で再撮影してください。");
+    moveState.lm=lm;
+
+    const ctx=canvas.getContext("2d");
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.drawImage(img,0,0,canvas.width,canvas.height);
+    drawMoveSkeleton(ctx,lm,canvas);
+
+    const s=side==="right"?{sh:12,el:14,wr:16,hip:24,knee:26,ank:28,foot:32}:{sh:11,el:13,wr:15,hip:23,knee:25,ank:27,foot:31};
+    let metrics={},summary="",interpretation="",jbjScore=0,metricCards=[],confidence=0;
+
+    if(type==="sls_front"){
+      const ids=[11,12,23,24,s.hip,s.knee,s.ank]; confidence=movementConfidence(lm,ids);
+      const hip=movePt(lm,s.hip,canvas),knee=movePt(lm,s.knee,canvas),ank=movePt(lm,s.ank,canvas);
+      const lh=movePt(lm,23,canvas),rh=movePt(lm,24,canvas),ls=movePt(lm,11,canvas),rs=movePt(lm,12,canvas);
+      const midH=moveMid(lh,rh),midS=moveMid(ls,rs);
+      const kneeInner=angle3(hip,knee,ank),kneeFlex=180-kneeInner;
+      const dev=movePointLineDistance(knee,hip,ank)/(Math.hypot(hip.x-ank.x,hip.y-ank.y)||1)*100;
+      const pelvicRaw=Math.atan2(rh.y-lh.y,rh.x-lh.x)*180/Math.PI;
+      const pelvicTilt=Math.abs(pelvicRaw);
+      const trunkLean=moveLineAngleToVertical(midH,midS);
+      const df=moveFlag(dev,5,10),pf=moveFlag(pelvicTilt,5,10),tf=moveFlag(trunkLean,5,10);
+      if(kneeFlex<40){jbjScore=20;interpretation="しゃがみが浅めのため前額面評価の比較精度は低め。同じ深さで再比較推奨。";}
+      else{
+        const max=Math.max(dev/10,pelvicTilt/10,trunkLean/10);
+        jbjScore=max>1?50:max>.5?25:5;
+        interpretation="膝・骨盤・体幹の前額面偏位を2Dで数値化。原因筋や障害を断定せず、股関節/足関節ROMと左右比較。";
+      }
+      metrics={kneeFlex,kneeDeviationPct:dev,pelvicTilt,trunkLean};
+      summary=`膝屈曲 ${kneeFlex.toFixed(0)}°｜膝偏位 ${dev.toFixed(1)}%｜骨盤 ${pelvicTilt.toFixed(1)}°｜体幹 ${trunkLean.toFixed(1)}°`;
+      metricCards=[
+        ["膝屈曲",`${kneeFlex.toFixed(0)}°`,kneeFlex>=40?"比較可能":"浅め","info"],
+        ["前額面膝偏位",`${dev.toFixed(1)}%`,df.label,df.level],
+        ["骨盤ライン傾斜",`${pelvicTilt.toFixed(1)}°`,pf.label,pf.level],
+        ["体幹側屈",`${trunkLean.toFixed(1)}°`,tf.label,tf.level]
+      ];
+      [hip,knee,ank].forEach(q=>drawDot(ctx,q));
+      drawLabel(ctx,`膝 ${kneeFlex.toFixed(0)}°`,knee.x+12,knee.y-8);
+    }
+
+    else if(type==="lunge_side"){
+      const ids=[s.sh,s.hip,s.knee,s.ank,s.foot];confidence=movementConfidence(lm,ids);
+      const sh=movePt(lm,s.sh,canvas),hip=movePt(lm,s.hip,canvas),knee=movePt(lm,s.knee,canvas),ank=movePt(lm,s.ank,canvas),foot=movePt(lm,s.foot,canvas);
+      const kneeFlex=180-angle3(hip,knee,ank),hipFlex=180-angle3(sh,hip,knee);
+      const trunkLean=trunkAngle(sh,hip),shinLean=moveLineAngleToVertical(ank,knee);
+      metrics={kneeFlex,hipFlex,trunkLean,shinLean};
+      jbjScore=pain>=4?50:5;
+      summary=`膝 ${kneeFlex.toFixed(0)}°｜股 ${hipFlex.toFixed(0)}°｜下腿 ${shinLean.toFixed(0)}°｜体幹 ${trunkLean.toFixed(0)}°`;
+      interpretation="ランジでは下腿が前傾すること自体をエラー扱いしません。深さ・体幹・股/膝角度を同条件で比較します。";
+      metricCards=[
+        ["膝屈曲",`${kneeFlex.toFixed(0)}°`,"深さの比較値","info"],
+        ["股関節屈曲",`${hipFlex.toFixed(0)}°`,"前脚側","info"],
+        ["下腿前傾",`${shinLean.toFixed(0)}°`,"垂直からの角度","info"],
+        ["体幹前傾",`${trunkLean.toFixed(0)}°`,"垂直からの角度","info"]
+      ];
+      [sh,hip,knee,ank,foot].forEach(q=>drawDot(ctx,q));
+    }
+
+    else if(type==="hinge_side"){
+      const ids=[s.sh,s.hip,s.knee,s.ank];confidence=movementConfidence(lm,ids);
+      const sh=movePt(lm,s.sh,canvas),hip=movePt(lm,s.hip,canvas),knee=movePt(lm,s.knee,canvas),ank=movePt(lm,s.ank,canvas);
+      const kneeFlex=180-angle3(hip,knee,ank),hipFlex=180-angle3(sh,hip,knee);
+      const trunkLean=trunkAngle(sh,hip),shinLean=moveLineAngleToVertical(ank,knee);
+      let pattern="ミックス";
+      if(hipFlex>=55&&kneeFlex<=45)pattern="ヒンジ優位傾向";
+      else if(kneeFlex>=60)pattern="スクワット要素大きめ";
+      metrics={kneeFlex,hipFlex,trunkLean,shinLean,pattern};
+      jbjScore=pain>=4?50:5;
+      summary=`${pattern}｜股 ${hipFlex.toFixed(0)}°｜膝 ${kneeFlex.toFixed(0)}°｜体幹 ${trunkLean.toFixed(0)}°`;
+      interpretation="ヒップヒンジは股関節屈曲を主体にした動作。『腰が丸い』など脊柱分節は通常Poseだけでは直接判定しない。";
+      metricCards=[
+        ["動作パターン",pattern,"S.u.G比較用","info"],
+        ["股関節屈曲",`${hipFlex.toFixed(0)}°`,"ヒンジ量","info"],
+        ["膝屈曲",`${kneeFlex.toFixed(0)}°`,"膝の参加量","info"],
+        ["体幹前傾",`${trunkLean.toFixed(0)}°`,"垂直からの角度","info"],
+        ["下腿傾斜",`${shinLean.toFixed(0)}°`,"垂直からの角度","info"]
+      ];
+      [sh,hip,knee,ank].forEach(q=>drawDot(ctx,q));
+    }
+
+    else if(type==="overhead_front"){
+      const ids=[11,12,13,14,23,24];confidence=movementConfidence(lm,ids);
+      const ls=movePt(lm,11,canvas),rs=movePt(lm,12,canvas),le=movePt(lm,13,canvas),re=movePt(lm,14,canvas),
+            lh=movePt(lm,23,canvas),rh=movePt(lm,24,canvas);
+      const midS=moveMid(ls,rs),midH=moveMid(lh,rh);
+      const lArm=angle3(lh,ls,le),rArm=angle3(rh,rs,re); // trunk-down vs arm
+      const asym=Math.abs(lArm-rArm);
+      const shoulderTilt=Math.abs(Math.atan2(rs.y-ls.y,rs.x-ls.x)*180/Math.PI);
+      const trunkLean=moveLineAngleToVertical(midH,midS);
+      const af=moveFlag(asym,10,20),sf=moveFlag(shoulderTilt,5,10),tf=moveFlag(trunkLean,5,10);
+      const avg=(lArm+rArm)/2;
+      jbjScore=Math.max(asym>20?50:asym>10?25:5,shoulderTilt>10?25:5,trunkLean>10?25:5);
+      metrics={leftArm:lArm,rightArm:rArm,armAsym:asym,shoulderTilt,trunkLean,avgArm:avg};
+      summary=`左 ${lArm.toFixed(0)}°｜右 ${rArm.toFixed(0)}°｜左右差 ${asym.toFixed(1)}°｜体幹 ${trunkLean.toFixed(1)}°`;
+      interpretation="両腕挙上の左右差と体幹/肩ラインの代償候補を比較。肩甲骨の真の3D運動はSHRタップ評価と胸椎ROMを併用。";
+      metricCards=[
+        ["左腕挙上",`${lArm.toFixed(0)}°`,avg>=150?"":"総挙上量も確認","info"],
+        ["右腕挙上",`${rArm.toFixed(0)}°`,avg>=150?"":"総挙上量も確認","info"],
+        ["左右差",`${asym.toFixed(1)}°`,af.label,af.level],
+        ["肩ライン傾斜",`${shoulderTilt.toFixed(1)}°`,sf.label,sf.level],
+        ["体幹側屈",`${trunkLean.toFixed(1)}°`,tf.label,tf.level]
+      ];
+      [ls,rs,le,re,lh,rh].forEach(q=>drawDot(ctx,q));
+    }
+
+    if(confidence<.35)throw new Error("主要ランドマークの信頼度が低いです。撮影方向と全身の写り方を確認してください。");
+
+    const memo=document.getElementById("moveMemo")?.value||"";
+    currentMovementResult={
+      date:document.getElementById("moveDate")?.value||today(),
+      type,side,pain,confidence,metrics,summary,interpretation,jbjScore,memo
+    };
+
+    const result=document.getElementById("moveResult");
+    result.innerHTML=`<div class="${pain>=4?"smartWarn":"notice"}"><b>${esc(moveLabel(type))}</b>｜ランドマーク信頼度 ${Math.round(confidence*100)}%${pain>=4?`<br>痛み ${pain}/10：症状を優先`:""}</div>
+      <div class="moveScreenGrid">${metricCards.map(([t,v,n,l])=>`<div class="moveMetric"><span>${esc(t)}</span><b>${esc(v)}</b><small>${esc(n||"")}</small>${moveFlagHtml(n||"参考",l||"info")}</div>`).join("")}</div>
+      <div class="aromPattern"><strong>S.u.G解釈</strong><br>${esc(interpretation)}<br><br><strong>次に見る</strong><br>左右同条件・前回差・AROM/PROM・CARE・Joint by Joint MAPと統合。</div>
+      <div class="romLegend">※ 数値帯はS.u.Gの比較用ヒューリスティックであり、医学的な正常/異常カットオフではありません。特に前額面評価はカメラ位置に強く影響されます。</div>
+      <button class="secondary" style="width:100%;margin-top:9px" onclick="saveMovementScreen()">この動作スクリーンを保存</button>`;
+  }catch(e){
+    console.error(e);alert("動作スクリーン："+(e?.message||e));
+  }finally{
+    if(btn){btn.disabled=false;btn.textContent="動作を自動解析";}
+  }
 };
 
 window.analyzeSquatRom=async function(){
