@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>S.u.G BODY MANAGEMENT SYSTEM V19</title>
+<title>S.u.G BODY MANAGEMENT SYSTEM V20</title>
 <style>
 :root{
   --bg:#09090a;--card:#141417;--card2:#1a1a1f;--gold:#d8b35b;--gold2:#f3d98b;
@@ -146,6 +146,16 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 .recoveryBox{width:min(430px,100%)}
 @media(max-width:560px){.securityGrid{grid-template-columns:1fr}}
 
+/* V20: weekly member check-in */
+.checkinLatest{border-color:#4f472f;background:linear-gradient(180deg,#17140d,#101012)}
+.checkinScoreGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:9px}
+.checkinScore{background:#0d0d10;border:1px solid #2d2a22;border-radius:10px;padding:8px;text-align:center}
+.checkinScore span{display:block;color:#999;font-size:8px}.checkinScore b{display:block;color:var(--gold2);font-size:15px;margin-top:3px}
+.checkinHistoryItem{background:#0d0d10;border:1px solid #2c2c32;border-radius:11px;padding:10px;margin-bottom:7px}
+.checkinHistoryMeta{font-size:9px;color:#999;line-height:1.65;margin-top:4px}
+.checkinFlag{margin-top:8px;font-size:10px;line-height:1.6}
+@media(max-width:560px){.checkinScoreGrid{grid-template-columns:repeat(3,1fr)}}
+
 </style>
 <script>
 window.SUG_CLOUD_CONFIG = {
@@ -160,7 +170,7 @@ window.SUG_CLOUD_CONFIG = {
 <div id="authGate" class="authGate">
   <div class="authBox">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V19 CLOUD / MEMBERS ONLY</div>
+    <div class="sub">V20 CLOUD / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -249,7 +259,7 @@ window.SUG_CLOUD_CONFIG = {
 
 <header>
   <div class="head">
-    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V19 CLOUD / Password Security</small></div>
+    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V20 CLOUD / Weekly Check-in</small></div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
 </header>
@@ -267,6 +277,7 @@ window.SUG_CLOUD_CONFIG = {
     <button class="tab" data-tab="meal">食事</button>
     <button class="tab" data-tab="training">トレ</button>
     <button class="tab" data-tab="recovery">回復</button>
+    <button class="tab" data-tab="checkin">チェックイン</button>
     <button class="tab" data-tab="photos">写真</button>
     <button class="tab" data-tab="report">レポート</button>
     <button class="tab" data-tab="profile">会員情報</button>
@@ -293,6 +304,7 @@ window.SUG_CLOUD_CONFIG = {
         <div class="kpi"><span>プラン未設定</span><b id="admCoachUnset">0</b></div>
         <div class="kpi"><span>今日予約</span><b id="admApptToday">0</b></div>
         <div class="kpi"><span>明日予約</span><b id="admApptTomorrow">0</b></div>
+        <div class="kpi"><span>チェックイン要確認</span><b id="admCheckinAttention">0</b></div>
       </div>
       <div class="followAlertGrid">
         <div class="followAlertCard"><span>期限超過</span><b id="followAlertOverdue" class="dueOverdue">0</b></div>
@@ -377,6 +389,10 @@ window.SUG_CLOUD_CONFIG = {
       <div id="nextAppointmentView" class="nextApptMain"><b>--</b><span>次回予約はまだ登録されていません。</span></div>
       <div class="apptReadonly">予約の登録・変更はS.u.G管理者が行います。この画面から予約変更・キャンセルはできません。</div>
     </div>
+    <div id="checkinLatestCard" class="card checkinLatest">
+      <div class="row" style="align-items:center"><div><h2 style="margin-bottom:3px">最新チェックイン</h2><div class="muted">睡眠・体調・食事・トレーニング・痛みを週1回確認</div></div><span id="checkinLatestBadge" class="badge">未提出</span></div>
+      <div id="checkinLatestView" style="margin-top:9px"><span class="muted">まだチェックインがありません。</span></div>
+    </div>
     <div id="coachPlanView" class="card coachPlanCard">
       <div class="coachPlanTop">
         <div><div class="coachPlanTitle">今週のコーチプラン</div><div id="coachPlanUpdated" class="muted">未設定</div></div>
@@ -442,6 +458,20 @@ window.SUG_CLOUD_CONFIG = {
     </div>
     <div class="card"><h2>判定</h2><div id="recoveryJudge" class="item"></div></div>
     <div class="card"><h2>履歴</h2><div id="recoveryList"></div></div>
+  </section>
+
+  <section id="checkin" class="panel">
+    <div class="card">
+      <h2>週間チェックイン</h2>
+      <div class="notice">週1回の自己申告です。数値は管理の目安として使い、体調の診断には使用しません。</div>
+      <div class="grid2" style="margin-top:9px"><div><label>日付</label><input id="ciDate" type="date"></div><div><label>体調 1-5</label><input id="ciCondition" type="number" min="1" max="5" value="3"></div></div>
+      <div class="grid2" style="margin-top:8px"><div><label>睡眠満足度 1-5</label><input id="ciSleep" type="number" min="1" max="5" value="3"></div><div><label>痛み 0-10</label><input id="ciPain" type="number" min="0" max="10" value="0"></div></div>
+      <div class="grid2" style="margin-top:8px"><div><label>食事達成度 1-5</label><input id="ciNutrition" type="number" min="1" max="5" value="3"></div><div><label>トレ達成度 1-5</label><input id="ciTraining" type="number" min="1" max="5" value="3"></div></div>
+      <div style="margin-top:8px"><label>コメント / 相談</label><textarea id="ciMemo" placeholder="例：睡眠不足、右肩に違和感、食欲が落ちた、今週は順調など"></textarea></div>
+      <button class="primary" style="width:100%;margin-top:9px" onclick="addCheckin()">チェックインを送信</button>
+    </div>
+    <div class="card"><h2>最新状態</h2><div id="checkinPanelLatest"><span class="muted">未提出</span></div></div>
+    <div class="card"><h2>チェックイン履歴</h2><div id="checkinHistory"><span class="muted">履歴なし</span></div></div>
   </section>
 
   <section id="photos" class="panel">
@@ -569,7 +599,7 @@ let db={current:null,members:{}};
 function baseMember(name="新規会員"){
   return {profile:{name,goal:"筋肥大",targetWeight:0,targetKcal:0,targetP:0,targetF:0,targetC:0,notes:""},
     coachPlan:{weeklyFocus:"",nextAction:"",nextSessionDate:"",targetTrainingDays:0,targetSleep:0,targetSteps:0,completedAt:null,updatedAt:null},
-    weights:[],meals:[],training:[],recovery:[],photos:[]}
+    weights:[],meals:[],training:[],recovery:[],checkins:[],photos:[]}
 }
 function m(){return db.members[db.current]}
 function esc(s){return String(s??"").replace(/[&<>"']/g,x=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[x]))}
@@ -941,7 +971,7 @@ async function loadMember(id){
   if(!db.members[id].profile.name)
     db.members[id].profile.name=p?.display_name||"会員";
 
-  ["weights","meals","training","recovery","photos"].forEach(k=>{
+  ["weights","meals","training","recovery","checkins","photos"].forEach(k=>{
     if(!Array.isArray(db.members[id][k]))db.members[id][k]=[];
   });
   if(!db.members[id].coachPlan || typeof db.members[id].coachPlan!=="object") db.members[id].coachPlan=baseMember(p?.display_name||"会員").coachPlan;
@@ -1420,7 +1450,7 @@ async function refreshAdminBoard(){
     const members=accessibleProfiles.filter(p=>p.role!=="trainer").map(p=>{
       const row=byId.get(p.id);
       const mm=row?.data&&Object.keys(row.data).length?row.data:baseMember(p.display_name||"会員");
-      ["weights","meals","training","recovery","photos"].forEach(k=>{if(!Array.isArray(mm[k]))mm[k]=[]});
+      ["weights","meals","training","recovery","checkins","photos"].forEach(k=>{if(!Array.isArray(mm[k]))mm[k]=[]});
       if(!mm.profile)mm.profile=baseMember(p.display_name||"会員").profile;
       const st=adminStatusFor(mm);
       return {profile:p,mm,row,st,lastDate:latestRecordDate(mm)};
@@ -1470,7 +1500,8 @@ function renderAdminBoardRows(){
   const coachOpen=members.filter(x=>coachAdminState(x.mm).key==="open").length;
   const coachDone=members.filter(x=>coachAdminState(x.mm).key==="done").length;
   const coachUnset=members.filter(x=>coachAdminState(x.mm).key==="unset").length;
-  const ids={admTotal:total,admAttention:attention,admRecovery:recovery,admMissing:missing,admOpen:open,admOverdue:overdue,admToday:dueToday,admTomorrow:dueTomorrow,admCoachOpen:coachOpen,admCoachDone:coachDone,admCoachUnset:coachUnset,followAlertOverdue:overdue,followAlertToday:dueToday,followAlertTomorrow:dueTomorrow};
+  const checkinAttention=members.filter(x=>checkinState(checkinLatest(x.mm)).key==="attention").length;
+  const ids={admTotal:total,admAttention:attention,admRecovery:recovery,admMissing:missing,admOpen:open,admOverdue:overdue,admToday:dueToday,admTomorrow:dueTomorrow,admCoachOpen:coachOpen,admCoachDone:coachDone,admCoachUnset:coachUnset,admCheckinAttention:checkinAttention,followAlertOverdue:overdue,followAlertToday:dueToday,followAlertTomorrow:dueTomorrow};
   Object.entries(ids).forEach(([id,v])=>{const el=document.getElementById(id);if(el)el.textContent=v});
   renderFollowupAlerts(members);
   if(!list)return;
@@ -1478,7 +1509,7 @@ function renderAdminBoardRows(){
   const shown=members.filter(followupPass);
   if(!shown.length){list.innerHTML='<span class="muted">条件に該当する会員はいません。</span>';return;}
   list.innerHTML=shown.map(x=>{
-    const mm=x.mm,st=x.st,f=followupState(x.profile.id),cp=coachAdminState(mm);
+    const mm=x.mm,st=x.st,f=followupState(x.profile.id),cp=coachAdminState(mm),ci=checkinLatest(mm),cis=checkinState(ci),ciAge=checkinAgeDays(ci);
     const latestW=(mm.weights||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
     const latestR=(mm.recovery||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
     const goal=mm.profile?.goal||"--";
@@ -1490,7 +1521,7 @@ function renderAdminBoardRows(){
     const dueMark=dueKind==="today"?"｜<b class=\"dueToday\">今日対応</b>":dueKind==="tomorrow"?"｜<b class=\"dueTomorrow\">明日対応</b>":dueKind==="overdue"?"｜<b class=\"dueOverdue\">期限超過</b>":"";
     const contact=f.last_contact_at?followupDateLabel(f.last_contact_at):"--";
     const memo=f.memo?`｜メモ ${esc(f.memo)}`:"";
-    return `<div class="adminMember"><div class="adminMemberTop"><div><div class="adminMemberName">${esc(x.profile.display_name||mm.profile?.name||"会員")}</div><div class="adminMemberMeta">目的 ${esc(goal)}｜最終記録 ${esc(last)}</div></div><span class="badge ${st.cls}">${esc(st.label)}</span></div><div class="adminMemberStats"><div class="adminMini"><span>体重</span><b>${latestW?Number(latestW.weight).toFixed(1)+"kg":"--"}</b></div><div class="adminMini"><span>7日差</span><b>${esc(st.wt.label)}</b></div><div class="adminMini"><span>回復</span><b>${st.score!=null?st.score+"点":"--"}</b></div><div class="adminMini"><span>睡眠</span><b>${latestR?Number(latestR.sleep||0).toFixed(1)+"h":"--"}</b></div><div class="adminMini"><span>トレ記録</span><b>${(mm.training||[]).length}</b></div></div><div class="coachAdminMeta"><b class="${cp.cls}">${esc(cp.label)}</b>｜次回セッション ${esc(cp.session)}<div class="coachFocus"><b>重点：</b>${esc(cp.focus)}</div><div class="coachAction"><b>課題：</b>${esc(cp.action)}</div></div><div class="followMeta"><b class="${followClass}">${followStatus}</b>｜最終連絡 ${esc(contact)}｜次回 ${esc(next)}${dueMark}${memo}</div><div class="adminActions"><div class="adminReason"><b>理由：</b>${esc(st.reason)}</div><button class="lineBtn" onclick="lineFollowup('${x.profile.id}')">LINE連絡</button><button class="secondary" onclick="openFollowupModal('${x.profile.id}')">対応記録</button><button class="primary" onclick="openMemberFromAdmin('${x.profile.id}')">開く</button></div></div>`;
+    return `<div class="adminMember"><div class="adminMemberTop"><div><div class="adminMemberName">${esc(x.profile.display_name||mm.profile?.name||"会員")}</div><div class="adminMemberMeta">目的 ${esc(goal)}｜最終記録 ${esc(last)}</div></div><span class="badge ${st.cls}">${esc(st.label)}</span></div><div class="adminMemberStats"><div class="adminMini"><span>体重</span><b>${latestW?Number(latestW.weight).toFixed(1)+"kg":"--"}</b></div><div class="adminMini"><span>7日差</span><b>${esc(st.wt.label)}</b></div><div class="adminMini"><span>回復</span><b>${st.score!=null?st.score+"点":"--"}</b></div><div class="adminMini"><span>睡眠</span><b>${latestR?Number(latestR.sleep||0).toFixed(1)+"h":"--"}</b></div><div class="adminMini"><span>トレ記録</span><b>${(mm.training||[]).length}</b></div></div><div class="coachAdminMeta"><b class="${cp.cls}">${esc(cp.label)}</b>｜次回セッション ${esc(cp.session)}<div class="coachFocus"><b>重点：</b>${esc(cp.focus)}</div><div class="coachAction"><b>課題：</b>${esc(cp.action)}</div></div><div class="followMeta"><b class="${followClass}">${followStatus}</b>｜最終連絡 ${esc(contact)}｜次回 ${esc(next)}${dueMark}${memo}</div><div class="followMeta"><b class="${cis.key==="attention"?"dueOverdue":""}">チェックイン ${esc(cis.label)}</b>｜${ci?esc(ci.date):"未提出"}${ciAge!=null?`（${ciAge===0?"今日":ciAge+"日前"}）`:""}｜${esc(cis.reason)}</div><div class="adminActions"><div class="adminReason"><b>理由：</b>${esc(st.reason)}</div><button class="lineBtn" onclick="lineFollowup('${x.profile.id}')">LINE連絡</button><button class="secondary" onclick="openFollowupModal('${x.profile.id}')">対応記録</button><button class="primary" onclick="openMemberFromAdmin('${x.profile.id}')">開く</button></div></div>`;
   }).join("");
 }
 async function openMemberFromAdmin(id){
@@ -1807,6 +1838,58 @@ async function comparePhotos(){
   }
 }
 
+function checkinLatest(mm=m()){
+  const rows=Array.isArray(mm?.checkins)?mm.checkins:[];
+  return rows.slice().sort((a,b)=>String(a.date||"").localeCompare(String(b.date||""))).at(-1)||null;
+}
+function checkinState(x){
+  if(!x)return {key:"missing",label:"未提出",cls:"warn",reason:"チェックイン未提出"};
+  const condition=Number(x.condition||0),sleep=Number(x.sleep||0),pain=Number(x.pain||0),nutrition=Number(x.nutrition||0),training=Number(x.training||0);
+  const reasons=[];
+  if(pain>=5)reasons.push(`痛み ${pain}/10`);
+  if(condition<=2)reasons.push(`体調 ${condition}/5`);
+  if(sleep<=2)reasons.push(`睡眠 ${sleep}/5`);
+  if(nutrition<=2)reasons.push(`食事 ${nutrition}/5`);
+  if(training<=2)reasons.push(`トレ ${training}/5`);
+  if(reasons.length)return {key:"attention",label:"要確認",cls:"bad",reason:reasons.join("・")};
+  return {key:"ok",label:"確認済",cls:"ok",reason:"大きな警戒項目なし"};
+}
+function checkinAgeDays(x){
+  if(!x?.date)return null;
+  const d=new Date(`${x.date}T00:00:00`);if(Number.isNaN(d.getTime()))return null;
+  const t=new Date();t.setHours(0,0,0,0);return Math.max(0,Math.floor((t-d)/86400000));
+}
+function renderCheckin(){
+  if(!m())return;
+  const rows=Array.isArray(m().checkins)?m().checkins:[];
+  const latest=checkinLatest(m()),state=checkinState(latest),age=checkinAgeDays(latest);
+  const badge=document.getElementById("checkinLatestBadge");
+  if(badge){badge.className=`badge ${state.cls}`;badge.textContent=state.label;}
+  const makeLatest=()=>{
+    if(!latest)return '<span class="muted">まだチェックインがありません。</span>';
+    return `<div><strong>${esc(latest.date||"")}｜${esc(state.label)}</strong>${age!=null?`<span class="muted">｜${age===0?"今日":age+"日前"}</span>`:""}</div><div class="checkinScoreGrid"><div class="checkinScore"><span>体調</span><b>${Number(latest.condition||0)}/5</b></div><div class="checkinScore"><span>睡眠</span><b>${Number(latest.sleep||0)}/5</b></div><div class="checkinScore"><span>食事</span><b>${Number(latest.nutrition||0)}/5</b></div><div class="checkinScore"><span>トレ</span><b>${Number(latest.training||0)}/5</b></div><div class="checkinScore"><span>痛み</span><b>${Number(latest.pain||0)}/10</b></div></div><div class="checkinFlag ${state.key==="attention"?"bad":"muted"}">${esc(state.reason)}${latest.memo?`<br>${esc(latest.memo)}`:""}</div>`;
+  };
+  const dash=document.getElementById("checkinLatestView");if(dash)dash.innerHTML=makeLatest();
+  const panel=document.getElementById("checkinPanelLatest");if(panel)panel.innerHTML=makeLatest();
+  const history=document.getElementById("checkinHistory");
+  if(history){
+    history.innerHTML=rows.length?[...rows].reverse().map((x,ri)=>{const i=rows.length-1-ri,st=checkinState(x);return `<div class="checkinHistoryItem"><div class="row"><div><strong>${esc(x.date||"")}｜<span class="${st.key==="attention"?"bad":"ok"}">${esc(st.label)}</span></strong><div class="checkinHistoryMeta">体調 ${Number(x.condition||0)}/5｜睡眠 ${Number(x.sleep||0)}/5｜食事 ${Number(x.nutrition||0)}/5｜トレ ${Number(x.training||0)}/5｜痛み ${Number(x.pain||0)}/10${x.memo?`<br>${esc(x.memo)}`:""}</div></div><button class="danger" onclick="remove('checkins',${i})">削除</button></div></div>`}).join(""):'<span class="muted">履歴なし</span>';
+  }
+}
+function addCheckin(){
+  if(!m())return;
+  const date=document.getElementById("ciDate")?.value||today();
+  const clamp=(v,min,max)=>Math.max(min,Math.min(max,Number(v||0)));
+  const row={date,condition:clamp(document.getElementById("ciCondition")?.value,1,5),sleep:clamp(document.getElementById("ciSleep")?.value,1,5),nutrition:clamp(document.getElementById("ciNutrition")?.value,1,5),training:clamp(document.getElementById("ciTraining")?.value,1,5),pain:clamp(document.getElementById("ciPain")?.value,0,10),memo:(document.getElementById("ciMemo")?.value||"").trim(),createdAt:new Date().toISOString()};
+  if(!Array.isArray(m().checkins))m().checkins=[];
+  const same=m().checkins.findIndex(x=>x.date===date);
+  if(same>=0)m().checkins[same]=row;else m().checkins.push(row);
+  m().checkins.sort((a,b)=>String(a.date||"").localeCompare(String(b.date||"")));
+  const memo=document.getElementById("ciMemo");if(memo)memo.value="";
+  persist();renderAll();
+  setStatus("保存中");
+}
+
 async function renderPhotos(){
   if(!m())return;
   renderPhotoCompareOptions();
@@ -1827,6 +1910,7 @@ async function renderPhotos(){
 
 function renderAll(){
   if(!m())return;
+  const ciDateEl=document.getElementById("ciDate");if(ciDateEl&&!ciDateEl.value)ciDateEl.value=today();
   renderMemberSelect();
   let mm=m(),ws=mm.weights,latest=ws.at(-1),s=weightStats(),mt=mealTotals(),rr=mm.recovery.filter(x=>x.date===today()).at(-1)||mm.recovery.at(-1);
   dWeight.textContent=latest?latest.weight.toFixed(1)+"kg":"--";dAvg.textContent=s.l?s.l.toFixed(1)+"kg":"--";dKcal.textContent=Math.round(mt.kcal)+" kcal";dRec.textContent=rr?recScore(rr)+"点":"--";
@@ -1843,7 +1927,7 @@ function renderAll(){
   prTable.innerHTML=exs.length?`<table class="table"><tr><th>種目</th><th>PR</th><th>推定1RM</th></tr>${exs.map(ex=>{let x=pr(ex);return `<tr><td>${esc(ex)}</td><td>${x.weight}kg×${x.reps}</td><td>${e1rm(x).toFixed(1)}kg</td></tr>`}).join("")}</table>`:'<span class="muted">記録なし</span>';
   recoveryJudge.innerHTML=`<span class="badge ${adv.cls}">${esc(adv.txt)}</span>`;
   recoveryList.innerHTML=[...mm.recovery].reverse().map((x,ri)=>{let i=mm.recovery.length-1-ri,a=recAdvice(x);return `<div class="item"><div class="row"><div><strong>${x.date}｜睡眠 ${x.sleep}h</strong><br><small>疲労${x.fatigue} / ストレス${x.stress} / 痛み${x.pain}</small><br><span class="badge ${a.cls}">${recScore(x)}点</span></div><button class="danger" onclick="remove('recovery',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
-  renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();drawChart();renderReport();renderPhotos();
+  renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();renderCheckin();drawChart();renderReport();renderPhotos();
 }
 
 function monthLabel(mon){
@@ -1986,7 +2070,7 @@ function normalizeMemberData(data,name="会員"){
   const base=baseMember(name),x=(data&&typeof data==="object"&&!Array.isArray(data))?JSON.parse(JSON.stringify(data)):base;
   if(!x.profile||typeof x.profile!=="object")x.profile=base.profile;
   if(!x.profile.name)x.profile.name=name||"会員";
-  ["weights","meals","training","recovery","photos"].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});
+  ["weights","meals","training","recovery","checkins","photos"].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});
   return x;
 }
 function backupStamp(){return new Date().toISOString()}
@@ -2021,7 +2105,7 @@ async function backupAll(){
     const members=accessibleProfiles.filter(p=>p.role!=="trainer");
     const ids=new Set(members.map(p=>p.id));
     const payload={
-      schema:"SUG_BODY_MANAGEMENT_BACKUP",version:16,kind:"all",created_at:backupStamp(),created_by:sessionUser?.id||null,
+      schema:"SUG_BODY_MANAGEMENT_BACKUP",version:20,kind:"all",created_at:backupStamp(),created_by:sessionUser?.id||null,
       profiles:members.map(p=>({id:p.id,display_name:p.display_name||"",role:p.role||"member"})),
       member_data:rows.filter(x=>ids.has(x.user_id)).map(x=>({user_id:x.user_id,data:normalizeMemberData(x.data,members.find(p=>p.id===x.user_id)?.display_name||"会員"),updated_at:x.updated_at||null})),
       followups:fu.rows.filter(x=>ids.has(x.member_id)),
