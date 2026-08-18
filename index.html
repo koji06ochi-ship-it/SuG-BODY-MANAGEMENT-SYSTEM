@@ -6,15 +6,15 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>S.u.G BODY MANAGEMENT SYSTEM V24.1 DESIGN EDITION</title>
+<title>S.u.G BODY MANAGEMENT SYSTEM V24.2 INVITE LINK</title>
 <meta name="theme-color" content="#09090a">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="S.u.G BODY">
-<link rel="manifest" href="./manifest.webmanifest?v=24-1-design">
-<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png?v=24-1-design">
-<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=24-1-design">
+<link rel="manifest" href="./manifest.webmanifest?v=24-2-invite">
+<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png?v=24-2-invite">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=24-2-invite">
 <style>
 :root{
   --bg:#09090a;--card:#141417;--card2:#1a1a1f;--gold:#d8b35b;--gold2:#f3d98b;
@@ -172,7 +172,7 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 .checkinFollowReason{font-size:9px;color:#c7c7cc;line-height:1.55;margin-top:3px}
 @media(max-width:719px){.checkinFollowItem{grid-template-columns:auto 1fr}.checkinFollowItem .lineBtn,.checkinFollowItem .secondary,.checkinFollowItem .primary{width:100%}}
 
-/* V24.1 DESIGN EDITION: production 1.0 visual branding */
+/* V24.2 INVITE LINK: production 1.0 visual branding */
 .dailyOpsCard{border-color:#66552b;background:linear-gradient(180deg,#1b170d,#101012)}
 .dailyOpsKpis{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;margin-top:10px}
 .dailyOpsKpi{background:#0d0d10;border:1px solid #373126;border-radius:11px;padding:9px;min-width:0}
@@ -193,7 +193,7 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 @media (display-mode: standalone){.pwaGuide{display:none!important}}
 
 
-/* V24.1 DESIGN EDITION — S.u.G branded visual layer */
+/* V24.2 INVITE LINK — S.u.G branded visual layer */
 :root{--sugGlow:rgba(216,179,91,.18);--sugGlow2:rgba(243,217,139,.08)}
 body{
   background:
@@ -253,9 +253,9 @@ window.SUG_CLOUD_CONFIG = {
 
 <div id="authGate" class="authGate">
   <div class="authBox">
-    <img class="authBrandLogo" src="./brand-header.png?v=24-1-design" alt="S.u.G OSAKA">
+    <img class="authBrandLogo" src="./brand-header.png?v=24-2-invite" alt="S.u.G OSAKA">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V24.1 DESIGN EDITION / MEMBERS ONLY</div>
+    <div class="sub">V24.2 INVITE LINK / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -263,8 +263,8 @@ window.SUG_CLOUD_CONFIG = {
     <button id="loginBtn" class="primary" onclick="login()" disabled>接続中...</button>
     <div class="authLinks"><button class="linkBtn" type="button" onclick="requestPasswordReset()">パスワードを忘れた方</button></div>
     <div id="authError" class="authError"></div>
-    <div class="setupNote">S.u.G会員限定。アカウントは管理者が発行します。</div>
-    <img class="authMascot" src="./mascot-highfive.png?v=24-1-design" alt="">
+    <div class="setupNote">S.u.G会員限定。管理者から届いた招待リンクで初回登録してください。</div>
+    <img class="authMascot" src="./mascot-highfive.png?v=24-2-invite" alt="">
     <div id="pwaGuide" class="pwaGuide hidden"><b>iPhoneホーム画面対応</b><br>Safariの共有ボタン →「ホーム画面に追加」で、アプリのように起動できます。</div>
   </div>
 </div>
@@ -285,10 +285,26 @@ window.SUG_CLOUD_CONFIG = {
   </div>
 </div>
 
+<div id="inviteSetupModal" class="memberModal hidden">
+  <div class="memberBox recoveryBox">
+    <h2>初回パスワード設定</h2>
+    <div class="sub">S.u.G会員登録を完了します。今後ログインに使うパスワードを自分で設定してください。</div>
+    <label>新しいパスワード</label>
+    <input id="invitePassword" type="password" autocomplete="new-password" placeholder="8文字以上">
+    <label style="margin-top:9px">新しいパスワード（確認）</label>
+    <input id="invitePassword2" type="password" autocomplete="new-password" placeholder="もう一度入力">
+    <div id="inviteSetupError" class="memberError"></div>
+    <div class="memberActions">
+      <button class="secondary" type="button" onclick="cancelInviteSetup()">キャンセル</button>
+      <button id="inviteSetupBtn" class="primary" type="button" onclick="completeInviteSetup()">登録を完了</button>
+    </div>
+  </div>
+</div>
+
 <div id="memberModal" class="memberModal hidden">
   <div class="memberBox">
-    <h2>会員アカウント作成</h2>
-    <div class="sub">S.u.G管理者専用｜作成後、会員本人が同じURLからログインできます。</div>
+    <h2>会員招待リンク</h2>
+    <div class="sub">管理者が氏名とメールだけ登録 → 招待リンクをLINE等で本人へ送信 → 本人が自分でパスワードを設定します。</div>
 
     <label>氏名</label>
     <input id="newMemberName" autocomplete="name" placeholder="例：山田 太郎">
@@ -296,17 +312,21 @@ window.SUG_CLOUD_CONFIG = {
     <label>メールアドレス</label>
     <input id="newMemberEmail" type="email" autocomplete="email" placeholder="member@example.com">
 
-    <label>仮パスワード</label>
-    <div class="passRow">
-      <input id="newMemberPassword" type="text" autocomplete="off" placeholder="8文字以上">
-      <button class="secondary" type="button" onclick="generateTempPassword()">自動作成</button>
-    </div>
-
     <div id="memberCreateError" class="memberError"></div>
 
+    <div id="inviteResult" class="hidden" style="margin-top:12px">
+      <label>招待リンク</label>
+      <textarea id="inviteLinkOutput" readonly style="min-height:105px;font-size:12px;word-break:break-all"></textarea>
+      <div class="notice" style="margin-top:8px">このリンクは本人専用です。LINEなどで会員本人にだけ送ってください。</div>
+      <div class="memberActions" style="margin-top:9px">
+        <button class="secondary" type="button" onclick="copyInviteLink()">リンクをコピー</button>
+        <button class="primary" type="button" onclick="shareInviteLink()">共有（LINE等）</button>
+      </div>
+    </div>
+
     <div class="memberActions">
-      <button class="secondary" type="button" onclick="closeMemberModal()">キャンセル</button>
-      <button id="createMemberBtn" class="primary" type="button" onclick="createMemberAccount()">会員を作成</button>
+      <button class="secondary" type="button" onclick="closeMemberModal()">閉じる</button>
+      <button id="createMemberBtn" class="primary" type="button" onclick="createMemberInvite()">招待リンクを作成</button>
     </div>
   </div>
 </div>
@@ -347,8 +367,8 @@ window.SUG_CLOUD_CONFIG = {
 <header>
   <div class="head">
     <div class="brandIdentity">
-      <img class="brandHeaderLogo" src="./brand-header.png?v=24-1-design" alt="S.u.G OSAKA">
-      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V24.1 DESIGN EDITION / MANAGEMENT 1.0</small></div>
+      <img class="brandHeaderLogo" src="./brand-header.png?v=24-2-invite" alt="S.u.G OSAKA">
+      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V24.2 INVITE LINK / MANAGEMENT 1.0</small></div>
     </div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
@@ -357,7 +377,7 @@ window.SUG_CLOUD_CONFIG = {
 <div class="wrap">
   <div id="memberToolbar" class="toolbar">
     <select id="memberSelect" onchange="switchMember(this.value)"></select>
-    <button id="addMemberBtn" class="primary" onclick="newMember()">＋会員</button>
+    <button id="addMemberBtn" class="primary" onclick="newMember()">＋会員招待</button>
   </div>
 
   <div class="tabs">
@@ -376,7 +396,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="adminBoard" class="panel">
     <div id="adminBrandHero" class="card adminBrandHero">
-      <img class="adminOfficialLogo" src="./brand-official.jpg?v=24-1-design" alt="S.u.G OSAKA official brand">
+      <img class="adminOfficialLogo" src="./brand-official.jpg?v=24-2-invite" alt="S.u.G OSAKA official brand">
       <div class="adminBrandText"><h2>S.u.G OSAKA</h2><p>PERSONAL TRAINING × PERSONAL STRETCH × CONDITIONING<br>会員管理・予約・フォロー・コンディションを一つの運営画面へ。</p></div>
     </div>
     <div class="card dailyOpsCard">
@@ -501,11 +521,11 @@ window.SUG_CLOUD_CONFIG = {
   <section id="dash" class="panel active">
     <div class="card sugHero">
       <div>
-        <img class="sugHeroLogo" src="./brand-header.png?v=24-1-design" alt="S.u.G OSAKA">
+        <img class="sugHeroLogo" src="./brand-header.png?v=24-2-invite" alt="S.u.G OSAKA">
         <div class="sugHeroTitle">鍛える。整える。魅せる。</div>
         <div class="sugHeroSub">TRAINING / CONDITIONING / STYLE UPDATE<br>記録して、管理して、次の身体へ。</div>
       </div>
-      <img class="sugHeroMascot" src="./mascot-highfive.png?v=24-1-design" alt="">
+      <img class="sugHeroMascot" src="./mascot-highfive.png?v=24-2-invite" alt="">
     </div>
     <div class="card">
       <h2>現在の状態</h2>
@@ -549,7 +569,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="weight" class="panel">
     <div class="card">
-      <img class="mascotMini" src="./mascot-jumprope.png?v=24-1-design" alt="">
+      <img class="mascotMini" src="./mascot-jumprope.png?v=24-2-invite" alt="">
       <h2>体重記録</h2>
       <div class="grid2"><div><label>日付</label><input id="wDate" type="date"></div><div><label>体重 kg</label><input id="wWeight" type="number" step="0.1"></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>体脂肪率 %</label><input id="wFat" type="number" step="0.1"></div><div><label>メモ</label><input id="wMemo"></div></div>
@@ -571,7 +591,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="training" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>トレーニング記録</h2><div class="muted">重量・REP・SET・RIRを記録し、前回からの進歩を確認。</div></div><img class="sectionMascot" src="./mascot-basketball.png?v=24-1-design" alt=""></div>
+      <div class="sectionLead"><div><h2>トレーニング記録</h2><div class="muted">重量・REP・SET・RIRを記録し、前回からの進歩を確認。</div></div><img class="sectionMascot" src="./mascot-basketball.png?v=24-2-invite" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="tDate" type="date"></div><div><label>種目</label><input id="tExercise" placeholder="スミススクワット"></div></div>
       <div class="grid4" style="margin-top:8px"><div><label>重量</label><input id="tWeight" type="number" step="0.5"></div><div><label>REP</label><input id="tReps" type="number"></div><div><label>SET</label><input id="tSets" type="number"></div><div><label>RIR</label><input id="tRir" type="number" step="0.5"></div></div>
       <div style="margin-top:8px"><label>メモ</label><input id="tMemo"></div>
@@ -583,7 +603,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="recovery" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>回復・コンディション</h2><div class="muted">睡眠・疲労・ストレス・痛みから、その日の負荷を調整。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=24-1-design" alt=""></div>
+      <div class="sectionLead"><div><h2>回復・コンディション</h2><div class="muted">睡眠・疲労・ストレス・痛みから、その日の負荷を調整。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=24-2-invite" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="rDate" type="date"></div><div><label>睡眠時間</label><input id="rSleep" type="number" step="0.1"></div></div>
       <div class="grid3" style="margin-top:8px"><div><label>疲労 1-10</label><input id="rFatigue" type="number" min="1" max="10"></div><div><label>ストレス 1-10</label><input id="rStress" type="number" min="1" max="10"></div><div><label>痛み 0-10</label><input id="rPain" type="number" min="0" max="10"></div></div>
       <div style="margin-top:8px"><label>メモ</label><textarea id="rMemo"></textarea></div>
@@ -595,7 +615,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="checkin" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>週間チェックイン</h2><div class="muted">今週の身体と生活を短時間で共有。コーチングの調整材料にします。</div></div><img class="sectionMascot" src="./mascot-running.png?v=24-1-design" alt=""></div>
+      <div class="sectionLead"><div><h2>週間チェックイン</h2><div class="muted">今週の身体と生活を短時間で共有。コーチングの調整材料にします。</div></div><img class="sectionMascot" src="./mascot-running.png?v=24-2-invite" alt=""></div>
       <div class="notice">週1回の自己申告です。数値は管理の目安として使い、体調の診断には使用しません。</div>
       <div class="grid2" style="margin-top:9px"><div><label>日付</label><input id="ciDate" type="date"></div><div><label>体調 1-5</label><input id="ciCondition" type="number" min="1" max="5" value="3"></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>睡眠満足度 1-5</label><input id="ciSleep" type="number" min="1" max="5" value="3"></div><div><label>痛み 0-10</label><input id="ciPain" type="number" min="0" max="10" value="0"></div></div>
@@ -649,7 +669,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="profile" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>会員情報</h2><div class="muted">目標・栄養・注意事項をS.u.Gの管理基準として保存。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=24-1-design" alt=""></div>
+      <div class="sectionLead"><div><h2>会員情報</h2><div class="muted">目標・栄養・注意事項をS.u.Gの管理基準として保存。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=24-2-invite" alt=""></div>
       <div class="grid2"><div><label>氏名</label><input id="pfName"></div><div><label>目的</label><select id="pfGoal"><option>筋肥大</option><option>減量</option><option>増量</option><option>健康維持</option><option>姿勢改善</option></select></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>目標体重</label><input id="pfTargetWeight" type="number" step="0.1"></div><div><label>目標kcal</label><input id="pfTargetKcal" type="number"></div></div>
       <div class="grid3" style="margin-top:8px"><div><label>目標P</label><input id="pfP" type="number"></div><div><label>目標F</label><input id="pfF" type="number"></div><div><label>目標C</label><input id="pfC" type="number"></div></div>
@@ -719,6 +739,9 @@ let followupTableReady = true;
 let restorePreviewData = null;
 let appointments = [];
 let editingAppointmentId = null;
+let lastInviteLink = "";
+let lastInviteDisplayName = "";
+let inviteLandingDetected = new URLSearchParams(location.search).get("invite")==="1" || /(?:^|[&#])type=invite(?:&|$)/.test(location.hash);
 
 const dateISO=(d)=>{
   const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,"0"),day=String(d.getDate()).padStart(2,"0");
@@ -772,6 +795,11 @@ async function initCloud(){
       }
       if(event==="SIGNED_IN" && new URLSearchParams(location.search).get("recovery")==="1"){
         setTimeout(()=>openRecoveryModal(),0);
+      }
+      if((event==="SIGNED_IN" || event==="INITIAL_SESSION") && session?.user && inviteLandingDetected){
+        accessToken=session.access_token||accessToken;
+        sessionUser=session.user;
+        setTimeout(()=>openInviteSetupModal(),0);
       }
       if(event==="TOKEN_REFRESHED" && session?.access_token){
         accessToken=session.access_token;
@@ -911,6 +939,44 @@ async function completePasswordRecovery(){
   }catch(e){console.error(e);msg.textContent="更新失敗："+(e?.message||String(e));}
   finally{btn.disabled=false;btn.textContent="パスワードを更新";}
 }
+function openInviteSetupModal(){
+  const modal=document.getElementById("inviteSetupModal");if(!modal)return;
+  document.getElementById("invitePassword").value="";
+  document.getElementById("invitePassword2").value="";
+  document.getElementById("inviteSetupError").textContent="";
+  modal.classList.remove("hidden");
+}
+async function cancelInviteSetup(){
+  document.getElementById("inviteSetupModal")?.classList.add("hidden");
+  try{if(sb)await sb.auth.signOut({scope:"local"})}catch(_e){}
+  accessToken=null;sessionUser=null;inviteLandingDetected=false;
+  history.replaceState({},"",location.pathname);
+  showLogin("会員登録をキャンセルしました。招待リンクからもう一度開いてください。");
+}
+async function completeInviteSetup(){
+  const p1=document.getElementById("invitePassword").value;
+  const p2=document.getElementById("invitePassword2").value;
+  const msg=document.getElementById("inviteSetupError");
+  const btn=document.getElementById("inviteSetupBtn");
+  if(p1.length<8){msg.textContent="パスワードは8文字以上にしてください。";return;}
+  if(p1!==p2){msg.textContent="確認用パスワードが一致しません。";return;}
+  btn.disabled=true;btn.textContent="登録中...";msg.textContent="";
+  try{
+    const {data,error}=await sb.auth.updateUser({password:p1});
+    if(error)throw error;
+    const {data:sessionData,error:sessionError}=await sb.auth.getSession();
+    if(sessionError)throw sessionError;
+    const session=sessionData?.session;
+    const user=data?.user||session?.user;
+    if(!session?.access_token || !user)throw new Error("ログインセッションを取得できませんでした。");
+    accessToken=session.access_token;sessionUser=user;inviteLandingDetected=false;
+    document.getElementById("inviteSetupModal")?.classList.add("hidden");
+    history.replaceState({},"",location.pathname);
+    await onSignedIn(user);
+  }catch(e){console.error(e);msg.textContent="登録失敗："+(e?.message||String(e));}
+  finally{btn.disabled=false;btn.textContent="登録を完了";}
+}
+
 function loadSecurityPanel(){
   const email=document.getElementById("securityEmail");if(email)email.textContent=sessionUser?.email||"--";
   const s=document.getElementById("securityStatus");if(s){s.textContent="";s.className="securityStatus";}
@@ -1148,32 +1214,22 @@ function saveRender(){persist();renderAll()}
 
 function newMember(){
   if(currentRole!=="trainer"){
-    alert("会員追加は管理者のみ利用できます。");
+    alert("会員招待は管理者のみ利用できます。");
     return;
   }
   newMemberName.value="";
   newMemberEmail.value="";
-  newMemberPassword.value="";
   memberCreateError.textContent="";
+  lastInviteLink="";lastInviteDisplayName="";
+  const result=document.getElementById("inviteResult");if(result)result.classList.add("hidden");
+  const out=document.getElementById("inviteLinkOutput");if(out)out.value="";
   createMemberBtn.disabled=false;
-  createMemberBtn.textContent="会員を作成";
+  createMemberBtn.textContent="招待リンクを作成";
   memberModal.classList.remove("hidden");
 }
 
 function closeMemberModal(){
   memberModal.classList.add("hidden");
-}
-
-function generateTempPassword(){
-  const chars="ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789";
-  const symbols="!@#$%";
-  const a=new Uint32Array(12);
-  crypto.getRandomValues(a);
-  let s="";
-  for(let i=0;i<10;i++)s+=chars[a[i]%chars.length];
-  s+=symbols[a[10]%symbols.length];
-  s+=String(a[11]%10);
-  newMemberPassword.value=s;
 }
 
 async function refreshMemberProfiles(selectId=null){
@@ -1190,12 +1246,15 @@ async function refreshMemberProfiles(selectId=null){
   }
 }
 
-async function createMemberAccount(){
+function inviteRedirectUrl(){
+  return location.origin+location.pathname;
+}
+
+async function createMemberInvite(){
   if(currentRole!=="trainer")return;
 
   const displayName=newMemberName.value.trim();
   const email=newMemberEmail.value.trim().toLowerCase();
-  const password=newMemberPassword.value;
 
   if(!displayName){
     memberCreateError.textContent="氏名を入力してください。";
@@ -1203,10 +1262,6 @@ async function createMemberAccount(){
   }
   if(!email || !email.includes("@")){
     memberCreateError.textContent="メールアドレスを確認してください。";
-    return;
-  }
-  if(password.length<8){
-    memberCreateError.textContent="仮パスワードは8文字以上にしてください。";
     return;
   }
 
@@ -1217,7 +1272,7 @@ async function createMemberAccount(){
   try{
     const cfg=window.SUG_CLOUD_CONFIG;
     const res=await fetch(
-      cfg.url+"/functions/v1/create-member",
+      cfg.url+"/functions/v1/invite-member",
       {
         method:"POST",
         headers:{
@@ -1225,7 +1280,7 @@ async function createMemberAccount(){
           "Authorization":"Bearer "+accessToken,
           "Content-Type":"application/json"
         },
-        body:JSON.stringify({displayName,email,password})
+        body:JSON.stringify({displayName,email,redirectTo:inviteRedirectUrl()})
       }
     );
 
@@ -1236,17 +1291,49 @@ async function createMemberAccount(){
     if(!res.ok){
       throw new Error(body?.message||body?.error||("HTTP "+res.status));
     }
+    if(!body?.inviteLink){
+      throw new Error("招待リンクを取得できませんでした。");
+    }
 
-    closeMemberModal();
+    lastInviteLink=body.inviteLink;
+    lastInviteDisplayName=displayName;
+    document.getElementById("inviteLinkOutput").value=lastInviteLink;
+    document.getElementById("inviteResult").classList.remove("hidden");
+    createMemberBtn.textContent="作成済み";
     await refreshMemberProfiles(body.user?.id||null);
-    alert("会員アカウントを作成しました。");
   }catch(e){
     console.error(e);
-    memberCreateError.textContent="作成失敗："+(e?.message||String(e));
+    memberCreateError.textContent="招待リンク作成失敗："+(e?.message||String(e));
     createMemberBtn.disabled=false;
-    createMemberBtn.textContent="会員を作成";
+    createMemberBtn.textContent="招待リンクを作成";
   }
 }
+
+async function copyInviteLink(){
+  if(!lastInviteLink)return;
+  try{
+    await navigator.clipboard.writeText(lastInviteLink);
+    alert("招待リンクをコピーしました。");
+  }catch(_e){
+    const out=document.getElementById("inviteLinkOutput");
+    out.focus();out.select();document.execCommand("copy");
+    alert("招待リンクをコピーしました。");
+  }
+}
+
+async function shareInviteLink(){
+  if(!lastInviteLink)return;
+  const text=`${lastInviteDisplayName||"会員"} 様
+S.u.G大阪 会員管理システムの招待リンクです。
+下のリンクを開いて、ご自身でパスワードを設定してください。
+
+${lastInviteLink}`;
+  if(navigator.share){
+    try{await navigator.share({title:"S.u.G大阪 会員招待",text});return}catch(e){if(e?.name==="AbortError")return;}
+  }
+  location.href="https://line.me/R/share?text="+encodeURIComponent(text);
+}
+
 async function switchMember(id){
   if(id===db.current)return;
   if(saveTimer){clearTimeout(saveTimer);await saveCloud()}
@@ -2451,7 +2538,7 @@ document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelect
 if(document.getElementById("apptTime"))document.getElementById("apptTime").value="10:00";
 reportMonth.value=monthNow();
 
-// V24.1 DESIGN EDITION PWA: network-only service worker to avoid stale app versions.
+// V24.2 INVITE LINK PWA: network-only service worker to avoid stale app versions.
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker.register("./sw.js?v=24").catch(err => console.warn("SW register failed", err));
