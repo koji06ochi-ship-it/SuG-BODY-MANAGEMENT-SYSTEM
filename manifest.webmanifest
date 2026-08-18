@@ -2,7 +2,7 @@
   "name": "S.u.G BODY MANAGEMENT SYSTEM",
   "short_name": "S.u.G BODY",
   "description": "S.u.G大阪 会員限定ボディマネジメントシステム",
-  "start_url": "./?v=23-pwa",
+  "start_url": "./?v=24-final",
   "scope": "./",
   "display": "standalone",
   "background_color": "#09090a",
