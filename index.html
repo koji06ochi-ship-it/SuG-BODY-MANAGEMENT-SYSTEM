@@ -6,15 +6,15 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>S.u.G BODY MANAGEMENT SYSTEM V24</title>
+<title>S.u.G BODY MANAGEMENT SYSTEM V24.1 DESIGN EDITION</title>
 <meta name="theme-color" content="#09090a">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="S.u.G BODY">
-<link rel="manifest" href="./manifest.webmanifest?v=24">
-<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png?v=24">
-<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=24">
+<link rel="manifest" href="./manifest.webmanifest?v=24-1-design">
+<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png?v=24-1-design">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=24-1-design">
 <style>
 :root{
   --bg:#09090a;--card:#141417;--card2:#1a1a1f;--gold:#d8b35b;--gold2:#f3d98b;
@@ -172,7 +172,7 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 .checkinFollowReason{font-size:9px;color:#c7c7cc;line-height:1.55;margin-top:3px}
 @media(max-width:719px){.checkinFollowItem{grid-template-columns:auto 1fr}.checkinFollowItem .lineBtn,.checkinFollowItem .secondary,.checkinFollowItem .primary{width:100%}}
 
-/* V24 FINAL: production release 1.0 */
+/* V24.1 DESIGN EDITION: production 1.0 visual branding */
 .dailyOpsCard{border-color:#66552b;background:linear-gradient(180deg,#1b170d,#101012)}
 .dailyOpsKpis{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;margin-top:10px}
 .dailyOpsKpi{background:#0d0d10;border:1px solid #373126;border-radius:11px;padding:9px;min-width:0}
@@ -192,6 +192,54 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 .pwaGuide.hidden{display:none}
 @media (display-mode: standalone){.pwaGuide{display:none!important}}
 
+
+/* V24.1 DESIGN EDITION — S.u.G branded visual layer */
+:root{--sugGlow:rgba(216,179,91,.18);--sugGlow2:rgba(243,217,139,.08)}
+body{
+  background:
+    radial-gradient(circle at 50% -10%,rgba(216,179,91,.10),transparent 34%),
+    linear-gradient(180deg,#050506,#0c0c0f 48%,#070708);
+}
+header{border-bottom-color:#3c3422;box-shadow:0 10px 32px rgba(0,0,0,.30)}
+.brandIdentity{display:flex;align-items:center;gap:10px;min-width:0}
+.brandHeaderLogo{width:180px;max-width:42vw;height:auto;display:block;filter:drop-shadow(0 5px 14px rgba(216,179,91,.10))}
+.brandCopy{min-width:0}.brandCopy h1{margin:0;font-size:12px;letter-spacing:.10em}.brandCopy small{display:block;margin-top:2px;color:var(--gold2);font-size:8px}
+.authBox{position:relative;overflow:hidden;padding-top:18px;border-color:#67552b;box-shadow:0 24px 90px rgba(0,0,0,.58),0 0 46px rgba(216,179,91,.06)}
+.authBrandLogo{display:block;width:min(330px,92%);height:auto;margin:0 auto 10px;filter:drop-shadow(0 8px 18px rgba(216,179,91,.12))}
+.authBox h1{font-size:16px;text-align:center}.authBox .sub{text-align:center;letter-spacing:.08em}
+.authMascot{display:block;width:118px;height:auto;margin:8px auto -2px;filter:drop-shadow(0 8px 15px rgba(0,0,0,.38))}
+.card{position:relative;overflow:hidden}
+.card::after{content:"";position:absolute;inset:auto -20% -45% 35%;height:150px;background:radial-gradient(circle,rgba(216,179,91,.045),transparent 68%);pointer-events:none}
+.sugHero{display:grid;grid-template-columns:minmax(0,1fr) 138px;gap:12px;align-items:center;border-color:#5f4e28;background:linear-gradient(145deg,#1a160d,#111114 58%,#09090b)}
+.sugHeroLogo{width:100%;max-width:350px;height:auto;display:block;filter:drop-shadow(0 10px 24px rgba(216,179,91,.10))}
+.sugHeroMascot{width:138px;max-width:100%;height:auto;justify-self:end;filter:drop-shadow(0 10px 22px rgba(0,0,0,.42))}
+.sugHeroTitle{font-size:17px;font-weight:900;color:var(--gold2);letter-spacing:.06em;margin-top:4px}
+.sugHeroSub{font-size:9px;color:#b9ad87;line-height:1.7;margin-top:5px}
+.adminBrandHero{display:grid;grid-template-columns:190px minmax(0,1fr);gap:14px;align-items:center;border-color:#604d26;background:linear-gradient(140deg,#15120c,#0d0d10)}
+.adminOfficialLogo{width:190px;max-width:100%;height:auto;border-radius:14px;border:1px solid #4b4028;box-shadow:0 12px 32px rgba(0,0,0,.35)}
+.adminBrandText h2{font-size:18px;margin:0;color:var(--gold2);letter-spacing:.06em}.adminBrandText p{font-size:9px;color:#aaa;line-height:1.7;margin:6px 0 0}
+.sectionLead{display:grid;grid-template-columns:minmax(0,1fr) 105px;gap:10px;align-items:center}
+.sectionMascot{width:105px;height:auto;justify-self:end;filter:drop-shadow(0 8px 16px rgba(0,0,0,.35))}
+.sectionLead h2{font-size:15px!important;margin-bottom:5px!important}.sectionLead .muted{line-height:1.6}
+.mascotMini{width:86px;height:auto;float:right;margin:-8px -5px 4px 8px;filter:drop-shadow(0 7px 14px rgba(0,0,0,.35))}
+.tabs{position:sticky;top:65px;z-index:30;background:rgba(8,8,10,.90);padding:6px;border-radius:12px;backdrop-filter:blur(12px);border:1px solid rgba(216,179,91,.10)}
+.tab{transition:.18s ease}.tab.active{box-shadow:inset 0 0 0 1px rgba(243,217,139,.12),0 5px 20px rgba(216,179,91,.05)}
+button.primary{box-shadow:0 5px 18px rgba(184,140,50,.10)}
+@media(max-width:700px){
+  .brandHeaderLogo{width:145px;max-width:46vw}.brandCopy h1{font-size:9px}.brandCopy small{font-size:7px}
+  .headActions{gap:4px}.headActions button{padding:8px 9px;font-size:9px}
+  .sugHero{grid-template-columns:minmax(0,1fr) 102px}.sugHeroMascot{width:102px}
+  .adminBrandHero{grid-template-columns:110px minmax(0,1fr)}.adminOfficialLogo{width:110px}.adminBrandText h2{font-size:14px}
+  .sectionLead{grid-template-columns:minmax(0,1fr) 82px}.sectionMascot{width:82px}
+}
+@media(max-width:430px){
+  .brandCopy{display:none}.brandHeaderLogo{width:178px;max-width:54vw}
+  .sugHero{grid-template-columns:minmax(0,1fr) 90px}.sugHeroMascot{width:90px}.sugHeroTitle{font-size:14px}
+  .adminBrandHero{grid-template-columns:88px minmax(0,1fr)}.adminOfficialLogo{width:88px}
+  .sectionLead{grid-template-columns:minmax(0,1fr) 72px}.sectionMascot{width:72px}
+  .tabs{top:62px}
+}
+
 </style>
 <script>
 window.SUG_CLOUD_CONFIG = {
@@ -205,8 +253,9 @@ window.SUG_CLOUD_CONFIG = {
 
 <div id="authGate" class="authGate">
   <div class="authBox">
+    <img class="authBrandLogo" src="./brand-header.png?v=24-1-design" alt="S.u.G OSAKA">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V24 FINAL / MEMBERS ONLY</div>
+    <div class="sub">V24.1 DESIGN EDITION / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -215,6 +264,7 @@ window.SUG_CLOUD_CONFIG = {
     <div class="authLinks"><button class="linkBtn" type="button" onclick="requestPasswordReset()">パスワードを忘れた方</button></div>
     <div id="authError" class="authError"></div>
     <div class="setupNote">S.u.G会員限定。アカウントは管理者が発行します。</div>
+    <img class="authMascot" src="./mascot-highfive.png?v=24-1-design" alt="">
     <div id="pwaGuide" class="pwaGuide hidden"><b>iPhoneホーム画面対応</b><br>Safariの共有ボタン →「ホーム画面に追加」で、アプリのように起動できます。</div>
   </div>
 </div>
@@ -296,7 +346,10 @@ window.SUG_CLOUD_CONFIG = {
 
 <header>
   <div class="head">
-    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V24 FINAL / S.u.G BODY MANAGEMENT 1.0</small></div>
+    <div class="brandIdentity">
+      <img class="brandHeaderLogo" src="./brand-header.png?v=24-1-design" alt="S.u.G OSAKA">
+      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V24.1 DESIGN EDITION / MANAGEMENT 1.0</small></div>
+    </div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
 </header>
@@ -322,6 +375,10 @@ window.SUG_CLOUD_CONFIG = {
   </div>
 
   <section id="adminBoard" class="panel">
+    <div id="adminBrandHero" class="card adminBrandHero">
+      <img class="adminOfficialLogo" src="./brand-official.jpg?v=24-1-design" alt="S.u.G OSAKA official brand">
+      <div class="adminBrandText"><h2>S.u.G OSAKA</h2><p>PERSONAL TRAINING × PERSONAL STRETCH × CONDITIONING<br>会員管理・予約・フォロー・コンディションを一つの運営画面へ。</p></div>
+    </div>
     <div class="card dailyOpsCard">
       <div class="row" style="align-items:center">
         <div><h2 style="margin-bottom:3px">今日の運営</h2><div class="muted">予約・フォロー・チェックイン・回復低下を、今日やる順に1画面で確認</div></div>
@@ -442,6 +499,14 @@ window.SUG_CLOUD_CONFIG = {
   </section>
 
   <section id="dash" class="panel active">
+    <div class="card sugHero">
+      <div>
+        <img class="sugHeroLogo" src="./brand-header.png?v=24-1-design" alt="S.u.G OSAKA">
+        <div class="sugHeroTitle">鍛える。整える。魅せる。</div>
+        <div class="sugHeroSub">TRAINING / CONDITIONING / STYLE UPDATE<br>記録して、管理して、次の身体へ。</div>
+      </div>
+      <img class="sugHeroMascot" src="./mascot-highfive.png?v=24-1-design" alt="">
+    </div>
     <div class="card">
       <h2>現在の状態</h2>
       <div class="kpis">
@@ -484,6 +549,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="weight" class="panel">
     <div class="card">
+      <img class="mascotMini" src="./mascot-jumprope.png?v=24-1-design" alt="">
       <h2>体重記録</h2>
       <div class="grid2"><div><label>日付</label><input id="wDate" type="date"></div><div><label>体重 kg</label><input id="wWeight" type="number" step="0.1"></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>体脂肪率 %</label><input id="wFat" type="number" step="0.1"></div><div><label>メモ</label><input id="wMemo"></div></div>
@@ -505,7 +571,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="training" class="panel">
     <div class="card">
-      <h2>トレーニング記録</h2>
+      <div class="sectionLead"><div><h2>トレーニング記録</h2><div class="muted">重量・REP・SET・RIRを記録し、前回からの進歩を確認。</div></div><img class="sectionMascot" src="./mascot-basketball.png?v=24-1-design" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="tDate" type="date"></div><div><label>種目</label><input id="tExercise" placeholder="スミススクワット"></div></div>
       <div class="grid4" style="margin-top:8px"><div><label>重量</label><input id="tWeight" type="number" step="0.5"></div><div><label>REP</label><input id="tReps" type="number"></div><div><label>SET</label><input id="tSets" type="number"></div><div><label>RIR</label><input id="tRir" type="number" step="0.5"></div></div>
       <div style="margin-top:8px"><label>メモ</label><input id="tMemo"></div>
@@ -517,7 +583,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="recovery" class="panel">
     <div class="card">
-      <h2>回復・コンディション</h2>
+      <div class="sectionLead"><div><h2>回復・コンディション</h2><div class="muted">睡眠・疲労・ストレス・痛みから、その日の負荷を調整。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=24-1-design" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="rDate" type="date"></div><div><label>睡眠時間</label><input id="rSleep" type="number" step="0.1"></div></div>
       <div class="grid3" style="margin-top:8px"><div><label>疲労 1-10</label><input id="rFatigue" type="number" min="1" max="10"></div><div><label>ストレス 1-10</label><input id="rStress" type="number" min="1" max="10"></div><div><label>痛み 0-10</label><input id="rPain" type="number" min="0" max="10"></div></div>
       <div style="margin-top:8px"><label>メモ</label><textarea id="rMemo"></textarea></div>
@@ -529,7 +595,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="checkin" class="panel">
     <div class="card">
-      <h2>週間チェックイン</h2>
+      <div class="sectionLead"><div><h2>週間チェックイン</h2><div class="muted">今週の身体と生活を短時間で共有。コーチングの調整材料にします。</div></div><img class="sectionMascot" src="./mascot-running.png?v=24-1-design" alt=""></div>
       <div class="notice">週1回の自己申告です。数値は管理の目安として使い、体調の診断には使用しません。</div>
       <div class="grid2" style="margin-top:9px"><div><label>日付</label><input id="ciDate" type="date"></div><div><label>体調 1-5</label><input id="ciCondition" type="number" min="1" max="5" value="3"></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>睡眠満足度 1-5</label><input id="ciSleep" type="number" min="1" max="5" value="3"></div><div><label>痛み 0-10</label><input id="ciPain" type="number" min="0" max="10" value="0"></div></div>
@@ -583,7 +649,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="profile" class="panel">
     <div class="card">
-      <h2>会員情報</h2>
+      <div class="sectionLead"><div><h2>会員情報</h2><div class="muted">目標・栄養・注意事項をS.u.Gの管理基準として保存。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=24-1-design" alt=""></div>
       <div class="grid2"><div><label>氏名</label><input id="pfName"></div><div><label>目的</label><select id="pfGoal"><option>筋肥大</option><option>減量</option><option>増量</option><option>健康維持</option><option>姿勢改善</option></select></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>目標体重</label><input id="pfTargetWeight" type="number" step="0.1"></div><div><label>目標kcal</label><input id="pfTargetKcal" type="number"></div></div>
       <div class="grid3" style="margin-top:8px"><div><label>目標P</label><input id="pfP" type="number"></div><div><label>目標F</label><input id="pfF" type="number"></div><div><label>目標C</label><input id="pfC" type="number"></div></div>
@@ -1782,6 +1848,7 @@ function applyRoleUI(){
   const adminTab=document.getElementById("adminTab");
   const coachEditor=document.getElementById("coachPlanEditorCard");
   const appointmentAdminCard=document.getElementById("appointmentAdminCard");
+  const adminBrandHero=document.getElementById("adminBrandHero");
   const selectedProfile=accessibleProfiles.find(x=>x.id===db.current);
   const canDelete=isTrainer && selectedProfile && selectedProfile.role!=="trainer" && db.current!==sessionUser?.id;
 
@@ -1793,6 +1860,7 @@ function applyRoleUI(){
   if(adminTab) adminTab.style.display=isTrainer?"block":"none";
   if(coachEditor) coachEditor.style.display=isTrainer?"block":"none";
   if(appointmentAdminCard) appointmentAdminCard.style.display=isTrainer?"block":"none";
+  if(adminBrandHero) adminBrandHero.style.display=isTrainer?"grid":"none";
   if(!isTrainer && document.getElementById("adminBoard")?.classList.contains("active")){
     const dashTab=document.querySelector('.tab[data-tab="dash"]');if(dashTab)dashTab.click();
   }
@@ -2383,7 +2451,7 @@ document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelect
 if(document.getElementById("apptTime"))document.getElementById("apptTime").value="10:00";
 reportMonth.value=monthNow();
 
-// V24 FINAL PWA: network-only service worker to avoid stale app versions.
+// V24.1 DESIGN EDITION PWA: network-only service worker to avoid stale app versions.
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker.register("./sw.js?v=24").catch(err => console.warn("SW register failed", err));
