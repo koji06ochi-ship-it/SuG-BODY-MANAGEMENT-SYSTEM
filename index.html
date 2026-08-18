@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>S.u.G BODY MANAGEMENT SYSTEM V18</title>
+<title>S.u.G BODY MANAGEMENT SYSTEM V19</title>
 <style>
 :root{
   --bg:#09090a;--card:#141417;--card2:#1a1a1f;--gold:#d8b35b;--gold2:#f3d98b;
@@ -135,6 +135,17 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 .apptActions{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:8px}.apptReadonly{font-size:9px;color:#999;line-height:1.65;margin-top:8px}
 @media(max-width:560px){.apptAdminGrid,.apptAdminGrid3{grid-template-columns:1fr}.apptActions{grid-template-columns:1fr 1fr 1fr}}
 
+
+/* V19: account password security */
+.authLinks{display:flex;justify-content:flex-end;margin-top:8px}
+.linkBtn{background:none;border:0;color:var(--gold2);padding:0;font-size:10px;text-decoration:underline;cursor:pointer;width:auto!important;margin:0!important}
+.securityGrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.securityStatus{min-height:18px;margin-top:8px;font-size:10px;line-height:1.6}
+.securityStatus.ok{color:#83e2a5}.securityStatus.bad{color:#ff9d9d}
+.accountBadge{padding:10px;border:1px solid #34343a;border-radius:10px;background:#0d0d10;font-size:11px;word-break:break-all}
+.recoveryBox{width:min(430px,100%)}
+@media(max-width:560px){.securityGrid{grid-template-columns:1fr}}
+
 </style>
 <script>
 window.SUG_CLOUD_CONFIG = {
@@ -149,17 +160,33 @@ window.SUG_CLOUD_CONFIG = {
 <div id="authGate" class="authGate">
   <div class="authBox">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V18 CLOUD / MEMBERS ONLY</div>
+    <div class="sub">V19 CLOUD / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
     <input id="loginPassword" type="password" autocomplete="current-password" placeholder="Password">
     <button id="loginBtn" class="primary" onclick="login()" disabled>接続中...</button>
+    <div class="authLinks"><button class="linkBtn" type="button" onclick="requestPasswordReset()">パスワードを忘れた方</button></div>
     <div id="authError" class="authError"></div>
     <div class="setupNote">S.u.G会員限定。アカウントは管理者が発行します。</div>
   </div>
 </div>
 
+<div id="recoveryModal" class="memberModal hidden">
+  <div class="memberBox recoveryBox">
+    <h2>パスワード再設定</h2>
+    <div class="sub">再設定メールのリンクから開いています。新しいパスワードを設定してください。</div>
+    <label>新しいパスワード</label>
+    <input id="recoveryPassword" type="password" autocomplete="new-password" placeholder="8文字以上">
+    <label style="margin-top:9px">新しいパスワード（確認）</label>
+    <input id="recoveryPassword2" type="password" autocomplete="new-password" placeholder="もう一度入力">
+    <div id="recoveryError" class="memberError"></div>
+    <div class="memberActions">
+      <button class="secondary" type="button" onclick="cancelRecovery()">キャンセル</button>
+      <button id="recoverySaveBtn" class="primary" type="button" onclick="completePasswordRecovery()">パスワードを更新</button>
+    </div>
+  </div>
+</div>
 
 <div id="memberModal" class="memberModal hidden">
   <div class="memberBox">
@@ -222,7 +249,7 @@ window.SUG_CLOUD_CONFIG = {
 
 <header>
   <div class="head">
-    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V18 CLOUD / Appointment Reminder</small></div>
+    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V19 CLOUD / Password Security</small></div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
 </header>
@@ -243,6 +270,7 @@ window.SUG_CLOUD_CONFIG = {
     <button class="tab" data-tab="photos">写真</button>
     <button class="tab" data-tab="report">レポート</button>
     <button class="tab" data-tab="profile">会員情報</button>
+    <button class="tab" data-tab="security">セキュリティ</button>
   </div>
 
   <section id="adminBoard" class="panel">
@@ -486,6 +514,29 @@ window.SUG_CLOUD_CONFIG = {
       <button id="deleteMemberBtn" class="danger" style="width:100%;margin-top:8px" onclick="deleteMember()">この会員を削除</button>
     </div>
   </section>
+
+  <section id="security" class="panel">
+    <div class="card">
+      <h2>アカウント・セキュリティ</h2>
+      <div class="notice">ここで変更されるのは、現在ログインしている本人のアカウントです。管理者が別会員を表示中でも、その会員のパスワードは変更しません。</div>
+      <div style="margin-top:10px">
+        <label>ログインメール</label>
+        <div id="securityEmail" class="accountBadge">--</div>
+      </div>
+      <div class="securityGrid" style="margin-top:10px">
+        <div><label>現在のパスワード</label><input id="securityCurrentPassword" type="password" autocomplete="current-password" placeholder="現在のパスワード"></div>
+        <div><label>新しいパスワード</label><input id="securityNewPassword" type="password" autocomplete="new-password" placeholder="8文字以上"></div>
+      </div>
+      <div style="margin-top:8px"><label>新しいパスワード（確認）</label><input id="securityNewPassword2" type="password" autocomplete="new-password" placeholder="もう一度入力"></div>
+      <button id="changePasswordBtn" class="primary" style="width:100%;margin-top:10px" onclick="changeOwnPassword()">パスワードを変更</button>
+      <div id="securityStatus" class="securityStatus"></div>
+    </div>
+    <div class="card">
+      <h2>パスワードを忘れた場合</h2>
+      <div class="notice">ログアウト後のログイン画面にある「パスワードを忘れた方」から、登録メールへ再設定リンクを送れます。</div>
+      <button class="secondary" style="width:100%;margin-top:10px" onclick="sendResetForCurrentUser()">自分宛てに再設定メールを送る</button>
+    </div>
+  </section>
 </div>
 
 
@@ -548,7 +599,19 @@ async function initCloud(){
         storageKey:"sug-body-management-v4-auth",
         persistSession:true,
         autoRefreshToken:true,
-        detectSessionInUrl:false
+        detectSessionInUrl:true
+      }
+    });
+
+    sb.auth.onAuthStateChange((event, session)=>{
+      if(event==="PASSWORD_RECOVERY"){
+        setTimeout(()=>openRecoveryModal(),0);
+      }
+      if(event==="SIGNED_IN" && new URLSearchParams(location.search).get("recovery")==="1"){
+        setTimeout(()=>openRecoveryModal(),0);
+      }
+      if(event==="TOKEN_REFRESHED" && session?.access_token){
+        accessToken=session.access_token;
       }
     });
 
@@ -630,6 +693,102 @@ async function apiPatch(path, payload){
   return {ok:res.ok,status:res.status,text};
 }
 
+function showLogin(message=""){
+  document.getElementById("authGate")?.classList.remove("hidden");
+  const logout=document.getElementById("logoutBtn");if(logout)logout.style.display="none";
+  const err=document.getElementById("authError");if(err)err.textContent=message||"接続OK。ログインしてください。";
+  const btn=document.getElementById("loginBtn");if(btn){btn.disabled=false;btn.textContent="ログイン";}
+}
+function recoveryRedirectUrl(){
+  return location.origin+location.pathname+"?recovery=1";
+}
+async function requestPasswordReset(){
+  const err=document.getElementById("authError");
+  if(!sb){if(err)err.textContent="Supabaseへ接続できていません。";return;}
+  const email=(document.getElementById("loginEmail")?.value||"").trim();
+  if(!email){if(err)err.textContent="先に登録メールアドレスを入力してください。";return;}
+  if(err)err.textContent="再設定メールを送信中...";
+  try{
+    const {error}=await sb.auth.resetPasswordForEmail(email,{redirectTo:recoveryRedirectUrl()});
+    if(error)throw error;
+    if(err)err.textContent="再設定メールを送信しました。メール内のリンクを開いてください。";
+  }catch(e){
+    console.error(e);if(err)err.textContent="再設定メール送信失敗："+(e?.message||String(e));
+  }
+}
+function openRecoveryModal(){
+  const modal=document.getElementById("recoveryModal");if(!modal)return;
+  document.getElementById("recoveryPassword").value="";
+  document.getElementById("recoveryPassword2").value="";
+  document.getElementById("recoveryError").textContent="";
+  modal.classList.remove("hidden");
+}
+async function cancelRecovery(){
+  document.getElementById("recoveryModal")?.classList.add("hidden");
+  try{if(sb)await sb.auth.signOut({scope:"local"})}catch(_e){}
+  history.replaceState({},"",location.pathname);
+  showLogin("パスワード再設定をキャンセルしました。");
+}
+async function completePasswordRecovery(){
+  const p1=document.getElementById("recoveryPassword").value;
+  const p2=document.getElementById("recoveryPassword2").value;
+  const msg=document.getElementById("recoveryError");
+  const btn=document.getElementById("recoverySaveBtn");
+  if(p1.length<8){msg.textContent="新しいパスワードは8文字以上にしてください。";return;}
+  if(p1!==p2){msg.textContent="確認用パスワードが一致しません。";return;}
+  btn.disabled=true;btn.textContent="更新中...";msg.textContent="";
+  try{
+    const {error}=await sb.auth.updateUser({password:p1});
+    if(error)throw error;
+    document.getElementById("recoveryModal")?.classList.add("hidden");
+    await sb.auth.signOut({scope:"local"});
+    accessToken=null;sessionUser=null;
+    history.replaceState({},"",location.pathname);
+    showLogin("パスワードを更新しました。新しいパスワードでログインしてください。");
+  }catch(e){console.error(e);msg.textContent="更新失敗："+(e?.message||String(e));}
+  finally{btn.disabled=false;btn.textContent="パスワードを更新";}
+}
+function loadSecurityPanel(){
+  const email=document.getElementById("securityEmail");if(email)email.textContent=sessionUser?.email||"--";
+  const s=document.getElementById("securityStatus");if(s){s.textContent="";s.className="securityStatus";}
+}
+async function changeOwnPassword(){
+  const cur=document.getElementById("securityCurrentPassword").value;
+  const next=document.getElementById("securityNewPassword").value;
+  const next2=document.getElementById("securityNewPassword2").value;
+  const status=document.getElementById("securityStatus");
+  const btn=document.getElementById("changePasswordBtn");
+  const setMsg=(t,ok=false)=>{status.textContent=t;status.className="securityStatus "+(ok?"ok":"bad")};
+  if(!sessionUser?.email)return setMsg("ログイン情報を取得できません。再ログインしてください。");
+  if(!cur)return setMsg("現在のパスワードを入力してください。");
+  if(next.length<8)return setMsg("新しいパスワードは8文字以上にしてください。");
+  if(next!==next2)return setMsg("新しいパスワードの確認が一致しません。");
+  if(cur===next)return setMsg("現在と異なるパスワードを設定してください。");
+  btn.disabled=true;btn.textContent="確認中...";status.textContent="";
+  try{
+    const {data:reauth,error:reauthError}=await sb.auth.signInWithPassword({email:sessionUser.email,password:cur});
+    if(reauthError)throw new Error("現在のパスワードが違います。");
+    if(reauth?.session?.access_token)accessToken=reauth.session.access_token;
+    btn.textContent="更新中...";
+    const {error}=await sb.auth.updateUser({password:next});
+    if(error)throw error;
+    document.getElementById("securityCurrentPassword").value="";
+    document.getElementById("securityNewPassword").value="";
+    document.getElementById("securityNewPassword2").value="";
+    setMsg("パスワードを変更しました。",true);
+  }catch(e){console.error(e);setMsg("変更失敗："+(e?.message||String(e)));}
+  finally{btn.disabled=false;btn.textContent="パスワードを変更";}
+}
+async function sendResetForCurrentUser(){
+  const status=document.getElementById("securityStatus");
+  if(!sessionUser?.email){if(status)status.textContent="ログインメールを取得できません。";return;}
+  try{
+    const {error}=await sb.auth.resetPasswordForEmail(sessionUser.email,{redirectTo:recoveryRedirectUrl()});
+    if(error)throw error;
+    if(status){status.textContent="再設定メールを送信しました。";status.className="securityStatus ok";}
+  }catch(e){console.error(e);if(status){status.textContent="送信失敗："+(e?.message||String(e));status.className="securityStatus bad";}}
+}
+
 async function login(){
   const err=document.getElementById("authError");
   const btn=document.getElementById("loginBtn");
@@ -690,7 +849,7 @@ async function login(){
 }
 async function logout(){
   if(sb) await sb.auth.signOut({scope:"local"});
-  accessToken=null;
+  accessToken=null;sessionUser=null;cloudReady=false;
   showLogin();
 }
 function showApp(){authGate.classList.add("hidden");logoutBtn.style.display="inline-block";}
@@ -744,6 +903,7 @@ async function onSignedIn(user){
 
   showApp();
   applyRoleUI();
+  loadSecurityPanel();
   renderBackupStatus();
   await loadMember(accessibleProfiles[0].id);
   cloudReady=true;
@@ -1966,7 +2126,7 @@ function exportMember(){backupCurrentMember()}
 function exportAll(){backupAll()}
 function download(name,text){let b=new Blob([text],{type:"application/json"}),a=document.createElement("a"),u=URL.createObjectURL(b);a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000)}
 
-document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.getElementById(b.dataset.tab).classList.add("active");if(b.dataset.tab==="profile"){loadProfile();loadCoachPlanEditor();}if(b.dataset.tab==="adminBoard")refreshAdminBoard();renderAll()});
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.getElementById(b.dataset.tab).classList.add("active");if(b.dataset.tab==="profile"){loadProfile();loadCoachPlanEditor();}if(b.dataset.tab==="security")loadSecurityPanel();if(b.dataset.tab==="adminBoard")refreshAdminBoard();renderAll()});
 ["wDate","mDate","tDate","rDate","pDate","apptDate"].forEach(id=>{const el=document.getElementById(id);if(el)el.value=today()});
 if(document.getElementById("apptTime"))document.getElementById("apptTime").value="10:00";
 reportMonth.value=monthNow();
