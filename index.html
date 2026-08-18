@@ -6,7 +6,15 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>S.u.G BODY MANAGEMENT SYSTEM V19</title>
+<title>S.u.G BODY MANAGEMENT SYSTEM V23</title>
+<meta name="theme-color" content="#09090a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="S.u.G BODY">
+<link rel="manifest" href="./manifest.webmanifest?v=23">
+<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png?v=23">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=23">
 <style>
 :root{
   --bg:#09090a;--card:#141417;--card2:#1a1a1f;--gold:#d8b35b;--gold2:#f3d98b;
@@ -146,6 +154,44 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 .recoveryBox{width:min(430px,100%)}
 @media(max-width:560px){.securityGrid{grid-template-columns:1fr}}
 
+/* V20: weekly member check-in */
+.checkinLatest{border-color:#4f472f;background:linear-gradient(180deg,#17140d,#101012)}
+.checkinScoreGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:9px}
+.checkinScore{background:#0d0d10;border:1px solid #2d2a22;border-radius:10px;padding:8px;text-align:center}
+.checkinScore span{display:block;color:#999;font-size:8px}.checkinScore b{display:block;color:var(--gold2);font-size:15px;margin-top:3px}
+.checkinHistoryItem{background:#0d0d10;border:1px solid #2c2c32;border-radius:11px;padding:10px;margin-bottom:7px}
+.checkinHistoryMeta{font-size:9px;color:#999;line-height:1.65;margin-top:4px}
+.checkinFlag{margin-top:8px;font-size:10px;line-height:1.6}
+@media(max-width:560px){.checkinScoreGrid{grid-template-columns:repeat(3,1fr)}}
+
+/* V21: check-in follow-up automation */
+.checkinFollowCard{border-color:#4b3f24;background:linear-gradient(180deg,#17140d,#101012)}
+.checkinFollowList{margin-top:9px}
+.checkinFollowItem{display:grid;grid-template-columns:auto 1fr auto auto auto;gap:7px;align-items:center;background:#0d0d10;border:1px solid #2c2c32;border-radius:11px;padding:9px;margin-bottom:7px}
+.checkinFollowState{font-size:9px;font-weight:900;white-space:nowrap}.checkinFollowName{font-size:11px;font-weight:900}.checkinFollowMeta{font-size:8px;color:#999;line-height:1.55;margin-top:2px}
+.checkinFollowReason{font-size:9px;color:#c7c7cc;line-height:1.55;margin-top:3px}
+@media(max-width:719px){.checkinFollowItem{grid-template-columns:auto 1fr}.checkinFollowItem .lineBtn,.checkinFollowItem .secondary,.checkinFollowItem .primary{width:100%}}
+
+/* V23: PWA + daily operations dashboard */
+.dailyOpsCard{border-color:#66552b;background:linear-gradient(180deg,#1b170d,#101012)}
+.dailyOpsKpis{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;margin-top:10px}
+.dailyOpsKpi{background:#0d0d10;border:1px solid #373126;border-radius:11px;padding:9px;min-width:0}
+.dailyOpsKpi span{display:block;font-size:8px;color:#aaa;line-height:1.35}.dailyOpsKpi b{display:block;font-size:18px;color:var(--gold2);margin-top:3px}
+.dailyOpsCols{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:10px}
+.dailyOpsSection{background:#0d0d10;border:1px solid #2c2c32;border-radius:12px;padding:10px;min-width:0}
+.dailyOpsSection h3{margin:0 0 8px;color:#e5d39d;font-size:11px}
+.dailyOpsItem{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid #242429}
+.dailyOpsItem:last-child{border-bottom:0}.dailyOpsTime{font-size:10px;font-weight:900;color:var(--gold2);white-space:nowrap}.dailyOpsName{font-size:10px;font-weight:800}.dailyOpsMeta{font-size:8px;color:#999;line-height:1.55;margin-top:2px}
+.dailyOpsTask{display:grid;grid-template-columns:auto 1fr auto auto;gap:7px;align-items:center;padding:8px 0;border-bottom:1px solid #242429}.dailyOpsTask:last-child{border-bottom:0}.dailyOpsReason{font-size:8px;color:#aaa;line-height:1.5;margin-top:2px}
+@media(max-width:820px){.dailyOpsKpis{grid-template-columns:repeat(3,1fr)}.dailyOpsCols{grid-template-columns:1fr}}
+@media(max-width:460px){.dailyOpsTask{grid-template-columns:auto 1fr}.dailyOpsTask button{width:100%}}
+
+/* V23 PWA */
+.pwaGuide{margin-top:10px;padding:9px 10px;border:1px solid #3a3423;border-radius:11px;background:#17140d;color:#d9c98e;font-size:10px;line-height:1.55}
+.pwaGuide b{color:var(--gold2)}
+.pwaGuide.hidden{display:none}
+@media (display-mode: standalone){.pwaGuide{display:none!important}}
+
 </style>
 <script>
 window.SUG_CLOUD_CONFIG = {
@@ -160,7 +206,7 @@ window.SUG_CLOUD_CONFIG = {
 <div id="authGate" class="authGate">
   <div class="authBox">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V19 CLOUD / MEMBERS ONLY</div>
+    <div class="sub">V23 CLOUD / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -169,6 +215,7 @@ window.SUG_CLOUD_CONFIG = {
     <div class="authLinks"><button class="linkBtn" type="button" onclick="requestPasswordReset()">パスワードを忘れた方</button></div>
     <div id="authError" class="authError"></div>
     <div class="setupNote">S.u.G会員限定。アカウントは管理者が発行します。</div>
+    <div id="pwaGuide" class="pwaGuide hidden"><b>iPhoneホーム画面対応</b><br>Safariの共有ボタン →「ホーム画面に追加」で、アプリのように起動できます。</div>
   </div>
 </div>
 
@@ -249,7 +296,7 @@ window.SUG_CLOUD_CONFIG = {
 
 <header>
   <div class="head">
-    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V19 CLOUD / Password Security</small></div>
+    <div class="brand"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V23 CLOUD / PWA + Daily Operations</small></div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
 </header>
@@ -267,6 +314,7 @@ window.SUG_CLOUD_CONFIG = {
     <button class="tab" data-tab="meal">食事</button>
     <button class="tab" data-tab="training">トレ</button>
     <button class="tab" data-tab="recovery">回復</button>
+    <button class="tab" data-tab="checkin">チェックイン</button>
     <button class="tab" data-tab="photos">写真</button>
     <button class="tab" data-tab="report">レポート</button>
     <button class="tab" data-tab="profile">会員情報</button>
@@ -274,6 +322,24 @@ window.SUG_CLOUD_CONFIG = {
   </div>
 
   <section id="adminBoard" class="panel">
+    <div class="card dailyOpsCard">
+      <div class="row" style="align-items:center">
+        <div><h2 style="margin-bottom:3px">今日の運営</h2><div class="muted">予約・フォロー・チェックイン・回復低下を、今日やる順に1画面で確認</div></div>
+        <button class="secondary" onclick="refreshAdminBoard()">更新</button>
+      </div>
+      <div class="dailyOpsKpis">
+        <div class="dailyOpsKpi"><span>今日の予約</span><b id="opsApptToday">0</b></div>
+        <div class="dailyOpsKpi"><span>明日の予約</span><b id="opsApptTomorrow">0</b></div>
+        <div class="dailyOpsKpi"><span>要フォロー会員</span><b id="opsFollow">0</b></div>
+        <div class="dailyOpsKpi"><span>未チェックイン</span><b id="opsCheckinOverdue">0</b></div>
+        <div class="dailyOpsKpi"><span>回復低下</span><b id="opsRecovery">0</b></div>
+        <div class="dailyOpsKpi"><span>今日やること</span><b id="opsTasks">0</b></div>
+      </div>
+      <div class="dailyOpsCols">
+        <div class="dailyOpsSection"><h3>今日の予約</h3><div id="opsTodayAppointments"><span class="muted">読み込み中...</span></div></div>
+        <div class="dailyOpsSection"><h3>今日やること</h3><div id="opsTodayTasks"><span class="muted">読み込み中...</span></div></div>
+      </div>
+    </div>
     <div class="card">
       <div class="row" style="align-items:center">
         <div><h2 style="margin-bottom:3px">管理者ダッシュボード</h2><div class="muted">会員の記録・回復・コーチプラン・フォロー対応を横断管理</div></div>
@@ -293,6 +359,9 @@ window.SUG_CLOUD_CONFIG = {
         <div class="kpi"><span>プラン未設定</span><b id="admCoachUnset">0</b></div>
         <div class="kpi"><span>今日予約</span><b id="admApptToday">0</b></div>
         <div class="kpi"><span>明日予約</span><b id="admApptTomorrow">0</b></div>
+        <div class="kpi"><span>チェックイン要確認</span><b id="admCheckinAttention">0</b></div>
+        <div class="kpi"><span>7日超未提出</span><b id="admCheckinOverdue">0</b></div>
+        <div class="kpi"><span>チェックインフォロー</span><b id="admCheckinFollow">0</b></div>
       </div>
       <div class="followAlertGrid">
         <div class="followAlertCard"><span>期限超過</span><b id="followAlertOverdue" class="dueOverdue">0</b></div>
@@ -314,17 +383,27 @@ window.SUG_CLOUD_CONFIG = {
             <option value="coach-open">課題未完了のみ</option>
             <option value="coach-done">課題完了のみ</option>
             <option value="coach-unset">コーチプラン未設定</option>
+            <option value="checkin-follow">チェックインフォロー対象</option>
+            <option value="checkin-attention">チェックイン要確認</option>
+            <option value="checkin-overdue">チェックイン7日超未提出</option>
           </select>
         </div>
         <div id="followupSetupStatus" class="muted">フォロー管理を確認中...</div>
       </div>
+    </div>
+    <div class="card checkinFollowCard">
+      <div class="row" style="align-items:center">
+        <div><h2 style="margin-bottom:3px">チェックインフォロー</h2><div class="muted">要確認・7日以上未提出を自動抽出。LINE送信は管理者が押した時だけ行います。</div></div>
+        <button class="secondary" onclick="refreshAdminBoard()">再集計</button>
+      </div>
+      <div id="checkinFollowList" class="checkinFollowList"><span class="muted">読み込み中...</span></div>
     </div>
     <div id="appointmentAdminCard" class="card">
       <div class="row" style="align-items:center">
         <div><h2 style="margin-bottom:3px">次回予約管理</h2><div class="muted">予約の登録・変更は管理者のみ。会員には自分の次回予約だけ表示します。</div></div>
         <button class="secondary" onclick="refreshAppointments()">更新</button>
       </div>
-      <div class="notice" style="margin-top:9px">空き枠は会員へ公開しません。前日メールは予約画面の動作確認後に自動送信設定を接続します。</div>
+      <div class="notice" style="margin-top:9px">空き枠は会員へ公開しません。前日18:00に予約リマインドメールを自動送信します。</div>
       <div class="apptAdminGrid" style="margin-top:10px">
         <div><label>会員</label><select id="apptMember"></select></div>
         <div><label>日付</label><input id="apptDate" type="date"></div>
@@ -376,6 +455,10 @@ window.SUG_CLOUD_CONFIG = {
       <div class="nextApptTitle">次回予約</div>
       <div id="nextAppointmentView" class="nextApptMain"><b>--</b><span>次回予約はまだ登録されていません。</span></div>
       <div class="apptReadonly">予約の登録・変更はS.u.G管理者が行います。この画面から予約変更・キャンセルはできません。</div>
+    </div>
+    <div id="checkinLatestCard" class="card checkinLatest">
+      <div class="row" style="align-items:center"><div><h2 style="margin-bottom:3px">最新チェックイン</h2><div class="muted">睡眠・体調・食事・トレーニング・痛みを週1回確認</div></div><span id="checkinLatestBadge" class="badge">未提出</span></div>
+      <div id="checkinLatestView" style="margin-top:9px"><span class="muted">まだチェックインがありません。</span></div>
     </div>
     <div id="coachPlanView" class="card coachPlanCard">
       <div class="coachPlanTop">
@@ -442,6 +525,20 @@ window.SUG_CLOUD_CONFIG = {
     </div>
     <div class="card"><h2>判定</h2><div id="recoveryJudge" class="item"></div></div>
     <div class="card"><h2>履歴</h2><div id="recoveryList"></div></div>
+  </section>
+
+  <section id="checkin" class="panel">
+    <div class="card">
+      <h2>週間チェックイン</h2>
+      <div class="notice">週1回の自己申告です。数値は管理の目安として使い、体調の診断には使用しません。</div>
+      <div class="grid2" style="margin-top:9px"><div><label>日付</label><input id="ciDate" type="date"></div><div><label>体調 1-5</label><input id="ciCondition" type="number" min="1" max="5" value="3"></div></div>
+      <div class="grid2" style="margin-top:8px"><div><label>睡眠満足度 1-5</label><input id="ciSleep" type="number" min="1" max="5" value="3"></div><div><label>痛み 0-10</label><input id="ciPain" type="number" min="0" max="10" value="0"></div></div>
+      <div class="grid2" style="margin-top:8px"><div><label>食事達成度 1-5</label><input id="ciNutrition" type="number" min="1" max="5" value="3"></div><div><label>トレ達成度 1-5</label><input id="ciTraining" type="number" min="1" max="5" value="3"></div></div>
+      <div style="margin-top:8px"><label>コメント / 相談</label><textarea id="ciMemo" placeholder="例：睡眠不足、右肩に違和感、食欲が落ちた、今週は順調など"></textarea></div>
+      <button class="primary" style="width:100%;margin-top:9px" onclick="addCheckin()">チェックインを送信</button>
+    </div>
+    <div class="card"><h2>最新状態</h2><div id="checkinPanelLatest"><span class="muted">未提出</span></div></div>
+    <div class="card"><h2>チェックイン履歴</h2><div id="checkinHistory"><span class="muted">履歴なし</span></div></div>
   </section>
 
   <section id="photos" class="panel">
@@ -569,7 +666,7 @@ let db={current:null,members:{}};
 function baseMember(name="新規会員"){
   return {profile:{name,goal:"筋肥大",targetWeight:0,targetKcal:0,targetP:0,targetF:0,targetC:0,notes:""},
     coachPlan:{weeklyFocus:"",nextAction:"",nextSessionDate:"",targetTrainingDays:0,targetSleep:0,targetSteps:0,completedAt:null,updatedAt:null},
-    weights:[],meals:[],training:[],recovery:[],photos:[]}
+    weights:[],meals:[],training:[],recovery:[],checkins:[],photos:[]}
 }
 function m(){return db.members[db.current]}
 function esc(s){return String(s??"").replace(/[&<>"']/g,x=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[x]))}
@@ -941,7 +1038,7 @@ async function loadMember(id){
   if(!db.members[id].profile.name)
     db.members[id].profile.name=p?.display_name||"会員";
 
-  ["weights","meals","training","recovery","photos"].forEach(k=>{
+  ["weights","meals","training","recovery","checkins","photos"].forEach(k=>{
     if(!Array.isArray(db.members[id][k]))db.members[id][k]=[];
   });
   if(!db.members[id].coachPlan || typeof db.members[id].coachPlan!=="object") db.members[id].coachPlan=baseMember(p?.display_name||"会員").coachPlan;
@@ -1265,6 +1362,10 @@ function followupPass(row){
   if(followupFilter==="coach-open")return cp.key==="open";
   if(followupFilter==="coach-done")return cp.key==="done";
   if(followupFilter==="coach-unset")return cp.key==="unset";
+  const cif=checkinFollowState(row.mm);
+  if(followupFilter==="checkin-follow")return ["attention","overdue"].includes(cif.key);
+  if(followupFilter==="checkin-attention")return cif.key==="attention";
+  if(followupFilter==="checkin-overdue")return cif.key==="overdue";
   return true;
 }
 function setFollowupFilter(v){
@@ -1420,7 +1521,7 @@ async function refreshAdminBoard(){
     const members=accessibleProfiles.filter(p=>p.role!=="trainer").map(p=>{
       const row=byId.get(p.id);
       const mm=row?.data&&Object.keys(row.data).length?row.data:baseMember(p.display_name||"会員");
-      ["weights","meals","training","recovery","photos"].forEach(k=>{if(!Array.isArray(mm[k]))mm[k]=[]});
+      ["weights","meals","training","recovery","checkins","photos"].forEach(k=>{if(!Array.isArray(mm[k]))mm[k]=[]});
       if(!mm.profile)mm.profile=baseMember(p.display_name||"会員").profile;
       const st=adminStatusFor(mm);
       return {profile:p,mm,row,st,lastDate:latestRecordDate(mm)};
@@ -1456,6 +1557,59 @@ function renderFollowupAlerts(members){
     return `<div class="followAlertItem"><div class="followAlertDue ${cls}">${esc(due)}</div><div><div class="followAlertName">${esc(name)}</div><div class="followAlertMeta">${esc(reason)}${f.memo?`｜${esc(f.memo)}`:""}</div></div><button class="lineBtn" onclick="lineFollowup('${row.profile.id}')">LINE</button><button class="secondary" onclick="openFollowupModal('${row.profile.id}')">対応</button></div>`;
   }).join("");
 }
+function dailyOpsTaskRows(members){
+  const out=[];
+  (members||[]).forEach(row=>{
+    const reasons=[];
+    const f=followupState(row.profile.id),due=followupDueKind(f),cf=checkinFollowState(row.mm);
+    if(due==="overdue")reasons.push("フォロー期限超過");
+    else if(due==="today")reasons.push("今日フォロー");
+    if(cf.key==="attention")reasons.push(`チェックイン要確認：${cf.reason}`);
+    else if(cf.key==="overdue")reasons.push(cf.reason||"チェックイン未提出");
+    if(row.st?.key==="recovery")reasons.push(`回復低下：${row.st.reason}`);
+    if(row.st?.key==="attention")reasons.push(`要対応：${row.st.reason}`);
+    if(!reasons.length)return;
+    let priority=3;
+    if(due==="overdue"||cf.key==="attention"||row.st?.key==="attention")priority=0;
+    else if(due==="today"||row.st?.key==="recovery")priority=1;
+    else if(cf.key==="overdue")priority=2;
+    out.push({row,reasons:[...new Set(reasons)],priority});
+  });
+  return out.sort((a,b)=>a.priority-b.priority || (a.row.profile.display_name||"").localeCompare(b.row.profile.display_name||"","ja"));
+}
+function renderDailyOps(members=adminRows||[]){
+  if(currentRole!=="trainer")return;
+  const td=today(),tm=shiftDate(1),scheduled=upcomingScheduled();
+  const todayAppts=scheduled.filter(a=>apptDateKey(a.start_at)===td);
+  const tomorrowAppts=scheduled.filter(a=>apptDateKey(a.start_at)===tm);
+  const recovery=(members||[]).filter(x=>x.st?.key==="recovery").length;
+  const checkinOverdue=(members||[]).filter(x=>checkinFollowState(x.mm).key==="overdue").length;
+  const taskRows=dailyOpsTaskRows(members);
+  const followIds=new Set(taskRows.map(x=>x.row.profile.id));
+  const values={opsApptToday:todayAppts.length,opsApptTomorrow:tomorrowAppts.length,opsFollow:followIds.size,opsCheckinOverdue:checkinOverdue,opsRecovery:recovery,opsTasks:taskRows.length};
+  Object.entries(values).forEach(([id,v])=>{const el=document.getElementById(id);if(el)el.textContent=v});
+
+  const apptBox=document.getElementById("opsTodayAppointments");
+  if(apptBox){
+    if(!todayAppts.length)apptBox.innerHTML='<div class="notice">今日の予約はありません。</div>';
+    else apptBox.innerHTML=todayAppts.map(a=>{
+      const p=apptLocalParts(a.start_at),name=apptMemberName(a.member_id);
+      return `<div class="dailyOpsItem"><div class="dailyOpsTime">${esc(p.time)}</div><div><div class="dailyOpsName">${esc(name)}</div><div class="dailyOpsMeta">${Number(a.duration_minutes||60)}分｜ROOM ${Number(a.room||1)}</div></div><button class="secondary" onclick="editAppointment('${a.id}')">予約</button></div>`;
+    }).join("");
+  }
+
+  const taskBox=document.getElementById("opsTodayTasks");
+  if(taskBox){
+    if(!taskRows.length)taskBox.innerHTML='<div class="notice">今日の優先対応はありません。</div>';
+    else taskBox.innerHTML=taskRows.map(({row,reasons,priority})=>{
+      const name=row.profile.display_name||row.mm?.profile?.name||"会員";
+      const label=priority===0?"優先":priority===1?"今日":"確認";
+      const cls=priority===0?"dueOverdue":priority===1?"dueToday":"dueTomorrow";
+      return `<div class="dailyOpsTask"><div class="followAlertDue ${cls}">${label}</div><div><div class="dailyOpsName">${esc(name)}</div><div class="dailyOpsReason">${esc(reasons.join("｜"))}</div></div><button class="lineBtn" onclick="lineFollowup('${row.profile.id}')">LINE</button><button class="primary" onclick="openMemberFromAdmin('${row.profile.id}')">開く</button></div>`;
+    }).join("");
+  }
+}
+
 function renderAdminBoardRows(){
   const list=document.getElementById("adminBoardList");
   const members=adminRows||[];
@@ -1470,15 +1624,20 @@ function renderAdminBoardRows(){
   const coachOpen=members.filter(x=>coachAdminState(x.mm).key==="open").length;
   const coachDone=members.filter(x=>coachAdminState(x.mm).key==="done").length;
   const coachUnset=members.filter(x=>coachAdminState(x.mm).key==="unset").length;
-  const ids={admTotal:total,admAttention:attention,admRecovery:recovery,admMissing:missing,admOpen:open,admOverdue:overdue,admToday:dueToday,admTomorrow:dueTomorrow,admCoachOpen:coachOpen,admCoachDone:coachDone,admCoachUnset:coachUnset,followAlertOverdue:overdue,followAlertToday:dueToday,followAlertTomorrow:dueTomorrow};
+  const checkinAttention=members.filter(x=>checkinFollowState(x.mm).key==="attention").length;
+  const checkinOverdue=members.filter(x=>checkinFollowState(x.mm).key==="overdue").length;
+  const checkinFollow=checkinAttention+checkinOverdue;
+  const ids={admTotal:total,admAttention:attention,admRecovery:recovery,admMissing:missing,admOpen:open,admOverdue:overdue,admToday:dueToday,admTomorrow:dueTomorrow,admCoachOpen:coachOpen,admCoachDone:coachDone,admCoachUnset:coachUnset,admCheckinAttention:checkinAttention,admCheckinOverdue:checkinOverdue,admCheckinFollow:checkinFollow,followAlertOverdue:overdue,followAlertToday:dueToday,followAlertTomorrow:dueTomorrow};
   Object.entries(ids).forEach(([id,v])=>{const el=document.getElementById(id);if(el)el.textContent=v});
   renderFollowupAlerts(members);
+  renderCheckinFollowups(members);
+  renderDailyOps(members);
   if(!list)return;
   if(!members.length){list.innerHTML='<span class="muted">会員がまだ登録されていません。</span>';return;}
   const shown=members.filter(followupPass);
   if(!shown.length){list.innerHTML='<span class="muted">条件に該当する会員はいません。</span>';return;}
   list.innerHTML=shown.map(x=>{
-    const mm=x.mm,st=x.st,f=followupState(x.profile.id),cp=coachAdminState(mm);
+    const mm=x.mm,st=x.st,f=followupState(x.profile.id),cp=coachAdminState(mm),ci=checkinLatest(mm),cis=checkinState(ci),ciAge=checkinAgeDays(ci);
     const latestW=(mm.weights||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
     const latestR=(mm.recovery||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
     const goal=mm.profile?.goal||"--";
@@ -1490,7 +1649,7 @@ function renderAdminBoardRows(){
     const dueMark=dueKind==="today"?"｜<b class=\"dueToday\">今日対応</b>":dueKind==="tomorrow"?"｜<b class=\"dueTomorrow\">明日対応</b>":dueKind==="overdue"?"｜<b class=\"dueOverdue\">期限超過</b>":"";
     const contact=f.last_contact_at?followupDateLabel(f.last_contact_at):"--";
     const memo=f.memo?`｜メモ ${esc(f.memo)}`:"";
-    return `<div class="adminMember"><div class="adminMemberTop"><div><div class="adminMemberName">${esc(x.profile.display_name||mm.profile?.name||"会員")}</div><div class="adminMemberMeta">目的 ${esc(goal)}｜最終記録 ${esc(last)}</div></div><span class="badge ${st.cls}">${esc(st.label)}</span></div><div class="adminMemberStats"><div class="adminMini"><span>体重</span><b>${latestW?Number(latestW.weight).toFixed(1)+"kg":"--"}</b></div><div class="adminMini"><span>7日差</span><b>${esc(st.wt.label)}</b></div><div class="adminMini"><span>回復</span><b>${st.score!=null?st.score+"点":"--"}</b></div><div class="adminMini"><span>睡眠</span><b>${latestR?Number(latestR.sleep||0).toFixed(1)+"h":"--"}</b></div><div class="adminMini"><span>トレ記録</span><b>${(mm.training||[]).length}</b></div></div><div class="coachAdminMeta"><b class="${cp.cls}">${esc(cp.label)}</b>｜次回セッション ${esc(cp.session)}<div class="coachFocus"><b>重点：</b>${esc(cp.focus)}</div><div class="coachAction"><b>課題：</b>${esc(cp.action)}</div></div><div class="followMeta"><b class="${followClass}">${followStatus}</b>｜最終連絡 ${esc(contact)}｜次回 ${esc(next)}${dueMark}${memo}</div><div class="adminActions"><div class="adminReason"><b>理由：</b>${esc(st.reason)}</div><button class="lineBtn" onclick="lineFollowup('${x.profile.id}')">LINE連絡</button><button class="secondary" onclick="openFollowupModal('${x.profile.id}')">対応記録</button><button class="primary" onclick="openMemberFromAdmin('${x.profile.id}')">開く</button></div></div>`;
+    return `<div class="adminMember"><div class="adminMemberTop"><div><div class="adminMemberName">${esc(x.profile.display_name||mm.profile?.name||"会員")}</div><div class="adminMemberMeta">目的 ${esc(goal)}｜最終記録 ${esc(last)}</div></div><span class="badge ${st.cls}">${esc(st.label)}</span></div><div class="adminMemberStats"><div class="adminMini"><span>体重</span><b>${latestW?Number(latestW.weight).toFixed(1)+"kg":"--"}</b></div><div class="adminMini"><span>7日差</span><b>${esc(st.wt.label)}</b></div><div class="adminMini"><span>回復</span><b>${st.score!=null?st.score+"点":"--"}</b></div><div class="adminMini"><span>睡眠</span><b>${latestR?Number(latestR.sleep||0).toFixed(1)+"h":"--"}</b></div><div class="adminMini"><span>トレ記録</span><b>${(mm.training||[]).length}</b></div></div><div class="coachAdminMeta"><b class="${cp.cls}">${esc(cp.label)}</b>｜次回セッション ${esc(cp.session)}<div class="coachFocus"><b>重点：</b>${esc(cp.focus)}</div><div class="coachAction"><b>課題：</b>${esc(cp.action)}</div></div><div class="followMeta"><b class="${followClass}">${followStatus}</b>｜最終連絡 ${esc(contact)}｜次回 ${esc(next)}${dueMark}${memo}</div><div class="followMeta"><b class="${cis.key==="attention"?"dueOverdue":""}">チェックイン ${esc(cis.label)}</b>｜${ci?esc(ci.date):"未提出"}${ciAge!=null?`（${ciAge===0?"今日":ciAge+"日前"}）`:""}｜${esc(cis.reason)}</div><div class="adminActions"><div class="adminReason"><b>理由：</b>${esc(st.reason)}</div><button class="lineBtn" onclick="lineFollowup('${x.profile.id}')">LINE連絡</button><button class="secondary" onclick="openFollowupModal('${x.profile.id}')">対応記録</button><button class="primary" onclick="openMemberFromAdmin('${x.profile.id}')">開く</button></div></div>`;
   }).join("");
 }
 async function openMemberFromAdmin(id){
@@ -1541,6 +1700,7 @@ function renderAppointmentAdmin(){
   const e1=document.getElementById("admApptToday"),e2=document.getElementById("admApptTomorrow");
   if(e1)e1.textContent=rows.filter(a=>apptDateKey(a.start_at)===td).length;
   if(e2)e2.textContent=rows.filter(a=>apptDateKey(a.start_at)===tm).length;
+  renderDailyOps(adminRows||[]);
   if(!list)return;
   if(!rows.length){list.innerHTML='<span class="muted">今後の予約はありません。</span>';return;}
   list.innerHTML=rows.map(a=>{
@@ -1807,6 +1967,97 @@ async function comparePhotos(){
   }
 }
 
+function checkinLatest(mm=m()){
+  const rows=Array.isArray(mm?.checkins)?mm.checkins:[];
+  return rows.slice().sort((a,b)=>String(a.date||"").localeCompare(String(b.date||""))).at(-1)||null;
+}
+function checkinState(x){
+  if(!x)return {key:"missing",label:"未提出",cls:"warn",reason:"チェックイン未提出"};
+  const condition=Number(x.condition||0),sleep=Number(x.sleep||0),pain=Number(x.pain||0),nutrition=Number(x.nutrition||0),training=Number(x.training||0);
+  const reasons=[];
+  if(pain>=5)reasons.push(`痛み ${pain}/10`);
+  if(condition<=2)reasons.push(`体調 ${condition}/5`);
+  if(sleep<=2)reasons.push(`睡眠 ${sleep}/5`);
+  if(nutrition<=2)reasons.push(`食事 ${nutrition}/5`);
+  if(training<=2)reasons.push(`トレ ${training}/5`);
+  if(reasons.length)return {key:"attention",label:"要確認",cls:"bad",reason:reasons.join("・")};
+  return {key:"ok",label:"確認済",cls:"ok",reason:"大きな警戒項目なし"};
+}
+function checkinAgeDays(x){
+  if(!x?.date)return null;
+  const d=new Date(`${x.date}T00:00:00`);if(Number.isNaN(d.getTime()))return null;
+  const t=new Date();t.setHours(0,0,0,0);return Math.max(0,Math.floor((t-d)/86400000));
+}
+function checkinFollowState(mm){
+  const ci=checkinLatest(mm),st=checkinState(ci),age=checkinAgeDays(ci);
+  if(st.key==="attention")return {key:"attention",label:"要確認",cls:"dueOverdue",priority:0,reason:st.reason,date:ci?.date||null,age};
+  if(!ci)return {key:"overdue",label:"未提出",cls:"dueOverdue",priority:1,reason:"週間チェックインがまだありません",date:null,age:null};
+  if(age!=null && age>=7)return {key:"overdue",label:`${age}日未提出`,cls:"dueOverdue",priority:1,reason:`最終チェックインから${age}日経過`,date:ci.date,age};
+  if(age!=null && age>=6)return {key:"due",label:"提出時期",cls:"dueToday",priority:2,reason:`最終チェックインから${age}日`,date:ci.date,age};
+  return {key:"ok",label:"確認済",cls:"dueTomorrow",priority:3,reason:"週次チェックイン確認済",date:ci.date,age};
+}
+function checkinFollowupText(row){
+  const name=row?.profile?.display_name||row?.mm?.profile?.name||"会員";
+  const fs=checkinFollowState(row?.mm);
+  if(fs.key==="attention"){
+    return `${name}さん、お疲れさまです。S.u.Gです。\n\n今週のチェックインを確認しました。\n確認ポイント：${fs.reason}\n\n痛みや体調の変化がある場合は、無理に追い込まず今の状態をLINEで教えてください。内容を確認して次回の負荷やメニューを調整します。`;
+  }
+  return `${name}さん、お疲れさまです。S.u.Gです。\n\n今週のチェックインがまだ確認できていません。\n1分ほどで大丈夫なので、体調・睡眠・食事・トレーニング・痛みの状態を管理システムから入力お願いします。\n\n入力内容を確認して、必要があれば次回の内容を調整します。`;
+}
+async function lineCheckinFollowup(userId){
+  const row=adminRows.find(x=>x.profile?.id===userId);
+  if(!row){alert("会員情報を取得できませんでした。");return;}
+  const text=checkinFollowupText(row),now=new Date().toISOString(),fs=checkinFollowState(row.mm);
+  try{
+    if(followupTableReady){
+      await upsertFollowupState(userId,{status:"done",last_contact_at:now},{at:now,type:"チェックインLINE",note:fs.reason||"",status:"done"});
+    }
+  }catch(e){console.error(e)}
+  window.location.href="https://line.me/R/share?text="+encodeURIComponent(text);
+}
+function renderCheckinFollowups(members){
+  const box=document.getElementById("checkinFollowList");if(!box)return;
+  const rows=(members||[]).map(row=>({row,fs:checkinFollowState(row.mm)}))
+    .filter(x=>["attention","overdue"].includes(x.fs.key))
+    .sort((a,b)=>a.fs.priority-b.fs.priority || String(a.fs.date||"").localeCompare(String(b.fs.date||"")));
+  if(!rows.length){box.innerHTML='<div class="notice">チェックインのフォロー対象はいません。</div>';return;}
+  box.innerHTML=rows.map(({row,fs})=>{
+    const name=row.profile?.display_name||row.mm?.profile?.name||"会員";
+    const meta=fs.date?`最終 ${fs.date}${fs.age!=null?`（${fs.age}日前）`:""}`:"チェックイン履歴なし";
+    return `<div class="checkinFollowItem"><div class="checkinFollowState ${fs.cls}">${esc(fs.label)}</div><div><div class="checkinFollowName">${esc(name)}</div><div class="checkinFollowMeta">${esc(meta)}</div><div class="checkinFollowReason">${esc(fs.reason)}</div></div><button class="lineBtn" onclick="lineCheckinFollowup('${row.profile.id}')">LINE</button><button class="secondary" onclick="openFollowupModal('${row.profile.id}')">対応</button><button class="primary" onclick="openMemberFromAdmin('${row.profile.id}')">開く</button></div>`;
+  }).join("");
+}
+function renderCheckin(){
+  if(!m())return;
+  const rows=Array.isArray(m().checkins)?m().checkins:[];
+  const latest=checkinLatest(m()),state=checkinState(latest),age=checkinAgeDays(latest);
+  const badge=document.getElementById("checkinLatestBadge");
+  if(badge){badge.className=`badge ${state.cls}`;badge.textContent=state.label;}
+  const makeLatest=()=>{
+    if(!latest)return '<span class="muted">まだチェックインがありません。</span>';
+    return `<div><strong>${esc(latest.date||"")}｜${esc(state.label)}</strong>${age!=null?`<span class="muted">｜${age===0?"今日":age+"日前"}</span>`:""}</div><div class="checkinScoreGrid"><div class="checkinScore"><span>体調</span><b>${Number(latest.condition||0)}/5</b></div><div class="checkinScore"><span>睡眠</span><b>${Number(latest.sleep||0)}/5</b></div><div class="checkinScore"><span>食事</span><b>${Number(latest.nutrition||0)}/5</b></div><div class="checkinScore"><span>トレ</span><b>${Number(latest.training||0)}/5</b></div><div class="checkinScore"><span>痛み</span><b>${Number(latest.pain||0)}/10</b></div></div><div class="checkinFlag ${state.key==="attention"?"bad":"muted"}">${esc(state.reason)}${latest.memo?`<br>${esc(latest.memo)}`:""}</div>`;
+  };
+  const dash=document.getElementById("checkinLatestView");if(dash)dash.innerHTML=makeLatest();
+  const panel=document.getElementById("checkinPanelLatest");if(panel)panel.innerHTML=makeLatest();
+  const history=document.getElementById("checkinHistory");
+  if(history){
+    history.innerHTML=rows.length?[...rows].reverse().map((x,ri)=>{const i=rows.length-1-ri,st=checkinState(x);return `<div class="checkinHistoryItem"><div class="row"><div><strong>${esc(x.date||"")}｜<span class="${st.key==="attention"?"bad":"ok"}">${esc(st.label)}</span></strong><div class="checkinHistoryMeta">体調 ${Number(x.condition||0)}/5｜睡眠 ${Number(x.sleep||0)}/5｜食事 ${Number(x.nutrition||0)}/5｜トレ ${Number(x.training||0)}/5｜痛み ${Number(x.pain||0)}/10${x.memo?`<br>${esc(x.memo)}`:""}</div></div><button class="danger" onclick="remove('checkins',${i})">削除</button></div></div>`}).join(""):'<span class="muted">履歴なし</span>';
+  }
+}
+function addCheckin(){
+  if(!m())return;
+  const date=document.getElementById("ciDate")?.value||today();
+  const clamp=(v,min,max)=>Math.max(min,Math.min(max,Number(v||0)));
+  const row={date,condition:clamp(document.getElementById("ciCondition")?.value,1,5),sleep:clamp(document.getElementById("ciSleep")?.value,1,5),nutrition:clamp(document.getElementById("ciNutrition")?.value,1,5),training:clamp(document.getElementById("ciTraining")?.value,1,5),pain:clamp(document.getElementById("ciPain")?.value,0,10),memo:(document.getElementById("ciMemo")?.value||"").trim(),createdAt:new Date().toISOString()};
+  if(!Array.isArray(m().checkins))m().checkins=[];
+  const same=m().checkins.findIndex(x=>x.date===date);
+  if(same>=0)m().checkins[same]=row;else m().checkins.push(row);
+  m().checkins.sort((a,b)=>String(a.date||"").localeCompare(String(b.date||"")));
+  const memo=document.getElementById("ciMemo");if(memo)memo.value="";
+  persist();renderAll();
+  setStatus("保存中");
+}
+
 async function renderPhotos(){
   if(!m())return;
   renderPhotoCompareOptions();
@@ -1827,6 +2078,7 @@ async function renderPhotos(){
 
 function renderAll(){
   if(!m())return;
+  const ciDateEl=document.getElementById("ciDate");if(ciDateEl&&!ciDateEl.value)ciDateEl.value=today();
   renderMemberSelect();
   let mm=m(),ws=mm.weights,latest=ws.at(-1),s=weightStats(),mt=mealTotals(),rr=mm.recovery.filter(x=>x.date===today()).at(-1)||mm.recovery.at(-1);
   dWeight.textContent=latest?latest.weight.toFixed(1)+"kg":"--";dAvg.textContent=s.l?s.l.toFixed(1)+"kg":"--";dKcal.textContent=Math.round(mt.kcal)+" kcal";dRec.textContent=rr?recScore(rr)+"点":"--";
@@ -1843,7 +2095,7 @@ function renderAll(){
   prTable.innerHTML=exs.length?`<table class="table"><tr><th>種目</th><th>PR</th><th>推定1RM</th></tr>${exs.map(ex=>{let x=pr(ex);return `<tr><td>${esc(ex)}</td><td>${x.weight}kg×${x.reps}</td><td>${e1rm(x).toFixed(1)}kg</td></tr>`}).join("")}</table>`:'<span class="muted">記録なし</span>';
   recoveryJudge.innerHTML=`<span class="badge ${adv.cls}">${esc(adv.txt)}</span>`;
   recoveryList.innerHTML=[...mm.recovery].reverse().map((x,ri)=>{let i=mm.recovery.length-1-ri,a=recAdvice(x);return `<div class="item"><div class="row"><div><strong>${x.date}｜睡眠 ${x.sleep}h</strong><br><small>疲労${x.fatigue} / ストレス${x.stress} / 痛み${x.pain}</small><br><span class="badge ${a.cls}">${recScore(x)}点</span></div><button class="danger" onclick="remove('recovery',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
-  renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();drawChart();renderReport();renderPhotos();
+  renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();renderCheckin();drawChart();renderReport();renderPhotos();
 }
 
 function monthLabel(mon){
@@ -1986,7 +2238,7 @@ function normalizeMemberData(data,name="会員"){
   const base=baseMember(name),x=(data&&typeof data==="object"&&!Array.isArray(data))?JSON.parse(JSON.stringify(data)):base;
   if(!x.profile||typeof x.profile!=="object")x.profile=base.profile;
   if(!x.profile.name)x.profile.name=name||"会員";
-  ["weights","meals","training","recovery","photos"].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});
+  ["weights","meals","training","recovery","checkins","photos"].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});
   return x;
 }
 function backupStamp(){return new Date().toISOString()}
@@ -2021,7 +2273,7 @@ async function backupAll(){
     const members=accessibleProfiles.filter(p=>p.role!=="trainer");
     const ids=new Set(members.map(p=>p.id));
     const payload={
-      schema:"SUG_BODY_MANAGEMENT_BACKUP",version:16,kind:"all",created_at:backupStamp(),created_by:sessionUser?.id||null,
+      schema:"SUG_BODY_MANAGEMENT_BACKUP",version:20,kind:"all",created_at:backupStamp(),created_by:sessionUser?.id||null,
       profiles:members.map(p=>({id:p.id,display_name:p.display_name||"",role:p.role||"member"})),
       member_data:rows.filter(x=>ids.has(x.user_id)).map(x=>({user_id:x.user_id,data:normalizeMemberData(x.data,members.find(p=>p.id===x.user_id)?.display_name||"会員"),updated_at:x.updated_at||null})),
       followups:fu.rows.filter(x=>ids.has(x.member_id)),
@@ -2130,6 +2382,20 @@ document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelect
 ["wDate","mDate","tDate","rDate","pDate","apptDate"].forEach(id=>{const el=document.getElementById(id);if(el)el.value=today()});
 if(document.getElementById("apptTime"))document.getElementById("apptTime").value="10:00";
 reportMonth.value=monthNow();
+
+// V23 PWA: network-only service worker to avoid stale app versions.
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js?v=23").catch(err => console.warn("SW register failed", err));
+  });
+}
+(function(){
+  const standalone = window.matchMedia?.("(display-mode: standalone)").matches || window.navigator.standalone === true;
+  const ios = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  const guide = document.getElementById("pwaGuide");
+  if (guide && ios && !standalone) guide.classList.remove("hidden");
+})();
+
 initCloud();
 </script>
 </body>
