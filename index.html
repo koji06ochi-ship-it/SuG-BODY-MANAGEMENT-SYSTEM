@@ -6,15 +6,15 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>S.u.G BODY MANAGEMENT SYSTEM V24.3 INVITE SETUP</title>
+<title>S.u.G BODY MANAGEMENT SYSTEM V24.4 INVITE FIX</title>
 <meta name="theme-color" content="#09090a">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="S.u.G BODY">
-<link rel="manifest" href="./manifest.webmanifest?v=24-3-invite-setup">
-<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png?v=24-3-invite-setup">
-<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=24-3-invite-setup">
+<link rel="manifest" href="./manifest.webmanifest?v=24-4-invite-fix">
+<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png?v=24-4-invite-fix">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=24-4-invite-fix">
 <style>
 :root{
   --bg:#09090a;--card:#141417;--card2:#1a1a1f;--gold:#d8b35b;--gold2:#f3d98b;
@@ -172,7 +172,7 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 .checkinFollowReason{font-size:9px;color:#c7c7cc;line-height:1.55;margin-top:3px}
 @media(max-width:719px){.checkinFollowItem{grid-template-columns:auto 1fr}.checkinFollowItem .lineBtn,.checkinFollowItem .secondary,.checkinFollowItem .primary{width:100%}}
 
-/* V24.3 INVITE SETUP: production 1.0 visual branding */
+/* V24.4 INVITE FIX: production 1.0 visual branding */
 .dailyOpsCard{border-color:#66552b;background:linear-gradient(180deg,#1b170d,#101012)}
 .dailyOpsKpis{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;margin-top:10px}
 .dailyOpsKpi{background:#0d0d10;border:1px solid #373126;border-radius:11px;padding:9px;min-width:0}
@@ -193,7 +193,7 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 @media (display-mode: standalone){.pwaGuide{display:none!important}}
 
 
-/* V24.3 INVITE SETUP — S.u.G branded visual layer */
+/* V24.4 INVITE FIX — S.u.G branded visual layer */
 :root{--sugGlow:rgba(216,179,91,.18);--sugGlow2:rgba(243,217,139,.08)}
 body{
   background:
@@ -253,9 +253,9 @@ window.SUG_CLOUD_CONFIG = {
 
 <div id="authGate" class="authGate">
   <div class="authBox">
-    <img class="authBrandLogo" src="./brand-header.png?v=24-3-invite-setup" alt="S.u.G OSAKA">
+    <img class="authBrandLogo" src="./brand-header.png?v=24-4-invite-fix" alt="S.u.G OSAKA">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V24.3 INVITE SETUP / MEMBERS ONLY</div>
+    <div class="sub">V24.4 INVITE FIX / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -264,7 +264,7 @@ window.SUG_CLOUD_CONFIG = {
     <div class="authLinks"><button class="linkBtn" type="button" onclick="requestPasswordReset()">パスワードを忘れた方</button></div>
     <div id="authError" class="authError"></div>
     <div class="setupNote">S.u.G会員限定。管理者から届いた招待リンクで初回登録してください。</div>
-    <img class="authMascot" src="./mascot-highfive.png?v=24-3-invite-setup" alt="">
+    <img class="authMascot" src="./mascot-highfive.png?v=24-4-invite-fix" alt="">
     <div id="pwaGuide" class="pwaGuide hidden"><b>iPhoneホーム画面対応</b><br>Safariの共有ボタン →「ホーム画面に追加」で、アプリのように起動できます。</div>
   </div>
 </div>
@@ -367,8 +367,8 @@ window.SUG_CLOUD_CONFIG = {
 <header>
   <div class="head">
     <div class="brandIdentity">
-      <img class="brandHeaderLogo" src="./brand-header.png?v=24-3-invite-setup" alt="S.u.G OSAKA">
-      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V24.3 INVITE SETUP / MANAGEMENT 1.0</small></div>
+      <img class="brandHeaderLogo" src="./brand-header.png?v=24-4-invite-fix" alt="S.u.G OSAKA">
+      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V24.4 INVITE FIX / MANAGEMENT 1.0</small></div>
     </div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
@@ -396,7 +396,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="adminBoard" class="panel">
     <div id="adminBrandHero" class="card adminBrandHero">
-      <img class="adminOfficialLogo" src="./brand-official.jpg?v=24-3-invite-setup" alt="S.u.G OSAKA official brand">
+      <img class="adminOfficialLogo" src="./brand-official.jpg?v=24-4-invite-fix" alt="S.u.G OSAKA official brand">
       <div class="adminBrandText"><h2>S.u.G OSAKA</h2><p>PERSONAL TRAINING × PERSONAL STRETCH × CONDITIONING<br>会員管理・予約・フォロー・コンディションを一つの運営画面へ。</p></div>
     </div>
     <div class="card dailyOpsCard">
@@ -521,11 +521,11 @@ window.SUG_CLOUD_CONFIG = {
   <section id="dash" class="panel active">
     <div class="card sugHero">
       <div>
-        <img class="sugHeroLogo" src="./brand-header.png?v=24-3-invite-setup" alt="S.u.G OSAKA">
+        <img class="sugHeroLogo" src="./brand-header.png?v=24-4-invite-fix" alt="S.u.G OSAKA">
         <div class="sugHeroTitle">鍛える。整える。魅せる。</div>
         <div class="sugHeroSub">TRAINING / CONDITIONING / STYLE UPDATE<br>記録して、管理して、次の身体へ。</div>
       </div>
-      <img class="sugHeroMascot" src="./mascot-highfive.png?v=24-3-invite-setup" alt="">
+      <img class="sugHeroMascot" src="./mascot-highfive.png?v=24-4-invite-fix" alt="">
     </div>
     <div class="card">
       <h2>現在の状態</h2>
@@ -569,7 +569,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="weight" class="panel">
     <div class="card">
-      <img class="mascotMini" src="./mascot-jumprope.png?v=24-3-invite-setup" alt="">
+      <img class="mascotMini" src="./mascot-jumprope.png?v=24-4-invite-fix" alt="">
       <h2>体重記録</h2>
       <div class="grid2"><div><label>日付</label><input id="wDate" type="date"></div><div><label>体重 kg</label><input id="wWeight" type="number" step="0.1"></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>体脂肪率 %</label><input id="wFat" type="number" step="0.1"></div><div><label>メモ</label><input id="wMemo"></div></div>
@@ -591,7 +591,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="training" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>トレーニング記録</h2><div class="muted">重量・REP・SET・RIRを記録し、前回からの進歩を確認。</div></div><img class="sectionMascot" src="./mascot-basketball.png?v=24-3-invite-setup" alt=""></div>
+      <div class="sectionLead"><div><h2>トレーニング記録</h2><div class="muted">重量・REP・SET・RIRを記録し、前回からの進歩を確認。</div></div><img class="sectionMascot" src="./mascot-basketball.png?v=24-4-invite-fix" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="tDate" type="date"></div><div><label>種目</label><input id="tExercise" placeholder="スミススクワット"></div></div>
       <div class="grid4" style="margin-top:8px"><div><label>重量</label><input id="tWeight" type="number" step="0.5"></div><div><label>REP</label><input id="tReps" type="number"></div><div><label>SET</label><input id="tSets" type="number"></div><div><label>RIR</label><input id="tRir" type="number" step="0.5"></div></div>
       <div style="margin-top:8px"><label>メモ</label><input id="tMemo"></div>
@@ -603,7 +603,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="recovery" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>回復・コンディション</h2><div class="muted">睡眠・疲労・ストレス・痛みから、その日の負荷を調整。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=24-3-invite-setup" alt=""></div>
+      <div class="sectionLead"><div><h2>回復・コンディション</h2><div class="muted">睡眠・疲労・ストレス・痛みから、その日の負荷を調整。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=24-4-invite-fix" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="rDate" type="date"></div><div><label>睡眠時間</label><input id="rSleep" type="number" step="0.1"></div></div>
       <div class="grid3" style="margin-top:8px"><div><label>疲労 1-10</label><input id="rFatigue" type="number" min="1" max="10"></div><div><label>ストレス 1-10</label><input id="rStress" type="number" min="1" max="10"></div><div><label>痛み 0-10</label><input id="rPain" type="number" min="0" max="10"></div></div>
       <div style="margin-top:8px"><label>メモ</label><textarea id="rMemo"></textarea></div>
@@ -615,7 +615,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="checkin" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>週間チェックイン</h2><div class="muted">今週の身体と生活を短時間で共有。コーチングの調整材料にします。</div></div><img class="sectionMascot" src="./mascot-running.png?v=24-3-invite-setup" alt=""></div>
+      <div class="sectionLead"><div><h2>週間チェックイン</h2><div class="muted">今週の身体と生活を短時間で共有。コーチングの調整材料にします。</div></div><img class="sectionMascot" src="./mascot-running.png?v=24-4-invite-fix" alt=""></div>
       <div class="notice">週1回の自己申告です。数値は管理の目安として使い、体調の診断には使用しません。</div>
       <div class="grid2" style="margin-top:9px"><div><label>日付</label><input id="ciDate" type="date"></div><div><label>体調 1-5</label><input id="ciCondition" type="number" min="1" max="5" value="3"></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>睡眠満足度 1-5</label><input id="ciSleep" type="number" min="1" max="5" value="3"></div><div><label>痛み 0-10</label><input id="ciPain" type="number" min="0" max="10" value="0"></div></div>
@@ -669,7 +669,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="profile" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>会員情報</h2><div class="muted">目標・栄養・注意事項をS.u.Gの管理基準として保存。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=24-3-invite-setup" alt=""></div>
+      <div class="sectionLead"><div><h2>会員情報</h2><div class="muted">目標・栄養・注意事項をS.u.Gの管理基準として保存。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=24-4-invite-fix" alt=""></div>
       <div class="grid2"><div><label>氏名</label><input id="pfName"></div><div><label>目的</label><select id="pfGoal"><option>筋肥大</option><option>減量</option><option>増量</option><option>健康維持</option><option>姿勢改善</option></select></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>目標体重</label><input id="pfTargetWeight" type="number" step="0.1"></div><div><label>目標kcal</label><input id="pfTargetKcal" type="number"></div></div>
       <div class="grid3" style="margin-top:8px"><div><label>目標P</label><input id="pfP" type="number"></div><div><label>目標F</label><input id="pfF" type="number"></div><div><label>目標C</label><input id="pfC" type="number"></div></div>
@@ -755,6 +755,28 @@ if(inviteLandingFromUrl()){
   try{sessionStorage.setItem("sug-invite-pending","1")}catch(_e){}
 }
 let inviteLandingDetected = inviteLandingFromUrl() || (()=>{try{return sessionStorage.getItem("sug-invite-pending")==="1"}catch(_e){return false}})();
+
+function isPendingInviteUser(user){
+  return user?.user_metadata?.sug_invite_pending===true;
+}
+
+async function resumeInviteFromSession(){
+  if(!sb)return false;
+  try{
+    const {data,error}=await sb.auth.getSession();
+    if(error)return false;
+    const session=data?.session;
+    if(session?.user && (inviteLandingDetected || isPendingInviteUser(session.user))){
+      accessToken=session.access_token||accessToken;
+      sessionUser=session.user;
+      inviteLandingDetected=true;
+      try{sessionStorage.setItem("sug-invite-pending","1")}catch(_e){}
+      openInviteSetupModal();
+      return true;
+    }
+  }catch(_e){}
+  return false;
+}
 
 const dateISO=(d)=>{
   const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,"0"),day=String(d.getDate()).padStart(2,"0");
@@ -846,9 +868,11 @@ async function initCloud(){
       if(event==="SIGNED_IN" && new URLSearchParams(location.search).get("recovery")==="1"){
         setTimeout(()=>openRecoveryModal(),0);
       }
-      if((event==="SIGNED_IN" || event==="INITIAL_SESSION") && session?.user && inviteLandingDetected){
+      if((event==="SIGNED_IN" || event==="INITIAL_SESSION") && session?.user && (inviteLandingDetected || isPendingInviteUser(session.user))){
         accessToken=session.access_token||accessToken;
         sessionUser=session.user;
+        inviteLandingDetected=true;
+        try{sessionStorage.setItem("sug-invite-pending","1")}catch(_e){}
         setTimeout(()=>openInviteSetupModal(),0);
       }
       if(event==="TOKEN_REFRESHED" && session?.access_token){
@@ -859,6 +883,8 @@ async function initCloud(){
     if(inviteLandingDetected){
       setTimeout(()=>{resumeInviteSetup()},0);
     }
+    // URLの印が消えても、招待ユーザー側に「初回登録待ち」が残っていれば必ず設定画面を出す。
+    setTimeout(()=>{resumeInviteFromSession()},100);
 
     // 旧V3系のセッションは storageKey が違うので一切拾わない。
     err.textContent="接続OK。ログインしてください。";
@@ -1307,7 +1333,7 @@ async function refreshMemberProfiles(selectId=null){
 }
 
 function inviteRedirectUrl(){
-  return location.origin+location.pathname;
+  return location.origin+location.pathname+"?invite=1&v=24-4-invite-fix";
 }
 
 async function createMemberInvite(){
@@ -2598,10 +2624,10 @@ document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelect
 if(document.getElementById("apptTime"))document.getElementById("apptTime").value="10:00";
 reportMonth.value=monthNow();
 
-// V24.3 INVITE SETUP PWA: network-only service worker to avoid stale app versions.
+// V24.4 INVITE FIX PWA: network-only service worker to avoid stale app versions.
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=24-3-invite-setup").catch(err => console.warn("SW register failed", err));
+    navigator.serviceWorker.register("./sw.js?v=24-4-invite-fix").catch(err => console.warn("SW register failed", err));
   });
 }
 (function(){
