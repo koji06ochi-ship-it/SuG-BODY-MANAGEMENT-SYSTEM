@@ -2340,29 +2340,80 @@ function repBounds(repText){
   const one=String(repText||"").match(/(\d+)/);
   return one?{min:Number(one[1]),max:Number(one[1])}:{min:null,max:null};
 }
-function roundHalf(v){return Math.round(Number(v||0)*2)/2;}
+function menuRepText(ex){
+  for(const rows of Object.values(RULE_MENU)){
+    const row=rows.find(x=>x[0]===ex);
+    if(row)return row[2];
+  }
+  return "";
+}
+function exerciseLoadStep(ex,weight=0){
+  const name=String(ex||"");
+  // S.u.G V25の標準刻み。実際の器具に合わせて後から種目別変更可能。
+  if(/レッグプレス/i.test(name))return 5;
+  if(/スミス|スクワット|RDL|デッド|EZ|バーベル/i.test(name))return 2.5;
+  if(/DB|ダンベル/i.test(name))return 1;
+  if(/ケーブル|PD|プレスダウン|ロー|マシン|レッグエクステンション|レッグカール|ヒップアブダクション|バックキック/i.test(name))return 2.5;
+  return Number(weight||0)>=40?2.5:1;
+}
+function formatLoad(v){
+  const n=Number(v||0);
+  return Number.isInteger(n)?String(n):n.toFixed(1).replace(/\.0$/,'');
+}
+function nextAvailableLoad(ex,weight,rate=0.025){
+  const current=Number(weight||0);
+  if(current<=0)return null;
+  const step=exerciseLoadStep(ex,current);
+  const raw=current*(1+rate);
+  let next=Math.ceil((raw-1e-9)/step)*step;
+  if(next<=current)next=current+step;
+  return {weight:Math.round(next*100)/100,step};
+}
 function currentTrainingTarget(ex,repText){
   const c=lastTraining(ex);
   if(!c)return {txt:"今回目標：フォームを優先し、基準重量・基準REPを作る",cls:""};
   const reps=Number(c.reps||0),rir=Number(c.rir||0),weight=Number(c.weight||0),b=repBounds(repText);
   if(weight>0 && b.max && reps>=b.max && rir>=2){
-    const nextW=roundHalf(weight*1.025);
-    return {txt:`今回目標：+2.5%重量候補（目安 ${nextW}kg）で ${b.min||reps}rep 以上`,cls:"ok"};
+    const nxt=nextAvailableLoad(ex,weight);
+    return {txt:`今回目標：${formatLoad(nxt.weight)}kgへ重量更新候補（+2.5%以上・器具刻み反映）｜${b.min||reps}rep以上`,cls:"ok"};
   }
   if(rir>=2){
     const target=b.max?Math.min(reps+1,b.max):reps+1;
-    if(target>reps)return {txt:`今回目標：${weight?weight+"kgで ":""}${target}rep（前回 +1rep）`,cls:"ok"};
+    if(target>reps)return {txt:`今回目標：${weight?formatLoad(weight)+"kgで ":""}${target}rep（前回 +1rep）`,cls:"ok"};
   }
-  if(rir<=1)return {txt:`今回目標：${weight?weight+"kgで ":""}${reps}repを再現し、RIR改善を狙う`,cls:"warn"};
-  return {txt:`今回目標：${weight?weight+"kgで ":""}${reps}repを安定再現`,cls:""};
+  if(rir<=1)return {txt:`今回目標：${weight?formatLoad(weight)+"kgで ":""}${reps}repを再現し、RIR改善を狙う`,cls:"warn"};
+  return {txt:`今回目標：${weight?formatLoad(weight)+"kgで ":""}${reps}repを安定再現`,cls:""};
 }
-function nextOverload(ex){
-  const a=(m()?.training||[]).filter(x=>x.exercise===ex).slice().sort((x,y)=>x.date.localeCompare(y.date));if(!a.length)return {txt:"初回｜基準重量を作る",cls:""};const c=a.at(-1),p=a.length>=2?a.at(-2):null;
-  if(!p)return {txt:`前回 ${c.weight}kg×${c.reps}｜同条件を再現`,cls:""};
-  if(Number(c.rir||0)>=2 && c.weight===p.weight && c.reps>p.reps)return {txt:"REP更新＋余力あり｜次回 +2.5%重量候補",cls:"ok"};
-  if(c.weight>p.weight)return {txt:"重量更新済｜次回は同重量でREP安定",cls:"ok"};
-  if(c.weight===p.weight&&c.reps===p.reps&&Number(c.rir||0)>Number(p.rir||0))return {txt:"RIR改善｜+1REP または +2.5%候補",cls:"ok"};
-  if(Number(c.rir||0)<=1)return {txt:"重量維持｜REP再現を優先",cls:"warn"};
+function nextOverload(ex,repText=""){
+  const a=(m()?.training||[]).filter(x=>x.exercise===ex).slice().sort((x,y)=>x.date.localeCompare(y.date));
+  if(!a.length)return {txt:"初回｜基準重量を作る",cls:""};
+  const c=a.at(-1),p=a.length>=2?a.at(-2):null,b=repBounds(repText||menuRepText(ex));
+  const weight=Number(c.weight||0),reps=Number(c.reps||0),rir=Number(c.rir||0);
+  // REPレンジ上限達成＋RIR2以上なら、履歴が1件でも次の実用重量へ進める候補。
+  if(weight>0 && b.max && reps>=b.max && rir>=2){
+    const nxt=nextAvailableLoad(ex,weight);
+    return {txt:`REP上限達成＋余力あり｜次回 ${formatLoad(nxt.weight)}kg候補（器具刻み ${formatLoad(nxt.step)}kg）`,cls:"ok"};
+  }
+  if(!p){
+    if(rir>=2)return {txt:`前回 ${formatLoad(weight)}kg×${reps}｜次回 +1REP候補`,cls:""};
+    return {txt:`前回 ${formatLoad(weight)}kg×${reps}｜同条件を再現`,cls:""};
+  }
+  if(rir>=2 && Number(c.weight)===Number(p.weight) && Number(c.reps)>Number(p.reps)){
+    if(b.max && reps>=b.max){
+      const nxt=nextAvailableLoad(ex,weight);
+      return {txt:`REP更新＋余力あり｜次回 ${formatLoad(nxt.weight)}kg候補`,cls:"ok"};
+    }
+    return {txt:"REP更新＋余力あり｜次回も +1REP候補",cls:"ok"};
+  }
+  if(Number(c.weight)>Number(p.weight))return {txt:"重量更新済｜次回は同重量でREP安定",cls:"ok"};
+  if(Number(c.weight)===Number(p.weight)&&Number(c.reps)===Number(p.reps)&&rir>Number(p.rir||0)){
+    if(b.max && reps>=b.max){
+      const nxt=nextAvailableLoad(ex,weight);
+      return {txt:`RIR改善＋REP上限｜次回 ${formatLoad(nxt.weight)}kg候補`,cls:"ok"};
+    }
+    return {txt:"RIR改善｜次回 +1REP候補",cls:"ok"};
+  }
+  if(rir<=1)return {txt:"重量維持｜REP再現を優先",cls:"warn"};
   if(vol(c)<vol(p))return {txt:"前回比低下｜重量維持・回復/フォーム確認",cls:"warn"};
   return {txt:"同重量で +1REP を狙う",cls:""};
 }
@@ -2372,7 +2423,7 @@ function generateRuleMenu(){
   if(st.volume===0){box.innerHTML='<div class="smartWarn"><b>今日は高負荷メニューを生成しません。</b><br>回復判定が休養優先です。痛み・体調を確認し、必要に応じて医療評価を優先してください。</div>';return;}
   let rows=(RULE_MENU[focus]||RULE_MENU["全身"]).map(x=>[...x]);const experience=m().profile?.experience||"intermediate",goal=m().profile?.goal||"";let limit=mins<=30?3:mins<=60?5:rows.length;if(experience==="beginner")limit=Math.min(limit,4);rows=rows.slice(0,limit);
   const factor=st.volume/100;rows=rows.map(x=>{x[3]=Math.max(1,Math.ceil(x[3]*factor));if(experience==="beginner")x[3]=Math.min(x[3],2);x[4]=Math.max(x[4],experience==="beginner"?3:(goal==="健康維持"||goal==="姿勢改善")?3:st.volume<=60?3:st.volume===80?2:1);return x});
-  box.innerHTML=`<div class="notice" style="margin-bottom:8px">${esc(focus)}｜${mins}分｜${esc(m().profile?.goal||"--")}｜${experience==="beginner"?"初心者":experience==="advanced"?"上級":"中級"}｜推奨ボリューム ${st.volume}%</div>`+rows.map(x=>{const last=lastTraining(x[0]),ov=nextOverload(x[0]),target=currentTrainingTarget(x[0],x[2]);return `<div class="smartPlanItem"><div class="smartPlanItemTop"><strong>${esc(x[0])}</strong><span class="badge">${esc(x[1])}</span></div><div class="smartPlanMeta">${esc(x[2])}rep × ${x[3]}set｜RIR ${x[4]}${last?`｜前回 ${last.weight}kg × ${last.reps}rep × ${last.sets}set / RIR ${last.rir}`:'｜初回はフォーム優先で基準作成'}</div><div class="smartPlanCue ${target.cls}">${esc(target.txt)}</div><div class="smartPlanCue">次回方針：${esc(ov.txt)}</div></div>`}).join("");
+  box.innerHTML=`<div class="notice" style="margin-bottom:8px">${esc(focus)}｜${mins}分｜${esc(m().profile?.goal||"--")}｜${experience==="beginner"?"初心者":experience==="advanced"?"上級":"中級"}｜推奨ボリューム ${st.volume}%</div>`+rows.map(x=>{const last=lastTraining(x[0]),ov=nextOverload(x[0],x[2]),target=currentTrainingTarget(x[0],x[2]);return `<div class="smartPlanItem"><div class="smartPlanItemTop"><strong>${esc(x[0])}</strong><span class="badge">${esc(x[1])}</span></div><div class="smartPlanMeta">${esc(x[2])}rep × ${x[3]}set｜RIR ${x[4]}${last?`｜前回 ${last.weight}kg × ${last.reps}rep × ${last.sets}set / RIR ${last.rir}`:'｜初回はフォーム優先で基準作成'}</div><div class="smartPlanCue ${target.cls}">${esc(target.txt)}</div><div class="smartPlanCue">次回方針：${esc(ov.txt)}</div></div>`}).join("");
 }
 function smartPriorityData(){
   const st=smartRecoveryState(),nu=smartNutrition(),ta=todayActivity(),ctx=smartContext(),p=[];
