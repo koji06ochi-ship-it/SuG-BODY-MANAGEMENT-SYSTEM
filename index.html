@@ -6,15 +6,15 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>S.u.G BODY MANAGEMENT SYSTEM V25.1 SMART CORE</title>
+<title>S.u.G BODY MANAGEMENT SYSTEM V26 ADAPTIVE CORE</title>
 <meta name="theme-color" content="#09090a">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="S.u.G BODY">
-<link rel="manifest" href="./manifest.webmanifest?v=25-exercise-master">
-<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png?v=25-exercise-master">
-<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=25-exercise-master">
+<link rel="manifest" href="./manifest.webmanifest?v=26-adaptive-response">
+<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png?v=26-adaptive-response">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=26-adaptive-response">
 <style>
 :root{
   --bg:#09090a;--card:#141417;--card2:#1a1a1f;--gold:#d8b35b;--gold2:#f3d98b;
@@ -324,6 +324,33 @@ button.primary{box-shadow:0 5px 18px rgba(184,140,50,.10)}
 @media(max-width:620px){.romMetrics{grid-template-columns:1fr 1fr}}@media(max-width:620px){.smartGrid{grid-template-columns:1fr}.selfCareChoice{grid-template-columns:1fr}.tabs{grid-template-columns:repeat(4,1fr)}}
 @media(min-width:720px){.tabs{grid-template-columns:repeat(8,1fr)}}
 
+
+
+/* V26 ADAPTIVE CORE — RESPONSE ENGINE */
+.responseHero{border-color:#77602d;background:radial-gradient(circle at 92% 0%,rgba(216,179,91,.16),transparent 42%),linear-gradient(180deg,#1b170e,#101012)}
+.responseHeroTitle{font-size:19px;font-weight:950;color:var(--gold2);letter-spacing:.05em}
+.responseHeroSub{font-size:9px;color:#aaa;line-height:1.7;margin-top:5px}
+.responseToolbar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:end}
+.responseGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.responseMap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.responsePartCard{background:#0d0d10;border:1px solid #303038;border-radius:13px;padding:10px;cursor:pointer;transition:.16s ease;min-width:0}
+.responsePartCard:hover{border-color:#5a4a25}.responsePartCard.active{border-color:var(--gold);box-shadow:inset 0 0 0 1px rgba(243,217,139,.10)}
+.responsePartName{font-size:12px;font-weight:900}.responsePartMeta{font-size:8px;color:#999;line-height:1.55;margin-top:4px}.responsePartValue{font-size:16px;font-weight:900;color:var(--gold2);margin-top:5px}
+.responseState{border:1px solid #3a3424;background:#12110d;border-radius:14px;padding:12px}.responseState.good{border-color:#315a43;background:#102017}.responseState.warn{border-color:#6a5727;background:#211c10}.responseState.bad{border-color:#713436;background:#211214}.responseState.wait{border-color:#3b3b44;background:#15151a}
+.responseStateTop{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.responseStateTitle{font-size:18px;font-weight:950}.responseState small{display:block;color:#aaa;font-size:9px;line-height:1.6;margin-top:4px}
+.responseKpis{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:10px}.responseKpi{background:#0c0c0f;border:1px solid #303038;border-radius:11px;padding:9px}.responseKpi span{display:block;color:#8d8d93;font-size:8px}.responseKpi b{display:block;margin-top:3px;font-size:13px;color:#f3d98b}.responseKpi small{display:block;margin-top:3px;font-size:8px;color:#8e8e94;line-height:1.45}
+.bottleneckRow{display:grid;grid-template-columns:34px minmax(0,1fr) 52px;gap:9px;align-items:center;background:#0d0d10;border:1px solid #2c2c32;border-radius:12px;padding:9px;margin-bottom:7px}.bottleneckNo{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#211d14;border:1px solid #5a4a25;color:var(--gold2);font-size:10px;font-weight:900}.bottleneckTitle{font-size:10px;font-weight:900}.bottleneckEvidence{font-size:8px;color:#999;line-height:1.55;margin-top:2px}.bottleneckScore{text-align:right;font-size:16px;font-weight:900;color:#f3d98b}
+.confidenceBar{height:10px;background:#0d0d10;border:1px solid #303038;border-radius:999px;overflow:hidden;margin-top:8px}.confidenceBar>i{display:block;height:100%;background:linear-gradient(90deg,#b88c32,#f3d98b);width:0}
+.responseDecision{padding:12px;border-radius:13px;border:1px solid #5a4a25;background:#15120c;font-size:10px;line-height:1.7}.responseDecision b{color:var(--gold2)}
+.responseExperiment{background:#0d0d10;border:1px solid #343027;border-radius:13px;padding:10px;margin-bottom:8px}.responseExperiment.active{border-color:#6a5727}.responseExperiment.done{border-color:#315a43}.responseExperimentTitle{font-size:11px;font-weight:900}.responseExperimentMeta{font-size:8px;color:#999;line-height:1.55;margin-top:4px}.responseExperimentResult{margin-top:7px;padding:7px 8px;border-radius:9px;background:#121217;border:1px solid #292930;font-size:9px;line-height:1.6}
+.responseCompare{display:grid;grid-template-columns:1fr 1fr;gap:8px}.responseCompareBox{background:#0d0d10;border:1px solid #303038;border-radius:12px;padding:10px}.responseCompareBox h3{font-size:10px;color:#f3d98b;margin:0 0 7px}.responseCompareLine{display:flex;justify-content:space-between;gap:8px;font-size:9px;color:#aaa;padding:4px 0;border-bottom:1px solid #242429}.responseCompareLine:last-child{border-bottom:0}.responseCompareLine b{color:#eee}
+.responseMeasureGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.responseMeasureGrid .wide{grid-column:span 2}
+.bodyProfileGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.bodyProfileCell{background:#0d0d10;border:1px solid #303038;border-radius:11px;padding:9px}.bodyProfileCell span{display:block;font-size:8px;color:#929299}.bodyProfileCell b{display:block;font-size:13px;margin-top:3px;color:#f3d98b}.bodyProfileCell small{display:block;font-size:8px;color:#888;margin-top:3px;line-height:1.4}
+.volumeObs{display:grid;grid-template-columns:74px 1fr 65px 58px;gap:7px;align-items:center;padding:7px 0;border-bottom:1px solid #242429;font-size:9px}.volumeObs:last-child{border-bottom:0}.volumeObs b{color:#f3d98b}.volumeObs small{color:#999}
+.responseDisclaimer{font-size:9px;color:#999;line-height:1.65;margin-top:8px}
+@media(max-width:700px){.responseGrid,.responseMap{grid-template-columns:1fr}.responseKpis{grid-template-columns:repeat(2,1fr)}.responseMeasureGrid{grid-template-columns:1fr 1fr}.bodyProfileGrid{grid-template-columns:1fr 1fr}.volumeObs{grid-template-columns:62px 1fr 56px}.volumeObs .recoveryCol{display:none}}
+@media(max-width:460px){.responseToolbar{grid-template-columns:1fr}.responseCompare{grid-template-columns:1fr}.responseMeasureGrid{grid-template-columns:1fr}.responseMeasureGrid .wide{grid-column:auto}.bodyProfileGrid{grid-template-columns:1fr 1fr}}
+
 </style>
 <script>
 window.SUG_CLOUD_CONFIG = {
@@ -337,9 +364,9 @@ window.SUG_CLOUD_CONFIG = {
 
 <div id="authGate" class="authGate">
   <div class="authBox">
-    <img class="authBrandLogo" src="./brand-header.png?v=25-exercise-master" alt="S.u.G OSAKA">
+    <img class="authBrandLogo" src="./brand-header.png?v=26-adaptive-response" alt="S.u.G OSAKA">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V25 SMART CORE / MEMBERS ONLY</div>
+    <div class="sub">V26 ADAPTIVE CORE / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -348,7 +375,7 @@ window.SUG_CLOUD_CONFIG = {
     <div class="authLinks"><button class="linkBtn" type="button" onclick="requestPasswordReset()">パスワードを忘れた方</button></div>
     <div id="authError" class="authError"></div>
     <div class="setupNote">S.u.G会員限定。管理者から届いた招待リンクで初回登録してください。</div>
-    <img class="authMascot" src="./mascot-highfive.png?v=25-exercise-master" alt="">
+    <img class="authMascot" src="./mascot-highfive.png?v=26-adaptive-response" alt="">
     <div id="pwaGuide" class="pwaGuide hidden"><b>iPhoneホーム画面対応</b><br>Safariの共有ボタン →「ホーム画面に追加」で、アプリのように起動できます。</div>
   </div>
 </div>
@@ -453,8 +480,8 @@ window.SUG_CLOUD_CONFIG = {
 <header>
   <div class="head">
     <div class="brandIdentity">
-      <img class="brandHeaderLogo" src="./brand-header.png?v=25-exercise-master" alt="S.u.G OSAKA">
-      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V25.1 SMART CORE / MANAGEMENT 1.1</small></div>
+      <img class="brandHeaderLogo" src="./brand-header.png?v=26-adaptive-response" alt="S.u.G OSAKA">
+      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26 ADAPTIVE CORE / RESPONSE ENGINE 1.0</small></div>
     </div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
@@ -470,6 +497,7 @@ window.SUG_CLOUD_CONFIG = {
     <button id="adminTab" class="tab" data-tab="adminBoard">管理</button>
     <button class="tab active" data-tab="dash">概要</button>
     <button class="tab" data-tab="smart">SMART</button>
+    <button class="tab" data-tab="response">RESPONSE</button>
     <button class="tab" data-tab="activity">活動</button>
     <button class="tab" data-tab="care">ケア</button>
     <button class="tab" data-tab="weight">体重</button>
@@ -487,7 +515,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="adminBoard" class="panel">
     <div id="adminBrandHero" class="card adminBrandHero">
-      <img class="adminOfficialLogo" src="./brand-official.jpg?v=25-exercise-master" alt="S.u.G OSAKA official brand">
+      <img class="adminOfficialLogo" src="./brand-official.jpg?v=26-adaptive-response" alt="S.u.G OSAKA official brand">
       <div class="adminBrandText"><h2>S.u.G OSAKA</h2><p>PERSONAL TRAINING × PERSONAL STRETCH × CONDITIONING<br>会員管理・予約・フォロー・コンディションを一つの運営画面へ。</p></div>
     </div>
     <div class="card dailyOpsCard">
@@ -612,11 +640,11 @@ window.SUG_CLOUD_CONFIG = {
   <section id="dash" class="panel active">
     <div class="card sugHero">
       <div>
-        <img class="sugHeroLogo" src="./brand-header.png?v=25-exercise-master" alt="S.u.G OSAKA">
+        <img class="sugHeroLogo" src="./brand-header.png?v=26-adaptive-response" alt="S.u.G OSAKA">
         <div class="sugHeroTitle">鍛える。整える。魅せる。</div>
         <div class="sugHeroSub">TRAINING / CONDITIONING / STYLE UPDATE<br>記録して、管理して、次の身体へ。</div>
       </div>
-      <img class="sugHeroMascot" src="./mascot-highfive.png?v=25-exercise-master" alt="">
+      <img class="sugHeroMascot" src="./mascot-highfive.png?v=26-adaptive-response" alt="">
     </div>
     <div class="card">
       <h2>現在の状態</h2>
@@ -659,6 +687,13 @@ window.SUG_CLOUD_CONFIG = {
       </div>
       <div id="dashSmartSummary" class="smartStatusLine"></div>
     </div>
+    <div class="card responseHero">
+      <div class="row" style="align-items:center">
+        <div><div class="responseHeroTitle">S.u.G RESPONSE ENGINE</div><div class="responseHeroSub">体型・実測トレ反応・ROM / 動作・CARE・回復を本人基準で統合。遺伝子や固定タイプは判定しません。</div></div>
+        <button class="primary" onclick="openResponseTab()">反応を見る</button>
+      </div>
+      <div id="dashResponseSummary" class="smartStatusLine"></div>
+    </div>
     <div class="card"><h2>体重トレンド</h2><canvas id="weightChart" width="900" height="270"></canvas><div id="weightJudge" class="notice" style="margin-top:8px"></div></div>
     <div class="card"><h2>栄養・体重連動</h2><div id="nutritionInsight" class="item"></div></div>
     <div class="card"><h2>オーバーロード状況</h2><div id="dashOverload"></div></div>
@@ -668,7 +703,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="smart" class="panel">
     <div class="card smartHero">
-      <div class="sectionLead"><div><div class="smartHeroTitle">S.u.G SMART PLAN</div><div class="smartHeroSub">外部AI・APIなし。会員データとS.u.Gルールから「今日の優先順位」を自動計算します。</div></div><img class="sectionMascot" src="./mascot-highfive.png?v=25-exercise-master" alt=""></div>
+      <div class="sectionLead"><div><div class="smartHeroTitle">S.u.G SMART PLAN</div><div class="smartHeroSub">外部AI・APIなし。会員データとS.u.Gルールから「今日の優先順位」を自動計算します。</div></div><img class="sectionMascot" src="./mascot-highfive.png?v=26-adaptive-response" alt=""></div>
       <div id="smartTargetNotice" class="notice" style="margin-top:9px">分析対象を確認中...</div>
       <div class="grid2" style="margin-top:10px">
         <div><label>今日の食欲</label><select id="smartAppetite" onchange="saveSmartContext()"><option value="normal">普通</option><option value="low">低い</option><option value="high">強い</option></select></div>
@@ -708,9 +743,89 @@ window.SUG_CLOUD_CONFIG = {
     </div>
   </section>
 
+  <section id="response" class="panel">
+    <div class="card responseHero">
+      <div class="row" style="align-items:center">
+        <div><div class="responseHeroTitle">S.u.G RESPONSE ENGINE</div><div class="responseHeroSub">CURRENT 28D × PREVIOUS 28D × 本人の過去反応。体型から遺伝子を推測せず、「今の条件で何に反応しているか」を更新します。</div></div>
+        <span class="badge">V26</span>
+      </div>
+      <div class="responseToolbar" style="margin-top:10px">
+        <div><label>詳細を見る部位</label><select id="responsePartSelect" onchange="renderResponseEngine()"><option>胸</option><option>背中</option><option>肩</option><option>腕</option><option>前脚</option><option>後脚・臀部</option><option>姿勢</option><option>全身</option></select></div>
+        <button class="primary" onclick="renderResponseEngine(true)">再計算</button>
+      </div>
+      <div class="responseDisclaimer">S.u.G内部の意思決定支援です。Effective Sets・Bottleneck・Confidenceは本人データから作る運用指標で、遺伝子検査・医学診断・普遍的な正常値の代替ではありません。</div>
+    </div>
+
+    <div class="card">
+      <h2>BODY PROFILE｜身体計測</h2>
+      <div class="muted">形態特徴と経時変化を保存。肩幅/骨盤幅やアームスパン比は“形態情報”として扱い、体質や才能の断定には使いません。</div>
+      <div class="responseMeasureGrid" style="margin-top:9px">
+        <div><label>日付</label><input id="bmDate" type="date"></div>
+        <div><label>身長 cm</label><input id="bmHeight" type="number" step="0.1"></div>
+        <div><label>体脂肪率 %</label><input id="bmBodyFat" type="number" step="0.1"></div>
+        <div><label>除脂肪量 kg</label><input id="bmLeanMass" type="number" step="0.1" placeholder="空欄なら体重×体脂肪率から推定"></div>
+        <div><label>肩幅 cm</label><input id="bmShoulderWidth" type="number" step="0.1"></div>
+        <div><label>骨盤幅 cm</label><input id="bmPelvisWidth" type="number" step="0.1"></div>
+        <div><label>アームスパン cm</label><input id="bmArmSpan" type="number" step="0.1"></div>
+        <div><label>胸囲 cm</label><input id="bmChestCirc" type="number" step="0.1"></div>
+        <div><label>肩周径 cm</label><input id="bmShoulderCirc" type="number" step="0.1"></div>
+        <div><label>上腕囲 cm</label><input id="bmUpperArmCirc" type="number" step="0.1"></div>
+        <div><label>腹囲 cm</label><input id="bmWaistCirc" type="number" step="0.1"></div>
+        <div><label>大腿囲 cm</label><input id="bmThighCirc" type="number" step="0.1"></div>
+      </div>
+      <button class="primary" style="width:100%;margin-top:9px" onclick="addBodyMeasurement()">身体計測を保存</button>
+      <div id="responseBodyProfile" style="margin-top:10px"></div>
+      <div id="responseMeasurementList" style="margin-top:9px"></div>
+    </div>
+
+    <div class="card">
+      <h2>BODY PART RESPONSE MAP</h2>
+      <div class="muted">部位ごとに、直近28日の有効SET推定・同一種目のe1RM変化・回復・局所制限を分けて評価。</div>
+      <div id="responseMap" class="responseMap" style="margin-top:9px"></div>
+    </div>
+
+    <div class="card">
+      <h2>CURRENT STATE｜現在の反応</h2>
+      <div id="responseCurrentState"></div>
+    </div>
+
+    <div class="card">
+      <h2>CURRENT 28D vs PREVIOUS 28D</h2>
+      <div id="responseCompare"></div>
+    </div>
+
+    <div class="card">
+      <h2>VOLUME RESPONSE｜観測レンジ</h2>
+      <div id="responseVolume"></div>
+    </div>
+
+    <div class="card">
+      <h2>BOTTLENECK ENGINE</h2>
+      <div class="muted">刺激 / 進歩 / 動作 / CARE / 回復 / 栄養 / プログラムを同時に採点し、原因候補を順位化。</div>
+      <div id="responseBottlenecks" style="margin-top:9px"></div>
+    </div>
+
+    <div class="card">
+      <h2>CONFIDENCE｜判定信頼度</h2>
+      <div id="responseConfidence"></div>
+    </div>
+
+    <div class="card">
+      <h2>TODAY DECISION / NEXT EXPERIMENT</h2>
+      <div id="responseDecision"></div>
+      <div id="responseExperimentSuggestion" style="margin-top:9px"></div>
+    </div>
+
+    <div class="card">
+      <h2>N=1 EXPERIMENT HISTORY</h2>
+      <div class="muted">仮説 → 介入 → 実行 → 結果 → 仮説更新を本人データで残します。</div>
+      <div id="responseExperiments" style="margin-top:9px"></div>
+    </div>
+  </section>
+
   <section id="activity" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>歩数・活動</h2><div class="muted">現行V25は手入力。Apple Health / HealthKit自動連携は次段階で接続。</div></div><img class="sectionMascot" src="./mascot-jumprope.png?v=25-exercise-master" alt=""></div>
+      <div class="sectionLead"><div><h2>歩数・活動</h2><div class="muted">現行V25は手入力。Apple Health / HealthKit自動連携は次段階で接続。</div></div><img class="sectionMascot" src="./mascot-jumprope.png?v=26-adaptive-response" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="aDate" type="date"></div><div><label>歩数</label><input id="aSteps" type="number" min="0" step="100"></div></div>
       <div style="margin-top:8px"><label>メモ</label><input id="aMemo" placeholder="例：通勤＋散歩、脚トレ日、外出少なめ"></div>
       <button class="primary" style="width:100%;margin-top:9px" onclick="addActivity()">歩数を記録</button>
@@ -721,7 +836,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="care" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>症状別セルフケア</h2><div class="muted">腰・首・肩・膝・足首・手首・肘。診断ではなく、痛む場所と動作 → 危険サイン確認 → 軽いセルフケア → 前後評価。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-exercise-master" alt=""></div>
+      <div class="sectionLead"><div><h2>症状別セルフケア</h2><div class="muted">腰・首・肩・膝・足首・手首・肘。診断ではなく、痛む場所と動作 → 危険サイン確認 → 軽いセルフケア → 前後評価。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=26-adaptive-response" alt=""></div>
       <div class="notice">強い症状・外傷・神経症状などがある場合はセルフケアより医療評価を優先します。痛みやしびれが増える動きは中止してください。</div>
       <div class="selfCareChoice" style="margin-top:9px"><div><label>部位</label><select id="careArea" onchange="renderCareQuestions()"><option value="lowback">腰</option><option value="neck">首</option><option value="shoulder">肩</option><option value="knee">膝</option><option value="ankle">足首</option><option value="wrist">手首</option><option value="elbow">肘</option></select></div><div><label>痛み BEFORE 0-10</label><input id="carePainBefore" type="number" min="0" max="10" value="3"></div></div>
       <div class="selfCareChoice" style="margin-top:8px"><div><label>痛む場所</label><select id="careLocation"></select></div><div><label>痛む動作</label><select id="careMovement"></select></div></div>
@@ -737,7 +852,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="weight" class="panel">
     <div class="card">
-      <img class="mascotMini" src="./mascot-jumprope.png?v=25-exercise-master" alt="">
+      <img class="mascotMini" src="./mascot-jumprope.png?v=26-adaptive-response" alt="">
       <h2>体重記録</h2>
       <div class="grid2"><div><label>日付</label><input id="wDate" type="date"></div><div><label>体重 kg</label><input id="wWeight" type="number" step="0.1"></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>体脂肪率 %</label><input id="wFat" type="number" step="0.1"></div><div><label>メモ</label><input id="wMemo"></div></div>
@@ -759,7 +874,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="training" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>トレーニング記録</h2><div class="muted">重量・REP・SET・RIR・総重量・推定1RMを記録し、前回からの進歩を確認。</div></div><img class="sectionMascot" src="./mascot-basketball.png?v=25-exercise-master" alt=""></div>
+      <div class="sectionLead"><div><h2>トレーニング記録</h2><div class="muted">重量・REP・SET・RIR・総重量・推定1RMを記録し、前回からの進歩を確認。</div></div><img class="sectionMascot" src="./mascot-basketball.png?v=26-adaptive-response" alt=""></div>
       <div class="grid2">
   <div><label>日付</label><input id="tDate" type="date"></div>
   <div>
@@ -796,7 +911,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="rom" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>ROMスクリーニング</h2><div class="muted">V25初期版：スクワットの側面画像から、2DランドマークでボトムROMを数値化。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-exercise-master" alt=""></div>
+      <div class="sectionLead"><div><h2>ROMスクリーニング</h2><div class="muted">V25初期版：スクワットの側面画像から、2DランドマークでボトムROMを数値化。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=26-adaptive-response" alt=""></div>
       <div class="notice">撮影：真横から全身を入れ、スクワット最下点で撮影。カメラは傾けず、肩・股関節・膝・足首・つま先が見える状態を推奨。</div>
       <div class="grid2" style="margin-top:9px">
         <div><label>日付</label><input id="romDate" type="date"></div>
@@ -813,7 +928,7 @@ window.SUG_CLOUD_CONFIG = {
       <div id="romResult"><span class="muted">画像を解析すると結果が表示されます。</span></div>
     </div>
     <div class="card">
-      <div class="sectionLead"><div><h2>関節 AROM / PROM</h2><div class="muted">ストレッチ・コンディショニング側の関節可動域評価。AROM＝自力、PROM＝外力補助で確認。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-exercise-master" alt=""></div>
+      <div class="sectionLead"><div><h2>関節 AROM / PROM</h2><div class="muted">ストレッチ・コンディショニング側の関節可動域評価。AROM＝自力、PROM＝外力補助で確認。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=26-adaptive-response" alt=""></div>
       <div class="notice">PROMは痛みを押して無理に測らないでください。AROMだけでも判定可能。伸展は0°を基準とし、伸展不足はマイナス入力（例：膝伸展10°不足＝-10°）。</div>
       <div class="grid2" style="margin-top:9px">
         <div><label>日付</label><input id="aromDate" type="date"></div>
@@ -872,7 +987,7 @@ window.SUG_CLOUD_CONFIG = {
       <div id="aromResult"><span class="muted">数値を入力すると、参考帯・AROM/PROM差・機能への影響候補を表示します。</span></div>
     </div>
     <div class="card">
-      <div class="sectionLead"><div><h2>肩甲上腕リズム（SHR）</h2><div class="muted">写真で腕の挙上角を自動検出＋肩甲骨だけ2点タップ。数字を自分で測らなくてOK。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-exercise-master" alt=""></div>
+      <div class="sectionLead"><div><h2>肩甲上腕リズム（SHR）</h2><div class="muted">写真で腕の挙上角を自動検出＋肩甲骨だけ2点タップ。数字を自分で測らなくてOK。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=26-adaptive-response" alt=""></div>
 
       <div class="notice">
         <b>撮影：</b>後ろから、全身または腰〜頭まで入るように撮影。①腕を体側に下ろした写真 ②同じ位置から腕を上げた写真。肩甲面挙上か外転が一番測りやすい。
@@ -953,7 +1068,7 @@ window.SUG_CLOUD_CONFIG = {
       <div class="muted">同日・同動作で左右を保存すると、自動で差が大きい順に表示。</div>
       <div id="aromAsymmetry" style="margin-top:8px"><span class="muted">左右データなし</span></div>
     </div>    <div class="card">
-      <div class="sectionLead"><div><h2>Joint by Joint MAP</h2><div class="muted">関節可動域・左右差・CARE・SHRを統合して、次に見る場所を自動整理。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-exercise-master" alt=""></div>
+      <div class="sectionLead"><div><h2>Joint by Joint MAP</h2><div class="muted">関節可動域・左右差・CARE・SHRを統合して、次に見る場所を自動整理。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=26-adaptive-response" alt=""></div>
       <div class="notice">S.u.Gの運動スクリーニング用フレーム。ROMだけで「安定性不足」や原因筋を断定しません。膝・腰などの安定性は次の動作スクリーンと合わせて評価します。</div>
       <button class="secondary" style="width:100%;margin-top:9px" onclick="renderJointByJoint()">最新データで更新</button>
       <div id="jbjPriority" class="jbjPriority"><b>優先候補</b><br>評価データを入力すると表示します。</div>
@@ -961,7 +1076,7 @@ window.SUG_CLOUD_CONFIG = {
     </div>
 
     <div class="card">
-      <div class="sectionLead"><div><h2>動作スクリーン</h2><div class="muted">写真1枚からPoseを自動解析。動作の「傾向」を数値化して、ROM・CARE・Joint by Jointとつなげます。</div></div><img class="sectionMascot" src="./mascot-running.png?v=25-exercise-master" alt=""></div>
+      <div class="sectionLead"><div><h2>動作スクリーン</h2><div class="muted">写真1枚からPoseを自動解析。動作の「傾向」を数値化して、ROM・CARE・Joint by Jointとつなげます。</div></div><img class="sectionMascot" src="./mascot-running.png?v=26-adaptive-response" alt=""></div>
       <div class="notice"><b>診断ではありません。</b> 2D写真はカメラ位置・奥行き・動作の瞬間で数値が変わります。同じ撮影条件で左右・前回比較を優先します。</div>
 
       <div class="grid2" style="margin-top:9px">
@@ -996,7 +1111,7 @@ window.SUG_CLOUD_CONFIG = {
     </div>
 
     <div class="card">
-      <div class="sectionLead"><div><h2>S.u.G 統合判定</h2><div class="muted">CARE・回復・ROM・AROM/PROM・SHR・動作スクリーン・トレーニングを横断し、今の優先課題TOP3を自動整理。</div></div><img class="sectionMascot" src="./mascot-highfive.png?v=25-exercise-master" alt=""></div>
+      <div class="sectionLead"><div><h2>S.u.G 統合判定</h2><div class="muted">CARE・回復・ROM・AROM/PROM・SHR・動作スクリーン・トレーニングを横断し、今の優先課題TOP3を自動整理。</div></div><img class="sectionMascot" src="./mascot-highfive.png?v=26-adaptive-response" alt=""></div>
       <div class="notice">各評価の「診断」を行う機能ではありません。記録間の組み合わせから、次に確認・調整する優先順位を作るS.u.G運用支援です。</div>
       <button class="primary" style="width:100%;margin-top:9px" onclick="renderIntegratedAssessment(true)">最新データで統合判定</button>
       <div id="integratedResult"><span class="muted">記録を入力すると自動で統合します。</span></div>
@@ -1022,7 +1137,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="recovery" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>回復・コンディション</h2><div class="muted">睡眠・疲労・ストレス・痛みから、その日の負荷を調整。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=25-exercise-master" alt=""></div>
+      <div class="sectionLead"><div><h2>回復・コンディション</h2><div class="muted">睡眠・疲労・ストレス・痛みから、その日の負荷を調整。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=26-adaptive-response" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="rDate" type="date"></div><div><label>睡眠時間</label><input id="rSleep" type="number" step="0.1"></div></div>
       <div class="grid3" style="margin-top:8px"><div><label>疲労 1-10</label><input id="rFatigue" type="number" min="1" max="10"></div><div><label>ストレス 1-10</label><input id="rStress" type="number" min="1" max="10"></div><div><label>痛み 0-10</label><input id="rPain" type="number" min="0" max="10"></div></div>
       <div style="margin-top:8px"><label>メモ</label><textarea id="rMemo"></textarea></div>
@@ -1034,7 +1149,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="checkin" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>週間チェックイン</h2><div class="muted">今週の身体と生活を短時間で共有。コーチングの調整材料にします。</div></div><img class="sectionMascot" src="./mascot-running.png?v=25-exercise-master" alt=""></div>
+      <div class="sectionLead"><div><h2>週間チェックイン</h2><div class="muted">今週の身体と生活を短時間で共有。コーチングの調整材料にします。</div></div><img class="sectionMascot" src="./mascot-running.png?v=26-adaptive-response" alt=""></div>
       <div class="notice">週1回の自己申告です。数値は管理の目安として使い、体調の診断には使用しません。</div>
       <div class="grid2" style="margin-top:9px"><div><label>日付</label><input id="ciDate" type="date"></div><div><label>体調 1-5</label><input id="ciCondition" type="number" min="1" max="5" value="3"></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>睡眠満足度 1-5</label><input id="ciSleep" type="number" min="1" max="5" value="3"></div><div><label>痛み 0-10</label><input id="ciPain" type="number" min="0" max="10" value="0"></div></div>
@@ -1088,7 +1203,7 @@ window.SUG_CLOUD_CONFIG = {
 
   <section id="profile" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>会員情報</h2><div class="muted">目標・栄養・注意事項をS.u.Gの管理基準として保存。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=25-exercise-master" alt=""></div>
+      <div class="sectionLead"><div><h2>会員情報</h2><div class="muted">目標・栄養・注意事項をS.u.Gの管理基準として保存。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=26-adaptive-response" alt=""></div>
       <div class="grid2"><div><label>氏名</label><input id="pfName"></div><div><label>目的</label><select id="pfGoal"><option>筋肥大</option><option>減量</option><option>増量</option><option>健康維持</option><option>姿勢改善</option></select></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>目標体重</label><input id="pfTargetWeight" type="number" step="0.1"></div><div><label>目標kcal</label><input id="pfTargetKcal" type="number"></div></div>
       <div class="grid3" style="margin-top:8px"><div><label>目標P</label><input id="pfP" type="number"></div><div><label>目標F</label><input id="pfF" type="number"></div><div><label>目標C</label><input id="pfC" type="number"></div></div>
@@ -1277,7 +1392,7 @@ function baseMember(name="新規会員"){
   return {profile:{name,goal:"筋肥大",targetWeight:0,targetKcal:0,targetP:0,targetF:0,targetC:0,experience:"intermediate",trainingDays:3,priorityPart:"全身",sessionMinutes:60,notes:""},
     coachPlan:{weeklyFocus:"",nextAction:"",nextSessionDate:"",targetTrainingDays:0,targetSleep:0,targetSteps:0,completedAt:null,updatedAt:null},
     smartContext:{appetite:"normal",dayType:"training",updatedAt:null},
-    weights:[],meals:[],training:[],recovery:[],checkins:[],activity:[],selfCare:[],smartPlans:[],romAssessments:[],aromAssessments:[],shrAssessments:[],movementScreens:[],integratedAssessments:[],photos:[]}
+    weights:[],meals:[],training:[],recovery:[],checkins:[],activity:[],selfCare:[],smartPlans:[],romAssessments:[],aromAssessments:[],shrAssessments:[],movementScreens:[],integratedAssessments:[],bodyMeasurements:[],responseExperiments:[],photos:[]}
 }
 function m(){return db.members[db.current]}
 function esc(s){return String(s??"").replace(/[&<>"']/g,x=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[x]))}
@@ -1746,7 +1861,7 @@ async function loadMember(id){
   if(!db.members[id].smartContext || typeof db.members[id].smartContext!=="object") db.members[id].smartContext=baseMember(p?.display_name||"会員").smartContext;
   db.members[id].smartContext={...baseMember(p?.display_name||"会員").smartContext,...db.members[id].smartContext};
 
-  ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","photos"].forEach(k=>{
+  ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos"].forEach(k=>{
     if(!Array.isArray(db.members[id][k]))db.members[id][k]=[];
   });
   if(!db.members[id].coachPlan || typeof db.members[id].coachPlan!=="object") db.members[id].coachPlan=baseMember(p?.display_name||"会員").coachPlan;
@@ -1824,7 +1939,7 @@ async function refreshMemberProfiles(selectId=null){
 }
 
 function inviteRedirectUrl(){
-  return location.origin+location.pathname+"?invite=1&v=25-exercise-master";
+  return location.origin+location.pathname+"?invite=1&v=26-adaptive-response";
 }
 
 async function createMemberInvite(){
@@ -1981,7 +2096,7 @@ function dateAgeDays(dateStr){
 function latestRecordDate(mm){
   if(!mm)return "";
   const dates=[];
-  ["weights","meals","training","recovery","activity"].forEach(k=>(mm[k]||[]).forEach(x=>{if(x?.date)dates.push(x.date)}));
+  ["weights","meals","training","recovery","activity","bodyMeasurements"].forEach(k=>(mm[k]||[]).forEach(x=>{if(x?.date)dates.push(x.date)}));
   (mm.photos||[]).forEach(x=>{if(x?.date)dates.push(x.date)});
   return dates.sort().at(-1)||"";
 }
@@ -2257,7 +2372,7 @@ async function refreshAdminBoard(){
     const members=accessibleProfiles.filter(p=>p.role!=="trainer").map(p=>{
       const row=byId.get(p.id);
       const mm=row?.data&&Object.keys(row.data).length?row.data:baseMember(p.display_name||"会員");
-      ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","photos"].forEach(k=>{if(!Array.isArray(mm[k]))mm[k]=[]});
+      ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos"].forEach(k=>{if(!Array.isArray(mm[k]))mm[k]=[]});
       if(!mm.profile)mm.profile=baseMember(p.display_name||"会員").profile;
       const st=adminStatusFor(mm);
       return {profile:p,mm,row,st,lastDate:latestRecordDate(mm)};
@@ -3386,13 +3501,13 @@ const CARE_ROUTINE={
   ]
 };
 const CARE_IMAGES={
-  lowback:"./care-lowback-hyottoko.png?v=25-exercise-master",
-  neck:"./care-neck-hyottoko.png?v=25-exercise-master",
-  shoulder:"./care-shoulder-hyottoko.png?v=25-exercise-master",
-  knee:"./care-knee-hyottoko.png?v=25-exercise-master",
-  ankle:"./care-ankle-hyottoko.png?v=25-exercise-master",
-  wrist:"./care-wrist-hyottoko.png?v=25-exercise-master",
-  elbow:"./care-elbow-hyottoko.png?v=25-exercise-master"
+  lowback:"./care-lowback-hyottoko.png?v=26-adaptive-response",
+  neck:"./care-neck-hyottoko.png?v=26-adaptive-response",
+  shoulder:"./care-shoulder-hyottoko.png?v=26-adaptive-response",
+  knee:"./care-knee-hyottoko.png?v=26-adaptive-response",
+  ankle:"./care-ankle-hyottoko.png?v=26-adaptive-response",
+  wrist:"./care-wrist-hyottoko.png?v=26-adaptive-response",
+  elbow:"./care-elbow-hyottoko.png?v=26-adaptive-response"
 };
 function carePosterHTML(area){
   const label=CARE_AREA_LABELS[area]||'セルフケア';
@@ -4997,6 +5112,295 @@ window.__SUG_ROM_RESULT__=function(payload){
 window.__SUG_ROM_ERROR__=function(msg){
   const box=document.getElementById("romResult");if(box)box.innerHTML=`<div class="smartWarn"><b>ROM解析できませんでした</b><br>${esc(msg)}</div>`;
 }
+
+
+// =============================================================
+// V26 ADAPTIVE CORE — RESPONSE ENGINE
+// Rule-based, auditable N=1 decision support. No genetic inference.
+// =============================================================
+const RESPONSE_PARTS=["胸","背中","肩","腕","前脚","後脚・臀部","姿勢","全身"];
+const RESPONSE_MORPH_MAP={
+  "胸":{field:"chestCirc",label:"胸囲",unit:"cm"},
+  "肩":{field:"shoulderCirc",label:"肩周径",unit:"cm"},
+  "腕":{field:"upperArmCirc",label:"上腕囲",unit:"cm"},
+  "前脚":{field:"thighCirc",label:"大腿囲",unit:"cm"},
+  "後脚・臀部":{field:"thighCirc",label:"大腿囲",unit:"cm"},
+  "全身":{field:"leanMass",label:"除脂肪量",unit:"kg"}
+};
+function responseClamp(v,min=0,max=100){return Math.max(min,Math.min(max,Number(v||0)))}
+function responseShiftIso(iso,days){const d=new Date(`${iso}T12:00:00`);d.setDate(d.getDate()+days);return dateISO(d)}
+function responseDaysBetween(a,b){if(!a||!b)return 0;return Math.max(1,Math.round((new Date(`${b}T12:00:00`)-new Date(`${a}T12:00:00`))/86400000)+1)}
+function responseFmt(v,d=1,suffix=""){return Number.isFinite(Number(v))?`${Number(v).toFixed(d)}${suffix}`:"--"}
+function responseLatestOnOrBefore(rows,endDate,field=null){
+  return (rows||[]).filter(x=>x?.date&&x.date<=endDate&&(!field||Number(x[field]||0)>0)).slice().sort((a,b)=>String(a.date).localeCompare(String(b.date))).at(-1)||null;
+}
+function responseWeightAt(date){const x=responseLatestOnOrBefore(m()?.weights||[],date);return x?Number(x.weight||0):null}
+function responseLeanMassForMeasurement(x){
+  if(!x)return null;
+  if(Number(x.leanMass||0)>0)return Number(x.leanMass);
+  const bf=Number(x.bodyFat||0),w=responseWeightAt(x.date);
+  return (w&&bf>0&&bf<70)?w*(1-bf/100):null;
+}
+function responseMeasurementValueAt(field,date){
+  const rows=(m()?.bodyMeasurements||[]).filter(x=>x?.date&&x.date<=date).slice().sort((a,b)=>String(a.date).localeCompare(String(b.date)));
+  if(field==="leanMass"){
+    for(let i=rows.length-1;i>=0;i--){const v=responseLeanMassForMeasurement(rows[i]);if(v>0)return {value:v,row:rows[i]}}
+    return null;
+  }
+  for(let i=rows.length-1;i>=0;i--){const v=Number(rows[i]?.[field]||0);if(v>0)return {value:v,row:rows[i]}}
+  return null;
+}
+function addBodyMeasurement(){
+  if(!m())return;
+  const get=id=>Number(document.getElementById(id)?.value||0);
+  const row={date:document.getElementById("bmDate")?.value||today(),height:get("bmHeight"),bodyFat:get("bmBodyFat"),leanMass:get("bmLeanMass"),shoulderWidth:get("bmShoulderWidth"),pelvisWidth:get("bmPelvisWidth"),armSpan:get("bmArmSpan"),chestCirc:get("bmChestCirc"),shoulderCirc:get("bmShoulderCirc"),upperArmCirc:get("bmUpperArmCirc"),waistCirc:get("bmWaistCirc"),thighCirc:get("bmThighCirc"),savedAt:new Date().toISOString()};
+  const vals=Object.entries(row).filter(([k])=>!["date","savedAt"].includes(k)).map(([,v])=>Number(v||0));
+  if(!vals.some(v=>v>0))return alert("身体計測を1項目以上入力してください");
+  m().bodyMeasurements=m().bodyMeasurements||[];m().bodyMeasurements.push(row);m().bodyMeasurements.sort((a,b)=>String(a.date).localeCompare(String(b.date)));
+  ["bmHeight","bmBodyFat","bmLeanMass","bmShoulderWidth","bmPelvisWidth","bmArmSpan","bmChestCirc","bmShoulderCirc","bmUpperArmCirc","bmWaistCirc","bmThighCirc"].forEach(id=>{const e=document.getElementById(id);if(e)e.value=""});
+  persist();renderResponseEngine(true);
+}
+function responseBodyProfileData(){
+  const end=today();
+  const fields=["height","bodyFat","shoulderWidth","pelvisWidth","armSpan","chestCirc","shoulderCirc","upperArmCirc","waistCirc","thighCirc"];
+  const data={};fields.forEach(f=>{const x=responseMeasurementValueAt(f,end);data[f]=x?.value||null});
+  const lm=responseMeasurementValueAt("leanMass",end);data.leanMass=lm?.value||null;
+  data.weight=responseWeightAt(end);
+  data.shoulderPelvis=(data.shoulderWidth&&data.pelvisWidth)?data.shoulderWidth/data.pelvisWidth:null;
+  data.armSpanHeight=(data.armSpan&&data.height)?data.armSpan/data.height:null;
+  data.ffmi=(data.leanMass&&data.height)?data.leanMass/Math.pow(data.height/100,2):null;
+  data.leanPct=(data.leanMass&&data.weight)?data.leanMass/data.weight*100:null;
+  return data;
+}
+function renderResponseBodyProfile(){
+  const box=document.getElementById("responseBodyProfile"),list=document.getElementById("responseMeasurementList");if(!box||!m())return;
+  const d=responseBodyProfileData();
+  const cells=[
+    ["体重",d.weight,responseFmt(d.weight,1,"kg")],["身長",d.height,responseFmt(d.height,1,"cm")],["体脂肪",d.bodyFat,responseFmt(d.bodyFat,1,"%")],
+    ["除脂肪量",d.leanMass,responseFmt(d.leanMass,1,"kg")],["除脂肪量比",d.leanPct,responseFmt(d.leanPct,1,"%")],["FFMI",d.ffmi,responseFmt(d.ffmi,1,"")],
+    ["肩幅 / 骨盤幅",d.shoulderPelvis,responseFmt(d.shoulderPelvis,2,"")],["アームスパン / 身長",d.armSpanHeight,responseFmt(d.armSpanHeight,2,"")],["腹囲",d.waistCirc,responseFmt(d.waistCirc,1,"cm")]
+  ];
+  box.innerHTML=`<div class="bodyProfileGrid">${cells.map(([label,v,text])=>`<div class="bodyProfileCell"><span>${esc(label)}</span><b>${v==null?"--":esc(text)}</b><small>${label.includes("/")||label==="FFMI"?"形態の経時比較用":"最新記録"}</small></div>`).join("")}</div><div class="notice" style="margin-top:8px">BODY PROFILEは形態・経時変化の記録です。数値だけから「遺伝的に向く/向かない」は判定しません。</div>`;
+  const rows=m().bodyMeasurements||[];
+  if(list)list.innerHTML=[...rows].reverse().slice(0,8).map((x,ri)=>{const i=rows.length-1-ri;const lm=responseLeanMassForMeasurement(x);const bits=[];if(x.bodyFat)bits.push(`体脂肪 ${Number(x.bodyFat).toFixed(1)}%`);if(lm)bits.push(`除脂肪量 ${lm.toFixed(1)}kg`);if(x.chestCirc)bits.push(`胸囲 ${x.chestCirc}cm`);if(x.shoulderCirc)bits.push(`肩周径 ${x.shoulderCirc}cm`);if(x.upperArmCirc)bits.push(`上腕 ${x.upperArmCirc}cm`);if(x.thighCirc)bits.push(`大腿 ${x.thighCirc}cm`);return `<div class="item"><div class="row"><div><strong>${esc(x.date)}｜BODY PROFILE</strong><br><small>${esc(bits.join("｜")||"形態計測")}</small></div><button class="danger" onclick="remove('bodyMeasurements',${i})">削除</button></div></div>`}).join("")||'<span class="muted">身体計測はまだありません。</span>';
+}
+function responseTrainingRows(part,start,end){
+  return (m()?.training||[]).filter(x=>x?.date&&x.date>=start&&x.date<=end&&(part==="全身"||trainingMetaForRow(x).part===part));
+}
+function responseRirModifier(rir){
+  const r=Number(rir);if(!Number.isFinite(r))return .8;
+  if(r<=0)return .90;if(r<=3)return 1;if(r<=4)return .90;if(r<=5)return .75;if(r<=6)return .60;return .45;
+}
+function responsePainAtDate(part,date){
+  let pain=0;
+  const rec=(m()?.recovery||[]).filter(x=>x.date===date).at(-1);if(rec)pain=Math.max(pain,Number(rec.pain||0));
+  (m()?.selfCare||[]).filter(x=>x.date===date).forEach(c=>{
+    const rule=CARE_SMART_RULES?.[c.area];const affects=part==="全身"||(rule?.conflicts||[]).includes(part);
+    if(affects)pain=Math.max(pain,Number(c.painAfter??c.painBefore??0));
+  });
+  return pain;
+}
+function responsePainModifier(part,date){const p=responsePainAtDate(part,date);if(p>=7)return .40;if(p>=5)return .60;if(p>=3)return .80;if(p>=1)return .92;return 1}
+function responseEffectiveSetsForRow(x,part){return Number(x.sets||0)*responseRirModifier(x.rir)*responsePainModifier(part,x.date)}
+function responsePerformance(rows){
+  const groups={};rows.forEach(x=>{(groups[x.exercise] ||= []).push(x)});
+  const details=[];
+  Object.entries(groups).forEach(([exercise,arr])=>{
+    arr.sort((a,b)=>String(a.date).localeCompare(String(b.date)));
+    if(arr.length<2)return;
+    const first=arr.slice(0,Math.min(2,arr.length));const last=arr.slice(-Math.min(2,arr.length));
+    const f=avg(first.map(e1rm)),l=avg(last.map(e1rm));if(!f)return;
+    const gain=responseClamp(((l-f)/f)*100,-30,30);const weight=Math.sqrt(Math.max(1,arr.reduce((s,x)=>s+Number(x.sets||0),0)));
+    details.push({exercise,gain,weight,count:arr.length,first:f,last:l});
+  });
+  if(!details.length)return {pct:null,comparable:0,details:[]};
+  const denom=details.reduce((s,x)=>s+x.weight,0)||1;return {pct:details.reduce((s,x)=>s+x.gain*x.weight,0)/denom,comparable:details.length,details};
+}
+function responseRecoveryWindow(start,end){
+  const rows=(m()?.recovery||[]).filter(x=>x?.date&&x.date>=start&&x.date<=end);if(!rows.length)return {avg:null,count:0,sleep:null,fatigue:null,stress:null,pain:null};
+  return {avg:avg(rows.map(recScore)),count:rows.length,sleep:avg(rows.map(x=>Number(x.sleep||0))),fatigue:avg(rows.map(x=>Number(x.fatigue||0))),stress:avg(rows.map(x=>Number(x.stress||0))),pain:avg(rows.map(x=>Number(x.pain||0)))};
+}
+function responseMorphology(part,start,end){
+  const spec=RESPONSE_MORPH_MAP[part];if(!spec)return {label:"部位計測なし",delta:null,unit:"",current:null,previous:null};
+  const cur=responseMeasurementValueAt(spec.field,end);const prev=responseMeasurementValueAt(spec.field,responseShiftIso(start,-1));
+  if(!cur||!prev)return {label:spec.label,delta:null,unit:spec.unit,current:cur?.value||null,previous:prev?.value||null};
+  return {label:spec.label,delta:Number(cur.value)-Number(prev.value),unit:spec.unit,current:Number(cur.value),previous:Number(prev.value)};
+}
+function responseWeightChange(start,end){
+  const cur=responseLatestOnOrBefore(m()?.weights||[],end);let prev=responseLatestOnOrBefore(m()?.weights||[],responseShiftIso(start,-1));
+  if(!prev){const inw=(m()?.weights||[]).filter(x=>x.date>=start&&x.date<=end).slice().sort((a,b)=>a.date.localeCompare(b.date));prev=inw[0]||null}
+  return cur&&prev?Number(cur.weight||0)-Number(prev.weight||0):null;
+}
+function responseWindowMetrics(part,start,end){
+  const rows=responseTrainingRows(part,start,end),days=responseDaysBetween(start,end),perf=responsePerformance(rows),rec=responseRecoveryWindow(start,end),morph=responseMorphology(part,start,end);
+  const eff=rows.reduce((s,x)=>s+responseEffectiveSetsForRow(x,part),0),sets=rows.reduce((s,x)=>s+Number(x.sets||0),0),sessions=new Set(rows.map(x=>x.date)).size;
+  return {part,start,end,rows,sets,effectiveSets:eff,effectiveSetsPerWeek:eff/(days/7),setsPerWeek:sets/(days/7),sessions,frequencyPerWeek:sessions/(days/7),avgRir:rows.length?avg(rows.map(x=>Number(x.rir||0))):null,performancePct:perf.pct,comparableExercises:perf.comparable,exerciseDetails:perf.details,recovery:rec,morphology:morph,weightDelta:responseWeightChange(start,end)};
+}
+function responseLatestRelevantCare(part){
+  const rows=(m()?.selfCare||[]).filter(x=>x?.date&&dateAgeDays(x.date)<=14).filter(c=>{const rule=CARE_SMART_RULES?.[c.area];return part==="全身"||(rule?.conflicts||[]).includes(part)}).slice().sort((a,b)=>String(a.savedAt||a.date).localeCompare(String(b.savedAt||b.date)));
+  if(!rows.length)return null;const c=rows.at(-1);return {...c,pain:Number(c.painAfter??c.painBefore??0)};
+}
+function responseMovementConstraint(part){
+  let score=0,evidence=[],data=0;
+  const upper=["shoulder_flex","shoulder_ext","shoulder_abd","shoulder_er","shoulder_ir","shoulder_hflex","shoulder_hext","thoracic_rot","thoracic_ext"];
+  const lower=["hip_flex","hip_ext","hip_abd","hip_er","hip_ir","knee_flex","knee_ext","ankle_df","ankle_pf"];
+  let keys=[];
+  if(["胸","肩","背中","腕"].includes(part))keys=upper;
+  else if(["前脚","後脚・臀部"].includes(part))keys=lower;
+  else if(part==="姿勢"||part==="全身")keys=[...upper,...lower,"cervical_flex","cervical_ext","cervical_rot"];
+  const recentArom=(m()?.aromAssessments||[]).filter(x=>keys.includes(x.key)&&x.date&&dateAgeDays(x.date)<=90);
+  if(recentArom.length){const ev=jbjEvalMobility(keys);score=Math.max(score,responseClamp(ev.score));evidence.push(...(ev.evidence||[]).slice(0,3));data+=recentArom.length}
+  const moveTypes=part==="前脚"?["sls_front","lunge_side"]:part==="後脚・臀部"?["hinge_side","lunge_side"]:["胸","肩","背中","腕","姿勢","全身"].includes(part)?["overhead_front"]:[];
+  moveTypes.forEach(type=>{const x=latestMovement(type);if(x&&x.date&&dateAgeDays(x.date)<=60){const sc=responseClamp(Number(x.jbjScore||0)+20);score=Math.max(score,sc);if(x.summary)evidence.push(x.summary);data++}});
+  if(["胸","肩","背中","腕","姿勢","全身"].includes(part)){
+    const shr=jbjLatestShr();if(shr&&shr.date&&dateAgeDays(shr.date)<=60){data++;const p=Number(shr.pain||0);if(p>=4){score=Math.max(score,85);evidence.push(`SHR測定時の肩痛 ${p}/10`)}else evidence.push(`SHR記録あり｜比率単独では異常判定しない`)}
+  }
+  if(["前脚","後脚・臀部","全身"].includes(part)){
+    const sq=intLatestByDate(m()?.romAssessments||[]);if(sq&&sq.date&&dateAgeDays(sq.date)<=60){data++;if(sq.depthKey==="above"||String(sq.depthLabel||"").includes("浅")){score=Math.max(score,45);evidence.push(`スクワットROM：${sq.depthLabel||"深度確認"}`)}}
+  }
+  return {score:responseClamp(score),evidence:[...new Set(evidence)].slice(0,4),data};
+}
+function responseCareConstraint(part){
+  const c=responseLatestRelevantCare(part);if(!c)return {score:5,pain:null,evidence:"直近14日の関連CARE強制限なし",data:0};
+  const p=Number(c.pain||0);let score=p>=7?100:p>=5?90:p>=3?65:p>=1?35:8;
+  if(c.result==="medical"||c.result==="stop")score=100;
+  return {score,pain:p,evidence:`${CARE_AREA_LABELS?.[c.area]||c.area} ${p}/10｜${c.result||"CARE"}`,data:1};
+}
+function responseWeeklyObservations(part,weeks=8){
+  const out=[];
+  for(let offset=weeks-1;offset>=0;offset--){
+    const end=responseShiftIso(today(),-offset*7),start=responseShiftIso(end,-6),rows=responseTrainingRows(part,start,end);
+    const eff=rows.reduce((s,x)=>s+responseEffectiveSetsForRow(x,part),0),rec=responseRecoveryWindow(start,end);
+    const byEx={};rows.forEach(x=>(byEx[x.exercise] ||= []).push(x));const gains=[];
+    Object.entries(byEx).forEach(([ex,arr])=>{const before=(m()?.training||[]).filter(x=>x.exercise===ex&&x.date<start&&x.date>=responseShiftIso(start,-42)).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1);if(!before)return;const best=Math.max(...arr.map(e1rm));const base=e1rm(before);if(base)gains.push(responseClamp((best-base)/base*100,-25,25))});
+    out.push({start,end,effectiveSets:eff,performance:gains.length?avg(gains):null,recovery:rec.avg,sessionDays:new Set(rows.map(x=>x.date)).size});
+  }
+  return out;
+}
+function responseSweetSpot(part){
+  const obs=responseWeeklyObservations(part,8),good=obs.filter(x=>x.effectiveSets>0&&x.performance!=null&&x.performance>.5&&x.recovery!=null&&x.recovery>=65);
+  if(good.length>=2){const vals=good.map(x=>x.effectiveSets).sort((a,b)=>a-b);return {ready:true,min:vals[0],max:vals.at(-1),goodCount:good.length,obs,label:`観測良好レンジ ${vals[0].toFixed(1)}〜${vals.at(-1).toFixed(1)} Effective Sets/週`}}
+  const best=obs.filter(x=>x.effectiveSets>0&&x.performance!=null).sort((a,b)=>Number(b.performance)-Number(a.performance))[0];
+  return {ready:false,min:null,max:null,goodCount:good.length,obs,label:best?`最良観測週 ${best.effectiveSets.toFixed(1)} Effective Sets｜e1RM ${fmtPct(best.performance)}`:"週次データ不足"};
+}
+function responseNutritionState(part,current){
+  const cut=responseShiftIso(today(),-13),meals=(m()?.meals||[]).filter(x=>x.date>=cut&&x.date<=today()),days=[...new Set(meals.map(x=>x.date))],target=Number(m()?.profile?.targetKcal||0);
+  const daily=days.map(d=>meals.filter(x=>x.date===d).reduce((s,x)=>s+Number(x.kcal||0),0));const avgK=daily.length?avg(daily):null;
+  const ws=(m()?.weights||[]).filter(x=>x.date>=cut&&x.date<=today()).slice().sort((a,b)=>a.date.localeCompare(b.date));let trend=null;if(ws.length>=2)trend=Number(ws.at(-1).weight)-Number(ws[0].weight);
+  const goal=m()?.profile?.goal||"";let score=20,evidence=[];
+  if(days.length<4){score=25;evidence.push(`食事記録 ${days.length}/14日｜栄養原因は判定保留`)}
+  else if(target>0&&avgK!=null){const rate=avgK/target;evidence.push(`記録日の平均 ${Math.round(avgK)} / ${target} kcal`);if(rate<.75)score=80;else if(rate<.9)score=60;else score=15}
+  if(trend!=null){evidence.push(`14日内体重変化 ${trend>=0?"+":""}${trend.toFixed(1)}kg`);if(["筋肥大","増量"].includes(goal)&&trend<-.2)score=Math.max(score,65)}
+  return {score,evidence:evidence.join("｜")||"栄養記録から強い不足根拠なし",days:days.length,avgK,target,trend};
+}
+function responseProgrammingScore(part,current){
+  if(current.rows.length<3)return {score:35,evidence:"トレ記録が少なくプログラム適否は暫定"};
+  const byEx={};current.rows.forEach(x=>(byEx[x.exercise] ||= []).push(x));const exs=Object.values(byEx),singletons=exs.filter(a=>a.length===1).length,all=exs.length||1;
+  const pof={};current.rows.forEach(x=>{const meta=trainingMetaForRow(x);pof[meta.pof]=(pof[meta.pof]||0)+Number(x.sets||0)});const total=Object.values(pof).reduce((a,b)=>a+b,0)||1,maxPof=Math.max(0,...Object.values(pof))/total;
+  let score=20,e=[];if(singletons/all>.6&&all>=3){score=Math.max(score,60);e.push("種目入替が多く同一種目比較が少ない")};if(maxPof>.8&&total>=8){score=Math.max(score,45);e.push("刺激位置が一方向に集中")};if(current.frequencyPerWeek<.6){score=Math.max(score,55);e.push(`頻度 ${current.frequencyPerWeek.toFixed(1)}回/週`)};if(!e.length)e.push("大きな構成上の偏りは現データでは少ない");return {score,evidence:e.join("｜")};
+}
+function responseConfidence(part,current,sweet,move,care){
+  const rowComp=Math.min(1,current.rows.length/8),exComp=Math.min(1,current.comparableExercises/3),weekComp=Math.min(1,sweet.obs.filter(x=>x.effectiveSets>0).length/4),recComp=Math.min(1,current.recovery.count/7),morphComp=current.morphology.delta!=null?1:.25,recency=current.rows.length?Math.max(.2,1-dateAgeDays(current.rows.at(-1).date)/28):0;
+  let score=(rowComp*.30+exComp*.20+weekComp*.15+recComp*.15+morphComp*.10+recency*.10)*100;
+  const unique=new Set(current.rows.map(x=>x.exercise)).size||1;const churn=current.rows.filter(x=>current.rows.filter(y=>y.exercise===x.exercise).length===1).length/Math.max(1,current.rows.length);if(churn>.6&&unique>=3)score*=.88;
+  score=Math.round(responseClamp(score));const label=score>=75?"HIGH":score>=45?"MODERATE":"LOW";const cls=score>=75?"ok":score>=45?"warn":"bad";
+  const reasons=[`トレ ${current.rows.length}記録`,`比較可能種目 ${current.comparableExercises}`,`回復 ${current.recovery.count}日`,`週次 ${sweet.obs.filter(x=>x.effectiveSets>0).length}週`,current.morphology.delta!=null?`${current.morphology.label}あり`:`形態変化データ不足`];
+  if(move.data)reasons.push(`ROM/動作 ${move.data}件`);if(care.data)reasons.push("CARE関連あり");return {score,label,cls,reasons};
+}
+function responseClassify(current,care,move){
+  if(current.rows.length<3||current.comparableExercises<1)return {label:"DATA LOW",jp:"データ蓄積中",cls:"wait",detail:"同じ種目を複数回追うと、本人の反応傾向を更新できます。"};
+  const p=Number(current.performancePct||0),r=current.recovery.avg;
+  if(p>=2&&(r==null||r>=65)&&care.score<65&&move.score<70)return {label:"GOOD",jp:"反応良好",cls:"good",detail:"現在の負荷帯でパフォーマンスが伸び、強い局所制限も少ない。"};
+  if(p>.5)return {label:"RESPONDING",jp:"伸長傾向",cls:"good",detail:"同一種目のe1RMはプラス方向。追加負荷は回復・局所制限と合わせて判断。"};
+  if(p<=-1)return {label:"DECLINING",jp:"低下傾向",cls:"bad",detail:"同一種目の成績が低下。刺激不足と決めつけずボトルネックを確認。"};
+  return {label:"STABLE",jp:"横ばい",cls:"warn",detail:"大きな上昇・低下はまだ確認できません。次の1変数テスト候補を確認。"};
+}
+function responseBottlenecks(part,current,sweet,care,move){
+  const st={key:"STIMULUS",name:"刺激量",score:30,evidence:"本人の良好レンジを蓄積中"};
+  if(sweet.ready){if(current.effectiveSetsPerWeek<sweet.min*.8){st.score=80;st.evidence=`現在 ${current.effectiveSetsPerWeek.toFixed(1)} < 観測良好 ${sweet.min.toFixed(1)}〜${sweet.max.toFixed(1)}`}
+    else if(current.effectiveSetsPerWeek>sweet.max*1.2&&Number(current.performancePct||0)<=0){st.score=12;st.evidence="有効SET不足より、過量/他要因を先に確認"}
+    else {st.score=20;st.evidence="本人の観測良好レンジ付近"}}
+  else if(current.frequencyPerWeek<.6||current.rows.length<3){st.score=55;st.evidence="反応判定に必要な刺激記録が少ない"}
+  const prog={key:"PROGRESSION",name:"進歩",score:current.comparableExercises===0?40:Number(current.performancePct||0)<-1?80:Number(current.performancePct||0)<.5?60:Number(current.performancePct||0)<2?35:10,evidence:current.comparableExercises?`同一種目 e1RM ${fmtPct(current.performancePct)}｜比較 ${current.comparableExercises}種目`:"同一種目の再測定不足"};
+  const mv={key:"MOVEMENT",name:"ROM / 動作",score:move.score,evidence:move.evidence.join("｜")||"直近の関連ROM/動作データで強い制限なし"};
+  const cr={key:"CARE",name:"CARE / 局所",score:care.score,evidence:care.evidence};
+  const recAvg=current.recovery.avg;const rc={key:"RECOVERY",name:"回復",score:recAvg==null?35:recAvg<50?90:recAvg<65?75:recAvg<75?50:15,evidence:recAvg==null?"回復データ不足":`28日平均 ${Math.round(recAvg)}点｜睡眠 ${responseFmt(current.recovery.sleep,1,"h")}｜疲労 ${responseFmt(current.recovery.fatigue,1,"")}`};
+  const nu0=responseNutritionState(part,current),nu={key:"NUTRITION",name:"栄養",score:nu0.score,evidence:nu0.evidence};
+  const pg0=responseProgrammingScore(part,current),pg={key:"PROGRAMMING",name:"プログラム",score:pg0.score,evidence:pg0.evidence};
+  if(Number(current.performancePct||0)<=.5&&st.score<45&&rc.score<45&&cr.score<45&&mv.score<45)pg.score=Math.max(pg.score,65);
+  return [st,prog,mv,cr,rc,nu,pg].sort((a,b)=>b.score-a.score);
+}
+function responseNextExperiment(part,analysis){
+  const top=analysis.bottlenecks[0]||{key:"PROGRESSION",name:"進歩",score:0};let hypothesis="",intervention="",duration="3週間",success="e1RM / REPの改善、痛み悪化なし、回復許容内";
+  if(top.key==="MOVEMENT"){hypothesis=`${part}の停滞/効率低下にはROM・動作条件が関与している可能性`;intervention="総ボリュームは増やさず、関連ROM/動作課題を優先。痛みの出ない種目・ROMで有効刺激を維持"}
+  else if(top.key==="CARE"){hypothesis=`${part}の有効刺激量を局所症状が制限している可能性`;intervention="痛み誘発種目を調整し、SET追加より症状を増やさない高品質SETを維持";duration="2週間"}
+  else if(top.key==="RECOVERY"){hypothesis=`現在の回復能力に対してトレーニング/活動負荷が高い可能性`;intervention="該当部位の有効SETを10〜20%減らし、睡眠・活動量を固定してパフォーマンス再測定";duration="2週間"}
+  else if(top.key==="STIMULUS"){hypothesis=`現在の${part}刺激量が本人の反応に対して不足している可能性`;intervention="他条件を変えず、+1〜2 Effective Sets/週だけ追加"}
+  else if(top.key==="PROGRESSION"){hypothesis=`SET追加より、同一種目での進歩刺激が不足している可能性`;intervention="SET数は維持し、同RIRでREP→重量の順に更新を狙う"}
+  else if(top.key==="NUTRITION"){hypothesis="トレ反応を評価する前提となるエネルギー/栄養条件が不足している可能性";intervention="設定kcal/Pを優先して記録し、体重推移を同時に固定観察";duration="2〜3週間"}
+  else {hypothesis=`${part}の種目構成・頻度が現在の反応に合っていない可能性`;intervention="頻度または種目構成のどちらか1変数だけ変更し、他条件を固定"}
+  return {hypothesis,intervention,duration,success,top};
+}
+function responseDecisionFor(part,analysis){
+  const c=analysis.care,m=analysis.move,r=analysis.current.recovery.avg,top=analysis.bottlenecks[0];
+  if(c.pain!=null&&c.pain>=5)return {level:"bad",title:"HARD GATE｜ボリューム追加しない",text:`${c.evidence}。${part}は高負荷・痛み誘発動作の追加より、局所状態の再評価を優先。`};
+  if(m.score>=80)return {level:"warn",title:"MOVEMENT GATE｜条件改善を先行",text:`関連ROM/動作スコアが高い。${part}はSETを増やす前に、可動域・動作条件と痛みの有無を再確認。`};
+  if(r!=null&&r<60)return {level:"warn",title:"RECOVERY GATE｜回復コストを下げる",text:`28日回復平均 ${Math.round(r)}点。SET追加より、総負荷・活動量・睡眠を整えて再測定。`};
+  if(analysis.state.cls==="good"&&top?.score<60)return {level:"good",title:"MAINTAIN｜現在条件を維持",text:`現在の${part}は反応が出ている。複数変数を同時に変えず、現状維持または最小幅の進歩を優先。`};
+  return {level:"warn",title:"TEST ONE VARIABLE｜1変数だけ変える",text:`最有力候補は ${top?.name||"進歩"}。同時に複数要因を変えず、N=1テストで原因を切り分ける。`};
+}
+function responseAnalysis(part){
+  const curStart=responseShiftIso(today(),-27),prevStart=responseShiftIso(today(),-55),prevEnd=responseShiftIso(today(),-28);const current=responseWindowMetrics(part,curStart,today()),previous=responseWindowMetrics(part,prevStart,prevEnd),care=responseCareConstraint(part),move=responseMovementConstraint(part),sweet=responseSweetSpot(part);const state=responseClassify(current,care,move),bottlenecks=responseBottlenecks(part,current,sweet,care,move),confidence=responseConfidence(part,current,sweet,move,care);const analysis={part,current,previous,care,move,sweet,state,bottlenecks,confidence};analysis.next=responseNextExperiment(part,analysis);analysis.decision=responseDecisionFor(part,analysis);return analysis;
+}
+function responseStatusBadge(state){return `<span class="badge ${state.cls==="good"?"ok":state.cls==="bad"?"bad":state.cls==="warn"?"warn":""}">${esc(state.label)}</span>`}
+function responseSelectPart(part){const sel=document.getElementById("responsePartSelect");if(sel)sel.value=part;renderResponseEngine()}
+function openResponseTab(){const b=document.querySelector('.tab[data-tab="response"]');if(b)b.click()}
+function renderResponseMap(selected){
+  const box=document.getElementById("responseMap");if(!box)return;box.innerHTML=RESPONSE_PARTS.map(part=>{const a=responseAnalysis(part),p=a.current.performancePct;return `<div class="responsePartCard ${part===selected?"active":""}" onclick='responseSelectPart(${JSON.stringify(part)})'><div class="row"><div class="responsePartName">${esc(part)}</div>${responseStatusBadge(a.state)}</div><div class="responsePartValue">${a.current.effectiveSetsPerWeek.toFixed(1)} <small style="font-size:8px;color:#999">Eff.Set/週</small></div><div class="responsePartMeta">e1RM ${fmtPct(p)}｜回復 ${a.current.recovery.avg==null?"--":Math.round(a.current.recovery.avg)+"点"}<br>TOP：${esc(a.bottlenecks[0]?.name||"データ蓄積") }｜CONF ${a.confidence.score}%</div></div>`}).join("");
+}
+function renderResponseState(a){
+  const box=document.getElementById("responseCurrentState");if(!box)return;const c=a.current,m=a.current.morphology;
+  box.innerHTML=`<div class="responseState ${a.state.cls}"><div class="responseStateTop"><div><div class="responseStateTitle">${esc(a.part)}｜${esc(a.state.jp)}</div><small>${esc(a.state.detail)}</small></div>${responseStatusBadge(a.state)}</div><div class="responseKpis"><div class="responseKpi"><span>Effective Sets /週</span><b>${c.effectiveSetsPerWeek.toFixed(1)}</b><small>RIR・同日痛みで補正した内部推定</small></div><div class="responseKpi"><span>e1RM RESPONSE</span><b>${fmtPct(c.performancePct)}</b><small>同一種目 ${c.comparableExercises}種目</small></div><div class="responseKpi"><span>RECOVERY 28D</span><b>${c.recovery.avg==null?"--":Math.round(c.recovery.avg)+"点"}</b><small>${c.recovery.count}日記録</small></div><div class="responseKpi"><span>MORPHOLOGY</span><b>${m.delta==null?"--":`${m.delta>=0?"+":""}${m.delta.toFixed(1)}${m.unit}`}</b><small>${esc(m.label)}</small></div></div></div>`;
+}
+function responseCompareHtml(title,x){return `<div class="responseCompareBox"><h3>${esc(title)}</h3><div class="responseCompareLine"><span>実SET /週</span><b>${x.setsPerWeek.toFixed(1)}</b></div><div class="responseCompareLine"><span>Effective Sets /週</span><b>${x.effectiveSetsPerWeek.toFixed(1)}</b></div><div class="responseCompareLine"><span>頻度</span><b>${x.frequencyPerWeek.toFixed(1)}回/週</b></div><div class="responseCompareLine"><span>e1RM反応</span><b>${fmtPct(x.performancePct)}</b></div><div class="responseCompareLine"><span>回復</span><b>${x.recovery.avg==null?"--":Math.round(x.recovery.avg)+"点"}</b></div><div class="responseCompareLine"><span>体重変化</span><b>${x.weightDelta==null?"--":`${x.weightDelta>=0?"+":""}${x.weightDelta.toFixed(1)}kg`}</b></div></div>`}
+function renderResponseCompare(a){const box=document.getElementById("responseCompare");if(box)box.innerHTML=`<div class="responseCompare">${responseCompareHtml("CURRENT｜直近28日",a.current)}${responseCompareHtml("HISTORICAL｜その前28日",a.previous)}</div>`}
+function renderResponseVolume(a){
+  const box=document.getElementById("responseVolume");if(!box)return;
+  const obs=a.sweet.obs.filter(x=>x.effectiveSets>0);
+  const intro=a.sweet.ready?`良好週 ${a.sweet.goodCount}件から、本人の“観測された”反応レンジを表示。固定の最適SET数ではありません。`:`レンジ確定には、同一条件の週を追加で蓄積します。`;
+  let rowsHtml='<div class="muted" style="margin-top:8px">週次観測データなし</div>';
+  if(obs.length){
+    rowsHtml='<div style="margin-top:9px">'+obs.map(x=>`<div class="volumeObs"><small>${esc(x.start.slice(5))}〜${esc(x.end.slice(5))}</small><span><b>${x.effectiveSets.toFixed(1)} Eff.Set</b><br><small>${x.sessionDays}日</small></span><span>${x.performance==null?"--":fmtPct(x.performance)}</span><span class="recoveryCol">${x.recovery==null?"--":Math.round(x.recovery)+"点"}</span></div>`).join("")+'</div>';
+  }
+  box.innerHTML=`<div class="responseDecision"><b>${esc(a.sweet.label)}</b><br>${intro}</div>${rowsHtml}`;
+}
+function renderResponseBottlenecks(a){const box=document.getElementById("responseBottlenecks");if(box)box.innerHTML=a.bottlenecks.map((x,i)=>`<div class="bottleneckRow"><div class="bottleneckNo">${i+1}</div><div><div class="bottleneckTitle">${esc(x.name)} <span class="muted">${esc(x.key)}</span></div><div class="bottleneckEvidence">${esc(x.evidence||"")}</div></div><div class="bottleneckScore">${Math.round(x.score)}</div></div>`).join("")}
+function renderResponseConfidence(a){const box=document.getElementById("responseConfidence");if(!box)return;box.innerHTML=`<div class="responseDecision"><b>${a.confidence.score}%｜${esc(a.confidence.label)}</b><div class="confidenceBar"><i style="width:${a.confidence.score}%"></i></div><div style="margin-top:8px;color:#aaa">${esc(a.confidence.reasons.join("｜"))}</div></div>`}
+function responseExperimentSnapshot(a){return {date:today(),effectiveSetsPerWeek:a.current.effectiveSetsPerWeek,performancePct:a.current.performancePct,recoveryAvg:a.current.recovery.avg,carePain:a.care.pain,movementScore:a.move.score,morphDelta:a.current.morphology.delta,weightDelta:a.current.weightDelta,confidence:a.confidence.score}}
+function startResponseExperiment(){
+  if(!m())return;const part=document.getElementById("responsePartSelect")?.value||"胸",a=responseAnalysis(part),active=(m().responseExperiments||[]).find(x=>x.part===part&&x.status==="active");if(active)return alert(`${part}には進行中のN=1テストがあります。先に結果判定してください。`);
+  const e={id:`EXP-${Date.now()}`,part,status:"active",startDate:today(),hypothesis:a.next.hypothesis,intervention:a.next.intervention,duration:a.next.duration,success:a.next.success,primaryBottleneck:a.next.top?.key||"",baseline:responseExperimentSnapshot(a),createdAt:new Date().toISOString(),completedAt:null,outcome:null,memo:""};m().responseExperiments=m().responseExperiments||[];m().responseExperiments.push(e);persist();renderResponseEngine(true);alert(`${part}｜N=1テストを開始しました`)
+}
+function completeResponseExperiment(id){
+  const rows=m()?.responseExperiments||[],e=rows.find(x=>x.id===id);if(!e||e.status!=="active")return;const a=responseAnalysis(e.part),now=responseExperimentSnapshot(a),base=e.baseline||{};const elapsed=Math.max(0,dateAgeDays(e.startDate));let score=0,notes=[];
+  if(base.performancePct!=null&&now.performancePct!=null){const d=now.performancePct-base.performancePct;notes.push(`e1RM反応 ${d>=0?"+":""}${d.toFixed(1)}pt`);score+=d>=1?2:d>=0?1:d<=-1?-2:0}
+  if(base.carePain!=null&&now.carePain!=null){const d=now.carePain-base.carePain;notes.push(`CARE痛み ${d>=0?"+":""}${d.toFixed(0)}`);score+=d<=0?1:d>=2?-2:-1}
+  if(base.recoveryAvg!=null&&now.recoveryAvg!=null){const d=now.recoveryAvg-base.recoveryAvg;notes.push(`回復 ${d>=0?"+":""}${d.toFixed(0)}pt`);score+=d>=-5?1:d<=-10?-1:0}
+  let outcome=elapsed<10?"判定保留｜期間が短い":score>=3?"仮説支持傾向":score<=-2?"仮説を見直す":"混合 / 追加観察";const memo=prompt("結果メモ（任意）","")||"";Object.assign(e,{status:"done",completedAt:new Date().toISOString(),outcome,resultSnapshot:now,resultNotes:notes,memo});persist();renderResponseEngine(true)
+}
+function renderResponseDecision(a){
+  const d=document.getElementById("responseDecision"),sug=document.getElementById("responseExperimentSuggestion");if(d)d.innerHTML=`<div class="responseState ${a.decision.level}"><div class="responseStateTitle">${esc(a.decision.title)}</div><small>${esc(a.decision.text)}</small></div>`;
+  if(sug)sug.innerHTML=`<div class="responseExperiment active"><div class="responseExperimentTitle">NEXT EXPERIMENT｜${esc(a.part)}</div><div class="responseExperimentMeta"><b>仮説</b>：${esc(a.next.hypothesis)}<br><b>介入</b>：${esc(a.next.intervention)}<br><b>期間</b>：${esc(a.next.duration)}<br><b>成功条件</b>：${esc(a.next.success)}</div><button class="primary" style="width:100%;margin-top:9px" onclick="startResponseExperiment()">この仮説でN=1テスト開始</button></div>`;
+}
+function renderResponseExperiments(){
+  const box=document.getElementById("responseExperiments");if(!box||!m())return;const rows=m().responseExperiments||[];box.innerHTML=[...rows].reverse().map((x,ri)=>{const i=rows.length-1-ri;const active=x.status==="active";return `<div class="responseExperiment ${active?"active":"done"}"><div class="row"><div><div class="responseExperimentTitle">${esc(x.id)}｜${esc(x.part)}｜${active?"進行中":esc(x.outcome||"完了")}</div><div class="responseExperimentMeta">開始 ${esc(x.startDate||"")}｜主要仮説 ${esc(x.primaryBottleneck||"")}<br>${esc(x.hypothesis||"")}<br>介入：${esc(x.intervention||"")}</div></div><span class="badge ${active?"warn":"ok"}">${active?"ACTIVE":"DONE"}</span></div>${!active?`<div class="responseExperimentResult">${esc((x.resultNotes||[]).join("｜")||x.outcome||"")}${x.memo?`<br>メモ：${esc(x.memo)}`:""}</div>`:""}<div style="display:grid;grid-template-columns:1fr auto;gap:7px;margin-top:8px">${active?`<button class="primary" onclick='completeResponseExperiment(${JSON.stringify(x.id)})'>現在データで結果判定</button>`:`<span></span>`}<button class="danger" onclick="remove('responseExperiments',${i})">削除</button></div></div>`}).join("")||'<span class="muted">N=1テスト履歴はまだありません。</span>';
+}
+function renderResponseDashSummary(){const box=document.getElementById("dashResponseSummary");if(!box||!m())return;const part=m().profile?.priorityPart&&m().profile.priorityPart!=="全身"?m().profile.priorityPart:"全身",a=responseAnalysis(part);box.innerHTML=`${responseStatusBadge(a.state)}<span class="badge">${esc(part)}</span><span class="badge">TOP ${esc(a.bottlenecks[0]?.name||"蓄積中")}</span><span class="badge">CONF ${a.confidence.score}%</span>`}
+function renderResponseEngine(force=false){
+  if(!m())return;const sel=document.getElementById("responsePartSelect");let part=sel?.value||"胸";if(!RESPONSE_PARTS.includes(part))part="胸";if(sel)sel.value=part;
+  renderResponseBodyProfile();renderResponseMap(part);const a=responseAnalysis(part);renderResponseState(a);renderResponseCompare(a);renderResponseVolume(a);renderResponseBottlenecks(a);renderResponseConfidence(a);renderResponseDecision(a);renderResponseExperiments();renderResponseDashSummary();
+}
+
 function renderAll(){
   if(!m())return;
   const ciDateEl=document.getElementById("ciDate");if(ciDateEl&&!ciDateEl.value)ciDateEl.value=today();
@@ -5016,7 +5420,7 @@ function renderAll(){
   prTable.innerHTML=exs.length?`<div style="overflow-x:auto"><table class="table"><tr><th>種目</th><th>部位 / POF</th><th>最新</th><th>総重量</th><th>推定1RM</th><th>前回比</th></tr>${exs.map(ex=>{const t=trainingTrend(ex),x=t?.cur;if(!x)return"";const prx=pr(ex);const isPr=Math.abs(e1rm(x)-e1rm(prx))<0.0001;const meta=trainingMetaForRow(x);return `<tr><td>${esc(ex)}</td><td><small>${esc(meta.part)}<br>${esc(meta.pof)}</small></td><td>${x.weight}kg×${x.reps}×${x.sets}</td><td>${Math.round(t.curVol).toLocaleString()}kg</td><td>${t.curE1.toFixed(1)}kg${isPr?' PR':''}</td><td><small>総 ${fmtPct(t.volPct)}<br>1RM ${fmtPct(t.e1Pct)}</small></td></tr>`}).join("")}</table></div>`:'<span class="muted">記録なし</span>';
   recoveryJudge.innerHTML=`<span class="badge ${adv.cls}">${esc(adv.txt)}</span>`;
   recoveryList.innerHTML=[...mm.recovery].reverse().map((x,ri)=>{let i=mm.recovery.length-1-ri,a=recAdvice(x);return `<div class="item"><div class="row"><div><strong>${x.date}｜睡眠 ${x.sleep}h</strong><br><small>疲労${x.fatigue} / ストレス${x.stress} / 痛み${x.pain}</small><br><span class="badge ${a.cls}">${recScore(x)}点</span></div><button class="danger" onclick="remove('recovery',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
-  populateExercisePicker();renderExerciseMasterList();renderTrainingPreview();renderPofSummary();syncTrainingMeta();renderRomHistory();renderAromHistory();renderAromAsymmetry();renderAromReference();renderShrHistory();renderMovementHistory();renderMoveGuide();renderJointByJoint();renderIntegratedAssessment();renderIntegratedHistory();renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();renderCheckin();renderSmartCore();renderActivity();renderCareHistory();drawChart();renderReport();renderPhotos();
+  populateExercisePicker();renderExerciseMasterList();renderTrainingPreview();renderPofSummary();syncTrainingMeta();renderRomHistory();renderAromHistory();renderAromAsymmetry();renderAromReference();renderShrHistory();renderMovementHistory();renderMoveGuide();renderJointByJoint();renderIntegratedAssessment();renderIntegratedHistory();renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();renderCheckin();renderSmartCore();renderResponseEngine();renderActivity();renderCareHistory();drawChart();renderReport();renderPhotos();
 }
 
 function monthLabel(mon){
@@ -5167,7 +5571,7 @@ function normalizeMemberData(data,name="会員"){
   if(!x.profile.name)x.profile.name=name||"会員";
   if(!x.coachPlan||typeof x.coachPlan!=="object")x.coachPlan=base.coachPlan; else x.coachPlan={...base.coachPlan,...x.coachPlan};
   if(!x.smartContext||typeof x.smartContext!=="object")x.smartContext=base.smartContext; else x.smartContext={...base.smartContext,...x.smartContext};
-  ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","photos"].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});
+  ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos"].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});
   return x;
 }
 function backupStamp(){return new Date().toISOString()}
@@ -5307,16 +5711,16 @@ function exportMember(){backupCurrentMember()}
 function exportAll(){backupAll()}
 function download(name,text){let b=new Blob([text],{type:"application/json"}),a=document.createElement("a"),u=URL.createObjectURL(b);a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000)}
 
-document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.getElementById(b.dataset.tab).classList.add("active");if(b.dataset.tab==="profile"){loadProfile();loadCoachPlanEditor();}if(b.dataset.tab==="security")loadSecurityPanel();if(b.dataset.tab==="adminBoard")refreshAdminBoard();if(b.dataset.tab==="smart")loadSmartContext();if(b.dataset.tab==="care")renderCareQuestions();renderAll()});
-["wDate","mDate","tDate","romDate","aromDate","shrDate","moveDate","rDate","pDate","apptDate"].forEach(id=>{const el=document.getElementById(id);if(el)el.value=today()});
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.getElementById(b.dataset.tab).classList.add("active");if(b.dataset.tab==="profile"){loadProfile();loadCoachPlanEditor();}if(b.dataset.tab==="security")loadSecurityPanel();if(b.dataset.tab==="adminBoard")refreshAdminBoard();if(b.dataset.tab==="smart")loadSmartContext();if(b.dataset.tab==="response")renderResponseEngine(true);if(b.dataset.tab==="care")renderCareQuestions();renderAll()});
+["wDate","mDate","tDate","romDate","aromDate","shrDate","moveDate","rDate","pDate","apptDate","bmDate"].forEach(id=>{const el=document.getElementById(id);if(el)el.value=today()});
 if(document.getElementById("apptTime"))document.getElementById("apptTime").value="10:00";
 reportMonth.value=monthNow();
 renderCareQuestions();
 
-// V25 SMART CORE PWA: network-only service worker to avoid stale app versions.
+// V26 ADAPTIVE CORE PWA: network-only service worker to avoid stale app versions.
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=25-exercise-master").catch(err => console.warn("SW register failed", err));
+    navigator.serviceWorker.register("./sw.js?v=26-adaptive-response").catch(err => console.warn("SW register failed", err));
   });
 }
 (function(){
