@@ -387,6 +387,20 @@ button.primary{box-shadow:0 5px 18px rgba(184,140,50,.10)}
 
 /* V26.5.0 REST TIMER */
 .restTimerCard{margin-top:9px;background:linear-gradient(180deg,#171510,#0e0e11);border:1px solid #5b4922;border-radius:14px;padding:12px}.restTimerHead{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.restTimerTitle{font-size:12px;font-weight:900;color:var(--gold2);letter-spacing:.06em}.restTimerDisplay{font-variant-numeric:tabular-nums;font-size:48px;line-height:1;font-weight:900;color:var(--gold2);letter-spacing:.02em;text-align:center;margin:13px 0 5px}.restTimerElapsed{text-align:center;color:#a7a7aa;font-size:10px;font-variant-numeric:tabular-nums}.restTimerPreset{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:9px}.restTimerPreset button{padding:9px 4px;font-size:10px}.restTimerControls{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:7px;margin-top:9px}.restTimerControls button{min-height:45px}.restTimerStatus{margin-top:9px;font-size:10px;line-height:1.55}.restTimerOptions{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}.restTimerOptions label{display:flex;align-items:center;gap:6px;font-size:9px;color:#aaa}.restTimerOptions input[type=checkbox]{width:auto}.restTimerNext{font-weight:800;color:var(--gold2)}@media(max-width:620px){.restTimerDisplay{font-size:42px}.restTimerControls{grid-template-columns:1fr 1fr}.restTimerControls .restTimerWide{grid-column:1/-1}.restTimerPreset{grid-template-columns:repeat(4,1fr)}}
+
+.trainingQuickCard,.trainingMethodCard{margin-top:8px;border:1px solid #333;border-radius:12px;padding:10px;background:#111216}
+.trainingQuickHead,.trainingMethodHead{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:8px}
+.trainingQuickTitle,.trainingMethodTitle{font-weight:900;letter-spacing:.04em;color:var(--gold2)}
+.trainingQuickActions{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.trainingRoutineGrid{display:grid;grid-template-columns:1.2fr 1fr auto;gap:7px;margin-top:8px;align-items:end}
+.trainingMethodGrid{display:grid;grid-template-columns:1.3fr .7fr;gap:8px}
+.trainingQueueList{display:grid;gap:6px;margin-top:8px}
+.trainingQueueItem{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;padding:7px 8px;border:1px solid #2d2d32;border-radius:10px;background:#0c0d10}
+.trainingQueueItem.active{border-color:var(--gold2)}
+.trainingQueueIndex{font-weight:900;color:var(--gold2);min-width:24px}
+.trainingQueueItem button{padding:5px 9px}
+.trainingMethodHint{margin-top:7px;font-size:11px;line-height:1.55}
+@media(max-width:620px){.trainingRoutineGrid{grid-template-columns:1fr 1fr}.trainingRoutineGrid .trainingRoutineWide{grid-column:1/-1}.trainingMethodGrid{grid-template-columns:1fr}.trainingQuickActions{grid-template-columns:1fr 1fr}}
 </style>
 <script>
 window.SUG_CLOUD_CONFIG = {
@@ -404,7 +418,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
   <div class="authBox">
     <img class="authBrandLogo" src="./brand-header.png?v=26-4-2-walk-route" alt="S.u.G OSAKA">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V26.5.2 ADAPTIVE CORE / MEMBERS ONLY</div>
+    <div class="sub">V26.5.3 ADAPTIVE CORE / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -519,7 +533,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
   <div class="head">
     <div class="brandIdentity">
       <img class="brandHeaderLogo" src="./brand-header.png?v=26-4-2-walk-route" alt="S.u.G OSAKA">
-      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.5.2 ADAPTIVE CORE / THERMAL CARE + TAPING</small></div>
+      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.5.3 ADAPTIVE CORE / TRAINING METHODS + ROUTINE + THERMAL CARE</small></div>
     </div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
@@ -969,6 +983,35 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
         </select></div>
       </div>
       <div id="tMetaHint" class="notice" style="margin-top:8px">種目名から対象部位・POFを自動候補化します。必要なら手動で変更できます。</div>
+      <div class="trainingQuickCard">
+        <div class="trainingQuickHead"><div><div class="trainingQuickTitle">QUICK START｜前回・ROUTINE</div><div class="muted">前回値は下書きとして読み込み。保存するまでは履歴に追加されません。</div></div><span class="badge">V26.5.3</span></div>
+        <div class="trainingQuickActions"><button class="secondary" type="button" onclick="loadPreviousExerciseDraft()">前回のこの種目</button><button class="secondary" type="button" onclick="loadPreviousSessionDraft()">前回SESSION</button></div>
+        <div class="trainingRoutineGrid">
+          <div><label>ROUTINE</label><select id="tRoutineSelect"><option value="">ROUTINEなし</option></select></div>
+          <div><label>ROUTINE名</label><input id="tRoutineName" placeholder="例 PUSH A"></div>
+          <button class="secondary trainingRoutineWide" type="button" onclick="loadTrainingRoutine()">読込</button>
+        </div>
+        <div class="trainingQuickActions" style="margin-top:7px"><button class="secondary" type="button" onclick="saveTrainingRoutine()">現在SESSIONを保存</button><button class="danger" type="button" onclick="deleteTrainingRoutine()">ROUTINE削除</button></div>
+        <div id="tSessionQueue" class="trainingQueueList"><span class="muted">SESSIONキューなし</span></div>
+      </div>
+      <div class="trainingMethodCard">
+        <div class="trainingMethodHead"><div><div class="trainingMethodTitle">SET METHOD｜セット法</div><div class="muted">セット法を変えた記録は、同じ条件の前回と比較してNEXT LOADの誤判定を防ぎます。</div></div></div>
+        <div class="trainingMethodGrid">
+          <div><label>SET METHOD</label><select id="tSetMethod" onchange="trainingSetMethodChanged(true)">
+            <option value="straight">STRAIGHT｜ストレート</option>
+            <option value="compound">COMPOUND｜同部位2種連続</option>
+            <option value="tri">TRI SET｜3種連続</option>
+            <option value="giant">GIANT SET｜4種以上連続</option>
+            <option value="drop">DROP SET｜重量を落として継続</option>
+            <option value="superset">SUPERSET｜拮抗筋など2種連続</option>
+            <option value="rest_pause">REST-PAUSE｜短い休憩を挟み継続</option>
+            <option value="pyramid">PYRAMID｜SETごとに重量変化</option>
+            <option value="gvt">GVT｜German Volume Training</option>
+          </select></div>
+          <div><label>GROUP</label><input id="tSetGroup" placeholder="例 A"></div>
+        </div>
+        <div id="tSetMethodHint" class="notice trainingMethodHint">基本のストレートセット。通常の同一種目比較に使用します。</div>
+      </div>
       <div class="grid4" style="margin-top:8px"><div><label>重量</label><input id="tWeight" type="number" step="0.5" oninput="renderTrainingPreview()"></div><div><label>REP</label><input id="tReps" type="number" oninput="renderTrainingPreview()"></div><div><label>SET</label><input id="tSets" type="number" oninput="renderTrainingPreview();renderTrainingSetDetailRows();restTimerRender()"></div><div><label>RIR</label><input id="tRir" type="number" step="0.5" oninput="renderTrainingPreview()"></div></div>
       <div class="notice" style="margin-top:8px">
         <div class="row" style="align-items:center;gap:10px"><div><b>SET詳細 / REST（任意）</b><br><small>セット間休憩によるREP低下を、全身RECOVERYや筋力低下と分けて記録します。</small></div><label style="display:flex;align-items:center;gap:6px;white-space:nowrap"><input id="tSetDetailMode" type="checkbox" onchange="toggleTrainingSetDetails()"> 使用</label></div>
@@ -1526,7 +1569,7 @@ function baseMember(name="新規会員"){
     coachPlan:{weeklyFocus:"",nextAction:"",nextSessionDate:"",targetTrainingDays:0,targetSleep:0,targetSteps:0,completedAt:null,updatedAt:null},
     goalPlan:{goalType:"筋肥大",deadline:"",targetWeight:0,targetBodyFat:0,idealNote:"",idealImagePath:"",energyAnchor:0,priority1:"肩",priority2:"背中",priority3:"胸",trainingDays:4,sessionMinutes:60,generatedAt:null,lastPlan:null},
     smartContext:{appetite:"normal",dayType:"training",updatedAt:null},
-    weights:[],meals:[],training:[],recovery:[],checkins:[],activity:[],selfCare:[],smartPlans:[],romAssessments:[],aromAssessments:[],shrAssessments:[],movementScreens:[],integratedAssessments:[],bodyMeasurements:[],responseExperiments:[],photos:[],medicalReferrals:[],restTargets:{}}
+    weights:[],meals:[],training:[],trainingRoutines:[],recovery:[],checkins:[],activity:[],selfCare:[],smartPlans:[],romAssessments:[],aromAssessments:[],shrAssessments:[],movementScreens:[],integratedAssessments:[],bodyMeasurements:[],responseExperiments:[],photos:[],medicalReferrals:[],restTargets:{}}
 }
 function m(){return db.members[db.current]}
 function esc(s){return String(s??"").replace(/[&<>"']/g,x=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[x]))}
@@ -1982,6 +2025,7 @@ async function loadMember(id){
 
   const row=Array.isArray(r.body)?r.body[0]:null;
   db.current=id;
+  trainingSessionQueue=[];trainingQueueCursor=-1;trainingQueueLabel="";
   db.members[id]=(row?.data && Object.keys(row.data).length)
     ? row.data
     : baseMember(p?.display_name||"会員");
@@ -1997,7 +2041,7 @@ async function loadMember(id){
   if(!db.members[id].goalPlan || typeof db.members[id].goalPlan!=="object" || Array.isArray(db.members[id].goalPlan)) db.members[id].goalPlan=baseMember(p?.display_name||"会員").goalPlan;
   db.members[id].goalPlan={...baseMember(p?.display_name||"会員").goalPlan,...db.members[id].goalPlan};
 
-  ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos","medicalReferrals"].forEach(k=>{
+  ["weights","meals","training","trainingRoutines","recovery","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos","medicalReferrals"].forEach(k=>{
     if(!Array.isArray(db.members[id][k]))db.members[id][k]=[];
   });
   if(!db.members[id].restTargets || typeof db.members[id].restTargets!=="object" || Array.isArray(db.members[id].restTargets))db.members[id].restTargets={};
@@ -3016,6 +3060,93 @@ function restTimerReset(resetSequence=false){
   restTimerRender();
 }
 
+const TRAINING_SET_METHODS=Object.freeze({
+  straight:{label:"STRAIGHT",jp:"ストレート",hint:"基本の同一種目セット。重量・REP・RIR・RESTをそろえて前回比較しやすい方式。"},
+  compound:{label:"COMPOUND",jp:"同部位2種連続",grouped:true,minExercises:2,hint:"同じ部位を狙う2種目を連続。連続する種目に同じGROUP（例 A）を付けて記録。"},
+  tri:{label:"TRI SET",jp:"3種連続",grouped:true,minExercises:3,hint:"3種目を連続。各種目は個別に記録し、同じGROUPで1ブロックとして管理。"},
+  giant:{label:"GIANT SET",jp:"4種以上連続",grouped:true,minExercises:4,hint:"4種目以上を連続。疲労でフォーム・RIR条件が変わりやすいため、通常SETとは別条件で比較。"},
+  drop:{label:"DROP SET",jp:"ドロップ",detail:true,hint:"同一種目で負荷を下げながら継続。段階ごとの重量・REPをSET詳細へ残すと比較精度が上がります。"},
+  superset:{label:"SUPERSET",jp:"スーパーセット",grouped:true,minExercises:2,hint:"2種目を連続。拮抗筋など別動作を組む場合も、同じGROUPでペアを識別。"},
+  rest_pause:{label:"REST-PAUSE",jp:"レストポーズ",detail:true,hint:"短い休憩を挟んで同一負荷を継続。実RESTを残し、通常SETのREP低下と混同しない。"},
+  pyramid:{label:"PYRAMID",jp:"ピラミッド",detail:true,hint:"SETごとに重量を変化。SET詳細で各重量・REP・RIRを記録して総量とe1RMを分離。"},
+  gvt:{label:"GVT",jp:"German Volume Training",hint:"高ボリューム方式。10×10などの定型を自動強制せず、実際に行ったSET・REP・RESTを記録。"}
+});
+let trainingSessionQueue=[];
+let trainingQueueCursor=-1;
+let trainingQueueLabel="";
+function trainingMethodKey(x){const k=String(x?.setMethod||x||"straight");return TRAINING_SET_METHODS[k]?k:"straight"}
+function trainingMethodInfo(x){return TRAINING_SET_METHODS[trainingMethodKey(x)]||TRAINING_SET_METHODS.straight}
+function sameTrainingMethod(a,b){return trainingMethodKey(a)===trainingMethodKey(b)}
+function trainingMethodBadgesHTML(x){const info=trainingMethodInfo(x),group=String(x?.setGroup||"").trim();return `<span class="badge">${esc(info.label)}</span>${group?` <span class="badge">GROUP ${esc(group)}</span>`:""}`}
+function trainingSetMethodChanged(userAction=false){
+  const sel=document.getElementById("tSetMethod"),group=document.getElementById("tSetGroup"),hint=document.getElementById("tSetMethodHint");
+  if(!sel)return;const key=trainingMethodKey(sel.value),info=TRAINING_SET_METHODS[key];
+  if(userAction&&info.grouped&&group&&!group.value)group.value="A";
+  if(userAction&&info.detail){const mode=document.getElementById("tSetDetailMode");if(mode&&!mode.checked){mode.checked=true;toggleTrainingSetDetails();}}
+  if(hint)hint.innerHTML=`<b>${esc(info.label)}｜${esc(info.jp)}</b><br>${esc(info.hint)}${info.grouped?'<br><span class="muted">連続する種目へ同じGROUPを付けます。</span>':''}`;
+}
+function trainingTemplateFromRow(x){
+  return {exercise:x.exercise||"",part:x.part||"",pof:x.pof||"",setMethod:trainingMethodKey(x),setGroup:x.setGroup||"",weight:Number(x.weight||0),reps:Number(x.reps||0),sets:Number(x.sets||0),rir:Number(x.rir||0),plannedRestSec:x.plannedRestSec==null?null:Number(x.plannedRestSec),setDetails:Array.isArray(x.setDetails)?x.setDetails.map(s=>({...s})):[],memo:""};
+}
+function trainingTemplateFromForm(){
+  const exercise=selectedTrainingExercise();if(!exercise)return null;
+  const inf=trainingMetaFromRuleMenu(exercise),detail=trainingSetDetailMode()?collectTrainingSetDetails():[];
+  return {exercise,part:document.getElementById("tPart")?.value||inf.part||"",pof:document.getElementById("tPof")?.value||inf.pof||"",setMethod:trainingMethodKey(document.getElementById("tSetMethod")?.value),setGroup:document.getElementById("tSetGroup")?.value||"",weight:n("tWeight"),reps:n("tReps"),sets:n("tSets"),rir:n("tRir"),plannedRestSec:document.getElementById("tPlannedRest")?.value!==""?Number(document.getElementById("tPlannedRest").value):null,setDetails:Array.isArray(detail)?detail:[],memo:""};
+}
+function selectTrainingExerciseInForm(exercise){
+  populateExercisePicker();const sel=document.getElementById("tExerciseSelect"),input=document.getElementById("tExercise");if(!sel||!input)return;
+  const master=findExerciseMaster(exercise);
+  if(master&&[...sel.options].some(o=>o.value===master.name)){sel.value=master.name;onExerciseSelect();}
+  else{sel.value="__custom__";input.style.display="";input.value=exercise||"";syncTrainingMeta();}
+}
+function applyTrainingTemplate(tpl){
+  if(!tpl)return;selectTrainingExerciseInForm(tpl.exercise||"");
+  const set=(id,val)=>{const e=document.getElementById(id);if(e)e.value=(val??"")};
+  set("tPart",tpl.part||"");set("tPof",normalizePofLabel(tpl.pof||""));set("tSetMethod",trainingMethodKey(tpl));set("tSetGroup",tpl.setGroup||"");
+  set("tWeight",tpl.weight||"");set("tReps",tpl.reps||"");set("tSets",tpl.sets||"");set("tRir",tpl.rir??"");set("tMemo","");
+  const mode=document.getElementById("tSetDetailMode"),panel=document.getElementById("tSetDetailPanel"),details=Array.isArray(tpl.setDetails)?tpl.setDetails:[];
+  if(details.length){if(mode)mode.checked=true;if(panel)panel.style.display="";set("tSets",details.length);set("tPlannedRest",tpl.plannedRestSec??"");renderTrainingSetDetailRows();details.forEach((s,i)=>{set(`tSetWeight_${i}`,s.weight);set(`tSetReps_${i}`,s.reps);set(`tSetRir_${i}`,s.rir);if(i>0)set(`tSetRest_${i}`,s.restBeforeSec??"")});}
+  else{if(mode)mode.checked=false;if(panel)panel.style.display="none";set("tPlannedRest",tpl.plannedRestSec??"");}
+  if(tpl.plannedRestSec&&Number(tpl.plannedRestSec)>=10)restTimerSetTarget(Number(tpl.plannedRestSec),false);
+  trainingSetMethodChanged(false);syncTrainingMeta(true);renderTrainingPreview();restTimerRender();
+}
+function previousExerciseRow(exercise,date){
+  const rows=(m()?.training||[]).filter(x=>String(x.exercise).toLowerCase()===String(exercise).toLowerCase()&&String(x.date||"")<String(date||today())).slice().sort((a,b)=>String(a.date).localeCompare(String(b.date)));return rows.at(-1)||null;
+}
+function loadPreviousExerciseDraft(){
+  const ex=selectedTrainingExercise();if(!ex)return alert("先に種目を選択してください");const row=previousExerciseRow(ex,document.getElementById("tDate")?.value||today());if(!row)return alert("この種目の前回記録がありません");applyTrainingTemplate(trainingTemplateFromRow(row));
+}
+function renderTrainingQueue(){
+  const box=document.getElementById("tSessionQueue");if(!box)return;
+  if(!trainingSessionQueue.length){box.innerHTML='<span class="muted">SESSIONキューなし</span>';return;}
+  const done=trainingQueueCursor>=trainingSessionQueue.length;
+  box.innerHTML=`<div class="notice"><b>${esc(trainingQueueLabel||"SESSION")}</b>｜${done?'完了':`${trainingQueueCursor+1}/${trainingSessionQueue.length}`}</div>`+trainingSessionQueue.map((x,i)=>`<div class="trainingQueueItem ${i===trainingQueueCursor?'active':''}"><span class="trainingQueueIndex">${i+1}</span><div><b>${esc(x.exercise)}</b><br><small>${esc(trainingMethodInfo(x).label)}${x.setGroup?` / GROUP ${esc(x.setGroup)}`:''}｜前回 ${Number(x.weight||0)}kg × ${Number(x.reps||0)} × ${Number(x.sets||0)}</small></div><button class="secondary" type="button" onclick="loadTrainingQueueItem(${i})">読込</button></div>`).join("");
+}
+function loadTrainingQueueItem(i){if(i<0||i>=trainingSessionQueue.length)return;trainingQueueCursor=i;applyTrainingTemplate(trainingSessionQueue[i]);renderTrainingQueue()}
+function loadPreviousSessionDraft(){
+  const date=document.getElementById("tDate")?.value||today(),dates=[...new Set((m()?.training||[]).map(x=>x.date).filter(d=>d&&d<date))].sort();const prev=dates.at(-1);if(!prev)return alert("前回SESSIONがありません");
+  trainingSessionQueue=(m().training||[]).filter(x=>x.date===prev).map(trainingTemplateFromRow);trainingQueueCursor=0;trainingQueueLabel=`前回SESSION ${prev}`;if(trainingSessionQueue.length)applyTrainingTemplate(trainingSessionQueue[0]);renderTrainingQueue();
+}
+function advanceTrainingQueueAfterSave(){
+  if(!trainingSessionQueue.length||trainingQueueCursor<0)return;trainingQueueCursor+=1;if(trainingQueueCursor<trainingSessionQueue.length)applyTrainingTemplate(trainingSessionQueue[trainingQueueCursor]);renderTrainingQueue();
+}
+function trainingRoutines(){if(!m())return [];if(!Array.isArray(m().trainingRoutines))m().trainingRoutines=[];return m().trainingRoutines}
+function renderTrainingRoutineOptions(){
+  const sel=document.getElementById("tRoutineSelect");if(!sel||!m())return;const old=sel.value,rows=trainingRoutines();sel.innerHTML='<option value="">ROUTINEなし</option>'+rows.map((r,i)=>`<option value="${i}">${esc(r.name||`ROUTINE ${i+1}`)}｜${Array.isArray(r.templates)?r.templates.length:0}種</option>`).join("");if(old!==""&&rows[Number(old)])sel.value=old;
+}
+function saveTrainingRoutine(){
+  if(!m())return;const name=String(document.getElementById("tRoutineName")?.value||"").trim();if(!name)return alert("ROUTINE名を入力してください");
+  const date=document.getElementById("tDate")?.value||today();let templates=[];
+  const dayRows=(m().training||[]).filter(x=>x.date===date);if(dayRows.length)templates=dayRows.map(trainingTemplateFromRow);else if(trainingSessionQueue.length)templates=trainingSessionQueue.map(x=>({...x,setDetails:Array.isArray(x.setDetails)?x.setDetails.map(s=>({...s})):[]}));else{const one=trainingTemplateFromForm();if(one)templates=[one];}
+  if(!templates.length)return alert("保存するSESSION内容がありません");
+  const rows=trainingRoutines(),idx=rows.findIndex(r=>String(r.name||"").toLowerCase()===name.toLowerCase()),record={name,templates,updatedAt:new Date().toISOString()};if(idx>=0)rows[idx]=record;else rows.push(record);persist();renderTrainingRoutineOptions();const sel=document.getElementById("tRoutineSelect");const newIdx=rows.findIndex(r=>r.name===name);if(sel)sel.value=String(newIdx);renderTrainingQueue();
+}
+function loadTrainingRoutine(){
+  const sel=document.getElementById("tRoutineSelect"),idx=Number(sel?.value);if(sel?.value===""||!trainingRoutines()[idx])return alert("ROUTINEを選択してください");const r=trainingRoutines()[idx];trainingSessionQueue=(r.templates||[]).map(x=>({...x,setDetails:Array.isArray(x.setDetails)?x.setDetails.map(s=>({...s})):[]}));trainingQueueCursor=0;trainingQueueLabel=`ROUTINE｜${r.name}`;if(trainingSessionQueue.length)applyTrainingTemplate(trainingSessionQueue[0]);renderTrainingQueue();
+}
+function deleteTrainingRoutine(){
+  const sel=document.getElementById("tRoutineSelect"),idx=Number(sel?.value);if(sel?.value===""||!trainingRoutines()[idx])return alert("削除するROUTINEを選択してください");trainingRoutines().splice(idx,1);persist();if(sel)sel.value="";renderTrainingRoutineOptions();
+}
 function trainingSetDetailMode(){return !!document.getElementById("tSetDetailMode")?.checked}
 function readTrainingSetDetailDraft(){
   const rows=[];
@@ -3118,6 +3249,7 @@ function trainingRestCompareSignal(prev,cur){
 
 function overloadCompare(prev,cur){
   if(!prev||!cur)return {txt:'比較データ不足',cls:''};
+  if(!sameTrainingMethod(prev,cur))return {txt:`SET METHOD変更｜${trainingMethodInfo(cur).label}の比較基準を作成`,cls:'warn'};
   const restSignal=trainingRestCompareSignal(prev,cur);
   if(restSignal)return restSignal;
 
@@ -3134,9 +3266,10 @@ function overloadCompare(prev,cur){
 function overloadForRow(row){
   if(!row)return {txt:'比較データ不足',cls:''};
   const rows=exerciseData(row.exercise).slice().sort((a,b)=>a.date.localeCompare(b.date));
-  const idx=rows.indexOf(row);
-  if(idx<=0)return {txt:'比較データ不足',cls:''};
-  return overloadCompare(rows[idx-1],row);
+  const idx=rows.indexOf(row);if(idx<=0)return {txt:'比較データ不足',cls:''};
+  const prev=rows.slice(0,idx).reverse().find(x=>sameTrainingMethod(x,row));
+  if(!prev)return {txt:`${trainingMethodInfo(row).label}｜比較基準を作成`,cls:''};
+  return overloadCompare(prev,row);
 }
 function trainingSetDetailsHTML(x){
   const d=Array.isArray(x?.setDetails)?x.setDetails:[];if(!d.length)return "";
@@ -3370,7 +3503,7 @@ function nextLoadCondition(){
 function nextLoadPayload(exercise){
   const rows=exerciseData(exercise).slice().sort((a,b)=>String(a.date||"").localeCompare(String(b.date||"")));
   const latest=rows.at(-1)||null;
-  const previous=rows.length>=2?rows.at(-2):null;
+  const previous=latest?rows.slice(0,-1).reverse().find(x=>sameTrainingMethod(x,latest))||null:null;
   const master=findExerciseMaster(exercise);
   const meta=latest?trainingMetaForRow(latest):{part:master?.part||"その他",pof:master?.pof||"その他"};
   const rr=nextLoadRepRange(exercise,latest),volumePlan=weeklyVolumePrescription(exercise);
@@ -3524,7 +3657,9 @@ function addTraining(){
   const first=detailMode?setDetails[0]:null;
   const plannedRestSec=detailMode&&document.getElementById("tPlannedRest")?.value!==""?Number(document.getElementById("tPlannedRest").value):null;
   const secondaryCfg=exerciseSecondaryConfig(exercise,part,masterEntry);
-  const row={date:tDate.value,exercise,part,pof,secondaryParts:secondaryCfg.parts,indirectFactor:secondaryCfg.factor,weight:first?first.weight:n("tWeight"),reps:first?first.reps:n("tReps"),sets:first?setDetails.length:n("tSets"),rir:first?first.rir:n("tRir"),memo:tMemo.value};
+  const setMethod=trainingMethodKey(document.getElementById("tSetMethod")?.value),setGroup=String(document.getElementById("tSetGroup")?.value||"").trim();
+  const shouldAdvanceQueue=trainingSessionQueue.length&&trainingQueueCursor>=0&&trainingQueueCursor<trainingSessionQueue.length&&String(trainingSessionQueue[trainingQueueCursor]?.exercise||"").toLowerCase()===String(exercise).toLowerCase();
+  const row={date:tDate.value,exercise,part,pof,setMethod,setGroup,secondaryParts:secondaryCfg.parts,indirectFactor:secondaryCfg.factor,weight:first?first.weight:n("tWeight"),reps:first?first.reps:n("tReps"),sets:first?setDetails.length:n("tSets"),rir:first?first.rir:n("tRir"),memo:tMemo.value};
   if(detailMode){row.setDetails=setDetails;row.plannedRestSec=plannedRestSec;row.restDataVersion=1;}
   m().training.push(row);
   m().training.sort((a,b)=>a.date.localeCompare(b.date));
@@ -3538,9 +3673,11 @@ function addTraining(){
   const partSel=document.getElementById("tPart"),pofSel=document.getElementById("tPof");
   if(partSel)partSel.value="";
   if(pofSel)pofSel.value="";
+  const methodSel=document.getElementById("tSetMethod"),groupSel=document.getElementById("tSetGroup");if(methodSel)methodSel.value="straight";if(groupSel)groupSel.value="";trainingSetMethodChanged(false);
   restTimerReset(true);
   restTimerLoadExerciseTarget();
   saveRender();
+  if(shouldAdvanceQueue)setTimeout(advanceTrainingQueueAfterSave,0);
 }
 function addRecovery(){
   const date=rDate.value||today();
@@ -4932,7 +5069,7 @@ function carePlan(area, location, movement){
   };
 }
 
-// V26.5.2 CARE TOOLBOX + AROM/PROM + ACUTE CARE + TAPING + THERMAL CARE
+// V26.5.3 CARE + TRAINING METHODS + ROUTINE + AROM/PROM + TAPING + THERMAL CARE
 const CARE_AROM_KEYS={
   shoulder:["shoulder_flex","shoulder_abd","shoulder_er","shoulder_ir","shoulder_ext","shoulder_hflex","shoulder_hext","thoracic_ext","thoracic_rot"],
   neck:["cervical_flex","cervical_ext","cervical_rot","cervical_lat","thoracic_ext","thoracic_rot"],
@@ -5444,9 +5581,9 @@ function fmtPct(v){
   return `${sign}${v.toFixed(1)}%`;
 }
 function trainingTrend(ex){
-  const rows=exerciseData(ex);
+  const rows=exerciseData(ex).slice().sort((a,b)=>String(a.date||"").localeCompare(String(b.date||"")));
   if(!rows.length)return null;
-  const cur=rows.at(-1),prev=rows.length>=2?rows.at(-2):null;
+  const cur=rows.at(-1),prev=rows.slice(0,-1).reverse().find(x=>sameTrainingMethod(x,cur))||null;
   const curVol=vol(cur),curE1=e1rm(cur);
   return {
     cur,prev,curVol,curE1,
@@ -5469,7 +5606,7 @@ function renderTrainingPreview(){
 }
 
 function exerciseData(ex){return m().training.filter(x=>x.exercise.toLowerCase()===ex.toLowerCase())}
-function overload(ex){const a=exerciseData(ex).slice().sort((x,y)=>x.date.localeCompare(y.date));if(a.length<2)return {txt:"比較データ不足",cls:""};return overloadCompare(a[a.length-2],a[a.length-1]);}
+function overload(ex){const a=exerciseData(ex).slice().sort((x,y)=>x.date.localeCompare(y.date));if(a.length<2)return {txt:"比較データ不足",cls:""};const cur=a.at(-1),prev=a.slice(0,-1).reverse().find(x=>sameTrainingMethod(x,cur));return prev?overloadCompare(prev,cur):{txt:`${trainingMethodInfo(cur).label}｜比較基準を作成`,cls:""};}
 function pr(ex){let a=exerciseData(ex);if(!a.length)return null;return a.reduce((best,x)=>e1rm(x)>e1rm(best)?x:best,a[0])}
 
 function weightStats(){let a=m().weights.slice(-14),last=a.slice(-7),prev=a.slice(-14,-7),l=avg(last.map(x=>x.weight)),p=avg(prev.map(x=>x.weight));return {last,prev,l,p,delta:(l&&p)?l-p:null}}
@@ -7018,11 +7155,11 @@ function renderAll(){
 
   weightList.innerHTML=[...mm.weights].reverse().map((x,ri)=>{let i=mm.weights.length-1-ri;return `<div class="item"><div class="row"><div><strong>${x.date}｜${x.weight.toFixed(1)}kg</strong><br><small>${x.fat?x.fat+"% ":""}${esc(x.memo)}</small></div><button class="danger" onclick="remove('weights',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
   mealList.innerHTML=[...mm.meals].reverse().map((x,ri)=>{let i=mm.meals.length-1-ri;return `<div class="item"><div class="row"><div><strong>${x.date}｜${esc(x.name)}</strong><br><small>${x.kcal}kcal / P${x.p} F${x.f} C${x.c}</small></div><button class="danger" onclick="remove('meals',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
-  trainingList.innerHTML=[...mm.training].reverse().map((x,ri)=>{let i=mm.training.length-1-ri,o=overloadForRow(x),meta=trainingMetaForRow(x);return `<div class="item"><div class="row"><div><strong>${x.date}｜${esc(x.exercise)}</strong><br><small>${x.weight}kg × ${x.reps}rep × ${x.sets}set / RIR ${x.rir}${Array.isArray(x.setDetails)&&x.setDetails.length?'（SET1代表）':''}</small>${trainingSetDetailsHTML(x)}<br><small>総重量 ${Math.round(vol(x)).toLocaleString()}kg｜推定1RM ${e1rm(x).toFixed(1)}kg</small><br><span class="badge">${esc(meta.part)}</span> <span class="badge">${esc(meta.pof)}</span><br><span class="badge ${o.cls}">${esc(o.txt)}</span></div><button class="danger" onclick="remove('training',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
+  trainingList.innerHTML=[...mm.training].reverse().map((x,ri)=>{let i=mm.training.length-1-ri,o=overloadForRow(x),meta=trainingMetaForRow(x);return `<div class="item"><div class="row"><div><strong>${x.date}｜${esc(x.exercise)}</strong><br><small>${x.weight}kg × ${x.reps}rep × ${x.sets}set / RIR ${x.rir}${Array.isArray(x.setDetails)&&x.setDetails.length?'（SET1代表）':''}</small>${trainingSetDetailsHTML(x)}<br><small>総重量 ${Math.round(vol(x)).toLocaleString()}kg｜推定1RM ${e1rm(x).toFixed(1)}kg</small><br><span class="badge">${esc(meta.part)}</span> <span class="badge">${esc(meta.pof)}</span> ${trainingMethodBadgesHTML(x)}<br><span class="badge ${o.cls}">${esc(o.txt)}</span></div><button class="danger" onclick="remove('training',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
   prTable.innerHTML=exs.length?`<div style="overflow-x:auto"><table class="table"><tr><th>種目</th><th>部位 / POF</th><th>最新</th><th>総重量</th><th>推定1RM</th><th>前回比</th></tr>${exs.map(ex=>{const t=trainingTrend(ex),x=t?.cur;if(!x)return"";const prx=pr(ex);const isPr=Math.abs(e1rm(x)-e1rm(prx))<0.0001;const meta=trainingMetaForRow(x);return `<tr><td>${esc(ex)}</td><td><small>${esc(meta.part)}<br>${esc(meta.pof)}</small></td><td>${x.weight}kg×${x.reps}×${x.sets}</td><td>${Math.round(t.curVol).toLocaleString()}kg</td><td>${t.curE1.toFixed(1)}kg${isPr?' PR':''}</td><td><small>総 ${fmtPct(t.volPct)}<br>1RM ${fmtPct(t.e1Pct)}</small></td></tr>`}).join("")}</table></div>`:'<span class="muted">記録なし</span>';
   recoveryJudge.innerHTML=`<span class="badge ${adv.cls}">${esc(adv.txt)}</span>`;
   recoveryList.innerHTML=[...mm.recovery].reverse().map((x,ri)=>{let i=mm.recovery.length-1-ri,a=recAdvice(x);return `<div class="item"><div class="row"><div><strong>${x.date}｜睡眠 ${x.sleep}h</strong><br><small>疲労${x.fatigue} / ストレス${x.stress} / 痛み${x.pain}</small><br><span class="badge ${a.cls}">${recScore(x)}点</span></div><button class="danger" onclick="remove('recovery',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
-  populateExercisePicker();renderExerciseMasterList();renderTrainingPreview();renderPofSummary();syncTrainingMeta();if(!restTimerState.running)restTimerLoadExerciseTarget();restTimerRender();renderNextLoadPanel();renderRomHistory();renderAromHistory();renderAromAsymmetry();renderAromReference();renderShrHistory();renderMovementHistory();renderMoveGuide();renderJointByJoint();renderIntegratedAssessment();renderIntegratedHistory();renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();renderCheckin();renderSmartCore();renderGoalPlan();renderResponseEngine();renderActivity();renderCareHistory();renderCareResponseProfile();renderCareFollowupPanel();renderCareReferralGate();renderMedicalFeedbackHistory();drawChart();renderReport();renderPhotos();
+  populateExercisePicker();renderExerciseMasterList();renderTrainingRoutineOptions();renderTrainingQueue();trainingSetMethodChanged(false);renderTrainingPreview();renderPofSummary();syncTrainingMeta();if(!restTimerState.running)restTimerLoadExerciseTarget();restTimerRender();renderNextLoadPanel();renderRomHistory();renderAromHistory();renderAromAsymmetry();renderAromReference();renderShrHistory();renderMovementHistory();renderMoveGuide();renderJointByJoint();renderIntegratedAssessment();renderIntegratedHistory();renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();renderCheckin();renderSmartCore();renderGoalPlan();renderResponseEngine();renderActivity();renderCareHistory();renderCareResponseProfile();renderCareFollowupPanel();renderCareReferralGate();renderMedicalFeedbackHistory();drawChart();renderReport();renderPhotos();
 }
 
 function monthLabel(mon){
