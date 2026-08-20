@@ -398,6 +398,7 @@ button.primary{box-shadow:0 5px 18px rgba(184,140,50,.10)}
 .trainingQueueItem{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;padding:7px 8px;border:1px solid #2d2d32;border-radius:10px;background:#0c0d10}
 .trainingQueueItem.active{border-color:var(--gold2)}
 .trainingQueueIndex{font-weight:900;color:var(--gold2);min-width:24px}
+.hydrationHero{background:linear-gradient(180deg,#111822,#0d0f13);border:1px solid #344a5f;border-radius:14px;padding:12px;margin-top:9px}.hydrationTop{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.hydrationTitle{font-size:12px;font-weight:900;color:#9ed7ff;letter-spacing:.06em}.hydrationMeter{height:10px;border-radius:999px;background:#171a1e;border:1px solid #2f3740;overflow:hidden;margin-top:10px}.hydrationMeter>span{display:block;height:100%;background:linear-gradient(90deg,#5aa7d8,#a5e5ff);width:0}.hydrationKpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:9px}.hydrationKpi{background:#0b0e12;border:1px solid #2e3b47;border-radius:11px;padding:9px}.hydrationKpi span{display:block;font-size:8px;color:#8fa0ad}.hydrationKpi b{display:block;margin-top:3px;font-size:16px;color:#d9f2ff}.hydrationQuick{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:8px}.hydrationQuick button{min-height:44px;font-weight:900}.hydrationFlags{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}.hydrationFlags label{display:flex;align-items:center;gap:6px;font-size:9px;color:#bbb}.hydrationFlags input[type=checkbox]{width:auto}.hydrationNote{font-size:9px;line-height:1.65;color:#aeb7bf;margin-top:8px}@media(max-width:620px){.hydrationKpis{grid-template-columns:1fr 1fr}.hydrationKpis .wide{grid-column:1/-1}}
 .trainingQueueItem button{padding:5px 9px}
 .trainingMethodHint{margin-top:7px;font-size:11px;line-height:1.55}
 @media(max-width:620px){.trainingRoutineGrid{grid-template-columns:1fr 1fr}.trainingRoutineGrid .trainingRoutineWide{grid-column:1/-1}.trainingMethodGrid{grid-template-columns:1fr}.trainingQuickActions{grid-template-columns:1fr 1fr}}
@@ -418,7 +419,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
   <div class="authBox">
     <img class="authBrandLogo" src="./brand-header.png?v=26-4-2-walk-route" alt="S.u.G OSAKA">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V26.5.3 ADAPTIVE CORE / MEMBERS ONLY</div>
+    <div class="sub">V26.5.4 ADAPTIVE CORE / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -533,7 +534,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
   <div class="head">
     <div class="brandIdentity">
       <img class="brandHeaderLogo" src="./brand-header.png?v=26-4-2-walk-route" alt="S.u.G OSAKA">
-      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.5.3 ADAPTIVE CORE / TRAINING METHODS + ROUTINE + THERMAL CARE</small></div>
+      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.5.4 ADAPTIVE CORE / HYDRATION + TRAINING METHODS + CARE</small></div>
     </div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
@@ -984,7 +985,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
       </div>
       <div id="tMetaHint" class="notice" style="margin-top:8px">種目名から対象部位・POFを自動候補化します。必要なら手動で変更できます。</div>
       <div class="trainingQuickCard">
-        <div class="trainingQuickHead"><div><div class="trainingQuickTitle">QUICK START｜前回・ROUTINE</div><div class="muted">前回値は下書きとして読み込み。保存するまでは履歴に追加されません。</div></div><span class="badge">V26.5.3</span></div>
+        <div class="trainingQuickHead"><div><div class="trainingQuickTitle">QUICK START｜前回・ROUTINE</div><div class="muted">前回値は下書きとして読み込み。保存するまでは履歴に追加されません。</div></div><span class="badge">V26.5.4</span></div>
         <div class="trainingQuickActions"><button class="secondary" type="button" onclick="loadPreviousExerciseDraft()">前回のこの種目</button><button class="secondary" type="button" onclick="loadPreviousSessionDraft()">前回SESSION</button></div>
         <div class="trainingRoutineGrid">
           <div><label>ROUTINE</label><select id="tRoutineSelect"><option value="">ROUTINEなし</option></select></div>
@@ -1314,6 +1315,18 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
       <div style="margin-top:8px"><label>メモ</label><textarea id="rMemo"></textarea></div>
       <button class="primary" style="width:100%;margin-top:9px" onclick="addRecovery()">記録</button>
     </div>
+    <div class="card">
+      <div class="sectionLead"><div><h2>HYDRATION｜水分</h2><div class="muted">摂取量を日単位で管理。前日飲酒・二日酔い・発汗がある日は回復判定にも反映。</div></div></div>
+      <div class="grid2"><div><label>日付</label><input id="hDate" type="date" onchange="loadHydrationInputs()"></div><div><label>基準目標 ml（空欄＝自動目安）</label><input id="hGoal" type="number" min="500" max="6000" step="50" placeholder="例 2500"></div></div>
+      <div class="grid3" style="margin-top:8px"><div><label>飲み物</label><select id="hType"><option value="water">水</option><option value="tea">お茶 / コーヒー</option><option value="electrolyte">電解質 / スポーツ飲料</option><option value="other">その他ノンアルコール</option></select></div><div><label>発汗</label><select id="hSweat"><option value="normal">通常</option><option value="high">多い</option><option value="very_high">かなり多い</option></select></div><div><label>二日酔い</label><select id="hHangover"><option value="none">なし</option><option value="mild">軽い</option><option value="moderate">中等度</option><option value="severe">強い</option></select></div></div>
+      <div class="hydrationFlags"><label><input id="hAlcoholPrev" type="checkbox">前日飲酒あり</label><label><input id="hElectrolyte" type="checkbox">今回 電解質あり</label></div>
+      <div class="hydrationQuick"><button type="button" onclick="addHydrationQuick(250)">+250ml</button><button type="button" onclick="addHydrationQuick(500)">+500ml</button><button type="button" onclick="addHydrationQuick(750)">+750ml</button></div>
+      <div class="grid2" style="margin-top:8px"><div><label>その他の量 ml</label><input id="hAmount" type="number" min="1" max="3000" step="10" placeholder="例 350"></div><div style="display:flex;align-items:end"><button type="button" style="width:100%" onclick="addHydrationCustom()">この量を追加</button></div></div>
+      <button type="button" style="width:100%;margin-top:8px" onclick="saveHydrationContext()">条件・目標だけ保存</button>
+      <div id="hydrationTodayCard" class="hydrationHero"></div>
+      <div class="hydrationNote">水分目標は体重などから出す初期目安で、必要量は気温・発汗・食事・体格で変わります。心臓・腎臓などで水分制限の指示がある場合は医療者の指示を優先してください。アルコールは水分摂取量には加算しません。</div>
+      <h3 style="margin-top:12px">HYDRATION履歴</h3><div id="hydrationList"></div>
+    </div>
     <div class="card"><h2>判定</h2><div id="recoveryJudge" class="item"></div></div>
     <div class="card"><h2>履歴</h2><div id="recoveryList"></div></div>
   </section>
@@ -1569,7 +1582,7 @@ function baseMember(name="新規会員"){
     coachPlan:{weeklyFocus:"",nextAction:"",nextSessionDate:"",targetTrainingDays:0,targetSleep:0,targetSteps:0,completedAt:null,updatedAt:null},
     goalPlan:{goalType:"筋肥大",deadline:"",targetWeight:0,targetBodyFat:0,idealNote:"",idealImagePath:"",energyAnchor:0,priority1:"肩",priority2:"背中",priority3:"胸",trainingDays:4,sessionMinutes:60,generatedAt:null,lastPlan:null},
     smartContext:{appetite:"normal",dayType:"training",updatedAt:null},
-    weights:[],meals:[],training:[],trainingRoutines:[],recovery:[],checkins:[],activity:[],selfCare:[],smartPlans:[],romAssessments:[],aromAssessments:[],shrAssessments:[],movementScreens:[],integratedAssessments:[],bodyMeasurements:[],responseExperiments:[],photos:[],medicalReferrals:[],restTargets:{}}
+    weights:[],meals:[],training:[],trainingRoutines:[],recovery:[],hydration:[],checkins:[],activity:[],selfCare:[],smartPlans:[],romAssessments:[],aromAssessments:[],shrAssessments:[],movementScreens:[],integratedAssessments:[],bodyMeasurements:[],responseExperiments:[],photos:[],medicalReferrals:[],restTargets:{}}
 }
 function m(){return db.members[db.current]}
 function esc(s){return String(s??"").replace(/[&<>"']/g,x=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[x]))}
@@ -2041,7 +2054,7 @@ async function loadMember(id){
   if(!db.members[id].goalPlan || typeof db.members[id].goalPlan!=="object" || Array.isArray(db.members[id].goalPlan)) db.members[id].goalPlan=baseMember(p?.display_name||"会員").goalPlan;
   db.members[id].goalPlan={...baseMember(p?.display_name||"会員").goalPlan,...db.members[id].goalPlan};
 
-  ["weights","meals","training","trainingRoutines","recovery","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos","medicalReferrals"].forEach(k=>{
+  ["weights","meals","training","trainingRoutines","recovery","hydration","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos","medicalReferrals"].forEach(k=>{
     if(!Array.isArray(db.members[id][k]))db.members[id][k]=[];
   });
   if(!db.members[id].restTargets || typeof db.members[id].restTargets!=="object" || Array.isArray(db.members[id].restTargets))db.members[id].restTargets={};
@@ -2277,7 +2290,7 @@ function dateAgeDays(dateStr){
 function latestRecordDate(mm){
   if(!mm)return "";
   const dates=[];
-  ["weights","meals","training","recovery","activity","bodyMeasurements"].forEach(k=>(mm[k]||[]).forEach(x=>{if(x?.date)dates.push(x.date)}));
+  ["weights","meals","training","recovery","hydration","activity","bodyMeasurements"].forEach(k=>(mm[k]||[]).forEach(x=>{if(x?.date)dates.push(x.date)}));
   (mm.photos||[]).forEach(x=>{if(x?.date)dates.push(x.date)});
   return dates.sort().at(-1)||"";
 }
@@ -2553,7 +2566,7 @@ async function refreshAdminBoard(){
     const members=accessibleProfiles.filter(p=>p.role!=="trainer").map(p=>{
       const row=byId.get(p.id);
       const mm=row?.data&&Object.keys(row.data).length?row.data:baseMember(p.display_name||"会員");
-      ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos"].forEach(k=>{if(!Array.isArray(mm[k]))mm[k]=[]});
+      ["weights","meals","training","recovery","hydration","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos"].forEach(k=>{if(!Array.isArray(mm[k]))mm[k]=[]});
       if(!mm.restTargets || typeof mm.restTargets!=="object" || Array.isArray(mm.restTargets))mm.restTargets={};
       if(!mm.profile)mm.profile=baseMember(p.display_name||"会員").profile;
       const st=adminStatusFor(mm);
@@ -3850,6 +3863,72 @@ function activityTarget(){const cp=coachPlan();return Number(cp?.targetSteps||0)
 function todayActivity(){return (m()?.activity||[]).filter(x=>x.date===today()).at(-1)||null;}
 function activityAvg7(){const cut=shiftDate(-6);const rows=(m()?.activity||[]).filter(x=>x.date>=cut&&x.date<=today());return rows.length?avg(rows.map(x=>Number(x.steps||0))):0;}
 function latestRecovery(){return (m()?.recovery||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1)||null;}
+function hydrationDay(date=today()){return (m()?.hydration||[]).find(x=>x.date===date)||null;}
+function hydrationBaseGoal(date=today()){
+  const w=nearestWeightOnOrBefore(date)?.weight || (m()?.weights||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1)?.weight || 0;
+  const raw=w?Number(w)*30:2000;
+  return Math.max(1500,Math.min(4000,Math.round(raw/50)*50));
+}
+function hydrationGoal(row,date=today()){
+  row=row||hydrationDay(date)||{};
+  let g=Number(row.goalBase||0)||hydrationBaseGoal(date);
+  if(row.sweat==="high")g+=300;
+  if(row.sweat==="very_high")g+=600;
+  if(row.alcoholPrev)g+=250;
+  if(row.hangover==="mild")g+=250;
+  if(row.hangover==="moderate"||row.hangover==="severe")g+=400;
+  return Math.max(1000,Math.min(6000,Math.round(g/50)*50));
+}
+function hydrationContextFromInputs(){
+  return {goalBase:Math.max(0,Number(document.getElementById("hGoal")?.value||0)),sweat:document.getElementById("hSweat")?.value||"normal",alcoholPrev:!!document.getElementById("hAlcoholPrev")?.checked,hangover:document.getElementById("hHangover")?.value||"none"};
+}
+function hydrationEnsureDay(date){
+  if(!Array.isArray(m().hydration))m().hydration=[];
+  let row=m().hydration.find(x=>x.date===date);
+  if(!row){row={date,amount:0,byType:{water:0,tea:0,electrolyte:0,other:0},electrolyteServings:0,goalBase:0,sweat:"normal",alcoholPrev:false,hangover:"none",updatedAt:new Date().toISOString()};m().hydration.push(row);}
+  if(!row.byType||typeof row.byType!=="object")row.byType={water:0,tea:0,electrolyte:0,other:0};
+  return row;
+}
+function hydrationApplyContext(row){
+  const ctx=hydrationContextFromInputs();Object.assign(row,ctx,{updatedAt:new Date().toISOString()});return row;
+}
+function addHydrationQuick(amount){
+  amount=Math.max(0,Number(amount||0));if(!amount)return;
+  const date=document.getElementById("hDate")?.value||today(),type=document.getElementById("hType")?.value||"water";
+  const row=hydrationApplyContext(hydrationEnsureDay(date));row.amount=Number(row.amount||0)+amount;row.byType[type]=Number(row.byType[type]||0)+amount;
+  if(document.getElementById("hElectrolyte")?.checked||type==="electrolyte")row.electrolyteServings=Number(row.electrolyteServings||0)+1;
+  m().hydration.sort((a,b)=>a.date.localeCompare(b.date));saveRender();
+}
+function addHydrationCustom(){const el=document.getElementById("hAmount"),v=Number(el?.value||0);if(!v||v<1)return alert("追加する水分量をmlで入力してください");if(v>3000)return alert("1回の入力は3000ml以下にしてください");addHydrationQuick(v);if(el)el.value="";}
+function saveHydrationContext(){const date=document.getElementById("hDate")?.value||today();hydrationApplyContext(hydrationEnsureDay(date));m().hydration.sort((a,b)=>a.date.localeCompare(b.date));saveRender();}
+function hydrationStatus(row,date=row?.date||today()){
+  if(!row)return {goal:hydrationBaseGoal(date),amount:0,pct:0,remaining:hydrationBaseGoal(date),label:"未記録",cls:"warn"};
+  const goal=hydrationGoal(row,date),amount=Number(row.amount||0),pct=goal?Math.round(amount/goal*100):0,remaining=Math.max(0,goal-amount);
+  let label=pct>=100?"目標到達":pct>=75?"あと少し":pct>=40?"途中":"摂取を確認",cls=pct>=100?"ok":pct>=40?"warn":"";
+  if(row.hangover==="severe"){label="二日酔い強い｜回復優先";cls="bad";}else if(row.hangover==="moderate"){label="二日酔いあり｜負荷調整";cls="warn";}
+  return {goal,amount,pct,remaining,label,cls};
+}
+function hydrationAdviceText(row){
+  if(!row)return "水分を記録すると残量と回復条件を確認できます。";
+  const notes=[];
+  if(row.alcoholPrev)notes.push("前日飲酒あり：水分・食事・睡眠を優先");
+  if(row.hangover==="mild")notes.push("軽い二日酔い：高強度は体調を見て調整");
+  if(row.hangover==="moderate")notes.push("中等度の二日酔い：高強度を避け、回復寄り");
+  if(row.hangover==="severe")notes.push("強い二日酔い：トレーニングより回復を優先");
+  if((row.sweat==="high"||row.sweat==="very_high")&&!Number(row.electrolyteServings||0))notes.push("発汗多め：食事・電解質も確認");
+  return notes.join("｜")||"通常の水分管理。喉の渇き・尿・発汗など本人の状態も合わせて確認。";
+}
+function loadHydrationInputs(){
+  const date=document.getElementById("hDate")?.value||today(),row=hydrationDay(date);if(!row)return;
+  const g=document.getElementById("hGoal"),sw=document.getElementById("hSweat"),ap=document.getElementById("hAlcoholPrev"),ho=document.getElementById("hHangover");
+  if(g)g.value=row.goalBase||"";if(sw)sw.value=row.sweat||"normal";if(ap)ap.checked=!!row.alcoholPrev;if(ho)ho.value=row.hangover||"none";
+}
+function renderHydration(){
+  const dateEl=document.getElementById("hDate");if(dateEl&&!dateEl.value)dateEl.value=today();
+  const date=dateEl?.value||today(),row=hydrationDay(date),st=hydrationStatus(row,date),card=document.getElementById("hydrationTodayCard");
+  if(card){const pct=Math.max(0,Math.min(100,st.pct));const by=row?.byType||{};card.innerHTML=`<div class="hydrationTop"><div><div class="hydrationTitle">${esc(date)}｜${esc(st.label)}</div><div class="muted">${esc(hydrationAdviceText(row))}</div></div><span class="badge ${st.cls}">${st.pct}%</span></div><div class="hydrationMeter"><span style="width:${pct}%"></span></div><div class="hydrationKpis"><div class="hydrationKpi"><span>摂取</span><b>${Math.round(st.amount).toLocaleString()}ml</b></div><div class="hydrationKpi"><span>目安</span><b>${Math.round(st.goal).toLocaleString()}ml</b></div><div class="hydrationKpi wide"><span>残り</span><b>${Math.round(st.remaining).toLocaleString()}ml</b></div></div><div class="hydrationNote">水 ${Math.round(Number(by.water||0))} / お茶等 ${Math.round(Number(by.tea||0))} / 電解質飲料 ${Math.round(Number(by.electrolyte||0))} / その他 ${Math.round(Number(by.other||0))} ml｜電解質 ${Number(row?.electrolyteServings||0)}回</div>`;}
+  const list=document.getElementById("hydrationList");if(list){const rows=m()?.hydration||[];list.innerHTML=[...rows].reverse().slice(0,20).map((x,ri)=>{const i=rows.length-1-ri,hs=hydrationStatus(x,x.date);return `<div class="item"><div class="row"><div><strong>${esc(x.date)}｜${Math.round(Number(x.amount||0)).toLocaleString()} / ${Math.round(hs.goal).toLocaleString()}ml</strong><br><small>${hs.pct}%｜${esc(hydrationAdviceText(x))}</small></div><button class="danger" onclick="remove('hydration',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';}
+}
 
 const CARE_SMART_RULES={
   shoulder:{conflicts:["肩","胸"],fallback:"前脚",stepSensitive:false},
@@ -3903,6 +3982,13 @@ function smartRecoveryState(){
     else if(Number(r.pain||0)>=4 || score<60 || (Number(r.sleep||0)>0&&Number(r.sleep)<5)){volume=60;label="調整して実施";cls="warn";rir="RIR +2";reason=`回復 ${score}点｜痛み/睡眠を優先`;}
     else if(score<75 || Number(r.fatigue||0)>=7 || Number(r.stress||0)>=7 || (Number(r.sleep||0)>0&&Number(r.sleep)<6)){volume=80;label="軽く調整";cls="warn";rir="RIR +1";reason=`回復 ${score}点｜疲労を残さない`;}
     if(ta&&baseTarget&&ta.steps>baseTarget*1.4&&volume>60){volume=Math.max(60,volume-20);label="活動量考慮";cls="warn";reason+=`｜歩数 ${ta.steps.toLocaleString()}歩`;}
+  }
+  const hyd=hydrationDay(today());
+  if(hyd){
+    if(hyd.hangover==="severe"){volume=0;label="二日酔い｜回復優先";cls="bad";rir="高負荷なし";reason+=`｜二日酔い 強い`;}
+    else if(hyd.hangover==="moderate"&&volume>60){volume=60;label="二日酔い｜調整";cls="warn";rir="RIR +2";reason+=`｜二日酔い 中等度`;}
+    else if(hyd.hangover==="mild"&&volume>80){volume=80;label="前日飲酒を考慮";cls="warn";rir="RIR +1";reason+=`｜二日酔い 軽度`;}
+    else if(hyd.alcoholPrev){reason+=`｜前日飲酒あり`;}
   }
   // 当日のセルフケア再評価をSMARTへ連携する。
   // 全身休養にするのではなく、基本は「該当部位の負荷を下げる / 別部位へ変更」。
@@ -5069,7 +5155,7 @@ function carePlan(area, location, movement){
   };
 }
 
-// V26.5.3 CARE + TRAINING METHODS + ROUTINE + AROM/PROM + TAPING + THERMAL CARE
+// V26.5.4 HYDRATION + CARE + TRAINING METHODS + ROUTINE + AROM/PROM + TAPING + THERMAL CARE
 const CARE_AROM_KEYS={
   shoulder:["shoulder_flex","shoulder_abd","shoulder_er","shoulder_ir","shoulder_ext","shoulder_hflex","shoulder_hext","thoracic_ext","thoracic_rot"],
   neck:["cervical_flex","cervical_ext","cervical_rot","cervical_lat","thoracic_ext","thoracic_rot"],
@@ -7157,9 +7243,9 @@ function renderAll(){
   mealList.innerHTML=[...mm.meals].reverse().map((x,ri)=>{let i=mm.meals.length-1-ri;return `<div class="item"><div class="row"><div><strong>${x.date}｜${esc(x.name)}</strong><br><small>${x.kcal}kcal / P${x.p} F${x.f} C${x.c}</small></div><button class="danger" onclick="remove('meals',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
   trainingList.innerHTML=[...mm.training].reverse().map((x,ri)=>{let i=mm.training.length-1-ri,o=overloadForRow(x),meta=trainingMetaForRow(x);return `<div class="item"><div class="row"><div><strong>${x.date}｜${esc(x.exercise)}</strong><br><small>${x.weight}kg × ${x.reps}rep × ${x.sets}set / RIR ${x.rir}${Array.isArray(x.setDetails)&&x.setDetails.length?'（SET1代表）':''}</small>${trainingSetDetailsHTML(x)}<br><small>総重量 ${Math.round(vol(x)).toLocaleString()}kg｜推定1RM ${e1rm(x).toFixed(1)}kg</small><br><span class="badge">${esc(meta.part)}</span> <span class="badge">${esc(meta.pof)}</span> ${trainingMethodBadgesHTML(x)}<br><span class="badge ${o.cls}">${esc(o.txt)}</span></div><button class="danger" onclick="remove('training',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
   prTable.innerHTML=exs.length?`<div style="overflow-x:auto"><table class="table"><tr><th>種目</th><th>部位 / POF</th><th>最新</th><th>総重量</th><th>推定1RM</th><th>前回比</th></tr>${exs.map(ex=>{const t=trainingTrend(ex),x=t?.cur;if(!x)return"";const prx=pr(ex);const isPr=Math.abs(e1rm(x)-e1rm(prx))<0.0001;const meta=trainingMetaForRow(x);return `<tr><td>${esc(ex)}</td><td><small>${esc(meta.part)}<br>${esc(meta.pof)}</small></td><td>${x.weight}kg×${x.reps}×${x.sets}</td><td>${Math.round(t.curVol).toLocaleString()}kg</td><td>${t.curE1.toFixed(1)}kg${isPr?' PR':''}</td><td><small>総 ${fmtPct(t.volPct)}<br>1RM ${fmtPct(t.e1Pct)}</small></td></tr>`}).join("")}</table></div>`:'<span class="muted">記録なし</span>';
-  recoveryJudge.innerHTML=`<span class="badge ${adv.cls}">${esc(adv.txt)}</span>`;
+  {const hyd=hydrationDay(today()),hs=hydrationStatus(hyd,today()),hydLine=hyd?`<br><small>HYDRATION ${Math.round(hs.amount).toLocaleString()}/${Math.round(hs.goal).toLocaleString()}ml（${hs.pct}%）｜${esc(hydrationAdviceText(hyd))}</small>`:"";recoveryJudge.innerHTML=`<span class="badge ${adv.cls}">${esc(adv.txt)}</span>${hydLine}`;}
   recoveryList.innerHTML=[...mm.recovery].reverse().map((x,ri)=>{let i=mm.recovery.length-1-ri,a=recAdvice(x);return `<div class="item"><div class="row"><div><strong>${x.date}｜睡眠 ${x.sleep}h</strong><br><small>疲労${x.fatigue} / ストレス${x.stress} / 痛み${x.pain}</small><br><span class="badge ${a.cls}">${recScore(x)}点</span></div><button class="danger" onclick="remove('recovery',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
-  populateExercisePicker();renderExerciseMasterList();renderTrainingRoutineOptions();renderTrainingQueue();trainingSetMethodChanged(false);renderTrainingPreview();renderPofSummary();syncTrainingMeta();if(!restTimerState.running)restTimerLoadExerciseTarget();restTimerRender();renderNextLoadPanel();renderRomHistory();renderAromHistory();renderAromAsymmetry();renderAromReference();renderShrHistory();renderMovementHistory();renderMoveGuide();renderJointByJoint();renderIntegratedAssessment();renderIntegratedHistory();renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();renderCheckin();renderSmartCore();renderGoalPlan();renderResponseEngine();renderActivity();renderCareHistory();renderCareResponseProfile();renderCareFollowupPanel();renderCareReferralGate();renderMedicalFeedbackHistory();drawChart();renderReport();renderPhotos();
+  populateExercisePicker();renderExerciseMasterList();renderTrainingRoutineOptions();renderTrainingQueue();trainingSetMethodChanged(false);renderTrainingPreview();renderPofSummary();syncTrainingMeta();if(!restTimerState.running)restTimerLoadExerciseTarget();restTimerRender();renderNextLoadPanel();renderRomHistory();renderAromHistory();renderAromAsymmetry();renderAromReference();renderShrHistory();renderMovementHistory();renderMoveGuide();renderJointByJoint();renderIntegratedAssessment();renderIntegratedHistory();renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();renderCheckin();renderSmartCore();renderGoalPlan();renderResponseEngine();renderActivity();renderCareHistory();renderCareResponseProfile();renderCareFollowupPanel();renderCareReferralGate();renderMedicalFeedbackHistory();renderHydration();drawChart();renderReport();renderPhotos();
 }
 
 function monthLabel(mon){
@@ -7311,7 +7397,7 @@ function normalizeMemberData(data,name="会員"){
   if(!x.coachPlan||typeof x.coachPlan!=="object")x.coachPlan=base.coachPlan; else x.coachPlan={...base.coachPlan,...x.coachPlan};
   if(!x.smartContext||typeof x.smartContext!=="object")x.smartContext=base.smartContext; else x.smartContext={...base.smartContext,...x.smartContext};
   if(!x.goalPlan||typeof x.goalPlan!=="object"||Array.isArray(x.goalPlan))x.goalPlan=base.goalPlan; else x.goalPlan={...base.goalPlan,...x.goalPlan};
-  ["weights","meals","training","recovery","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos"].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});
+  ["weights","meals","training","recovery","hydration","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos"].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});
   if(!x.restTargets || typeof x.restTargets!=="object" || Array.isArray(x.restTargets))x.restTargets={};
   return x;
 }
