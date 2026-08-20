@@ -110,6 +110,33 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 .authError{min-height:18px;color:#ff9d9d;font-size:11px;margin-top:9px}
 .cloudStatus{font-size:9px;color:#aaa;margin-right:5px}
 .headActions{display:flex;align-items:center;gap:6px}
+
+/* V26.5.6 S.u.G READINESS SIGNAL */
+.readinessHeaderSignal{appearance:none;border:1px solid #3a3a42;background:#111116;color:#d7d7dc;border-radius:999px;padding:6px 9px;font-size:9px;font-weight:900;letter-spacing:.05em;display:flex;align-items:center;gap:6px;white-space:nowrap}
+.readinessDot{width:9px;height:9px;border-radius:50%;display:inline-block;background:#777;box-shadow:0 0 0 rgba(255,255,255,0)}
+.readinessHeaderSignal.blue .readinessDot,.readinessSignal.blue .readinessSignalOrb{background:#53a7ff;box-shadow:0 0 10px #53a7ff,0 0 24px rgba(83,167,255,.55);animation:sugBluePulse 2s ease-in-out infinite}
+.readinessHeaderSignal.yellow .readinessDot,.readinessSignal.yellow .readinessSignalOrb{background:#ffd54d;box-shadow:0 0 10px #ffd54d,0 0 22px rgba(255,213,77,.55);animation:sugYellowBlink 1.15s ease-in-out infinite}
+.readinessHeaderSignal.red .readinessDot,.readinessSignal.red .readinessSignalOrb{background:#ff5656;box-shadow:0 0 12px #ff5656,0 0 28px rgba(255,86,86,.65);animation:sugRedPulse .8s ease-in-out infinite}
+.readinessHeaderSignal.unknown .readinessDot,.readinessSignal.unknown .readinessSignalOrb{background:#888}
+.readinessCard{overflow:hidden;position:relative}
+.readinessSignal{border-radius:15px;padding:14px;border:1px solid #34343b;background:linear-gradient(180deg,#111116,#0c0c0f)}
+.readinessSignal.blue{border-color:#255b8f;background:linear-gradient(180deg,rgba(26,73,117,.42),#0c0c0f)}
+.readinessSignal.yellow{border-color:#7a651f;background:linear-gradient(180deg,rgba(94,75,17,.35),#0c0c0f)}
+.readinessSignal.red{border-color:#8b3434;background:linear-gradient(180deg,rgba(103,27,27,.38),#0c0c0f)}
+.readinessSignalTop{display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:center}
+.readinessSignalOrb{width:38px;height:38px;border-radius:50%;background:#777;flex:0 0 auto}
+.readinessSignalTitle{font-size:17px;font-weight:950;letter-spacing:.05em}.readinessSignal.blue .readinessSignalTitle{color:#8fcaff}.readinessSignal.yellow .readinessSignalTitle{color:#ffe27a}.readinessSignal.red .readinessSignalTitle{color:#ff9494}
+.readinessSignalSub{font-size:10px;color:#b8b8bf;line-height:1.55;margin-top:2px}
+.readinessTrainGate{text-align:right;font-size:10px;font-weight:900;line-height:1.45}.readinessTrainGate b{display:block;font-size:14px}
+.readinessReasons{display:flex;gap:5px;flex-wrap:wrap;margin-top:11px}.readinessReason{font-size:9px;border:1px solid #383840;border-radius:999px;padding:4px 7px;color:#c9c9ce;background:#0b0b0e}
+.readinessActions{display:grid;gap:7px;margin-top:11px}.readinessAction{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;background:#0d0d10;border:1px solid #303038;border-radius:11px;padding:9px}.readinessAction.done{opacity:.62;border-color:#315a43}.readinessActionNum{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#202026;font-size:9px;font-weight:900}.readinessActionText b{font-size:10px}.readinessActionText small{display:block;color:#999;font-size:9px;line-height:1.45;margin-top:2px}.readinessAction button{padding:6px 8px;font-size:9px}.readinessAction.done button{color:var(--ok);border-color:#315a43}
+.readinessProgress{margin-top:9px;font-size:9px;color:#aaa}.readinessProgress b{color:#eee}
+.readinessButtons{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:10px}
+@keyframes sugBluePulse{0%,100%{transform:scale(.92);opacity:.78}50%{transform:scale(1.08);opacity:1}}
+@keyframes sugYellowBlink{0%,100%{opacity:.45}50%{opacity:1}}
+@keyframes sugRedPulse{0%,100%{transform:scale(.9);opacity:.55}50%{transform:scale(1.12);opacity:1}}
+@media(max-width:620px){.readinessHeaderSignal{padding:5px 7px;font-size:0}.readinessHeaderSignal .readinessHeaderText{display:none}.readinessSignalTop{grid-template-columns:auto 1fr}.readinessTrainGate{grid-column:1/-1;text-align:left;padding-left:49px}.readinessButtons{grid-template-columns:1fr}.readinessAction{grid-template-columns:auto 1fr}.readinessAction button{grid-column:2}}
+@media(prefers-reduced-motion:reduce){.readinessDot,.readinessSignalOrb{animation:none!important}}
 .hidden{display:none!important}
 .setupNote{font-size:10px;line-height:1.7;color:#aaa;margin-top:12px}
 
@@ -420,7 +447,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
   <div class="authBox">
     <img class="authBrandLogo" src="./brand-header.png?v=26-4-2-walk-route" alt="S.u.G OSAKA">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V26.5.5 ADAPTIVE CORE / MEMBERS ONLY</div>
+    <div class="sub">V26.5.6 ADAPTIVE CORE / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -535,9 +562,9 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
   <div class="head">
     <div class="brandIdentity">
       <img class="brandHeaderLogo" src="./brand-header.png?v=26-4-2-walk-route" alt="S.u.G OSAKA">
-      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.5.5 ADAPTIVE CORE / DAILY RHYTHM + HYDRATION + TRAINING + CARE</small></div>
+      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.5.6 ADAPTIVE CORE / READINESS SIGNAL + DAILY RHYTHM + HYDRATION + TRAINING + CARE</small></div>
     </div>
-    <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
+    <div class="headActions"><button id="readinessHeaderSignal" class="readinessHeaderSignal unknown" type="button" onclick="openRecoverySignal()" aria-label="今日の回復状態"><span class="readinessDot"></span><span class="readinessHeaderText">READINESS --</span></button><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
 </header>
 
@@ -708,6 +735,10 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
         <div class="kpi"><span>今日の摂取</span><b id="dKcal">0 kcal</b></div>
         <div class="kpi"><span>回復スコア</span><b id="dRec">--</b></div>
       </div>
+    </div>
+    <div class="card readinessCard">
+      <div class="row" style="align-items:center"><div><h2 style="margin-bottom:3px">S.u.G READINESS SIGNAL</h2><div class="muted">睡眠・疲労・飲酒・二日酔い・水分・日中リズム・痛み/CAREから「今日どう動くか」まで表示。</div></div><span class="badge">V26.5.6</span></div>
+      <div id="readinessDashboard" style="margin-top:9px"><span class="muted">判定中...</span></div>
     </div>
     <div id="nextAppointmentCard" class="card nextApptCard">
       <div class="nextApptTitle">次回予約</div>
@@ -986,7 +1017,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
       </div>
       <div id="tMetaHint" class="notice" style="margin-top:8px">種目名から対象部位・POFを自動候補化します。必要なら手動で変更できます。</div>
       <div class="trainingQuickCard">
-        <div class="trainingQuickHead"><div><div class="trainingQuickTitle">QUICK START｜前回・ROUTINE</div><div class="muted">前回値は下書きとして読み込み。保存するまでは履歴に追加されません。</div></div><span class="badge">V26.5.5</span></div>
+        <div class="trainingQuickHead"><div><div class="trainingQuickTitle">QUICK START｜前回・ROUTINE</div><div class="muted">前回値は下書きとして読み込み。保存するまでは履歴に追加されません。</div></div><span class="badge">V26.5.6</span></div>
         <div class="trainingQuickActions"><button class="secondary" type="button" onclick="loadPreviousExerciseDraft()">前回のこの種目</button><button class="secondary" type="button" onclick="loadPreviousSessionDraft()">前回SESSION</button></div>
         <div class="trainingRoutineGrid">
           <div><label>ROUTINE</label><select id="tRoutineSelect"><option value="">ROUTINEなし</option></select></div>
@@ -1309,6 +1340,10 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
   </section>
 
   <section id="recovery" class="panel">
+    <div class="card readinessCard">
+      <div class="sectionLead"><div><h2>S.u.G READINESS SIGNAL｜今日の回復信号</h2><div class="muted">🔵 READY / 🟡 CAUTION / 🔴 STOP。注意・中止のときは、次にやる回復行動を優先順で提示。</div></div></div>
+      <div id="readinessRecovery"><span class="muted">判定中...</span></div>
+    </div>
     <div class="card">
       <div class="sectionLead"><div><h2>回復・コンディション</h2><div class="muted">睡眠・疲労・ストレス・痛みから、その日の負荷を調整。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=26-4-2-walk-route" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="rDate" type="date"></div><div><label>睡眠時間</label><input id="rSleep" type="number" step="0.1"></div></div>
@@ -4064,6 +4099,7 @@ function smartRecoveryState(){
     if(hyd.hangover==="severe"){volume=0;label="二日酔い｜回復優先";cls="bad";rir="高負荷なし";reason+=`｜二日酔い 強い`;}
     else if(hyd.hangover==="moderate"&&volume>60){volume=60;label="二日酔い｜調整";cls="warn";rir="RIR +2";reason+=`｜二日酔い 中等度`;}
     else if(hyd.hangover==="mild"&&volume>80){volume=80;label="前日飲酒を考慮";cls="warn";rir="RIR +1";reason+=`｜二日酔い 軽度`;}
+    else if(hyd.alcoholPrev&&volume>80){volume=80;label="前日飲酒を考慮";cls="warn";rir="RIR +1";reason+=`｜前日飲酒あり`;}
     else if(hyd.alcoholPrev){reason+=`｜前日飲酒あり`;}
   }
   const rhythm=dailyRhythmDay(today()),rhythmA=rhythmAssessment(rhythm);
@@ -5241,7 +5277,7 @@ function carePlan(area, location, movement){
   };
 }
 
-// V26.5.5 DAILY RHYTHM + CAFFEINE + MEAL TIMING + HYDRATION + CARE + TRAINING METHODS
+// V26.5.6 READINESS SIGNAL + DAILY RHYTHM + CAFFEINE + MEAL TIMING + HYDRATION + CARE + TRAINING METHODS
 const CARE_AROM_KEYS={
   shoulder:["shoulder_flex","shoulder_abd","shoulder_er","shoulder_ir","shoulder_ext","shoulder_hflex","shoulder_hext","thoracic_ext","thoracic_rot"],
   neck:["cervical_flex","cervical_ext","cervical_rot","cervical_lat","thoracic_ext","thoracic_rot"],
@@ -5732,6 +5768,56 @@ function nearestWeightOnOrBefore(date){const rows=(m()?.weights||[]).filter(x=>x
 function mealTotals(date=today()){return m().meals.filter(x=>x.date===date).reduce((a,x)=>({kcal:a.kcal+x.kcal,p:a.p+x.p,f:a.f+x.f,c:a.c+x.c}),{kcal:0,p:0,f:0,c:0})}
 function recScore(r){if(!r)return null;let s=100;if(r.sleep<7)s-=Math.min(25,(7-r.sleep)*8);s-=Math.max(0,r.fatigue-3)*5;s-=Math.max(0,r.stress-3)*4;s-=r.pain*5;return Math.max(0,Math.round(s))}
 function recAdvice(r){if(!r)return {txt:"回復データ未入力",cls:""};let s=recScore(r);if(r.pain>=6)return {txt:`${s}点｜痛み優先。高負荷回避・種目変更/評価。`,cls:"bad"};if(s>=80)return {txt:`${s}点｜通常〜高強度。前回超えを狙える。`,cls:"ok"};if(s>=60)return {txt:`${s}点｜中強度。RIRを1〜2多めに。`,cls:"warn"};return {txt:`${s}点｜回復優先。低強度または休養。`,cls:"bad"}}
+
+// V26.5.6 READINESS SIGNAL: status -> action -> re-evaluation
+function openRecoverySignal(){const b=document.querySelector('.tab[data-tab="recovery"]');if(b)b.click();setTimeout(()=>document.getElementById("readinessRecovery")?.scrollIntoView({behavior:"smooth",block:"center"}),80)}
+function readinessTodayRecovery(){return (m()?.recovery||[]).filter(x=>x.date===today()).at(-1)||null;}
+function readinessActionStore(){if(!m())return [];if(!Array.isArray(m().readinessActions))m().readinessActions=[];return m().readinessActions;}
+function readinessActionDone(id,date=today()){return readinessActionStore().some(x=>x.date===date&&x.id===id&&x.done);}
+function toggleReadinessAction(id){if(!m())return;const rows=readinessActionStore(),date=today();let x=rows.find(v=>v.date===date&&v.id===id);if(!x){x={date,id,done:true,updatedAt:new Date().toISOString()};rows.push(x);}else{x.done=!x.done;x.updatedAt=new Date().toISOString();}persist();renderReadinessSignal();}
+function readinessHydrationPaceLow(hs){const hour=new Date().getHours();if(!hs||!Number(hs.goal))return false;const p=Number(hs.pct||0);if(hour>=22)return p<70;if(hour>=18)return p<50;if(hour>=12)return p<25;return false;}
+function readinessSignal(){
+  if(!m())return {level:"unknown",code:"DATA",title:"DATA CHECK",sub:"会員データを読み込み中",reasons:[],actions:[],training:"--",gate:"データ確認"};
+  const r=readinessTodayRecovery(),score=r?recScore(r):null,hyd=hydrationDay(today()),hs=hydrationStatus(hyd,today()),rh=dailyRhythmDay(today()),ra=rhythmAssessment(rh),care=smartCareState(),st=smartRecoveryState();
+  const reasons=[],actions=[];let level="blue";
+  const push=(id,title,detail,priority=50)=>{if(!actions.some(x=>x.id===id))actions.push({id,title,detail,priority});};
+  if(!r){level="yellow";reasons.push("今日の回復データ未入力");push("record_recovery","回復データを入力","睡眠・疲労・ストレス・痛みを入力して今日の判定精度を上げる。",5);}
+  if(r){
+    const sleep=Number(r.sleep||0),fat=Number(r.fatigue||0),stress=Number(r.stress||0),pain=Number(r.pain||0);
+    if(pain>=6){level="red";reasons.push(`痛み ${pain}/10`);push("stop_load","高強度トレーニングを中止","痛みを増やす負荷を避け、CARE/必要なら医療評価を優先。",1);push("care_review","痛み・CAREを再評価","部位・動作・24H反応を確認して負荷可能範囲を決める。",2);}
+    else if(pain>=4){if(level!=="red")level="yellow";reasons.push(`痛み ${pain}/10`);push("modify_load","負荷を調整","痛む種目・ROM・SETを調整し、RIRを多めに残す。",12);}
+    if(sleep>0&&sleep<5){if(score!=null&&score<45)level="red";else if(level!=="red")level="yellow";reasons.push(`睡眠 ${sleep}h`);push("sleep_recovery","睡眠回復を最優先","可能なら予定を詰めすぎず、今夜の睡眠時間を確保。",3);push("nap","短い昼寝を候補に","夜の睡眠を邪魔しない時間帯に20〜30分程度を候補。",22);}
+    else if(sleep>0&&sleep<7){if(level!=="red")level="yellow";reasons.push(`睡眠 ${sleep}h`);push("sleep_recovery","今夜の睡眠を確保","起床リズムを大きく崩さず、今夜の睡眠機会を確保。",16);}
+    if(fat>=8){if(score!=null&&score<45)level="red";else if(level!=="red")level="yellow";reasons.push(`疲労 ${fat}/10`);push("rest","回復時間を作る","追加活動を増やさず、食事・水分・睡眠を優先。",4);}
+    else if(fat>=6){if(level!=="red")level="yellow";reasons.push(`疲労 ${fat}/10`);push("rest","疲労を増やさない","SET数・活動量を抑えて翌日に残さない。",17);}
+    if(stress>=8&&level!=="red"){level="yellow";reasons.push(`ストレス ${stress}/10`);push("downshift","刺激を減らす","高強度を無理に狙わず、呼吸・軽い歩行・休息で切り替える。",28);}
+  }
+  if(hyd){
+    if(hyd.hangover==="severe"){level="red";reasons.push("二日酔い 強い");push("stop_load","高強度トレーニングを中止","今日は回復を優先し、体調が戻ってから再評価。",1);push("hydrate","水分を少量ずつ確保",`残り目安 ${Math.round(hs.remaining).toLocaleString()}ml。無理な一気飲みはしない。`,2);push("electrolyte","食事・電解質も確認","嘔吐や大量発汗がなければ、通常の食事と水分を基本に不足を補う。",6);}
+    else if(hyd.hangover==="moderate"){if(level!=="red")level="yellow";reasons.push("二日酔い 中等度");push("hydrate","水分を優先",`残り目安 ${Math.round(hs.remaining).toLocaleString()}ml。`,6);push("meal","食事を抜かない","消化しやすい炭水化物＋タンパク質を確保し、極端なカロリー削減を避ける。",8);push("modify_load","高強度を避ける","RIRを多めに残し、SETを減らして回復寄りに。",9);}
+    else if(hyd.hangover==="mild"){if(level!=="red")level="yellow";reasons.push("二日酔い 軽度");push("hydrate","水分を確保",`残り目安 ${Math.round(hs.remaining).toLocaleString()}ml。`,10);push("meal","糖質＋タンパク質を確保","体調を見ながら通常の食事へ戻す。",18);}
+    else if(hyd.alcoholPrev){if(level!=="red")level="yellow";reasons.push("前日飲酒");push("hydrate","水分を先に整える",`今日の目安 ${Math.round(hs.goal).toLocaleString()}ml。`,11);push("meal","食事を通常化","Proteinを維持し、トレ予定なら糖質を確保。",20);push("modify_load","ウォームアップで再確認","体調が良くても最初からPR狙いにせず、反応を見て負荷決定。",24);}
+    if(readinessHydrationPaceLow(hs)){if(level!=="red")level="yellow";reasons.push(`水分 ${hs.pct}%`);push("hydrate","水分を追加",`現在 ${Math.round(hs.amount).toLocaleString()} / ${Math.round(hs.goal).toLocaleString()}ml。`,7);}
+    if((hyd.sweat==="high"||hyd.sweat==="very_high")&&!Number(hyd.electrolyteServings||0)){if(level!=="red")level="yellow";reasons.push("発汗多め");push("electrolyte","食事・電解質を確認","発汗量が多い日は水だけでなく食事由来の塩分等も含めて補給を確認。",13);}
+  }
+  if(rh&&ra.score!=null&&ra.score<45){if(level!=="red")level="yellow";reasons.push(`RHYTHM ${ra.score}`);push("light","日中リズムを戻す","起床後〜日中の屋外光と活動時刻を整える。",14);push("caffeine","カフェイン時刻を見直す","今夜の睡眠を削らないよう最終摂取を前倒し。",25);}
+  else if(rh&&ra.score!=null&&ra.score<65){if(level!=="red")level="yellow";reasons.push(`RHYTHM ${ra.score}`);push("light","日中リズムを整える","朝〜日中の光・食事・活動時刻を大きくずらさない。",27);}
+  if(care?.active&&Number(care.painAfter||0)>=7){level="red";reasons.push(`CARE後 痛み ${care.painAfter}/10`);push("stop_load","該当負荷を中止","CARE後も痛みが強いため、その部位の高負荷を避ける。",1);push("care_review","CARE反応を確認","AFTER/24H反応を記録し、悪化・持続時は医療評価を検討。",2);}
+  if(level==="blue"){
+    reasons.push(score!=null?`回復 ${score}点`:"大きな制限なし");if(rh&&ra.score!=null)reasons.push(`RHYTHM ${ra.score}`);
+    push("warmup","ウォームアップでGO確認","動き・痛み・主観的な軽さを確認して予定セッションへ。",10);push("hydrate_maintain","水分を維持","今日の目安に沿ってこまめに補給。",20);push("progress","計画どおり進める","RIR・実REST・フォーム条件が揃えば前回超えを狙う。",30);
+  }
+  actions.sort((a,b)=>a.priority-b.priority);const top=actions.slice(0,level==="red"?4:3);
+  let code,title,sub,training,gate;
+  if(level==="red"){code="STOP";title="🔴 STOP｜今日は回復・安全を優先";sub="高強度は中止。回復行動を進め、症状・状態を再評価してから次を決める。";training="高強度 STOP";gate="RECOVERY / CARE";}
+  else if(level==="yellow"){code="CAUTION";title="🟡 CAUTION｜調整して進める";sub="注意要因あり。下の行動を先に行い、トレ前にもう一度判定。";training=`負荷 ${Math.round(st.volume||0)}%`;gate=st.rir||"RIR +1〜2";}
+  else{code="READY";title="🔵 READY｜今日は進められる";sub="回復条件は良好。ウォームアップで問題なければ計画どおり進める。";training="GO";gate=st.volume>=100?"PROGRESSION候補":st.rir||"通常";}
+  return {level,code,title,sub,reasons:[...new Set(reasons)].slice(0,6),actions:top,training,gate,smart:st,score};
+}
+function readinessActionHTML(a,i){const done=readinessActionDone(a.id);return `<div class="readinessAction ${done?"done":""}"><div class="readinessActionNum">${done?"✓":i+1}</div><div class="readinessActionText"><b>${esc(a.title)}</b><small>${esc(a.detail)}</small></div><button class="secondary" type="button" onclick='toggleReadinessAction(${JSON.stringify(a.id)})'>${done?"完了済み":"完了"}</button></div>`;}
+function readinessSignalHTML(sig){const done=sig.actions.filter(x=>readinessActionDone(x.id)).length;return `<div class="readinessSignal ${sig.level}"><div class="readinessSignalTop"><div class="readinessSignalOrb"></div><div><div class="readinessSignalTitle">${esc(sig.title)}</div><div class="readinessSignalSub">${esc(sig.sub)}</div></div><div class="readinessTrainGate"><span>TRAINING GATE</span><b>${esc(sig.training)}</b>${esc(sig.gate)}</div></div><div class="readinessReasons">${sig.reasons.map(x=>`<span class="readinessReason">${esc(x)}</span>`).join("")}</div><div class="readinessActions">${sig.actions.map(readinessActionHTML).join("")}</div><div class="readinessProgress">RECOVERY ACTION <b>${done}/${sig.actions.length}</b> 完了</div><div class="readinessButtons"><button class="secondary" type="button" onclick="openRecoverySignal()">回復入力・行動へ</button><button class="primary" type="button" onclick="readinessReevaluate()">現在データで再評価</button></div></div>`;}
+function renderReadinessSignal(){if(!m())return;const sig=readinessSignal(),html=readinessSignalHTML(sig);["readinessDashboard","readinessRecovery"].forEach(id=>{const el=document.getElementById(id);if(el)el.innerHTML=html;});const h=document.getElementById("readinessHeaderSignal");if(h){h.className=`readinessHeaderSignal ${sig.level}`;const t=h.querySelector(".readinessHeaderText");if(t)t.textContent=`${sig.code} ${sig.code==="READY"?"🔵":sig.code==="CAUTION"?"🟡":"🔴"}`;h.setAttribute("aria-label",`${sig.code}｜${sig.title}`);}}
+function readinessReevaluate(){renderHydration();renderDailyRhythm();renderReadinessSignal();renderSmartCore(true);}
 function vol(x){
   const d=Array.isArray(x?.setDetails)?x.setDetails:[];
   if(d.length)return d.reduce((sum,s)=>sum+Number(s.weight||0)*Number(s.reps||0),0);
@@ -7331,7 +7417,7 @@ function renderAll(){
   prTable.innerHTML=exs.length?`<div style="overflow-x:auto"><table class="table"><tr><th>種目</th><th>部位 / POF</th><th>最新</th><th>総重量</th><th>推定1RM</th><th>前回比</th></tr>${exs.map(ex=>{const t=trainingTrend(ex),x=t?.cur;if(!x)return"";const prx=pr(ex);const isPr=Math.abs(e1rm(x)-e1rm(prx))<0.0001;const meta=trainingMetaForRow(x);return `<tr><td>${esc(ex)}</td><td><small>${esc(meta.part)}<br>${esc(meta.pof)}</small></td><td>${x.weight}kg×${x.reps}×${x.sets}</td><td>${Math.round(t.curVol).toLocaleString()}kg</td><td>${t.curE1.toFixed(1)}kg${isPr?' PR':''}</td><td><small>総 ${fmtPct(t.volPct)}<br>1RM ${fmtPct(t.e1Pct)}</small></td></tr>`}).join("")}</table></div>`:'<span class="muted">記録なし</span>';
   {const hyd=hydrationDay(today()),hs=hydrationStatus(hyd,today()),hydLine=hyd?`<br><small>HYDRATION ${Math.round(hs.amount).toLocaleString()}/${Math.round(hs.goal).toLocaleString()}ml（${hs.pct}%）｜${esc(hydrationAdviceText(hyd))}</small>`:"",rh=dailyRhythmDay(today()),ra=rhythmAssessment(rh),rhLine=rh?`<br><small>RHYTHM ${ra.score}点｜${esc(ra.label)}｜${esc((ra.flags||[]).slice(0,3).map(x=>x.t).join(" / ")||"大きな注意なし")}</small>`:"";recoveryJudge.innerHTML=`<span class="badge ${adv.cls}">${esc(adv.txt)}</span>${hydLine}${rhLine}`;}
   recoveryList.innerHTML=[...mm.recovery].reverse().map((x,ri)=>{let i=mm.recovery.length-1-ri,a=recAdvice(x);return `<div class="item"><div class="row"><div><strong>${x.date}｜睡眠 ${x.sleep}h</strong><br><small>疲労${x.fatigue} / ストレス${x.stress} / 痛み${x.pain}</small><br><span class="badge ${a.cls}">${recScore(x)}点</span></div><button class="danger" onclick="remove('recovery',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
-  populateExercisePicker();renderExerciseMasterList();renderTrainingRoutineOptions();renderTrainingQueue();trainingSetMethodChanged(false);renderTrainingPreview();renderPofSummary();syncTrainingMeta();if(!restTimerState.running)restTimerLoadExerciseTarget();restTimerRender();renderNextLoadPanel();renderRomHistory();renderAromHistory();renderAromAsymmetry();renderAromReference();renderShrHistory();renderMovementHistory();renderMoveGuide();renderJointByJoint();renderIntegratedAssessment();renderIntegratedHistory();renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();renderCheckin();renderSmartCore();renderGoalPlan();renderResponseEngine();renderActivity();renderCareHistory();renderCareResponseProfile();renderCareFollowupPanel();renderCareReferralGate();renderMedicalFeedbackHistory();renderHydration();renderDailyRhythm();drawChart();renderReport();renderPhotos();
+  populateExercisePicker();renderExerciseMasterList();renderTrainingRoutineOptions();renderTrainingQueue();trainingSetMethodChanged(false);renderTrainingPreview();renderPofSummary();syncTrainingMeta();if(!restTimerState.running)restTimerLoadExerciseTarget();restTimerRender();renderNextLoadPanel();renderRomHistory();renderAromHistory();renderAromAsymmetry();renderAromReference();renderShrHistory();renderMovementHistory();renderMoveGuide();renderJointByJoint();renderIntegratedAssessment();renderIntegratedHistory();renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();renderCheckin();renderSmartCore();renderGoalPlan();renderResponseEngine();renderActivity();renderCareHistory();renderCareResponseProfile();renderCareFollowupPanel();renderCareReferralGate();renderMedicalFeedbackHistory();renderHydration();renderDailyRhythm();renderReadinessSignal();drawChart();renderReport();renderPhotos();
 }
 
 function monthLabel(mon){
