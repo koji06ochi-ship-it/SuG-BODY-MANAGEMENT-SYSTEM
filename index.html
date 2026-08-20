@@ -936,6 +936,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
         <div class="restTimerOptions">
           <label><input id="restTimerSound" type="checkbox" checked> チャイム</label>
           <label><input id="restTimerVibrate" type="checkbox" checked> バイブ（対応端末）</label>
+          <button class="secondary" type="button" onclick="restTimerAudioTest()" style="padding:5px 10px">音テスト</button>
           <button class="secondary" type="button" onclick="restTimerReset(true)" style="padding:5px 10px">RESET</button>
         </div>
         <div id="restTimerStatus" class="notice restTimerStatus">待機中｜種目ごとの目標RESTを記憶します。</div>
@@ -2743,20 +2744,35 @@ function restTimerStoreTarget(sec){
   m().restTargets[exercise]=Number(sec);
   persist();
 }
-function restTimerEnsureAudio(){
+async function restTimerEnsureAudio(){
   try{
-    if(!restTimerState.audio){const C=window.AudioContext||window.webkitAudioContext;if(C)restTimerState.audio=new C()}
-    if(restTimerState.audio?.state==="suspended")restTimerState.audio.resume();
-  }catch(_e){}
+    if(!restTimerState.audio){
+      const C=window.AudioContext||window.webkitAudioContext;
+      if(C)restTimerState.audio=new C();
+    }
+    const c=restTimerState.audio;if(!c)return null;
+    if(c.state==="suspended")await c.resume();
+    return c;
+  }catch(_e){return null}
 }
-function restTimerBeep(freq=880,duration=.08,volume=.08){
+async function restTimerBeep(freq=880,duration=.08,volume=.08){
   if(!document.getElementById("restTimerSound")?.checked)return;
   try{
-    restTimerEnsureAudio();const c=restTimerState.audio;if(!c)return;
-    const o=c.createOscillator(),g=c.createGain(),t=c.currentTime;
-    o.frequency.value=freq;g.gain.setValueAtTime(volume,t);g.gain.exponentialRampToValueAtTime(.001,t+duration);
-    o.connect(g);g.connect(c.destination);o.start(t);o.stop(t+duration);
+    const c=await restTimerEnsureAudio();if(!c||c.state!=="running")return;
+    const o=c.createOscillator(),g=c.createGain(),t=c.currentTime+.01;
+    o.type="sine";o.frequency.setValueAtTime(freq,t);
+    g.gain.setValueAtTime(Math.max(.0001,volume),t);
+    g.gain.exponentialRampToValueAtTime(.001,t+duration);
+    o.connect(g);g.connect(c.destination);o.start(t);o.stop(t+duration+.02);
   }catch(_e){}
+}
+async function restTimerAudioUnlock(){
+  try{
+    const c=await restTimerEnsureAudio();if(!c)return false;
+    const b=c.createBuffer(1,1,22050),src=c.createBufferSource();
+    src.buffer=b;src.connect(c.destination);src.start(0);
+    return c.state==="running";
+  }catch(_e){return false}
 }
 function restTimerVibrate(pattern){
   if(!document.getElementById("restTimerVibrate")?.checked)return;
@@ -2869,16 +2885,22 @@ function restTimerTick(){
   const remaining=Number(restTimerState.targetSec||120)-restTimerElapsedSec();
   restTimerAnnounce(remaining);restTimerRender();
 }
-function restTimerStart(){
+async function restTimerStart(){
   if(restTimerState.running)return;
   const count=restTimerTotalSets();
   if(count<2)return alert("REST TIMER内の総SET数を2以上で入力してください");
-  restTimerEnsureAudio();
+  await restTimerAudioUnlock();
   const target=restTimerTargetValue();restTimerState.targetSec=target;restTimerStoreTarget(target);
   restTimerPrepareDetails();
   restTimerState.running=true;restTimerState.paused=false;restTimerState.startMs=Date.now();restTimerState.elapsedBeforeMs=0;restTimerState.lastWhole=null;
   clearInterval(restTimerState.tick);restTimerState.tick=setInterval(restTimerTick,200);
-  restTimerBeep(520,.06,.045);restTimerRender();
+  await restTimerBeep(520,.06,.045);restTimerRender();
+}
+async function restTimerAudioTest(){
+  const ok=await restTimerAudioUnlock();
+  if(!ok)return alert("iPhoneの音声を有効化できませんでした。消音モード解除・音量確認後、もう一度押してください。");
+  await restTimerBeep(740,.10,.11);
+  setTimeout(()=>restTimerBeep(980,.14,.11),150);
 }
 function restTimerTogglePause(){
   if(!restTimerState.running)return;
