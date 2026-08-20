@@ -2755,7 +2755,7 @@ async function restTimerEnsureAudio(){
     return c;
   }catch(_e){return null}
 }
-async function restTimerBeep(freq=880,duration=.08,volume=.08){
+async function restTimerBeep(freq=880,duration=.10,volume=.30){
   if(!document.getElementById("restTimerSound")?.checked)return;
   try{
     const c=await restTimerEnsureAudio();if(!c||c.state!=="running")return;
@@ -2859,9 +2859,9 @@ function restTimerAnnounce(remaining){
   const whole=Math.max(0,Math.ceil(remaining));
   if(whole===restTimerState.lastWhole)return;
   restTimerState.lastWhole=whole;
-  if(whole===10){restTimerBeep(660,.07,.05);restTimerVibrate(25)}
-  if([3,2,1].includes(whole)){restTimerBeep(880,.07,.07);restTimerVibrate(35)}
-  if(whole===0){restTimerBeep(1040,.12,.09);setTimeout(()=>restTimerBeep(1040,.16,.09),180);restTimerVibrate([80,80,160])}
+  if(whole===10){restTimerBeep(660,.10,.22);restTimerVibrate(25)}
+  if([3,2,1].includes(whole)){restTimerBeep(880,.11,.30);restTimerVibrate(35)}
+  if(whole===0){restTimerBeep(1040,.18,.38);setTimeout(()=>restTimerBeep(1040,.22,.38),180);restTimerVibrate([80,80,160])}
 }
 function restTimerRender(){
   const display=document.getElementById("restTimerDisplay"),elapsedEl=document.getElementById("restTimerElapsed"),status=document.getElementById("restTimerStatus"),next=document.getElementById("restTimerNextSet"),start=document.getElementById("restTimerStartBtn"),pause=document.getElementById("restTimerPauseBtn"),nextBtn=document.getElementById("restTimerNextBtn");
@@ -2894,13 +2894,13 @@ async function restTimerStart(){
   restTimerPrepareDetails();
   restTimerState.running=true;restTimerState.paused=false;restTimerState.startMs=Date.now();restTimerState.elapsedBeforeMs=0;restTimerState.lastWhole=null;
   clearInterval(restTimerState.tick);restTimerState.tick=setInterval(restTimerTick,200);
-  await restTimerBeep(520,.06,.045);restTimerRender();
+  await restTimerBeep(520,.10,.20);restTimerRender();
 }
 async function restTimerAudioTest(){
   const ok=await restTimerAudioUnlock();
   if(!ok)return alert("iPhoneの音声を有効化できませんでした。消音モード解除・音量確認後、もう一度押してください。");
-  await restTimerBeep(740,.10,.11);
-  setTimeout(()=>restTimerBeep(980,.14,.11),150);
+  await restTimerBeep(740,.14,.32);
+  setTimeout(()=>restTimerBeep(980,.18,.38),170);
 }
 function restTimerTogglePause(){
   if(!restTimerState.running)return;
@@ -2913,7 +2913,7 @@ function restTimerNextSet(){
   const actual=restTimerElapsedSec();
   const saved=restTimerRecordActual(actual);
   clearInterval(restTimerState.tick);restTimerState.tick=null;restTimerState.running=false;restTimerState.paused=false;restTimerState.startMs=0;restTimerState.elapsedBeforeMs=0;restTimerState.lastWhole=null;
-  restTimerBeep(720,.07,.05);restTimerVibrate(35);restTimerRender();
+  restTimerBeep(720,.10,.24);restTimerVibrate(35);restTimerRender();
   const status=document.getElementById("restTimerStatus");
   if(status)status.textContent=saved?`実REST ${Math.round(actual)}秒を自動記録しました。次SETを開始。`:`実REST ${Math.round(actual)}秒。SET詳細の保存先がないためタイマーのみ終了。`;
 }
