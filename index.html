@@ -6,15 +6,15 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>S.u.G BODY MANAGEMENT SYSTEM V26.2.6.1 ADAPTIVE CORE</title>
+<title>S.u.G BODY MANAGEMENT SYSTEM V26.2.6.2 ADAPTIVE CORE</title>
 <meta name="theme-color" content="#09090a">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="S.u.G BODY">
-<link rel="manifest" href="./manifest.webmanifest?v=26-2-6-1-rest-timer">
-<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png?v=26-2-6-1-rest-timer">
-<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=26-2-6-1-rest-timer">
+<link rel="manifest" href="./manifest.webmanifest?v=26-2-6-2-rest-timer-set-input">
+<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png?v=26-2-6-2-rest-timer-set-input">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=26-2-6-2-rest-timer-set-input">
 <style>
 :root{
   --bg:#09090a;--card:#141417;--card2:#1a1a1f;--gold:#d8b35b;--gold2:#f3d98b;
@@ -352,7 +352,7 @@ button.primary{box-shadow:0 5px 18px rgba(184,140,50,.10)}
 @media(max-width:460px){.responseToolbar{grid-template-columns:1fr}.responseCompare{grid-template-columns:1fr}.responseMeasureGrid{grid-template-columns:1fr}.responseMeasureGrid .wide{grid-column:auto}.bodyProfileGrid{grid-template-columns:1fr 1fr}}
 
 
-/* V26.2.6.1 REST TIMER */
+/* V26.2.6.2 REST TIMER */
 .restTimerCard{margin-top:9px;background:linear-gradient(180deg,#171510,#0e0e11);border:1px solid #5b4922;border-radius:14px;padding:12px}.restTimerHead{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.restTimerTitle{font-size:12px;font-weight:900;color:var(--gold2);letter-spacing:.06em}.restTimerDisplay{font-variant-numeric:tabular-nums;font-size:48px;line-height:1;font-weight:900;color:var(--gold2);letter-spacing:.02em;text-align:center;margin:13px 0 5px}.restTimerElapsed{text-align:center;color:#a7a7aa;font-size:10px;font-variant-numeric:tabular-nums}.restTimerPreset{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:9px}.restTimerPreset button{padding:9px 4px;font-size:10px}.restTimerControls{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:7px;margin-top:9px}.restTimerControls button{min-height:45px}.restTimerStatus{margin-top:9px;font-size:10px;line-height:1.55}.restTimerOptions{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}.restTimerOptions label{display:flex;align-items:center;gap:6px;font-size:9px;color:#aaa}.restTimerOptions input[type=checkbox]{width:auto}.restTimerNext{font-weight:800;color:var(--gold2)}@media(max-width:620px){.restTimerDisplay{font-size:42px}.restTimerControls{grid-template-columns:1fr 1fr}.restTimerControls .restTimerWide{grid-column:1/-1}.restTimerPreset{grid-template-columns:repeat(4,1fr)}}
 </style>
 <script>
@@ -368,9 +368,9 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
 
 <div id="authGate" class="authGate">
   <div class="authBox">
-    <img class="authBrandLogo" src="./brand-header.png?v=26-2-6-1-rest-timer" alt="S.u.G OSAKA">
+    <img class="authBrandLogo" src="./brand-header.png?v=26-2-6-2-rest-timer-set-input" alt="S.u.G OSAKA">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V26.2.6.1 ADAPTIVE CORE / MEMBERS ONLY</div>
+    <div class="sub">V26.2.6.2 ADAPTIVE CORE / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -379,7 +379,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
     <div class="authLinks"><button class="linkBtn" type="button" onclick="requestPasswordReset()">パスワードを忘れた方</button></div>
     <div id="authError" class="authError"></div>
     <div class="setupNote">S.u.G会員限定。管理者から届いた招待リンクで初回登録してください。</div>
-    <img class="authMascot" src="./mascot-highfive.png?v=26-2-6-1-rest-timer" alt="">
+    <img class="authMascot" src="./mascot-highfive.png?v=26-2-6-2-rest-timer-set-input" alt="">
     <div id="pwaGuide" class="pwaGuide hidden"><b>iPhoneホーム画面対応</b><br>Safariの共有ボタン →「ホーム画面に追加」で、アプリのように起動できます。</div>
   </div>
 </div>
@@ -484,8 +484,8 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
 <header>
   <div class="head">
     <div class="brandIdentity">
-      <img class="brandHeaderLogo" src="./brand-header.png?v=26-2-6-1-rest-timer" alt="S.u.G OSAKA">
-      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.2.6.1 ADAPTIVE CORE / CARE RESPONSE + REST TIMER</small></div>
+      <img class="brandHeaderLogo" src="./brand-header.png?v=26-2-6-2-rest-timer-set-input" alt="S.u.G OSAKA">
+      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.2.6.2 ADAPTIVE CORE / CARE RESPONSE + REST TIMER</small></div>
     </div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
@@ -519,7 +519,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
 
   <section id="adminBoard" class="panel">
     <div id="adminBrandHero" class="card adminBrandHero">
-      <img class="adminOfficialLogo" src="./brand-official.jpg?v=26-2-6-1-rest-timer" alt="S.u.G OSAKA official brand">
+      <img class="adminOfficialLogo" src="./brand-official.jpg?v=26-2-6-2-rest-timer-set-input" alt="S.u.G OSAKA official brand">
       <div class="adminBrandText"><h2>S.u.G OSAKA</h2><p>PERSONAL TRAINING × PERSONAL STRETCH × CONDITIONING<br>会員管理・予約・フォロー・コンディションを一つの運営画面へ。</p></div>
     </div>
     <div class="card dailyOpsCard">
@@ -644,11 +644,11 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
   <section id="dash" class="panel active">
     <div class="card sugHero">
       <div>
-        <img class="sugHeroLogo" src="./brand-header.png?v=26-2-6-1-rest-timer" alt="S.u.G OSAKA">
+        <img class="sugHeroLogo" src="./brand-header.png?v=26-2-6-2-rest-timer-set-input" alt="S.u.G OSAKA">
         <div class="sugHeroTitle">鍛える。整える。魅せる。</div>
         <div class="sugHeroSub">TRAINING / CONDITIONING / STYLE UPDATE<br>記録して、管理して、次の身体へ。</div>
       </div>
-      <img class="sugHeroMascot" src="./mascot-highfive.png?v=26-2-6-1-rest-timer" alt="">
+      <img class="sugHeroMascot" src="./mascot-highfive.png?v=26-2-6-2-rest-timer-set-input" alt="">
     </div>
     <div class="card">
       <h2>現在の状態</h2>
@@ -707,7 +707,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
 
   <section id="smart" class="panel">
     <div class="card smartHero">
-      <div class="sectionLead"><div><div class="smartHeroTitle">S.u.G SMART PLAN</div><div class="smartHeroSub">外部AI・APIなし。会員データとS.u.Gルールから「今日の優先順位」を自動計算します。</div></div><img class="sectionMascot" src="./mascot-highfive.png?v=26-2-6-1-rest-timer" alt=""></div>
+      <div class="sectionLead"><div><div class="smartHeroTitle">S.u.G SMART PLAN</div><div class="smartHeroSub">外部AI・APIなし。会員データとS.u.Gルールから「今日の優先順位」を自動計算します。</div></div><img class="sectionMascot" src="./mascot-highfive.png?v=26-2-6-2-rest-timer-set-input" alt=""></div>
       <div id="smartTargetNotice" class="notice" style="margin-top:9px">分析対象を確認中...</div>
       <div class="grid2" style="margin-top:10px">
         <div><label>今日の食欲</label><select id="smartAppetite" onchange="saveSmartContext()"><option value="normal">普通</option><option value="low">低い</option><option value="high">強い</option></select></div>
@@ -751,7 +751,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
     <div class="card responseHero">
       <div class="row" style="align-items:center">
         <div><div class="responseHeroTitle">S.u.G RESPONSE ENGINE</div><div class="responseHeroSub">CURRENT 28D × PREVIOUS 28D × 本人の過去反応。体型から遺伝子を推測せず、「今の条件で何に反応しているか」を更新します。</div></div>
-        <span class="badge">V26.2.6.1</span>
+        <span class="badge">V26.2.6.2</span>
       </div>
       <div class="responseToolbar" style="margin-top:10px">
         <div><label>詳細を見る部位</label><select id="responsePartSelect" onchange="renderResponseEngine()"><option>胸</option><option>背中</option><option>肩</option><option>腕</option><option>前脚</option><option>後脚・臀部</option><option>姿勢</option><option>全身</option></select></div>
@@ -829,7 +829,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
 
   <section id="activity" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>歩数・活動</h2><div class="muted">現行V25は手入力。Apple Health / HealthKit自動連携は次段階で接続。</div></div><img class="sectionMascot" src="./mascot-jumprope.png?v=26-2-6-1-rest-timer" alt=""></div>
+      <div class="sectionLead"><div><h2>歩数・活動</h2><div class="muted">現行V25は手入力。Apple Health / HealthKit自動連携は次段階で接続。</div></div><img class="sectionMascot" src="./mascot-jumprope.png?v=26-2-6-2-rest-timer-set-input" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="aDate" type="date"></div><div><label>歩数</label><input id="aSteps" type="number" min="0" step="100"></div></div>
       <div style="margin-top:8px"><label>メモ</label><input id="aMemo" placeholder="例：通勤＋散歩、脚トレ日、外出少なめ"></div>
       <button class="primary" style="width:100%;margin-top:9px" onclick="addActivity()">歩数を記録</button>
@@ -840,7 +840,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
 
   <section id="care" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>症状別セルフケア</h2><div class="muted">腰・首・肩・膝・足首・手首・肘。診断ではなく、痛む場所と動作 → 危険サイン確認 → 軽いセルフケア → 前後評価。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=26-2-6-1-rest-timer" alt=""></div>
+      <div class="sectionLead"><div><h2>症状別セルフケア</h2><div class="muted">腰・首・肩・膝・足首・手首・肘。診断ではなく、痛む場所と動作 → 危険サイン確認 → 軽いセルフケア → 前後評価。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=26-2-6-2-rest-timer-set-input" alt=""></div>
       <div class="notice">強い症状・外傷・神経症状などがある場合はセルフケアより医療評価を優先します。痛みやしびれが増える動きは中止してください。</div>
       <div class="selfCareChoice" style="margin-top:9px"><div><label>部位</label><select id="careArea" onchange="renderCareQuestions()"><option value="lowback">腰</option><option value="neck">首</option><option value="shoulder">肩</option><option value="knee">膝</option><option value="ankle">足首</option><option value="wrist">手首</option><option value="elbow">肘</option></select></div><div><label>痛み BEFORE 0-10</label><input id="carePainBefore" type="number" min="0" max="10" value="3"></div></div>
       <div class="selfCareChoice" style="margin-top:8px"><div><label>痛む場所</label><select id="careLocation"></select></div><div><label>痛む動作</label><select id="careMovement"></select></div></div>
@@ -858,7 +858,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
 
   <section id="weight" class="panel">
     <div class="card">
-      <img class="mascotMini" src="./mascot-jumprope.png?v=26-2-6-1-rest-timer" alt="">
+      <img class="mascotMini" src="./mascot-jumprope.png?v=26-2-6-2-rest-timer-set-input" alt="">
       <h2>体重記録</h2>
       <div class="grid2"><div><label>日付</label><input id="wDate" type="date"></div><div><label>体重 kg</label><input id="wWeight" type="number" step="0.1"></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>体脂肪率 %</label><input id="wFat" type="number" step="0.1"></div><div><label>メモ</label><input id="wMemo"></div></div>
@@ -880,7 +880,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
 
   <section id="training" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>トレーニング記録</h2><div class="muted">重量・REP・SET・RIR・REST・総重量・推定1RMを記録し、全身回復とSET間回復を分けて確認。</div></div><img class="sectionMascot" src="./mascot-basketball.png?v=26-2-6-1-rest-timer" alt=""></div>
+      <div class="sectionLead"><div><h2>トレーニング記録</h2><div class="muted">重量・REP・SET・RIR・REST・総重量・推定1RMを記録し、全身回復とSET間回復を分けて確認。</div></div><img class="sectionMascot" src="./mascot-basketball.png?v=26-2-6-2-rest-timer-set-input" alt=""></div>
       <div class="grid2">
   <div><label>日付</label><input id="tDate" type="date"></div>
   <div>
@@ -912,12 +912,14 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
       <div class="restTimerCard" id="restTimerCard">
         <div class="restTimerHead">
           <div><div class="restTimerTitle">REST TIMER｜INTER-SET</div><div class="muted">SET終了でSTART → 次SET開始で実RESTをSET詳細へ自動記録。</div></div>
-          <span class="badge">V26.2.6.1</span>
+          <span class="badge">V26.2.6.2</span>
         </div>
-        <div class="grid2" style="margin-top:9px">
+        <div class="grid3" style="margin-top:9px">
           <div><label>目標REST（秒）</label><input id="restTimerTarget" type="number" min="10" max="1800" step="5" value="120" oninput="restTimerTargetChanged()"></div>
-          <div><label>次のREST記録先</label><div id="restTimerNextSet" class="notice restTimerNext" style="margin-top:0">SET数を入力</div></div>
+          <div><label>総SET数</label><input id="restTimerSets" type="number" min="2" max="20" step="1" value="3" inputmode="numeric" oninput="restTimerSetCountChanged()"></div>
+          <div><label>次のREST記録先</label><div id="restTimerNextSet" class="notice restTimerNext" style="margin-top:0">SET 2 前</div></div>
         </div>
+        <div class="muted" style="margin-top:6px">総SET数はここで設定できます。トレーニング履歴には「記録」を押すまで保存されません。</div>
         <div class="restTimerPreset">
           <button class="secondary" type="button" onclick="restTimerPreset(60)">60秒</button>
           <button class="secondary" type="button" onclick="restTimerPreset(90)">90秒</button>
@@ -934,7 +936,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
         <div class="restTimerOptions">
           <label><input id="restTimerSound" type="checkbox" checked> チャイム</label>
           <label><input id="restTimerVibrate" type="checkbox" checked> バイブ（対応端末）</label>
-          <button class="secondary" type="button" onclick="restTimerReset()" style="padding:5px 10px">RESET</button>
+          <button class="secondary" type="button" onclick="restTimerReset(true)" style="padding:5px 10px">RESET</button>
         </div>
         <div id="restTimerStatus" class="notice restTimerStatus">待機中｜種目ごとの目標RESTを記憶します。</div>
       </div>
@@ -966,7 +968,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
 
   <section id="rom" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>ROMスクリーニング</h2><div class="muted">V25初期版：スクワットの側面画像から、2DランドマークでボトムROMを数値化。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=26-2-6-1-rest-timer" alt=""></div>
+      <div class="sectionLead"><div><h2>ROMスクリーニング</h2><div class="muted">V25初期版：スクワットの側面画像から、2DランドマークでボトムROMを数値化。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=26-2-6-2-rest-timer-set-input" alt=""></div>
       <div class="notice">撮影：真横から全身を入れ、スクワット最下点で撮影。カメラは傾けず、肩・股関節・膝・足首・つま先が見える状態を推奨。</div>
       <div class="grid2" style="margin-top:9px">
         <div><label>日付</label><input id="romDate" type="date"></div>
@@ -983,7 +985,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
       <div id="romResult"><span class="muted">画像を解析すると結果が表示されます。</span></div>
     </div>
     <div class="card">
-      <div class="sectionLead"><div><h2>関節 AROM / PROM</h2><div class="muted">ストレッチ・コンディショニング側の関節可動域評価。AROM＝自力、PROM＝外力補助で確認。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=26-2-6-1-rest-timer" alt=""></div>
+      <div class="sectionLead"><div><h2>関節 AROM / PROM</h2><div class="muted">ストレッチ・コンディショニング側の関節可動域評価。AROM＝自力、PROM＝外力補助で確認。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=26-2-6-2-rest-timer-set-input" alt=""></div>
       <div class="notice">PROMは痛みを押して無理に測らないでください。AROMだけでも判定可能。伸展は0°を基準とし、伸展不足はマイナス入力（例：膝伸展10°不足＝-10°）。</div>
       <div class="grid2" style="margin-top:9px">
         <div><label>日付</label><input id="aromDate" type="date"></div>
@@ -1042,7 +1044,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
       <div id="aromResult"><span class="muted">数値を入力すると、参考帯・AROM/PROM差・機能への影響候補を表示します。</span></div>
     </div>
     <div class="card">
-      <div class="sectionLead"><div><h2>肩甲上腕リズム（SHR）</h2><div class="muted">写真で腕の挙上角を自動検出＋肩甲骨だけ2点タップ。数字を自分で測らなくてOK。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=26-2-6-1-rest-timer" alt=""></div>
+      <div class="sectionLead"><div><h2>肩甲上腕リズム（SHR）</h2><div class="muted">写真で腕の挙上角を自動検出＋肩甲骨だけ2点タップ。数字を自分で測らなくてOK。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=26-2-6-2-rest-timer-set-input" alt=""></div>
 
       <div class="notice">
         <b>撮影：</b>後ろから、全身または腰〜頭まで入るように撮影。①腕を体側に下ろした写真 ②同じ位置から腕を上げた写真。肩甲面挙上か外転が一番測りやすい。
@@ -1123,7 +1125,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
       <div class="muted">同日・同動作で左右を保存すると、自動で差が大きい順に表示。</div>
       <div id="aromAsymmetry" style="margin-top:8px"><span class="muted">左右データなし</span></div>
     </div>    <div class="card">
-      <div class="sectionLead"><div><h2>Joint by Joint MAP</h2><div class="muted">関節可動域・左右差・CARE・SHRを統合して、次に見る場所を自動整理。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=26-2-6-1-rest-timer" alt=""></div>
+      <div class="sectionLead"><div><h2>Joint by Joint MAP</h2><div class="muted">関節可動域・左右差・CARE・SHRを統合して、次に見る場所を自動整理。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=26-2-6-2-rest-timer-set-input" alt=""></div>
       <div class="notice">S.u.Gの運動スクリーニング用フレーム。ROMだけで「安定性不足」や原因筋を断定しません。膝・腰などの安定性は次の動作スクリーンと合わせて評価します。</div>
       <button class="secondary" style="width:100%;margin-top:9px" onclick="renderJointByJoint()">最新データで更新</button>
       <div id="jbjPriority" class="jbjPriority"><b>優先候補</b><br>評価データを入力すると表示します。</div>
@@ -1131,7 +1133,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
     </div>
 
     <div class="card">
-      <div class="sectionLead"><div><h2>動作スクリーン</h2><div class="muted">写真1枚からPoseを自動解析。動作の「傾向」を数値化して、ROM・CARE・Joint by Jointとつなげます。</div></div><img class="sectionMascot" src="./mascot-running.png?v=26-2-6-1-rest-timer" alt=""></div>
+      <div class="sectionLead"><div><h2>動作スクリーン</h2><div class="muted">写真1枚からPoseを自動解析。動作の「傾向」を数値化して、ROM・CARE・Joint by Jointとつなげます。</div></div><img class="sectionMascot" src="./mascot-running.png?v=26-2-6-2-rest-timer-set-input" alt=""></div>
       <div class="notice"><b>診断ではありません。</b> 2D写真はカメラ位置・奥行き・動作の瞬間で数値が変わります。同じ撮影条件で左右・前回比較を優先します。</div>
 
       <div class="grid2" style="margin-top:9px">
@@ -1166,7 +1168,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
     </div>
 
     <div class="card">
-      <div class="sectionLead"><div><h2>S.u.G 統合判定</h2><div class="muted">CARE・回復・ROM・AROM/PROM・SHR・動作スクリーン・トレーニングを横断し、今の優先課題TOP3を自動整理。</div></div><img class="sectionMascot" src="./mascot-highfive.png?v=26-2-6-1-rest-timer" alt=""></div>
+      <div class="sectionLead"><div><h2>S.u.G 統合判定</h2><div class="muted">CARE・回復・ROM・AROM/PROM・SHR・動作スクリーン・トレーニングを横断し、今の優先課題TOP3を自動整理。</div></div><img class="sectionMascot" src="./mascot-highfive.png?v=26-2-6-2-rest-timer-set-input" alt=""></div>
       <div class="notice">各評価の「診断」を行う機能ではありません。記録間の組み合わせから、次に確認・調整する優先順位を作るS.u.G運用支援です。</div>
       <button class="primary" style="width:100%;margin-top:9px" onclick="renderIntegratedAssessment(true)">最新データで統合判定</button>
       <div id="integratedResult"><span class="muted">記録を入力すると自動で統合します。</span></div>
@@ -1192,7 +1194,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
 
   <section id="recovery" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>回復・コンディション</h2><div class="muted">睡眠・疲労・ストレス・痛みから、その日の負荷を調整。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=26-2-6-1-rest-timer" alt=""></div>
+      <div class="sectionLead"><div><h2>回復・コンディション</h2><div class="muted">睡眠・疲労・ストレス・痛みから、その日の負荷を調整。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=26-2-6-2-rest-timer-set-input" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="rDate" type="date"></div><div><label>睡眠時間</label><input id="rSleep" type="number" step="0.1"></div></div>
       <div class="grid3" style="margin-top:8px"><div><label>疲労 1-10</label><input id="rFatigue" type="number" min="1" max="10"></div><div><label>ストレス 1-10</label><input id="rStress" type="number" min="1" max="10"></div><div><label>痛み 0-10</label><input id="rPain" type="number" min="0" max="10"></div></div>
       <div style="margin-top:8px"><label>メモ</label><textarea id="rMemo"></textarea></div>
@@ -1204,7 +1206,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
 
   <section id="checkin" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>週間チェックイン</h2><div class="muted">今週の身体と生活を短時間で共有。コーチングの調整材料にします。</div></div><img class="sectionMascot" src="./mascot-running.png?v=26-2-6-1-rest-timer" alt=""></div>
+      <div class="sectionLead"><div><h2>週間チェックイン</h2><div class="muted">今週の身体と生活を短時間で共有。コーチングの調整材料にします。</div></div><img class="sectionMascot" src="./mascot-running.png?v=26-2-6-2-rest-timer-set-input" alt=""></div>
       <div class="notice">週1回の自己申告です。数値は管理の目安として使い、体調の診断には使用しません。</div>
       <div class="grid2" style="margin-top:9px"><div><label>日付</label><input id="ciDate" type="date"></div><div><label>体調 1-5</label><input id="ciCondition" type="number" min="1" max="5" value="3"></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>睡眠満足度 1-5</label><input id="ciSleep" type="number" min="1" max="5" value="3"></div><div><label>痛み 0-10</label><input id="ciPain" type="number" min="0" max="10" value="0"></div></div>
@@ -1258,7 +1260,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
 
   <section id="profile" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>会員情報</h2><div class="muted">目標・栄養・注意事項をS.u.Gの管理基準として保存。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=26-2-6-1-rest-timer" alt=""></div>
+      <div class="sectionLead"><div><h2>会員情報</h2><div class="muted">目標・栄養・注意事項をS.u.Gの管理基準として保存。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=26-2-6-2-rest-timer-set-input" alt=""></div>
       <div class="grid2"><div><label>氏名</label><input id="pfName"></div><div><label>目的</label><select id="pfGoal"><option>筋肥大</option><option>減量</option><option>増量</option><option>健康維持</option><option>姿勢改善</option></select></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>目標体重</label><input id="pfTargetWeight" type="number" step="0.1"></div><div><label>目標kcal</label><input id="pfTargetKcal" type="number"></div></div>
       <div class="grid3" style="margin-top:8px"><div><label>目標P</label><input id="pfP" type="number"></div><div><label>目標F</label><input id="pfF" type="number"></div><div><label>目標C</label><input id="pfC" type="number"></div></div>
@@ -1995,7 +1997,7 @@ async function refreshMemberProfiles(selectId=null){
 }
 
 function inviteRedirectUrl(){
-  return location.origin+location.pathname+"?invite=1&v=26-2-6-1-rest-timer";
+  return location.origin+location.pathname+"?invite=1&v=26-2-6-2-rest-timer-set-input";
 }
 
 async function createMemberInvite(){
@@ -2717,7 +2719,7 @@ function renderMemberSelect(){
 
 function addWeight(){if(!n("wWeight"))return alert("体重を入力");m().weights.push({date:wDate.value,weight:n("wWeight"),fat:n("wFat")||null,memo:wMemo.value});m().weights.sort((a,b)=>a.date.localeCompare(b.date));wWeight.value=wFat.value=wMemo.value="";saveRender()}
 function addMeal(){if(!mName.value&&!n("mKcal"))return alert("食事を入力");m().meals.push({date:mDate.value,name:mName.value||"食事",kcal:n("mKcal"),p:n("mP"),f:n("mF"),c:n("mC")});mName.value=mKcal.value=mP.value=mF.value=mC.value="";saveRender()}
-// V26.2.6.1 REST TIMER / INTER-SET
+// V26.2.6.2 REST TIMER / INTER-SET
 let restTimerState={running:false,paused:false,startMs:0,elapsedBeforeMs:0,targetSec:120,tick:null,lastWhole:null,nextRestIndex:1,audio:null};
 function restTimerFmt(sec,plus=false){
   sec=Math.max(0,Math.round(Number(sec)||0));
@@ -2786,8 +2788,32 @@ function restTimerLoadExerciseTarget(){
   const planned=Number(document.getElementById("tPlannedRest")?.value||0);
   restTimerSetTarget(saved|| (planned>=10?planned:120),false);
 }
+function restTimerTotalSets(){
+  const own=Math.max(0,parseInt(document.getElementById("restTimerSets")?.value||0,10)||0);
+  if(own>=2)return Math.min(20,own);
+  return Math.max(0,parseInt(document.getElementById("tSets")?.value||0,10)||0);
+}
+function restTimerSetCountChanged(){
+  if(restTimerState.running)return restTimerRender();
+  const el=document.getElementById("restTimerSets");
+  let count=Math.max(0,parseInt(el?.value||0,10)||0);
+  if(count>20){count=20;if(el)el.value=20}
+  if(count>=2){
+    const t=document.getElementById("tSets");
+    if(t&&String(t.value)!==String(count)){t.value=count;renderTrainingPreview();if(trainingSetDetailMode())renderTrainingSetDetailRows()}
+    if(restTimerState.nextRestIndex>=count)restTimerState.nextRestIndex=1;
+  }
+  restTimerRender();
+}
+function restTimerSyncSetCountToTraining(){
+  const count=restTimerTotalSets();
+  if(count<2)return 0;
+  const own=document.getElementById("restTimerSets");if(own&&Number(own.value)!==count)own.value=count;
+  const t=document.getElementById("tSets");if(t&&Number(t.value)!==count){t.value=count;renderTrainingPreview()}
+  return count;
+}
 function restTimerPrepareDetails(){
-  const count=Math.max(0,parseInt(document.getElementById("tSets")?.value||0,10)||0);
+  const count=restTimerSyncSetCountToTraining();
   if(count<2)return false;
   const mode=document.getElementById("tSetDetailMode"),panel=document.getElementById("tSetDetailPanel"),plan=document.getElementById("tPlannedRest");
   if(mode&&!mode.checked){mode.checked=true;if(panel)panel.style.display="";}
@@ -2796,13 +2822,13 @@ function restTimerPrepareDetails(){
   return true;
 }
 function restTimerNextLabel(){
-  const count=Math.max(0,parseInt(document.getElementById("tSets")?.value||0,10)||0);
+  const count=restTimerTotalSets();
   if(count<2)return "SET数を2以上入力";
   if(restTimerState.nextRestIndex>=count)return "全SETのREST記録済み";
   return `SET ${restTimerState.nextRestIndex+1} 前`;
 }
 function restTimerRecordActual(sec){
-  const count=Math.max(0,parseInt(document.getElementById("tSets")?.value||0,10)||0);
+  const count=restTimerTotalSets();
   const idx=restTimerState.nextRestIndex;
   if(count<2||idx>=count)return false;
   restTimerPrepareDetails();
@@ -2845,6 +2871,8 @@ function restTimerTick(){
 }
 function restTimerStart(){
   if(restTimerState.running)return;
+  const count=restTimerTotalSets();
+  if(count<2)return alert("REST TIMER内の総SET数を2以上で入力してください");
   restTimerEnsureAudio();
   const target=restTimerTargetValue();restTimerState.targetSec=target;restTimerStoreTarget(target);
   restTimerPrepareDetails();
@@ -4077,13 +4105,13 @@ const CARE_ROUTINE={
   ]
 };
 const CARE_IMAGES={
-  lowback:"./care-lowback-hyottoko.png?v=26-2-6-1-rest-timer",
-  neck:"./care-neck-hyottoko.png?v=26-2-6-1-rest-timer",
-  shoulder:"./care-shoulder-hyottoko.png?v=26-2-6-1-rest-timer",
-  knee:"./care-knee-hyottoko.png?v=26-2-6-1-rest-timer",
-  ankle:"./care-ankle-hyottoko.png?v=26-2-6-1-rest-timer",
-  wrist:"./care-wrist-hyottoko.png?v=26-2-6-1-rest-timer",
-  elbow:"./care-elbow-hyottoko.png?v=26-2-6-1-rest-timer"
+  lowback:"./care-lowback-hyottoko.png?v=26-2-6-2-rest-timer-set-input",
+  neck:"./care-neck-hyottoko.png?v=26-2-6-2-rest-timer-set-input",
+  shoulder:"./care-shoulder-hyottoko.png?v=26-2-6-2-rest-timer-set-input",
+  knee:"./care-knee-hyottoko.png?v=26-2-6-2-rest-timer-set-input",
+  ankle:"./care-ankle-hyottoko.png?v=26-2-6-2-rest-timer-set-input",
+  wrist:"./care-wrist-hyottoko.png?v=26-2-6-2-rest-timer-set-input",
+  elbow:"./care-elbow-hyottoko.png?v=26-2-6-2-rest-timer-set-input"
 };
 function carePosterHTML(area){
   const label=CARE_AREA_LABELS[area]||'セルフケア';
@@ -6493,7 +6521,7 @@ renderCareQuestions();
 // V26 ADAPTIVE CORE PWA: network-only service worker to avoid stale app versions.
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=26-2-6-1-rest-timer").catch(err => console.warn("SW register failed", err));
+    navigator.serviceWorker.register("./sw.js?v=26-2-6-2-rest-timer-set-input").catch(err => console.warn("SW register failed", err));
   });
 }
 (function(){
