@@ -111,7 +111,7 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 .cloudStatus{font-size:9px;color:#aaa;margin-right:5px}
 .headActions{display:flex;align-items:center;gap:6px}
 
-/* V26.5.6 S.u.G READINESS SIGNAL */
+/* V26.5.7 S.u.G READINESS SIGNAL */
 .readinessHeaderSignal{appearance:none;border:1px solid #3a3a42;background:#111116;color:#d7d7dc;border-radius:999px;padding:6px 9px;font-size:9px;font-weight:900;letter-spacing:.05em;display:flex;align-items:center;gap:6px;white-space:nowrap}
 .readinessDot{width:9px;height:9px;border-radius:50%;display:inline-block;background:#777;box-shadow:0 0 0 rgba(255,255,255,0)}
 .readinessHeaderSignal.blue .readinessDot,.readinessSignal.blue .readinessSignalOrb{background:#53a7ff;box-shadow:0 0 10px #53a7ff,0 0 24px rgba(83,167,255,.55);animation:sugBluePulse 2s ease-in-out infinite}
@@ -137,6 +137,13 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 @keyframes sugRedPulse{0%,100%{transform:scale(.9);opacity:.55}50%{transform:scale(1.12);opacity:1}}
 @media(max-width:620px){.readinessHeaderSignal{padding:5px 7px;font-size:0}.readinessHeaderSignal .readinessHeaderText{display:none}.readinessSignalTop{grid-template-columns:auto 1fr}.readinessTrainGate{grid-column:1/-1;text-align:left;padding-left:49px}.readinessButtons{grid-template-columns:1fr}.readinessAction{grid-template-columns:auto 1fr}.readinessAction button{grid-column:2}}
 @media(prefers-reduced-motion:reduce){.readinessDot,.readinessSignalOrb{animation:none!important}}
+/* V26.5.7 WEEKLY NUTRITION + DAILY SCHEDULE */
+.weekBudgetHero,.scheduleHero{margin-top:10px;border:1px solid #3a3320;border-radius:13px;padding:12px;background:linear-gradient(180deg,#15130d,#0d0d10)}
+.weekBudgetTop,.scheduleHeroTop{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.weekBudgetTitle,.scheduleHeroTitle{font-size:13px;font-weight:950;color:var(--gold2)}
+.weekBudgetGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:9px}.weekBudgetKpi{background:#0b0b0e;border:1px solid #303036;border-radius:10px;padding:8px}.weekBudgetKpi span{display:block;font-size:8px;color:#888}.weekBudgetKpi b{display:block;font-size:15px;margin-top:2px}.weekBudgetKpi small{font-size:8px;color:#999}
+.weekBudgetAdvice{margin-top:9px;font-size:10px;line-height:1.6;color:#c8c8cc}.weekBudgetAdvice.warn{color:#ffe27a}.weekBudgetAdvice.bad{color:#ff9999}.weekBudgetBar{height:8px;background:#24242a;border-radius:999px;overflow:hidden;margin-top:9px}.weekBudgetBar>i{display:block;height:100%;background:linear-gradient(90deg,#d6b75a,#f2dd8c);border-radius:999px}
+.scheduleGrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px}.scheduleRows{display:grid;gap:7px;margin-top:9px}.scheduleItem{border:1px solid #303038;border-radius:10px;padding:9px;background:#0d0d10}.scheduleItem.high{border-color:#7a651f}.scheduleItemTop{display:flex;justify-content:space-between;gap:8px}.scheduleItem b{font-size:10px}.scheduleItem small{font-size:9px;line-height:1.5;color:#999}.scheduleLoad{font-size:9px;font-weight:900;border:1px solid #3b3b43;border-radius:999px;padding:3px 6px;white-space:nowrap}.scheduleLoad.high{color:#ffe27a;border-color:#7a651f}.scheduleLoad.low{color:#9bc8ff;border-color:#315a83}.scheduleSummary{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.scheduleChip{border:1px solid #34343b;border-radius:999px;padding:4px 7px;font-size:9px;color:#bbb}.scheduleChip.warn{color:#ffe27a;border-color:#7a651f}
+@media(max-width:620px){.weekBudgetGrid{grid-template-columns:1fr 1fr}.scheduleGrid{grid-template-columns:1fr 1fr}.scheduleGrid .wide{grid-column:1/-1}}
 .hidden{display:none!important}
 .setupNote{font-size:10px;line-height:1.7;color:#aaa;margin-top:12px}
 
@@ -447,7 +454,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
   <div class="authBox">
     <img class="authBrandLogo" src="./brand-header.png?v=26-4-2-walk-route" alt="S.u.G OSAKA">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V26.5.6 ADAPTIVE CORE / MEMBERS ONLY</div>
+    <div class="sub">V26.5.7 ADAPTIVE CORE / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -562,7 +569,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
   <div class="head">
     <div class="brandIdentity">
       <img class="brandHeaderLogo" src="./brand-header.png?v=26-4-2-walk-route" alt="S.u.G OSAKA">
-      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.5.6 ADAPTIVE CORE / READINESS SIGNAL + DAILY RHYTHM + HYDRATION + TRAINING + CARE</small></div>
+      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.5.7 ADAPTIVE CORE / READINESS SIGNAL + DAILY RHYTHM + HYDRATION + TRAINING + CARE</small></div>
     </div>
     <div class="headActions"><button id="readinessHeaderSignal" class="readinessHeaderSignal unknown" type="button" onclick="openRecoverySignal()" aria-label="今日の回復状態"><span class="readinessDot"></span><span class="readinessHeaderText">READINESS --</span></button><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
@@ -737,7 +744,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
       </div>
     </div>
     <div class="card readinessCard">
-      <div class="row" style="align-items:center"><div><h2 style="margin-bottom:3px">S.u.G READINESS SIGNAL</h2><div class="muted">睡眠・疲労・飲酒・二日酔い・水分・日中リズム・痛み/CAREから「今日どう動くか」まで表示。</div></div><span class="badge">V26.5.6</span></div>
+      <div class="row" style="align-items:center"><div><h2 style="margin-bottom:3px">S.u.G READINESS SIGNAL</h2><div class="muted">睡眠・疲労・飲酒・二日酔い・水分・日中リズム・痛み/CAREから「今日どう動くか」まで表示。</div></div><span class="badge">V26.5.7</span></div>
       <div id="readinessDashboard" style="margin-top:9px"><span class="muted">判定中...</span></div>
     </div>
     <div id="nextAppointmentCard" class="card nextApptCard">
@@ -991,6 +998,11 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
       <button class="primary" style="width:100%;margin-top:9px" onclick="addMeal()">追加</button>
     </div>
     <div class="card"><h2>今日の合計</h2><div class="kpis"><div class="kpi"><span>kcal</span><b id="mtKcal">0</b></div><div class="kpi"><span>P</span><b id="mtP">0g</b></div><div class="kpi"><span>F</span><b id="mtF">0g</b></div><div class="kpi"><span>C</span><b id="mtC">0g</b></div></div><div id="mealTarget" class="notice" style="margin-top:8px"></div></div>
+    <div class="card">
+      <div class="sectionLead"><div><h2>WEEKLY CALORIE BALANCE｜週間残高</h2><div class="muted">1日オーバーしても失敗扱いにせず、週予算の残りを残日数へ再配分。極端な翌日削減は警告します。</div></div></div>
+      <div class="grid2"><div><label>週目標 kcal（空欄＝1日目標×7）</label><input id="wnTarget" type="number" min="3500" max="50000" step="50" placeholder="自動"></div><div style="display:flex;align-items:end"><button type="button" style="width:100%" onclick="saveWeeklyNutritionTarget()">週目標を保存</button></div></div>
+      <div id="weeklyNutritionCard" class="weekBudgetHero"><span class="muted">週間残高を計算します。</span></div>
+    </div>
     <div class="card"><h2>履歴</h2><div id="mealList"></div></div>
   </section>
 
@@ -1017,7 +1029,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
       </div>
       <div id="tMetaHint" class="notice" style="margin-top:8px">種目名から対象部位・POFを自動候補化します。必要なら手動で変更できます。</div>
       <div class="trainingQuickCard">
-        <div class="trainingQuickHead"><div><div class="trainingQuickTitle">QUICK START｜前回・ROUTINE</div><div class="muted">前回値は下書きとして読み込み。保存するまでは履歴に追加されません。</div></div><span class="badge">V26.5.6</span></div>
+        <div class="trainingQuickHead"><div><div class="trainingQuickTitle">QUICK START｜前回・ROUTINE</div><div class="muted">前回値は下書きとして読み込み。保存するまでは履歴に追加されません。</div></div><span class="badge">V26.5.7</span></div>
         <div class="trainingQuickActions"><button class="secondary" type="button" onclick="loadPreviousExerciseDraft()">前回のこの種目</button><button class="secondary" type="button" onclick="loadPreviousSessionDraft()">前回SESSION</button></div>
         <div class="trainingRoutineGrid">
           <div><label>ROUTINE</label><select id="tRoutineSelect"><option value="">ROUTINEなし</option></select></div>
@@ -1376,6 +1388,21 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
       <div class="hydrationNote">RHYTHM SCOREは診断値ではなく、本人の生活リズムを揃えるための管理指標です。カフェイン感受性、夜トレ、食事時刻の影響には個人差があるため、睡眠・回復・トレ反応と一緒に追跡します。</div>
       <h3 style="margin-top:12px">RHYTHM履歴</h3><div id="rhythmList"></div>
     </div>
+    <div class="card">
+      <div class="sectionLead"><div><h2>DAILY SCHEDULE｜生活・予定</h2><div class="muted">仕事・予約・移動・トレ予定を先に記録。将来Google Calendarから同じ形式へ自動取込できる設計。</div></div><span class="badge">CALENDAR READY</span></div>
+      <div class="scheduleGrid">
+        <div><label>日付</label><input id="scDate" type="date" onchange="renderDailySchedule()"></div>
+        <div><label>開始</label><input id="scStart" type="time"></div>
+        <div><label>終了</label><input id="scEnd" type="time"></div>
+        <div><label>種類</label><select id="scType"><option value="work">仕事</option><option value="appointment">予約 / 用事</option><option value="travel">移動</option><option value="training">トレーニング</option><option value="meal">会食 / 食事</option><option value="recovery">回復 / CARE</option><option value="other">その他</option></select></div>
+        <div><label>予定負荷</label><select id="scLoad"><option value="low">LOW｜軽い</option><option value="medium" selected>MEDIUM｜通常</option><option value="high">HIGH｜負荷高め</option></select></div>
+        <div class="wide"><label>予定名</label><input id="scTitle" placeholder="例：午前セッション / 移動 / 脚トレ"></div>
+      </div>
+      <div style="margin-top:8px"><label>メモ（任意）</label><input id="scMemo" placeholder="例：長時間移動、翌朝早い、会食あり"></div>
+      <button class="primary" type="button" style="width:100%;margin-top:9px" onclick="addDailySchedule()">予定を追加</button>
+      <div id="scheduleTodayCard" class="scheduleHero"><span class="muted">予定を入力すると1日の密度を表示します。</span></div>
+      <h3 style="margin-top:12px">予定一覧</h3><div id="scheduleList"></div>
+    </div>
     <div class="card"><h2>判定</h2><div id="recoveryJudge" class="item"></div></div>
     <div class="card"><h2>履歴</h2><div id="recoveryList"></div></div>
   </section>
@@ -1631,7 +1658,8 @@ function baseMember(name="新規会員"){
     coachPlan:{weeklyFocus:"",nextAction:"",nextSessionDate:"",targetTrainingDays:0,targetSleep:0,targetSteps:0,completedAt:null,updatedAt:null},
     goalPlan:{goalType:"筋肥大",deadline:"",targetWeight:0,targetBodyFat:0,idealNote:"",idealImagePath:"",energyAnchor:0,priority1:"肩",priority2:"背中",priority3:"胸",trainingDays:4,sessionMinutes:60,generatedAt:null,lastPlan:null},
     smartContext:{appetite:"normal",dayType:"training",updatedAt:null},
-    weights:[],meals:[],training:[],trainingRoutines:[],recovery:[],hydration:[],dailyRhythm:[],checkins:[],activity:[],selfCare:[],smartPlans:[],romAssessments:[],aromAssessments:[],shrAssessments:[],movementScreens:[],integratedAssessments:[],bodyMeasurements:[],responseExperiments:[],photos:[],medicalReferrals:[],restTargets:{}}
+    weeklyNutrition:{targetKcal:0},
+    weights:[],meals:[],training:[],trainingRoutines:[],recovery:[],hydration:[],dailyRhythm:[],dailySchedule:[],checkins:[],activity:[],selfCare:[],smartPlans:[],romAssessments:[],aromAssessments:[],shrAssessments:[],movementScreens:[],integratedAssessments:[],bodyMeasurements:[],responseExperiments:[],photos:[],medicalReferrals:[],restTargets:{}}
 }
 function m(){return db.members[db.current]}
 function esc(s){return String(s??"").replace(/[&<>"']/g,x=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[x]))}
@@ -2102,8 +2130,10 @@ async function loadMember(id){
   db.members[id].smartContext={...baseMember(p?.display_name||"会員").smartContext,...db.members[id].smartContext};
   if(!db.members[id].goalPlan || typeof db.members[id].goalPlan!=="object" || Array.isArray(db.members[id].goalPlan)) db.members[id].goalPlan=baseMember(p?.display_name||"会員").goalPlan;
   db.members[id].goalPlan={...baseMember(p?.display_name||"会員").goalPlan,...db.members[id].goalPlan};
+  if(!db.members[id].weeklyNutrition || typeof db.members[id].weeklyNutrition!=="object" || Array.isArray(db.members[id].weeklyNutrition)) db.members[id].weeklyNutrition=baseMember(p?.display_name||"会員").weeklyNutrition;
+  db.members[id].weeklyNutrition={...baseMember(p?.display_name||"会員").weeklyNutrition,...db.members[id].weeklyNutrition};
 
-  ["weights","meals","training","trainingRoutines","recovery","hydration","dailyRhythm","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos","medicalReferrals"].forEach(k=>{
+  ["weights","meals","training","trainingRoutines","recovery","hydration","dailyRhythm","dailySchedule","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos","medicalReferrals"].forEach(k=>{
     if(!Array.isArray(db.members[id][k]))db.members[id][k]=[];
   });
   if(!db.members[id].restTargets || typeof db.members[id].restTargets!=="object" || Array.isArray(db.members[id].restTargets))db.members[id].restTargets={};
@@ -5277,7 +5307,7 @@ function carePlan(area, location, movement){
   };
 }
 
-// V26.5.6 READINESS SIGNAL + DAILY RHYTHM + CAFFEINE + MEAL TIMING + HYDRATION + CARE + TRAINING METHODS
+// V26.5.7 READINESS SIGNAL + DAILY RHYTHM + CAFFEINE + MEAL TIMING + HYDRATION + CARE + TRAINING METHODS
 const CARE_AROM_KEYS={
   shoulder:["shoulder_flex","shoulder_abd","shoulder_er","shoulder_ir","shoulder_ext","shoulder_hflex","shoulder_hext","thoracic_ext","thoracic_rot"],
   neck:["cervical_flex","cervical_ext","cervical_rot","cervical_lat","thoracic_ext","thoracic_rot"],
@@ -5765,11 +5795,29 @@ function renderCareHistory(){
   }).join("")||'<span class="muted">履歴なし</span>';
 }
 function nearestWeightOnOrBefore(date){const rows=(m()?.weights||[]).filter(x=>x.date<=date).slice().sort((a,b)=>a.date.localeCompare(b.date));return rows.at(-1)||null;}
+// V26.5.7 WEEKLY CALORIE BALANCE + DAILY SCHEDULE
+function isoDateObj(iso){const [y,mo,d]=String(iso||today()).split("-").map(Number);return new Date(y,Math.max(0,(mo||1)-1),d||1,12,0,0,0)}
+function isoShift(iso,days){const d=isoDateObj(iso);d.setDate(d.getDate()+Number(days||0));return dateISO(d)}
+function weekBounds(iso=today()){const d=isoDateObj(iso),day=(d.getDay()+6)%7;const start=new Date(d);start.setDate(d.getDate()-day);const end=new Date(start);end.setDate(start.getDate()+6);return {start:dateISO(start),end:dateISO(end)}}
+function weeklyNutritionTarget(){const own=Number(m()?.weeklyNutrition?.targetKcal||0),daily=Number(m()?.profile?.targetKcal||0);return own>0?own:(daily>0?daily*7:0)}
+function saveWeeklyNutritionTarget(){if(!m())return;const el=document.getElementById("wnTarget"),v=Number(el?.value||0);if(v&&v<3500)return alert("週目標kcalを確認してください");if(!m().weeklyNutrition||typeof m().weeklyNutrition!=="object")m().weeklyNutrition={targetKcal:0};m().weeklyNutrition.targetKcal=v||0;persist();renderWeeklyNutritionBalance();}
+function weeklyNutritionState(iso=today()){const b=weekBounds(iso),target=weeklyNutritionTarget(),daily=Number(m()?.profile?.targetKcal||0);let consumed=0;for(const x of (m()?.meals||[]))if(x.date>=b.start&&x.date<=iso)consumed+=Number(x.kcal||0);const elapsed=Math.max(1,Math.round((isoDateObj(iso)-isoDateObj(b.start))/86400000)+1),future=Math.max(0,7-elapsed),remaining=target-consumed,futureAvg=future?remaining/future:remaining,todayKcal=mealTotals(iso).kcal,todayDiff=daily?todayKcal-daily:null,expected=daily?daily*elapsed:null,balanceVsPace=expected==null?null:consumed-expected;return {b,target,daily,consumed,elapsed,future,remaining,futureAvg,todayKcal,todayDiff,balanceVsPace,pct:target?Math.round(consumed/target*100):0}}
+function weeklyNutritionAdvice(st){if(!st.target)return {cls:"",text:"会員情報で1日目標kcal、または週目標kcalを設定してください。"};if(st.remaining<0)return {cls:"bad",text:`週予算を ${Math.round(Math.abs(st.remaining)).toLocaleString()}kcal 超過。翌日に一気に削らず、次週も含めて調整候補。`};if(st.future===0)return {cls:st.remaining>=0?"":"bad",text:`今週の残り ${Math.round(st.remaining).toLocaleString()}kcal。週末の記録を確定して翌週へ。`};const raw=Math.round(st.futureAvg),ratio=st.daily?raw/st.daily:1;if(ratio<.8)return {cls:"warn",text:`明日以降の数学上の帳尻平均は ${raw.toLocaleString()}kcal/日。ただし通常目標の80%未満になるため、極端に削らず次週へ分散する候補。`};if(st.todayDiff!=null&&st.todayDiff>150)return {cls:"warn",text:`今日は目標より +${Math.round(st.todayDiff)}kcal。失敗扱いにせず、残り${st.future}日なら約 ${raw.toLocaleString()}kcal/日で週予算に戻る計算。`};return {cls:"",text:`現時点の残り ${Math.round(st.remaining).toLocaleString()}kcal。明日以降${st.future}日なら平均 ${raw.toLocaleString()}kcal/日。`}}
+function renderWeeklyNutritionBalance(){const box=document.getElementById("weeklyNutritionCard");if(!box||!m())return;const st=weeklyNutritionState(today()),adv=weeklyNutritionAdvice(st),targetEl=document.getElementById("wnTarget");if(targetEl&&document.activeElement!==targetEl)targetEl.value=Number(m().weeklyNutrition?.targetKcal||0)||"";if(!st.target){box.innerHTML=`<div class="weekBudgetAdvice">${esc(adv.text)}</div>`;return;}const p=Math.max(0,Math.min(100,st.pct));box.innerHTML=`<div class="weekBudgetTop"><div><div class="weekBudgetTitle">${esc(st.b.start)} → ${esc(st.b.end)}</div><small>週予算は現時点の食事記録から再計算</small></div><span class="badge ${st.remaining<0?"bad":st.pct>=85?"warn":"ok"}">${st.pct}%</span></div><div class="weekBudgetBar"><i style="width:${p}%"></i></div><div class="weekBudgetGrid"><div class="weekBudgetKpi"><span>WEEK TARGET</span><b>${Math.round(st.target).toLocaleString()}</b><small>kcal</small></div><div class="weekBudgetKpi"><span>USED</span><b>${Math.round(st.consumed).toLocaleString()}</b><small>${st.elapsed}日分</small></div><div class="weekBudgetKpi"><span>REMAIN</span><b>${Math.round(st.remaining).toLocaleString()}</b><small>kcal</small></div><div class="weekBudgetKpi"><span>NEXT DAYS AVG</span><b>${st.future?Math.round(st.futureAvg).toLocaleString():"--"}</b><small>${st.future}日</small></div></div><div class="weekBudgetAdvice ${adv.cls}">${esc(adv.text)}</div>`}
+
+const SCHEDULE_TYPE_LABEL={work:"仕事",appointment:"予約 / 用事",travel:"移動",training:"トレーニング",meal:"会食 / 食事",recovery:"回復 / CARE",other:"その他"};
+const SCHEDULE_LOAD_VALUE={low:1,medium:2,high:3};
+function dailyScheduleRows(date=today()){return (m()?.dailySchedule||[]).filter(x=>x.date===date).slice().sort((a,b)=>String(a.start||"").localeCompare(String(b.start||"")))}
+function scheduleDurationMin(x){if(!x?.start||!x?.end)return 0;const [sh,sm]=x.start.split(":").map(Number),[eh,em]=x.end.split(":").map(Number);let d=(eh*60+em)-(sh*60+sm);if(d<0)d+=1440;return d}
+function scheduleAssessment(date=today()){const rows=dailyScheduleRows(date);let score=0,high=0,totalMin=0;for(const x of rows){score+=SCHEDULE_LOAD_VALUE[x.load]||2;if(x.load==="high")high++;const d=scheduleDurationMin(x);totalMin+=d;if(d>=240)score+=1;}const level=score>=8||high>=2?"high":score>=5?"medium":"low";return {rows,score,high,totalMin,level,label:level==="high"?"予定負荷 高め":level==="medium"?"予定負荷 中等度":"予定負荷 軽め"}}
+function addDailySchedule(){if(!m())return;const date=document.getElementById("scDate")?.value||today(),start=document.getElementById("scStart")?.value||"",end=document.getElementById("scEnd")?.value||"",type=document.getElementById("scType")?.value||"other",load=document.getElementById("scLoad")?.value||"medium",title=(document.getElementById("scTitle")?.value||"").trim(),memo=(document.getElementById("scMemo")?.value||"").trim();if(!title)return alert("予定名を入力してください");if(!Array.isArray(m().dailySchedule))m().dailySchedule=[];m().dailySchedule.push({date,start,end,type,load,title,memo,source:"manual",savedAt:new Date().toISOString()});m().dailySchedule.sort((a,b)=>`${a.date} ${a.start||""}`.localeCompare(`${b.date} ${b.start||""}`));["scStart","scEnd","scTitle","scMemo"].forEach(id=>{const e=document.getElementById(id);if(e)e.value=""});persist();renderDailySchedule();renderReadinessSignal()}
+function renderDailySchedule(){const list=document.getElementById("scheduleList"),hero=document.getElementById("scheduleTodayCard"),dateEl=document.getElementById("scDate");if(!m()||(!list&&!hero))return;if(dateEl&&!dateEl.value)dateEl.value=today();const date=dateEl?.value||today(),a=scheduleAssessment(date),all=m().dailySchedule||[];if(hero){const chips=a.rows.slice(0,5).map(x=>`<span class="scheduleChip ${x.load==="high"?"warn":""}">${esc(x.start||"--:--")} ${esc(x.title)}</span>`).join("");hero.innerHTML=`<div class="scheduleHeroTop"><div><div class="scheduleHeroTitle">${esc(date)}｜${esc(a.label)}</div><small>${a.rows.length}件｜予定負荷スコア ${a.score}${a.totalMin?`｜予定時間 約${Math.round(a.totalMin/60*10)/10}h`:""}</small></div><span class="badge ${a.level==="high"?"warn":a.level==="low"?"ok":""}">${a.level.toUpperCase()}</span></div><div class="scheduleSummary">${chips||'<span class="muted">予定なし</span>'}</div>${a.level==="high"?'<div class="weekBudgetAdvice warn">予定が詰まっています。HEAVYを固定せず、睡眠・移動疲労・実際の回復状態と合わせてトレ時間/負荷を調整候補。</div>':''}`;}if(list){list.innerHTML=[...all].reverse().slice(0,30).map((x,ri)=>{const i=all.length-1-ri;return `<div class="scheduleItem ${x.load==="high"?"high":""}"><div class="scheduleItemTop"><div><b>${esc(x.date)}｜${esc(x.start||"--:--")}${x.end?`–${esc(x.end)}`:""}｜${esc(x.title)}</b><br><small>${esc(SCHEDULE_TYPE_LABEL[x.type]||x.type)}${x.memo?`｜${esc(x.memo)}`:""}${x.source&&x.source!=="manual"?`｜${esc(x.source)}`:""}</small></div><span class="scheduleLoad ${esc(x.load||"medium")}">${esc(String(x.load||"medium").toUpperCase())}</span></div><button class="danger" style="margin-top:7px;width:100%" onclick="remove('dailySchedule',${i})">削除</button></div>`}).join("")||'<span class="muted">予定なし</span>';}}
+
 function mealTotals(date=today()){return m().meals.filter(x=>x.date===date).reduce((a,x)=>({kcal:a.kcal+x.kcal,p:a.p+x.p,f:a.f+x.f,c:a.c+x.c}),{kcal:0,p:0,f:0,c:0})}
 function recScore(r){if(!r)return null;let s=100;if(r.sleep<7)s-=Math.min(25,(7-r.sleep)*8);s-=Math.max(0,r.fatigue-3)*5;s-=Math.max(0,r.stress-3)*4;s-=r.pain*5;return Math.max(0,Math.round(s))}
 function recAdvice(r){if(!r)return {txt:"回復データ未入力",cls:""};let s=recScore(r);if(r.pain>=6)return {txt:`${s}点｜痛み優先。高負荷回避・種目変更/評価。`,cls:"bad"};if(s>=80)return {txt:`${s}点｜通常〜高強度。前回超えを狙える。`,cls:"ok"};if(s>=60)return {txt:`${s}点｜中強度。RIRを1〜2多めに。`,cls:"warn"};return {txt:`${s}点｜回復優先。低強度または休養。`,cls:"bad"}}
 
-// V26.5.6 READINESS SIGNAL: status -> action -> re-evaluation
+// V26.5.7 READINESS SIGNAL: status -> action -> re-evaluation
 function openRecoverySignal(){const b=document.querySelector('.tab[data-tab="recovery"]');if(b)b.click();setTimeout(()=>document.getElementById("readinessRecovery")?.scrollIntoView({behavior:"smooth",block:"center"}),80)}
 function readinessTodayRecovery(){return (m()?.recovery||[]).filter(x=>x.date===today()).at(-1)||null;}
 function readinessActionStore(){if(!m())return [];if(!Array.isArray(m().readinessActions))m().readinessActions=[];return m().readinessActions;}
@@ -5778,7 +5826,7 @@ function toggleReadinessAction(id){if(!m())return;const rows=readinessActionStor
 function readinessHydrationPaceLow(hs){const hour=new Date().getHours();if(!hs||!Number(hs.goal))return false;const p=Number(hs.pct||0);if(hour>=22)return p<70;if(hour>=18)return p<50;if(hour>=12)return p<25;return false;}
 function readinessSignal(){
   if(!m())return {level:"unknown",code:"DATA",title:"DATA CHECK",sub:"会員データを読み込み中",reasons:[],actions:[],training:"--",gate:"データ確認"};
-  const r=readinessTodayRecovery(),score=r?recScore(r):null,hyd=hydrationDay(today()),hs=hydrationStatus(hyd,today()),rh=dailyRhythmDay(today()),ra=rhythmAssessment(rh),care=smartCareState(),st=smartRecoveryState();
+  const r=readinessTodayRecovery(),score=r?recScore(r):null,hyd=hydrationDay(today()),hs=hydrationStatus(hyd,today()),rh=dailyRhythmDay(today()),ra=rhythmAssessment(rh),sched=scheduleAssessment(today()),care=smartCareState(),st=smartRecoveryState();
   const reasons=[],actions=[];let level="blue";
   const push=(id,title,detail,priority=50)=>{if(!actions.some(x=>x.id===id))actions.push({id,title,detail,priority});};
   if(!r){level="yellow";reasons.push("今日の回復データ未入力");push("record_recovery","回復データを入力","睡眠・疲労・ストレス・痛みを入力して今日の判定精度を上げる。",5);}
@@ -5803,6 +5851,7 @@ function readinessSignal(){
   if(rh&&ra.score!=null&&ra.score<45){if(level!=="red")level="yellow";reasons.push(`RHYTHM ${ra.score}`);push("light","日中リズムを戻す","起床後〜日中の屋外光と活動時刻を整える。",14);push("caffeine","カフェイン時刻を見直す","今夜の睡眠を削らないよう最終摂取を前倒し。",25);}
   else if(rh&&ra.score!=null&&ra.score<65){if(level!=="red")level="yellow";reasons.push(`RHYTHM ${ra.score}`);push("light","日中リズムを整える","朝〜日中の光・食事・活動時刻を大きくずらさない。",27);}
   if(care?.active&&Number(care.painAfter||0)>=7){level="red";reasons.push(`CARE後 痛み ${care.painAfter}/10`);push("stop_load","該当負荷を中止","CARE後も痛みが強いため、その部位の高負荷を避ける。",1);push("care_review","CARE反応を確認","AFTER/24H反応を記録し、悪化・持続時は医療評価を検討。",2);}
+  if(sched?.level==="high"){if(level!=="red")level="yellow";reasons.push(`予定負荷 ${sched.score}`);push("schedule_adjust","予定とトレ負荷を調整","仕事・移動・予約が詰まっているため、HEAVY固定ではなくトレ時間・SET数・終了時刻を調整候補。",26);}
   if(level==="blue"){
     reasons.push(score!=null?`回復 ${score}点`:"大きな制限なし");if(rh&&ra.score!=null)reasons.push(`RHYTHM ${ra.score}`);
     push("warmup","ウォームアップでGO確認","動き・痛み・主観的な軽さを確認して予定セッションへ。",10);push("hydrate_maintain","水分を維持","今日の目安に沿ってこまめに補給。",20);push("progress","計画どおり進める","RIR・実REST・フォーム条件が揃えば前回超えを狙う。",30);
@@ -7400,7 +7449,7 @@ function renderResponseEngine(force=false){
 
 function renderAll(){
   if(!m())return;
-  const ciDateEl=document.getElementById("ciDate");if(ciDateEl&&!ciDateEl.value)ciDateEl.value=today();const rhDateEl=document.getElementById("rhDate");if(rhDateEl&&!rhDateEl.value)rhDateEl.value=today();
+  const ciDateEl=document.getElementById("ciDate");if(ciDateEl&&!ciDateEl.value)ciDateEl.value=today();const rhDateEl=document.getElementById("rhDate");if(rhDateEl&&!rhDateEl.value)rhDateEl.value=today();const scDateEl=document.getElementById("scDate");if(scDateEl&&!scDateEl.value)scDateEl.value=today();
   renderMemberSelect();
   let mm=m(),ws=mm.weights,latest=ws.at(-1),s=weightStats(),mt=mealTotals(),rr=mm.recovery.filter(x=>x.date===today()).at(-1)||mm.recovery.at(-1);
   dWeight.textContent=latest?latest.weight.toFixed(1)+"kg":"--";dAvg.textContent=s.l?s.l.toFixed(1)+"kg":"--";dKcal.textContent=Math.round(mt.kcal)+" kcal";dRec.textContent=rr?recScore(rr)+"点":"--";
@@ -7417,7 +7466,7 @@ function renderAll(){
   prTable.innerHTML=exs.length?`<div style="overflow-x:auto"><table class="table"><tr><th>種目</th><th>部位 / POF</th><th>最新</th><th>総重量</th><th>推定1RM</th><th>前回比</th></tr>${exs.map(ex=>{const t=trainingTrend(ex),x=t?.cur;if(!x)return"";const prx=pr(ex);const isPr=Math.abs(e1rm(x)-e1rm(prx))<0.0001;const meta=trainingMetaForRow(x);return `<tr><td>${esc(ex)}</td><td><small>${esc(meta.part)}<br>${esc(meta.pof)}</small></td><td>${x.weight}kg×${x.reps}×${x.sets}</td><td>${Math.round(t.curVol).toLocaleString()}kg</td><td>${t.curE1.toFixed(1)}kg${isPr?' PR':''}</td><td><small>総 ${fmtPct(t.volPct)}<br>1RM ${fmtPct(t.e1Pct)}</small></td></tr>`}).join("")}</table></div>`:'<span class="muted">記録なし</span>';
   {const hyd=hydrationDay(today()),hs=hydrationStatus(hyd,today()),hydLine=hyd?`<br><small>HYDRATION ${Math.round(hs.amount).toLocaleString()}/${Math.round(hs.goal).toLocaleString()}ml（${hs.pct}%）｜${esc(hydrationAdviceText(hyd))}</small>`:"",rh=dailyRhythmDay(today()),ra=rhythmAssessment(rh),rhLine=rh?`<br><small>RHYTHM ${ra.score}点｜${esc(ra.label)}｜${esc((ra.flags||[]).slice(0,3).map(x=>x.t).join(" / ")||"大きな注意なし")}</small>`:"";recoveryJudge.innerHTML=`<span class="badge ${adv.cls}">${esc(adv.txt)}</span>${hydLine}${rhLine}`;}
   recoveryList.innerHTML=[...mm.recovery].reverse().map((x,ri)=>{let i=mm.recovery.length-1-ri,a=recAdvice(x);return `<div class="item"><div class="row"><div><strong>${x.date}｜睡眠 ${x.sleep}h</strong><br><small>疲労${x.fatigue} / ストレス${x.stress} / 痛み${x.pain}</small><br><span class="badge ${a.cls}">${recScore(x)}点</span></div><button class="danger" onclick="remove('recovery',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
-  populateExercisePicker();renderExerciseMasterList();renderTrainingRoutineOptions();renderTrainingQueue();trainingSetMethodChanged(false);renderTrainingPreview();renderPofSummary();syncTrainingMeta();if(!restTimerState.running)restTimerLoadExerciseTarget();restTimerRender();renderNextLoadPanel();renderRomHistory();renderAromHistory();renderAromAsymmetry();renderAromReference();renderShrHistory();renderMovementHistory();renderMoveGuide();renderJointByJoint();renderIntegratedAssessment();renderIntegratedHistory();renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();renderCheckin();renderSmartCore();renderGoalPlan();renderResponseEngine();renderActivity();renderCareHistory();renderCareResponseProfile();renderCareFollowupPanel();renderCareReferralGate();renderMedicalFeedbackHistory();renderHydration();renderDailyRhythm();renderReadinessSignal();drawChart();renderReport();renderPhotos();
+  populateExercisePicker();renderExerciseMasterList();renderTrainingRoutineOptions();renderTrainingQueue();trainingSetMethodChanged(false);renderTrainingPreview();renderPofSummary();syncTrainingMeta();if(!restTimerState.running)restTimerLoadExerciseTarget();restTimerRender();renderNextLoadPanel();renderRomHistory();renderAromHistory();renderAromAsymmetry();renderAromReference();renderShrHistory();renderMovementHistory();renderMoveGuide();renderJointByJoint();renderIntegratedAssessment();renderIntegratedHistory();renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();renderCheckin();renderSmartCore();renderGoalPlan();renderResponseEngine();renderActivity();renderCareHistory();renderCareResponseProfile();renderCareFollowupPanel();renderCareReferralGate();renderMedicalFeedbackHistory();renderHydration();renderDailyRhythm();renderDailySchedule();renderWeeklyNutritionBalance();renderReadinessSignal();drawChart();renderReport();renderPhotos();
 }
 
 function monthLabel(mon){
@@ -7569,7 +7618,8 @@ function normalizeMemberData(data,name="会員"){
   if(!x.coachPlan||typeof x.coachPlan!=="object")x.coachPlan=base.coachPlan; else x.coachPlan={...base.coachPlan,...x.coachPlan};
   if(!x.smartContext||typeof x.smartContext!=="object")x.smartContext=base.smartContext; else x.smartContext={...base.smartContext,...x.smartContext};
   if(!x.goalPlan||typeof x.goalPlan!=="object"||Array.isArray(x.goalPlan))x.goalPlan=base.goalPlan; else x.goalPlan={...base.goalPlan,...x.goalPlan};
-  ["weights","meals","training","recovery","hydration","dailyRhythm","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos"].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});
+  if(!x.weeklyNutrition||typeof x.weeklyNutrition!=="object"||Array.isArray(x.weeklyNutrition))x.weeklyNutrition=base.weeklyNutrition; else x.weeklyNutrition={...base.weeklyNutrition,...x.weeklyNutrition};
+  ["weights","meals","training","trainingRoutines","recovery","hydration","dailyRhythm","dailySchedule","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos","medicalReferrals"].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});
   if(!x.restTargets || typeof x.restTargets!=="object" || Array.isArray(x.restTargets))x.restTargets={};
   return x;
 }
