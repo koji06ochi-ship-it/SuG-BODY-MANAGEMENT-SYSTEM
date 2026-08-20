@@ -2759,12 +2759,28 @@ async function restTimerBeep(freq=880,duration=.10,volume=.30){
   if(!document.getElementById("restTimerSound")?.checked)return;
   try{
     const c=await restTimerEnsureAudio();if(!c||c.state!=="running")return;
-    const o=c.createOscillator(),g=c.createGain(),t=c.currentTime+.01;
-    o.type="sine";o.frequency.setValueAtTime(freq,t);
-    g.gain.setValueAtTime(Math.max(.0001,volume),t);
-    g.gain.exponentialRampToValueAtTime(.001,t+duration);
-    o.connect(g);g.connect(c.destination);o.start(t);o.stop(t+duration+.02);
+    const t=c.currentTime+.01;
+    const master=c.createGain();
+    const comp=c.createDynamicsCompressor();
+    comp.threshold.setValueAtTime(-18,t);comp.knee.setValueAtTime(6,t);comp.ratio.setValueAtTime(12,t);comp.attack.setValueAtTime(.002,t);comp.release.setValueAtTime(.12,t);
+    master.gain.setValueAtTime(Math.max(.0001,Math.min(1.8,volume*3.2)),t);
+    master.gain.setValueAtTime(Math.max(.0001,Math.min(1.8,volume*3.2)),t+Math.max(.02,duration*.72));
+    master.gain.exponentialRampToValueAtTime(.001,t+duration);
+    master.connect(comp);comp.connect(c.destination);
+    const freqs=[freq,Math.min(2200,freq*1.48)];
+    freqs.forEach((f,i)=>{
+      const o=c.createOscillator(),g=c.createGain();
+      o.type=i===0?"square":"sawtooth";
+      o.frequency.setValueAtTime(f,t);
+      g.gain.setValueAtTime(i===0?.72:.42,t);
+      o.connect(g);g.connect(master);o.start(t);o.stop(t+duration+.03);
+    });
   }catch(_e){}
+}
+async function restTimerAlarmBurst(){
+  await restTimerBeep(980,.28,.58);
+  setTimeout(()=>restTimerBeep(1320,.28,.62),310);
+  setTimeout(()=>restTimerBeep(980,.34,.62),620);
 }
 async function restTimerAudioUnlock(){
   try{
@@ -2859,9 +2875,9 @@ function restTimerAnnounce(remaining){
   const whole=Math.max(0,Math.ceil(remaining));
   if(whole===restTimerState.lastWhole)return;
   restTimerState.lastWhole=whole;
-  if(whole===10){restTimerBeep(660,.10,.22);restTimerVibrate(25)}
-  if([3,2,1].includes(whole)){restTimerBeep(880,.11,.30);restTimerVibrate(35)}
-  if(whole===0){restTimerBeep(1040,.18,.38);setTimeout(()=>restTimerBeep(1040,.22,.38),180);restTimerVibrate([80,80,160])}
+  if(whole===10){restTimerBeep(760,.16,.38);restTimerVibrate(25)}
+  if([3,2,1].includes(whole)){restTimerBeep(1080,.18,.48);restTimerVibrate(35)}
+  if(whole===0){restTimerAlarmBurst();restTimerVibrate([120,70,120,70,240])}
 }
 function restTimerRender(){
   const display=document.getElementById("restTimerDisplay"),elapsedEl=document.getElementById("restTimerElapsed"),status=document.getElementById("restTimerStatus"),next=document.getElementById("restTimerNextSet"),start=document.getElementById("restTimerStartBtn"),pause=document.getElementById("restTimerPauseBtn"),nextBtn=document.getElementById("restTimerNextBtn");
@@ -2898,9 +2914,8 @@ async function restTimerStart(){
 }
 async function restTimerAudioTest(){
   const ok=await restTimerAudioUnlock();
-  if(!ok)return alert("iPhoneの音声を有効化できませんでした。消音モード解除・音量確認後、もう一度押してください。");
-  await restTimerBeep(740,.14,.32);
-  setTimeout(()=>restTimerBeep(980,.18,.38),170);
+  if(!ok)return alert("iPhoneの音声を有効化できませんでした。消音モード解除・メディア音量確認後、もう一度押してください。");
+  await restTimerAlarmBurst();
 }
 function restTimerTogglePause(){
   if(!restTimerState.running)return;
