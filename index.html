@@ -6,15 +6,15 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>S.u.G BODY MANAGEMENT SYSTEM V26.4.0 ADAPTIVE CORE</title>
+<title>S.u.G BODY MANAGEMENT SYSTEM V26.4.1 ADAPTIVE CORE</title>
 <meta name="theme-color" content="#09090a">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="S.u.G BODY">
-<link rel="manifest" href="./manifest.webmanifest?v=26-4-0-goal-to-plan">
-<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png?v=26-4-0-goal-to-plan">
-<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=26-4-0-goal-to-plan">
+<link rel="manifest" href="./manifest.webmanifest?v=26-4-1-map-engine">
+<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png?v=26-4-1-map-engine">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=26-4-1-map-engine">
 <style>
 :root{
   --bg:#09090a;--card:#141417;--card2:#1a1a1f;--gold:#d8b35b;--gold2:#f3d98b;
@@ -258,6 +258,12 @@ button.primary{box-shadow:0 5px 18px rgba(184,140,50,.10)}
 .goalPlanDay{background:#0d0d10;border:1px solid #303037;border-radius:12px;padding:10px;margin-top:8px}.goalPlanDay h3{margin:0;color:var(--gold2);font-size:11px}.goalPlanExercise{padding:7px 0;border-bottom:1px solid #24242a;font-size:9px;line-height:1.6}.goalPlanExercise:last-child{border-bottom:0}.goalPlanExercise b{font-size:10px;color:#eee}
 .goalPlanActions{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:10px}.goalPlanFeasible{border-color:#315a43!important}.goalPlanCaution{border-color:#6a5727!important}.goalPlanRisk{border-color:#713436!important}
 @media(max-width:620px){.goalPlanGrid,.goalPlanGrid3,.goalPlanImages,.goalPlanSets{grid-template-columns:1fr}.goalPlanCurrent{grid-template-columns:1fr 1fr}.goalPlanActions{grid-template-columns:1fr}}
+/* V26.4.1 S.u.G MAP ENGINE */
+.mapEngineHero{border-color:#4f472b;background:linear-gradient(180deg,#15140f,#0f0f12)}
+.mapEngineGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:9px}.mapEngineKpi{background:#0d0d10;border:1px solid #303037;border-radius:12px;padding:10px}.mapEngineKpi span{display:block;font-size:8px;color:#999}.mapEngineKpi b{display:block;margin-top:4px;font-size:15px;color:var(--gold2)}
+.mapEngineControls{display:grid;grid-template-columns:1fr auto;gap:7px;margin-top:9px}.mapEngineActions{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:8px}.mapEngineNote{font-size:9px;line-height:1.6;color:#999;margin-top:8px}.mapEngineLocation{font-size:9px;line-height:1.6;color:#bbb;margin-top:7px}.mapEngineLocation strong{color:var(--gold2)}
+.medicalMapActions{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:9px}
+@media(max-width:620px){.mapEngineGrid{grid-template-columns:1fr 1fr}.mapEngineControls{grid-template-columns:1fr}.mapEngineActions,.medicalMapActions{grid-template-columns:1fr}}
 .stepProgress{height:9px;background:#0d0d10;border:1px solid #303037;border-radius:999px;overflow:hidden;margin-top:8px}.stepProgress>i{display:block;height:100%;background:linear-gradient(90deg,#b88c32,#f3d98b);width:0}
 .selfCareChoice{display:grid;grid-template-columns:1fr 1fr;gap:8px}.selfCareFlag{display:flex;align-items:flex-start;gap:8px;background:#0d0d10;border:1px solid #303037;border-radius:10px;padding:9px;margin-bottom:6px}.selfCareFlag input{width:auto;margin-top:2px}.selfCareFlag span{font-size:10px;line-height:1.55;color:#ddd}.selfCareRoutine{counter-reset:care}.selfCareStep{position:relative;padding:9px 9px 9px 38px;background:#0d0d10;border:1px solid #2c2c32;border-radius:10px;margin-bottom:7px;font-size:10px;line-height:1.65}.selfCareStep:before{counter-increment:care;content:counter(care);position:absolute;left:9px;top:9px;width:21px;height:21px;border-radius:50%;display:grid;place-items:center;background:#211d14;border:1px solid #5a4a25;color:var(--gold2);font-weight:900}.carePosterWrap{margin-top:10px}.carePosterBox{background:#0d0d10;border:1px solid #2c2c32;border-radius:14px;padding:10px}.carePosterBox img{display:block;width:100%;border-radius:10px;border:1px solid #2f2f35;background:#fff}.carePosterCap{font-size:10px;color:#aaa;line-height:1.55;margin-top:7px}.carePosterTitle{font-size:11px;font-weight:800;color:var(--gold2);margin-bottom:6px;letter-spacing:.04em}.careResponseMeasure{display:grid;grid-template-columns:1.4fr 1fr;gap:8px;margin-top:8px}.careActionList{display:grid;gap:7px;margin-top:8px}.careActionCheck{display:flex;align-items:flex-start;gap:9px;background:#0d0d10;border:1px solid #34343b;border-radius:10px;padding:10px}.careActionCheck input{width:auto;margin-top:2px}.careActionCheck span{font-size:10px;line-height:1.55;color:#ddd}.careResponseKpis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:9px}.careResponseKpi{background:#0d0d10;border:1px solid #303037;border-radius:12px;padding:10px}.careResponseKpi span{display:block;font-size:8px;color:#999}.careResponseKpi b{display:block;font-size:18px;color:var(--gold2);margin-top:4px}.careProtocolCard{background:#0d0d10;border:1px solid #303037;border-radius:12px;padding:10px;margin-top:8px}.careProtocolCard strong{color:var(--gold2);font-size:11px}.careProtocolMeta{font-size:9px;line-height:1.6;color:#bbb;margin-top:5px}.careProfileNote{font-size:9px;line-height:1.6;color:#9d9d9d;margin-top:8px}.careProtocolBad{border-color:#663535}.careProtocolBad strong{color:#ffb4b4}.careFollowupContext{background:#0d0d10;border:1px solid #34343b;border-radius:12px;padding:10px;margin-top:8px;font-size:10px;line-height:1.65}.careFollowupStatus{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}.careDurable{border-color:#335946}.careDurable strong{color:#9fe0b8}.careRebound{border-color:#6c442e}.careRebound strong{color:#ffc08f}.careResponseRank{display:inline-block;margin-left:6px;padding:2px 6px;border:1px solid #5b4922;border-radius:999px;color:var(--gold2);font-size:8px}.careFollowupPending{color:#ffd166;font-weight:800}.careFollowupDone{color:#86d7a8;font-weight:800}
 .medicalGate{border:1px solid #3b3b42;border-radius:14px;padding:12px;background:#0d0d10;margin-top:9px}.medicalGate.green{border-color:#335946}.medicalGate.yellow{border-color:#6d5a2b}.medicalGate.orange{border-color:#78502d}.medicalGate.red{border-color:#7d3438;background:#1b1012}.medicalGateHead{display:flex;justify-content:space-between;gap:9px;align-items:flex-start}.medicalGateTitle{font-weight:900;font-size:13px}.medicalGate.green .medicalGateTitle{color:#9fe0b8}.medicalGate.yellow .medicalGateTitle{color:#ffe09a}.medicalGate.orange .medicalGateTitle{color:#ffc08f}.medicalGate.red .medicalGateTitle{color:#ffb4b4}.medicalGateReason{font-size:9px;line-height:1.7;color:#c6c6ca;margin-top:7px}.medicalGateActions{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:9px}.medicalSummary{min-height:230px;font-size:10px;line-height:1.6;white-space:pre-wrap}.medicalFeedbackGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.medicalHistoryItem{background:#0d0d10;border:1px solid #303037;border-radius:11px;padding:10px;margin-top:7px}.medicalHistoryItem strong{color:var(--gold2);font-size:10px}.medicalHistoryItem small{font-size:9px;line-height:1.55;color:#aaa}.medicalInstruction{border-color:#4b3d23}.medicalInstruction.stop{border-color:#713436}.medicalInstruction.clear{border-color:#315a43}@media(max-width:620px){.medicalGateActions{grid-template-columns:1fr}.medicalFeedbackGrid{grid-template-columns:1fr}}
@@ -364,7 +370,7 @@ button.primary{box-shadow:0 5px 18px rgba(184,140,50,.10)}
 @media(max-width:460px){.responseToolbar{grid-template-columns:1fr}.responseCompare{grid-template-columns:1fr}.responseMeasureGrid{grid-template-columns:1fr}.responseMeasureGrid .wide{grid-column:auto}.bodyProfileGrid{grid-template-columns:1fr 1fr}}
 
 
-/* V26.4.0 REST TIMER */
+/* V26.4.1 REST TIMER */
 .restTimerCard{margin-top:9px;background:linear-gradient(180deg,#171510,#0e0e11);border:1px solid #5b4922;border-radius:14px;padding:12px}.restTimerHead{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.restTimerTitle{font-size:12px;font-weight:900;color:var(--gold2);letter-spacing:.06em}.restTimerDisplay{font-variant-numeric:tabular-nums;font-size:48px;line-height:1;font-weight:900;color:var(--gold2);letter-spacing:.02em;text-align:center;margin:13px 0 5px}.restTimerElapsed{text-align:center;color:#a7a7aa;font-size:10px;font-variant-numeric:tabular-nums}.restTimerPreset{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:9px}.restTimerPreset button{padding:9px 4px;font-size:10px}.restTimerControls{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:7px;margin-top:9px}.restTimerControls button{min-height:45px}.restTimerStatus{margin-top:9px;font-size:10px;line-height:1.55}.restTimerOptions{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}.restTimerOptions label{display:flex;align-items:center;gap:6px;font-size:9px;color:#aaa}.restTimerOptions input[type=checkbox]{width:auto}.restTimerNext{font-weight:800;color:var(--gold2)}@media(max-width:620px){.restTimerDisplay{font-size:42px}.restTimerControls{grid-template-columns:1fr 1fr}.restTimerControls .restTimerWide{grid-column:1/-1}.restTimerPreset{grid-template-columns:repeat(4,1fr)}}
 </style>
 <script>
@@ -380,9 +386,9 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
 
 <div id="authGate" class="authGate">
   <div class="authBox">
-    <img class="authBrandLogo" src="./brand-header.png?v=26-4-0-goal-to-plan" alt="S.u.G OSAKA">
+    <img class="authBrandLogo" src="./brand-header.png?v=26-4-1-map-engine" alt="S.u.G OSAKA">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V26.4.0 ADAPTIVE CORE / MEMBERS ONLY</div>
+    <div class="sub">V26.4.1 ADAPTIVE CORE / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -391,7 +397,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
     <div class="authLinks"><button class="linkBtn" type="button" onclick="requestPasswordReset()">パスワードを忘れた方</button></div>
     <div id="authError" class="authError"></div>
     <div class="setupNote">S.u.G会員限定。管理者から届いた招待リンクで初回登録してください。</div>
-    <img class="authMascot" src="./mascot-highfive.png?v=26-4-0-goal-to-plan" alt="">
+    <img class="authMascot" src="./mascot-highfive.png?v=26-4-1-map-engine" alt="">
     <div id="pwaGuide" class="pwaGuide hidden"><b>iPhoneホーム画面対応</b><br>Safariの共有ボタン →「ホーム画面に追加」で、アプリのように起動できます。</div>
   </div>
 </div>
@@ -496,8 +502,8 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
 <header>
   <div class="head">
     <div class="brandIdentity">
-      <img class="brandHeaderLogo" src="./brand-header.png?v=26-4-0-goal-to-plan" alt="S.u.G OSAKA">
-      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.4.0 ADAPTIVE CORE / GOAL-TO-PLAN + CARE + NEXT LOAD</small></div>
+      <img class="brandHeaderLogo" src="./brand-header.png?v=26-4-1-map-engine" alt="S.u.G OSAKA">
+      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.4.1 ADAPTIVE CORE / MAP ENGINE + GOAL-TO-PLAN</small></div>
     </div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
@@ -531,7 +537,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
 
   <section id="adminBoard" class="panel">
     <div id="adminBrandHero" class="card adminBrandHero">
-      <img class="adminOfficialLogo" src="./brand-official.jpg?v=26-4-0-goal-to-plan" alt="S.u.G OSAKA official brand">
+      <img class="adminOfficialLogo" src="./brand-official.jpg?v=26-4-1-map-engine" alt="S.u.G OSAKA official brand">
       <div class="adminBrandText"><h2>S.u.G OSAKA</h2><p>PERSONAL TRAINING × PERSONAL STRETCH × CONDITIONING<br>会員管理・予約・フォロー・コンディションを一つの運営画面へ。</p></div>
     </div>
     <div class="card dailyOpsCard">
@@ -656,11 +662,11 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
   <section id="dash" class="panel active">
     <div class="card sugHero">
       <div>
-        <img class="sugHeroLogo" src="./brand-header.png?v=26-4-0-goal-to-plan" alt="S.u.G OSAKA">
+        <img class="sugHeroLogo" src="./brand-header.png?v=26-4-1-map-engine" alt="S.u.G OSAKA">
         <div class="sugHeroTitle">鍛える。整える。魅せる。</div>
         <div class="sugHeroSub">TRAINING / CONDITIONING / STYLE UPDATE<br>記録して、管理して、次の身体へ。</div>
       </div>
-      <img class="sugHeroMascot" src="./mascot-highfive.png?v=26-4-0-goal-to-plan" alt="">
+      <img class="sugHeroMascot" src="./mascot-highfive.png?v=26-4-1-map-engine" alt="">
     </div>
     <div class="card">
       <h2>現在の状態</h2>
@@ -719,7 +725,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
 
   <section id="smart" class="panel">
     <div class="card smartHero">
-      <div class="sectionLead"><div><div class="smartHeroTitle">S.u.G SMART PLAN</div><div class="smartHeroSub">外部AI・APIなし。会員データとS.u.Gルールから「今日の優先順位」を自動計算します。</div></div><img class="sectionMascot" src="./mascot-highfive.png?v=26-4-0-goal-to-plan" alt=""></div>
+      <div class="sectionLead"><div><div class="smartHeroTitle">S.u.G SMART PLAN</div><div class="smartHeroSub">外部AI・APIなし。会員データとS.u.Gルールから「今日の優先順位」を自動計算します。</div></div><img class="sectionMascot" src="./mascot-highfive.png?v=26-4-1-map-engine" alt=""></div>
       <div id="smartTargetNotice" class="notice" style="margin-top:9px">分析対象を確認中...</div>
       <div class="grid2" style="margin-top:10px">
         <div><label>今日の食欲</label><select id="smartAppetite" onchange="saveSmartContext()"><option value="normal">普通</option><option value="low">低い</option><option value="high">強い</option></select></div>
@@ -741,7 +747,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
       <div id="smartPriorities"></div>
     </div>
     <div class="card goalPlanHero" id="goalPlanCard">
-      <div class="row" style="align-items:center"><div><h2 style="margin-bottom:3px">GOAL-TO-PLAN ENGINE</h2><div class="muted">現在地 → 理想 → 期限から、Phase・週SET・トレーニング・食事・回復を逆算。</div></div><span class="badge">V26.4.0</span></div>
+      <div class="row" style="align-items:center"><div><h2 style="margin-bottom:3px">GOAL-TO-PLAN ENGINE</h2><div class="muted">現在地 → 理想 → 期限から、Phase・週SET・トレーニング・食事・回復を逆算。</div></div><span class="badge">V26.4.1</span></div>
       <div id="goalPlanCurrent" class="goalPlanCurrent"></div>
       <div class="goalPlanGrid" style="margin-top:10px">
         <div><label>目的</label><select id="gpGoal"><option>筋肥大</option><option>減量</option><option>ボディリコンプ</option><option>健康維持</option><option>筋力向上</option><option>姿勢・動作改善</option></select></div>
@@ -790,7 +796,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
     <div class="card responseHero">
       <div class="row" style="align-items:center">
         <div><div class="responseHeroTitle">S.u.G RESPONSE ENGINE</div><div class="responseHeroSub">CURRENT 28D × PREVIOUS 28D × 本人の過去反応。体型から遺伝子を推測せず、「今の条件で何に反応しているか」を更新します。</div></div>
-        <span class="badge">V26.4.0</span>
+        <span class="badge">V26.4.1</span>
       </div>
       <div class="responseToolbar" style="margin-top:10px">
         <div><label>詳細を見る部位</label><select id="responsePartSelect" onchange="renderResponseEngine()"><option>胸</option><option>背中</option><option>肩</option><option>腕</option><option>前脚</option><option>後脚・臀部</option><option>姿勢</option><option>全身</option></select></div>
@@ -868,18 +874,19 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
 
   <section id="activity" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>歩数・活動</h2><div class="muted">現行V25は手入力。Apple Health / HealthKit自動連携は次段階で接続。</div></div><img class="sectionMascot" src="./mascot-jumprope.png?v=26-4-0-goal-to-plan" alt=""></div>
+      <div class="sectionLead"><div><h2>歩数・活動</h2><div class="muted">現行V25は手入力。Apple Health / HealthKit自動連携は次段階で接続。</div></div><img class="sectionMascot" src="./mascot-jumprope.png?v=26-4-1-map-engine" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="aDate" type="date"></div><div><label>歩数</label><input id="aSteps" type="number" min="0" step="100"></div></div>
       <div style="margin-top:8px"><label>メモ</label><input id="aMemo" placeholder="例：通勤＋散歩、脚トレ日、外出少なめ"></div>
       <button class="primary" style="width:100%;margin-top:9px" onclick="addActivity()">歩数を記録</button>
     </div>
     <div class="card"><h2>7日間</h2><div class="kpis"><div class="kpi"><span>今日</span><b id="actToday">--</b></div><div class="kpi"><span>7日平均</span><b id="actAvg7">--</b></div><div class="kpi"><span>基準目標</span><b id="actTarget">--</b></div><div class="kpi"><span>達成率</span><b id="actRate">--</b></div></div><div class="stepProgress"><i id="actProgressBar"></i></div><div id="actJudge" class="notice" style="margin-top:8px"></div></div>
+    <div class="card mapEngineHero"><div class="row" style="align-items:center"><div><h2 style="margin-bottom:3px">S.u.G WALK MAP</h2><div class="muted">今日の目標歩数・回復・トレーニング条件から、残り歩行量を概算してGoogle Mapsの徒歩ルートへ接続。</div></div><span class="badge">MAP</span></div><div id="walkMapKpis" class="mapEngineGrid"></div><div id="walkMapAdvice" class="notice" style="margin-top:9px">活動データから再計算します。</div><div class="mapEngineControls"><div><label>目的地（任意）</label><input id="walkDestination" placeholder="例：大阪城公園 / 自宅 / 天満橋"></div><button class="secondary" type="button" onclick="getMapCurrentLocation('walk')">現在地を取得</button></div><div id="walkMapLocation" class="mapEngineLocation">現在地は未取得。Google Maps側の現在地からでも開始できます。</div><div class="mapEngineActions"><button class="primary" type="button" onclick="openWalkingDirections()">徒歩ルートをGoogle Mapsで開く</button><button class="secondary" type="button" onclick="openWalkingSpotSearch('park')">近くの公園</button><button class="secondary" type="button" onclick="openWalkingSpotSearch('walk')">散歩コースを探す</button></div><div class="mapEngineNote">距離・時間・消費kcalは歩数からの概算です。現在地はこの画面で一時利用するだけで、S.u.Gには保存しません。Google Mapsの実際の歩道・道路状況を優先してください。</div></div>
     <div class="card"><h2>履歴</h2><div id="activityList"></div></div>
   </section>
 
   <section id="care" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>症状別セルフケア</h2><div class="muted">腰・首・肩・膝・足首・手首・肘。診断ではなく、痛む場所と動作 → 危険サイン確認 → 軽いセルフケア → 前後評価。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=26-4-0-goal-to-plan" alt=""></div>
+      <div class="sectionLead"><div><h2>症状別セルフケア</h2><div class="muted">腰・首・肩・膝・足首・手首・肘。診断ではなく、痛む場所と動作 → 危険サイン確認 → 軽いセルフケア → 前後評価。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=26-4-1-map-engine" alt=""></div>
       <div class="notice">強い症状・外傷・神経症状などがある場合はセルフケアより医療評価を優先します。痛みやしびれが増える動きは中止してください。</div>
       <div class="selfCareChoice" style="margin-top:9px"><div><label>部位</label><select id="careArea" onchange="renderCareQuestions()"><option value="lowback">腰</option><option value="neck">首</option><option value="shoulder">肩</option><option value="knee">膝</option><option value="ankle">足首</option><option value="wrist">手首</option><option value="elbow">肘</option></select></div><div><label>痛み BEFORE 0-10</label><input id="carePainBefore" type="number" min="0" max="10" value="3" oninput="renderCareAromLink()"></div></div>
       <div class="selfCareChoice" style="margin-top:8px"><div><label>痛む場所</label><select id="careLocation"></select></div><div><label>痛む動作</label><select id="careMovement"></select></div></div>
@@ -895,14 +902,14 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
     <div class="card"><h2>実施後の再評価</h2><div class="grid2"><div><label>痛み AFTER 0-10</label><input id="carePainAfter" type="number" min="0" max="10"></div><div><label>ROM AFTER °（任意）</label><input id="careRomAfter" type="number" step="1" min="0" max="360"></div></div><div class="grid2" style="margin-top:8px"><div><label>動作つらさ AFTER 0-10（任意）</label><input id="careMoveAfter" type="number" min="0" max="10"></div><div style="display:flex;align-items:end"><button class="secondary" style="width:100%" onclick="saveSelfCareResult()">結果を保存</button></div></div><div id="careAfterJudge" class="notice" style="margin-top:8px">実施後に痛み・ROM・同じ動作を再評価します。</div></div>
     <div class="card"><h2>翌日・24Hフォロー</h2><div class="muted">直後に良くても翌日に戻るCAREと、改善が維持されるCAREを分けます。24時間ぴったりでなくても、次回確認時刻を保存します。</div><div style="margin-top:8px"><label>フォローするCARE</label><select id="careFollowupSelect" onchange="loadCareFollowupForm()"></select></div><div id="careFollowupContext" class="careFollowupContext"><span class="muted">保存済みCAREを選択してください。</span></div><div class="grid2" style="margin-top:8px"><div><label>フォロー日</label><input id="careFollowupDate" type="date"></div><div><label>痛み 0-10</label><input id="careFollowupPain" type="number" min="0" max="10"></div></div><div class="grid2" style="margin-top:8px"><div><label>ROM °（任意）</label><input id="careFollowupRom" type="number" step="1" min="0" max="360"></div><div><label>動作つらさ 0-10（任意）</label><input id="careFollowupMove" type="number" min="0" max="10"></div></div><div class="careFollowupStatus"><div><label>体感</label><select id="careFollowupStatus"><option value="better">さらに改善 / 維持良好</option><option value="same" selected>ほぼ同じ</option><option value="worse">戻った / 悪化</option></select></div><div><label>メモ（任意）</label><input id="careFollowupNote" placeholder="例：翌朝は挙上時のみ少し違和感"></div></div><button class="secondary" style="width:100%;margin-top:9px" onclick="saveCareFollowup()">翌日・24H反応を保存</button><div id="careFollowupJudge" class="notice" style="margin-top:8px">直後反応と翌日反応を分けてCARE RESPONSEへ反映します。</div></div>
     <div class="card"><h2>CARE RESPONSE PROFILE</h2><div class="muted">本人の過去反応から、同じ条件で反応しやすかったCAREプロトコルを更新します。複数CAREを同時実施した場合は“組み合わせへの反応”として扱い、各手技単独の因果とは断定しません。</div><div id="careResponseProfile" style="margin-top:9px"></div></div>
-    <div class="card"><h2>MEDICAL REFERRAL GATE</h2><div class="muted">S.u.Gは診断を行わず、CAREで拾った警告サイン・症状推移・反応不足を整理して、必要時に医療評価へつなぎます。緊急性は実際の症状と地域の医療体制に従って判断してください。</div><div id="careReferralGate"></div><div class="medicalGateActions"><button class="secondary" type="button" onclick="generateReferralSummary()">紹介サマリー生成</button><button class="secondary" type="button" onclick="copyReferralSummary()">サマリーをコピー</button><button class="secondary" type="button" onclick="downloadReferralSummary()">TXT保存</button></div><textarea id="careReferralSummary" class="medicalSummary" readonly placeholder="紹介サマリーを生成すると、症状・AROM/PROM・CARE反応・トレーニング情報を医療機関向けに整理します。" style="margin-top:9px"></textarea><button class="primary" type="button" style="width:100%;margin-top:8px" onclick="saveReferralRecord()">紹介記録として保存</button></div>
+    <div class="card"><h2>MEDICAL REFERRAL GATE</h2><div class="muted">S.u.Gは診断を行わず、CAREで拾った警告サイン・症状推移・反応不足を整理して、必要時に医療評価へつなぎます。緊急性は実際の症状と地域の医療体制に従って判断してください。</div><div id="careReferralGate"></div><div class="careToolGroup"><div class="careToolGroupTitle"><span>MEDICAL MAP</span><span class="careToolTag">Google Maps</span></div><div class="careToolWhy">受診候補になったとき、近くの医療機関をGoogle Mapsで検索します。現在地はS.u.Gへ保存しません。</div><div id="medicalMapLocation" class="mapEngineLocation">Google Maps側の現在地を使って検索できます。</div><div class="medicalMapActions"><button class="secondary" type="button" onclick="getMapCurrentLocation('medical')">現在地を取得</button><button class="secondary" type="button" onclick="openMedicalMap('orthopedic')">近くの整形外科を探す</button><button class="secondary" type="button" onclick="openMedicalMap('emergency')">救急外来を探す</button></div></div><div class="medicalGateActions"><button class="secondary" type="button" onclick="generateReferralSummary()">紹介サマリー生成</button><button class="secondary" type="button" onclick="copyReferralSummary()">サマリーをコピー</button><button class="secondary" type="button" onclick="downloadReferralSummary()">TXT保存</button></div><textarea id="careReferralSummary" class="medicalSummary" readonly placeholder="紹介サマリーを生成すると、症状・AROM/PROM・CARE反応・トレーニング情報を医療機関向けに整理します。" style="margin-top:9px"></textarea><button class="primary" type="button" style="width:100%;margin-top:8px" onclick="saveReferralRecord()">紹介記録として保存</button></div>
     <div class="card"><h2>受診後フィードバック</h2><div class="muted">医療機関から受けた運動・負荷に関する指示だけを記録します。S.u.G側で診断名や治療内容を推測しません。</div><div class="medicalFeedbackGrid" style="margin-top:9px"><div><label>受診日</label><input id="medicalVisitDate" type="date"></div><div><label>医療機関名（任意）</label><input id="medicalFacility" placeholder="例：〇〇整形外科"></div><div><label>対象部位</label><select id="medicalArea" onchange="this.dataset.userChanged='1'"><option value="all">全身</option><option value="lowback">腰</option><option value="neck">首</option><option value="shoulder">肩</option><option value="knee">膝</option><option value="ankle">足首</option><option value="wrist">手首</option><option value="elbow">肘</option></select></div><div><label>運動・負荷指示</label><select id="medicalTrainingStatus"><option value="unknown">指示未入力</option><option value="stop_all">全身トレーニング中止</option><option value="stop_area">該当部位の負荷中止</option><option value="modified">該当部位は医療指示の範囲で調整</option><option value="cleared">トレーニング再開可</option></select></div><div><label>再診 / 再評価日（任意）</label><input id="medicalRecheckDate" type="date"></div><div><label>許可された動作・負荷（任意）</label><input id="medicalAllowed" placeholder="例：痛みのない範囲の軽負荷のみ"></div></div><div style="margin-top:8px"><label>医療機関からの指示・制限</label><textarea id="medicalInstructions" placeholder="例：頭上動作は一旦中止。2週間後に再評価。"></textarea></div><button class="primary" type="button" style="width:100%;margin-top:9px" onclick="saveMedicalFeedback()">受診後フィードバックを保存</button><div id="medicalFeedbackHistory" style="margin-top:9px"></div></div>
     <div class="card"><h2>セルフケア履歴</h2><div id="careHistory"></div></div>
   </section>
 
   <section id="weight" class="panel">
     <div class="card">
-      <img class="mascotMini" src="./mascot-jumprope.png?v=26-4-0-goal-to-plan" alt="">
+      <img class="mascotMini" src="./mascot-jumprope.png?v=26-4-1-map-engine" alt="">
       <h2>体重記録</h2>
       <div class="grid2"><div><label>日付</label><input id="wDate" type="date"></div><div><label>体重 kg</label><input id="wWeight" type="number" step="0.1"></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>体脂肪率 %</label><input id="wFat" type="number" step="0.1"></div><div><label>メモ</label><input id="wMemo"></div></div>
@@ -924,7 +931,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
 
   <section id="training" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>トレーニング記録</h2><div class="muted">重量・REP・SET・RIR・REST・総重量・推定1RMを記録し、全身回復とSET間回復を分けて確認。</div></div><img class="sectionMascot" src="./mascot-basketball.png?v=26-4-0-goal-to-plan" alt=""></div>
+      <div class="sectionLead"><div><h2>トレーニング記録</h2><div class="muted">重量・REP・SET・RIR・REST・総重量・推定1RMを記録し、全身回復とSET間回復を分けて確認。</div></div><img class="sectionMascot" src="./mascot-basketball.png?v=26-4-1-map-engine" alt=""></div>
       <div class="grid2">
   <div><label>日付</label><input id="tDate" type="date"></div>
   <div>
@@ -956,7 +963,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
       <div class="restTimerCard" id="restTimerCard">
         <div class="restTimerHead">
           <div><div class="restTimerTitle">REST TIMER｜INTER-SET</div><div class="muted">SET終了でSTART → 次SET開始で実RESTをSET詳細へ自動記録。</div></div>
-          <span class="badge">V26.4.0</span>
+          <span class="badge">V26.4.1</span>
         </div>
         <div class="grid3" style="margin-top:9px">
           <div><label>目標REST（秒）</label><input id="restTimerTarget" type="number" min="10" max="1800" step="5" value="120" oninput="restTimerTargetChanged()"></div>
@@ -1014,7 +1021,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
 
   <section id="rom" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>ROMスクリーニング</h2><div class="muted">V25初期版：スクワットの側面画像から、2DランドマークでボトムROMを数値化。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=26-4-0-goal-to-plan" alt=""></div>
+      <div class="sectionLead"><div><h2>ROMスクリーニング</h2><div class="muted">V25初期版：スクワットの側面画像から、2DランドマークでボトムROMを数値化。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=26-4-1-map-engine" alt=""></div>
       <div class="notice">撮影：真横から全身を入れ、スクワット最下点で撮影。カメラは傾けず、肩・股関節・膝・足首・つま先が見える状態を推奨。</div>
       <div class="grid2" style="margin-top:9px">
         <div><label>日付</label><input id="romDate" type="date"></div>
@@ -1031,7 +1038,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
       <div id="romResult"><span class="muted">画像を解析すると結果が表示されます。</span></div>
     </div>
     <div class="card">
-      <div class="sectionLead"><div><h2>関節 AROM / PROM</h2><div class="muted">ストレッチ・コンディショニング側の関節可動域評価。AROM＝自力、PROM＝外力補助で確認。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=26-4-0-goal-to-plan" alt=""></div>
+      <div class="sectionLead"><div><h2>関節 AROM / PROM</h2><div class="muted">ストレッチ・コンディショニング側の関節可動域評価。AROM＝自力、PROM＝外力補助で確認。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=26-4-1-map-engine" alt=""></div>
       <div class="notice">PROMは痛みを押して無理に測らないでください。AROMだけでも判定可能。伸展は0°を基準とし、伸展不足はマイナス入力（例：膝伸展10°不足＝-10°）。</div>
       <div class="grid2" style="margin-top:9px">
         <div><label>日付</label><input id="aromDate" type="date"></div>
@@ -1090,7 +1097,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
       <div id="aromResult"><span class="muted">数値を入力すると、参考帯・AROM/PROM差・機能への影響候補を表示します。</span></div>
     </div>
     <div class="card">
-      <div class="sectionLead"><div><h2>肩甲上腕リズム（SHR）</h2><div class="muted">写真で腕の挙上角を自動検出＋肩甲骨だけ2点タップ。数字を自分で測らなくてOK。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=26-4-0-goal-to-plan" alt=""></div>
+      <div class="sectionLead"><div><h2>肩甲上腕リズム（SHR）</h2><div class="muted">写真で腕の挙上角を自動検出＋肩甲骨だけ2点タップ。数字を自分で測らなくてOK。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=26-4-1-map-engine" alt=""></div>
 
       <div class="notice">
         <b>撮影：</b>後ろから、全身または腰〜頭まで入るように撮影。①腕を体側に下ろした写真 ②同じ位置から腕を上げた写真。肩甲面挙上か外転が一番測りやすい。
@@ -1171,7 +1178,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
       <div class="muted">同日・同動作で左右を保存すると、自動で差が大きい順に表示。</div>
       <div id="aromAsymmetry" style="margin-top:8px"><span class="muted">左右データなし</span></div>
     </div>    <div class="card">
-      <div class="sectionLead"><div><h2>Joint by Joint MAP</h2><div class="muted">関節可動域・左右差・CARE・SHRを統合して、次に見る場所を自動整理。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=26-4-0-goal-to-plan" alt=""></div>
+      <div class="sectionLead"><div><h2>Joint by Joint MAP</h2><div class="muted">関節可動域・左右差・CARE・SHRを統合して、次に見る場所を自動整理。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=26-4-1-map-engine" alt=""></div>
       <div class="notice">S.u.Gの運動スクリーニング用フレーム。ROMだけで「安定性不足」や原因筋を断定しません。膝・腰などの安定性は次の動作スクリーンと合わせて評価します。</div>
       <button class="secondary" style="width:100%;margin-top:9px" onclick="renderJointByJoint()">最新データで更新</button>
       <div id="jbjPriority" class="jbjPriority"><b>優先候補</b><br>評価データを入力すると表示します。</div>
@@ -1179,7 +1186,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
     </div>
 
     <div class="card">
-      <div class="sectionLead"><div><h2>動作スクリーン</h2><div class="muted">写真1枚からPoseを自動解析。動作の「傾向」を数値化して、ROM・CARE・Joint by Jointとつなげます。</div></div><img class="sectionMascot" src="./mascot-running.png?v=26-4-0-goal-to-plan" alt=""></div>
+      <div class="sectionLead"><div><h2>動作スクリーン</h2><div class="muted">写真1枚からPoseを自動解析。動作の「傾向」を数値化して、ROM・CARE・Joint by Jointとつなげます。</div></div><img class="sectionMascot" src="./mascot-running.png?v=26-4-1-map-engine" alt=""></div>
       <div class="notice"><b>診断ではありません。</b> 2D写真はカメラ位置・奥行き・動作の瞬間で数値が変わります。同じ撮影条件で左右・前回比較を優先します。</div>
 
       <div class="grid2" style="margin-top:9px">
@@ -1214,7 +1221,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
     </div>
 
     <div class="card">
-      <div class="sectionLead"><div><h2>S.u.G 統合判定</h2><div class="muted">CARE・回復・ROM・AROM/PROM・SHR・動作スクリーン・トレーニングを横断し、今の優先課題TOP3を自動整理。</div></div><img class="sectionMascot" src="./mascot-highfive.png?v=26-4-0-goal-to-plan" alt=""></div>
+      <div class="sectionLead"><div><h2>S.u.G 統合判定</h2><div class="muted">CARE・回復・ROM・AROM/PROM・SHR・動作スクリーン・トレーニングを横断し、今の優先課題TOP3を自動整理。</div></div><img class="sectionMascot" src="./mascot-highfive.png?v=26-4-1-map-engine" alt=""></div>
       <div class="notice">各評価の「診断」を行う機能ではありません。記録間の組み合わせから、次に確認・調整する優先順位を作るS.u.G運用支援です。</div>
       <button class="primary" style="width:100%;margin-top:9px" onclick="renderIntegratedAssessment(true)">最新データで統合判定</button>
       <div id="integratedResult"><span class="muted">記録を入力すると自動で統合します。</span></div>
@@ -1240,7 +1247,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
 
   <section id="recovery" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>回復・コンディション</h2><div class="muted">睡眠・疲労・ストレス・痛みから、その日の負荷を調整。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=26-4-0-goal-to-plan" alt=""></div>
+      <div class="sectionLead"><div><h2>回復・コンディション</h2><div class="muted">睡眠・疲労・ストレス・痛みから、その日の負荷を調整。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=26-4-1-map-engine" alt=""></div>
       <div class="grid2"><div><label>日付</label><input id="rDate" type="date"></div><div><label>睡眠時間</label><input id="rSleep" type="number" step="0.1"></div></div>
       <div class="grid3" style="margin-top:8px"><div><label>疲労 1-10</label><input id="rFatigue" type="number" min="1" max="10"></div><div><label>ストレス 1-10</label><input id="rStress" type="number" min="1" max="10"></div><div><label>痛み 0-10</label><input id="rPain" type="number" min="0" max="10"></div></div>
       <div style="margin-top:8px"><label>メモ</label><textarea id="rMemo"></textarea></div>
@@ -1252,7 +1259,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
 
   <section id="checkin" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>週間チェックイン</h2><div class="muted">今週の身体と生活を短時間で共有。コーチングの調整材料にします。</div></div><img class="sectionMascot" src="./mascot-running.png?v=26-4-0-goal-to-plan" alt=""></div>
+      <div class="sectionLead"><div><h2>週間チェックイン</h2><div class="muted">今週の身体と生活を短時間で共有。コーチングの調整材料にします。</div></div><img class="sectionMascot" src="./mascot-running.png?v=26-4-1-map-engine" alt=""></div>
       <div class="notice">週1回の自己申告です。数値は管理の目安として使い、体調の診断には使用しません。</div>
       <div class="grid2" style="margin-top:9px"><div><label>日付</label><input id="ciDate" type="date"></div><div><label>体調 1-5</label><input id="ciCondition" type="number" min="1" max="5" value="3"></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>睡眠満足度 1-5</label><input id="ciSleep" type="number" min="1" max="5" value="3"></div><div><label>痛み 0-10</label><input id="ciPain" type="number" min="0" max="10" value="0"></div></div>
@@ -1306,7 +1313,7 @@ window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/ne
 
   <section id="profile" class="panel">
     <div class="card">
-      <div class="sectionLead"><div><h2>会員情報</h2><div class="muted">目標・栄養・注意事項をS.u.Gの管理基準として保存。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=26-4-0-goal-to-plan" alt=""></div>
+      <div class="sectionLead"><div><h2>会員情報</h2><div class="muted">目標・栄養・注意事項をS.u.Gの管理基準として保存。</div></div><img class="sectionMascot" src="./mascot-basic.png?v=26-4-1-map-engine" alt=""></div>
       <div class="grid2"><div><label>氏名</label><input id="pfName"></div><div><label>目的</label><select id="pfGoal"><option>筋肥大</option><option>減量</option><option>増量</option><option>健康維持</option><option>姿勢改善</option></select></div></div>
       <div class="grid2" style="margin-top:8px"><div><label>目標体重</label><input id="pfTargetWeight" type="number" step="0.1"></div><div><label>目標kcal</label><input id="pfTargetKcal" type="number"></div></div>
       <div class="grid3" style="margin-top:8px"><div><label>目標P</label><input id="pfP" type="number"></div><div><label>目標F</label><input id="pfF" type="number"></div><div><label>目標C</label><input id="pfC" type="number"></div></div>
@@ -2051,7 +2058,7 @@ async function refreshMemberProfiles(selectId=null){
 }
 
 function inviteRedirectUrl(){
-  return location.origin+location.pathname+"?invite=1&v=26-4-0-goal-to-plan";
+  return location.origin+location.pathname+"?invite=1&v=26-4-1-map-engine";
 }
 
 async function createMemberInvite(){
@@ -2773,7 +2780,7 @@ function renderMemberSelect(){
 
 function addWeight(){if(!n("wWeight"))return alert("体重を入力");m().weights.push({date:wDate.value,weight:n("wWeight"),fat:n("wFat")||null,memo:wMemo.value});m().weights.sort((a,b)=>a.date.localeCompare(b.date));wWeight.value=wFat.value=wMemo.value="";saveRender()}
 function addMeal(){if(!mName.value&&!n("mKcal"))return alert("食事を入力");m().meals.push({date:mDate.value,name:mName.value||"食事",kcal:n("mKcal"),p:n("mP"),f:n("mF"),c:n("mC")});mName.value=mKcal.value=mP.value=mF.value=mC.value="";saveRender()}
-// V26.4.0 REST TIMER / INTER-SET
+// V26.4.1 REST TIMER / INTER-SET
 let restTimerState={running:false,paused:false,startMs:0,elapsedBeforeMs:0,targetSec:120,tick:null,lastWhole:null,nextRestIndex:1,audio:null};
 function restTimerFmt(sec,plus=false){
   sec=Math.max(0,Math.round(Number(sec)||0));
@@ -3442,7 +3449,7 @@ function renderPrivateNextLoad(data){
     : `<div class="kpis"><div class="kpi"><span>FINAL ACTION</span><b>${esc(a)}</b></div><div class="kpi"><span>NEXT LOAD</span><b>--</b></div><div class="kpi"><span>CONFIDENCE</span><b>${esc(d.confidence||"--")}</b></div></div>`;
   const volumeNote=vg?`<div class="notice ${vg.cls}" style="margin-top:8px"><b>VOLUME GUARD｜${esc(vg.label)}</b><br>${esc(vg.detail)}｜7日 ${vg.volume.effective.toFixed(1)}SET / 28日平均 ${vg.volume.avg28Effective.toFixed(1)}SET/週</div>`:"";
   const pofNote=pp?`<div class="notice ${pp.action==="ADD_POF"?"ok":pp.action==="NO_ADD"?"warn":""}" style="margin-top:8px"><b>POF VOLUME MAP｜${esc(pp.label)}</b><br>${esc(pp.detail)}｜Stretch ${Number(pp.src.stretch||0).toFixed(1)} / Mid ${Number(pp.src.mid||0).toFixed(1)} / Shortened ${Number(pp.src.short||0).toFixed(1)} SET/週</div>`:"";
-  box.innerHTML=`${main}<div class="notice" style="margin-top:8px">${esc(d.display_message||"")}</div>${volumeNote}${pofNote}<div class="muted" style="margin-top:6px">CONFIDENCE ${esc(d.confidence||"--")}｜PRIVATE ENGINE ${esc(data?.engine?.engine_version||"26.2.5")}｜S.u.G GOAL + VOLUME + POF + CARE RESPONSE MODEL V26.4.0</div>`;
+  box.innerHTML=`${main}<div class="notice" style="margin-top:8px">${esc(d.display_message||"")}</div>${volumeNote}${pofNote}<div class="muted" style="margin-top:6px">CONFIDENCE ${esc(d.confidence||"--")}｜PRIVATE ENGINE ${esc(data?.engine?.engine_version||"26.2.5")}｜S.u.G GOAL + VOLUME + POF + CARE RESPONSE MODEL V26.4.1</div>`;
   if(badge){badge.textContent="PRIVATE "+(data?.engine?.engine_version||"26.2.5");badge.className="badge ok";}
 }
 
@@ -3635,6 +3642,20 @@ function smartContext(){
 function loadSmartContext(){const c=smartContext(),a=document.getElementById("smartAppetite"),d=document.getElementById("smartDayType"),mi=document.getElementById("smartMinutes");if(a)a.value=c.appetite||"normal";if(d)d.value=c.dayType||"training";if(mi&&!mi.dataset.userChanged)mi.value=String(m().profile?.sessionMinutes||60);}
 function saveSmartContext(){const c=smartContext();c.appetite=document.getElementById("smartAppetite")?.value||"normal";c.dayType=document.getElementById("smartDayType")?.value||"training";c.updatedAt=new Date().toISOString();persist();renderSmartCore();}
 function openSmartTab(){const b=document.querySelector('.tab[data-tab="smart"]');if(b)b.click();}
+// V26.4.1 S.u.G MAP ENGINE
+let sugMapLocation=null;
+function mapLatestHeight(){const rows=(m()?.bodyMeasurements||[]).filter(x=>Number(x.height)>0).slice().sort((a,b)=>String(a.date||"").localeCompare(String(b.date||"")));return Number(rows.at(-1)?.height||0)}
+function mapLatestWeight(){const rows=(m()?.weights||[]).filter(x=>Number(x.weight)>0).slice().sort((a,b)=>String(a.date||"").localeCompare(String(b.date||"")));return Number(rows.at(-1)?.weight||0)||Number(m()?.profile?.targetWeight||0)||70}
+function mapStrideMeters(){const h=mapLatestHeight();return h?Math.max(.55,Math.min(.9,h*.414/100)):.75}
+function walkMapMetrics(){const a=todayActivity(),todaySteps=Number(a?.steps||0),baseTarget=activityTarget(),st=smartRecoveryState(),rawTarget=(st&&Object.prototype.hasOwnProperty.call(st,"stepTarget"))?Number(st.stepTarget):Number(baseTarget||8000),target=Math.max(0,Number.isFinite(rawTarget)?rawTarget:Number(baseTarget||8000)),remaining=Math.max(0,target-todaySteps),stride=mapStrideMeters(),km=remaining*stride/1000,minutes=km/4.8*60,kcal=km*mapLatestWeight()*.5;return {todaySteps,target,remaining,km,minutes,kcal,stride}}
+function renderWalkMap(){const box=document.getElementById("walkMapKpis"),advice=document.getElementById("walkMapAdvice");if(!box||!m())return;const x=walkMapMetrics();box.innerHTML=`<div class="mapEngineKpi"><span>今日</span><b>${Math.round(x.todaySteps).toLocaleString()}歩</b></div><div class="mapEngineKpi"><span>今日の目標</span><b>${Math.round(x.target).toLocaleString()}歩</b></div><div class="mapEngineKpi"><span>残り</span><b>${Math.round(x.remaining).toLocaleString()}歩</b></div><div class="mapEngineKpi"><span>概算</span><b>${x.km.toFixed(1)}km / ${Math.round(x.minutes)}分</b></div>`;let text=x.target<=0?`今日は回復・CARE条件から歩数ノルマなし。追加ウォーキングは不要。`:x.remaining<=0?`今日の歩数目標は達成済み。追加ウォーキングは回復・脚トレ・目的に応じて任意。`:`残り約 ${x.km.toFixed(1)}km（${Math.round(x.minutes)}分 / 約${Math.round(x.kcal)}kcal）の歩行が目安。`;try{const st=smartRecoveryState();if(st?.stepReason)text+=` ${st.stepReason}`}catch(_e){}if(advice)advice.textContent=text}
+function updateMapLocationLabels(){const text=sugMapLocation?`現在地取得済み（精度 約${Math.round(sugMapLocation.accuracy||0)}m）。この位置情報は保存しません。`:`現在地は未取得。Google Maps側の現在地からでも開始できます。`;const w=document.getElementById("walkMapLocation"),med=document.getElementById("medicalMapLocation");if(w)w.innerHTML=sugMapLocation?`<strong>現在地取得済み</strong>｜精度 約${Math.round(sugMapLocation.accuracy||0)}m｜保存しません。`:text;if(med)med.innerHTML=sugMapLocation?`<strong>現在地取得済み</strong>｜Google Maps検索に一時利用できます。`:`Google Maps側の現在地を使って検索できます。`}
+function getMapCurrentLocation(context="walk"){if(!navigator.geolocation)return alert("この端末では現在地取得に対応していません");navigator.geolocation.getCurrentPosition(pos=>{sugMapLocation={lat:pos.coords.latitude,lng:pos.coords.longitude,accuracy:pos.coords.accuracy,at:Date.now()};updateMapLocationLabels();if(context==="walk")renderWalkMap()},err=>{console.warn(err);alert("現在地を取得できませんでした。iPhoneの位置情報許可を確認するか、Google Maps側の現在地を使用してください。")},{enableHighAccuracy:true,timeout:10000,maximumAge:60000})}
+function googleMapsOpen(url){const w=window.open(url,"_blank","noopener,noreferrer");if(!w)location.href=url}
+function openWalkingDirections(){const dest=(document.getElementById("walkDestination")?.value||"").trim();if(!dest)return alert("目的地を入力してください。近くを歩くだけなら『近くの公園』『散歩コースを探す』を使ってください。");const q=new URLSearchParams({api:"1",destination:dest,travelmode:"walking"});if(sugMapLocation)q.set("origin",`${sugMapLocation.lat},${sugMapLocation.lng}`);googleMapsOpen(`https://www.google.com/maps/dir/?${q.toString()}`)}
+function openWalkingSpotSearch(kind="park"){let query=kind==="park"?"公園":"散歩コース 遊歩道";if(sugMapLocation)query+=` near ${sugMapLocation.lat},${sugMapLocation.lng}`;const q=new URLSearchParams({api:"1",query});googleMapsOpen(`https://www.google.com/maps/search/?${q.toString()}`)}
+function openMedicalMap(kind="orthopedic"){const gate=(()=>{try{return careReferralGate()}catch(_e){return null}})();let query=kind==="emergency"?"救急外来":"整形外科";if(kind==="orthopedic"&&gate?.area){const area=CARE_AREA_LABELS[gate.area]||"";if(area)query=`整形外科 ${area}`;}if(sugMapLocation)query+=` near ${sugMapLocation.lat},${sugMapLocation.lng}`;const q=new URLSearchParams({api:"1",query});googleMapsOpen(`https://www.google.com/maps/search/?${q.toString()}`)}
+
 function addActivity(){
   const steps=n("aSteps");if(!steps)return alert("歩数を入力してください");
   const date=document.getElementById("aDate").value||today();
@@ -4175,7 +4196,7 @@ function nextOverload(ex,repText=""){
   if(!(m()?.training||[]).some(x=>x.exercise===ex))return base;
   return {...base,txt:`${base.txt}｜${nextOverloadVolumeSuffix(ex)}`};
 }
-// V26.4.0 GOAL-TO-PLAN ENGINE
+// V26.4.1 GOAL-TO-PLAN ENGINE
 const GOAL_PLAN_PARTS=["肩","胸","背中","前脚","後脚・臀部","腕","姿勢"];
 function goalPlanState(){
   if(!m())return null;const base=baseMember(m().profile?.name||"会員").goalPlan;
@@ -4254,7 +4275,7 @@ function goalPlanWeeklyMenu(input,sets){
   const template=goalPlanTemplate(input.trainingDays,[input.priority1,input.priority2,input.priority3]);const occurrences={};template.flat().forEach(p=>{if(GOAL_PLAN_PARTS.includes(p))occurrences[p]=(occurrences[p]||0)+1});
   const used={};return template.map((parts,di)=>{const exercises=[];parts.forEach(part=>{if(part==="全身")return;const target=sets[part]||0;if(target<=0)return;used[part]=(used[part]||0)+1;const occ=occurrences[part]||1,sessionSets=Math.max(2,Math.round(target/occ));const rows=(RULE_MENU[part]||[]);if(!rows.length)return;const count=sessionSets>=6?2:1;for(let k=0;k<count;k++){const idx=((used[part]-1)*count+k)%rows.length,row=rows[idx];const ss=count===1?sessionSets:(k===0?Math.ceil(sessionSets/2):Math.floor(sessionSets/2));exercises.push({part,name:row[0],pof:row[1],reps:row[2],sets:Math.max(1,ss),rir:Math.max(Number(row[4]||2),input.goalType==="健康維持"?3:2),rest:/6-10|6-8|8-12/.test(row[2])?"120〜180秒":"60〜120秒"});}});const maxEx=input.sessionMinutes<=30?4:input.sessionMinutes<=60?6:8;return {day:di+1,parts,exercises:exercises.slice(0,maxEx)};});
 }
-function goalPlanBuild(input){const cur=goalPlanCurrentMetrics(),feas=goalPlanFeasibility(input,cur),phases=goalPlanPhases(input,feas),sets=goalPlanSetTargets(input),nutrition=goalPlanNutrition(input,cur,feas),recovery=goalPlanRecovery(input),week=goalPlanWeeklyMenu(input,sets);return {version:"26.4.0",createdAt:new Date().toISOString(),input,cur,feas,phases,sets,nutrition,recovery,week};}
+function goalPlanBuild(input){const cur=goalPlanCurrentMetrics(),feas=goalPlanFeasibility(input,cur),phases=goalPlanPhases(input,feas),sets=goalPlanSetTargets(input),nutrition=goalPlanNutrition(input,cur,feas),recovery=goalPlanRecovery(input),week=goalPlanWeeklyMenu(input,sets);return {version:"26.4.1",createdAt:new Date().toISOString(),input,cur,feas,phases,sets,nutrition,recovery,week};}
 function goalPlanFeasClass(level){return level==="RISK"?"goalPlanRisk":level==="CAUTION"?"goalPlanCaution":"goalPlanFeasible"}
 function goalPlanRenderPlan(plan){
   if(!plan)return '<span class="muted">長期プラン未生成。</span>';const f=plan.feas,n=plan.nutrition,r=plan.recovery;
@@ -4354,7 +4375,7 @@ function renderSmartCore(force=false){
 function renderActivity(){
   if(!m())return;const a=todayActivity(),av=activityAvg7(),baseTarget=activityTarget(),st=smartRecoveryState(),todaySteps=a?Number(a.steps||0):0,effectiveTarget=Number(st.stepTarget||0),rate=effectiveTarget?todaySteps/effectiveTarget*100:0;
   const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v};set("actToday",a?todaySteps.toLocaleString()+"歩":"--");set("actAvg7",av?Math.round(av).toLocaleString()+"歩":"--");set("actTarget",effectiveTarget?effectiveTarget.toLocaleString()+"歩":"ノルマなし");set("actRate",a&&effectiveTarget?Math.round(rate)+"%":"--");const bar=document.getElementById("actProgressBar");if(bar)bar.style.width=effectiveTarget?Math.min(100,Math.max(0,rate))+"%":"0%";const j=document.getElementById("actJudge");if(j)j.textContent=`SMART目安：${effectiveTarget?effectiveTarget.toLocaleString()+"歩":"歩数ノルマなし"}｜${st.stepReason}${effectiveTarget!==baseTarget&&baseTarget?`（通常基準 ${baseTarget.toLocaleString()}歩）`:""}`;
-  const list=document.getElementById("activityList");if(list)list.innerHTML=[...(m().activity||[])].reverse().map((x,ri)=>{const i=m().activity.length-1-ri;return `<div class="item"><div class="row"><div><strong>${esc(x.date)}｜${Number(x.steps||0).toLocaleString()}歩</strong><br><small>${esc(x.memo||"")}</small></div><button class="danger" onclick="remove('activity',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
+  const list=document.getElementById("activityList");if(list)list.innerHTML=[...(m().activity||[])].reverse().map((x,ri)=>{const i=m().activity.length-1-ri;return `<div class="item"><div class="row"><div><strong>${esc(x.date)}｜${Number(x.steps||0).toLocaleString()}歩</strong><br><small>${esc(x.memo||"")}</small></div><button class="danger" onclick="remove('activity',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';renderWalkMap();updateMapLocationLabels();
 }
 const CARE_AREA_LABELS={
   lowback:"腰", neck:"首", shoulder:"肩", knee:"膝", ankle:"足首", wrist:"手首", elbow:"肘"
@@ -4480,13 +4501,13 @@ const CARE_ROUTINE={
   ]
 };
 const CARE_IMAGES={
-  lowback:"./care-lowback-hyottoko.png?v=26-4-0-goal-to-plan",
-  neck:"./care-neck-hyottoko.png?v=26-4-0-goal-to-plan",
-  shoulder:"./care-shoulder-hyottoko.png?v=26-4-0-goal-to-plan",
-  knee:"./care-knee-hyottoko.png?v=26-4-0-goal-to-plan",
-  ankle:"./care-ankle-hyottoko.png?v=26-4-0-goal-to-plan",
-  wrist:"./care-wrist-hyottoko.png?v=26-4-0-goal-to-plan",
-  elbow:"./care-elbow-hyottoko.png?v=26-4-0-goal-to-plan"
+  lowback:"./care-lowback-hyottoko.png?v=26-4-1-map-engine",
+  neck:"./care-neck-hyottoko.png?v=26-4-1-map-engine",
+  shoulder:"./care-shoulder-hyottoko.png?v=26-4-1-map-engine",
+  knee:"./care-knee-hyottoko.png?v=26-4-1-map-engine",
+  ankle:"./care-ankle-hyottoko.png?v=26-4-1-map-engine",
+  wrist:"./care-wrist-hyottoko.png?v=26-4-1-map-engine",
+  elbow:"./care-elbow-hyottoko.png?v=26-4-1-map-engine"
 };
 function carePosterHTML(area){
   const label=CARE_AREA_LABELS[area]||'セルフケア';
@@ -4864,7 +4885,7 @@ function carePlan(area, location, movement){
   };
 }
 
-// V26.4.0 CARE TOOLBOX + AROM/PROM DECISION ENGINE
+// V26.4.1 CARE TOOLBOX + AROM/PROM DECISION ENGINE
 const CARE_AROM_KEYS={
   shoulder:["shoulder_flex","shoulder_abd","shoulder_er","shoulder_ir","shoulder_ext","shoulder_hflex","shoulder_hext","thoracic_ext","thoracic_rot"],
   neck:["cervical_flex","cervical_ext","cervical_rot","cervical_lat","thoracic_ext","thoracic_rot"],
@@ -5148,7 +5169,7 @@ function renderCareResponseProfile(){
   const categoryTop=careCategoryStats(rows).slice(0,5).map(g=>`<div class="careProtocolCard"><strong>${esc(g.category)}</strong><span class="careResponseRank">RESPONSE ${Math.round(g.score)}</span><div class="careProtocolMeta">含むセッション n=${g.n}｜直後改善 ${g.improved}/${g.n}${g.followups?`｜翌日維持 ${g.durable}/${g.followups}｜戻り/悪化 ${g.rebound}/${g.followups}`:"｜翌日フォロー待ち"}</div></div>`).join("");
   box.innerHTML=`<div class="notice"><b>${esc(scope)}</b><br>CONFIDENCE ${confidence}｜保存 ${rows.length}回｜プロトコル ${stats.length}種類｜翌日フォロー ${follow.length}回${durableRate==null?"":`｜改善維持 ${durableRate}%｜戻り/悪化 ${reboundRate}%`}</div><div class="careResponseKpis"><div class="careResponseKpi"><span>痛み改善中央値</span><b>${median(pain)==null?"--":`${median(pain)>=0?"+":""}${median(pain).toFixed(1)}`}</b></div><div class="careResponseKpi"><span>ROM平均変化</span><b>${average(rom)==null?"--":`${average(rom)>=0?"+":""}${average(rom).toFixed(0)}°`}</b></div><div class="careResponseKpi"><span>翌日改善維持</span><b>${durableRate==null?"--":`${durableRate}%`}</b></div><div class="careResponseKpi"><span>CONFIDENCE</span><b>${confidence}</b></div></div>${next}${categoryTop?`<h3>CARE TYPE RESPONSE</h3>${categoryTop}`:""}${top?`<h3>反応しやすいCARE PROTOCOL TOP3</h3>${top}`:""}${bad?`<h3>注意プロトコル</h3>${bad}`:""}<div class="careProfileNote">直後反応と翌日反応を分離します。CARE TYPE RESPONSEは、そのカテゴリを含むセッションへの反応であり単独効果の断定ではありません。同一セッションで複数CAREを実施した場合は組み合わせ全体として評価し、切り分ける場合は1変数ずつ比較します。</div>`;
 }
-// V26.4.0 MEDICAL REFERRAL GATE
+// V26.4.1 MEDICAL REFERRAL GATE
 function careDateDiffDays(a,b){
   if(!a||!b)return null;const x=new Date(a+"T00:00:00"),y=new Date(b+"T00:00:00");if(!Number.isFinite(x.getTime())||!Number.isFinite(y.getTime()))return null;return Math.round((y-x)/86400000);
 }
@@ -7133,7 +7154,7 @@ renderCareQuestions();
 // V26 ADAPTIVE CORE PWA: network-only service worker to avoid stale app versions.
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=26-4-0-goal-to-plan").catch(err => console.warn("SW register failed", err));
+    navigator.serviceWorker.register("./sw.js?v=26-4-1-map-engine").catch(err => console.warn("SW register failed", err));
   });
 }
 (function(){
