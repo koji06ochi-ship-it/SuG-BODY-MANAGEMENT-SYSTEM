@@ -404,7 +404,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
   <div class="authBox">
     <img class="authBrandLogo" src="./brand-header.png?v=26-4-2-walk-route" alt="S.u.G OSAKA">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V26.5.1 ADAPTIVE CORE / MEMBERS ONLY</div>
+    <div class="sub">V26.5.2 ADAPTIVE CORE / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -519,7 +519,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
   <div class="head">
     <div class="brandIdentity">
       <img class="brandHeaderLogo" src="./brand-header.png?v=26-4-2-walk-route" alt="S.u.G OSAKA">
-      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.5.1 ADAPTIVE CORE / ACUTE CARE + TAPING</small></div>
+      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.5.2 ADAPTIVE CORE / THERMAL CARE + TAPING</small></div>
     </div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
@@ -904,12 +904,13 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
     <div class="card">
       <div class="sectionLead"><div><h2>症状別セルフケア</h2><div class="muted">腰・首・肩・膝・足首・手首・肘。診断ではなく、痛む場所と動作 → 危険サイン確認 → 軽いセルフケア → 前後評価。</div></div><img class="sectionMascot" src="./mascot-stretch.png?v=26-4-2-walk-route" alt=""></div>
       <div class="notice">強い症状・外傷・神経症状などがある場合はセルフケアより医療評価を優先します。痛みやしびれが増える動きは中止してください。</div>
-      <div class="selfCareChoice" style="margin-top:9px"><div><label>部位</label><select id="careArea" onchange="renderCareQuestions();renderCareAcuteLink()"><option value="lowback">腰</option><option value="neck">首</option><option value="shoulder">肩</option><option value="knee">膝</option><option value="ankle">足首</option><option value="wrist">手首</option><option value="elbow">肘</option></select></div><div><label>痛み BEFORE 0-10</label><input id="carePainBefore" type="number" min="0" max="10" value="3" oninput="renderCareAromLink();renderCareAcuteLink()"></div></div>
+      <div class="selfCareChoice" style="margin-top:9px"><div><label>部位</label><select id="careArea" onchange="renderCareQuestions();renderCareAcuteLink();renderCareThermalLink()"><option value="lowback">腰</option><option value="neck">首</option><option value="shoulder">肩</option><option value="knee">膝</option><option value="ankle">足首</option><option value="wrist">手首</option><option value="elbow">肘</option></select></div><div><label>痛み BEFORE 0-10</label><input id="carePainBefore" type="number" min="0" max="10" value="3" oninput="renderCareAromLink();renderCareAcuteLink();renderCareThermalLink()"></div></div>
       <div class="selfCareChoice" style="margin-top:8px"><div><label>痛む場所</label><select id="careLocation"></select></div><div><label>痛む動作</label><select id="careMovement"></select></div></div>
       <div class="careResponseMeasure"><div><label>ROMテスト名（任意）</label><input id="careRomTest" placeholder="例：肩関節屈曲 / 外転"></div><div><label>ROM BEFORE °</label><input id="careRomBefore" type="number" step="1" min="0" max="360"></div></div>
-      <div class="careResponseMeasure"><div><label>動作つらさ BEFORE 0-10（任意）</label><input id="careMoveBefore" type="number" min="0" max="10"></div><div><label>きっかけ</label><select id="careTrigger" onchange="renderCareAcuteLink()"><option value="training">トレーニング中 / 後</option><option value="daily">日常動作</option><option value="trauma">転倒・衝突などの外傷</option><option value="unknown">不明</option></select></div></div>
-      <div class="careResponseMeasure"><div><label>発症日（任意）</label><input id="careOnsetDate" type="date" onchange="renderCareAcuteLink()"></div><div><label>症状メモ（任意）</label><input id="careSymptomNote" placeholder="例：3日前から、夜間も違和感、特定動作で再発"></div></div>
-      <div class="careToolGroup"><div class="careToolGroupTitle"><span>ACUTE CARE / TAPING</span><span class="careToolTag">RICE → PEACE &amp; LOVE</span></div><div class="muted">急性反応がある場合は、RICE / PRICE / POLICE / PEACE &amp; LOVEを参照しつつ、保護・圧迫・挙上・段階的負荷などを症状と時期に合わせて候補化。冷却は必要時の短時間の症状緩和として記録し、必須処置とは扱いません。テーピングは一時的な支持・感覚入力・動作補助として反応を追跡します。</div><div class="grid2" style="margin-top:8px"><div><label>急性反応</label><select id="careAcuteState" onchange="renderCareAcuteLink()"><option value="none">特になし / 慢性的</option><option value="swelling">腫れ・熱感がある</option><option value="bruise">腫れ・内出血が目立つ</option><option value="early">外傷後まもない</option><option value="recovery">急性期を越えて回復中</option></select></div><div><label>テーピング目的（任意）</label><select id="careTapingGoal"><option value="none">未定 / 使用しない</option><option value="sensory">感覚入力・動作キュー</option><option value="assist">動作補助・軽い支持</option><option value="restrict">可動域制限・保護</option><option value="compression">圧迫・腫脹管理補助</option></select></div></div><div id="careAcuteLink" class="careAromLink" style="margin-top:8px">急性反応・発症時期からCARE候補を整理します。</div></div>
+      <div class="careResponseMeasure"><div><label>動作つらさ BEFORE 0-10（任意）</label><input id="careMoveBefore" type="number" min="0" max="10"></div><div><label>きっかけ</label><select id="careTrigger" onchange="renderCareAcuteLink();renderCareThermalLink()"><option value="training">トレーニング中 / 後</option><option value="daily">日常動作</option><option value="trauma">転倒・衝突などの外傷</option><option value="unknown">不明</option></select></div></div>
+      <div class="careResponseMeasure"><div><label>発症日（任意）</label><input id="careOnsetDate" type="date" onchange="renderCareAcuteLink();renderCareThermalLink()"></div><div><label>症状メモ（任意）</label><input id="careSymptomNote" placeholder="例：3日前から、熱感 / 腫れ / 冷え / こわばり、特定動作で再発" oninput="renderCareThermalLink()"></div></div>
+      <div class="careToolGroup"><div class="careToolGroupTitle"><span>ACUTE CARE / TAPING</span><span class="careToolTag">RICE → PEACE &amp; LOVE</span></div><div class="muted">急性反応がある場合は、RICE / PRICE / POLICE / PEACE &amp; LOVEを参照しつつ、保護・圧迫・挙上・段階的負荷などを症状と時期に合わせて候補化。冷却は必要時の短時間の症状緩和として記録し、必須処置とは扱いません。テーピングは一時的な支持・感覚入力・動作補助として反応を追跡します。</div><div class="grid2" style="margin-top:8px"><div><label>急性反応</label><select id="careAcuteState" onchange="renderCareAcuteLink();renderCareThermalLink()"><option value="none">特になし / 慢性的</option><option value="swelling">腫れ・熱感がある</option><option value="bruise">腫れ・内出血が目立つ</option><option value="early">外傷後まもない</option><option value="recovery">急性期を越えて回復中</option></select></div><div><label>テーピング目的（任意）</label><select id="careTapingGoal"><option value="none">未定 / 使用しない</option><option value="sensory">感覚入力・動作キュー</option><option value="assist">動作補助・軽い支持</option><option value="restrict">可動域制限・保護</option><option value="compression">圧迫・腫脹管理補助</option></select></div></div><div id="careAcuteLink" class="careAromLink" style="margin-top:8px">急性反応・発症時期からCARE候補を整理します。</div></div>
+      <div class="careToolGroup"><div class="careToolGroupTitle"><span>COLD / HEAT DECISION</span><span class="careToolTag">冷やす？温める？</span></div><div class="muted">発症時期・腫れ/熱感・こわばり・感覚状態から、COOL / HEAT / NONEを候補化します。冷却・温熱とも「治すための必須処置」とは断定せず、症状緩和と動きやすさを前後評価します。</div><div class="grid2" style="margin-top:8px"><div><label>温冷サイン</label><select id="careThermalState" onchange="renderCareThermalLink()"><option value="auto">AUTO｜急性反応・症状メモから判定</option><option value="hot_swollen">熱感・腫れ・ズキズキが目立つ</option><option value="cold_stiff">冷え・こわばり・動き出しが硬い</option><option value="pre_move_stiff">運動前に温めると動きやすそう</option><option value="neutral">どちらも特に当てはまらない</option><option value="sensation_issue">感覚低下 / 循環が不安</option></select></div><div><label>目的</label><select id="careThermalGoal" onchange="renderCareThermalLink()"><option value="symptom">症状を楽にする</option><option value="movement">動きやすさを出す</option><option value="recovery">回復期の補助</option></select></div></div><div id="careThermalLink" class="careAromLink" style="margin-top:8px">温冷サインからCOOL / HEAT / NONEを整理します。</div></div>
       <div class="careToolGroup"><div class="careToolGroupTitle"><span>AROM / PROM CARE DECISION</span><span class="careToolTag">ROM連携</span></div><div class="muted">ROMタブで保存した同部位の最新AROM/PROMを自動参照。PROMも狭いか、PROMはあるがAROMだけ使えていないかでCARE候補を変えます。</div><div id="careAromLink" class="careAromLink" style="margin-top:8px">同部位の保存済みAROM/PROMを確認します。</div></div>
       <h3>危険サイン確認</h3><div id="careFlags"></div>
       <button class="primary" style="width:100%;margin-top:9px" onclick="evaluateSelfCare()">判定してセルフケアを表示</button>
@@ -4931,7 +4932,7 @@ function carePlan(area, location, movement){
   };
 }
 
-// V26.5.1 CARE TOOLBOX + AROM/PROM + ACUTE CARE + TAPING
+// V26.5.2 CARE TOOLBOX + AROM/PROM + ACUTE CARE + TAPING + THERMAL CARE
 const CARE_AROM_KEYS={
   shoulder:["shoulder_flex","shoulder_abd","shoulder_er","shoulder_ir","shoulder_ext","shoulder_hflex","shoulder_hext","thoracic_ext","thoracic_rot"],
   neck:["cervical_flex","cervical_ext","cervical_rot","cervical_lat","thoracic_ext","thoracic_rot"],
@@ -5035,6 +5036,27 @@ function renderCareAcuteLink(){
   const d=careAcuteDecision(document.getElementById("careArea")?.value||"lowback",document.getElementById("careTrigger")?.value||"unknown",document.getElementById("careOnsetDate")?.value||"",document.getElementById("careAcuteState")?.value||"none",Math.max(0,Math.min(10,Number(document.getElementById("carePainBefore")?.value||0))));
   box.innerHTML=`<strong>${esc(d.title)}</strong><br>${esc(d.summary)}`;
 }
+function careThermalDecision(area,trigger,onsetDate,acuteState,thermalState="auto",pain=0,symptomNote="",goal="symptom"){
+  const days=careDaysSinceOnset(onsetDate),state=String(acuteState||"none"),thermal=String(thermalState||"auto"),note=String(symptomNote||"");
+  const heatWords=/熱感|熱い|ほてり|腫れ|腫脹|ズキズキ|赤み|発赤/i.test(note);
+  const stiffWords=/冷え|冷たい|こわば|硬い|動き出し|動きにく|張り/i.test(note);
+  if(pain>=7)return {mode:"NONE",code:"THERMAL_HOLD",title:"温冷より状態確認を優先",summary:"痛みが強いため、冷却・温熱を追加して動かすより負荷中止と危険サイン確認を優先。",duration:"--",goal,actions:[]};
+  if(thermal==="sensation_issue")return {mode:"NONE",code:"THERMAL_SENSORY_GUARD",title:"COLD / HEATとも保留",summary:"感覚低下や循環不安がある場合は温度刺激による皮膚障害を察知しにくいため、自己判断で冷却・温熱を行わず状態確認を優先。",duration:"--",goal,actions:[]};
+  const coldExplicit=thermal==="hot_swollen",heatExplicit=thermal==="cold_stiff"||thermal==="pre_move_stiff";
+  const acuteHot=state==="swelling"||state==="bruise"||coldExplicit||heatWords;
+  const veryEarly=(days!=null&&days<=3)||(trigger==="trauma"&&state==="early");
+  if(acuteHot || (veryEarly&&pain>=4))return {mode:"COLD",code:"COOL_SYMPTOM",title:"COOL / COLD候補",summary:"熱感・腫れ・急性痛が目立つ条件。目的は主に一時的な鎮痛・症状コントロール。氷を皮膚へ直接当てず、タオル越しで皮膚状態を確認する。",duration:"10〜15分を目安に短時間",goal,actions:[{category:"COLD_SYMPTOM",tool:"COLD_PACK",label:"COLD / COOLING｜タオル越しで10〜15分を目安に短時間。皮膚の強い白色化・痛み・しびれ・感覚低下が出たら中止。目的は症状緩和で、治癒促進を断定しない。",recommended:true,reason:"THERMAL DECISION",protocol:"THERMAL"}]};
+  const noActiveHeat=!acuteHot&&state!=="swelling"&&state!=="bruise",recoveryOrChronic=state==="recovery"||state==="none"||(days!=null&&days>=4);
+  if(noActiveHeat && (heatExplicit || (recoveryOrChronic&&stiffWords)))return {mode:"HEAT",code:"WARMING_MOBILITY",title:"HEAT / WARMING候補",summary:"急な腫れ・熱感が目立たず、冷え・こわばり・動き出しの硬さが中心。目的は温感と動きやすさの補助。熱すぎる温度は避け、温めた後に同じROM/動作を再評価する。",duration:"10〜20分を目安に軽く",goal,actions:[{category:"HEAT_SYMPTOM",tool:"WARM_PACK",label:"HEAT / WARMING｜心地よい温度で10〜20分を目安に軽く温める。熱感・腫れが増える、皮膚が強く赤くなる、痛みが増える場合は中止。",recommended:true,reason:"THERMAL DECISION",protocol:"THERMAL"}]};
+  return {mode:"NONE",code:"THERMAL_NONE",title:"COLD / HEATどちらも必須ではない",summary:"現入力では温冷を優先する根拠が弱い。AROM/PROM、痛む動作、負荷調整、CARE RESPONSEを優先し、温冷を使う場合も前後反応で判断。",duration:"--",goal,actions:[]};
+}
+function careThermalDecisionHTML(d){if(!d)return "";const icon=d.mode==="COLD"?"❄":d.mode==="HEAT"?"♨":"○";return `<div class="careToolGroup"><div class="careToolGroupTitle"><span>${icon} ${esc(d.title)}</span><span class="careToolTag">${esc(d.mode)}</span></div><div class="careToolWhy">${esc(d.summary)}</div><div class="careAromLink"><strong>目安</strong>｜${esc(d.duration)}｜BEFORE → AFTER → 24Hで反応確認</div></div>`;}
+function renderCareThermalLink(){
+  const box=document.getElementById("careThermalLink");if(!box)return;
+  const d=careThermalDecision(document.getElementById("careArea")?.value||"lowback",document.getElementById("careTrigger")?.value||"unknown",document.getElementById("careOnsetDate")?.value||"",document.getElementById("careAcuteState")?.value||"none",document.getElementById("careThermalState")?.value||"auto",Math.max(0,Math.min(10,Number(document.getElementById("carePainBefore")?.value||0))),document.getElementById("careSymptomNote")?.value||"",document.getElementById("careThermalGoal")?.value||"symptom");
+  box.innerHTML=`<strong>${esc(d.title)}</strong><br>${esc(d.summary)}<br><span style="color:var(--gold2)">目安：${esc(d.duration)}</span>`;
+}
+function careThermalActions(d){return (d?.actions||[]).map(x=>({...x,recommended:true}));}
 const CARE_TAPING_LIBRARY={
   shoulder:[
     {label:"TAPING｜KINESIO｜肩・肩甲帯の感覚入力/動作キュー。軽い張力から開始し、貼付前後で同じ挙上動作を再評価。",tool:"KINESIO_TAPE"},
@@ -5093,7 +5115,8 @@ const CARE_TOOLBOX={
 function careClassifyIntervention(label){
   const t=String(label||"");
   if(/TAPING|テーピング/.test(t))return {category:"TAPING",tool:/RIGID/.test(t)?"RIGID_TAPE":/ELASTIC/.test(t)?"ELASTIC_TAPE":"KINESIO_TAPE"};
-  if(/ICE|冷却/.test(t))return {category:"COLD_SYMPTOM",tool:"COLD_PACK"};
+  if(/ICE|冷却|COLD|COOLING/.test(t))return {category:"COLD_SYMPTOM",tool:"COLD_PACK"};
+  if(/HEAT|WARM|温熱|温め/.test(t))return {category:"HEAT_SYMPTOM",tool:"WARM_PACK"};
   if(/COMPRESS|圧迫/.test(t))return {category:"COMPRESSION",tool:"ELASTIC_COMPRESSION"};
   if(/ELEVAT|挙上/.test(t))return {category:"ELEVATION",tool:"POSITIONING"};
   if(/PROTECT|保護|再受傷/.test(t))return {category:"PROTECTION",tool:"PROTECTION"};
@@ -5113,13 +5136,14 @@ function careClassifyIntervention(label){
   if(/避け|中止|減ら|休/.test(t))return {category:"LOAD_MANAGEMENT",tool:"NONE"};
   return {category:"OTHER",tool:"OTHER"};
 }
-function careToolboxActions(area,decision,baseRoutine=[],acuteDecision=null,tapingGoal="none"){
+function careToolboxActions(area,decision,baseRoutine=[],acuteDecision=null,tapingGoal="none",thermalDecision=null){
   const cats=decision?.categories||["AROM"];const box=CARE_TOOLBOX[area]||{};const out=[];
   for(const a of careAcuteActions(acuteDecision))out.push(a);
+  for(const a of careThermalActions(thermalDecision))out.push(a);
   for(const c of cats){for(const label of (box[c]||[]))out.push({label,...careClassifyIntervention(label),recommended:true,reason:decision?.title||"CARE DECISION",protocol:""})}
   for(const a of careTapingActions(area,tapingGoal))out.push(a);
   for(const label of baseRoutine||[]){const meta=careClassifyIntervention(label);out.push({label,...meta,recommended:false,reason:"症状別ベースCARE",protocol:""})}
-  const seen=new Set();return out.filter(x=>{const k=x.category+"|"+x.label;if(seen.has(k))return false;seen.add(k);return true}).slice(0,32);
+  const seen=new Set();return out.filter(x=>{const k=(x.category==="COLD_SYMPTOM"||x.category==="HEAT_SYMPTOM")?x.category+"|"+x.tool:x.category+"|"+x.label;if(seen.has(k))return false;seen.add(k);return true}).slice(0,34);
 }
 function careDecisionHTML(decision){
   const x=decision?.arom;if(!decision)return "";
@@ -5228,7 +5252,7 @@ function renderCareQuestions(){
   const preview=document.getElementById("careAreaPoster");if(preview)preview.innerHTML=carePosterHTML(area);
   ["carePainAfter","careRomAfter","careMoveAfter"].forEach(id=>{const e=document.getElementById(id);if(e)e.value=""});
   const judge=document.getElementById("careAfterJudge");if(judge)judge.textContent="実施後に痛み・ROM・同じ動作を再評価します。";
-  currentCareAssessment=null;renderCareResponseProfile();renderCareFollowupPanel();renderCareAromLink();renderCareAcuteLink();renderCareReferralGate();
+  currentCareAssessment=null;renderCareResponseProfile();renderCareFollowupPanel();renderCareAromLink();renderCareAcuteLink();renderCareThermalLink();renderCareReferralGate();
 }
 function evaluateSelfCare(){
   const area=document.getElementById("careArea")?.value||"lowback";
@@ -5238,7 +5262,7 @@ function evaluateSelfCare(){
   const movement=document.getElementById("careMovement")?.value||"";
   const flags=[...document.querySelectorAll('.careFlag:checked')].map(x=>Number(x.value));
   const box=document.getElementById("careResult");
-  currentCareAssessment={date:today(),area,location,movement,painBefore:pain,painAfter:null,trigger,flags,result:"",onsetDate:document.getElementById("careOnsetDate")?.value||"",symptomNote:(document.getElementById("careSymptomNote")?.value||"").trim(),acuteState:document.getElementById("careAcuteState")?.value||"none",tapingGoal:document.getElementById("careTapingGoal")?.value||"none",romTest:(document.getElementById("careRomTest")?.value||"").trim(),romBefore:careOptionalNumber("careRomBefore",0,360),romAfter:null,movementBefore:careOptionalNumber("careMoveBefore",0,10),movementAfter:null,interventions:[],protocolId:""};
+  currentCareAssessment={date:today(),area,location,movement,painBefore:pain,painAfter:null,trigger,flags,result:"",onsetDate:document.getElementById("careOnsetDate")?.value||"",symptomNote:(document.getElementById("careSymptomNote")?.value||"").trim(),acuteState:document.getElementById("careAcuteState")?.value||"none",thermalState:document.getElementById("careThermalState")?.value||"auto",thermalGoal:document.getElementById("careThermalGoal")?.value||"symptom",tapingGoal:document.getElementById("careTapingGoal")?.value||"none",romTest:(document.getElementById("careRomTest")?.value||"").trim(),romBefore:careOptionalNumber("careRomBefore",0,360),romAfter:null,movementBefore:careOptionalNumber("careMoveBefore",0,10),movementAfter:null,interventions:[],protocolId:""};
   const traumaMedical=(area==="neck"&&trigger==="trauma");
   if(flags.length || traumaMedical){
     currentCareAssessment.result="medical";
@@ -5253,14 +5277,15 @@ function evaluateSelfCare(){
     return;
   }
   currentCareAssessment.result="selfcare";
-  const plan=carePlan(area,location,movement),decision=careAromDecision(area,movement,pain),acuteDecision=careAcuteDecision(area,trigger,currentCareAssessment.onsetDate,currentCareAssessment.acuteState,pain),toolActions=careToolboxActions(area,decision,plan.routine,acuteDecision,currentCareAssessment.tapingGoal);
+  const plan=carePlan(area,location,movement),decision=careAromDecision(area,movement,pain),acuteDecision=careAcuteDecision(area,trigger,currentCareAssessment.onsetDate,currentCareAssessment.acuteState,pain),thermalDecision=careThermalDecision(area,trigger,currentCareAssessment.onsetDate,currentCareAssessment.acuteState,currentCareAssessment.thermalState,pain,currentCareAssessment.symptomNote,currentCareAssessment.thermalGoal),toolActions=careToolboxActions(area,decision,plan.routine,acuteDecision,currentCareAssessment.tapingGoal,thermalDecision);
   currentCareAssessment.hypothesis=plan.title||"";
   currentCareAssessment.movementNote=plan.movementNote||"";
   currentCareAssessment.careDecision={code:decision.code,title:decision.title,summary:decision.summary,categories:[...(decision.categories||[])],arom:decision.arom?{key:decision.arom.key,label:decision.arom.label,date:decision.arom.date,active:decision.arom.active,passive:decision.arom.passive,pain:decision.arom.pain}:null};
   currentCareAssessment.acuteDecision={code:acuteDecision.code,protocol:acuteDecision.protocol||"",title:acuteDecision.title,summary:acuteDecision.summary,days:acuteDecision.days,state:acuteDecision.state};
+  currentCareAssessment.thermalDecision={mode:thermalDecision.mode,code:thermalDecision.code,title:thermalDecision.title,summary:thermalDecision.summary,duration:thermalDecision.duration,goal:thermalDecision.goal};
   const groups=new Map();for(const a of toolActions){if(!groups.has(a.category))groups.set(a.category,[]);groups.get(a.category).push(a)}
   const actions=[...groups.entries()].map(([category,items])=>`<div class="careToolGroup"><div class="careToolGroupTitle"><span>${esc(category)}</span><span class="careToolTag">${items.some(x=>x.recommended)?"推奨":"BASE"}</span></div>${items.map((x,i)=>{const id=`${area.toUpperCase()}_${category}_${careHash(x.label)}`;return `<label class="careActionCheck"><input type="checkbox" class="careActionDone" data-care-id="${esc(id)}" data-care-label="${esc(x.label)}" data-care-category="${esc(x.category)}" data-care-tool="${esc(x.tool)}" data-care-recommended="${x.recommended?"1":"0"}" data-care-protocol="${esc(x.protocol||"")}"><span><b style="color:var(--gold2)">${esc(x.tool)}｜${esc(x.category)}</b><br>${esc(x.label)}</span></label>`}).join("")}</div>`).join("");
-  box.innerHTML=`<div class="smartOk"><b>${esc(CARE_AREA_LABELS[area])}CARE TOOLBOX｜痛み ${pain}/10</b><br>場所：${esc(location)}｜痛む動作：${esc(movement)}<br><span style="color:var(--gold2);font-weight:800">症状別重点：</span>${esc(plan.title)}<br><span style="color:var(--gold2);font-weight:800">動作の注意：</span>${esc(plan.movementNote)}<br>痛みを増やさない範囲で行い、終了後に同じ条件で再評価してください。</div>${careAcuteDecisionHTML(acuteDecision)}${careDecisionHTML(decision)}<div class="carePosterWrap">${carePosterHTML(area)}</div><h3>CARE TOOLBOX｜実際に行ったものをチェック</h3><div class="muted">AROM/PROM分岐＋急性期フレーム＋TAPINGを統合。RICE / PRICE / POLICE / PEACE & LOVEは“名称を選ぶ”のではなく、実際に行った要素だけチェックして反応を学習します。</div><div class="careActionList">${actions}</div><div id="careTapingDetail" class="careToolGroup hidden"><div class="careToolGroupTitle"><span>TAPING DETAIL</span><span class="careToolTag">BEFORE → AFTER → 24H</span></div><div class="grid2"><div><label>テープ種類</label><select id="careTapeType"><option value="KINESIO">KINESIO</option><option value="ELASTIC">ELASTIC SUPPORT</option><option value="RIGID">RIGID</option><option value="OTHER">OTHER</option></select></div><div><label>貼付部位</label><input id="careTapeTarget" value="${esc(location)}" placeholder="例：右足関節外側"></div></div><div class="grid2" style="margin-top:8px"><div><label>方向 / 狙い</label><input id="careTapeDirection" placeholder="例：外反方向の支持 / 肩甲骨上方回旋キュー"></div><div><label>張力</label><select id="careTapeTension"><option value="LIGHT">軽い</option><option value="MODERATE">中等度</option><option value="NO_STRETCH">ほぼ伸ばさない</option><option value="RIGID_LIMIT">リジッド固定</option></select></div></div><div style="margin-top:8px"><label>貼付時間 h（任意）</label><input id="careTapeDuration" type="number" min="0" max="168" step="0.5" placeholder="例：2"></div><div class="muted" style="margin-top:7px">皮膚刺激、しびれ、変色、冷感、症状悪化が出た場合は外して再評価。骨格矯正や原因治療とは断定しません。</div></div><div style="margin-top:8px"><label>その他CARE（任意）</label><input id="careOtherAction" placeholder="表示外のCARE・器具・手技を行った場合のみ記入"></div>`;
+  box.innerHTML=`<div class="smartOk"><b>${esc(CARE_AREA_LABELS[area])}CARE TOOLBOX｜痛み ${pain}/10</b><br>場所：${esc(location)}｜痛む動作：${esc(movement)}<br><span style="color:var(--gold2);font-weight:800">症状別重点：</span>${esc(plan.title)}<br><span style="color:var(--gold2);font-weight:800">動作の注意：</span>${esc(plan.movementNote)}<br>痛みを増やさない範囲で行い、終了後に同じ条件で再評価してください。</div>${careAcuteDecisionHTML(acuteDecision)}${careThermalDecisionHTML(thermalDecision)}${careDecisionHTML(decision)}<div class="carePosterWrap">${carePosterHTML(area)}</div><h3>CARE TOOLBOX｜実際に行ったものをチェック</h3><div class="muted">AROM/PROM分岐＋急性期フレーム＋COLD / HEAT＋TAPINGを統合。RICE / PRICE / POLICE / PEACE & LOVEは“名称を選ぶ”のではなく、実際に行った要素だけチェックして反応を学習します。</div><div class="careActionList">${actions}</div><div id="careTapingDetail" class="careToolGroup hidden"><div class="careToolGroupTitle"><span>TAPING DETAIL</span><span class="careToolTag">BEFORE → AFTER → 24H</span></div><div class="grid2"><div><label>テープ種類</label><select id="careTapeType"><option value="KINESIO">KINESIO</option><option value="ELASTIC">ELASTIC SUPPORT</option><option value="RIGID">RIGID</option><option value="OTHER">OTHER</option></select></div><div><label>貼付部位</label><input id="careTapeTarget" value="${esc(location)}" placeholder="例：右足関節外側"></div></div><div class="grid2" style="margin-top:8px"><div><label>方向 / 狙い</label><input id="careTapeDirection" placeholder="例：外反方向の支持 / 肩甲骨上方回旋キュー"></div><div><label>張力</label><select id="careTapeTension"><option value="LIGHT">軽い</option><option value="MODERATE">中等度</option><option value="NO_STRETCH">ほぼ伸ばさない</option><option value="RIGID_LIMIT">リジッド固定</option></select></div></div><div style="margin-top:8px"><label>貼付時間 h（任意）</label><input id="careTapeDuration" type="number" min="0" max="168" step="0.5" placeholder="例：2"></div><div class="muted" style="margin-top:7px">皮膚刺激、しびれ、変色、冷感、症状悪化が出た場合は外して再評価。骨格矯正や原因治療とは断定しません。</div></div><div style="margin-top:8px"><label>その他CARE（任意）</label><input id="careOtherAction" placeholder="表示外のCARE・器具・手技を行った場合のみ記入"></div>`;
   [...document.querySelectorAll('.careActionDone')].forEach(x=>x.addEventListener('change',updateCareTapingDetailVisibility));updateCareTapingDetailVisibility();
   renderCareReferralGate();
 }
@@ -5391,7 +5416,7 @@ function renderCareHistory(){
     const context=[x.location,x.movement].filter(Boolean).map(esc).join("｜"),ints=Array.isArray(x.interventions)?x.interventions:[],resp=careResponseFromRow(x),extra=[];
     if(x.romBefore!=null&&x.romAfter!=null)extra.push(`${esc(x.romTest||"ROM")} ${Number(x.romBefore).toFixed(0)}°→${Number(x.romAfter).toFixed(0)}°`);if(x.movementBefore!=null&&x.movementAfter!=null)extra.push(`動作つらさ ${Number(x.movementBefore).toFixed(0)}→${Number(x.movementAfter).toFixed(0)}`);
     const f=x.followup24h,fm=careFollowupMetrics(x);if(f)extra.push(`翌日 ${esc(f.date||"")}｜痛み ${Number(f.pain).toFixed(0)}/10${f.rom!=null?`｜ROM ${Number(f.rom).toFixed(0)}°`:""}${fm.durable?"｜改善維持":fm.rebound?"｜戻り/悪化":"｜フォロー済み"}`);
-    return `<div class="item"><div class="row"><div><strong>${esc(x.date)}｜${esc(area)}</strong>${context?`<br><small>${context}</small>`:""}<br><small>BEFORE ${x.painBefore}/10 → AFTER ${x.painAfter??'--'}/10｜${x.result==='medical'?'医療評価優先':x.result==='stop'?'高負荷中止':'セルフケア'}</small>${x.hypothesis?`<br><small>仮説候補：${esc(x.hypothesis)}</small>`:""}${x.careDecision?`<br><small>AROM/PROM DECISION：${esc(x.careDecision.title||x.careDecision.code||"")}</small>`:""}${x.acuteDecision?`<br><small>ACUTE CARE：${esc(x.acuteDecision.title||x.acuteDecision.code||"")}${x.acuteDecision.protocol?`｜${esc(x.acuteDecision.protocol)}`:""}</small>`:""}${ints.length?`<br><small>CARE：${ints.map(v=>`${esc(v.category||careClassifyIntervention(v.label||"").category)} / ${esc(v.tool||"")}｜${esc(v.label||v.id)}`).join(" ＋ ")}</small>`:""}${extra.length?`<br><small>${extra.join("｜")}</small>`:""}</div><button class="danger" onclick="remove('selfCare',${i})">削除</button></div></div>`
+    return `<div class="item"><div class="row"><div><strong>${esc(x.date)}｜${esc(area)}</strong>${context?`<br><small>${context}</small>`:""}<br><small>BEFORE ${x.painBefore}/10 → AFTER ${x.painAfter??'--'}/10｜${x.result==='medical'?'医療評価優先':x.result==='stop'?'高負荷中止':'セルフケア'}</small>${x.hypothesis?`<br><small>仮説候補：${esc(x.hypothesis)}</small>`:""}${x.careDecision?`<br><small>AROM/PROM DECISION：${esc(x.careDecision.title||x.careDecision.code||"")}</small>`:""}${x.acuteDecision?`<br><small>ACUTE CARE：${esc(x.acuteDecision.title||x.acuteDecision.code||"")}${x.acuteDecision.protocol?`｜${esc(x.acuteDecision.protocol)}`:""}</small>`:""}${x.thermalDecision?`<br><small>THERMAL CARE：${esc(x.thermalDecision.title||x.thermalDecision.code||"")}｜${esc(x.thermalDecision.duration||"--")}</small>`:""}${ints.length?`<br><small>CARE：${ints.map(v=>`${esc(v.category||careClassifyIntervention(v.label||"").category)} / ${esc(v.tool||"")}｜${esc(v.label||v.id)}`).join(" ＋ ")}</small>`:""}${extra.length?`<br><small>${extra.join("｜")}</small>`:""}</div><button class="danger" onclick="remove('selfCare',${i})">削除</button></div></div>`
   }).join("")||'<span class="muted">履歴なし</span>';
 }
 function nearestWeightOnOrBefore(date){const rows=(m()?.weights||[]).filter(x=>x.date<=date).slice().sort((a,b)=>a.date.localeCompare(b.date));return rows.at(-1)||null;}
