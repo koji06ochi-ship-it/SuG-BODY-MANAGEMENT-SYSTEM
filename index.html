@@ -399,6 +399,7 @@ button.primary{box-shadow:0 5px 18px rgba(184,140,50,.10)}
 .trainingQueueItem.active{border-color:var(--gold2)}
 .trainingQueueIndex{font-weight:900;color:var(--gold2);min-width:24px}
 .hydrationHero{background:linear-gradient(180deg,#111822,#0d0f13);border:1px solid #344a5f;border-radius:14px;padding:12px;margin-top:9px}.hydrationTop{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.hydrationTitle{font-size:12px;font-weight:900;color:#9ed7ff;letter-spacing:.06em}.hydrationMeter{height:10px;border-radius:999px;background:#171a1e;border:1px solid #2f3740;overflow:hidden;margin-top:10px}.hydrationMeter>span{display:block;height:100%;background:linear-gradient(90deg,#5aa7d8,#a5e5ff);width:0}.hydrationKpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:9px}.hydrationKpi{background:#0b0e12;border:1px solid #2e3b47;border-radius:11px;padding:9px}.hydrationKpi span{display:block;font-size:8px;color:#8fa0ad}.hydrationKpi b{display:block;margin-top:3px;font-size:16px;color:#d9f2ff}.hydrationQuick{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:8px}.hydrationQuick button{min-height:44px;font-weight:900}.hydrationFlags{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}.hydrationFlags label{display:flex;align-items:center;gap:6px;font-size:9px;color:#bbb}.hydrationFlags input[type=checkbox]{width:auto}.hydrationNote{font-size:9px;line-height:1.65;color:#aeb7bf;margin-top:8px}@media(max-width:620px){.hydrationKpis{grid-template-columns:1fr 1fr}.hydrationKpis .wide{grid-column:1/-1}}
+.rhythmHero{background:linear-gradient(180deg,#17140e,#0e0d0a);border:1px solid #5b4d29;border-radius:14px;padding:12px;margin-top:10px}.rhythmTop{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.rhythmTitle{font-size:12px;font-weight:900;color:var(--gold2);letter-spacing:.06em}.rhythmKpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:9px}.rhythmKpi{background:#0d0c09;border:1px solid #40391f;border-radius:11px;padding:9px}.rhythmKpi span{display:block;font-size:8px;color:#9f987e}.rhythmKpi b{display:block;margin-top:3px;font-size:14px;color:#fff1b8}.rhythmAdvice{font-size:9px;line-height:1.65;color:#bbb4a2;margin-top:9px}.rhythmFlags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.rhythmFlag{font-size:8px;border:1px solid #443b24;border-radius:999px;padding:5px 8px;color:#cfc5a7;background:#11100c}.rhythmFlag.warn{border-color:#806622;color:#ffe19a}.rhythmFlag.bad{border-color:#7b3434;color:#ffb3b3}.rhythmFlag.ok{border-color:#315f48;color:#b8f3d0}@media(max-width:620px){.rhythmKpis{grid-template-columns:1fr 1fr}.rhythmKpis .wide{grid-column:1/-1}}
 .trainingQueueItem button{padding:5px 9px}
 .trainingMethodHint{margin-top:7px;font-size:11px;line-height:1.55}
 @media(max-width:620px){.trainingRoutineGrid{grid-template-columns:1fr 1fr}.trainingRoutineGrid .trainingRoutineWide{grid-column:1/-1}.trainingMethodGrid{grid-template-columns:1fr}.trainingQuickActions{grid-template-columns:1fr 1fr}}
@@ -419,7 +420,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
   <div class="authBox">
     <img class="authBrandLogo" src="./brand-header.png?v=26-4-2-walk-route" alt="S.u.G OSAKA">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V26.5.4 ADAPTIVE CORE / MEMBERS ONLY</div>
+    <div class="sub">V26.5.5 ADAPTIVE CORE / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -534,7 +535,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
   <div class="head">
     <div class="brandIdentity">
       <img class="brandHeaderLogo" src="./brand-header.png?v=26-4-2-walk-route" alt="S.u.G OSAKA">
-      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.5.4 ADAPTIVE CORE / HYDRATION + TRAINING METHODS + CARE</small></div>
+      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.5.5 ADAPTIVE CORE / DAILY RHYTHM + HYDRATION + TRAINING + CARE</small></div>
     </div>
     <div class="headActions"><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
@@ -985,7 +986,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
       </div>
       <div id="tMetaHint" class="notice" style="margin-top:8px">種目名から対象部位・POFを自動候補化します。必要なら手動で変更できます。</div>
       <div class="trainingQuickCard">
-        <div class="trainingQuickHead"><div><div class="trainingQuickTitle">QUICK START｜前回・ROUTINE</div><div class="muted">前回値は下書きとして読み込み。保存するまでは履歴に追加されません。</div></div><span class="badge">V26.5.4</span></div>
+        <div class="trainingQuickHead"><div><div class="trainingQuickTitle">QUICK START｜前回・ROUTINE</div><div class="muted">前回値は下書きとして読み込み。保存するまでは履歴に追加されません。</div></div><span class="badge">V26.5.5</span></div>
         <div class="trainingQuickActions"><button class="secondary" type="button" onclick="loadPreviousExerciseDraft()">前回のこの種目</button><button class="secondary" type="button" onclick="loadPreviousSessionDraft()">前回SESSION</button></div>
         <div class="trainingRoutineGrid">
           <div><label>ROUTINE</label><select id="tRoutineSelect"><option value="">ROUTINEなし</option></select></div>
@@ -1327,6 +1328,19 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
       <div class="hydrationNote">水分目標は体重などから出す初期目安で、必要量は気温・発汗・食事・体格で変わります。心臓・腎臓などで水分制限の指示がある場合は医療者の指示を優先してください。アルコールは水分摂取量には加算しません。</div>
       <h3 style="margin-top:12px">HYDRATION履歴</h3><div id="hydrationList"></div>
     </div>
+    <div class="card">
+      <div class="sectionLead"><div><h2>DAILY RHYTHM｜日中リズム</h2><div class="muted">起床・光・昼寝・カフェイン・食事・トレ時刻を1日単位で記録。睡眠時間だけでは見えない生活リズムを回復判定へ補助的に反映。</div></div></div>
+      <div class="grid3"><div><label>日付</label><input id="rhDate" type="date" onchange="loadDailyRhythmInputs()"></div><div><label>起床</label><input id="rhWake" type="time"></div><div><label>就寝</label><input id="rhBed" type="time"></div></div>
+      <div class="grid3" style="margin-top:8px"><div><label>起床後の屋外光 / 朝日（分）</label><input id="rhMorningLight" type="number" min="0" max="300" step="5" placeholder="例 15"></div><div><label>昼寝開始</label><input id="rhNapStart" type="time"></div><div><label>昼寝（分）</label><input id="rhNapMin" type="number" min="0" max="300" step="5" placeholder="例 20"></div></div>
+      <div class="grid2" style="margin-top:8px"><div><label>カフェイン合計 mg</label><input id="rhCaffeineMg" type="number" min="0" max="1500" step="10" placeholder="例 180"></div><div><label>最終カフェイン</label><input id="rhCaffeineLast" type="time"></div></div>
+      <div class="grid3" style="margin-top:8px"><div><label>最初の食事</label><input id="rhFirstMeal" type="time"></div><div><label>最後の食事</label><input id="rhLastMeal" type="time"></div><div><label>トレ開始</label><input id="rhTrainingTime" type="time"></div></div>
+      <div class="grid2" style="margin-top:8px"><div><label>トレ前の主な食事</label><input id="rhPreMeal" type="time"></div><div><label>トレ後の主な食事</label><input id="rhPostMeal" type="time"></div></div>
+      <div style="margin-top:8px"><label>メモ</label><input id="rhMemo" placeholder="例：夜勤、早朝予定、会食、移動など"></div>
+      <button class="primary" type="button" style="width:100%;margin-top:9px" onclick="saveDailyRhythm()">日中リズムを保存</button>
+      <div id="rhythmTodayCard" class="rhythmHero"></div>
+      <div class="hydrationNote">RHYTHM SCOREは診断値ではなく、本人の生活リズムを揃えるための管理指標です。カフェイン感受性、夜トレ、食事時刻の影響には個人差があるため、睡眠・回復・トレ反応と一緒に追跡します。</div>
+      <h3 style="margin-top:12px">RHYTHM履歴</h3><div id="rhythmList"></div>
+    </div>
     <div class="card"><h2>判定</h2><div id="recoveryJudge" class="item"></div></div>
     <div class="card"><h2>履歴</h2><div id="recoveryList"></div></div>
   </section>
@@ -1582,7 +1596,7 @@ function baseMember(name="新規会員"){
     coachPlan:{weeklyFocus:"",nextAction:"",nextSessionDate:"",targetTrainingDays:0,targetSleep:0,targetSteps:0,completedAt:null,updatedAt:null},
     goalPlan:{goalType:"筋肥大",deadline:"",targetWeight:0,targetBodyFat:0,idealNote:"",idealImagePath:"",energyAnchor:0,priority1:"肩",priority2:"背中",priority3:"胸",trainingDays:4,sessionMinutes:60,generatedAt:null,lastPlan:null},
     smartContext:{appetite:"normal",dayType:"training",updatedAt:null},
-    weights:[],meals:[],training:[],trainingRoutines:[],recovery:[],hydration:[],checkins:[],activity:[],selfCare:[],smartPlans:[],romAssessments:[],aromAssessments:[],shrAssessments:[],movementScreens:[],integratedAssessments:[],bodyMeasurements:[],responseExperiments:[],photos:[],medicalReferrals:[],restTargets:{}}
+    weights:[],meals:[],training:[],trainingRoutines:[],recovery:[],hydration:[],dailyRhythm:[],checkins:[],activity:[],selfCare:[],smartPlans:[],romAssessments:[],aromAssessments:[],shrAssessments:[],movementScreens:[],integratedAssessments:[],bodyMeasurements:[],responseExperiments:[],photos:[],medicalReferrals:[],restTargets:{}}
 }
 function m(){return db.members[db.current]}
 function esc(s){return String(s??"").replace(/[&<>"']/g,x=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[x]))}
@@ -2054,7 +2068,7 @@ async function loadMember(id){
   if(!db.members[id].goalPlan || typeof db.members[id].goalPlan!=="object" || Array.isArray(db.members[id].goalPlan)) db.members[id].goalPlan=baseMember(p?.display_name||"会員").goalPlan;
   db.members[id].goalPlan={...baseMember(p?.display_name||"会員").goalPlan,...db.members[id].goalPlan};
 
-  ["weights","meals","training","trainingRoutines","recovery","hydration","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos","medicalReferrals"].forEach(k=>{
+  ["weights","meals","training","trainingRoutines","recovery","hydration","dailyRhythm","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos","medicalReferrals"].forEach(k=>{
     if(!Array.isArray(db.members[id][k]))db.members[id][k]=[];
   });
   if(!db.members[id].restTargets || typeof db.members[id].restTargets!=="object" || Array.isArray(db.members[id].restTargets))db.members[id].restTargets={};
@@ -2290,7 +2304,7 @@ function dateAgeDays(dateStr){
 function latestRecordDate(mm){
   if(!mm)return "";
   const dates=[];
-  ["weights","meals","training","recovery","hydration","activity","bodyMeasurements"].forEach(k=>(mm[k]||[]).forEach(x=>{if(x?.date)dates.push(x.date)}));
+  ["weights","meals","training","recovery","hydration","dailyRhythm","activity","bodyMeasurements"].forEach(k=>(mm[k]||[]).forEach(x=>{if(x?.date)dates.push(x.date)}));
   (mm.photos||[]).forEach(x=>{if(x?.date)dates.push(x.date)});
   return dates.sort().at(-1)||"";
 }
@@ -2566,7 +2580,7 @@ async function refreshAdminBoard(){
     const members=accessibleProfiles.filter(p=>p.role!=="trainer").map(p=>{
       const row=byId.get(p.id);
       const mm=row?.data&&Object.keys(row.data).length?row.data:baseMember(p.display_name||"会員");
-      ["weights","meals","training","recovery","hydration","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos"].forEach(k=>{if(!Array.isArray(mm[k]))mm[k]=[]});
+      ["weights","meals","training","recovery","hydration","dailyRhythm","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos"].forEach(k=>{if(!Array.isArray(mm[k]))mm[k]=[]});
       if(!mm.restTargets || typeof mm.restTargets!=="object" || Array.isArray(mm.restTargets))mm.restTargets={};
       if(!mm.profile)mm.profile=baseMember(p.display_name||"会員").profile;
       const st=adminStatusFor(mm);
@@ -3930,6 +3944,68 @@ function renderHydration(){
   const list=document.getElementById("hydrationList");if(list){const rows=m()?.hydration||[];list.innerHTML=[...rows].reverse().slice(0,20).map((x,ri)=>{const i=rows.length-1-ri,hs=hydrationStatus(x,x.date);return `<div class="item"><div class="row"><div><strong>${esc(x.date)}｜${Math.round(Number(x.amount||0)).toLocaleString()} / ${Math.round(hs.goal).toLocaleString()}ml</strong><br><small>${hs.pct}%｜${esc(hydrationAdviceText(x))}</small></div><button class="danger" onclick="remove('hydration',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';}
 }
 
+
+function dailyRhythmDay(date=today()){return (m()?.dailyRhythm||[]).find(x=>x.date===date)||null;}
+function rhythmClockMin(v){if(!v||!/^[0-2]\d:[0-5]\d$/.test(v))return null;const [h,mi]=v.split(":").map(Number);return h*60+mi;}
+function rhythmNightMin(v){const n=rhythmClockMin(v);return n==null?null:(n<720?n+1440:n);}
+function rhythmAbsClockDiff(a,b){a=rhythmClockMin(a);b=rhythmClockMin(b);if(a==null||b==null)return null;const d=Math.abs(a-b);return Math.min(d,1440-d);}
+function rhythmForwardGap(from,to){let a=rhythmClockMin(from),b=rhythmClockMin(to);if(a==null||b==null)return null;if(b<a)b+=1440;return b-a;}
+function rhythmSleepMinutes(row){if(!row?.bed||!row?.wake)return null;let b=rhythmClockMin(row.bed),w=rhythmClockMin(row.wake);if(b==null||w==null)return null;let d=w-b;if(d<=0)d+=1440;return d>960?null:d;}
+function rhythmPreviousRows(date){return (m()?.dailyRhythm||[]).filter(x=>x.date<date).slice().sort((a,b)=>a.date.localeCompare(b.date)).slice(-7);}
+function rhythmWakeDrift(row){if(!row?.wake)return null;const vals=rhythmPreviousRows(row.date).map(x=>rhythmClockMin(x.wake)).filter(Number.isFinite);if(vals.length<2)return null;const mean=vals.reduce((a,b)=>a+b,0)/vals.length;const cur=rhythmClockMin(row.wake);return Math.round(Math.abs(cur-mean));}
+function rhythmMealTiming(row){
+  const out={};
+  if(row?.preMeal&&row?.trainingTime){let d=rhythmForwardGap(row.preMeal,row.trainingTime);if(d!=null&&d>720)d=null;out.preGap=d;}
+  if(row?.trainingTime&&row?.postMeal){let d=rhythmForwardGap(row.trainingTime,row.postMeal);if(d!=null&&d>720)d=null;out.postGap=d;}
+  if(row?.firstMeal&&row?.lastMeal){let d=rhythmForwardGap(row.firstMeal,row.lastMeal);if(d!=null&&d<=1200)out.eatingWindow=d;}
+  if(row?.lastMeal&&row?.bed){let d=rhythmForwardGap(row.lastMeal,row.bed);if(d!=null&&d<=720)out.lastMealToBed=d;}
+  return out;
+}
+function rhythmAssessment(row){
+  if(!row)return {score:null,label:"未記録",cls:"warn",flags:[],advice:["日中リズムを記録すると、回復との関係を追えます。"],meal:{}};
+  let score=100;const flags=[],advice=[],meal=rhythmMealTiming(row),sleepMin=rhythmSleepMinutes(row),wakeDrift=rhythmWakeDrift(row);
+  if(sleepMin!=null&&sleepMin<360){score-=18;flags.push({t:"睡眠機会 6h未満",c:"bad"});}
+  else if(sleepMin!=null&&sleepMin<420){score-=8;flags.push({t:"睡眠機会 7h未満",c:"warn"});}
+  if(wakeDrift!=null&&wakeDrift>120){score-=14;flags.push({t:`起床ズレ ${wakeDrift}分`,c:"bad"});}
+  else if(wakeDrift!=null&&wakeDrift>60){score-=7;flags.push({t:`起床ズレ ${wakeDrift}分`,c:"warn"});}
+  const light=Number(row.morningLight||0);if(row.morningLight!==""&&light<5){score-=10;flags.push({t:"朝の屋外光 少",c:"warn"});}else if(light>=10)flags.push({t:`朝の光 ${light}分`,c:"ok"});
+  const nap=Number(row.napMin||0),napStart=rhythmClockMin(row.napStart);if(nap>90){score-=8;flags.push({t:`昼寝 ${nap}分`,c:"warn"});}if(nap>20&&napStart!=null&&napStart>=16*60){score-=7;flags.push({t:"遅い昼寝",c:"warn"});}
+  const caf=Number(row.caffeineMg||0);if(caf>400){score-=6;flags.push({t:`カフェイン ${caf}mg`,c:"warn"});}
+  if(row.caffeineLast&&row.bed){const gap=rhythmForwardGap(row.caffeineLast,row.bed);if(gap!=null&&gap<360){score-=14;flags.push({t:`就寝までカフェイン ${Math.round(gap/60*10)/10}h`,c:"bad"});}else if(gap!=null&&gap<480){score-=7;flags.push({t:`就寝までカフェイン ${Math.round(gap/60*10)/10}h`,c:"warn"});}}
+  else if(row.caffeineLast&&rhythmClockMin(row.caffeineLast)>=15*60){score-=5;flags.push({t:"午後遅めのカフェイン",c:"warn"});}
+  if(meal.lastMealToBed!=null&&meal.lastMealToBed<60){score-=6;flags.push({t:"就寝直前の食事",c:"warn"});}
+  if(meal.preGap!=null){if(meal.preGap>=60&&meal.preGap<=240)flags.push({t:`トレ前食事 ${Math.round(meal.preGap/60*10)/10}h前`,c:"ok"});else if(meal.preGap<30)flags.push({t:"トレ直前の食事",c:"warn"});else if(meal.preGap>300)flags.push({t:"トレ前の空き長め",c:"warn"});}
+  if(meal.postGap!=null&&meal.postGap<=180)flags.push({t:`トレ後食事 ${Math.round(meal.postGap/60*10)/10}h`,c:"ok"});
+  score=Math.max(0,Math.min(100,Math.round(score)));
+  if(light<10)advice.push("起床後は可能なら屋外の明るさを確保。時間は天候・生活に合わせて調整。");
+  if(row.caffeineLast&&row.bed){const gap=rhythmForwardGap(row.caffeineLast,row.bed);if(gap!=null&&gap<480)advice.push("カフェイン終了時刻を少し前倒しし、睡眠への反応を比較。");}
+  if(nap>90||(nap>20&&napStart!=null&&napStart>=16*60))advice.push("昼寝が夜睡眠に響くなら、短時間・早めへ寄せて反応を見る。");
+  if(meal.preGap!=null&&(meal.preGap<30||meal.preGap>300))advice.push("トレ前食事は消化・量・本人の感覚を見ながらタイミングを調整。");
+  if(meal.postGap!=null&&meal.postGap>240)advice.push("トレ後は“直後必須”ではないが、1日のPFCが不足しないよう次の食事を確保。");
+  if(!advice.length)advice.push("大きなリズム崩れは少なめ。今の条件を維持して睡眠・トレ反応を追跡。");
+  const label=score>=85?"安定":score>=70?"概ね良好":score>=55?"要調整":"リズム優先",cls=score>=85?"ok":score>=55?"warn":"bad";
+  return {score,label,cls,flags,advice,meal,sleepMin,wakeDrift};
+}
+function dailyRhythmInputRow(){
+  const v=id=>document.getElementById(id)?.value||"";
+  return {date:v("rhDate")||today(),wake:v("rhWake"),bed:v("rhBed"),morningLight:v("rhMorningLight"),napStart:v("rhNapStart"),napMin:v("rhNapMin"),caffeineMg:v("rhCaffeineMg"),caffeineLast:v("rhCaffeineLast"),firstMeal:v("rhFirstMeal"),lastMeal:v("rhLastMeal"),trainingTime:v("rhTrainingTime"),preMeal:v("rhPreMeal"),postMeal:v("rhPostMeal"),memo:v("rhMemo"),updatedAt:new Date().toISOString()};
+}
+function saveDailyRhythm(){
+  const row=dailyRhythmInputRow();if(![row.wake,row.bed,row.morningLight,row.napMin,row.caffeineMg,row.caffeineLast,row.firstMeal,row.lastMeal,row.trainingTime,row.preMeal,row.postMeal,row.memo].some(x=>String(x).trim()!==""))return alert("日中リズムを1項目以上入力してください");
+  if(!Array.isArray(m().dailyRhythm))m().dailyRhythm=[];m().dailyRhythm=m().dailyRhythm.filter(x=>x.date!==row.date);m().dailyRhythm.push(row);m().dailyRhythm.sort((a,b)=>a.date.localeCompare(b.date));saveRender();
+}
+function loadDailyRhythmInputs(){
+  const date=document.getElementById("rhDate")?.value||today(),row=dailyRhythmDay(date)||{};const map={rhWake:"wake",rhBed:"bed",rhMorningLight:"morningLight",rhNapStart:"napStart",rhNapMin:"napMin",rhCaffeineMg:"caffeineMg",rhCaffeineLast:"caffeineLast",rhFirstMeal:"firstMeal",rhLastMeal:"lastMeal",rhTrainingTime:"trainingTime",rhPreMeal:"preMeal",rhPostMeal:"postMeal",rhMemo:"memo"};Object.entries(map).forEach(([id,k])=>{const e=document.getElementById(id);if(e)e.value=row[k]??"";});renderDailyRhythm();
+}
+function rhythmSummaryText(row,a=rhythmAssessment(row)){
+  if(!row)return "日中リズム未記録";const bits=[];if(row.wake)bits.push(`起床 ${row.wake}`);if(row.bed)bits.push(`就寝 ${row.bed}`);if(row.caffeineMg)bits.push(`Caffeine ${row.caffeineMg}mg`);if(row.trainingTime)bits.push(`TRAIN ${row.trainingTime}`);return bits.join("｜")||"記録あり";
+}
+function renderDailyRhythm(){
+  const d=document.getElementById("rhDate");if(d&&!d.value)d.value=today();const date=d?.value||today(),row=dailyRhythmDay(date),a=rhythmAssessment(row),card=document.getElementById("rhythmTodayCard");
+  if(card){const sleep=a.sleepMin!=null?`${Math.floor(a.sleepMin/60)}h${a.sleepMin%60?String(a.sleepMin%60).padStart(2,"0")+"m":""}`:"--",meal=a.meal||{},mealText=meal.eatingWindow!=null?`${Math.round(meal.eatingWindow/60*10)/10}h`:"--";card.innerHTML=`<div class="rhythmTop"><div><div class="rhythmTitle">${esc(date)}｜${esc(a.label)}</div><div class="muted">${esc(rhythmSummaryText(row,a))}</div></div><span class="badge ${a.cls}">${a.score==null?"--":a.score+"点"}</span></div><div class="rhythmKpis"><div class="rhythmKpi"><span>SLEEP WINDOW</span><b>${sleep}</b></div><div class="rhythmKpi"><span>WAKE DRIFT</span><b>${a.wakeDrift==null?"--":a.wakeDrift+"分"}</b></div><div class="rhythmKpi"><span>EATING WINDOW</span><b>${mealText}</b></div></div><div class="rhythmFlags">${(a.flags||[]).slice(0,8).map(x=>`<span class="rhythmFlag ${x.c||""}">${esc(x.t)}</span>`).join("")||'<span class="rhythmFlag">評価項目を追加してください</span>'}</div><div class="rhythmAdvice">${(a.advice||[]).map(esc).join("｜")}</div>`;}
+  const list=document.getElementById("rhythmList");if(list){const rows=m()?.dailyRhythm||[];list.innerHTML=[...rows].reverse().slice(0,20).map((x,ri)=>{const i=rows.length-1-ri,aa=rhythmAssessment(x);return `<div class="item"><div class="row"><div><strong>${esc(x.date)}｜RHYTHM ${aa.score==null?"--":aa.score+"点"}</strong><br><small>${esc(rhythmSummaryText(x,aa))}</small>${x.memo?`<br><small>${esc(x.memo)}</small>`:""}</div><button class="danger" onclick="remove('dailyRhythm',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';}
+}
+
 const CARE_SMART_RULES={
   shoulder:{conflicts:["肩","胸"],fallback:"前脚",stepSensitive:false},
   neck:{conflicts:["肩","胸","背中","姿勢","全身"],fallback:"前脚",stepSensitive:false},
@@ -3990,6 +4066,12 @@ function smartRecoveryState(){
     else if(hyd.hangover==="mild"&&volume>80){volume=80;label="前日飲酒を考慮";cls="warn";rir="RIR +1";reason+=`｜二日酔い 軽度`;}
     else if(hyd.alcoholPrev){reason+=`｜前日飲酒あり`;}
   }
+  const rhythm=dailyRhythmDay(today()),rhythmA=rhythmAssessment(rhythm);
+  if(rhythm&&rhythmA.score!=null){
+    if(rhythmA.score<45&&volume>60){volume=60;label="日中リズム｜調整";cls="warn";rir="RIR +2";reason+=`｜RHYTHM ${rhythmA.score}点`;}
+    else if(rhythmA.score<65&&volume>80){volume=80;label="日中リズムを考慮";cls="warn";rir="RIR +1";reason+=`｜RHYTHM ${rhythmA.score}点`;}
+    else reason+=`｜RHYTHM ${rhythmA.score}点`;
+  }
   // 当日のセルフケア再評価をSMARTへ連携する。
   // 全身休養にするのではなく、基本は「該当部位の負荷を下げる / 別部位へ変更」。
   if(care.active){
@@ -4031,6 +4113,10 @@ function smartNutrition(){
   if(targets.F&&mt.f>targets.F*1.1&&d.P>10)priorities.unshift({title:"低脂質タンパク源",detail:"脂質は目標付近〜超過。鶏むね・白身魚・無脂肪ヨーグルト・プロテインなどを優先。"});
   if(ctx.appetite==="low")priorities.unshift({title:"食欲が低い日",detail:"一度に多く食べず、バナナ・ヨーグルト・おにぎり・うどん・プロテイン等の摂りやすい物を小分けに。"});
   const r=latestRecovery();if(r&&(Number(r.sleep||0)<6||Number(r.fatigue||0)>=7))priorities.push({title:"回復日の基本",detail:"水分を確保し、極端なエネルギー不足を避ける。トレ日なら炭水化物＋タンパク質を優先。"});
+  const rhythm=dailyRhythmDay(today()),rmeal=rhythmAssessment(rhythm).meal||{};
+  if(rhythm?.trainingTime&&rmeal.preGap!=null&&rmeal.preGap>300)priorities.unshift({title:"トレ前の補給",detail:`トレ前の主な食事から約${Math.round(rmeal.preGap/60*10)/10}時間。空腹やパフォーマンス低下が出るなら、消化しやすい糖質＋タンパク質を追加候補。`});
+  if(rhythm?.trainingTime&&rmeal.preGap!=null&&rmeal.preGap<30)priorities.push({title:"トレ直前の食事",detail:"トレ直前は量・脂質・食物繊維を増やしすぎず、胃腸反応を見て調整。"});
+  if(rhythm?.trainingTime&&rmeal.postGap!=null&&rmeal.postGap>240)priorities.push({title:"トレ後の食事",detail:"直後の固定ルールではなく、1日のPFCを満たせるよう次の食事を確保。"});
   if(!priorities.length)priorities.push({title:"ほぼ目標内",detail:"今日のPFCは大きな不足なし。残りは食事全体のバランスを優先。"});
   const kcalRate=targets.kcal?mt.kcal/targets.kcal:0;return {label:kcalRate<.6?"不足大":kcalRate<.9?"補給必要":kcalRate<=1.1?"目標付近":"超過",reason:targets.kcal?`${Math.round(mt.kcal)} / ${targets.kcal} kcal`:`${Math.round(mt.kcal)} kcal`,priorities:priorities.slice(0,4),deficit:d};
 }
@@ -5155,7 +5241,7 @@ function carePlan(area, location, movement){
   };
 }
 
-// V26.5.4 HYDRATION + CARE + TRAINING METHODS + ROUTINE + AROM/PROM + TAPING + THERMAL CARE
+// V26.5.5 DAILY RHYTHM + CAFFEINE + MEAL TIMING + HYDRATION + CARE + TRAINING METHODS
 const CARE_AROM_KEYS={
   shoulder:["shoulder_flex","shoulder_abd","shoulder_er","shoulder_ir","shoulder_ext","shoulder_hflex","shoulder_hext","thoracic_ext","thoracic_rot"],
   neck:["cervical_flex","cervical_ext","cervical_rot","cervical_lat","thoracic_ext","thoracic_rot"],
@@ -7228,7 +7314,7 @@ function renderResponseEngine(force=false){
 
 function renderAll(){
   if(!m())return;
-  const ciDateEl=document.getElementById("ciDate");if(ciDateEl&&!ciDateEl.value)ciDateEl.value=today();
+  const ciDateEl=document.getElementById("ciDate");if(ciDateEl&&!ciDateEl.value)ciDateEl.value=today();const rhDateEl=document.getElementById("rhDate");if(rhDateEl&&!rhDateEl.value)rhDateEl.value=today();
   renderMemberSelect();
   let mm=m(),ws=mm.weights,latest=ws.at(-1),s=weightStats(),mt=mealTotals(),rr=mm.recovery.filter(x=>x.date===today()).at(-1)||mm.recovery.at(-1);
   dWeight.textContent=latest?latest.weight.toFixed(1)+"kg":"--";dAvg.textContent=s.l?s.l.toFixed(1)+"kg":"--";dKcal.textContent=Math.round(mt.kcal)+" kcal";dRec.textContent=rr?recScore(rr)+"点":"--";
@@ -7243,9 +7329,9 @@ function renderAll(){
   mealList.innerHTML=[...mm.meals].reverse().map((x,ri)=>{let i=mm.meals.length-1-ri;return `<div class="item"><div class="row"><div><strong>${x.date}｜${esc(x.name)}</strong><br><small>${x.kcal}kcal / P${x.p} F${x.f} C${x.c}</small></div><button class="danger" onclick="remove('meals',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
   trainingList.innerHTML=[...mm.training].reverse().map((x,ri)=>{let i=mm.training.length-1-ri,o=overloadForRow(x),meta=trainingMetaForRow(x);return `<div class="item"><div class="row"><div><strong>${x.date}｜${esc(x.exercise)}</strong><br><small>${x.weight}kg × ${x.reps}rep × ${x.sets}set / RIR ${x.rir}${Array.isArray(x.setDetails)&&x.setDetails.length?'（SET1代表）':''}</small>${trainingSetDetailsHTML(x)}<br><small>総重量 ${Math.round(vol(x)).toLocaleString()}kg｜推定1RM ${e1rm(x).toFixed(1)}kg</small><br><span class="badge">${esc(meta.part)}</span> <span class="badge">${esc(meta.pof)}</span> ${trainingMethodBadgesHTML(x)}<br><span class="badge ${o.cls}">${esc(o.txt)}</span></div><button class="danger" onclick="remove('training',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
   prTable.innerHTML=exs.length?`<div style="overflow-x:auto"><table class="table"><tr><th>種目</th><th>部位 / POF</th><th>最新</th><th>総重量</th><th>推定1RM</th><th>前回比</th></tr>${exs.map(ex=>{const t=trainingTrend(ex),x=t?.cur;if(!x)return"";const prx=pr(ex);const isPr=Math.abs(e1rm(x)-e1rm(prx))<0.0001;const meta=trainingMetaForRow(x);return `<tr><td>${esc(ex)}</td><td><small>${esc(meta.part)}<br>${esc(meta.pof)}</small></td><td>${x.weight}kg×${x.reps}×${x.sets}</td><td>${Math.round(t.curVol).toLocaleString()}kg</td><td>${t.curE1.toFixed(1)}kg${isPr?' PR':''}</td><td><small>総 ${fmtPct(t.volPct)}<br>1RM ${fmtPct(t.e1Pct)}</small></td></tr>`}).join("")}</table></div>`:'<span class="muted">記録なし</span>';
-  {const hyd=hydrationDay(today()),hs=hydrationStatus(hyd,today()),hydLine=hyd?`<br><small>HYDRATION ${Math.round(hs.amount).toLocaleString()}/${Math.round(hs.goal).toLocaleString()}ml（${hs.pct}%）｜${esc(hydrationAdviceText(hyd))}</small>`:"";recoveryJudge.innerHTML=`<span class="badge ${adv.cls}">${esc(adv.txt)}</span>${hydLine}`;}
+  {const hyd=hydrationDay(today()),hs=hydrationStatus(hyd,today()),hydLine=hyd?`<br><small>HYDRATION ${Math.round(hs.amount).toLocaleString()}/${Math.round(hs.goal).toLocaleString()}ml（${hs.pct}%）｜${esc(hydrationAdviceText(hyd))}</small>`:"",rh=dailyRhythmDay(today()),ra=rhythmAssessment(rh),rhLine=rh?`<br><small>RHYTHM ${ra.score}点｜${esc(ra.label)}｜${esc((ra.flags||[]).slice(0,3).map(x=>x.t).join(" / ")||"大きな注意なし")}</small>`:"";recoveryJudge.innerHTML=`<span class="badge ${adv.cls}">${esc(adv.txt)}</span>${hydLine}${rhLine}`;}
   recoveryList.innerHTML=[...mm.recovery].reverse().map((x,ri)=>{let i=mm.recovery.length-1-ri,a=recAdvice(x);return `<div class="item"><div class="row"><div><strong>${x.date}｜睡眠 ${x.sleep}h</strong><br><small>疲労${x.fatigue} / ストレス${x.stress} / 痛み${x.pain}</small><br><span class="badge ${a.cls}">${recScore(x)}点</span></div><button class="danger" onclick="remove('recovery',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
-  populateExercisePicker();renderExerciseMasterList();renderTrainingRoutineOptions();renderTrainingQueue();trainingSetMethodChanged(false);renderTrainingPreview();renderPofSummary();syncTrainingMeta();if(!restTimerState.running)restTimerLoadExerciseTarget();restTimerRender();renderNextLoadPanel();renderRomHistory();renderAromHistory();renderAromAsymmetry();renderAromReference();renderShrHistory();renderMovementHistory();renderMoveGuide();renderJointByJoint();renderIntegratedAssessment();renderIntegratedHistory();renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();renderCheckin();renderSmartCore();renderGoalPlan();renderResponseEngine();renderActivity();renderCareHistory();renderCareResponseProfile();renderCareFollowupPanel();renderCareReferralGate();renderMedicalFeedbackHistory();renderHydration();drawChart();renderReport();renderPhotos();
+  populateExercisePicker();renderExerciseMasterList();renderTrainingRoutineOptions();renderTrainingQueue();trainingSetMethodChanged(false);renderTrainingPreview();renderPofSummary();syncTrainingMeta();if(!restTimerState.running)restTimerLoadExerciseTarget();restTimerRender();renderNextLoadPanel();renderRomHistory();renderAromHistory();renderAromAsymmetry();renderAromReference();renderShrHistory();renderMovementHistory();renderMoveGuide();renderJointByJoint();renderIntegratedAssessment();renderIntegratedHistory();renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();renderCheckin();renderSmartCore();renderGoalPlan();renderResponseEngine();renderActivity();renderCareHistory();renderCareResponseProfile();renderCareFollowupPanel();renderCareReferralGate();renderMedicalFeedbackHistory();renderHydration();renderDailyRhythm();drawChart();renderReport();renderPhotos();
 }
 
 function monthLabel(mon){
@@ -7397,7 +7483,7 @@ function normalizeMemberData(data,name="会員"){
   if(!x.coachPlan||typeof x.coachPlan!=="object")x.coachPlan=base.coachPlan; else x.coachPlan={...base.coachPlan,...x.coachPlan};
   if(!x.smartContext||typeof x.smartContext!=="object")x.smartContext=base.smartContext; else x.smartContext={...base.smartContext,...x.smartContext};
   if(!x.goalPlan||typeof x.goalPlan!=="object"||Array.isArray(x.goalPlan))x.goalPlan=base.goalPlan; else x.goalPlan={...base.goalPlan,...x.goalPlan};
-  ["weights","meals","training","recovery","hydration","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos"].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});
+  ["weights","meals","training","recovery","hydration","dailyRhythm","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos"].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});
   if(!x.restTargets || typeof x.restTargets!=="object" || Array.isArray(x.restTargets))x.restTargets={};
   return x;
 }
