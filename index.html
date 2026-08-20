@@ -111,7 +111,7 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 .cloudStatus{font-size:9px;color:#aaa;margin-right:5px}
 .headActions{display:flex;align-items:center;gap:6px}
 
-/* V26.5.8 S.u.G READINESS SIGNAL */
+/* V26.5.9 S.u.G READINESS SIGNAL */
 .readinessHeaderSignal{appearance:none;border:1px solid #3a3a42;background:#111116;color:#d7d7dc;border-radius:999px;padding:6px 9px;font-size:9px;font-weight:900;letter-spacing:.05em;display:flex;align-items:center;gap:6px;white-space:nowrap}
 .readinessDot{width:9px;height:9px;border-radius:50%;display:inline-block;background:#777;box-shadow:0 0 0 rgba(255,255,255,0)}
 .readinessHeaderSignal.blue .readinessDot,.readinessSignal.blue .readinessSignalOrb{background:#53a7ff;box-shadow:0 0 10px #53a7ff,0 0 24px rgba(83,167,255,.55);animation:sugBluePulse 2s ease-in-out infinite}
@@ -137,14 +137,18 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 @keyframes sugRedPulse{0%,100%{transform:scale(.9);opacity:.55}50%{transform:scale(1.12);opacity:1}}
 @media(max-width:620px){.readinessHeaderSignal{padding:5px 7px;font-size:0}.readinessHeaderSignal .readinessHeaderText{display:none}.readinessSignalTop{grid-template-columns:auto 1fr}.readinessTrainGate{grid-column:1/-1;text-align:left;padding-left:49px}.readinessButtons{grid-template-columns:1fr}.readinessAction{grid-template-columns:auto 1fr}.readinessAction button{grid-column:2}}
 @media(prefers-reduced-motion:reduce){.readinessDot,.readinessSignalOrb{animation:none!important}}
-/* V26.5.8 WEEKLY NUTRITION + DAILY SCHEDULE */
+/* V26.5.9 WEEKLY NUTRITION + DAILY SCHEDULE */
 .weekBudgetHero,.scheduleHero{margin-top:10px;border:1px solid #3a3320;border-radius:13px;padding:12px;background:linear-gradient(180deg,#15130d,#0d0d10)}
 .weekBudgetTop,.scheduleHeroTop{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.weekBudgetTitle,.scheduleHeroTitle{font-size:13px;font-weight:950;color:var(--gold2)}
 .weekBudgetGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:9px}.weekBudgetKpi{background:#0b0b0e;border:1px solid #303036;border-radius:10px;padding:8px}.weekBudgetKpi span{display:block;font-size:8px;color:#888}.weekBudgetKpi b{display:block;font-size:15px;margin-top:2px}.weekBudgetKpi small{font-size:8px;color:#999}
 .weekBudgetAdvice{margin-top:9px;font-size:10px;line-height:1.6;color:#c8c8cc}.weekBudgetAdvice.warn{color:#ffe27a}.weekBudgetAdvice.bad{color:#ff9999}.weekBudgetBar{height:8px;background:#24242a;border-radius:999px;overflow:hidden;margin-top:9px}.weekBudgetBar>i{display:block;height:100%;background:linear-gradient(90deg,#d6b75a,#f2dd8c);border-radius:999px}
 .scheduleGrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px}.scheduleRows{display:grid;gap:7px;margin-top:9px}.scheduleItem{border:1px solid #303038;border-radius:10px;padding:9px;background:#0d0d10}.scheduleItem.high{border-color:#7a651f}.scheduleItemTop{display:flex;justify-content:space-between;gap:8px}.scheduleItem b{font-size:10px}.scheduleItem small{font-size:9px;line-height:1.5;color:#999}.scheduleLoad{font-size:9px;font-weight:900;border:1px solid #3b3b43;border-radius:999px;padding:3px 6px;white-space:nowrap}.scheduleLoad.high{color:#ffe27a;border-color:#7a651f}.scheduleLoad.low{color:#9bc8ff;border-color:#315a83}.scheduleSummary{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.scheduleChip{border:1px solid #34343b;border-radius:999px;padding:4px 7px;font-size:9px;color:#bbb}.scheduleChip.warn{color:#ffe27a;border-color:#7a651f}
 @media(max-width:620px){.weekBudgetGrid{grid-template-columns:1fr 1fr}.scheduleGrid{grid-template-columns:1fr 1fr}.scheduleGrid .wide{grid-column:1/-1}}
-/* V26.5.8 NEXT DAY PREP */
+/* V26.5.9 GOOGLE CALENDAR READ-ONLY SYNC */
+.gcalBox{margin-top:10px;border:1px solid #30435c;border-radius:13px;padding:11px;background:linear-gradient(180deg,#101720,#0c0d10)}
+.gcalTop{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.gcalTitle{font-size:12px;font-weight:950;color:#9bc8ff}.gcalStatus{font-size:9px;line-height:1.5;color:#aab3c0;margin-top:3px}.gcalStatus.ok{color:#90e7ba}.gcalStatus.warn{color:#ffe27a}.gcalStatus.bad{color:#ff9c9c}.gcalControls{display:grid;grid-template-columns:1fr auto;gap:7px;margin-top:9px}.gcalActions{display:grid;grid-template-columns:1.4fr 1fr;gap:7px;margin-top:8px}.gcalMeta{font-size:8px;color:#777;line-height:1.5;margin-top:7px;word-break:break-all}.gcalImported{color:#9bc8ff}
+@media(max-width:620px){.gcalControls,.gcalActions{grid-template-columns:1fr}}
+/* V26.5.9 NEXT DAY PREP */
 .tomorrowPrepHero{margin-top:10px;border:1px solid #2d3340;border-radius:13px;padding:12px;background:linear-gradient(180deg,#11151c,#0c0d10);position:relative;overflow:hidden}
 .tomorrowPrepHero.ready{border-color:#245b91;box-shadow:0 0 18px rgba(72,151,255,.12)}
 .tomorrowPrepHero.caution{border-color:#8b7422;box-shadow:0 0 22px rgba(255,210,67,.12);animation:tomorrowPrepPulse 2.2s ease-in-out infinite}
@@ -455,6 +459,7 @@ window.SUG_CLOUD_CONFIG = {
 window.SUG_PRIVATE_ENGINE_URL = "https://sug-private-engine.vercel.app/api/v1/next-load";
 window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walking-route";
 </script>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
@@ -463,7 +468,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
   <div class="authBox">
     <img class="authBrandLogo" src="./brand-header.png?v=26-4-2-walk-route" alt="S.u.G OSAKA">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V26.5.8 ADAPTIVE CORE / MEMBERS ONLY</div>
+    <div class="sub">V26.5.9 ADAPTIVE CORE / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -578,7 +583,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
   <div class="head">
     <div class="brandIdentity">
       <img class="brandHeaderLogo" src="./brand-header.png?v=26-4-2-walk-route" alt="S.u.G OSAKA">
-      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.5.8 ADAPTIVE CORE / READINESS SIGNAL + DAILY RHYTHM + HYDRATION + TRAINING + CARE</small></div>
+      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.5.9 ADAPTIVE CORE / READINESS SIGNAL + DAILY RHYTHM + HYDRATION + TRAINING + CARE</small></div>
     </div>
     <div class="headActions"><button id="readinessHeaderSignal" class="readinessHeaderSignal unknown" type="button" onclick="openRecoverySignal()" aria-label="今日の回復状態"><span class="readinessDot"></span><span class="readinessHeaderText">READINESS --</span></button><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
@@ -753,7 +758,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
       </div>
     </div>
     <div class="card readinessCard">
-      <div class="row" style="align-items:center"><div><h2 style="margin-bottom:3px">S.u.G READINESS SIGNAL</h2><div class="muted">睡眠・疲労・飲酒・二日酔い・水分・日中リズム・痛み/CAREから「今日どう動くか」まで表示。</div></div><span class="badge">V26.5.8</span></div>
+      <div class="row" style="align-items:center"><div><h2 style="margin-bottom:3px">S.u.G READINESS SIGNAL</h2><div class="muted">睡眠・疲労・飲酒・二日酔い・水分・日中リズム・痛み/CAREから「今日どう動くか」まで表示。</div></div><span class="badge">V26.5.9</span></div>
       <div id="readinessDashboard" style="margin-top:9px"><span class="muted">判定中...</span></div>
     </div>
     <div id="nextAppointmentCard" class="card nextApptCard">
@@ -1038,7 +1043,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
       </div>
       <div id="tMetaHint" class="notice" style="margin-top:8px">種目名から対象部位・POFを自動候補化します。必要なら手動で変更できます。</div>
       <div class="trainingQuickCard">
-        <div class="trainingQuickHead"><div><div class="trainingQuickTitle">QUICK START｜前回・ROUTINE</div><div class="muted">前回値は下書きとして読み込み。保存するまでは履歴に追加されません。</div></div><span class="badge">V26.5.8</span></div>
+        <div class="trainingQuickHead"><div><div class="trainingQuickTitle">QUICK START｜前回・ROUTINE</div><div class="muted">前回値は下書きとして読み込み。保存するまでは履歴に追加されません。</div></div><span class="badge">V26.5.9</span></div>
         <div class="trainingQuickActions"><button class="secondary" type="button" onclick="loadPreviousExerciseDraft()">前回のこの種目</button><button class="secondary" type="button" onclick="loadPreviousSessionDraft()">前回SESSION</button></div>
         <div class="trainingRoutineGrid">
           <div><label>ROUTINE</label><select id="tRoutineSelect"><option value="">ROUTINEなし</option></select></div>
@@ -1398,7 +1403,13 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
       <h3 style="margin-top:12px">RHYTHM履歴</h3><div id="rhythmList"></div>
     </div>
     <div class="card">
-      <div class="sectionLead"><div><h2>DAILY SCHEDULE｜生活・予定</h2><div class="muted">仕事・予約・移動・トレ予定を先に記録。将来Google Calendarから同じ形式へ自動取込できる設計。明日の予定から今夜の回復・準備も逆算。</div></div><span class="badge">CALENDAR READY</span></div>
+      <div class="sectionLead"><div><h2>DAILY SCHEDULE｜生活・予定</h2><div class="muted">仕事・予約・移動・トレ予定を管理。Google Calendarの予定を読み取り専用で取り込み、READINESSとNEXT DAY PREPへ反映。</div></div><span class="badge">GOOGLE CALENDAR</span></div>
+      <div class="gcalBox">
+        <div class="gcalTop"><div><div class="gcalTitle">GOOGLE CALENDAR SYNC｜読み取り専用</div><div id="gcalStatus" class="gcalStatus">未接続｜OAuth Client IDを1回設定すると、この端末で同期できます。</div></div><span id="gcalBadge" class="badge">OFF</span></div>
+        <div class="gcalControls"><div><label>Google OAuth 2.0 Client ID</label><input id="gcalClientId" autocomplete="off" placeholder="xxxxxxxx.apps.googleusercontent.com"></div><div><label>取込範囲</label><select id="gcalDays"><option value="7">7日</option><option value="14" selected>14日</option><option value="30">30日</option></select></div></div>
+        <div class="gcalActions"><button class="primary" type="button" onclick="connectAndSyncGoogleCalendar()">Google Calendar 接続・同期</button><button type="button" onclick="disconnectGoogleCalendar()">接続解除</button></div>
+        <div class="gcalMeta">権限：calendar.readonly｜対象：メインカレンダー｜同期した予定はS.u.G内のDAILY SCHEDULEへ保存。Google側の予定は変更しません。<br>Authorized JavaScript origin：<span id="gcalOrigin"></span></div>
+      </div>
       <div class="scheduleGrid">
         <div><label>日付</label><input id="scDate" type="date" onchange="renderDailySchedule()"></div>
         <div><label>開始</label><input id="scStart" type="time"></div>
@@ -5317,7 +5328,7 @@ function carePlan(area, location, movement){
   };
 }
 
-// V26.5.8 READINESS SIGNAL + DAILY RHYTHM + CAFFEINE + MEAL TIMING + HYDRATION + CARE + TRAINING METHODS
+// V26.5.9 READINESS SIGNAL + DAILY RHYTHM + CAFFEINE + MEAL TIMING + HYDRATION + CARE + TRAINING METHODS
 const CARE_AROM_KEYS={
   shoulder:["shoulder_flex","shoulder_abd","shoulder_er","shoulder_ir","shoulder_ext","shoulder_hflex","shoulder_hext","thoracic_ext","thoracic_rot"],
   neck:["cervical_flex","cervical_ext","cervical_rot","cervical_lat","thoracic_ext","thoracic_rot"],
@@ -5805,7 +5816,27 @@ function renderCareHistory(){
   }).join("")||'<span class="muted">履歴なし</span>';
 }
 function nearestWeightOnOrBefore(date){const rows=(m()?.weights||[]).filter(x=>x.date<=date).slice().sort((a,b)=>a.date.localeCompare(b.date));return rows.at(-1)||null;}
-// V26.5.8 WEEKLY CALORIE BALANCE + DAILY SCHEDULE
+// V26.5.9 GOOGLE CALENDAR -> DAILY SCHEDULE (read-only browser OAuth)
+const GCAL_CLIENT_KEY="sug_google_calendar_client_id_v1";
+let gcalTokenClient=null,gcalAccessToken="",gcalTokenExpiresAt=0,gcalConsentGranted=false;
+function gcalStatus(message,kind="",badge="OFF"){const s=document.getElementById("gcalStatus"),b=document.getElementById("gcalBadge");if(s){s.textContent=message;s.className=`gcalStatus ${kind||""}`.trim()}if(b)b.textContent=badge;}
+function initGoogleCalendarUI(){const id=document.getElementById("gcalClientId"),o=document.getElementById("gcalOrigin");if(id&&!id.value)id.value=localStorage.getItem(GCAL_CLIENT_KEY)||"";if(o)o.textContent=location.origin;const saved=localStorage.getItem(GCAL_CLIENT_KEY)||"";if(saved)gcalStatus("Client ID設定済み｜接続・同期を押すとGoogle予定を取得します。","","READY");}
+function saveGoogleCalendarClientId(){const el=document.getElementById("gcalClientId"),v=String(el?.value||"").trim();if(!v)return "";if(!/\.apps\.googleusercontent\.com$/.test(v)){gcalStatus("Client IDの形式を確認してください。","bad","ERROR");return "";}localStorage.setItem(GCAL_CLIENT_KEY,v);return v;}
+function gcalHasLiveToken(){return !!gcalAccessToken&&Date.now()<gcalTokenExpiresAt-30000;}
+function gcalDateKey(value){if(!value)return "";if(/^\d{4}-\d{2}-\d{2}$/.test(value))return value;const d=new Date(value);if(Number.isNaN(d.getTime()))return "";return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;}
+function gcalTimeKey(value){if(!value||/^\d{4}-\d{2}-\d{2}$/.test(value))return "";const d=new Date(value);if(Number.isNaN(d.getTime()))return "";return `${String(d.getHours()).padStart(2,"0")}:${String(d.getMinutes()).padStart(2,"0")}`;}
+function gcalEventText(e){return `${e?.summary||""} ${e?.description||""} ${e?.location||""}`.toLowerCase();}
+function gcalClassify(e){const t=gcalEventText(e);if(/(筋トレ|トレーニング|トレ|workout|training|\bgym\b)/i.test(t))return "training";if(/(移動|新幹線|飛行機|空港|travel|flight|airport|出張)/i.test(t))return "travel";if(/(会食|食事|ランチ|昼食|夕食|朝食|飲み会|dinner|lunch|breakfast)/i.test(t))return "meal";if(/(care|recovery|ストレッチ|整体|マッサージ|接骨|リハビリ|rehab)/i.test(t))return "recovery";if(/(予約|セッション|来店|appointment|訪問|面談)/i.test(t))return "appointment";if(/(仕事|会議|meeting|work|業務|打合|打ち合わせ)/i.test(t))return "work";return "other";}
+function gcalDurationMin(e){const s=e?.start?.dateTime,end=e?.end?.dateTime;if(!s||!end)return 0;const a=new Date(s),b=new Date(end);return Math.max(0,Math.round((b-a)/60000));}
+function gcalLoad(e,type){const d=gcalDurationMin(e),t=gcalEventText(e);if(/(heavy|高強度|脚トレ|leg day|大会|試合)/i.test(t))return "high";if(type==="travel"&&d>=120)return "high";if(type==="work"&&d>=360)return "high";if(d>=240)return "high";if(type==="training"||type==="appointment"||d>=90)return "medium";return "low";}
+function gcalRow(e){const rawStart=e?.start?.dateTime||e?.start?.date||"",rawEnd=e?.end?.dateTime||e?.end?.date||"",date=gcalDateKey(rawStart),type=gcalClassify(e);return {date,start:gcalTimeKey(rawStart),end:gcalTimeKey(rawEnd),type,load:gcalLoad(e,type),title:String(e?.summary||"Google Calendar予定").trim()||"Google Calendar予定",memo:String(e?.location||"").trim(),source:"google_calendar",externalId:`gcal:${e?.id||""}`,googleUpdated:e?.updated||"",savedAt:new Date().toISOString()};}
+async function gcalFetchEvents(days=14){const start=new Date();start.setHours(0,0,0,0);const end=new Date(start);end.setDate(end.getDate()+Math.max(1,Number(days)||14)+1);let pageToken="",items=[],pages=0;do{const u=new URL("https://www.googleapis.com/calendar/v3/calendars/primary/events");u.searchParams.set("timeMin",start.toISOString());u.searchParams.set("timeMax",end.toISOString());u.searchParams.set("singleEvents","true");u.searchParams.set("orderBy","startTime");u.searchParams.set("showDeleted","false");u.searchParams.set("maxResults","250");if(pageToken)u.searchParams.set("pageToken",pageToken);const r=await fetch(u,{headers:{Authorization:`Bearer ${gcalAccessToken}`,Accept:"application/json"}});if(r.status===401){gcalAccessToken="";gcalTokenExpiresAt=0;throw new Error("AUTH_EXPIRED");}if(!r.ok){let body="";try{body=await r.text()}catch{}throw new Error(`CALENDAR_${r.status}${body?":"+body.slice(0,120):""}`);}const data=await r.json();items.push(...(Array.isArray(data.items)?data.items:[]));pageToken=data.nextPageToken||"";pages++;}while(pageToken&&pages<6);return {items,start:gcalDateKey(start.toISOString()),end:gcalDateKey(end.toISOString())};}
+async function syncGoogleCalendarEvents(){if(!m())return alert("会員を選択してください");if(!gcalHasLiveToken())return connectAndSyncGoogleCalendar();const days=Number(document.getElementById("gcalDays")?.value||14);gcalStatus("Google Calendarから予定を取得中…","warn","SYNC");try{const data=await gcalFetchEvents(days),rows=data.items.filter(e=>e?.status!=="cancelled").map(gcalRow).filter(x=>x.date);if(!Array.isArray(m().dailySchedule))m().dailySchedule=[];const start=today(),end=isoShift(today(),days);m().dailySchedule=m().dailySchedule.filter(x=>!(x.source==="google_calendar"&&x.date>=start&&x.date<=end));m().dailySchedule.push(...rows);m().dailySchedule.sort((a,b)=>`${a.date} ${a.start||""}`.localeCompare(`${b.date} ${b.start||""}`));persist();renderDailySchedule();renderReadinessSignal();gcalStatus(`同期完了｜${rows.length}件｜${start}〜${end}`,"ok","ON");}catch(err){console.error(err);const msg=String(err?.message||err);if(msg.includes("AUTH_EXPIRED"))gcalStatus("Google認証の有効期限が切れました。もう一度『接続・同期』を押してください。","warn","REAUTH");else gcalStatus(`同期エラー｜${msg.slice(0,100)}`,"bad","ERROR");}}
+function connectAndSyncGoogleCalendar(){const clientId=saveGoogleCalendarClientId();if(!clientId)return;if(!window.google?.accounts?.oauth2){gcalStatus("Google認証ライブラリを読み込み中です。数秒後にもう一度押してください。","warn","WAIT");return;}if(gcalHasLiveToken())return syncGoogleCalendarEvents();gcalStatus("Googleの認証画面を開きます…","warn","AUTH");gcalTokenClient=google.accounts.oauth2.initTokenClient({client_id:clientId,scope:"https://www.googleapis.com/auth/calendar.readonly",include_granted_scopes:true,callback:(resp)=>{if(resp?.error){gcalStatus(`認証エラー｜${resp.error}`,"bad","ERROR");return;}gcalAccessToken=resp?.access_token||"";gcalTokenExpiresAt=Date.now()+Math.max(60,Number(resp?.expires_in||3600))*1000;gcalConsentGranted=true;gcalStatus("Google Calendar接続済み｜予定を同期します。","ok","ON");syncGoogleCalendarEvents();},error_callback:(e)=>gcalStatus(`認証を完了できませんでした｜${e?.type||"popup error"}`,"bad","ERROR")});gcalTokenClient.requestAccessToken({prompt:gcalConsentGranted?"":"consent"});}
+function disconnectGoogleCalendar(){if(gcalAccessToken&&window.google?.accounts?.oauth2){try{google.accounts.oauth2.revoke(gcalAccessToken,()=>{})}catch(_e){}}gcalAccessToken="";gcalTokenExpiresAt=0;gcalTokenClient=null;gcalConsentGranted=false;gcalStatus("接続解除済み｜S.u.Gへ取り込んだ予定は残ります。","","OFF");}
+setTimeout(initGoogleCalendarUI,300);
+
+// V26.5.9 WEEKLY CALORIE BALANCE + DAILY SCHEDULE
 function isoDateObj(iso){const [y,mo,d]=String(iso||today()).split("-").map(Number);return new Date(y,Math.max(0,(mo||1)-1),d||1,12,0,0,0)}
 function isoShift(iso,days){const d=isoDateObj(iso);d.setDate(d.getDate()+Number(days||0));return dateISO(d)}
 function weekBounds(iso=today()){const d=isoDateObj(iso),day=(d.getDay()+6)%7;const start=new Date(d);start.setDate(d.getDate()-day);const end=new Date(start);end.setDate(start.getDate()+6);return {start:dateISO(start),end:dateISO(end)}}
@@ -5821,10 +5852,10 @@ function dailyScheduleRows(date=today()){return (m()?.dailySchedule||[]).filter(
 function scheduleDurationMin(x){if(!x?.start||!x?.end)return 0;const [sh,sm]=x.start.split(":").map(Number),[eh,em]=x.end.split(":").map(Number);let d=(eh*60+em)-(sh*60+sm);if(d<0)d+=1440;return d}
 function scheduleAssessment(date=today()){const rows=dailyScheduleRows(date);let score=0,high=0,totalMin=0;for(const x of rows){score+=SCHEDULE_LOAD_VALUE[x.load]||2;if(x.load==="high")high++;const d=scheduleDurationMin(x);totalMin+=d;if(d>=240)score+=1;}const level=score>=8||high>=2?"high":score>=5?"medium":"low";return {rows,score,high,totalMin,level,label:level==="high"?"予定負荷 高め":level==="medium"?"予定負荷 中等度":"予定負荷 軽め"}}
 function addDailySchedule(){if(!m())return;const date=document.getElementById("scDate")?.value||today(),start=document.getElementById("scStart")?.value||"",end=document.getElementById("scEnd")?.value||"",type=document.getElementById("scType")?.value||"other",load=document.getElementById("scLoad")?.value||"medium",title=(document.getElementById("scTitle")?.value||"").trim(),memo=(document.getElementById("scMemo")?.value||"").trim();if(!title)return alert("予定名を入力してください");if(!Array.isArray(m().dailySchedule))m().dailySchedule=[];m().dailySchedule.push({date,start,end,type,load,title,memo,source:"manual",savedAt:new Date().toISOString()});m().dailySchedule.sort((a,b)=>`${a.date} ${a.start||""}`.localeCompare(`${b.date} ${b.start||""}`));["scStart","scEnd","scTitle","scMemo"].forEach(id=>{const e=document.getElementById(id);if(e)e.value=""});persist();renderDailySchedule();renderReadinessSignal()}
-function renderDailySchedule(){const list=document.getElementById("scheduleList"),hero=document.getElementById("scheduleTodayCard"),dateEl=document.getElementById("scDate");if(!m()||(!list&&!hero))return;if(dateEl&&!dateEl.value)dateEl.value=today();const date=dateEl?.value||today(),a=scheduleAssessment(date),all=m().dailySchedule||[];if(hero){const chips=a.rows.slice(0,5).map(x=>`<span class="scheduleChip ${x.load==="high"?"warn":""}">${esc(x.start||"--:--")} ${esc(x.title)}</span>`).join("");hero.innerHTML=`<div class="scheduleHeroTop"><div><div class="scheduleHeroTitle">${esc(date)}｜${esc(a.label)}</div><small>${a.rows.length}件｜予定負荷スコア ${a.score}${a.totalMin?`｜予定時間 約${Math.round(a.totalMin/60*10)/10}h`:""}</small></div><span class="badge ${a.level==="high"?"warn":a.level==="low"?"ok":""}">${a.level.toUpperCase()}</span></div><div class="scheduleSummary">${chips||'<span class="muted">予定なし</span>'}</div>${a.level==="high"?'<div class="weekBudgetAdvice warn">予定が詰まっています。HEAVYを固定せず、睡眠・移動疲労・実際の回復状態と合わせてトレ時間/負荷を調整候補。</div>':''}`;}if(list){list.innerHTML=[...all].reverse().slice(0,30).map((x,ri)=>{const i=all.length-1-ri;return `<div class="scheduleItem ${x.load==="high"?"high":""}"><div class="scheduleItemTop"><div><b>${esc(x.date)}｜${esc(x.start||"--:--")}${x.end?`–${esc(x.end)}`:""}｜${esc(x.title)}</b><br><small>${esc(SCHEDULE_TYPE_LABEL[x.type]||x.type)}${x.memo?`｜${esc(x.memo)}`:""}${x.source&&x.source!=="manual"?`｜${esc(x.source)}`:""}</small></div><span class="scheduleLoad ${esc(x.load||"medium")}">${esc(String(x.load||"medium").toUpperCase())}</span></div><button class="danger" style="margin-top:7px;width:100%" onclick="remove('dailySchedule',${i})">削除</button></div>`}).join("")||'<span class="muted">予定なし</span>';}}
+function renderDailySchedule(){const list=document.getElementById("scheduleList"),hero=document.getElementById("scheduleTodayCard"),dateEl=document.getElementById("scDate");if(!m()||(!list&&!hero))return;if(dateEl&&!dateEl.value)dateEl.value=today();const date=dateEl?.value||today(),a=scheduleAssessment(date),all=m().dailySchedule||[];if(hero){const chips=a.rows.slice(0,5).map(x=>`<span class="scheduleChip ${x.load==="high"?"warn":""}">${esc(x.start||"--:--")} ${esc(x.title)}</span>`).join("");hero.innerHTML=`<div class="scheduleHeroTop"><div><div class="scheduleHeroTitle">${esc(date)}｜${esc(a.label)}</div><small>${a.rows.length}件｜予定負荷スコア ${a.score}${a.totalMin?`｜予定時間 約${Math.round(a.totalMin/60*10)/10}h`:""}</small></div><span class="badge ${a.level==="high"?"warn":a.level==="low"?"ok":""}">${a.level.toUpperCase()}</span></div><div class="scheduleSummary">${chips||'<span class="muted">予定なし</span>'}</div>${a.level==="high"?'<div class="weekBudgetAdvice warn">予定が詰まっています。HEAVYを固定せず、睡眠・移動疲労・実際の回復状態と合わせてトレ時間/負荷を調整候補。</div>':''}`;}if(list){list.innerHTML=[...all].reverse().slice(0,30).map((x,ri)=>{const i=all.length-1-ri;return `<div class="scheduleItem ${x.load==="high"?"high":""}"><div class="scheduleItemTop"><div><b>${esc(x.date)}｜${esc(x.start||"--:--")}${x.end?`–${esc(x.end)}`:""}｜${esc(x.title)}</b><br><small>${esc(SCHEDULE_TYPE_LABEL[x.type]||x.type)}${x.memo?`｜${esc(x.memo)}`:""}${x.source&&x.source!=="manual"?`｜<span class="gcalImported">${esc(x.source)}</span>`:""}</small></div><span class="scheduleLoad ${esc(x.load||"medium")}">${esc(String(x.load||"medium").toUpperCase())}</span></div><button class="danger" style="margin-top:7px;width:100%" onclick="remove('dailySchedule',${i})">削除</button></div>`}).join("")||'<span class="muted">予定なし</span>';}}
 
 
-// V26.5.8 NEXT DAY PREP: tomorrow schedule -> tonight actions
+// V26.5.9 NEXT DAY PREP: tomorrow schedule -> tonight actions
 function clockMin(v){if(!v||!/^[0-2]?\d:[0-5]\d$/.test(String(v)))return null;const [h,mn]=String(v).split(":").map(Number);if(h>23)return null;return h*60+mn}
 function minClock(v){v=((Math.round(Number(v)||0)%1440)+1440)%1440;return `${String(Math.floor(v/60)).padStart(2,"0")}:${String(v%60).padStart(2,"0")}`}
 function tomorrowPrepAssessment(){
@@ -5859,7 +5890,7 @@ function mealTotals(date=today()){return m().meals.filter(x=>x.date===date).redu
 function recScore(r){if(!r)return null;let s=100;if(r.sleep<7)s-=Math.min(25,(7-r.sleep)*8);s-=Math.max(0,r.fatigue-3)*5;s-=Math.max(0,r.stress-3)*4;s-=r.pain*5;return Math.max(0,Math.round(s))}
 function recAdvice(r){if(!r)return {txt:"回復データ未入力",cls:""};let s=recScore(r);if(r.pain>=6)return {txt:`${s}点｜痛み優先。高負荷回避・種目変更/評価。`,cls:"bad"};if(s>=80)return {txt:`${s}点｜通常〜高強度。前回超えを狙える。`,cls:"ok"};if(s>=60)return {txt:`${s}点｜中強度。RIRを1〜2多めに。`,cls:"warn"};return {txt:`${s}点｜回復優先。低強度または休養。`,cls:"bad"}}
 
-// V26.5.8 READINESS SIGNAL: status -> action -> re-evaluation
+// V26.5.9 READINESS SIGNAL: status -> action -> re-evaluation
 function openRecoverySignal(){const b=document.querySelector('.tab[data-tab="recovery"]');if(b)b.click();setTimeout(()=>document.getElementById("readinessRecovery")?.scrollIntoView({behavior:"smooth",block:"center"}),80)}
 function readinessTodayRecovery(){return (m()?.recovery||[]).filter(x=>x.date===today()).at(-1)||null;}
 function readinessActionStore(){if(!m())return [];if(!Array.isArray(m().readinessActions))m().readinessActions=[];return m().readinessActions;}
