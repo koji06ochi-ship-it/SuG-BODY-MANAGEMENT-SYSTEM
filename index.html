@@ -111,7 +111,7 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 .cloudStatus{font-size:9px;color:#aaa;margin-right:5px}
 .headActions{display:flex;align-items:center;gap:6px}
 
-/* V26.5.17 S.u.G READINESS SIGNAL */
+/* V26.5.18 S.u.G READINESS SIGNAL */
 .readinessHeaderSignal{appearance:none;border:1px solid #3a3a42;background:#111116;color:#d7d7dc;border-radius:999px;padding:6px 9px;font-size:9px;font-weight:900;letter-spacing:.05em;display:flex;align-items:center;gap:6px;white-space:nowrap}
 .readinessDot{width:9px;height:9px;border-radius:50%;display:inline-block;background:#777;box-shadow:0 0 0 rgba(255,255,255,0)}
 .readinessHeaderSignal.blue .readinessDot,.readinessSignal.blue .readinessSignalOrb{background:#53a7ff;box-shadow:0 0 10px #53a7ff,0 0 24px rgba(83,167,255,.55);animation:sugBluePulse 2s ease-in-out infinite}
@@ -137,18 +137,18 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 @keyframes sugRedPulse{0%,100%{transform:scale(.9);opacity:.55}50%{transform:scale(1.12);opacity:1}}
 @media(max-width:620px){.readinessHeaderSignal{padding:5px 7px;font-size:0}.readinessHeaderSignal .readinessHeaderText{display:none}.readinessSignalTop{grid-template-columns:auto 1fr}.readinessTrainGate{grid-column:1/-1;text-align:left;padding-left:49px}.readinessButtons{grid-template-columns:1fr}.readinessAction{grid-template-columns:auto 1fr}.readinessAction button{grid-column:2}}
 @media(prefers-reduced-motion:reduce){.readinessDot,.readinessSignalOrb{animation:none!important}}
-/* V26.5.17 WEEKLY NUTRITION + DAILY SCHEDULE */
+/* V26.5.18 WEEKLY NUTRITION + DAILY SCHEDULE */
 .weekBudgetHero,.scheduleHero{margin-top:10px;border:1px solid #3a3320;border-radius:13px;padding:12px;background:linear-gradient(180deg,#15130d,#0d0d10)}
 .weekBudgetTop,.scheduleHeroTop{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.weekBudgetTitle,.scheduleHeroTitle{font-size:13px;font-weight:950;color:var(--gold2)}
 .weekBudgetGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:9px}.weekBudgetKpi{background:#0b0b0e;border:1px solid #303036;border-radius:10px;padding:8px}.weekBudgetKpi span{display:block;font-size:8px;color:#888}.weekBudgetKpi b{display:block;font-size:15px;margin-top:2px}.weekBudgetKpi small{font-size:8px;color:#999}
 .weekBudgetAdvice{margin-top:9px;font-size:10px;line-height:1.6;color:#c8c8cc}.weekBudgetAdvice.warn{color:#ffe27a}.weekBudgetAdvice.bad{color:#ff9999}.weekBudgetBar{height:8px;background:#24242a;border-radius:999px;overflow:hidden;margin-top:9px}.weekBudgetBar>i{display:block;height:100%;background:linear-gradient(90deg,#d6b75a,#f2dd8c);border-radius:999px}
 .scheduleGrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px}.scheduleRows{display:grid;gap:7px;margin-top:9px}.scheduleItem{border:1px solid #303038;border-radius:10px;padding:9px;background:#0d0d10}.scheduleItem.high{border-color:#7a651f}.scheduleItemTop{display:flex;justify-content:space-between;gap:8px}.scheduleItem b{font-size:10px}.scheduleItem small{font-size:9px;line-height:1.5;color:#999}.scheduleLoad{font-size:9px;font-weight:900;border:1px solid #3b3b43;border-radius:999px;padding:3px 6px;white-space:nowrap}.scheduleLoad.high{color:#ffe27a;border-color:#7a651f}.scheduleLoad.low{color:#9bc8ff;border-color:#315a83}.scheduleSummary{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.scheduleChip{border:1px solid #34343b;border-radius:999px;padding:4px 7px;font-size:9px;color:#bbb}.scheduleChip.warn{color:#ffe27a;border-color:#7a651f}
 @media(max-width:620px){.weekBudgetGrid{grid-template-columns:1fr 1fr}.scheduleGrid{grid-template-columns:1fr 1fr}.scheduleGrid .wide{grid-column:1/-1}}
-/* V26.5.17 GOOGLE CALENDAR READ-ONLY SYNC */
+/* V26.5.18 GOOGLE CALENDAR READ-ONLY SYNC */
 .gcalBox{margin-top:10px;border:1px solid #30435c;border-radius:13px;padding:11px;background:linear-gradient(180deg,#101720,#0c0d10)}
 .gcalTop{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.gcalTitle{font-size:12px;font-weight:950;color:#9bc8ff}.gcalStatus{font-size:9px;line-height:1.5;color:#aab3c0;margin-top:3px}.gcalStatus.ok{color:#90e7ba}.gcalStatus.warn{color:#ffe27a}.gcalStatus.bad{color:#ff9c9c}.gcalControls{display:grid;grid-template-columns:1fr auto;gap:7px;margin-top:9px}.gcalActions{display:grid;grid-template-columns:1.4fr 1fr;gap:7px;margin-top:8px}.gcalMeta{font-size:8px;color:#777;line-height:1.5;margin-top:7px;word-break:break-all}.gcalImported{color:#9bc8ff}
 @media(max-width:620px){.gcalControls,.gcalActions{grid-template-columns:1fr}}
-/* V26.5.17 NEXT DAY PREP */
+/* V26.5.18 NEXT DAY PREP */
 .tomorrowPrepHero{margin-top:10px;border:1px solid #2d3340;border-radius:13px;padding:12px;background:linear-gradient(180deg,#11151c,#0c0d10);position:relative;overflow:hidden}
 .tomorrowPrepHero.ready{border-color:#245b91;box-shadow:0 0 18px rgba(72,151,255,.12)}
 .tomorrowPrepHero.caution{border-color:#8b7422;box-shadow:0 0 22px rgba(255,210,67,.12);animation:tomorrowPrepPulse 2.2s ease-in-out infinite}
@@ -451,14 +451,14 @@ button.primary{box-shadow:0 5px 18px rgba(184,140,50,.10)}
 .trainingMethodHint{margin-top:7px;font-size:11px;line-height:1.55}
 @media(max-width:620px){.trainingRoutineGrid{grid-template-columns:1fr 1fr}.trainingRoutineGrid .trainingRoutineWide{grid-column:1/-1}.trainingMethodGrid{grid-template-columns:1fr}.trainingQuickActions{grid-template-columns:1fr 1fr}}
 
-/* V26.5.17 TRAINING EXPERIENCE UX */
+/* V26.5.18 TRAINING EXPERIENCE UX */
 .trainingLevelCard{border:1px solid rgba(213,171,67,.45);background:linear-gradient(180deg,rgba(213,171,67,.10),rgba(255,255,255,.02));border-radius:18px;padding:14px;margin-bottom:12px}
 .trainingLevelBtns{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}.trainingLevelBtns button{min-height:48px}.trainingLevelBtns button.active{background:linear-gradient(180deg,#f0cf6a,#c79b31);color:#111;border-color:#f2d87d;font-weight:900}
 .beginnerGuide{margin-top:10px;display:grid;gap:8px}.beginnerExerciseHelp{border:1px solid #313641;border-radius:14px;padding:11px;background:#0f1116}.beginnerExerciseHelp b{color:#f1d77c}.beginnerExerciseHelp small{display:block;color:#adb3bf;margin-top:4px;line-height:1.55}
 .levelHint{font-size:13px;line-height:1.6;color:#c6c9d1;margin-top:7px}.levelOnlyBeginner{display:none}.training-beginner .levelOnlyBeginner{display:block}.training-beginner .levelHideBeginner{display:none!important}.training-intermediate .levelAdvancedOnly{display:none!important}
 @media(max-width:620px){.trainingLevelBtns{grid-template-columns:1fr}.trainingLevelBtns button{min-height:44px}}
 
-/* V26.5.17 IDEAL VISION SELECTOR */
+/* V26.5.18 IDEAL VISION SELECTOR */
 .visionLaunch{border:1px solid rgba(213,171,67,.55);background:linear-gradient(145deg,rgba(213,171,67,.12),rgba(255,255,255,.015));overflow:hidden}
 .visionLaunchTop{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.visionLaunchTitle{font-size:22px;font-weight:950;color:var(--gold2)}.visionLaunchFlow{font-size:13px;color:#aaa;line-height:1.7;margin-top:5px}.visionLaunchState{margin-top:10px;padding:10px 12px;border:1px solid #353535;border-radius:14px;background:#0d0d0f}.visionLaunchState b{color:#f3d676}
 .visionModal{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.94);backdrop-filter:blur(8px);display:none;overflow:auto;padding:18px}.visionModal.open{display:block}.visionShell{max-width:1480px;margin:0 auto;background:#080909;border:1px solid rgba(213,171,67,.48);border-radius:24px;box-shadow:0 24px 90px rgba(0,0,0,.65);overflow:hidden}.visionTop{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:20px 26px;border-bottom:1px solid #282828;background:linear-gradient(180deg,#070707,#0b0b0b)}.visionBrand{font-size:26px;font-weight:950;color:#d9b64d;letter-spacing:.04em}.visionTopCenter{text-align:center}.visionTopCenter h2{font-size:30px;margin:0;color:#e2bf57}.visionTopCenter small{color:#ccc}.visionClose{justify-self:end;width:46px;height:46px;border-radius:50%;font-size:24px;background:#131313;border:1px solid #555;color:#fff;padding:0}.visionBody{padding:18px}.visionIntro{display:grid;grid-template-columns:230px 1fr;gap:16px}.visionGuide{border:1px solid #3a3a3a;border-radius:18px;padding:18px;background:#0b0b0c}.visionGuide h3{color:#e2bf57;margin-top:0}.visionGuideStep{display:flex;gap:10px;margin:15px 0;line-height:1.5}.visionGuideNo{width:26px;height:26px;flex:0 0 26px;border:1px solid #d8b54d;border-radius:50%;display:grid;place-items:center;color:#f2d675;font-weight:900}.visionGuidePoint{margin-top:18px;padding:12px;border:1px solid #2f2f2f;border-radius:14px;color:#bbb;font-size:13px;line-height:1.7}
@@ -476,6 +476,34 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
 </script>
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<style id="v26518VisionPatch">
+/* V26.5.18 IDEAL VISION: real 5-angle views + visible type rail + iPhone safe area */
+.visionModal{padding-top:calc(10px + env(safe-area-inset-top));padding-bottom:calc(14px + env(safe-area-inset-bottom))}
+.visionTop{position:sticky;top:0;z-index:50;padding-top:calc(14px + env(safe-area-inset-top));background:linear-gradient(180deg,#050505 0%,#090909 92%,rgba(9,9,9,.97) 100%)}
+.visionStageTitle{position:relative;z-index:5;margin-top:4px}
+.visionTypeRail{display:grid;grid-template-columns:repeat(5,minmax(132px,1fr));gap:8px;margin:0 0 12px;position:sticky;top:86px;z-index:35;background:rgba(8,9,9,.96);padding:8px 0;border-bottom:1px solid #28230f;backdrop-filter:blur(8px)}
+.visionTypeRailBtn{min-height:62px;border:1px solid #303030;border-radius:12px;background:#0e0f10;color:#eee;padding:7px 8px;text-align:left;display:grid;grid-template-columns:1fr auto;align-items:center;gap:4px}
+.visionTypeRailBtn strong{display:block;font-size:13px;letter-spacing:.02em}.visionTypeRailBtn small{font-size:10px;color:#aaa}.visionTypeRailBtn span{font-size:10px;font-weight:900}
+.visionTypeRailBtn.active{border-color:#d7b348;box-shadow:0 0 0 1px rgba(221,183,69,.32),0 0 22px rgba(215,171,48,.16);background:linear-gradient(180deg,#1b170d,#111)}
+.visionModelBox{height:330px;background:radial-gradient(circle at 50% 36%,#242018 0%,#111 38%,#080909 75%);border:1px solid #282828;position:relative;touch-action:pan-y;user-select:none}
+.visionModel{width:100%;height:100%;object-fit:contain;transform:none!important;transition:opacity .16s ease!important;filter:none!important}
+.visionModelBox::after{content:attr(data-angle-label);position:absolute;right:8px;bottom:7px;font-size:9px;color:#e8cd78;border:1px solid #5b4a22;background:rgba(7,7,7,.84);padding:4px 7px;border-radius:999px;pointer-events:none}
+.visionTypeCard{opacity:.58}.visionTypeCard.active{opacity:1}.visionTypeCard.active .visionModelBox{box-shadow:inset 0 0 35px rgba(217,178,70,.08)}
+.visionAngleRow{grid-template-columns:repeat(5,1fr)}.visionAngleBtn{min-height:54px;font-size:12px}.visionAngleBtn.active{background:#211b0c;color:#f1d36d;border-color:#d4ab3f}
+.visionRotateHint{display:flex;align-items:center;justify-content:center;gap:8px;color:#b9b09a;font-size:11px;margin:9px 0}.visionRotateHint b{color:#e5c35d}
+@media(max-width:900px){
+ .visionModal{padding:0;padding-top:env(safe-area-inset-top)}
+ .visionShell{border-radius:0;min-height:100dvh;border-left:0;border-right:0}
+ .visionTop{grid-template-columns:1fr auto;padding:calc(12px + env(safe-area-inset-top)) 16px 11px}.visionBrand{display:none}.visionTopCenter{text-align:left}.visionTopCenter h2{font-size:20px;line-height:1.25}.visionTopCenter small{font-size:10px}.visionClose{width:40px;height:40px}
+ .visionBody{padding:12px}.visionIntro{display:block}.visionGuide{display:none}.visionTypeRail{display:flex;overflow-x:auto;scrollbar-width:none;top:calc(62px + env(safe-area-inset-top));margin-left:-12px;margin-right:-12px;padding:8px 12px}.visionTypeRail::-webkit-scrollbar{display:none}.visionTypeRailBtn{flex:0 0 132px}
+ .visionStageTitle{text-align:left;font-size:16px;margin:4px 0 8px}
+ .visionCarouselWrap{margin:0 -12px;padding:0 0}.visionCarousel{gap:10px}.visionTypeCard{flex:0 0 76vw;max-width:390px;padding:10px}.visionTypeName{font-size:22px}.visionModelBox{height:min(58vh,450px)}
+ .visionAngleRow{display:flex;overflow-x:auto;gap:8px;padding-bottom:3px;scrollbar-width:none}.visionAngleRow::-webkit-scrollbar{display:none}.visionAngleBtn{flex:0 0 108px;min-height:56px;font-size:12px}
+ .visionCompare{grid-template-columns:1fr}.visionTable{font-size:9px}.visionFlow{grid-template-columns:1fr}.visionArrow{width:44px;height:44px}
+}
+</style>
+
 </head>
 <body>
 
@@ -483,7 +511,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
   <div class="authBox">
     <img class="authBrandLogo" src="./brand-header.png?v=26-4-2-walk-route" alt="S.u.G OSAKA">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V26.5.17 ADAPTIVE CORE / MEMBERS ONLY</div>
+    <div class="sub">V26.5.18 ADAPTIVE CORE / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -598,7 +626,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
   <div class="head">
     <div class="brandIdentity">
       <img class="brandHeaderLogo" src="./brand-header.png?v=26-4-2-walk-route" alt="S.u.G OSAKA">
-      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.5.17 ADAPTIVE CORE / READINESS SIGNAL + DAILY RHYTHM + HYDRATION + TRAINING + CARE</small></div>
+      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.5.18 ADAPTIVE CORE / READINESS SIGNAL + DAILY RHYTHM + HYDRATION + TRAINING + CARE</small></div>
     </div>
     <div class="headActions"><button id="readinessHeaderSignal" class="readinessHeaderSignal unknown" type="button" onclick="openRecoverySignal()" aria-label="今日の回復状態"><span class="readinessDot"></span><span class="readinessHeaderText">READINESS --</span></button><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
@@ -778,7 +806,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
       <div id="idealVisionSummary" class="visionLaunchState">理想体型はまだ選択されていません。</div>
     </div>
     <div class="card readinessCard">
-      <div class="row" style="align-items:center"><div><h2 style="margin-bottom:3px">S.u.G READINESS SIGNAL</h2><div class="muted">睡眠・疲労・飲酒・二日酔い・水分・日中リズム・痛み/CAREから「今日どう動くか」まで表示。</div></div><span class="badge">V26.5.17</span></div>
+      <div class="row" style="align-items:center"><div><h2 style="margin-bottom:3px">S.u.G READINESS SIGNAL</h2><div class="muted">睡眠・疲労・飲酒・二日酔い・水分・日中リズム・痛み/CAREから「今日どう動くか」まで表示。</div></div><span class="badge">V26.5.18</span></div>
       <div id="readinessDashboard" style="margin-top:9px"><span class="muted">判定中...</span></div>
     </div>
     <div id="nextAppointmentCard" class="card nextApptCard">
@@ -1083,7 +1111,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
       </div>
       <div id="tMetaHint" class="notice levelHideBeginner" style="margin-top:8px">種目名から対象部位・POFを自動候補化します。必要なら手動で変更できます。</div>
       <div class="trainingQuickCard levelHideBeginner">
-        <div class="trainingQuickHead"><div><div class="trainingQuickTitle">QUICK START｜前回・ROUTINE</div><div class="muted">前回値は下書きとして読み込み。保存するまでは履歴に追加されません。</div></div><span class="badge">V26.5.17</span></div>
+        <div class="trainingQuickHead"><div><div class="trainingQuickTitle">QUICK START｜前回・ROUTINE</div><div class="muted">前回値は下書きとして読み込み。保存するまでは履歴に追加されません。</div></div><span class="badge">V26.5.18</span></div>
         <div class="trainingQuickActions"><button class="secondary" type="button" onclick="loadPreviousExerciseDraft()">前回のこの種目</button><button class="secondary" type="button" onclick="loadPreviousSessionDraft()">前回SESSION</button></div>
         <div class="trainingRoutineGrid">
           <div><label>ROUTINE</label><select id="tRoutineSelect"><option value="">ROUTINEなし</option></select></div>
@@ -4017,7 +4045,7 @@ function todayActivity(){return (m()?.activity||[]).filter(x=>x.date===today()).
 function activityAvg7(){const cut=shiftDate(-6);const rows=(m()?.activity||[]).filter(x=>x.date>=cut&&x.date<=today());return rows.length?avg(rows.map(x=>Number(x.steps||0))):0;}
 function latestRecovery(){return (m()?.recovery||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1)||null;}
 
-// V26.5.17 MENSTRUAL CYCLE / HORMONE CONTEXT
+// V26.5.18 MENSTRUAL CYCLE / HORMONE CONTEXT
 function cycleRows(){if(!m())return [];if(!Array.isArray(m().cycleHealth))m().cycleHealth=[];return m().cycleHealth;}
 function cycleDayRow(date=today()){return cycleRows().filter(x=>x.date===date).at(-1)||null;}
 function lastPeriodStart(date=today()){return cycleRows().filter(x=>x.event==="period_start"&&x.date<=date).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1)||null;}
@@ -5468,7 +5496,7 @@ function carePlan(area, location, movement){
   };
 }
 
-// V26.5.17 READINESS SIGNAL + DAILY RHYTHM + CAFFEINE + MEAL TIMING + HYDRATION + CARE + TRAINING METHODS
+// V26.5.18 READINESS SIGNAL + DAILY RHYTHM + CAFFEINE + MEAL TIMING + HYDRATION + CARE + TRAINING METHODS
 const CARE_AROM_KEYS={
   shoulder:["shoulder_flex","shoulder_abd","shoulder_er","shoulder_ir","shoulder_ext","shoulder_hflex","shoulder_hext","thoracic_ext","thoracic_rot"],
   neck:["cervical_flex","cervical_ext","cervical_rot","cervical_lat","thoracic_ext","thoracic_rot"],
@@ -5956,7 +5984,7 @@ function renderCareHistory(){
   }).join("")||'<span class="muted">履歴なし</span>';
 }
 function nearestWeightOnOrBefore(date){const rows=(m()?.weights||[]).filter(x=>x.date<=date).slice().sort((a,b)=>a.date.localeCompare(b.date));return rows.at(-1)||null;}
-// V26.5.17 GOOGLE CALENDAR -> DAILY SCHEDULE (read-only browser OAuth)
+// V26.5.18 GOOGLE CALENDAR -> DAILY SCHEDULE (read-only browser OAuth)
 const GCAL_CLIENT_KEY="sug_google_calendar_client_id_v1";
 let gcalTokenClient=null,gcalAccessToken="",gcalTokenExpiresAt=0,gcalConsentGranted=false;
 function gcalStatus(message,kind="",badge="OFF"){const s=document.getElementById("gcalStatus"),b=document.getElementById("gcalBadge");if(s){s.textContent=message;s.className=`gcalStatus ${kind||""}`.trim()}if(b)b.textContent=badge;}
@@ -5979,7 +6007,7 @@ function connectAndSyncGoogleCalendar(){const clientId=saveGoogleCalendarClientI
 function disconnectGoogleCalendar(){if(gcalAccessToken&&window.google?.accounts?.oauth2){try{google.accounts.oauth2.revoke(gcalAccessToken,()=>{})}catch(_e){}}gcalAccessToken="";gcalTokenExpiresAt=0;gcalTokenClient=null;gcalConsentGranted=false;gcalStatus("接続解除済み｜S.u.Gへ取り込んだ予定は残ります。","","OFF");}
 setTimeout(initGoogleCalendarUI,300);
 
-// V26.5.17 WEEKLY CALORIE BALANCE + DAILY SCHEDULE
+// V26.5.18 WEEKLY CALORIE BALANCE + DAILY SCHEDULE
 function isoDateObj(iso){const [y,mo,d]=String(iso||today()).split("-").map(Number);return new Date(y,Math.max(0,(mo||1)-1),d||1,12,0,0,0)}
 function isoShift(iso,days){const d=isoDateObj(iso);d.setDate(d.getDate()+Number(days||0));return dateISO(d)}
 function weekBounds(iso=today()){const d=isoDateObj(iso),day=(d.getDay()+6)%7;const start=new Date(d);start.setDate(d.getDate()-day);const end=new Date(start);end.setDate(start.getDate()+6);return {start:dateISO(start),end:dateISO(end)}}
@@ -6057,7 +6085,7 @@ function renderDailySchedule(){
 }
 
 
-// V26.5.17 NEXT DAY PREP: tomorrow schedule -> tonight actions
+// V26.5.18 NEXT DAY PREP: tomorrow schedule -> tonight actions
 function clockMin(v){if(!v||!/^[0-2]?\d:[0-5]\d$/.test(String(v)))return null;const [h,mn]=String(v).split(":").map(Number);if(h>23)return null;return h*60+mn}
 function minClock(v){v=((Math.round(Number(v)||0)%1440)+1440)%1440;return `${String(Math.floor(v/60)).padStart(2,"0")}:${String(v%60).padStart(2,"0")}`}
 function tomorrowPrepAssessment(){
@@ -6093,7 +6121,7 @@ function mealTotals(date=today()){return m().meals.filter(x=>x.date===date).redu
 function recScore(r){if(!r)return null;let s=100;if(r.sleep<7)s-=Math.min(25,(7-r.sleep)*8);s-=Math.max(0,r.fatigue-3)*5;s-=Math.max(0,r.stress-3)*4;s-=r.pain*5;return Math.max(0,Math.round(s))}
 function recAdvice(r){if(!r)return {txt:"回復データ未入力",cls:""};let s=recScore(r);if(r.pain>=6)return {txt:`${s}点｜痛み優先。高負荷回避・種目変更/評価。`,cls:"bad"};if(s>=80)return {txt:`${s}点｜通常〜高強度。前回超えを狙える。`,cls:"ok"};if(s>=60)return {txt:`${s}点｜中強度。RIRを1〜2多めに。`,cls:"warn"};return {txt:`${s}点｜回復優先。低強度または休養。`,cls:"bad"}}
 
-// V26.5.17 READINESS SIGNAL: status -> action -> re-evaluation
+// V26.5.18 READINESS SIGNAL: status -> action -> re-evaluation
 function openRecoverySignal(){const b=document.querySelector('.tab[data-tab="recovery"]');if(b)b.click();setTimeout(()=>document.getElementById("readinessRecovery")?.scrollIntoView({behavior:"smooth",block:"center"}),80)}
 function readinessTodayRecovery(){return (m()?.recovery||[]).filter(x=>x.date===today()).at(-1)||null;}
 function readinessActionStore(){if(!m())return [];if(!Array.isArray(m().readinessActions))m().readinessActions=[];return m().readinessActions;}
@@ -8640,37 +8668,84 @@ window.analyzeSquatRom=async function(){
   }
 };
 
-// V26.5.17 IDEAL VISION SELECTOR
+// V26.5.18 IDEAL VISION SELECTOR
 const IDEAL_VISION_TYPES=[
-  {key:'slim',name:'SLIM',jp:'スリム',bf:'12〜18%',muscle:'少なめ〜標準'},
-  {key:'athletic',name:'ATHLETIC',jp:'アスリート',bf:'10〜15%',muscle:'標準〜やや多め'},
-  {key:'fitness',name:'FITNESS',jp:'フィットネス',bf:'8〜13%',muscle:'多め'},
-  {key:'muscular',name:'MUSCULAR',jp:'マッスキュラー',bf:'10〜15%',muscle:'かなり多め'},
-  {key:'physique',name:'PHYSIQUE',jp:'フィジーク',bf:'7〜12%',muscle:'多め＋仕上がり重視'}
+  {key:'slim',name:'SLIM',jp:'スリム',bf:'12〜18%',muscle:'少なめ〜標準',color:'#56c989',shape:{shoulder:0.88,chest:0.88,waist:0.78,arm:0.76,thigh:0.82,lat:0.82,depth:0.80},desc:'細身。筋量は控えめで、すっきりしたシルエット。'},
+  {key:'athletic',name:'ATHLETIC',jp:'アスリート',bf:'10〜15%',muscle:'標準〜やや多め',color:'#5e9dff',shape:{shoulder:0.98,chest:0.98,waist:0.79,arm:0.88,thigh:0.92,lat:0.94,depth:0.92},desc:'肩・胸・脚を適度に発達させた動ける体。'},
+  {key:'fitness',name:'FITNESS',jp:'フィットネス',bf:'8〜13%',muscle:'多め',color:'#f2c84f',shape:{shoulder:1.08,chest:1.08,waist:0.77,arm:1.00,thigh:1.02,lat:1.06,depth:1.02},desc:'筋肉の輪郭が明確。肩・胸・背中・腹部のメリハリ。'},
+  {key:'muscular',name:'MUSCULAR',jp:'マッスキュラー',bf:'10〜15%',muscle:'かなり多め',color:'#a876ff',shape:{shoulder:1.18,chest:1.20,waist:0.84,arm:1.18,thigh:1.20,lat:1.16,depth:1.18},desc:'筋量を強く重視。胸・肩・腕・脚に厚みと迫力。'},
+  {key:'physique',name:'PHYSIQUE',jp:'フィジーク',bf:'7〜12%',muscle:'多め＋仕上がり重視',color:'#ff5d56',shape:{shoulder:1.24,chest:1.12,waist:0.69,arm:1.06,thigh:0.98,lat:1.28,depth:1.05},desc:'肩幅と広背筋を強調し、ウエストを絞ったVシェイプ。'}
 ];
-let idealVisionIndex=2,idealVisionAngle='front',visionTouchX=null;
+const IDEAL_VISION_ANGLES=[
+ {key:'front',label:'正面'}, {key:'diag',label:'斜め45°'}, {key:'side',label:'側面'}, {key:'back',label:'背面'}, {key:'rear',label:'斜め後方'}
+];
+let idealVisionIndex=2,idealVisionAngle='front',visionTouchX=null,visionAngleTouchX=null;
 function idealVisionStore(){try{const mm=m();mm.goalPlan=mm.goalPlan||{};return mm.goalPlan}catch(_e){return {}}}
 function idealVisionSavedIndex(){const gp=idealVisionStore(),i=IDEAL_VISION_TYPES.findIndex(x=>x.key===gp.idealVisionType);return i>=0?i:2}
-function openIdealVision(){idealVisionIndex=idealVisionSavedIndex();const modal=document.getElementById('idealVisionModal');if(!modal)return;modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';renderIdealVision();setTimeout(()=>bindVisionSwipe(),20)}
+function svgEsc(x){return String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]))}
+function visionSvgData(type,angle){
+ const t=IDEAL_VISION_TYPES[type]||IDEAL_VISION_TYPES[2],s=t.shape,a=angle||'front',W=420,H=650,skin1='#c9824d',skin2='#8e4d2b',skin3='#e1a06d',dark='#1a1b1d';
+ const cx=210, shoulder=112*s.shoulder, waist=78*s.waist, chest=100*s.chest, arm=25*s.arm, thigh=34*s.thigh, lat=106*s.lat, depth=72*s.depth;
+ const grad=`<defs><linearGradient id="skin" x1="0" x2="1"><stop stop-color="${skin2}"/><stop offset=".48" stop-color="${skin3}"/><stop offset="1" stop-color="${skin1}"/></linearGradient><linearGradient id="skinBack" x1="0" x2="1"><stop stop-color="#7d4025"/><stop offset=".55" stop-color="#c97b49"/><stop offset="1" stop-color="#6d351f"/></linearGradient><radialGradient id="bg"><stop stop-color="#2c261d"/><stop offset=".58" stop-color="#111"/><stop offset="1" stop-color="#070808"/></radialGradient></defs>`;
+ const bg=`<rect width="${W}" height="${H}" fill="url(#bg)"/><ellipse cx="210" cy="608" rx="112" ry="17" fill="#000" opacity=".5"/>`;
+ const maskFront=`<ellipse cx="${cx}" cy="82" rx="34" ry="40" fill="#f0e3cd" stroke="#c7b79c" stroke-width="3"/><circle cx="198" cy="73" r="4" fill="#1a1a1a"/><circle cx="222" cy="73" r="4" fill="#1a1a1a"/><circle cx="192" cy="88" r="7" fill="#cc5547" opacity=".72"/><circle cx="228" cy="88" r="7" fill="#cc5547" opacity=".72"/><circle cx="210" cy="84" r="6" fill="#c94336"/><ellipse cx="210" cy="99" rx="11" ry="14" fill="#8e251e"/><ellipse cx="210" cy="99" rx="6" ry="9" fill="#dfaa8c"/>`;
+ const maskSide=`<ellipse cx="${cx+6}" cy="82" rx="27" ry="40" fill="#f0e3cd" stroke="#c7b79c" stroke-width="3"/><circle cx="219" cy="74" r="4" fill="#1a1a1a"/><circle cx="225" cy="88" r="7" fill="#cc5547" opacity=".72"/><path d="M229 83 q18 7 1 15" fill="#c94336"/><ellipse cx="227" cy="102" rx="8" ry="13" fill="#8e251e"/>`;
+ let body='';
+ if(a==='front'){
+  const shL=cx-shoulder,shR=cx+shoulder,waL=cx-waist/2,waR=cx+waist/2;
+  body=`${maskFront}<path d="M${shL} 142 Q${cx-68} 122 ${cx-52} 122 Q${cx} 142 ${cx+52} 122 Q${cx+68} 122 ${shR} 142 L${waR} 350 Q${cx} 374 ${waL} 350 Z" fill="url(#skin)" stroke="#5c2d1c" stroke-width="2"/>
+  <ellipse cx="${cx-chest*.38}" cy="190" rx="${chest*.38}" ry="45" fill="#d88c58" opacity=".55"/><ellipse cx="${cx+chest*.38}" cy="190" rx="${chest*.38}" ry="45" fill="#d88c58" opacity=".45"/>
+  <path d="M${cx} 155 L${cx} 350" stroke="#6d3420" stroke-width="3" opacity=".7"/><path d="M${cx-50} 240 Q${cx} 218 ${cx+50} 240" fill="none" stroke="#713921" stroke-width="2" opacity=".7"/>
+  <g stroke="#6d3420" stroke-width="2" opacity=".78"><path d="M${cx-31} 245 q22 -20 31 0"/><path d="M${cx} 245 q22 -20 31 0"/><path d="M${cx-31} 280 q22 -18 31 0"/><path d="M${cx} 280 q22 -18 31 0"/><path d="M${cx-29} 314 q20 -16 29 0"/><path d="M${cx} 314 q20 -16 29 0"/></g>
+  <rect x="${cx-100*s.shoulder}" y="137" width="${arm}" height="205" rx="${arm/2}" fill="url(#skin)" transform="rotate(7 ${cx-100*s.shoulder} 137)"/><rect x="${cx+100*s.shoulder-arm}" y="137" width="${arm}" height="205" rx="${arm/2}" fill="url(#skin)" transform="rotate(-7 ${cx+100*s.shoulder} 137)"/>
+  <path d="M${cx-waist*.62} 342 L${cx+waist*.62} 342 L${cx+waist*.74} 430 L${cx-waist*.74} 430 Z" fill="${dark}"/>
+  <rect x="${cx-56*s.thigh}" y="418" width="${thigh}" height="170" rx="${thigh/2}" fill="url(#skin)"/><rect x="${cx+56*s.thigh-thigh}" y="418" width="${thigh}" height="170" rx="${thigh/2}" fill="url(#skin)"/><ellipse cx="${cx-39*s.thigh}" cy="592" rx="32" ry="10" fill="#b76e45"/><ellipse cx="${cx+39*s.thigh}" cy="592" rx="32" ry="10" fill="#b76e45"/>`;
+ } else if(a==='back'){
+  const shL=cx-shoulder,shR=cx+shoulder,waL=cx-waist/2,waR=cx+waist/2;
+  body=`<ellipse cx="${cx}" cy="82" rx="31" ry="39" fill="#b96e43" stroke="#67361f" stroke-width="2"/><path d="M${shL} 142 Q${cx-75} 118 ${cx-45} 126 Q${cx} 148 ${cx+45} 126 Q${cx+75} 118 ${shR} 142 L${waR} 350 Q${cx} 370 ${waL} 350 Z" fill="url(#skinBack)" stroke="#5c2d1c" stroke-width="2"/>
+  <path d="M${cx-lat*.62} 165 Q${cx-80} 230 ${cx-waist*.42} 342" fill="none" stroke="#5f2d1b" stroke-width="5" opacity=".7"/><path d="M${cx+lat*.62} 165 Q${cx+80} 230 ${cx+waist*.42} 342" fill="none" stroke="#5f2d1b" stroke-width="5" opacity=".7"/><path d="M${cx} 128 L${cx} 348" stroke="#6b3320" stroke-width="3" opacity=".75"/><path d="M${cx-54} 177 Q${cx} 210 ${cx+54} 177" fill="none" stroke="#743820" stroke-width="3"/>
+  <rect x="${cx-100*s.shoulder}" y="138" width="${arm}" height="204" rx="${arm/2}" fill="url(#skinBack)" transform="rotate(7 ${cx-100*s.shoulder} 138)"/><rect x="${cx+100*s.shoulder-arm}" y="138" width="${arm}" height="204" rx="${arm/2}" fill="url(#skinBack)" transform="rotate(-7 ${cx+100*s.shoulder} 138)"/>
+  <path d="M${cx-waist*.62} 342 L${cx+waist*.62} 342 L${cx+waist*.74} 430 L${cx-waist*.74} 430 Z" fill="${dark}"/><rect x="${cx-56*s.thigh}" y="418" width="${thigh}" height="170" rx="${thigh/2}" fill="url(#skinBack)"/><rect x="${cx+56*s.thigh-thigh}" y="418" width="${thigh}" height="170" rx="${thigh/2}" fill="url(#skinBack)"/><ellipse cx="${cx-39*s.thigh}" cy="592" rx="32" ry="10" fill="#a65d39"/><ellipse cx="${cx+39*s.thigh}" cy="592" rx="32" ry="10" fill="#a65d39"/>`;
+ } else if(a==='side'){
+  const torsoX=cx-30, d=depth;
+  body=`${maskSide}<path d="M${torsoX} 140 Q${cx+d*.54} 135 ${cx+d*.65} 205 Q${cx+d*.40} 280 ${cx+d*.28} 347 Q${cx} 365 ${cx-d*.20} 347 L${cx-d*.35} 174 Q${cx-d*.18} 145 ${torsoX} 140Z" fill="url(#skin)" stroke="#5c2d1c" stroke-width="2"/><ellipse cx="${cx+d*.38}" cy="191" rx="${d*.34}" ry="48" fill="#d98c58" opacity=".5"/><path d="M${cx+d*.08} 225 Q${cx+d*.42} 240 ${cx+d*.30} 327" fill="none" stroke="#713921" stroke-width="3"/>
+  <rect x="${cx+d*.47}" y="151" width="${arm}" height="202" rx="${arm/2}" fill="url(#skin)" transform="rotate(5 ${cx+d*.47} 151)"/><path d="M${cx-42} 342 L${cx+48} 342 L${cx+58} 430 L${cx-50} 430 Z" fill="${dark}"/><rect x="${cx-22}" y="418" width="${thigh*1.04}" height="172" rx="${thigh/2}" fill="url(#skin)"/><ellipse cx="${cx+4}" cy="594" rx="37" ry="10" fill="#b76e45"/>`;
+ } else {
+  const rear=a==='rear',dir=rear?-1:1, shL=cx-shoulder*.86, shR=cx+shoulder*.92,waL=cx-waist*.38,waR=cx+waist*.48;
+  const face=rear?`<ellipse cx="${cx}" cy="82" rx="30" ry="39" fill="#b96e43"/>`:maskFront.replaceAll(`cx=\"${cx}\"`,`cx=\"${cx+5*dir}\"`);
+  body=`${face}<path d="M${shL} 145 Q${cx-58} 120 ${cx-42} 128 Q${cx+20*dir} 137 ${shR} 147 L${waR} 350 Q${cx+10*dir} 370 ${waL} 350 Z" fill="${rear?'url(#skinBack)':'url(#skin)'}" stroke="#5c2d1c" stroke-width="2"/>
+  <path d="M${cx+dir*8} 150 L${cx+dir*6} 348" stroke="#6c3420" stroke-width="3" opacity=".65"/><ellipse cx="${cx+dir*34}" cy="194" rx="${chest*.34}" ry="46" fill="#d98c58" opacity=".42"/>
+  <rect x="${cx-94*s.shoulder}" y="142" width="${arm}" height="202" rx="${arm/2}" fill="${rear?'url(#skinBack)':'url(#skin)'}" transform="rotate(${8*dir} ${cx-94*s.shoulder} 142)"/><rect x="${cx+88*s.shoulder-arm}" y="142" width="${arm}" height="202" rx="${arm/2}" fill="${rear?'url(#skinBack)':'url(#skin)'}" transform="rotate(${-4*dir} ${cx+88*s.shoulder} 142)"/>
+  <path d="M${cx-waist*.58} 342 L${cx+waist*.66} 342 L${cx+waist*.72} 430 L${cx-waist*.68} 430 Z" fill="${dark}"/><rect x="${cx-52*s.thigh}" y="418" width="${thigh}" height="170" rx="${thigh/2}" fill="${rear?'url(#skinBack)':'url(#skin)'}"/><rect x="${cx+54*s.thigh-thigh}" y="418" width="${thigh}" height="170" rx="${thigh/2}" fill="${rear?'url(#skinBack)':'url(#skin)'}"/><ellipse cx="${cx-35*s.thigh}" cy="592" rx="31" ry="10" fill="#ad653f"/><ellipse cx="${cx+37*s.thigh}" cy="592" rx="31" ry="10" fill="#ad653f"/>`;
+ }
+ const label=`<text x="210" y="628" fill="${t.color}" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="700">${svgEsc(t.name)} · ${svgEsc(IDEAL_VISION_ANGLES.find(x=>x.key===a)?.label||'')}</text>`;
+ return 'data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}">${grad}${bg}${body}${label}</svg>`);
+}
+function ensureVisionTypeRail(){const stage=document.querySelector('.visionStage');if(!stage||document.getElementById('visionTypeRail'))return;const rail=document.createElement('div');rail.id='visionTypeRail';rail.className='visionTypeRail';rail.innerHTML=IDEAL_VISION_TYPES.map((t,i)=>`<button type="button" class="visionTypeRailBtn" data-type-index="${i}" onclick="setIdealVisionType(${i})"><div><strong style="color:${t.color}">${t.name}</strong><small>${t.jp}</small></div><span style="color:${t.color}">${t.bf}</span></button>`).join('');stage.insertBefore(rail,stage.firstChild)}
+function openIdealVision(){idealVisionIndex=idealVisionSavedIndex();const modal=document.getElementById('idealVisionModal');if(!modal)return;ensureVisionTypeRail();modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';renderIdealVision();setTimeout(()=>{bindVisionSwipe();bindVisionAngleSwipe()},20)}
 function closeIdealVision(){const modal=document.getElementById('idealVisionModal');if(!modal)return;modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';renderIdealVisionSummary()}
 function setIdealVisionType(i){idealVisionIndex=(i+IDEAL_VISION_TYPES.length)%IDEAL_VISION_TYPES.length;renderIdealVision()}
 function moveIdealVision(d){setIdealVisionType(idealVisionIndex+d)}
-function renderIdealVision(){const cards=[...document.querySelectorAll('.visionTypeCard')],dots=document.getElementById('visionDots');cards.forEach((c,i)=>c.classList.toggle('active',i===idealVisionIndex));if(dots)dots.innerHTML=IDEAL_VISION_TYPES.map((_,i)=>`<span class="visionDot ${i===idealVisionIndex?'active':''}"></span>`).join('');const t=IDEAL_VISION_TYPES[idealVisionIndex],cc=document.getElementById('visionCurrentChoice');if(cc)cc.innerHTML=`<div><small>現在の選択</small><br><strong>${t.name}｜${t.jp}</strong></div><span class="badge">${t.bf}</span>`;applyIdealVisionAngle();const car=document.getElementById('visionCarousel');if(car){if(window.innerWidth<=900){const wrap=car.parentElement,card=cards[idealVisionIndex];if(card){const target=card.offsetLeft-(wrap.clientWidth-card.clientWidth)/2;car.style.transform=`translateX(${-Math.max(0,target)}px)`}}else car.style.transform='translateX(0)'}}
-function setIdealVisionAngle(a,btn){idealVisionAngle=a;document.querySelectorAll('.visionAngleBtn').forEach(x=>x.classList.toggle('active',x===btn));applyIdealVisionAngle()}
-function applyIdealVisionAngle(){const transforms={front:'rotateY(0deg) scale(1)',diag:'perspective(900px) rotateY(-18deg) scale(.98)',side:'perspective(900px) rotateY(-42deg) scale(.95)',back:'perspective(900px) rotateY(180deg) scale(.96)',rear:'perspective(900px) rotateY(28deg) scale(.97)'};document.querySelectorAll('.visionModel').forEach((img,i)=>{img.style.transform=i===idealVisionIndex?(transforms[idealVisionAngle]||transforms.front):'scale(.96)'})}
-function saveIdealVisionType(i=idealVisionIndex){idealVisionIndex=i;const gp=idealVisionStore(),t=IDEAL_VISION_TYPES[i];gp.idealVisionType=t.key;gp.idealVisionName=t.name;gp.idealVisionBodyFat=t.bf;gp.idealVisionMuscle=t.muscle;gp.idealVisionSelectedAt=new Date().toISOString();try{persist()}catch(_e){}renderIdealVisionSummary();const cc=document.getElementById('visionCurrentChoice');if(cc)cc.innerHTML=`<div><small>目標として保存済み</small><br><strong>${t.name}｜${t.jp}</strong></div><span class="badge">${t.bf}</span>`;alert(`${t.name} を理想体型として保存しました`)}
+function renderIdealVision(){
+ ensureVisionTypeRail();const cards=[...document.querySelectorAll('.visionTypeCard')],dots=document.getElementById('visionDots');
+ cards.forEach((c,i)=>c.classList.toggle('active',i===idealVisionIndex));
+ document.querySelectorAll('.visionTypeRailBtn').forEach((b,i)=>b.classList.toggle('active',i===idealVisionIndex));
+ if(dots)dots.innerHTML=IDEAL_VISION_TYPES.map((_,i)=>`<span class="visionDot ${i===idealVisionIndex?'active':''}"></span>`).join('');
+ const t=IDEAL_VISION_TYPES[idealVisionIndex],cc=document.getElementById('visionCurrentChoice');if(cc)cc.innerHTML=`<div><small>現在の選択</small><br><strong>${t.name}｜${t.jp}</strong><br><small>${t.desc}</small></div><span class="badge">${t.bf}</span>`;
+ updateVisionModels();
+ const car=document.getElementById('visionCarousel');if(car&&window.innerWidth<=900){const wrap=car.parentElement,card=cards[idealVisionIndex];if(card){const target=card.offsetLeft-(wrap.clientWidth-card.clientWidth)/2;car.style.transform=`translateX(${-Math.max(0,target)}px)`}}else if(car)car.style.transform='translateX(0)';
+ const activeRail=document.querySelector(`.visionTypeRailBtn[data-type-index="${idealVisionIndex}"]`);try{activeRail?.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'})}catch(_e){}
+}
+function setIdealVisionAngle(a,btn){idealVisionAngle=a;document.querySelectorAll('.visionAngleBtn').forEach(x=>x.classList.toggle('active',x.dataset.angle===a));updateVisionModels()}
+function moveIdealVisionAngle(d){let i=IDEAL_VISION_ANGLES.findIndex(x=>x.key===idealVisionAngle);i=(i+d+IDEAL_VISION_ANGLES.length)%IDEAL_VISION_ANGLES.length;setIdealVisionAngle(IDEAL_VISION_ANGLES[i].key)}
+function updateVisionModels(){const label=IDEAL_VISION_ANGLES.find(x=>x.key===idealVisionAngle)?.label||'正面';document.querySelectorAll('.visionModel').forEach((img,i)=>{img.style.opacity='.35';const next=visionSvgData(i,idealVisionAngle);if(img.src!==next)img.src=next;img.alt=`${IDEAL_VISION_TYPES[i].name} ${label}`;requestAnimationFrame(()=>img.style.opacity='1')});document.querySelectorAll('.visionModelBox').forEach(x=>x.dataset.angleLabel=label)}
+function applyIdealVisionAngle(){updateVisionModels()}
+function saveIdealVisionType(i=idealVisionIndex){idealVisionIndex=i;const gp=idealVisionStore(),t=IDEAL_VISION_TYPES[i];gp.idealVisionType=t.key;gp.idealVisionName=t.name;gp.idealVisionBodyFat=t.bf;gp.idealVisionMuscle=t.muscle;gp.idealVisionSelectedAt=new Date().toISOString();try{persist()}catch(_e){}renderIdealVisionSummary();const cc=document.getElementById('visionCurrentChoice');if(cc)cc.innerHTML=`<div><small>目標として保存済み</small><br><strong>${t.name}｜${t.jp}</strong><br><small>${t.desc}</small></div><span class="badge">${t.bf}</span>`;alert(`${t.name} を理想体型として保存しました`)}
 function renderIdealVisionSummary(){const box=document.getElementById('idealVisionSummary');if(!box)return;const gp=idealVisionStore(),t=IDEAL_VISION_TYPES.find(x=>x.key===gp.idealVisionType);box.innerHTML=t?`<b>選択中：${esc(t.name)}｜${esc(t.jp)}</b><br><span class="muted">体脂肪 ${esc(t.bf)}｜筋量 ${esc(t.muscle)}｜現在写真とのGAP分析へ接続</span>`:`理想体型はまだ選択されていません。`}
-function bindVisionSwipe(){const el=document.querySelector('.visionCarouselWrap');if(!el||el.dataset.swipeBound)return;el.dataset.swipeBound='1';el.addEventListener('touchstart',e=>visionTouchX=e.touches[0].clientX,{passive:true});el.addEventListener('touchend',e=>{if(visionTouchX==null)return;const dx=e.changedTouches[0].clientX-visionTouchX;visionTouchX=null;if(Math.abs(dx)>45)moveIdealVision(dx<0?1:-1)},{passive:true});el.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse')visionTouchX=e.clientX});el.addEventListener('pointerup',e=>{if(visionTouchX==null)return;const dx=e.clientX-visionTouchX;visionTouchX=null;if(Math.abs(dx)>55)moveIdealVision(dx<0?1:-1)})}
-// V26.5.17 FIX: expose module-scoped Ideal Vision actions to inline handlers on Safari/iOS
-Object.assign(window,{openIdealVision,closeIdealVision,setIdealVisionType,moveIdealVision,setIdealVisionAngle,saveIdealVisionType});
-document.addEventListener('DOMContentLoaded',()=>{
-  setTimeout(renderIdealVisionSummary,250);
-  const launch=document.querySelector('#idealVisionLaunchCard button');
-  if(launch && !launch.dataset.visionBound){
-    launch.dataset.visionBound='1';
-    launch.addEventListener('click',e=>{e.preventDefault();openIdealVision()});
-  }
-});
+function bindVisionSwipe(){const el=document.querySelector('.visionCarouselWrap');if(!el||el.dataset.swipeBound)return;el.dataset.swipeBound='1';el.addEventListener('touchstart',e=>{if(e.target.closest('.visionModelBox'))return;visionTouchX=e.touches[0].clientX},{passive:true});el.addEventListener('touchend',e=>{if(visionTouchX==null)return;const dx=e.changedTouches[0].clientX-visionTouchX;visionTouchX=null;if(Math.abs(dx)>45)moveIdealVision(dx<0?1:-1)},{passive:true})}
+function bindVisionAngleSwipe(){document.querySelectorAll('.visionModelBox').forEach(el=>{if(el.dataset.angleSwipeBound)return;el.dataset.angleSwipeBound='1';el.addEventListener('touchstart',e=>{visionAngleTouchX=e.touches[0].clientX},{passive:true});el.addEventListener('touchend',e=>{if(visionAngleTouchX==null)return;const dx=e.changedTouches[0].clientX-visionAngleTouchX;visionAngleTouchX=null;if(Math.abs(dx)>32)moveIdealVisionAngle(dx<0?1:-1)},{passive:true});el.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse')visionAngleTouchX=e.clientX});el.addEventListener('pointerup',e=>{if(visionAngleTouchX==null)return;const dx=e.clientX-visionAngleTouchX;visionAngleTouchX=null;if(Math.abs(dx)>35)moveIdealVisionAngle(dx<0?1:-1)})})}
+Object.assign(window,{openIdealVision,closeIdealVision,setIdealVisionType,moveIdealVision,setIdealVisionAngle,moveIdealVisionAngle,saveIdealVisionType});
+document.addEventListener('DOMContentLoaded',()=>{setTimeout(renderIdealVisionSummary,250);const launch=document.querySelector('#idealVisionLaunchCard button');if(launch&&!launch.dataset.visionBound){launch.dataset.visionBound='1';launch.addEventListener('click',e=>{e.preventDefault();openIdealVision()})}});
 
 </script>
 
