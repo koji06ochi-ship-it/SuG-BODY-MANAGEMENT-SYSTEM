@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>S.u.G BODY MANAGEMENT SYSTEM V26.5.0 ADAPTIVE CORE</title>
+<title>S.u.G BODY MANAGEMENT SYSTEM V26.5.16 HOME FLOW</title>
 <meta name="theme-color" content="#09090a">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -111,7 +111,7 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 .cloudStatus{font-size:9px;color:#aaa;margin-right:5px}
 .headActions{display:flex;align-items:center;gap:6px}
 
-/* V26.5.14 S.u.G READINESS SIGNAL */
+/* V26.5.15 S.u.G READINESS SIGNAL */
 .readinessHeaderSignal{appearance:none;border:1px solid #3a3a42;background:#111116;color:#d7d7dc;border-radius:999px;padding:6px 9px;font-size:9px;font-weight:900;letter-spacing:.05em;display:flex;align-items:center;gap:6px;white-space:nowrap}
 .readinessDot{width:9px;height:9px;border-radius:50%;display:inline-block;background:#777;box-shadow:0 0 0 rgba(255,255,255,0)}
 .readinessHeaderSignal.blue .readinessDot,.readinessSignal.blue .readinessSignalOrb{background:#53a7ff;box-shadow:0 0 10px #53a7ff,0 0 24px rgba(83,167,255,.55);animation:sugBluePulse 2s ease-in-out infinite}
@@ -137,18 +137,18 @@ hr{border:0;border-top:1px solid #29292f;margin:11px 0}.muted{color:#999;font-si
 @keyframes sugRedPulse{0%,100%{transform:scale(.9);opacity:.55}50%{transform:scale(1.12);opacity:1}}
 @media(max-width:620px){.readinessHeaderSignal{padding:5px 7px;font-size:0}.readinessHeaderSignal .readinessHeaderText{display:none}.readinessSignalTop{grid-template-columns:auto 1fr}.readinessTrainGate{grid-column:1/-1;text-align:left;padding-left:49px}.readinessButtons{grid-template-columns:1fr}.readinessAction{grid-template-columns:auto 1fr}.readinessAction button{grid-column:2}}
 @media(prefers-reduced-motion:reduce){.readinessDot,.readinessSignalOrb{animation:none!important}}
-/* V26.5.14 WEEKLY NUTRITION + DAILY SCHEDULE */
+/* V26.5.15 WEEKLY NUTRITION + DAILY SCHEDULE */
 .weekBudgetHero,.scheduleHero{margin-top:10px;border:1px solid #3a3320;border-radius:13px;padding:12px;background:linear-gradient(180deg,#15130d,#0d0d10)}
 .weekBudgetTop,.scheduleHeroTop{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.weekBudgetTitle,.scheduleHeroTitle{font-size:13px;font-weight:950;color:var(--gold2)}
 .weekBudgetGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:9px}.weekBudgetKpi{background:#0b0b0e;border:1px solid #303036;border-radius:10px;padding:8px}.weekBudgetKpi span{display:block;font-size:8px;color:#888}.weekBudgetKpi b{display:block;font-size:15px;margin-top:2px}.weekBudgetKpi small{font-size:8px;color:#999}
 .weekBudgetAdvice{margin-top:9px;font-size:10px;line-height:1.6;color:#c8c8cc}.weekBudgetAdvice.warn{color:#ffe27a}.weekBudgetAdvice.bad{color:#ff9999}.weekBudgetBar{height:8px;background:#24242a;border-radius:999px;overflow:hidden;margin-top:9px}.weekBudgetBar>i{display:block;height:100%;background:linear-gradient(90deg,#d6b75a,#f2dd8c);border-radius:999px}
 .scheduleGrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px}.scheduleRows{display:grid;gap:7px;margin-top:9px}.scheduleItem{border:1px solid #303038;border-radius:10px;padding:9px;background:#0d0d10}.scheduleItem.high{border-color:#7a651f}.scheduleItemTop{display:flex;justify-content:space-between;gap:8px}.scheduleItem b{font-size:10px}.scheduleItem small{font-size:9px;line-height:1.5;color:#999}.scheduleLoad{font-size:9px;font-weight:900;border:1px solid #3b3b43;border-radius:999px;padding:3px 6px;white-space:nowrap}.scheduleLoad.high{color:#ffe27a;border-color:#7a651f}.scheduleLoad.low{color:#9bc8ff;border-color:#315a83}.scheduleSummary{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.scheduleChip{border:1px solid #34343b;border-radius:999px;padding:4px 7px;font-size:9px;color:#bbb}.scheduleChip.warn{color:#ffe27a;border-color:#7a651f}
 @media(max-width:620px){.weekBudgetGrid{grid-template-columns:1fr 1fr}.scheduleGrid{grid-template-columns:1fr 1fr}.scheduleGrid .wide{grid-column:1/-1}}
-/* V26.5.14 GOOGLE CALENDAR READ-ONLY SYNC */
+/* V26.5.15 GOOGLE CALENDAR READ-ONLY SYNC */
 .gcalBox{margin-top:10px;border:1px solid #30435c;border-radius:13px;padding:11px;background:linear-gradient(180deg,#101720,#0c0d10)}
 .gcalTop{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.gcalTitle{font-size:12px;font-weight:950;color:#9bc8ff}.gcalStatus{font-size:9px;line-height:1.5;color:#aab3c0;margin-top:3px}.gcalStatus.ok{color:#90e7ba}.gcalStatus.warn{color:#ffe27a}.gcalStatus.bad{color:#ff9c9c}.gcalControls{display:grid;grid-template-columns:1fr auto;gap:7px;margin-top:9px}.gcalActions{display:grid;grid-template-columns:1.4fr 1fr;gap:7px;margin-top:8px}.gcalMeta{font-size:8px;color:#777;line-height:1.5;margin-top:7px;word-break:break-all}.gcalImported{color:#9bc8ff}
 @media(max-width:620px){.gcalControls,.gcalActions{grid-template-columns:1fr}}
-/* V26.5.14 NEXT DAY PREP */
+/* V26.5.15 NEXT DAY PREP */
 .tomorrowPrepHero{margin-top:10px;border:1px solid #2d3340;border-radius:13px;padding:12px;background:linear-gradient(180deg,#11151c,#0c0d10);position:relative;overflow:hidden}
 .tomorrowPrepHero.ready{border-color:#245b91;box-shadow:0 0 18px rgba(72,151,255,.12)}
 .tomorrowPrepHero.caution{border-color:#8b7422;box-shadow:0 0 22px rgba(255,210,67,.12);animation:tomorrowPrepPulse 2.2s ease-in-out infinite}
@@ -450,6 +450,17 @@ button.primary{box-shadow:0 5px 18px rgba(184,140,50,.10)}
 .trainingQueueItem button{padding:5px 9px}
 .trainingMethodHint{margin-top:7px;font-size:11px;line-height:1.55}
 @media(max-width:620px){.trainingRoutineGrid{grid-template-columns:1fr 1fr}.trainingRoutineGrid .trainingRoutineWide{grid-column:1/-1}.trainingMethodGrid{grid-template-columns:1fr}.trainingQuickActions{grid-template-columns:1fr 1fr}}
+
+/* V26.5.15 TRAINING EXPERIENCE UX */
+.trainingLevelCard{border:1px solid rgba(213,171,67,.45);background:linear-gradient(180deg,rgba(213,171,67,.10),rgba(255,255,255,.02));border-radius:18px;padding:14px;margin-bottom:12px}
+.trainingLevelBtns{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}.trainingLevelBtns button{min-height:48px}.trainingLevelBtns button.active{background:linear-gradient(180deg,#f0cf6a,#c79b31);color:#111;border-color:#f2d87d;font-weight:900}
+.beginnerGuide{margin-top:10px;display:grid;gap:8px}.beginnerExerciseHelp{border:1px solid #313641;border-radius:14px;padding:11px;background:#0f1116}.beginnerExerciseHelp b{color:#f1d77c}.beginnerExerciseHelp small{display:block;color:#adb3bf;margin-top:4px;line-height:1.55}
+.levelHint{font-size:13px;line-height:1.6;color:#c6c9d1;margin-top:7px}.levelOnlyBeginner{display:none}.training-beginner .levelOnlyBeginner{display:block}.training-beginner .levelHideBeginner{display:none!important}.training-intermediate .levelAdvancedOnly{display:none!important}
+@media(max-width:620px){.trainingLevelBtns{grid-template-columns:1fr}.trainingLevelBtns button{min-height:44px}}
+
+/* V26.5.16 HOME FLOW + MANAGEMENT */
+.homeFlowCard{border-color:#584a20;background:linear-gradient(180deg,#17140d,#0d0d10)}.homeFlowHead,.homeStageTop{display:flex;justify-content:space-between;gap:10px;align-items:center}.homeFlowSteps{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:10px}.homeFlowSteps button{padding:9px 5px;border-radius:10px;display:flex;flex-direction:column;align-items:center;gap:4px}.homeFlowSteps b,.homeStageNo{display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:#2b2411;color:#f2d77c;font-size:10px}.homeFlowSteps span{font-size:8px;font-weight:800}.homeStage{scroll-margin-top:95px}.homeStageTop>div{display:flex;align-items:center;gap:9px}.homeStateGrid,.homeGapCompare{display:grid;grid-template-columns:minmax(130px,.75fr) 1.25fr;gap:10px;margin-top:10px}.homePhotoBox,.homeVisionSelected{min-height:180px;border:1px solid #34343c;border-radius:12px;background:#0a0a0c;display:flex;align-items:center;justify-content:center;overflow:hidden;color:#777;font-size:10px;text-align:center}.homePhotoBox img{width:100%;height:100%;max-height:280px;object-fit:cover}.homeReadinessMini{padding:12px;border:1px solid #34343c;border-radius:12px;font-weight:900}.visionChoiceTitle{font-size:10px;font-weight:900;margin-top:11px;color:#ddd}.visionChoices{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:7px}.visionChoices button{padding:8px 4px;border-radius:11px;min-height:126px}.visionChoices button.active{border-color:#d7bb62;box-shadow:0 0 0 1px #d7bb62 inset}.visionChoices b{display:block;font-size:8px;margin-top:5px}.visionChoices small{font-size:7px;color:#888}.visionSilhouette{height:76px;position:relative;margin:auto;width:50px}.visionSilhouette:before{content:"";position:absolute;top:1px;left:50%;transform:translateX(-50%);width:18px;height:18px;border-radius:50%;background:#9d9da5}.visionSilhouette i{position:absolute;top:20px;left:50%;transform:translateX(-50%);height:52px;background:#777780;border-radius:16px 16px 12px 12px}.visionSilhouette.slim i{width:22px}.visionSilhouette.athletic i{width:30px;clip-path:polygon(12% 0,88% 0,76% 100%,24% 100%)}.visionSilhouette.fitness i{width:34px;clip-path:polygon(8% 0,92% 0,70% 100%,30% 100%)}.visionSilhouette.muscular i{width:42px;clip-path:polygon(0 5%,100% 5%,72% 100%,28% 100%)}.visionSilhouette.physique i{width:40px;clip-path:polygon(0 0,100% 0,65% 100%,35% 100%)}.homeVisionSelected .visionSilhouette{transform:scale(1.5)}.homeVisionSelected{flex-direction:column;gap:10px}.managementHero{border-color:#315a83}.managementMainGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.managementMainGrid button{min-height:126px;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}.managementMainGrid span{font-size:28px}.managementMainGrid b{font-size:13px}.managementMainGrid small{font-size:8px;color:#888}.managementSubGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.managementSubGrid button{font-size:9px}.training-beginner .detailTab{opacity:.72}.training-beginner .homeFlowCard,.training-beginner .homeStage{display:block}
+@media(max-width:620px){.homeFlowSteps{grid-template-columns:repeat(3,1fr)}.homeStateGrid,.homeGapCompare{grid-template-columns:1fr 1fr}.visionChoices{grid-template-columns:repeat(5,minmax(58px,1fr));overflow-x:auto}.managementMainGrid{grid-template-columns:1fr}.managementSubGrid{grid-template-columns:1fr 1fr}.homePhotoBox,.homeVisionSelected{min-height:145px}}
 </style>
 <script>
 window.SUG_CLOUD_CONFIG = {
@@ -468,7 +479,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
   <div class="authBox">
     <img class="authBrandLogo" src="./brand-header.png?v=26-4-2-walk-route" alt="S.u.G OSAKA">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V26.5.14 ADAPTIVE CORE / MEMBERS ONLY</div>
+    <div class="sub">V26.5.15 ADAPTIVE CORE / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -583,7 +594,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
   <div class="head">
     <div class="brandIdentity">
       <img class="brandHeaderLogo" src="./brand-header.png?v=26-4-2-walk-route" alt="S.u.G OSAKA">
-      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.5.14 ADAPTIVE CORE / READINESS SIGNAL + DAILY RHYTHM + HYDRATION + TRAINING + CARE</small></div>
+      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.5.16 HOME FLOW / GAP + TRAINING LOOP + MANAGEMENT</small></div>
     </div>
     <div class="headActions"><button id="readinessHeaderSignal" class="readinessHeaderSignal unknown" type="button" onclick="openRecoverySignal()" aria-label="今日の回復状態"><span class="readinessDot"></span><span class="readinessHeaderText">READINESS --</span></button><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
@@ -597,8 +608,9 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
 
   <div class="tabs">
     <button id="adminTab" class="tab" data-tab="adminBoard">管理</button>
-    <button class="tab active" data-tab="dash">概要</button>
-    <button class="tab" data-tab="smart">SMART</button>
+    <button class="tab active" data-tab="dash">HOME</button>
+    <button class="tab" data-tab="memberManage">管理</button>
+    <button class="tab detailTab" data-tab="smart">SMART</button>
     <button class="tab" data-tab="response">RESPONSE</button>
     <button class="tab" data-tab="activity">活動</button>
     <button class="tab" data-tab="care">ケア</button>
@@ -748,6 +760,51 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
       </div>
       <img class="sugHeroMascot" src="./mascot-highfive.png?v=26-4-2-walk-route" alt="">
     </div>
+    <div class="card homeFlowCard">
+      <div class="homeFlowHead"><div><h2>HOME｜今日の流れ</h2><div class="muted">現実 → 理想 → GAP → 今日やること → 実施 → 振り返り → 次回へ</div></div><span id="homeLevelBadge" class="badge">--</span></div>
+      <div class="homeFlowSteps">
+        <button type="button" onclick="homeScroll('homeState')"><b>1</b><span>今日の状態</span></button>
+        <button type="button" onclick="homeScroll('homeGap')"><b>2</b><span>理想とのGAP</span></button>
+        <button type="button" onclick="homeScroll('homeMenu')"><b>3</b><span>今日のメニュー</span></button>
+        <button type="button" onclick="openTab('training')"><b>4</b><span>トレ入力</span></button>
+        <button type="button" onclick="homeScroll('homeReview')"><b>5</b><span>振り返り</span></button>
+        <button type="button" onclick="homeScroll('homeNext')"><b>6</b><span>次回メニュー</span></button>
+      </div>
+    </div>
+    <div id="homeState" class="card homeStage">
+      <div class="homeStageTop"><div><span class="homeStageNo">01</span><div><h2>今日の状態</h2><div class="muted">回復・生活状況と、今の身体を最初に確認</div></div></div><button class="secondary" onclick="openTab('recovery')">回復を入力</button></div>
+      <div class="homeStateGrid"><div id="homeCurrentPhoto" class="homePhotoBox">現在写真なし</div><div><div id="homeReadinessMini" class="homeReadinessMini">判定中...</div><div id="homeStateSummary" class="notice" style="margin-top:8px">--</div></div></div>
+    </div>
+    <div id="homeGap" class="card homeStage">
+      <div class="homeStageTop"><div><span class="homeStageNo">02</span><div><h2>理想とのGAP</h2><div class="muted">今の写真と、選んだ理想タイプを並べて方向を固定</div></div></div><button class="secondary" onclick="openSmartTab();setTimeout(()=>document.getElementById('goalPlanCard')?.scrollIntoView({behavior:'smooth'}),100)">詳細目標</button></div>
+      <div class="homeGapCompare"><div><label>CURRENT｜現在</label><div id="homeGapCurrent" class="homePhotoBox">写真なし</div></div><div><label>VISION｜理想</label><div id="homeVisionSelected" class="homeVisionSelected">理想タイプを選択</div></div></div>
+      <div class="visionChoiceTitle">理想イメージを1つ選ぶ</div>
+      <div id="homeVisionChoices" class="visionChoices">
+        <button type="button" data-vision="slim" onclick="selectHomeVision('slim')"><div class="visionSilhouette slim"><i></i></div><b>SLIM</b><small>細身・引き締め</small></button>
+        <button type="button" data-vision="athletic" onclick="selectHomeVision('athletic')"><div class="visionSilhouette athletic"><i></i></div><b>ATHLETIC</b><small>健康的な筋肉感</small></button>
+        <button type="button" data-vision="fitness" onclick="selectHomeVision('fitness')"><div class="visionSilhouette fitness"><i></i></div><b>FITNESS</b><small>メリハリ重視</small></button>
+        <button type="button" data-vision="muscular" onclick="selectHomeVision('muscular')"><div class="visionSilhouette muscular"><i></i></div><b>MUSCULAR</b><small>筋量を大きく</small></button>
+        <button type="button" data-vision="physique" onclick="selectHomeVision('physique')"><div class="visionSilhouette physique"><i></i></div><b>PHYSIQUE</b><small>肩幅・Vシェイプ</small></button>
+      </div>
+      <div id="homeGapSummary" class="notice" style="margin-top:10px">現在データと理想タイプからGAPを表示します。</div>
+      <button type="button" class="secondary" style="width:100%;margin-top:8px" onclick="prepareAiVision()">AI VISION用データを準備</button>
+      <div class="muted" style="margin-top:6px">※理想画像は将来の結果を保証するものではなく、目標方向を共有するVISION用途。AI画像生成は専用生成API接続時のみ実行します。</div>
+    </div>
+    <div id="homeMenu" class="card homeStage">
+      <div class="homeStageTop"><div><span class="homeStageNo">03</span><div><h2>今日のメニュー</h2><div class="muted">GAP × 回復 × 過去の記録から今日やる内容へ</div></div></div><button class="primary" onclick="openSmartTab()">メニュー作成</button></div>
+      <div id="homeMenuSummary" class="notice">SMART PLANを計算するとここに要点を表示します。</div>
+    </div>
+    <div id="homeReview" class="card homeStage">
+      <div class="homeStageTop"><div><span class="homeStageNo">04</span><div><h2>今日の振り返り</h2><div class="muted">初心者でも「できた・きつい・痛い」から記録できる</div></div></div></div>
+      <div class="grid3"><div><label>実施</label><select id="hrDone"><option value="done">予定どおり</option><option value="partial">一部実施</option><option value="rest">休養</option></select></div><div><label>体感</label><select id="hrFeel"><option value="good">良かった</option><option value="normal">普通</option><option value="hard">きつかった</option></select></div><div><label>痛み</label><select id="hrPain"><option value="0">なし</option><option value="1">少し</option><option value="2">強い</option></select></div></div>
+      <div style="margin-top:8px"><label>ひとこと</label><input id="hrMemo" placeholder="例：スクワットは余裕あり / 肩が少し詰まった"></div>
+      <button class="primary" style="width:100%;margin-top:8px" onclick="saveHomeReflection()">今日の振り返りを保存</button>
+      <div id="homeReviewSaved" class="muted" style="margin-top:7px"></div>
+    </div>
+    <div id="homeNext" class="card homeStage">
+      <div class="homeStageTop"><div><span class="homeStageNo">05</span><div><h2>次回メニュー</h2><div class="muted">今日の結果から、次回の予定とPROGRESSIVE OVERLOADへつなぐ</div></div></div><button class="secondary" onclick="openTab('training');setTimeout(()=>document.getElementById('nextLoadPanel')?.scrollIntoView({behavior:'smooth'}),100)">NEXT LOAD</button></div>
+      <div id="homeNextSummary" class="notice">トレーニング記録後に次回方針を表示します。</div>
+    </div>
     <div class="card">
       <h2>現在の状態</h2>
       <div class="kpis">
@@ -758,7 +815,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
       </div>
     </div>
     <div class="card readinessCard">
-      <div class="row" style="align-items:center"><div><h2 style="margin-bottom:3px">S.u.G READINESS SIGNAL</h2><div class="muted">睡眠・疲労・飲酒・二日酔い・水分・日中リズム・痛み/CAREから「今日どう動くか」まで表示。</div></div><span class="badge">V26.5.14</span></div>
+      <div class="row" style="align-items:center"><div><h2 style="margin-bottom:3px">S.u.G READINESS SIGNAL</h2><div class="muted">睡眠・疲労・飲酒・二日酔い・水分・日中リズム・痛み/CAREから「今日どう動くか」まで表示。</div></div><span class="badge">V26.5.15</span></div>
       <div id="readinessDashboard" style="margin-top:9px"><span class="muted">判定中...</span></div>
     </div>
     <div id="nextAppointmentCard" class="card nextApptCard">
@@ -806,6 +863,17 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
     <div class="card"><h2>今日の推奨</h2><div id="todayAdvice" class="item"></div></div>
   </section>
 
+
+  <section id="memberManage" class="panel">
+    <div class="card managementHero"><h2>MANAGEMENT｜日常管理</h2><div class="muted">ここは入力する場所。入力したデータはHOMEの「今日の状態」とメニュー判定へ自動反映します。</div></div>
+    <div class="managementMainGrid">
+      <button type="button" onclick="openTab('meal')"><span>🍚</span><b>食事</b><small>カロリー・PFC・週予算</small></button>
+      <button type="button" onclick="openTab('recovery')"><span>🌙</span><b>睡眠・回復</b><small>睡眠・疲労・ストレス・水分</small></button>
+      <button type="button" onclick="openTab('activity')"><span>🚶</span><b>ウォーキング</b><small>歩数・活動・残り距離</small></button>
+    </div>
+    <div class="card managementSubCard" style="margin-top:10px"><h2>補助管理</h2><div class="managementSubGrid"><button onclick="openTab('weight')">体重</button><button onclick="openTab('photos')">写真</button><button onclick="openTab('care')">CARE</button><button onclick="openTab('recovery');setTimeout(()=>document.getElementById('cycleHealthCard')?.scrollIntoView({behavior:'smooth'}),100)">周期・症状</button></div></div>
+    <div class="card"><h2>今日の管理サマリー</h2><div id="managementSummary" class="notice">--</div></div>
+  </section>
 
   <section id="smart" class="panel">
     <div class="card smartHero">
@@ -857,9 +925,19 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
       <div class="goalPlanActions"><button class="secondary" onclick="applyGoalPlanTargets()">目標を会員設定へ反映</button><button class="secondary" onclick="copyGoalPlan()">プランをコピー</button><button class="secondary" onclick="renderGoalPlan(true)">再表示</button></div>
       <div id="goalPlanOutput" style="margin-top:10px"><span class="muted">現在値・理想・期限を設定して生成してください。</span></div>
     </div>
+    <div class="card trainingLevelCard" id="trainingLevelSmartCard">
+      <div><h2 style="margin-bottom:3px">TRAINING LEVEL｜操作レベル</h2><div class="muted">難しい機能を消すのではなく、経験に合わせて表示を切り替えます。</div></div>
+      <div class="trainingLevelBtns">
+        <button type="button" id="levelBtnBeginner" onclick="setTrainingExperience('beginner')">初心者｜かんたん</button>
+        <button type="button" id="levelBtnIntermediate" onclick="setTrainingExperience('intermediate')">中級者｜標準</button>
+        <button type="button" id="levelBtnAdvanced" onclick="setTrainingExperience('advanced')">上級者｜詳細</button>
+      </div>
+      <div id="trainingLevelHint" class="levelHint"></div>
+    </div>
     <div class="card">
       <div class="row" style="align-items:center"><div><h2 style="margin-bottom:3px">自動トレーニングメニュー</h2><div class="muted">目的・優先部位・回復状態・前回記録からルールベースで作成。</div></div><button class="secondary" onclick="generateRuleMenu()">生成</button></div>
-      <div class="grid2" style="margin-top:9px"><div><label>部位</label><select id="smartFocus"><option value="auto">自動（会員設定）</option><option>肩</option><option>胸</option><option>背中</option><option>前脚</option><option>後脚・臀部</option><option>腕</option><option>姿勢</option><option>全身</option></select></div><div><label>セッション</label><select id="smartMinutes" onchange="this.dataset.userChanged='1'"><option value="30">30分</option><option value="60" selected>60分</option><option value="90">90分</option></select></div></div>
+      <div class="grid2" style="margin-top:9px"><div><label>鍛える場所</label><select id="smartFocus"><option value="auto">おまかせ（会員設定）</option><option>肩</option><option>胸</option><option>背中</option><option>前脚</option><option>後脚・臀部</option><option>腕</option><option>姿勢</option><option>全身</option></select></div><div><label>トレーニング時間</label><select id="smartMinutes" onchange="this.dataset.userChanged='1'"><option value="30">30分</option><option value="60" selected>60分</option><option value="90">90分</option></select></div></div>
+      <div id="beginnerMenuIntro" class="levelOnlyBeginner beginnerGuide"><div class="beginnerExerciseHelp"><b>初心者モード</b><small>種目名を覚えていなくても大丈夫です。「鍛える場所」と時間を選んで生成すると、基本種目を中心に「何をする運動か」まで表示します。</small></div></div>
       <div id="smartMenuView" class="smartPlanList" style="margin-top:10px"><span class="muted">「生成」で今日のメニューを作成します。</span></div>
     </div>
     <div class="card">
@@ -1021,6 +1099,15 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
   </section>
 
   <section id="training" class="panel">
+    <div class="card trainingLevelCard">
+      <div><h2 style="margin-bottom:3px">操作レベル</h2><div class="muted">初心者は必要な入力だけ。中級・上級になるほど詳細項目を表示します。</div></div>
+      <div class="trainingLevelBtns">
+        <button type="button" class="levelBtnBeginner" onclick="setTrainingExperience('beginner')">初心者｜かんたん</button>
+        <button type="button" class="levelBtnIntermediate" onclick="setTrainingExperience('intermediate')">中級者｜標準</button>
+        <button type="button" class="levelBtnAdvanced" onclick="setTrainingExperience('advanced')">上級者｜詳細</button>
+      </div>
+      <div class="levelHint trainingLevelHintLocal"></div>
+    </div>
     <div class="card">
       <div class="sectionLead"><div><h2>トレーニング記録</h2><div class="muted">重量・REP・SET・RIR・REST・総重量・推定1RMを記録し、全身回復とSET間回復を分けて確認。</div></div><img class="sectionMascot" src="./mascot-basketball.png?v=26-4-2-walk-route" alt=""></div>
       <div class="grid2">
@@ -1033,7 +1120,8 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
     <input id="tExercise" placeholder="その他の種目を手入力" oninput="syncTrainingMeta()" style="display:none;margin-top:8px">
   </div>
 </div>
-      <div class="grid2" style="margin-top:8px">
+      <div id="trainingExerciseHelp" class="levelOnlyBeginner beginnerExerciseHelp"><b>種目を選ぶと説明が出ます</b><small>まずは「スクワット＝しゃがんで立つ」「ベンチプレス＝仰向けで押す」のように動作で覚えればOKです。</small></div>
+      <div id="trainingAdvancedMeta" class="grid2 levelHideBeginner" style="margin-top:8px">
         <div><label>対象部位</label><select id="tPart" onchange="syncTrainingMeta(true)">
           <option value="">自動判定</option><option>肩</option><option>胸</option><option>背中</option><option>前脚</option><option>後脚・臀部</option><option>腕</option><option>姿勢</option><option>全身</option><option>その他</option>
         </select></div>
@@ -1041,9 +1129,9 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
           <option value="">自動判定</option><option>伸長位寄り</option><option>中間位寄り</option><option>短縮位寄り</option><option>伸長〜中間</option><option>伸長〜短縮</option><option>機能・体幹</option><option>その他</option>
         </select></div>
       </div>
-      <div id="tMetaHint" class="notice" style="margin-top:8px">種目名から対象部位・POFを自動候補化します。必要なら手動で変更できます。</div>
-      <div class="trainingQuickCard">
-        <div class="trainingQuickHead"><div><div class="trainingQuickTitle">QUICK START｜前回・ROUTINE</div><div class="muted">前回値は下書きとして読み込み。保存するまでは履歴に追加されません。</div></div><span class="badge">V26.5.14</span></div>
+      <div id="tMetaHint" class="notice levelHideBeginner" style="margin-top:8px">種目名から対象部位・POFを自動候補化します。必要なら手動で変更できます。</div>
+      <div class="trainingQuickCard levelHideBeginner">
+        <div class="trainingQuickHead"><div><div class="trainingQuickTitle">QUICK START｜前回・ROUTINE</div><div class="muted">前回値は下書きとして読み込み。保存するまでは履歴に追加されません。</div></div><span class="badge">V26.5.15</span></div>
         <div class="trainingQuickActions"><button class="secondary" type="button" onclick="loadPreviousExerciseDraft()">前回のこの種目</button><button class="secondary" type="button" onclick="loadPreviousSessionDraft()">前回SESSION</button></div>
         <div class="trainingRoutineGrid">
           <div><label>ROUTINE</label><select id="tRoutineSelect"><option value="">ROUTINEなし</option></select></div>
@@ -1053,7 +1141,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
         <div class="trainingQuickActions" style="margin-top:7px"><button class="secondary" type="button" onclick="saveTrainingRoutine()">現在SESSIONを保存</button><button class="danger" type="button" onclick="deleteTrainingRoutine()">ROUTINE削除</button></div>
         <div id="tSessionQueue" class="trainingQueueList"><span class="muted">SESSIONキューなし</span></div>
       </div>
-      <div class="trainingMethodCard">
+      <div class="trainingMethodCard levelAdvancedOnly">
         <div class="trainingMethodHead"><div><div class="trainingMethodTitle">SET METHOD｜セット法</div><div class="muted">セット法を変えた記録は、同じ条件の前回と比較してNEXT LOADの誤判定を防ぎます。</div></div></div>
         <div class="trainingMethodGrid">
           <div><label>SET METHOD</label><select id="tSetMethod" onchange="trainingSetMethodChanged(true)">
@@ -1071,8 +1159,8 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
         </div>
         <div id="tSetMethodHint" class="notice trainingMethodHint">基本のストレートセット。通常の同一種目比較に使用します。</div>
       </div>
-      <div class="grid4" style="margin-top:8px"><div><label>重量</label><input id="tWeight" type="number" step="0.5" oninput="renderTrainingPreview()"></div><div><label>REP</label><input id="tReps" type="number" oninput="renderTrainingPreview()"></div><div><label>SET</label><input id="tSets" type="number" oninput="renderTrainingPreview();renderTrainingSetDetailRows();restTimerRender()"></div><div><label>RIR</label><input id="tRir" type="number" step="0.5" oninput="renderTrainingPreview()"></div></div>
-      <div class="notice" style="margin-top:8px">
+      <div class="grid4" style="margin-top:8px"><div><label>重量</label><input id="tWeight" type="number" step="0.5" oninput="renderTrainingPreview()"></div><div><label>REP</label><input id="tReps" type="number" oninput="renderTrainingPreview()"></div><div><label>SET</label><input id="tSets" type="number" oninput="renderTrainingPreview();renderTrainingSetDetailRows();restTimerRender()"></div><div><label>あと何回できそう？（RIR）</label><input id="tRir" type="number" step="0.5" oninput="renderTrainingPreview()"></div></div>
+      <div class="notice levelAdvancedOnly" style="margin-top:8px">
         <div class="row" style="align-items:center;gap:10px"><div><b>SET詳細 / REST（任意）</b><br><small>セット間休憩によるREP低下を、全身RECOVERYや筋力低下と分けて記録します。</small></div><label style="display:flex;align-items:center;gap:6px;white-space:nowrap"><input id="tSetDetailMode" type="checkbox" onchange="toggleTrainingSetDetails()"> 使用</label></div>
         <div id="tSetDetailPanel" style="display:none;margin-top:9px">
           <div class="grid2"><div><label>予定REST</label><input id="tPlannedRest" type="number" min="0" step="5" placeholder="例 180" oninput="restTimerSyncFromPlanned()"><small class="muted">秒</small></div><div><label>記録ルール</label><div class="muted" style="padding-top:8px">SET1はRESTなし。SET2以降は「直前SET終了→次SET開始」の秒数。</div></div></div>
@@ -1080,7 +1168,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
           <div class="muted" style="margin-top:6px">詳細モードでは既存Engine互換のため、SET1を代表重量・REP・RIRとして保存し、総重量は全SET実績から計算します。</div>
         </div>
       </div>
-      <div class="restTimerCard" id="restTimerCard">
+      <div class="restTimerCard levelHideBeginner" id="restTimerCard">
         <div class="restTimerHead">
           <div><div class="restTimerTitle">REST TIMER｜INTER-SET</div><div class="muted">SET終了でSTART → 次SET開始で実RESTをSET詳細へ自動記録。</div></div>
           <span class="badge">V26.5.0</span>
@@ -1688,12 +1776,12 @@ const shiftDate=(days)=>{const d=new Date();d.setHours(0,0,0,0);d.setDate(d.getD
 let db={current:null,members:{}};
 
 function baseMember(name="新規会員"){
-  return {profile:{name,goal:"筋肥大",targetWeight:0,targetKcal:0,targetP:0,targetF:0,targetC:0,experience:"intermediate",trainingDays:3,priorityPart:"全身",sessionMinutes:60,notes:""},
+  return {profile:{name,goal:"筋肥大",targetWeight:0,targetKcal:0,targetP:0,targetF:0,targetC:0,experience:"beginner",trainingDays:3,priorityPart:"全身",sessionMinutes:60,notes:""},
     coachPlan:{weeklyFocus:"",nextAction:"",nextSessionDate:"",targetTrainingDays:0,targetSleep:0,targetSteps:0,completedAt:null,updatedAt:null},
     goalPlan:{goalType:"筋肥大",deadline:"",targetWeight:0,targetBodyFat:0,idealNote:"",idealImagePath:"",energyAnchor:0,priority1:"肩",priority2:"背中",priority3:"胸",trainingDays:4,sessionMinutes:60,generatedAt:null,lastPlan:null},
     smartContext:{appetite:"normal",dayType:"training",updatedAt:null},
     weeklyNutrition:{targetKcal:0},
-    weights:[],meals:[],training:[],trainingRoutines:[],recovery:[],cycleHealth:[],hydration:[],dailyRhythm:[],dailySchedule:[],checkins:[],activity:[],selfCare:[],smartPlans:[],romAssessments:[],aromAssessments:[],shrAssessments:[],movementScreens:[],integratedAssessments:[],bodyMeasurements:[],responseExperiments:[],photos:[],medicalReferrals:[],restTargets:{}}
+    weights:[],meals:[],training:[],trainingRoutines:[],recovery:[],cycleHealth:[],hydration:[],dailyRhythm:[],dailySchedule:[],checkins:[],activity:[],selfCare:[],smartPlans:[],romAssessments:[],aromAssessments:[],shrAssessments:[],movementScreens:[],integratedAssessments:[],bodyMeasurements:[],responseExperiments:[],photos:[],medicalReferrals:[],dailyReflections:[],restTargets:{}}
 }
 function m(){return db.members[db.current]}
 function esc(s){return String(s??"").replace(/[&<>"']/g,x=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[x]))}
@@ -2167,7 +2255,7 @@ async function loadMember(id){
   if(!db.members[id].weeklyNutrition || typeof db.members[id].weeklyNutrition!=="object" || Array.isArray(db.members[id].weeklyNutrition)) db.members[id].weeklyNutrition=baseMember(p?.display_name||"会員").weeklyNutrition;
   db.members[id].weeklyNutrition={...baseMember(p?.display_name||"会員").weeklyNutrition,...db.members[id].weeklyNutrition};
 
-  ["weights","meals","training","trainingRoutines","recovery","cycleHealth","hydration","dailyRhythm","dailySchedule","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos","medicalReferrals"].forEach(k=>{
+  ["weights","meals","training","trainingRoutines","recovery","cycleHealth","hydration","dailyRhythm","dailySchedule","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos","medicalReferrals","dailyReflections"].forEach(k=>{
     if(!Array.isArray(db.members[id][k]))db.members[id][k]=[];
   });
   if(!db.members[id].restTargets || typeof db.members[id].restTargets!=="object" || Array.isArray(db.members[id].restTargets))db.members[id].restTargets={};
@@ -2679,7 +2767,7 @@ async function refreshAdminBoard(){
     const members=accessibleProfiles.filter(p=>p.role!=="trainer").map(p=>{
       const row=byId.get(p.id);
       const mm=row?.data&&Object.keys(row.data).length?row.data:baseMember(p.display_name||"会員");
-      ["weights","meals","training","recovery","hydration","dailyRhythm","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos"].forEach(k=>{if(!Array.isArray(mm[k]))mm[k]=[]});
+      ["weights","meals","training","recovery","hydration","dailyRhythm","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos","dailyReflections"].forEach(k=>{if(!Array.isArray(mm[k]))mm[k]=[]});
       if(!mm.restTargets || typeof mm.restTargets!=="object" || Array.isArray(mm.restTargets))mm.restTargets={};
       if(!mm.profile)mm.profile=baseMember(p.display_name||"会員").profile;
       const st=adminStatusFor(mm);
@@ -3852,8 +3940,8 @@ async function addPhoto(){
   }catch(e){console.error(e);alert("写真を保存できませんでした。");setStatus("保存失敗")}
 }
 
-function loadProfile(){if(!m())return;let p=m().profile;pfName.value=p.name||"";pfGoal.value=p.goal||"筋肥大";pfTargetWeight.value=p.targetWeight||"";pfTargetKcal.value=p.targetKcal||"";pfP.value=p.targetP||"";pfF.value=p.targetF||"";pfC.value=p.targetC||"";pfExperience.value=p.experience||"intermediate";pfTrainingDays.value=p.trainingDays||3;pfPriorityPart.value=p.priorityPart||"全身";pfSessionMinutes.value=String(p.sessionMinutes||60);pfNotes.value=p.notes||""}
-function saveProfile(){let p=m().profile;p.name=pfName.value||p.name;p.goal=pfGoal.value;p.targetWeight=n("pfTargetWeight");p.targetKcal=n("pfTargetKcal");p.targetP=n("pfP");p.targetF=n("pfF");p.targetC=n("pfC");p.experience=pfExperience.value||"intermediate";p.trainingDays=n("pfTrainingDays")||3;p.priorityPart=pfPriorityPart.value||"全身";p.sessionMinutes=Number(pfSessionMinutes.value||60);p.notes=pfNotes.value;saveRender()}
+function loadProfile(){if(!m())return;let p=m().profile;pfName.value=p.name||"";pfGoal.value=p.goal||"筋肥大";pfTargetWeight.value=p.targetWeight||"";pfTargetKcal.value=p.targetKcal||"";pfP.value=p.targetP||"";pfF.value=p.targetF||"";pfC.value=p.targetC||"";pfExperience.value=p.experience||"intermediate";pfTrainingDays.value=p.trainingDays||3;pfPriorityPart.value=p.priorityPart||"全身";pfSessionMinutes.value=String(p.sessionMinutes||60);pfNotes.value=p.notes||"";applyTrainingExperienceUI()}
+function saveProfile(){let p=m().profile;p.name=pfName.value||p.name;p.goal=pfGoal.value;p.targetWeight=n("pfTargetWeight");p.targetKcal=n("pfTargetKcal");p.targetP=n("pfP");p.targetF=n("pfF");p.targetC=n("pfC");p.experience=pfExperience.value||"intermediate";p.trainingDays=n("pfTrainingDays")||3;p.priorityPart=pfPriorityPart.value||"全身";p.sessionMinutes=Number(pfSessionMinutes.value||60);p.notes=pfNotes.value;saveRender();applyTrainingExperienceUI()}
 
 function coachPlan(){
   if(!m())return null;
@@ -3977,7 +4065,7 @@ function todayActivity(){return (m()?.activity||[]).filter(x=>x.date===today()).
 function activityAvg7(){const cut=shiftDate(-6);const rows=(m()?.activity||[]).filter(x=>x.date>=cut&&x.date<=today());return rows.length?avg(rows.map(x=>Number(x.steps||0))):0;}
 function latestRecovery(){return (m()?.recovery||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1)||null;}
 
-// V26.5.14 MENSTRUAL CYCLE / HORMONE CONTEXT
+// V26.5.15 MENSTRUAL CYCLE / HORMONE CONTEXT
 function cycleRows(){if(!m())return [];if(!Array.isArray(m().cycleHealth))m().cycleHealth=[];return m().cycleHealth;}
 function cycleDayRow(date=today()){return cycleRows().filter(x=>x.date===date).at(-1)||null;}
 function lastPeriodStart(date=today()){return cycleRows().filter(x=>x.event==="period_start"&&x.date<=date).slice().sort((a,b)=>a.date.localeCompare(b.date)).at(-1)||null;}
@@ -4253,6 +4341,46 @@ function smartNutrition(){
   if(!priorities.length)priorities.push({title:"ほぼ目標内",detail:"今日のPFCは大きな不足なし。残りは食事全体のバランスを優先。"});
   const kcalRate=targets.kcal?mt.kcal/targets.kcal:0;return {label:kcalRate<.6?"不足大":kcalRate<.9?"補給必要":kcalRate<=1.1?"目標付近":"超過",reason:targets.kcal?`${Math.round(mt.kcal)} / ${targets.kcal} kcal`:`${Math.round(mt.kcal)} kcal`,priorities:priorities.slice(0,4),deficit:d};
 }
+
+const BEGINNER_EXERCISE_HELP={
+  "フルボトムスクワット":"立った姿勢から深くしゃがんで立つ。脚全体の基本。最初は自重、慣れたらダンベルやバーベル。",
+  "ブルガリアンスクワット":"後ろ足を台に置き、片脚ずつしゃがむ。自重から始め、慣れたらダンベルを持つ。",
+  "ベンチプレス":"ベンチに仰向けになり、胸の前からバーを押す。胸・腕の基本。",
+  "ラットプルダウン":"上のバーを胸の方へ引く。背中を広く使う基本の引く種目。",
+  "シーテッドロー":"座ってグリップを体へ引く。背中の厚みを作る基本。",
+  "ワンハンドDBロー":"片手でダンベルを体の横へ引く。左右別々に背中を使う基本。",
+  "ルーマニアンデッドリフト":"お尻を後ろへ引きながら上体を倒して戻る。もも裏・お尻の基本。",
+  "DBサイドレイズ":"ダンベルを体の横へ上げる。肩幅を作る基本。",
+  "レッグカール":"膝を曲げて、もも裏を使うマシン種目。",
+  "レッグエクステンション":"膝を伸ばして、前ももを使うマシン種目。"
+};
+const BEGINNER_RULE_MENU={
+  "胸":[["ベンチプレス","押す","8-12",2,3],["DBサイドレイズ","肩を横に上げる","12-15",2,3]],
+  "背中":[["ラットプルダウン","上から引く","8-12",2,3],["シーテッドロー","前から引く","8-12",2,3],["ワンハンドDBロー","片手で引く","8-12/左右",2,3]],
+  "前脚":[["フルボトムスクワット","しゃがむ","8-12",2,3],["ブルガリアンスクワット","片脚でしゃがむ","8-12/左右",2,3],["レッグエクステンション","膝を伸ばす","10-15",2,3]],
+  "後脚・臀部":[["ルーマニアンデッドリフト","お尻を後ろへ引く","8-12",2,3],["ブルガリアンスクワット","片脚でしゃがむ","8-12/左右",2,3],["レッグカール","膝を曲げる","10-15",2,3]],
+  "肩":[["DBサイドレイズ","肩を横に上げる","12-15",2,3],["ベンチプレス","胸の前から押す","8-12",2,3]],
+  "腕":[["ベンチプレス","押す動作で腕も使う","8-12",2,3],["ラットプルダウン","引く動作で腕も使う","8-12",2,3]],
+  "姿勢":[["シーテッドロー","胸を起こして引く","10-12",2,3],["ワンハンドDBロー","片手で引く","10-12/左右",2,3],["フルボトムスクワット","姿勢を保ってしゃがむ","8-12",2,3]],
+  "全身":[["フルボトムスクワット","しゃがむ","8-12",2,3],["ベンチプレス","押す","8-12",2,3],["ラットプルダウン","上から引く","8-12",2,3],["シーテッドロー","前から引く","8-12",2,3],["ブルガリアンスクワット","片脚でしゃがむ","8-12/左右",2,3]]
+};
+function trainingExperience(){return m()?.profile?.experience||"beginner";}
+function trainingExperienceLabel(v){return v==="advanced"?"上級者｜詳細":v==="intermediate"?"中級者｜標準":"初心者｜かんたん";}
+function trainingExperienceHint(v){return v==="advanced"?"POF・SET METHOD・SET詳細・RESTまで全項目を表示します。":v==="intermediate"?"基本記録＋前回値・ROUTINE・REST TIMERを表示します。":"種目名が分からなくても使える基本メニュー中心。専門項目は隠して、必要な入力だけ表示します。";}
+function applyTrainingExperienceUI(){
+  const v=trainingExperience(),body=document.body;body.classList.remove("training-beginner","training-intermediate","training-advanced");body.classList.add("training-"+v);
+  document.querySelectorAll('.levelBtnBeginner,#levelBtnBeginner').forEach(x=>x.classList.toggle('active',v==='beginner'));
+  document.querySelectorAll('.levelBtnIntermediate,#levelBtnIntermediate').forEach(x=>x.classList.toggle('active',v==='intermediate'));
+  document.querySelectorAll('.levelBtnAdvanced,#levelBtnAdvanced').forEach(x=>x.classList.toggle('active',v==='advanced'));
+  document.querySelectorAll('.trainingLevelHintLocal').forEach(x=>x.textContent=trainingExperienceHint(v));
+  const h=document.getElementById('trainingLevelHint');if(h)h.textContent=trainingExperienceHint(v);
+  populateExercisePicker(); renderTrainingExerciseHelp();
+}
+function setTrainingExperience(v){if(!m())return; m().profile=m().profile||{};m().profile.experience=v;persist();const pf=document.getElementById('pfExperience');if(pf)pf.value=v;applyTrainingExperienceUI();renderSmartCore(true);}
+function renderTrainingExerciseHelp(){const box=document.getElementById('trainingExerciseHelp');if(!box)return;const ex=selectedTrainingExercise();const txt=BEGINNER_EXERCISE_HELP[ex];box.innerHTML=txt?`<b>${esc(ex)}</b><small>${esc(txt)}</small>`:`<b>種目を選ぶと説明が出ます</b><small>まずは動作で覚えればOKです。分からない種目は基本種目から選びます。</small>`;}
+function loadBeginnerExerciseToRecord(name){
+  openTab('training');setTimeout(()=>{const sel=document.getElementById('tExerciseSelect');if(sel){sel.value=name;onExerciseSelect();renderTrainingExerciseHelp();}document.getElementById('training')?.scrollIntoView({behavior:'smooth',block:'start'});},80);
+}
 const RULE_MENU={
   "肩":[["インクライン・サイドレイズ","伸張","12-20",2,2],["DBサイドレイズ","中間","15-20",3,2],["ケーブルサイド 0-30°","伸張-中間","20-30/左右",2,2],["リアデルト・フライ","伸張","12-20",2,2],["ケーブルリア","短縮","15-20",2,1]],
   "胸":[["インクラインDB／スミスプレス","中間","6-10",3,2],["インクラインDBフライ","伸張","10-15",2,2],["低角度DB／マシンプレス","中間","8-12",2,2],["ローtoハイ・ケーブルフライ","短縮","15-20",2,1],["ハイtoロー・ケーブルフライ","短縮","12-20",2,1]],
@@ -4356,7 +4484,17 @@ function populateExercisePicker(){
   const current=sel.value;
   sel.innerHTML='<option value="">種目を選択</option>';
   const byPart={};
-  effectiveExerciseMaster().forEach(x=>{
+  let pickerRows=effectiveExerciseMaster();
+  if(trainingExperience()==="beginner"){
+    const basic=new Set(Object.keys(BEGINNER_EXERCISE_HELP));
+    pickerRows=pickerRows.filter(x=>basic.has(x.name));
+    const existing=new Set(pickerRows.map(x=>x.name));
+    Object.keys(BEGINNER_EXERCISE_HELP).forEach(name=>{if(!existing.has(name)){
+      const part=/ベンチ/.test(name)?"胸":/ラット|ロー/.test(name)?"背中":/スクワット|レッグエクステンション/.test(name)?"前脚":/デッドリフト|レッグカール/.test(name)?"後脚・臀部":/サイドレイズ/.test(name)?"肩":"全身";
+      pickerRows.push({name,part,pof:"",source:"beginner"});
+    }});
+  }
+  pickerRows.forEach(x=>{
     const part=x.part||"その他";
     (byPart[part] ||= []).push(x);
   });
@@ -4398,6 +4536,7 @@ function onExerciseSelect(){
   syncTrainingMeta();
   restTimerReset(true);
   restTimerLoadExerciseTarget();
+  renderTrainingExerciseHelp();
 }
 function selectedTrainingExercise(){
   const sel=document.getElementById("tExerciseSelect");
@@ -4796,8 +4935,10 @@ function generateRuleMenu(){
     box.innerHTML='<div class="smartWarn"><b>今日は高負荷メニューを生成しません。</b><br>回復判定が休養優先です。痛み・体調を確認し、必要に応じて医療評価を優先してください。</div>';
     return;
   }
-  let rows=(RULE_MENU[focus]||RULE_MENU["全身"]).map(x=>[...x]);
-  const experience=m().profile?.experience||"intermediate",goal=m().profile?.goal||"";
+  const experience=m().profile?.experience||"intermediate";
+  const menuSource=experience==="beginner"?BEGINNER_RULE_MENU:RULE_MENU;
+  let rows=(menuSource[focus]||menuSource["全身"]).map(x=>[...x]);
+  const goal=m().profile?.goal||"";
   let limit=mins<=30?3:mins<=60?5:rows.length;
   if(experience==="beginner")limit=Math.min(limit,4);
   rows=rows.slice(0,limit);
@@ -4837,7 +4978,8 @@ function generateRuleMenu(){
     rows.map(x=>{
       const last=lastTraining(x[0]),ov=nextOverload(x[0],x[2]),target=currentTrainingTarget(x[0],x[2]);
       const overloadText=(care.active && currentFocusAffected)?`CARE調整中｜重量更新より痛みなし・フォーム再現を優先`:`次回方針：${esc(ov.txt)}`;
-      return `<div class="smartPlanItem"><div class="smartPlanItemTop"><strong>${esc(x[0])}</strong><span class="badge">${esc(x[1])}</span></div><div class="smartPlanMeta">${esc(x[2])}rep × ${x[3]}set｜RIR ${x[4]}${last?`｜前回 ${last.weight}kg × ${last.reps}rep × ${last.sets}set / RIR ${last.rir}`:'｜初回はフォーム優先で基準作成'}</div><div class="smartPlanCue ${target.cls}">${care.active&&currentFocusAffected?`今回目標：痛みを増やさない軽負荷でフォーム確認`:esc(target.txt)}</div><div class="smartPlanCue">${overloadText}</div></div>`;
+      const beginnerHelp=experience==="beginner"?(BEGINNER_EXERCISE_HELP[x[0]]||""):"";
+      return `<div class="smartPlanItem"><div class="smartPlanItemTop"><strong>${esc(x[0])}</strong><span class="badge">${esc(x[1])}</span></div>${beginnerHelp?`<div class="smartPlanCue"><b>何をする？</b> ${esc(beginnerHelp)}</div>`:""}<div class="smartPlanMeta">${esc(x[2])}rep × ${x[3]}set｜${experience==="beginner"?`あと${x[4]}回くらい余裕を残す（RIR ${x[4]}）`:`RIR ${x[4]}`}${last?`｜前回 ${last.weight}kg × ${last.reps}rep × ${last.sets}set / RIR ${last.rir}`:'｜初回はフォーム優先で基準作成'}</div><div class="smartPlanCue ${target.cls}">${care.active&&currentFocusAffected?`今回目標：痛みを増やさない軽負荷でフォーム確認`:esc(target.txt)}</div>${experience==="beginner"?`<button class="secondary" type="button" style="width:100%;margin-top:7px" onclick="loadBeginnerExerciseToRecord('${esc(x[0])}')">この種目を記録する</button>`:`<div class="smartPlanCue">${overloadText}</div>`}</div>`;
     }).join("");
 }
 function smartPriorityData(){
@@ -5374,7 +5516,7 @@ function carePlan(area, location, movement){
   };
 }
 
-// V26.5.14 READINESS SIGNAL + DAILY RHYTHM + CAFFEINE + MEAL TIMING + HYDRATION + CARE + TRAINING METHODS
+// V26.5.15 READINESS SIGNAL + DAILY RHYTHM + CAFFEINE + MEAL TIMING + HYDRATION + CARE + TRAINING METHODS
 const CARE_AROM_KEYS={
   shoulder:["shoulder_flex","shoulder_abd","shoulder_er","shoulder_ir","shoulder_ext","shoulder_hflex","shoulder_hext","thoracic_ext","thoracic_rot"],
   neck:["cervical_flex","cervical_ext","cervical_rot","cervical_lat","thoracic_ext","thoracic_rot"],
@@ -5862,7 +6004,7 @@ function renderCareHistory(){
   }).join("")||'<span class="muted">履歴なし</span>';
 }
 function nearestWeightOnOrBefore(date){const rows=(m()?.weights||[]).filter(x=>x.date<=date).slice().sort((a,b)=>a.date.localeCompare(b.date));return rows.at(-1)||null;}
-// V26.5.14 GOOGLE CALENDAR -> DAILY SCHEDULE (read-only browser OAuth)
+// V26.5.15 GOOGLE CALENDAR -> DAILY SCHEDULE (read-only browser OAuth)
 const GCAL_CLIENT_KEY="sug_google_calendar_client_id_v1";
 let gcalTokenClient=null,gcalAccessToken="",gcalTokenExpiresAt=0,gcalConsentGranted=false;
 function gcalStatus(message,kind="",badge="OFF"){const s=document.getElementById("gcalStatus"),b=document.getElementById("gcalBadge");if(s){s.textContent=message;s.className=`gcalStatus ${kind||""}`.trim()}if(b)b.textContent=badge;}
@@ -5885,7 +6027,7 @@ function connectAndSyncGoogleCalendar(){const clientId=saveGoogleCalendarClientI
 function disconnectGoogleCalendar(){if(gcalAccessToken&&window.google?.accounts?.oauth2){try{google.accounts.oauth2.revoke(gcalAccessToken,()=>{})}catch(_e){}}gcalAccessToken="";gcalTokenExpiresAt=0;gcalTokenClient=null;gcalConsentGranted=false;gcalStatus("接続解除済み｜S.u.Gへ取り込んだ予定は残ります。","","OFF");}
 setTimeout(initGoogleCalendarUI,300);
 
-// V26.5.14 WEEKLY CALORIE BALANCE + DAILY SCHEDULE
+// V26.5.15 WEEKLY CALORIE BALANCE + DAILY SCHEDULE
 function isoDateObj(iso){const [y,mo,d]=String(iso||today()).split("-").map(Number);return new Date(y,Math.max(0,(mo||1)-1),d||1,12,0,0,0)}
 function isoShift(iso,days){const d=isoDateObj(iso);d.setDate(d.getDate()+Number(days||0));return dateISO(d)}
 function weekBounds(iso=today()){const d=isoDateObj(iso),day=(d.getDay()+6)%7;const start=new Date(d);start.setDate(d.getDate()-day);const end=new Date(start);end.setDate(start.getDate()+6);return {start:dateISO(start),end:dateISO(end)}}
@@ -5963,7 +6105,7 @@ function renderDailySchedule(){
 }
 
 
-// V26.5.14 NEXT DAY PREP: tomorrow schedule -> tonight actions
+// V26.5.15 NEXT DAY PREP: tomorrow schedule -> tonight actions
 function clockMin(v){if(!v||!/^[0-2]?\d:[0-5]\d$/.test(String(v)))return null;const [h,mn]=String(v).split(":").map(Number);if(h>23)return null;return h*60+mn}
 function minClock(v){v=((Math.round(Number(v)||0)%1440)+1440)%1440;return `${String(Math.floor(v/60)).padStart(2,"0")}:${String(v%60).padStart(2,"0")}`}
 function tomorrowPrepAssessment(){
@@ -5999,7 +6141,7 @@ function mealTotals(date=today()){return m().meals.filter(x=>x.date===date).redu
 function recScore(r){if(!r)return null;let s=100;if(r.sleep<7)s-=Math.min(25,(7-r.sleep)*8);s-=Math.max(0,r.fatigue-3)*5;s-=Math.max(0,r.stress-3)*4;s-=r.pain*5;return Math.max(0,Math.round(s))}
 function recAdvice(r){if(!r)return {txt:"回復データ未入力",cls:""};let s=recScore(r);if(r.pain>=6)return {txt:`${s}点｜痛み優先。高負荷回避・種目変更/評価。`,cls:"bad"};if(s>=80)return {txt:`${s}点｜通常〜高強度。前回超えを狙える。`,cls:"ok"};if(s>=60)return {txt:`${s}点｜中強度。RIRを1〜2多めに。`,cls:"warn"};return {txt:`${s}点｜回復優先。低強度または休養。`,cls:"bad"}}
 
-// V26.5.14 READINESS SIGNAL: status -> action -> re-evaluation
+// V26.5.15 READINESS SIGNAL: status -> action -> re-evaluation
 function openRecoverySignal(){const b=document.querySelector('.tab[data-tab="recovery"]');if(b)b.click();setTimeout(()=>document.getElementById("readinessRecovery")?.scrollIntoView({behavior:"smooth",block:"center"}),80)}
 function readinessTodayRecovery(){return (m()?.recovery||[]).filter(x=>x.date===today()).at(-1)||null;}
 function readinessActionStore(){if(!m())return [];if(!Array.isArray(m().readinessActions))m().readinessActions=[];return m().readinessActions;}
@@ -7633,7 +7775,19 @@ function renderResponseEngine(force=false){
   renderResponseBodyProfile();renderResponseMap(part);const a=responseAnalysis(part);renderResponseState(a);renderResponseCompare(a);renderResponseVolume(a);renderResponseBottlenecks(a);renderResponseConfidence(a);renderResponseDecision(a);renderResponseExperiments();renderResponseDashSummary();
 }
 
-function renderAll(){
+
+// V26.5.16 HOME FLOW
+const HOME_VISION_LABEL={slim:"SLIM｜細身・引き締め",athletic:"ATHLETIC｜健康的な筋肉感",fitness:"FITNESS｜メリハリ重視",muscular:"MUSCULAR｜筋量を大きく",physique:"PHYSIQUE｜肩幅・Vシェイプ"};
+function homeVisionKey(){return m()?.goalPlan?.visionType||"";}
+function homeScroll(id){document.getElementById(id)?.scrollIntoView({behavior:"smooth",block:"start"});}
+function selectHomeVision(key){if(!m()||!HOME_VISION_LABEL[key])return;const gp=goalPlanState();gp.visionType=key;gp.idealNote=HOME_VISION_LABEL[key];persist();renderHomeFlow();}
+function homeVisionMarkup(key){if(!key)return '理想タイプを選択';return `<div class="visionSilhouette ${esc(key)}"><i></i></div><b>${esc(HOME_VISION_LABEL[key])}</b>`;}
+async function prepareAiVision(){if(!m())return;const latest=(m().photos||[]).slice().sort((a,b)=>String(a.date||'').localeCompare(String(b.date||''))).at(-1),key=homeVisionKey();if(!latest)return alert("先に現在写真を登録してください");if(!key)return alert("理想イメージを1つ選んでください");const gp=goalPlanState();gp.aiVisionRequest={createdAt:new Date().toISOString(),sourcePhotoPath:latest.path,visionType:key,visionLabel:HOME_VISION_LABEL[key],goal:m().profile?.goal||"",priority:m().profile?.priorityPart||""};persist();alert("AI VISION用データを保存しました。画像生成API接続後、この条件で現在写真から目標VISIONを生成できます。");}
+function latestHomeReflection(date=today()){return (m()?.dailyReflections||[]).filter(x=>x.date===date).at(-1)||null;}
+function saveHomeReflection(){if(!m())return;if(!Array.isArray(m().dailyReflections))m().dailyReflections=[];const row={date:today(),done:document.getElementById("hrDone")?.value||"done",feel:document.getElementById("hrFeel")?.value||"normal",pain:Number(document.getElementById("hrPain")?.value||0),memo:(document.getElementById("hrMemo")?.value||"").trim(),savedAt:new Date().toISOString()};m().dailyReflections=m().dailyReflections.filter(x=>x.date!==row.date);m().dailyReflections.push(row);persist();renderHomeFlow();}
+function homeGapText(){const gp=goalPlanState(),v=homeVisionKey(),p=m()?.profile||{},cur=goalPlanCurrentMetrics(),bits=[];if(v)bits.push(`VISION ${HOME_VISION_LABEL[v]}`);if(cur.weight&&p.targetWeight)bits.push(`体重 ${cur.weight.toFixed(1)} → ${Number(p.targetWeight).toFixed(1)}kg`);if(p.priorityPart)bits.push(`優先 ${p.priorityPart}`);const plan=gp?.lastPlan;if(plan?.input?.priority1)bits.push(`TOP3 ${plan.input.priority1} / ${plan.input.priority2} / ${plan.input.priority3}`);return bits.join("｜")||"理想タイプと目標を選ぶとGAPを表示します。";}
+async function renderHomeFlow(){if(!m())return;const badge=document.getElementById("homeLevelBadge");if(badge)badge.textContent=trainingExperienceLabel(trainingExperience());const rr=(m().recovery||[]).filter(x=>x.date===today()).at(-1)||(m().recovery||[]).at(-1),adv=recAdvice(rr);const mini=document.getElementById("homeReadinessMini");if(mini)mini.innerHTML=rr?`<b>${esc(adv.txt)}</b><br><small>睡眠 ${Number(rr.sleep||0).toFixed(1)}h｜疲労 ${rr.fatigue}/10｜痛み ${rr.pain}/10</small>`:'<b>回復データ未入力</b><br><small>まず今日の睡眠・疲労を入れる</small>';const state=document.getElementById("homeStateSummary"),act=typeof todayActivity==="function"?todayActivity():null;if(state)state.textContent=`食事 ${Math.round(mealTotals().kcal)}kcal｜歩数 ${Math.round(act?.steps||0).toLocaleString()}｜${adv.txt}`;const latest=(m().photos||[]).slice().sort((a,b)=>String(a.date||'').localeCompare(String(b.date||''))).at(-1),url=await goalPlanImageUrl(latest?.path);for(const id of ["homeCurrentPhoto","homeGapCurrent"]){const el=document.getElementById(id);if(el)el.innerHTML=url?`<img src="${url}" alt="current"><small>${esc(latest?.date||'')}</small>`:'現在写真なし';}const key=homeVisionKey(),vs=document.getElementById("homeVisionSelected");if(vs)vs.innerHTML=homeVisionMarkup(key);document.querySelectorAll('#homeVisionChoices [data-vision]').forEach(b=>b.classList.toggle('active',b.dataset.vision===key));const gap=document.getElementById("homeGapSummary");if(gap)gap.textContent=homeGapText();const menu=document.getElementById("homeMenuSummary"),st=smartRecoveryState();if(menu){const focus=menuFocus();menu.innerHTML=`<b>${esc(focus)}｜推奨VOLUME ${st.volume}%</b><br>${esc(st.reason)}<br><small>${trainingExperience()==='beginner'?'初心者モード：基本種目中心。種目を知らなくても説明付きで進めます。':'SMARTで種目・SET・RIRを調整できます。'}</small>`;}const ref=latestHomeReflection(),rv=document.getElementById("homeReviewSaved");if(rv)rv.textContent=ref?`保存済｜${ref.done==='done'?'予定どおり':ref.done==='partial'?'一部実施':'休養'}｜${ref.feel==='good'?'良かった':ref.feel==='hard'?'きつかった':'普通'}${ref.memo?'｜'+ref.memo:''}`:'まだ今日の振り返りはありません。';const next=document.getElementById("homeNextSummary"),last=(m().training||[]).at(-1);if(next){if(!last)next.textContent="トレーニング記録後に次回方針を作成します。";else{const ov=nextOverload(last.exercise, String(last.reps||''));next.innerHTML=`<b>${esc(last.exercise)}</b><br>${esc(ov.txt)}<br><small>同じRIR・REST条件をできるだけ揃えて次回比較。</small>`;}}const ms=document.getElementById("managementSummary");if(ms){const hyd=hydrationDay(today()),hs=hydrationStatus(hyd,today());ms.textContent=`食事 ${Math.round(mealTotals().kcal)}kcal｜睡眠 ${rr?Number(rr.sleep||0).toFixed(1)+'h':'--'}｜歩数 ${Math.round(act?.steps||0).toLocaleString()}｜水分 ${hyd?Math.round(hs.amount)+'ml':'--'}`;}}
+function renderAll(){applyTrainingExperienceUI();
   if(!m())return;
   const ciDateEl=document.getElementById("ciDate");if(ciDateEl&&!ciDateEl.value)ciDateEl.value=today();const rhDateEl=document.getElementById("rhDate");if(rhDateEl&&!rhDateEl.value)rhDateEl.value=today();const scDateEl=document.getElementById("scDate");if(scDateEl&&!scDateEl.value)scDateEl.value=today();
   renderMemberSelect();
@@ -7652,7 +7806,7 @@ function renderAll(){
   prTable.innerHTML=exs.length?`<div style="overflow-x:auto"><table class="table"><tr><th>種目</th><th>部位 / POF</th><th>最新</th><th>総重量</th><th>推定1RM</th><th>前回比</th></tr>${exs.map(ex=>{const t=trainingTrend(ex),x=t?.cur;if(!x)return"";const prx=pr(ex);const isPr=Math.abs(e1rm(x)-e1rm(prx))<0.0001;const meta=trainingMetaForRow(x);return `<tr><td>${esc(ex)}</td><td><small>${esc(meta.part)}<br>${esc(meta.pof)}</small></td><td>${x.weight}kg×${x.reps}×${x.sets}</td><td>${Math.round(t.curVol).toLocaleString()}kg</td><td>${t.curE1.toFixed(1)}kg${isPr?' PR':''}</td><td><small>総 ${fmtPct(t.volPct)}<br>1RM ${fmtPct(t.e1Pct)}</small></td></tr>`}).join("")}</table></div>`:'<span class="muted">記録なし</span>';
   {const hyd=hydrationDay(today()),hs=hydrationStatus(hyd,today()),hydLine=hyd?`<br><small>HYDRATION ${Math.round(hs.amount).toLocaleString()}/${Math.round(hs.goal).toLocaleString()}ml（${hs.pct}%）｜${esc(hydrationAdviceText(hyd))}</small>`:"",rh=dailyRhythmDay(today()),ra=rhythmAssessment(rh),rhLine=rh?`<br><small>RHYTHM ${ra.score}点｜${esc(ra.label)}｜${esc((ra.flags||[]).slice(0,3).map(x=>x.t).join(" / ")||"大きな注意なし")}</small>`:"";recoveryJudge.innerHTML=`<span class="badge ${adv.cls}">${esc(adv.txt)}</span>${hydLine}${rhLine}`;}
   recoveryList.innerHTML=[...mm.recovery].reverse().map((x,ri)=>{let i=mm.recovery.length-1-ri,a=recAdvice(x);return `<div class="item"><div class="row"><div><strong>${x.date}｜睡眠 ${x.sleep}h</strong><br><small>疲労${x.fatigue} / ストレス${x.stress} / 痛み${x.pain}</small><br><span class="badge ${a.cls}">${recScore(x)}点</span></div><button class="danger" onclick="remove('recovery',${i})">削除</button></div></div>`}).join("")||'<span class="muted">記録なし</span>';
-  populateExercisePicker();renderExerciseMasterList();renderTrainingRoutineOptions();renderTrainingQueue();trainingSetMethodChanged(false);renderTrainingPreview();renderPofSummary();syncTrainingMeta();if(!restTimerState.running)restTimerLoadExerciseTarget();restTimerRender();renderNextLoadPanel();renderRomHistory();renderAromHistory();renderAromAsymmetry();renderAromReference();renderShrHistory();renderMovementHistory();renderMoveGuide();renderJointByJoint();renderIntegratedAssessment();renderIntegratedHistory();renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();renderCheckin();renderSmartCore();renderGoalPlan();renderResponseEngine();renderActivity();renderCareHistory();renderCareResponseProfile();renderCareFollowupPanel();renderCareReferralGate();renderMedicalFeedbackHistory();renderCycleHealth();renderHydration();renderDailyRhythm();renderDailySchedule();renderWeeklyNutritionBalance();renderReadinessSignal();drawChart();renderReport();renderPhotos();
+  populateExercisePicker();renderExerciseMasterList();renderTrainingRoutineOptions();renderTrainingQueue();trainingSetMethodChanged(false);renderTrainingPreview();renderPofSummary();syncTrainingMeta();if(!restTimerState.running)restTimerLoadExerciseTarget();restTimerRender();renderNextLoadPanel();renderRomHistory();renderAromHistory();renderAromAsymmetry();renderAromReference();renderShrHistory();renderMovementHistory();renderMoveGuide();renderJointByJoint();renderIntegratedAssessment();renderIntegratedHistory();renderNextAppointment();renderAppointmentAdmin();renderCoachPlan();renderCheckin();renderSmartCore();renderGoalPlan();renderResponseEngine();renderActivity();renderCareHistory();renderCareResponseProfile();renderCareFollowupPanel();renderCareReferralGate();renderMedicalFeedbackHistory();renderCycleHealth();renderHydration();renderDailyRhythm();renderDailySchedule();renderWeeklyNutritionBalance();renderReadinessSignal();drawChart();renderReport();renderPhotos();renderHomeFlow();
 }
 
 function monthLabel(mon){
@@ -7805,7 +7959,7 @@ function normalizeMemberData(data,name="会員"){
   if(!x.smartContext||typeof x.smartContext!=="object")x.smartContext=base.smartContext; else x.smartContext={...base.smartContext,...x.smartContext};
   if(!x.goalPlan||typeof x.goalPlan!=="object"||Array.isArray(x.goalPlan))x.goalPlan=base.goalPlan; else x.goalPlan={...base.goalPlan,...x.goalPlan};
   if(!x.weeklyNutrition||typeof x.weeklyNutrition!=="object"||Array.isArray(x.weeklyNutrition))x.weeklyNutrition=base.weeklyNutrition; else x.weeklyNutrition={...base.weeklyNutrition,...x.weeklyNutrition};
-  ["weights","meals","training","trainingRoutines","recovery","cycleHealth","hydration","dailyRhythm","dailySchedule","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos","medicalReferrals"].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});
+  ["weights","meals","training","trainingRoutines","recovery","cycleHealth","hydration","dailyRhythm","dailySchedule","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos","medicalReferrals","dailyReflections"].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});
   if(!x.restTargets || typeof x.restTargets!=="object" || Array.isArray(x.restTargets))x.restTargets={};
   return x;
 }
