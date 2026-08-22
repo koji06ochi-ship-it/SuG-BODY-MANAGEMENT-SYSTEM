@@ -178,6 +178,75 @@
     return {configured:true, focus:focus};
   }
 
+  function latestFrontPhoto(member) {
+    var rows = (member && Array.isArray(member.photos) ? member.photos : []).filter(function (row) {
+      return !row.view || row.view === "front";
+    }).slice().sort(function (a,b) { return String(a.date || "").localeCompare(String(b.date || "")); });
+    return rows.length ? rows[rows.length - 1] : null;
+  }
+
+  async function photoUrl(photo) {
+    if (!photo) return "";
+    try {
+      if (typeof getPhotoSignedUrl === "function") return await getPhotoSignedUrl(photo);
+    } catch (_error) {}
+    return photo.data || "";
+  }
+
+  function idealAsset(member) {
+    var key = String(member && member.goalPlan && member.goalPlan.idealVisionType || "");
+    if (!key) return "";
+    if (key.indexOf("female_") === 0) return "assets/ideal-vision/v26.5.24/okame-" + key.replace(/^female_/, "") + ".webp";
+    return "assets/ideal-vision/v26.5.20/" + key + ".webp";
+  }
+
+  function gapPriorities(member) {
+    var goal = member && member.goalPlan || {};
+    var rows = [goal.priority1, goal.priority2, goal.priority3].filter(function (x) { return x && x !== "全身"; });
+    if (rows.length) return rows.slice(0,3);
+    try {
+      if (typeof window.generateIdealDailyPlan === "function") {
+        var plan = window.generateIdealDailyPlan();
+        if (plan && Array.isArray(plan.priorities)) return plan.priorities.map(function (x) { return x && x.part; }).filter(Boolean).slice(0,3);
+      }
+    } catch (_error) {}
+    return [];
+  }
+
+  async function renderMemberBodyGap(member) {
+    var home = document.getElementById("dash");
+    if (!home || !member || !member.goalPlan || !member.goalPlan.idealVisionType) return null;
+    var anchor = document.getElementById("memberHomeIdealCard") || document.getElementById("idealTodayCard") || home.querySelector(".card");
+    if (!anchor) return null;
+    var card = document.getElementById("memberBodyGapCard");
+    if (!card) {
+      card = document.createElement("div");
+      card.id = "memberBodyGapCard";
+      card.className = "card";
+      card.style.borderColor = "#5a4a25";
+      card.style.background = "linear-gradient(180deg,#18150e,#101012)";
+      anchor.insertAdjacentElement("afterend", card);
+    }
+    var current = latestFrontPhoto(member);
+    var currentUrl = await photoUrl(current);
+    var ideal = idealAsset(member);
+    var tops = gapPriorities(member);
+    var label = idealLabel(member);
+    card.innerHTML = '<div style="font-size:10px;color:#d8b35b;font-weight:900;letter-spacing:.06em">CURRENT → IDEAL → GAP</div>' +
+      '<div style="font-size:18px;font-weight:900;color:#fff;margin-top:4px">今の体 ↔ 理想の体</div>' +
+      '<div class="photoCompareGrid" style="margin-top:10px">' +
+        '<div class="photoCompareBox">' +
+          (currentUrl ? '<img src="' + currentUrl + '" alt="今の体">' : '<div style="aspect-ratio:3/4;display:grid;place-items:center;padding:10px;color:#888;text-align:center">正面写真がまだありません</div>') +
+          '<div class="photoCompareMeta"><span class="photoCompareTag">CURRENT</span>' + escapeText(current ? current.date || "最新写真" : "今の体") + '</div>' +
+        '</div>' +
+        '<div class="photoCompareBox"><img src="' + ideal + '?v=26.5.36" alt="理想の体"><div class="photoCompareMeta"><span class="photoCompareTag">IDEAL</span>' + escapeText(label) + '</div></div>' +
+      '</div>' +
+      '<div style="margin-top:10px;padding:10px;background:#0d0d10;border:1px solid #2d2a22;border-radius:10px"><span style="font-size:9px;color:#999">GAP｜優先部位 TOP3</span><b style="display:block;color:#f3d98b;font-size:15px;margin-top:4px">' + escapeText(tops.join("・") || "評価待ち") + '</b></div>' +
+      (!currentUrl ? '<button type="button" class="secondary" style="width:100%;margin-top:10px" onclick="openTab(\'photos\')">今の体を撮影・登録する</button>' : '') +
+      '<button type="button" class="primary" style="width:100%;margin-top:8px" onclick="openMemberMenu()">このGAPから今日のメニューを見る</button>';
+    return { current: !!currentUrl, priorities: tops };
+  }
+
   function countForToday(rows, date) {
     return (Array.isArray(rows) ? rows : []).filter(function (row) { return row && String(row.date || "") === date; }).length;
   }
@@ -213,6 +282,7 @@
     homeAction(member, state);
     renderSmartIdealEntry();
     renderMemberHomeIdeal(member);
+    renderMemberBodyGap(member);
     return {selected: !!(member.goalPlan && member.goalPlan.idealVisionType), volume: state ? state.volume : null};
   }
 
@@ -280,12 +350,14 @@
   window.renderSugTrainingProgress=renderTrainingProgress;
   window.renderSmartIdealEntry=renderSmartIdealEntry;
   window.renderMemberHomeIdeal=renderMemberHomeIdeal;
+  window.renderMemberBodyGap=renderMemberBodyGap;
   window.openMemberIdealVision=openMemberIdealVision;
   window.openMemberCheckin=openMemberCheckin;
   window.openMemberMenu=openMemberMenu;
   window.startSugDailyTraining=startDailyTraining;
-  window.__SUG_SIMPLE_UI_VERSION__="26.5.31";
+  window.__SUG_SIMPLE_UI_VERSION__="26.5.36";
 
   installPlanRefresh(); renderHome(); renderTrainingProgress(); renderSmartIdealEntry();
   document.addEventListener("DOMContentLoaded",function(){ installPlanRefresh(); renderHome(); renderTrainingProgress(); renderSmartIdealEntry(); });
+  setInterval(function(){ try { if (memberState()) renderHome(); } catch (_error) {} }, 1200);
 })();
