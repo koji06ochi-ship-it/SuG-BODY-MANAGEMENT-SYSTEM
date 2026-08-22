@@ -1,30 +1,4 @@
-const SW_VERSION = 'sug-v26.5.82-app-grid';
+const SW_VERSION = 'sug-v26.5.83-ui-reset';
 self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', event => event.waitUntil((async()=>{ await self.clients.claim(); })()));
-self.addEventListener('fetch', event => {
- const req=event.request;
- if(req.mode==='navigate'){
-  event.respondWith((async()=>{try{const res=await fetch(req,{cache:'no-store'});const type=res.headers.get('content-type')||'';if(!type.includes('text/html'))return res;let html=await res.text();const tags=[
-   '<script src="assets/member-home/v26.5.41/engine.js?v=26.5.82"></script>',
-   '<script src="assets/member-home/v26.5.42/login-render.js?v=26.5.82"></script>',
-   '<script src="assets/member-home/v26.5.44/onboarding.js?v=26.5.82"></script>',
-   '<script src="assets/member-home/v26.5.45/food-flow.js?v=26.5.82"></script>',
-   '<script src="assets/member-home/v26.5.49/force-food-home.js?v=26.5.82"></script>',
-   '<script src="assets/member-home/v26.5.51/meal-ai-client.js?v=26.5.82"></script>',
-   '<script src="assets/member-home/v26.5.51/food-photo.js?v=26.5.82"></script>',
-   '<script src="assets/member-home/v26.5.56/movement-ai.js?v=26.5.82"></script>',
-   '<script src="assets/member-home/v26.5.57/craving-check.js?v=26.5.82"></script>',
-   '<script src="assets/member-home/v26.5.59/trainer-clinical-guard.js?v=26.5.82"></script>',
-   '<script src="assets/trainer-ai/v26.5.61/movement-error-hub.js?v=26.5.82"></script>',
-   '<script src="assets/trainer-ai/v26.5.70/quick-screen.js?v=26.5.82"></script>',
-   '<script src="assets/trainer-ai/v26.5.76/neuro-tabs.js?v=26.5.82"></script>',
-   '<script src="assets/ui/v26.5.77/folder-navigation.js?v=26.5.82"></script>',
-   '<script src="assets/ui/v26.5.79/folder-fix.js?v=26.5.82"></script>',
-   '<script src="assets/ui/v26.5.80/six-category-navigation.js?v=26.5.82"></script>',
-   '<script src="assets/ui/v26.5.81/home-cleanup.js?v=26.5.82"></script>',
-   '<script src="assets/ui/v26.5.82/app-grid-navigation.js?v=26.5.82"></script>',
-   '<script src="assets/ui-feedback/v26.5.52/click-feedback.js?v=26.5.82"></script>'
-  ];tags.forEach(tag=>{const src=tag.match(/src="([^"]+)/)?.[1]?.split('?')[0]||'';if(src&&!html.includes(src))html=html.replace('</body>',tag+'\n</body>')});const headers=new Headers(res.headers);headers.set('cache-control','no-store, no-cache, must-revalidate');headers.delete('content-length');return new Response(html,{status:res.status,statusText:res.statusText,headers})}catch(_e){return fetch(req,{cache:'no-store'})}})());return;
- }
- event.respondWith(fetch(req,{cache:'no-store'}));
-});
+self.addEventListener('fetch', event => {const req=event.request;if(req.mode==='navigate'){event.respondWith((async()=>{try{const res=await fetch(req,{cache:'no-store'}),type=res.headers.get('content-type')||'';if(!type.includes('text/html'))return res;let html=await res.text();const tags=['assets/member-home/v26.5.41/engine.js','assets/member-home/v26.5.42/login-render.js','assets/member-home/v26.5.44/onboarding.js','assets/member-home/v26.5.45/food-flow.js','assets/member-home/v26.5.49/force-food-home.js','assets/member-home/v26.5.51/meal-ai-client.js','assets/member-home/v26.5.51/food-photo.js','assets/member-home/v26.5.56/movement-ai.js','assets/member-home/v26.5.57/craving-check.js','assets/member-home/v26.5.59/trainer-clinical-guard.js','assets/trainer-ai/v26.5.61/movement-error-hub.js','assets/trainer-ai/v26.5.70/quick-screen.js','assets/trainer-ai/v26.5.76/neuro-tabs.js','assets/ui/v26.5.80/six-category-navigation.js','assets/ui/v26.5.81/home-cleanup.js','assets/ui/v26.5.82/app-grid-navigation.js','assets/ui/v26.5.83/emergency-ui-reset.js','assets/ui-feedback/v26.5.52/click-feedback.js'];tags.forEach(src=>{if(!html.includes(src))html=html.replace('</body>',`<script src="${src}?v=26.5.83"></script>\n</body>`)});const h=new Headers(res.headers);h.set('cache-control','no-store, no-cache, must-revalidate');h.delete('content-length');return new Response(html,{status:res.status,statusText:res.statusText,headers:h})}catch(e){return fetch(req,{cache:'no-store'})}})());return}event.respondWith(fetch(req,{cache:'no-store'}))});
