@@ -76,6 +76,14 @@
     return false;
   }
 
+  function openMemberCheckin() {
+    return openSugTab("recovery");
+  }
+
+  function openMemberMenu() {
+    return openSugTab("smart");
+  }
+
   function renderSmartIdealEntry() {
     var member = memberState();
     var panel = document.getElementById("smart");
@@ -145,7 +153,7 @@
     }
     var goal = member.goalPlan || {};
     if (!goal.idealVisionType) {
-      card.innerHTML = '<div style="font-size:10px;color:#d8b35b;font-weight:900">あなたの目標</div><div style="font-size:18px;font-weight:900;margin-top:5px">理想を設定中です</div><div style="font-size:10px;color:#aaa;margin-top:5px">担当者が理想とトレーニング方針を設定すると、ここに表示されます。</div>';
+      card.innerHTML = '<div style="font-size:10px;color:#d8b35b;font-weight:900">はじめに</div><div style="font-size:18px;font-weight:900;margin-top:5px">担当者が理想を設定します</div><div style="font-size:10px;color:#aaa;margin-top:5px">設定後は、今日の状態を入力するだけでメニューが自動で決まります。</div>';
       return {configured:false};
     }
     var plan = null;
@@ -159,11 +167,14 @@
     var state = recoveryState();
     var volume = state && Number(state.volume);
     var todayText = volume <= 0 ? "今日は回復を優先" : volume < 100 ? "体調に合わせて調整" : "トレーニング可能";
-    card.innerHTML = '<div style="font-size:10px;color:#d8b35b;font-weight:900;letter-spacing:.06em">YOUR BODY PLAN</div>' +
+    card.innerHTML = '<div style="font-size:10px;color:#d8b35b;font-weight:900;letter-spacing:.06em">TODAY FLOW</div>' +
       '<div style="font-size:19px;font-weight:900;color:#fff;margin-top:5px">あなたの理想：' + escapeText(idealLabel(member)) + '</div>' +
-      '<div style="margin-top:9px;padding:9px;background:#0d0d10;border:1px solid #2d2a22;border-radius:10px"><span style="font-size:9px;color:#999">今日の重点</span><b style="display:block;font-size:15px;color:#f3d98b;margin-top:3px">' + escapeText(focus) + '</b></div>' +
-      '<div style="font-size:10px;color:#aaa;margin-top:8px">' + escapeText(todayText) + '。理想・回復・記録から今日の内容を自動調整します。</div>' +
-      '<button type="button" class="primary" style="width:100%;margin-top:10px" onclick="startSugDailyTraining()">今日のメニューを見る</button>';
+      '<div style="margin-top:10px;display:grid;gap:7px">' +
+        '<button type="button" class="secondary" style="width:100%;text-align:left;padding:12px" onclick="openMemberCheckin()"><b style="display:block;color:#f3d98b;font-size:13px">① 今日の状態を入力</b><small style="display:block;color:#aaa;margin-top:4px">睡眠・疲労・痛み・回復状態を入力</small></button>' +
+        '<button type="button" class="primary" style="width:100%;text-align:left;padding:12px" onclick="openMemberMenu()"><b style="display:block;font-size:13px">② 今日のメニューを見る</b><small style="display:block;margin-top:4px;opacity:.75">理想＋今日の状態から自動作成</small></button>' +
+        '<button type="button" class="secondary" style="width:100%;text-align:left;padding:12px" onclick="openTab(\'training\')"><b style="display:block;color:#f3d98b;font-size:13px">③ トレーニングを記録</b><small style="display:block;color:#aaa;margin-top:4px">実施した重量・REP・SET・RIRを保存</small></button>' +
+      '</div>' +
+      '<div style="margin-top:10px;padding:9px;background:#0d0d10;border:1px solid #2d2a22;border-radius:10px"><span style="font-size:9px;color:#999">今日の重点</span><b style="display:block;font-size:15px;color:#f3d98b;margin-top:3px">' + escapeText(focus) + '</b><small style="display:block;color:#aaa;margin-top:4px">' + escapeText(todayText) + '</small></div>';
     return {configured:true, focus:focus};
   }
 
@@ -189,7 +200,7 @@
     var selected = !!goal.idealVisionType;
     var stopped = selected && state && Number(state.volume) <= 0;
     button.textContent = stopped ? "今日の回復状態を確認する" : "今日のメニューを始める";
-    hint.textContent = !selected ? "担当者が理想を設定するとメニューが自動で準備されます。" : stopped ? "痛み・疲労・休養予定を優先します。" : "理想・回復・記録から今日の内容を自動調整します。";
+    hint.textContent = !selected ? "担当者が理想を設定するとメニューが自動で準備されます。" : stopped ? "痛み・疲労・休養予定を優先します。" : "上の①→②→③の順に進めればOKです。";
   }
 
   function renderHome() {
@@ -270,8 +281,10 @@
   window.renderSmartIdealEntry=renderSmartIdealEntry;
   window.renderMemberHomeIdeal=renderMemberHomeIdeal;
   window.openMemberIdealVision=openMemberIdealVision;
+  window.openMemberCheckin=openMemberCheckin;
+  window.openMemberMenu=openMemberMenu;
   window.startSugDailyTraining=startDailyTraining;
-  window.__SUG_SIMPLE_UI_VERSION__="26.5.30";
+  window.__SUG_SIMPLE_UI_VERSION__="26.5.31";
 
   installPlanRefresh(); renderHome(); renderTrainingProgress(); renderSmartIdealEntry();
   document.addEventListener("DOMContentLoaded",function(){ installPlanRefresh(); renderHome(); renderTrainingProgress(); renderSmartIdealEntry(); });
