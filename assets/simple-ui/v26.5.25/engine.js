@@ -48,6 +48,66 @@
     return expanded;
   }
 
+  function idealProfileFor(member) {
+    var goal = member && member.goalPlan || {};
+    var profiles = window.__SUG_IDEAL_DAILY_PROFILES__ || {};
+    var key = String(goal.idealVisionType || "");
+    return { key: key, profile: profiles[key] || {}, goal: goal };
+  }
+
+  function idealLabel(member) {
+    var current = idealProfileFor(member);
+    var key = current.key;
+    var profile = current.profile;
+    var goal = current.goal;
+    var selected = goal.idealVisionName || profile.name || "未設定";
+    if (!key) return selected;
+    return (key.indexOf("female_") === 0 ? "おかめ" : "ひょっとこ") + "｜" + selected;
+  }
+
+  function openMemberIdealVision() {
+    var member = memberState();
+    if (!member) return false;
+    if (typeof window.openIdealVision === "function") {
+      window.openIdealVision();
+      return true;
+    }
+    openSugTab("dash");
+    return false;
+  }
+
+  function renderSmartIdealEntry() {
+    var member = memberState();
+    var panel = document.getElementById("smart");
+    if (!member || !panel) return null;
+    var hero = panel.querySelector(".smartHero") || panel.querySelector(".card");
+    if (!hero) return null;
+
+    var box = document.getElementById("smartMemberIdealVision");
+    if (!box) {
+      box = document.createElement("div");
+      box.id = "smartMemberIdealVision";
+      box.className = "card";
+      box.style.borderColor = "#6b5724";
+      box.style.background = "linear-gradient(180deg,#18150e,#101012)";
+      box.style.marginTop = "0";
+      hero.insertAdjacentElement("afterend", box);
+    }
+
+    var label = idealLabel(member);
+    var configured = !!(member.goalPlan && member.goalPlan.idealVisionType);
+    box.innerHTML =
+      '<div style="display:flex;justify-content:space-between;gap:10px;align-items:center">' +
+        '<div><div style="font-size:11px;color:#d8b35b;font-weight:900;letter-spacing:.06em">この会員の理想設定</div>' +
+        '<div style="font-size:17px;font-weight:900;color:#fff;margin-top:5px">' + escapeText(label) + '</div>' +
+        '<div style="font-size:10px;color:#aaa;line-height:1.55;margin-top:4px">理想のひょっとこ／おかめを選ぶと、この会員専用の重点部位・SET・今日のメニューに反映します。</div></div>' +
+      '</div>' +
+      '<button type="button" class="primary" style="width:100%;margin-top:10px" onclick="openMemberIdealVision()">' +
+        (configured ? '理想を変更する' : '理想のひょっとこを選ぶ') +
+      '</button>';
+    return {configured: configured, label: label};
+  }
+
   function homeSignal(state) {
     var box = document.getElementById("simpleHomeSignal");
     if (!box) return;
@@ -73,7 +133,7 @@
     var gender = key.indexOf("female_") === 0 ? "女性｜おかめ" : key ? "男性｜ひょっとこ" : "";
     var selected = goal.idealVisionName || profile.name || "まだ未設定";
     box.innerHTML = '<span>理想体型：<b>' + escapeText(gender ? gender + " " + selected : selected) +
-      '</b></span><button class="simpleTextAction" type="button" onclick="openIdealVision()">変更</button>';
+      '</b></span><button class="simpleTextAction" type="button" onclick="openMemberIdealVision()">変更</button>';
   }
 
   function countForToday(rows, date) {
@@ -116,6 +176,7 @@
     homeGoal(member);
     homeRecords(member);
     homeAction(member, state);
+    renderSmartIdealEntry();
     return {selected: !!(member.goalPlan && member.goalPlan.idealVisionType), volume: state ? state.volume : null};
   }
 
@@ -218,15 +279,19 @@
   window.toggleSugHomeDetails = toggleHomeDetails;
   window.renderSugSimpleHome = renderHome;
   window.renderSugTrainingProgress = renderTrainingProgress;
+  window.renderSmartIdealEntry = renderSmartIdealEntry;
+  window.openMemberIdealVision = openMemberIdealVision;
   window.startSugDailyTraining = startDailyTraining;
-  window.__SUG_SIMPLE_UI_VERSION__ = "26.5.25";
+  window.__SUG_SIMPLE_UI_VERSION__ = "26.5.29";
 
   installPlanRefresh();
   renderHome();
   renderTrainingProgress();
+  renderSmartIdealEntry();
   document.addEventListener("DOMContentLoaded", function () {
     installPlanRefresh();
     renderHome();
     renderTrainingProgress();
+    renderSmartIdealEntry();
   });
 })();
