@@ -1,4 +1,4 @@
-const SW_VERSION = 'sug-v26.5.34-member-ideal-compare';
+const SW_VERSION = 'sug-v26.5.35-session-resume';
 self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', event => event.waitUntil((async()=>{
   await self.clients.claim();
@@ -6,8 +6,8 @@ self.addEventListener('activate', event => event.waitUntil((async()=>{
   for (const client of clients) {
     try {
       const url = new URL(client.url);
-      if (!url.searchParams.has('v') || url.searchParams.get('v') !== '26.5.34') {
-        url.searchParams.set('v','26.5.34');
+      if (!url.searchParams.has('v') || url.searchParams.get('v') !== '26.5.35') {
+        url.searchParams.set('v','26.5.35');
         await client.navigate(url.toString());
       }
     } catch (_e) {}
@@ -22,10 +22,12 @@ self.addEventListener('fetch', event => {
         const type = res.headers.get('content-type') || '';
         if (!type.includes('text/html')) return res;
         let html = await res.text();
-        const tag = '<script src="assets/member-ideal-compare/v26.5.32/engine.js?v=26.5.34"></script>';
-        if (!html.includes('member-ideal-compare/v26.5.32/engine.js')) {
-          html = html.replace('</body>', tag + '\n</body>');
-        }
+        const tags = [
+          '<script src="assets/member-ideal-compare/v26.5.32/engine.js?v=26.5.35"></script>',
+          '<script src="assets/session-resume/v26.5.35/engine.js?v=26.5.35"></script>'
+        ];
+        if (!html.includes('member-ideal-compare/v26.5.32/engine.js')) html = html.replace('</body>', tags[0] + '\n</body>');
+        if (!html.includes('session-resume/v26.5.35/engine.js')) html = html.replace('</body>', tags[1] + '\n</body>');
         const headers = new Headers(res.headers);
         headers.set('cache-control', 'no-store, no-cache, must-revalidate');
         headers.delete('content-length');
