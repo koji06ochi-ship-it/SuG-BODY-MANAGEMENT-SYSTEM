@@ -82,7 +82,6 @@
     if (!member || !panel) return null;
     var hero = panel.querySelector(".smartHero") || panel.querySelector(".card");
     if (!hero) return null;
-
     var box = document.getElementById("smartMemberIdealVision");
     if (!box) {
       box = document.createElement("div");
@@ -93,18 +92,13 @@
       box.style.marginTop = "0";
       hero.insertAdjacentElement("afterend", box);
     }
-
     var label = idealLabel(member);
     var configured = !!(member.goalPlan && member.goalPlan.idealVisionType);
-    box.innerHTML =
-      '<div style="display:flex;justify-content:space-between;gap:10px;align-items:center">' +
-        '<div><div style="font-size:11px;color:#d8b35b;font-weight:900;letter-spacing:.06em">この会員の理想設定</div>' +
-        '<div style="font-size:17px;font-weight:900;color:#fff;margin-top:5px">' + escapeText(label) + '</div>' +
-        '<div style="font-size:10px;color:#aaa;line-height:1.55;margin-top:4px">理想のひょっとこ／おかめを選ぶと、この会員専用の重点部位・SET・今日のメニューに反映します。</div></div>' +
-      '</div>' +
+    box.innerHTML = '<div style="font-size:11px;color:#d8b35b;font-weight:900;letter-spacing:.06em">この会員の理想設定</div>' +
+      '<div style="font-size:17px;font-weight:900;color:#fff;margin-top:5px">' + escapeText(label) + '</div>' +
+      '<div style="font-size:10px;color:#aaa;line-height:1.55;margin-top:4px">理想から重点部位・SET・今日のメニューを自動調整します。</div>' +
       '<button type="button" class="primary" style="width:100%;margin-top:10px" onclick="openMemberIdealVision()">' +
-        (configured ? '理想を変更する' : '理想のひょっとこを選ぶ') +
-      '</button>';
+      (configured ? '理想を変更する' : '理想のひょっとこを選ぶ') + '</button>';
     return {configured: configured, label: label};
   }
 
@@ -115,8 +109,7 @@
     var stopped = state && volume <= 0;
     var adjusted = state && volume > 0 && volume < 100;
     var tone = stopped ? "bad" : adjusted ? "warn" : "ok";
-    var label = !state ? "今日の状態を確認中" : stopped ? "今日は回復を優先" :
-      adjusted ? "体調に合わせて負荷を調整" : "いつもどおり開始できます";
+    var label = !state ? "今日の状態を確認中" : stopped ? "今日は回復を優先" : adjusted ? "体調に合わせて負荷を調整" : "いつもどおり開始できます";
     var reason = state && state.reason || "回復・痛み・疲労から無理のない進め方を表示します。";
     box.classList.remove("ok", "warn", "bad");
     box.classList.add(tone);
@@ -132,14 +125,50 @@
     var profile = profiles[key] || {};
     var gender = key.indexOf("female_") === 0 ? "女性｜おかめ" : key ? "男性｜ひょっとこ" : "";
     var selected = goal.idealVisionName || profile.name || "まだ未設定";
-    box.innerHTML = '<span>理想体型：<b>' + escapeText(gender ? gender + " " + selected : selected) +
-      '</b></span><button class="simpleTextAction" type="button" onclick="openMemberIdealVision()">変更</button>';
+    box.innerHTML = '<span>理想体型：<b>' + escapeText(gender ? gender + " " + selected : selected) + '</b></span>';
+  }
+
+  function renderMemberHomeIdeal(member) {
+    var home = document.getElementById("dash");
+    if (!home || !member) return null;
+    var anchor = document.getElementById("simpleHomeSignal") || home.querySelector(".card");
+    if (!anchor) return null;
+    var card = document.getElementById("memberHomeIdealCard");
+    if (!card) {
+      card = document.createElement("div");
+      card.id = "memberHomeIdealCard";
+      card.className = "card";
+      card.style.borderColor = "#5a4a25";
+      card.style.background = "linear-gradient(180deg,#18150e,#101012)";
+      var host = anchor.closest && anchor.closest(".card");
+      if (host) host.insertAdjacentElement("afterend", card); else anchor.insertAdjacentElement("afterend", card);
+    }
+    var goal = member.goalPlan || {};
+    if (!goal.idealVisionType) {
+      card.innerHTML = '<div style="font-size:10px;color:#d8b35b;font-weight:900">あなたの目標</div><div style="font-size:18px;font-weight:900;margin-top:5px">理想を設定中です</div><div style="font-size:10px;color:#aaa;margin-top:5px">担当者が理想とトレーニング方針を設定すると、ここに表示されます。</div>';
+      return {configured:false};
+    }
+    var plan = null;
+    try { if (typeof window.generateIdealDailyPlan === "function") plan = window.generateIdealDailyPlan(); } catch (_error) {}
+    var priorities = [];
+    if (plan && Array.isArray(plan.priorities)) priorities = plan.priorities.map(function (x) { return x && x.part; }).filter(Boolean).slice(0,3);
+    if (!priorities.length) {
+      [goal.priority1, goal.priority2, goal.priority3].forEach(function (x) { if (x && x !== "全身" && priorities.indexOf(x) < 0) priorities.push(x); });
+    }
+    var focus = priorities.length ? priorities.join("・") : "全身バランス";
+    var state = recoveryState();
+    var volume = state && Number(state.volume);
+    var todayText = volume <= 0 ? "今日は回復を優先" : volume < 100 ? "体調に合わせて調整" : "トレーニング可能";
+    card.innerHTML = '<div style="font-size:10px;color:#d8b35b;font-weight:900;letter-spacing:.06em">YOUR BODY PLAN</div>' +
+      '<div style="font-size:19px;font-weight:900;color:#fff;margin-top:5px">あなたの理想：' + escapeText(idealLabel(member)) + '</div>' +
+      '<div style="margin-top:9px;padding:9px;background:#0d0d10;border:1px solid #2d2a22;border-radius:10px"><span style="font-size:9px;color:#999">今日の重点</span><b style="display:block;font-size:15px;color:#f3d98b;margin-top:3px">' + escapeText(focus) + '</b></div>' +
+      '<div style="font-size:10px;color:#aaa;margin-top:8px">' + escapeText(todayText) + '。理想・回復・記録から今日の内容を自動調整します。</div>' +
+      '<button type="button" class="primary" style="width:100%;margin-top:10px" onclick="startSugDailyTraining()">今日のメニューを見る</button>';
+    return {configured:true, focus:focus};
   }
 
   function countForToday(rows, date) {
-    return (Array.isArray(rows) ? rows : []).filter(function (row) {
-      return row && String(row.date || "") === date;
-    }).length;
+    return (Array.isArray(rows) ? rows : []).filter(function (row) { return row && String(row.date || "") === date; }).length;
   }
 
   function homeRecords(member) {
@@ -149,10 +178,7 @@
     var trained = countForToday(member.training, date);
     var meals = countForToday(member.meals, date);
     var weighed = countForToday(member.weights, date) > 0;
-    box.innerHTML = '<div class="simpleRecordCell"><span>トレーニング</span><b>' + trained +
-      '種目</b></div><div class="simpleRecordCell"><span>食事</span><b>' + meals +
-      '件</b></div><div class="simpleRecordCell"><span>体重</span><b>' +
-      (weighed ? "記録済" : "未記録") + "</b></div>";
+    box.innerHTML = '<div class="simpleRecordCell"><span>トレーニング</span><b>' + trained + '種目</b></div><div class="simpleRecordCell"><span>食事</span><b>' + meals + '件</b></div><div class="simpleRecordCell"><span>体重</span><b>' + (weighed ? "記録済" : "未記録") + '</b></div>';
   }
 
   function homeAction(member, state) {
@@ -163,9 +189,7 @@
     var selected = !!goal.idealVisionType;
     var stopped = selected && state && Number(state.volume) <= 0;
     button.textContent = stopped ? "今日の回復状態を確認する" : "今日のメニューを始める";
-    hint.textContent = !selected ? "初回は男女と理想体型を選ぶだけ。メニューは自動で準備されます。" :
-      stopped ? "痛み・疲労・休養予定を優先し、今日は高負荷メニューを開始しません。" :
-      "押すだけで１種目目を準備。記録すると次の種目へ自動で進みます。";
+    hint.textContent = !selected ? "担当者が理想を設定するとメニューが自動で準備されます。" : stopped ? "痛み・疲労・休養予定を優先します。" : "理想・回復・記録から今日の内容を自動調整します。";
   }
 
   function renderHome() {
@@ -177,6 +201,7 @@
     homeRecords(member);
     homeAction(member, state);
     renderSmartIdealEntry();
+    renderMemberHomeIdeal(member);
     return {selected: !!(member.goalPlan && member.goalPlan.idealVisionType), volume: state ? state.volume : null};
   }
 
@@ -185,20 +210,13 @@
     if (!box) return null;
     var queue = typeof trainingSessionQueue === "undefined" ? [] : trainingSessionQueue;
     var cursor = typeof trainingQueueCursor === "undefined" ? -1 : trainingQueueCursor;
-    if (!queue.length || cursor < 0) {
-      box.classList.remove("active");
-      box.innerHTML = "";
-      return {total: 0, current: 0, done: false};
-    }
+    if (!queue.length || cursor < 0) { box.classList.remove("active"); box.innerHTML = ""; return {total:0,current:0,done:false}; }
     var done = cursor >= queue.length;
     var current = done ? queue.length : cursor + 1;
     var row = done ? null : queue[cursor];
     box.classList.add("active");
-    box.innerHTML = done ? "<b>今日のメニュー完了｜" + queue.length + "種目</b><small>すべての種目を記録しました。</small>" :
-      "<b>今日のメニュー｜" + current + " / " + queue.length + "</b><small>" +
-      escapeText(row.exercise) + "｜" + Number(row.sets || 0) + "セット × " +
-      Number(row.reps || 0) + "回｜記録すると次へ進みます。</small>";
-    return {total: queue.length, current: current, done: done};
+    box.innerHTML = done ? '<b>今日のメニュー完了｜' + queue.length + '種目</b><small>すべての種目を記録しました。</small>' : '<b>今日のメニュー｜' + current + ' / ' + queue.length + '</b><small>' + escapeText(row.exercise) + '｜' + Number(row.sets || 0) + 'セット × ' + Number(row.reps || 0) + '回｜記録すると次へ進みます。</small>';
+    return {total:queue.length,current:current,done:done};
   }
 
   function parseRestSeconds(row) {
@@ -210,88 +228,51 @@
   function planTemplate(row) {
     var last = row.last || {};
     var reps = String(row.reps || "").match(/\d+/);
-    return {
-      exercise: String(row.name || row.exercise || ""),
-      part: String(row.part || ""),
-      pof: String(row.pof || ""),
-      setMethod: "straight",
-      setGroup: "",
-      weight: Number(last.weight || 0),
-      reps: reps ? Number(reps[0]) : Number(last.reps || 10),
-      sets: Math.max(1, Number(row.sets || 1)),
-      rir: Number(row.rir == null ? 2 : row.rir),
-      plannedRestSec: parseRestSeconds(row),
-      setDetails: [],
-      memo: ""
-    };
+    return {exercise:String(row.name || row.exercise || ""),part:String(row.part || ""),pof:String(row.pof || ""),setMethod:"straight",setGroup:"",weight:Number(last.weight || 0),reps:reps ? Number(reps[0]) : Number(last.reps || 10),sets:Math.max(1,Number(row.sets || 1)),rir:Number(row.rir == null ? 2 : row.rir),plannedRestSec:parseRestSeconds(row),setDetails:[],memo:""};
   }
 
   function clearExerciseFilters() {
-    ["trainingExerciseSearch", "trainingExercisePart"].forEach(function (id) {
-      var input = document.getElementById(id);
-      if (input) input.value = "";
-    });
+    ["trainingExerciseSearch","trainingExercisePart"].forEach(function (id) { var input=document.getElementById(id); if(input) input.value=""; });
   }
 
   function startDailyTraining() {
-    var member = memberState();
-    if (!member) return {status: "NO_MEMBER"};
-    var goal = member.goalPlan || {};
-    if (!goal.idealVisionType) {
-      if (typeof window.openIdealVision === "function") window.openIdealVision();
-      return {status: "VISION_REQUIRED"};
-    }
-    if (typeof window.generateIdealDailyPlan !== "function") return {status: "PLAN_UNAVAILABLE"};
-    var plan = window.generateIdealDailyPlan();
-    if (!plan) return {status: "PLAN_UNAVAILABLE"};
-    if (plan.stopReason || Number(plan.volume) <= 0 || !Array.isArray(plan.exercises) || !plan.exercises.length) {
-      renderHome();
-      openSugTab("recovery");
-      return {status: "RECOVERY_FIRST", reason: plan.stopReason || plan.recoveryReason || "今日は回復を優先してください。"};
-    }
+    var member=memberState();
+    if(!member) return {status:"NO_MEMBER"};
+    var goal=member.goalPlan || {};
+    if(!goal.idealVisionType){ if(typeof window.openIdealVision==="function") window.openIdealVision(); return {status:"VISION_REQUIRED"}; }
+    if(typeof window.generateIdealDailyPlan!=="function") return {status:"PLAN_UNAVAILABLE"};
+    var plan=window.generateIdealDailyPlan();
+    if(!plan) return {status:"PLAN_UNAVAILABLE"};
+    if(plan.stopReason || Number(plan.volume)<=0 || !Array.isArray(plan.exercises) || !plan.exercises.length){ renderHome(); openSugTab("recovery"); return {status:"RECOVERY_FIRST",reason:plan.stopReason || plan.recoveryReason || "今日は回復を優先してください。"}; }
     clearExerciseFilters();
-    trainingSessionQueue = plan.exercises.map(planTemplate);
-    trainingQueueCursor = 0;
-    trainingQueueLabel = "今日のメニュー｜" + String(plan.idealName || goal.idealVisionName || "理想体型");
-    if (typeof applyTrainingTemplate === "function") applyTrainingTemplate(trainingSessionQueue[0]);
-    if (typeof renderTrainingQueue === "function") renderTrainingQueue();
-    else renderTrainingProgress();
-    openSugTab("training");
-    renderTrainingProgress();
-    renderHome();
-    return {status: "STARTED", total: trainingSessionQueue.length, exercise: trainingSessionQueue[0].exercise};
+    trainingSessionQueue=plan.exercises.map(planTemplate);
+    trainingQueueCursor=0;
+    trainingQueueLabel="今日のメニュー｜"+String(plan.idealName || goal.idealVisionName || "理想体型");
+    if(typeof applyTrainingTemplate==="function") applyTrainingTemplate(trainingSessionQueue[0]);
+    if(typeof renderTrainingQueue==="function") renderTrainingQueue(); else renderTrainingProgress();
+    openSugTab("training"); renderTrainingProgress(); renderHome();
+    return {status:"STARTED",total:trainingSessionQueue.length,exercise:trainingSessionQueue[0].exercise};
   }
 
   function installPlanRefresh() {
-    var original = window.generateIdealDailyPlan;
-    if (typeof original !== "function" || original.__sugSimpleHomeWrapped) return;
-    function refreshedPlan() {
-      var plan = original.apply(this, arguments);
-      renderHome();
-      return plan;
-    }
-    refreshedPlan.__sugSimpleHomeWrapped = true;
-    window.generateIdealDailyPlan = refreshedPlan;
+    var original=window.generateIdealDailyPlan;
+    if(typeof original!=="function" || original.__sugSimpleHomeWrapped) return;
+    function refreshedPlan(){ var plan=original.apply(this,arguments); return plan; }
+    refreshedPlan.__sugSimpleHomeWrapped=true;
+    window.generateIdealDailyPlan=refreshedPlan;
   }
 
-  window.openTab = openSugTab;
-  window.toggleSugNavigation = toggleNavigation;
-  window.toggleSugHomeDetails = toggleHomeDetails;
-  window.renderSugSimpleHome = renderHome;
-  window.renderSugTrainingProgress = renderTrainingProgress;
-  window.renderSmartIdealEntry = renderSmartIdealEntry;
-  window.openMemberIdealVision = openMemberIdealVision;
-  window.startSugDailyTraining = startDailyTraining;
-  window.__SUG_SIMPLE_UI_VERSION__ = "26.5.29";
+  window.openTab=openSugTab;
+  window.toggleSugNavigation=toggleNavigation;
+  window.toggleSugHomeDetails=toggleHomeDetails;
+  window.renderSugSimpleHome=renderHome;
+  window.renderSugTrainingProgress=renderTrainingProgress;
+  window.renderSmartIdealEntry=renderSmartIdealEntry;
+  window.renderMemberHomeIdeal=renderMemberHomeIdeal;
+  window.openMemberIdealVision=openMemberIdealVision;
+  window.startSugDailyTraining=startDailyTraining;
+  window.__SUG_SIMPLE_UI_VERSION__="26.5.30";
 
-  installPlanRefresh();
-  renderHome();
-  renderTrainingProgress();
-  renderSmartIdealEntry();
-  document.addEventListener("DOMContentLoaded", function () {
-    installPlanRefresh();
-    renderHome();
-    renderTrainingProgress();
-    renderSmartIdealEntry();
-  });
+  installPlanRefresh(); renderHome(); renderTrainingProgress(); renderSmartIdealEntry();
+  document.addEventListener("DOMContentLoaded",function(){ installPlanRefresh(); renderHome(); renderTrainingProgress(); renderSmartIdealEntry(); });
 })();
