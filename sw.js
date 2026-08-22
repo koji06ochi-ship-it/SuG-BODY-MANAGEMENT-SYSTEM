@@ -1,4 +1,4 @@
-const SW_VERSION = 'sug-v26.5.77-app-folders';
+const SW_VERSION = 'sug-v26.5.77-folder-navigation';
 self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', event => event.waitUntil((async()=>{ await self.clients.claim(); })()));
 self.addEventListener('fetch', event => {
@@ -18,8 +18,7 @@ self.addEventListener('fetch', event => {
    '<script src="assets/trainer-ai/v26.5.61/movement-error-hub.js?v=26.5.77"></script>',
    '<script src="assets/trainer-ai/v26.5.70/quick-screen.js?v=26.5.77"></script>',
    '<script src="assets/trainer-ai/v26.5.76/neuro-tabs.js?v=26.5.77"></script>',
-   '<script src="assets/ui/v26.5.77/app-folders.js?v=26.5.77"></script>',
-   '<script src="assets/ui/v26.5.77/haruto-yuyu-role.js?v=26.5.77"></script>',
+   '<script src="assets/ui/v26.5.77/folder-navigation.js?v=26.5.77"></script>',
    '<script src="assets/ui-feedback/v26.5.52/click-feedback.js?v=26.5.77"></script>'
   ];tags.forEach(tag=>{const src=tag.match(/src="([^"]+)/)?.[1]?.split('?')[0]||'';if(src&&!html.includes(src))html=html.replace('</body>',tag+'\n</body>')});const headers=new Headers(res.headers);headers.set('cache-control','no-store, no-cache, must-revalidate');headers.delete('content-length');return new Response(html,{status:res.status,statusText:res.statusText,headers})}catch(_e){return fetch(req,{cache:'no-store'})}})());return;
  }
