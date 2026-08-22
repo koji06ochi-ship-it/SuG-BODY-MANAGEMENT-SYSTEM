@@ -1,0 +1,7 @@
+(function(){'use strict';
+const ENDPOINT='https://sug-private-engine.vercel.app/api/meal-analyze';
+function token(){try{return typeof accessToken!=='undefined'&&accessToken?accessToken:(window.accessToken||'')}catch(_e){return window.accessToken||''}}
+function compress(file){return new Promise((resolve,reject)=>{const img=new Image();const u=URL.createObjectURL(file);img.onload=()=>{try{const max=1280;let w=img.naturalWidth||img.width,h=img.naturalHeight||img.height;const scale=Math.min(1,max/Math.max(w,h));w=Math.max(1,Math.round(w*scale));h=Math.max(1,Math.round(h*scale));const c=document.createElement('canvas');c.width=w;c.height=h;const ctx=c.getContext('2d');ctx.drawImage(img,0,0,w,h);URL.revokeObjectURL(u);resolve(c.toDataURL('image/jpeg',0.78))}catch(e){reject(e)}};img.onerror=()=>{URL.revokeObjectURL(u);reject(new Error('IMAGE_READ_FAILED'))};img.src=u})}
+async function analyze(file){const auth=token();if(!auth)throw new Error('LOGIN_REQUIRED');const image=await compress(file);const res=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+auth,'X-SUG-Client':'body-management-v26.5.47'},body:JSON.stringify({image_data_url:image,context:'S.u.G会員の食事写真。写真に見える範囲で推定する。'})});const body=await res.json().catch(()=>null);if(!res.ok||!body?.ok){const code=body?.error||('HTTP_'+res.status);throw new Error(code)}return body.analysis}
+window.SUG_MEAL_AI_ENDPOINT=ENDPOINT;window.SUG_MEAL_AI_ANALYZE=analyze;window.__SUG_MEAL_AI_CLIENT_VERSION__='26.5.47';
+})();
