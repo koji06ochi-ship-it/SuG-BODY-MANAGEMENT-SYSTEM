@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var VERSION = "26.5.27";
+  var VERSION = "26.5.28";
   var PENDING_KEY = "sug-health-import-pending-v1";
   var MAX_PENDING_AGE = 30 * 60 * 1000;
   var pendingMemory = null;
@@ -72,9 +72,15 @@
       throw new Error("日付は YYYY-MM-DD 形式で指定してください。");
     }
 
-    var sleepHours = numberValue(rawValue(payload, ["sleep", "sleepHours", "sleep_hours"]), "睡眠時間", 0, 24, false);
+    var sleepInput = rawValue(payload, ["sleep", "sleepHours", "sleep_hours"]);
+    var sleepHours = numberValue(sleepInput, "睡眠時間", 0, 86400, false);
     var sleepMinutes = numberValue(rawValue(payload, ["sleepMinutes", "sleep_minutes"]), "睡眠時間", 0, 1440, false);
+    var sleepSeconds = numberValue(rawValue(payload, ["sleepSeconds", "sleep_seconds", "sleepDuration", "sleep_duration"]), "睡眠時間", 0, 86400, false);
+    if (sleepHours != null && sleepHours > 24) {
+      sleepHours = Math.round(sleepHours / 3600 * 100) / 100;
+    }
     if (sleepHours == null && sleepMinutes != null) sleepHours = Math.round(sleepMinutes / 60 * 100) / 100;
+    if (sleepHours == null && sleepSeconds != null) sleepHours = Math.round(sleepSeconds / 3600 * 100) / 100;
 
     var normalized = {
       member: String(rawValue(payload, ["member", "member_id", "memberId"]) || ""),
@@ -86,6 +92,14 @@
       hrv: numberValue(rawValue(payload, ["hrv", "heartRateVariability", "heart_rate_variability"]), "心拍変動", 1, 500, false),
       activeCalories: numberValue(rawValue(payload, ["activeCalories", "active_calories", "activeEnergy", "active_energy", "kcal"]), "活動消費", 0, 15000, true)
     };
+    if (normalized.steps != null && normalized.sleep != null && normalized.steps > 50000 &&
+        Math.abs(normalized.steps - normalized.sleep * 3600) <= 60) {
+      normalized.steps = null;
+      normalized.invalidSteps = "睡眠時間の秒数が歩数に混入していました。";
+    }
+    if (normalized.sleep != null && normalized.sleep > 16) {
+      normalized.sleepWarning = "睡眠記録が重複している可能性があります。";
+    }
     if ([normalized.steps, normalized.sleep, normalized.heart, normalized.weight, normalized.hrv,
       normalized.activeCalories].every(function (value) { return value == null; })) {
       throw new Error("歩数・睡眠・心拍・体重のうち、取り込む数値を設定してください。");
@@ -189,6 +203,17 @@
     });
     var syncedAt = new Date().toISOString();
 
+    if (normalized.steps == null && normalized.sleep != null) {
+      var staleActivity = lastForDate(member.activity, normalized.date);
+      if (staleActivity && staleActivity.healthSource === "apple_health" &&
+          Number(staleActivity.steps) > 50000 &&
+          Math.abs(Number(staleActivity.steps) - normalized.sleep * 3600) <= 60) {
+        staleActivity.steps = null;
+        staleActivity.healthSyncedAt = syncedAt;
+        normalized.invalidSteps = "睡眠時間が誤って保存された歩数を消去しました。";
+      }
+    }
+
     if (normalized.steps != null || normalized.activeCalories != null) {
       var activity = upsertDate(member.activity, normalized.date, function () {
         return {date: normalized.date, steps: 0, memo: "iPhoneヘルスケアから取り込み"};
@@ -236,14 +261,18 @@
       heartRate: normalized.heart,
       weight: normalized.weight,
       hrv: normalized.hrv,
-      activeCalories: normalized.activeCalories
+      activeCalories: normalized.activeCalories,
+      warning: [normalized.invalidSteps, normalized.sleepWarning].filter(Boolean).join(" ")
     };
 
     clearPending();
     if (typeof persist === "function") persist();
-    if (typeof renderAll === "function") renderAll();
-    else renderSync();
-    setSyncStatus("ヘルスケアのデータを取り込み、会員記録へ反映しました。", "ok");
+    try {
+      if (typeof renderAll === "function") renderAll();
+    } catch (error) {
+      if (typeof console !== "undefined" && console.error) console.error("Health sync render", error);
+    }
+    renderSync();
     return {ok: true, date: normalized.date, values: normalized};
   }
 
@@ -287,10 +316,27 @@
     var recovery = lastForDate(member.recovery, date);
     var weight = lastForDate(member.weights, date);
     var vitals = lastForDate(member.healthVitals, date);
-    var steps = activity && Number.isFinite(Number(activity.steps)) ? Number(activity.steps).toLocaleString() + "歩" : "--";
-    var sleep = recovery && Number(recovery.sleep) > 0 ? Number(recovery.sleep).toFixed(1) + "h" : "--";
-    var heart = vitals && Number(vitals.heartRate) > 0 ? Number(vitals.heartRate) + "回" : "--";
-    var kilograms = weight && Number(weight.weight) > 0 ? Number(weight.weight).toFixed(1) + "kg" : "--";
+    var sameDate = String(sync.lastDate || "") === date;
+    var syncedSteps = sameDate && sync.steps != null ? Number(sync.steps) : null;
+    var storedSteps = activity && activity.steps != null && Number.isFinite(Number(activity.steps)) ? Number(activity.steps) : null;
+    if (storedSteps != null && storedSteps > 60000 && activity.healthSource === "apple_health") {
+      activity.steps = null;
+      storedSteps = null;
+      if (sameDate) sync.steps = null;
+      sync.warning = "歩数に睡眠の秒数が混入していたため、誤った数値を除外しました。";
+      if (typeof persist === "function") persist();
+    }
+    var stepsNumber = syncedSteps != null && syncedSteps <= 60000 ? syncedSteps : storedSteps;
+    var sleepNumber = recovery && Number(recovery.sleep) > 0 ? Number(recovery.sleep) :
+      sameDate && Number(sync.sleep) > 0 ? Number(sync.sleep) : null;
+    var heartNumber = vitals && Number(vitals.heartRate) > 0 ? Number(vitals.heartRate) :
+      sameDate && Number(sync.heartRate) > 0 ? Number(sync.heartRate) : null;
+    var weightNumber = weight && Number(weight.weight) > 0 ? Number(weight.weight) :
+      sameDate && Number(sync.weight) > 0 ? Number(sync.weight) : null;
+    var steps = stepsNumber != null ? stepsNumber.toLocaleString() + "歩" : "--";
+    var sleep = sleepNumber != null ? sleepNumber.toFixed(1) + "h" : "--";
+    var heart = heartNumber != null ? heartNumber + "回" : "--";
+    var kilograms = weightNumber != null ? weightNumber.toFixed(1) + "kg" : "--";
 
     var metrics = document.getElementById("sugHealthMetrics");
     if (metrics) metrics.innerHTML = metricCell("歩数", steps) + metricCell("睡眠", sleep) +
@@ -318,7 +364,18 @@
       var display = Number.isNaN(updated.getTime()) ? sync.lastDate :
         updated.getMonth() + 1 + "/" + updated.getDate() + " " +
         String(updated.getHours()).padStart(2, "0") + ":" + String(updated.getMinutes()).padStart(2, "0");
-      setSyncStatus("最終取り込み：" + display + "｜歩数・睡眠・心拍・体重を既存の記録へ反映します。", "ok");
+      var imported = [];
+      if (sameDate && sync.steps != null) imported.push("歩数 " + steps);
+      if (sameDate && sync.sleep != null) imported.push("睡眠 " + sleep);
+      if (sameDate && sync.heartRate != null) imported.push("心拍 " + heart);
+      if (sameDate && sync.weight != null) imported.push("体重 " + kilograms);
+      var missing = [];
+      if (sameDate && sync.steps == null) missing.push("歩数なし");
+      if (sameDate && sync.sleep == null) missing.push("睡眠なし");
+      var message = "最終取り込み：" + display + "｜" + imported.join("・");
+      if (missing.length) message += "｜" + missing.join("・");
+      if (sync.warning) message += "｜" + sync.warning;
+      setSyncStatus(message, sync.warning ? "bad" : "ok");
     }
     return {connected: !!sync.lastSyncedAt, steps: steps, sleep: sleep, heart: heart, weight: kilograms};
   }
@@ -374,9 +431,27 @@
     return true;
   }
 
+  function saveManualHealth() {
+    var fields = {steps: "sugHealthManualSteps", sleep: "sugHealthManualSleep"};
+    var payload = {member: memberId()};
+    Object.keys(fields).forEach(function (key) {
+      var field = document.getElementById(fields[key]);
+      if (field && String(field.value || "").trim() !== "") payload[key] = field.value;
+    });
+    var result = applyPayload(payload);
+    if (result.ok) {
+      Object.keys(fields).forEach(function (key) {
+        var field = document.getElementById(fields[key]);
+        if (field) field.value = "";
+      });
+    }
+    return result;
+  }
+
   window.openSugHealthSetup = openSetup;
   window.copySugHealthShortcutUrl = copyShortcutUrl;
   window.openSugShortcutsApp = openShortcuts;
+  window.saveSugManualHealth = saveManualHealth;
   window.renderSugHealthSync = renderSync;
   window.consumeSugHealthImport = consumePending;
   window.importSugHealthPayload = applyPayload;
