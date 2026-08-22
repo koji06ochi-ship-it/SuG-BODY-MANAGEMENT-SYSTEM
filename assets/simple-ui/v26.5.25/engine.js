@@ -1,363 +1,41 @@
-(function () {
-  "use strict";
-
-  function memberState() {
-    try { return typeof m === "function" ? m() : null; } catch (_error) { return null; }
-  }
-
-  function escapeText(value) {
-    if (typeof esc === "function") return esc(String(value == null ? "" : value));
-    return String(value == null ? "" : value).replace(/[&<>"']/g, function (character) {
-      return {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[character];
-    });
-  }
-
-  function todayValue() {
-    try { return typeof today === "function" ? today() : ""; } catch (_error) { return ""; }
-  }
-
-  function recoveryState() {
-    try { return typeof smartRecoveryState === "function" ? smartRecoveryState() : null; }
-    catch (_error) { return null; }
-  }
-
-  function openSugTab(name) {
-    var tab = document.querySelector('.tab[data-tab="' + String(name || "") + '"]');
-    if (!tab || typeof tab.click !== "function") return false;
-    tab.click();
-    return true;
-  }
-
-  function toggleNavigation() {
-    var navigation = document.getElementById("sugPrimaryNavigation");
-    var button = document.getElementById("simpleNavMore");
-    if (!navigation || !button) return false;
-    var expanded = navigation.classList.toggle("sug-nav-expanded");
-    button.setAttribute("aria-expanded", String(expanded));
-    button.textContent = expanded ? "閉じる" : "その他";
-    return expanded;
-  }
-
-  function toggleHomeDetails() {
-    var home = document.getElementById("dash");
-    var button = document.getElementById("simpleHomeDetailsToggle");
-    if (!home || !button) return false;
-    var expanded = home.classList.toggle("sug-home-expanded");
-    button.setAttribute("aria-expanded", String(expanded));
-    button.textContent = expanded ? "４週間プラン・分析・詳細を閉じる" : "４週間プラン・分析・詳細を開く";
-    return expanded;
-  }
-
-  function idealProfileFor(member) {
-    var goal = member && member.goalPlan || {};
-    var profiles = window.__SUG_IDEAL_DAILY_PROFILES__ || {};
-    var key = String(goal.idealVisionType || "");
-    return { key: key, profile: profiles[key] || {}, goal: goal };
-  }
-
-  function idealLabel(member) {
-    var current = idealProfileFor(member);
-    var key = current.key;
-    var profile = current.profile;
-    var goal = current.goal;
-    var selected = goal.idealVisionName || profile.name || "未設定";
-    if (!key) return selected;
-    return (key.indexOf("female_") === 0 ? "おかめ" : "ひょっとこ") + "｜" + selected;
-  }
-
-  function openMemberIdealVision() {
-    var member = memberState();
-    if (!member) return false;
-    if (typeof window.openIdealVision === "function") {
-      window.openIdealVision();
-      return true;
-    }
-    openSugTab("dash");
-    return false;
-  }
-
-  function openMemberCheckin() {
-    return openSugTab("recovery");
-  }
-
-  function openMemberMenu() {
-    return openSugTab("smart");
-  }
-
-  function renderSmartIdealEntry() {
-    var member = memberState();
-    var panel = document.getElementById("smart");
-    if (!member || !panel) return null;
-    var hero = panel.querySelector(".smartHero") || panel.querySelector(".card");
-    if (!hero) return null;
-    var box = document.getElementById("smartMemberIdealVision");
-    if (!box) {
-      box = document.createElement("div");
-      box.id = "smartMemberIdealVision";
-      box.className = "card";
-      box.style.borderColor = "#6b5724";
-      box.style.background = "linear-gradient(180deg,#18150e,#101012)";
-      box.style.marginTop = "0";
-      hero.insertAdjacentElement("afterend", box);
-    }
-    var label = idealLabel(member);
-    var configured = !!(member.goalPlan && member.goalPlan.idealVisionType);
-    box.innerHTML = '<div style="font-size:11px;color:#d8b35b;font-weight:900;letter-spacing:.06em">この会員の理想設定</div>' +
-      '<div style="font-size:17px;font-weight:900;color:#fff;margin-top:5px">' + escapeText(label) + '</div>' +
-      '<div style="font-size:10px;color:#aaa;line-height:1.55;margin-top:4px">理想から重点部位・SET・今日のメニューを自動調整します。</div>' +
-      '<button type="button" class="primary" style="width:100%;margin-top:10px" onclick="openMemberIdealVision()">' +
-      (configured ? '理想を変更する' : '理想のひょっとこを選ぶ') + '</button>';
-    return {configured: configured, label: label};
-  }
-
-  function homeSignal(state) {
-    var box = document.getElementById("simpleHomeSignal");
-    if (!box) return;
-    var volume = state && Number(state.volume);
-    var stopped = state && volume <= 0;
-    var adjusted = state && volume > 0 && volume < 100;
-    var tone = stopped ? "bad" : adjusted ? "warn" : "ok";
-    var label = !state ? "今日の状態を確認中" : stopped ? "今日は回復を優先" : adjusted ? "体調に合わせて負荷を調整" : "いつもどおり開始できます";
-    var reason = state && state.reason || "回復・痛み・疲労から無理のない進め方を表示します。";
-    box.classList.remove("ok", "warn", "bad");
-    box.classList.add(tone);
-    box.innerHTML = "<b>" + escapeText(label) + "</b><small>" + escapeText(reason) + "</small>";
-  }
-
-  function homeGoal(member) {
-    var box = document.getElementById("simpleHomeGoal");
-    if (!box) return;
-    var goal = member.goalPlan || {};
-    var key = String(goal.idealVisionType || "");
-    var profiles = window.__SUG_IDEAL_DAILY_PROFILES__ || {};
-    var profile = profiles[key] || {};
-    var gender = key.indexOf("female_") === 0 ? "女性｜おかめ" : key ? "男性｜ひょっとこ" : "";
-    var selected = goal.idealVisionName || profile.name || "まだ未設定";
-    box.innerHTML = '<span>理想体型：<b>' + escapeText(gender ? gender + " " + selected : selected) + '</b></span>';
-  }
-
-  function renderMemberHomeIdeal(member) {
-    var home = document.getElementById("dash");
-    if (!home || !member) return null;
-    var anchor = document.getElementById("simpleHomeSignal") || home.querySelector(".card");
-    if (!anchor) return null;
-    var card = document.getElementById("memberHomeIdealCard");
-    if (!card) {
-      card = document.createElement("div");
-      card.id = "memberHomeIdealCard";
-      card.className = "card";
-      card.style.borderColor = "#5a4a25";
-      card.style.background = "linear-gradient(180deg,#18150e,#101012)";
-      var host = anchor.closest && anchor.closest(".card");
-      if (host) host.insertAdjacentElement("afterend", card); else anchor.insertAdjacentElement("afterend", card);
-    }
-    var goal = member.goalPlan || {};
-    if (!goal.idealVisionType) {
-      card.innerHTML = '<div style="font-size:10px;color:#d8b35b;font-weight:900">はじめに</div><div style="font-size:18px;font-weight:900;margin-top:5px">担当者が理想を設定します</div><div style="font-size:10px;color:#aaa;margin-top:5px">設定後は、今日の状態を入力するだけでメニューが自動で決まります。</div>';
-      return {configured:false};
-    }
-    var plan = null;
-    try { if (typeof window.generateIdealDailyPlan === "function") plan = window.generateIdealDailyPlan(); } catch (_error) {}
-    var priorities = [];
-    if (plan && Array.isArray(plan.priorities)) priorities = plan.priorities.map(function (x) { return x && x.part; }).filter(Boolean).slice(0,3);
-    if (!priorities.length) {
-      [goal.priority1, goal.priority2, goal.priority3].forEach(function (x) { if (x && x !== "全身" && priorities.indexOf(x) < 0) priorities.push(x); });
-    }
-    var focus = priorities.length ? priorities.join("・") : "全身バランス";
-    var state = recoveryState();
-    var volume = state && Number(state.volume);
-    var todayText = volume <= 0 ? "今日は回復を優先" : volume < 100 ? "体調に合わせて調整" : "トレーニング可能";
-    card.innerHTML = '<div style="font-size:10px;color:#d8b35b;font-weight:900;letter-spacing:.06em">TODAY FLOW</div>' +
-      '<div style="font-size:19px;font-weight:900;color:#fff;margin-top:5px">あなたの理想：' + escapeText(idealLabel(member)) + '</div>' +
-      '<div style="margin-top:10px;display:grid;gap:7px">' +
-        '<button type="button" class="secondary" style="width:100%;text-align:left;padding:12px" onclick="openMemberCheckin()"><b style="display:block;color:#f3d98b;font-size:13px">① 今日の状態を入力</b><small style="display:block;color:#aaa;margin-top:4px">睡眠・疲労・痛み・回復状態を入力</small></button>' +
-        '<button type="button" class="primary" style="width:100%;text-align:left;padding:12px" onclick="openMemberMenu()"><b style="display:block;font-size:13px">② 今日のメニューを見る</b><small style="display:block;margin-top:4px;opacity:.75">理想＋今日の状態から自動作成</small></button>' +
-        '<button type="button" class="secondary" style="width:100%;text-align:left;padding:12px" onclick="openTab(\'training\')"><b style="display:block;color:#f3d98b;font-size:13px">③ トレーニングを記録</b><small style="display:block;color:#aaa;margin-top:4px">実施した重量・REP・SET・RIRを保存</small></button>' +
-      '</div>' +
-      '<div style="margin-top:10px;padding:9px;background:#0d0d10;border:1px solid #2d2a22;border-radius:10px"><span style="font-size:9px;color:#999">今日の重点</span><b style="display:block;font-size:15px;color:#f3d98b;margin-top:3px">' + escapeText(focus) + '</b><small style="display:block;color:#aaa;margin-top:4px">' + escapeText(todayText) + '</small></div>';
-    return {configured:true, focus:focus};
-  }
-
-  function latestFrontPhoto(member) {
-    var rows = (member && Array.isArray(member.photos) ? member.photos : []).filter(function (row) {
-      return !row.view || row.view === "front";
-    }).slice().sort(function (a,b) { return String(a.date || "").localeCompare(String(b.date || "")); });
-    return rows.length ? rows[rows.length - 1] : null;
-  }
-
-  async function photoUrl(photo) {
-    if (!photo) return "";
-    try {
-      if (typeof getPhotoSignedUrl === "function") return await getPhotoSignedUrl(photo);
-    } catch (_error) {}
-    return photo.data || "";
-  }
-
-  function idealAsset(member) {
-    var key = String(member && member.goalPlan && member.goalPlan.idealVisionType || "");
-    if (!key) return "";
-    if (key.indexOf("female_") === 0) return "assets/ideal-vision/v26.5.24/okame-" + key.replace(/^female_/, "") + ".webp";
-    return "assets/ideal-vision/v26.5.20/" + key + ".webp";
-  }
-
-  function gapPriorities(member) {
-    var goal = member && member.goalPlan || {};
-    var rows = [goal.priority1, goal.priority2, goal.priority3].filter(function (x) { return x && x !== "全身"; });
-    if (rows.length) return rows.slice(0,3);
-    try {
-      if (typeof window.generateIdealDailyPlan === "function") {
-        var plan = window.generateIdealDailyPlan();
-        if (plan && Array.isArray(plan.priorities)) return plan.priorities.map(function (x) { return x && x.part; }).filter(Boolean).slice(0,3);
-      }
-    } catch (_error) {}
-    return [];
-  }
-
-  async function renderMemberBodyGap(member) {
-    var home = document.getElementById("dash");
-    if (!home || !member || !member.goalPlan || !member.goalPlan.idealVisionType) return null;
-    var anchor = document.getElementById("memberHomeIdealCard") || document.getElementById("idealTodayCard") || home.querySelector(".card");
-    if (!anchor) return null;
-    var card = document.getElementById("memberBodyGapCard");
-    if (!card) {
-      card = document.createElement("div");
-      card.id = "memberBodyGapCard";
-      card.className = "card";
-      card.style.borderColor = "#5a4a25";
-      card.style.background = "linear-gradient(180deg,#18150e,#101012)";
-      anchor.insertAdjacentElement("afterend", card);
-    }
-    var current = latestFrontPhoto(member);
-    var currentUrl = await photoUrl(current);
-    var ideal = idealAsset(member);
-    var tops = gapPriorities(member);
-    var label = idealLabel(member);
-    card.innerHTML = '<div style="font-size:10px;color:#d8b35b;font-weight:900;letter-spacing:.06em">CURRENT → IDEAL → GAP</div>' +
-      '<div style="font-size:18px;font-weight:900;color:#fff;margin-top:4px">今の体 ↔ 理想の体</div>' +
-      '<div class="photoCompareGrid" style="margin-top:10px">' +
-        '<div class="photoCompareBox">' +
-          (currentUrl ? '<img src="' + currentUrl + '" alt="今の体">' : '<div style="aspect-ratio:3/4;display:grid;place-items:center;padding:10px;color:#888;text-align:center">正面写真がまだありません</div>') +
-          '<div class="photoCompareMeta"><span class="photoCompareTag">CURRENT</span>' + escapeText(current ? current.date || "最新写真" : "今の体") + '</div>' +
-        '</div>' +
-        '<div class="photoCompareBox"><img src="' + ideal + '?v=26.5.36" alt="理想の体"><div class="photoCompareMeta"><span class="photoCompareTag">IDEAL</span>' + escapeText(label) + '</div></div>' +
-      '</div>' +
-      '<div style="margin-top:10px;padding:10px;background:#0d0d10;border:1px solid #2d2a22;border-radius:10px"><span style="font-size:9px;color:#999">GAP｜優先部位 TOP3</span><b style="display:block;color:#f3d98b;font-size:15px;margin-top:4px">' + escapeText(tops.join("・") || "評価待ち") + '</b></div>' +
-      (!currentUrl ? '<button type="button" class="secondary" style="width:100%;margin-top:10px" onclick="openTab(\'photos\')">今の体を撮影・登録する</button>' : '') +
-      '<button type="button" class="primary" style="width:100%;margin-top:8px" onclick="openMemberMenu()">このGAPから今日のメニューを見る</button>';
-    return { current: !!currentUrl, priorities: tops };
-  }
-
-  function countForToday(rows, date) {
-    return (Array.isArray(rows) ? rows : []).filter(function (row) { return row && String(row.date || "") === date; }).length;
-  }
-
-  function homeRecords(member) {
-    var box = document.getElementById("simpleHomeRecordSummary");
-    if (!box) return;
-    var date = todayValue();
-    var trained = countForToday(member.training, date);
-    var meals = countForToday(member.meals, date);
-    var weighed = countForToday(member.weights, date) > 0;
-    box.innerHTML = '<div class="simpleRecordCell"><span>トレーニング</span><b>' + trained + '種目</b></div><div class="simpleRecordCell"><span>食事</span><b>' + meals + '件</b></div><div class="simpleRecordCell"><span>体重</span><b>' + (weighed ? "記録済" : "未記録") + '</b></div>';
-  }
-
-  function homeAction(member, state) {
-    var button = document.getElementById("simpleHomeStart");
-    var hint = document.getElementById("simpleHomeActionHint");
-    if (!button || !hint) return;
-    var goal = member.goalPlan || {};
-    var selected = !!goal.idealVisionType;
-    var stopped = selected && state && Number(state.volume) <= 0;
-    button.textContent = stopped ? "今日の回復状態を確認する" : "今日のメニューを始める";
-    hint.textContent = !selected ? "担当者が理想を設定するとメニューが自動で準備されます。" : stopped ? "痛み・疲労・休養予定を優先します。" : "上の①→②→③の順に進めればOKです。";
-  }
-
-  function renderHome() {
-    var member = memberState();
-    if (!member) return null;
-    var state = recoveryState();
-    homeSignal(state);
-    homeGoal(member);
-    homeRecords(member);
-    homeAction(member, state);
-    renderSmartIdealEntry();
-    renderMemberHomeIdeal(member);
-    renderMemberBodyGap(member);
-    return {selected: !!(member.goalPlan && member.goalPlan.idealVisionType), volume: state ? state.volume : null};
-  }
-
-  function renderTrainingProgress() {
-    var box = document.getElementById("simpleTrainingQueue");
-    if (!box) return null;
-    var queue = typeof trainingSessionQueue === "undefined" ? [] : trainingSessionQueue;
-    var cursor = typeof trainingQueueCursor === "undefined" ? -1 : trainingQueueCursor;
-    if (!queue.length || cursor < 0) { box.classList.remove("active"); box.innerHTML = ""; return {total:0,current:0,done:false}; }
-    var done = cursor >= queue.length;
-    var current = done ? queue.length : cursor + 1;
-    var row = done ? null : queue[cursor];
-    box.classList.add("active");
-    box.innerHTML = done ? '<b>今日のメニュー完了｜' + queue.length + '種目</b><small>すべての種目を記録しました。</small>' : '<b>今日のメニュー｜' + current + ' / ' + queue.length + '</b><small>' + escapeText(row.exercise) + '｜' + Number(row.sets || 0) + 'セット × ' + Number(row.reps || 0) + '回｜記録すると次へ進みます。</small>';
-    return {total:queue.length,current:current,done:done};
-  }
-
-  function parseRestSeconds(row) {
-    if (Number(row.restSeconds || 0) >= 10) return Number(row.restSeconds);
-    var match = String(row.rest || "").match(/\d+/);
-    return match ? Number(match[0]) : null;
-  }
-
-  function planTemplate(row) {
-    var last = row.last || {};
-    var reps = String(row.reps || "").match(/\d+/);
-    return {exercise:String(row.name || row.exercise || ""),part:String(row.part || ""),pof:String(row.pof || ""),setMethod:"straight",setGroup:"",weight:Number(last.weight || 0),reps:reps ? Number(reps[0]) : Number(last.reps || 10),sets:Math.max(1,Number(row.sets || 1)),rir:Number(row.rir == null ? 2 : row.rir),plannedRestSec:parseRestSeconds(row),setDetails:[],memo:""};
-  }
-
-  function clearExerciseFilters() {
-    ["trainingExerciseSearch","trainingExercisePart"].forEach(function (id) { var input=document.getElementById(id); if(input) input.value=""; });
-  }
-
-  function startDailyTraining() {
-    var member=memberState();
-    if(!member) return {status:"NO_MEMBER"};
-    var goal=member.goalPlan || {};
-    if(!goal.idealVisionType){ if(typeof window.openIdealVision==="function") window.openIdealVision(); return {status:"VISION_REQUIRED"}; }
-    if(typeof window.generateIdealDailyPlan!=="function") return {status:"PLAN_UNAVAILABLE"};
-    var plan=window.generateIdealDailyPlan();
-    if(!plan) return {status:"PLAN_UNAVAILABLE"};
-    if(plan.stopReason || Number(plan.volume)<=0 || !Array.isArray(plan.exercises) || !plan.exercises.length){ renderHome(); openSugTab("recovery"); return {status:"RECOVERY_FIRST",reason:plan.stopReason || plan.recoveryReason || "今日は回復を優先してください。"}; }
-    clearExerciseFilters();
-    trainingSessionQueue=plan.exercises.map(planTemplate);
-    trainingQueueCursor=0;
-    trainingQueueLabel="今日のメニュー｜"+String(plan.idealName || goal.idealVisionName || "理想体型");
-    if(typeof applyTrainingTemplate==="function") applyTrainingTemplate(trainingSessionQueue[0]);
-    if(typeof renderTrainingQueue==="function") renderTrainingQueue(); else renderTrainingProgress();
-    openSugTab("training"); renderTrainingProgress(); renderHome();
-    return {status:"STARTED",total:trainingSessionQueue.length,exercise:trainingSessionQueue[0].exercise};
-  }
-
-  function installPlanRefresh() {
-    var original=window.generateIdealDailyPlan;
-    if(typeof original!=="function" || original.__sugSimpleHomeWrapped) return;
-    function refreshedPlan(){ var plan=original.apply(this,arguments); return plan; }
-    refreshedPlan.__sugSimpleHomeWrapped=true;
-    window.generateIdealDailyPlan=refreshedPlan;
-  }
-
-  window.openTab=openSugTab;
-  window.toggleSugNavigation=toggleNavigation;
-  window.toggleSugHomeDetails=toggleHomeDetails;
-  window.renderSugSimpleHome=renderHome;
-  window.renderSugTrainingProgress=renderTrainingProgress;
-  window.renderSmartIdealEntry=renderSmartIdealEntry;
-  window.renderMemberHomeIdeal=renderMemberHomeIdeal;
-  window.renderMemberBodyGap=renderMemberBodyGap;
-  window.openMemberIdealVision=openMemberIdealVision;
-  window.openMemberCheckin=openMemberCheckin;
-  window.openMemberMenu=openMemberMenu;
-  window.startSugDailyTraining=startDailyTraining;
-  window.__SUG_SIMPLE_UI_VERSION__="26.5.36";
-
-  installPlanRefresh(); renderHome(); renderTrainingProgress(); renderSmartIdealEntry();
-  document.addEventListener("DOMContentLoaded",function(){ installPlanRefresh(); renderHome(); renderTrainingProgress(); renderSmartIdealEntry(); });
-  setInterval(function(){ try { if (memberState()) renderHome(); } catch (_error) {} }, 1200);
+(function(){
+'use strict';
+var VERSION='26.5.78';
+function q(s,r){return (r||document).querySelector(s)}
+function qa(s,r){return Array.from((r||document).querySelectorAll(s))}
+function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function oldTab(name){return q('.tab[data-tab="'+name+'"]')}
+function openTab(name){var b=oldTab(name);if(b){b.click();return true}var p=document.getElementById(name);if(!p)return false;qa('.panel').forEach(function(x){x.classList.remove('active')});p.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});return true}
+function isTrainer(){try{return typeof currentRole==='undefined'||currentRole==='trainer'}catch(e){return true}}
+function injectStyle(){if(document.getElementById('sugAppFoldersStyle'))return;var s=document.createElement('style');s.id='sugAppFoldersStyle';s.textContent=`
+#sugPrimaryNavigation.sugFolderMode{display:block!important;margin:8px 0 12px!important}
+#sugPrimaryNavigation.sugFolderMode>.tab,#sugPrimaryNavigation.sugFolderMode>.simpleNavMore{display:none!important}
+.sugFolderNav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:8px;background:#0b0b0d;border:1px solid #2f3036;border-radius:18px}
+.sugFolderBtn{min-height:72px;border:1px solid #373840;border-radius:16px;background:linear-gradient(180deg,#17171c,#101014);color:#eee;display:grid;place-items:center;gap:4px;padding:9px 5px;font-weight:850;font-size:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.03)}
+.sugFolderBtn .ico{font-size:25px;line-height:1}.sugFolderBtn.gold{border-color:#8b7130;background:linear-gradient(180deg,#241f12,#15130d);color:#f3d98b}.sugFolderBtn:active{transform:scale(.98)}
+.sugFolderOverlay{position:fixed;inset:0;z-index:9998;background:rgba(0,0,0,.76);backdrop-filter:blur(9px);display:none;align-items:flex-end;justify-content:center;padding:14px}.sugFolderOverlay.open{display:flex}
+.sugFolderSheet{width:min(620px,100%);max-height:82vh;overflow:auto;background:linear-gradient(180deg,#18181d,#0e0e11);border:1px solid #484950;border-radius:28px;padding:18px;box-shadow:0 24px 90px rgba(0,0,0,.65)}
+.sugFolderHead{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.sugFolderHead h2{margin:0;color:#f3d98b;font-size:20px}.sugFolderClose{width:38px;height:38px;border-radius:50%;border:1px solid #4a4a50;background:#25252a;color:#fff;font-size:22px}
+.sugFolderGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.sugAppIcon{aspect-ratio:1/1;border:1px solid #3c3d44;border-radius:20px;background:linear-gradient(145deg,#1e1e24,#111116);color:#fff;padding:9px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;font-size:11px;font-weight:800;gap:7px}.sugAppIcon .ico{font-size:26px}.sugAppIcon.gold{border-color:#7e672f;color:#f3d98b;background:linear-gradient(145deg,#292111,#15130d)}
+#inspectionHub{display:none}#inspectionHub.active{display:block}.inspectHero{border:1px solid #78622f!important;background:radial-gradient(circle at 50% 0%,rgba(215,174,65,.12),transparent 55%),linear-gradient(180deg,#151514,#0d0d10)!important}.inspectTop{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.inspectTop h2{font-size:22px;margin:3px 0}.inspectBadge{font-size:9px;border:1px solid #6e5a2b;color:#f3d98b;border-radius:999px;padding:5px 8px}.inspectPeople{margin:14px 0 6px;border:1px solid #34353b;border-radius:18px;overflow:hidden;background:#09090b}.inspectPeople svg{display:block;width:100%;height:auto}.inspectGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:12px}.inspectTile{border:1px solid #37383e;border-radius:15px;background:#111116;color:#eee;text-align:left;padding:13px;min-height:92px}.inspectTile b{display:block;color:#f3d98b;font-size:13px}.inspectTile small{display:block;color:#999;font-size:9px;line-height:1.55;margin-top:5px}.inspectTile:active{transform:scale(.985)}
+#inspectionModules>.card{margin-top:12px}.inspectFlow{display:flex;gap:5px;overflow:auto;padding:3px 0 8px}.inspectFlow span{white-space:nowrap;padding:6px 8px;border:1px solid #3d3d43;border-radius:999px;font-size:9px;color:#bbb}.inspectFlow span+span:before{content:'→';margin-right:7px;color:#d7b34f}
+@media(max-width:460px){.sugFolderNav{grid-template-columns:repeat(3,1fr)}.sugFolderBtn{min-height:65px}.sugFolderGrid{grid-template-columns:repeat(3,1fr)}.sugAppIcon{border-radius:17px;font-size:10px}.inspectGrid{grid-template-columns:1fr 1fr}}
+`;document.head.appendChild(s)}
+function trainerClientSvg(){return `<svg viewBox="0 0 720 330" role="img" aria-label="検査の実施イメージ"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111116"/><stop offset="1" stop-color="#09090b"/></linearGradient><filter id="gl"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect width="720" height="330" fill="url(#bg)"/><circle cx="360" cy="160" r="116" fill="none" stroke="#2f2a1c" stroke-width="2"/><path d="M360 50v220M250 160h220" stroke="#25252a" stroke-width="1" stroke-dasharray="7 10"/><g transform="translate(110 32)"><path d="M85 54c8-34 45-52 76-38 19 8 31 27 30 48-15-10-25-23-28-39-13 17-34 29-65 35z" fill="#151515"/><ellipse cx="137" cy="72" rx="48" ry="52" fill="#d6a47b"/><path d="M93 66c12-3 23-11 32-23 6 10 20 17 48 18" fill="none" stroke="#181818" stroke-width="14" stroke-linecap="round"/><circle cx="120" cy="76" r="4" fill="#202020"/><circle cx="153" cy="76" r="4" fill="#202020"/><path d="M125 96c9 6 18 6 27 0" fill="none" stroke="#7e4c3a" stroke-width="3" stroke-linecap="round"/><path d="M100 122c15-11 58-11 75 0l24 126H74z" fill="#171b20"/><path d="M92 132L42 188" stroke="#d6a47b" stroke-width="18" stroke-linecap="round"/><path d="M181 132l62 46" stroke="#d6a47b" stroke-width="18" stroke-linecap="round"/><path d="M94 244L78 292M177 244l16 48" stroke="#d6a47b" stroke-width="20" stroke-linecap="round"/><path d="M72 246h128" stroke="#3f454d" stroke-width="5"/><circle cx="42" cy="188" r="10" fill="#d6a47b"/><circle cx="243" cy="178" r="10" fill="#d6a47b"/></g><g transform="translate(430 38)"><path d="M91 55c4-34 28-54 59-54 34 0 58 26 58 59-2 31-2 57 18 79-31 4-46-9-50-27-12 12-38 15-62 1-11 22-29 27-48 23 17-20 20-49 25-81z" fill="#5b3427"/><ellipse cx="149" cy="71" rx="46" ry="51" fill="#ebc2a2"/><path d="M109 61c16-5 31-17 40-34 11 16 26 25 45 31" fill="none" stroke="#5b3427" stroke-width="13" stroke-linecap="round"/><circle cx="134" cy="75" r="4" fill="#2b211e"/><circle cx="166" cy="75" r="4" fill="#2b211e"/><path d="M137 96c8 5 17 5 25 0" fill="none" stroke="#a05c5c" stroke-width="3" stroke-linecap="round"/><path d="M112 119c19-11 55-11 74 0l20 128H92z" fill="#93a9bb"/><path d="M105 135L55 182" stroke="#ebc2a2" stroke-width="17" stroke-linecap="round"/><path d="M192 135l55 48" stroke="#ebc2a2" stroke-width="17" stroke-linecap="round"/><path d="M111 244L96 290M188 244l15 46" stroke="#ebc2a2" stroke-width="19" stroke-linecap="round"/><path d="M94 246h114" stroke="#c7d5df" stroke-width="5"/><circle cx="55" cy="182" r="9" fill="#ebc2a2"/><circle cx="247" cy="183" r="9" fill="#ebc2a2"/></g><path d="M330 170c18-17 39-17 59 0" fill="none" stroke="#d8b35b" stroke-width="5" stroke-dasharray="8 8" filter="url(#gl)"/><path d="M384 159l13 11-13 11" fill="none" stroke="#d8b35b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><text x="360" y="305" text-anchor="middle" fill="#9a9aa1" font-size="14">実施位置・触れる場所・誘導方向・抵抗方向を各検査で表示</text></svg>`}
+function ensureInspection(){if(document.getElementById('inspectionHub'))return document.getElementById('inspectionHub');var nav=document.getElementById('sugPrimaryNavigation');if(!nav)return null;var p=document.createElement('section');p.id='inspectionHub';p.className='panel';p.innerHTML=`<div class="card inspectHero"><div class="inspectTop"><div><div style="font-size:9px;color:#d8b35b;font-weight:900;letter-spacing:.1em">TRAINER SCREENING</div><h2>検査</h2><div class="muted">評価 → 仮説 → 検証 → 介入 → 再評価を一つの流れに。</div></div><span class="inspectBadge">V${VERSION}</span></div><div class="inspectPeople">${trainerClientSvg()}</div><div class="inspectFlow"><span>BEFORE</span><span>AI評価</span><span>特殊テスト</span><span>介入</span><span>AFTER</span><span>次回方針</span></div><div class="inspectGrid"><button class="inspectTile" data-inspect="quick"><b>初回 QUICK SCREEN</b><small>歩行・片脚立ち・片脚SQ・Knee-to-wall・胸椎回旋など</small></button><button class="inspectTile" data-inspect="movement"><b>MOVEMENT AI</b><small>SHR・ニーイン・ヒンジ・股関節・胸郭・胸椎・骨盤</small></button><button class="inspectTile" data-inspect="special"><b>特殊テスト</b><small>動作エラー候補から必要な検査を選択して結果を統合</small></button><button class="inspectTile" data-inspect="neuro"><b>NEURO</b><small>眼球・視線・頭頸部・脳神経・立位・歩行・再テスト</small></button><button class="inspectTile" data-inspect="rom"><b>AROM / PROM</b><small>関節可動域・左右差・胸椎/骨盤代償を確認</small></button><button class="inspectTile" data-inspect="after"><b>Before / After</b><small>介入反応・効果量・CARE RESPONSE・次回への引継ぎ</small></button></div></div><div id="inspectionModules"></div>`;nav.insertAdjacentElement('afterend',p);qa('[data-inspect]',p).forEach(function(b){b.addEventListener('click',function(){openInspectionModule(b.dataset.inspect)})});return p}
+function showInspection(){var p=ensureInspection();if(!p)return;qa('.panel').forEach(function(x){x.classList.remove('active')});p.classList.add('active');qa('.sugFolderBtn').forEach(function(x){x.classList.toggle('gold',x.dataset.folder==='inspection')});closeFolder();loadTrainerModules();window.scrollTo({top:0,behavior:'smooth'})}
+function ensureScript(src,id){if(document.getElementById(id))return;var s=document.createElement('script');s.id=id;s.src=src+(src.indexOf('?')>=0?'&':'?')+'v='+VERSION;document.body.appendChild(s)}
+function loadTrainerModules(){ensureScript('assets/trainer-ai/v26.5.70/quick-screen.js','sugQuickLoader');ensureScript('assets/trainer-ai/v26.5.61/movement-error-hub.js','sugMovementLoader');ensureScript('assets/trainer-ai/v26.5.76/neuro-tabs.js','sugNeuroLoader');setTimeout(moveTrainerModules,700);setTimeout(moveTrainerModules,1800)}
+function moveTrainerModules(){var host=document.getElementById('inspectionModules');if(!host)return;['sugQuickScreen','sugMovementErrorHub','sugNeuroTabs','sugNeuroScreen','sugNeuroSymptomScreen'].forEach(function(id){var x=document.getElementById(id);if(x&&x.parentElement!==host)host.appendChild(x)})}
+function openInspectionModule(kind){if(kind==='rom'){openTab('rom');return}if(kind==='after'){openTab('care');setTimeout(function(){var e=document.getElementById('careResponseProfile')||q('[id*="Response"]',document.getElementById('care'));if(e)e.scrollIntoView({behavior:'smooth',block:'start'})},100);return}showInspection();loadTrainerModules();var ids={quick:['sugQuickScreen'],movement:['sugMovementErrorHub'],special:['sugMovementErrorHub'],neuro:['sugNeuroTabs','sugNeuroScreen']};setTimeout(function(){moveTrainerModules();var found=(ids[kind]||[]).map(function(id){return document.getElementById(id)}).find(Boolean);if(found)found.scrollIntoView({behavior:'smooth',block:'start'})},900)}
+var FOLDERS={life:{title:'生活',items:[['meal','食事','🍽️'],['activity','活動','🚶'],['recovery','回復','🌙'],['weight','体重','⚖️'],['checkin','チェックイン','✅'],['care','ケア','🩹']]},analysis:{title:'分析',items:[['response','身体の変化','📊'],['photos','写真','📷'],['report','レポート','📄']]},manage:{title:'管理',items:[['adminBoard','会員管理','👥'],['smart','今日のメニュー','📋'],['profile','会員情報','🪪'],['exerciseMaster','種目マスタ','🏋️'],['security','セキュリティ','🔒']]}};
+function overlay(){var o=document.getElementById('sugFolderOverlay');if(o)return o;o=document.createElement('div');o.id='sugFolderOverlay';o.className='sugFolderOverlay';o.innerHTML='<div class="sugFolderSheet"><div class="sugFolderHead"><h2 id="sugFolderTitle"></h2><button class="sugFolderClose" type="button">×</button></div><div id="sugFolderGrid" class="sugFolderGrid"></div></div>';document.body.appendChild(o);q('.sugFolderClose',o).onclick=closeFolder;o.addEventListener('click',function(e){if(e.target===o)closeFolder()});return o}
+function openFolder(key){if(key==='inspection'){showInspection();return}var f=FOLDERS[key];if(!f)return;var o=overlay();q('#sugFolderTitle',o).textContent=f.title;var g=q('#sugFolderGrid',o);g.innerHTML='';f.items.forEach(function(item){if(item[0]==='adminBoard'&&!isTrainer())return;if(item[0]==='exerciseMaster'&&!isTrainer())return;var b=document.createElement('button');b.className='sugAppIcon'+(item[0]==='adminBoard'?' gold':'');b.innerHTML='<span class="ico">'+item[2]+'</span><span>'+esc(item[1])+'</span>';b.onclick=function(){closeFolder();openTab(item[0])};g.appendChild(b)});o.classList.add('open')}
+function closeFolder(){var o=document.getElementById('sugFolderOverlay');if(o)o.classList.remove('open')}
+function buildNav(){injectStyle();var nav=document.getElementById('sugPrimaryNavigation');if(!nav||nav.dataset.folderReady)return;nav.dataset.folderReady='1';nav.classList.add('sugFolderMode');var x=document.createElement('div');x.className='sugFolderNav';x.innerHTML=`<button class="sugFolderBtn" data-direct="dash"><span class="ico">⌂</span><span>HOME</span></button><button class="sugFolderBtn" data-direct="training"><span class="ico">🏋️</span><span>トレ</span></button><button class="sugFolderBtn gold" data-folder="inspection"><span class="ico">🩺</span><span>検査</span></button><button class="sugFolderBtn" data-folder="life"><span class="ico">◉</span><span>生活</span></button><button class="sugFolderBtn" data-folder="analysis"><span class="ico">⌁</span><span>分析</span></button><button class="sugFolderBtn" data-folder="manage"><span class="ico">⚙︎</span><span>管理</span></button>`;nav.appendChild(x);qa('[data-direct]',x).forEach(function(b){b.onclick=function(){openTab(b.dataset.direct)}});qa('[data-folder]',x).forEach(function(b){b.onclick=function(){openFolder(b.dataset.folder)}});ensureInspection();overlay()}
+function toggleHomeDetails(){var h=document.getElementById('dash');if(!h)return false;return h.classList.toggle('sug-home-expanded')}
+function startDailyTraining(){openTab('smart');return {status:'MENU_OPENED'}}
+window.openTab=openTab;window.toggleSugNavigation=function(){openFolder('manage');return true};window.toggleSugHomeDetails=toggleHomeDetails;window.openMemberCheckin=function(){return openTab('recovery')};window.openMemberMenu=function(){return openTab('smart')};window.startSugDailyTraining=startDailyTraining;window.renderSugSimpleHome=function(){buildNav()};window.renderSugTrainingProgress=function(){};window.renderSmartIdealEntry=function(){};window.renderMemberHomeIdeal=function(){};window.renderMemberBodyGap=function(){};window.__SUG_SIMPLE_UI_VERSION__=VERSION;
+function boot(){buildNav();ensureInspection()}
+document.addEventListener('DOMContentLoaded',function(){setTimeout(boot,80);setTimeout(boot,700)});setTimeout(boot,80);setInterval(function(){if(!document.querySelector('#sugPrimaryNavigation .sugFolderNav'))boot();moveTrainerModules()},1800);
 })();
