@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>S.u.G BODY MANAGEMENT SYSTEM V26.5.27 IDEAL VISION 360</title>
+<title>S.u.G BODY MANAGEMENT SYSTEM V26.5.28 HEALTH SYNC FIX</title>
 <meta name="theme-color" content="#09090a">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -600,7 +600,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
   <div class="authBox">
     <img class="authBrandLogo" src="./brand-header.png?v=26-4-2-walk-route" alt="S.u.G OSAKA">
     <h1>S.u.G BODY MANAGEMENT SYSTEM</h1>
-    <div class="sub">V26.5.27 ADAPTIVE CORE / MEMBERS ONLY</div>
+    <div class="sub">V26.5.28 ADAPTIVE CORE / MEMBERS ONLY</div>
     <label>メールアドレス</label>
     <input id="loginEmail" type="email" autocomplete="email" placeholder="member@example.com">
     <label style="margin-top:10px">パスワード</label>
@@ -715,7 +715,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
   <div class="head">
     <div class="brandIdentity">
       <img class="brandHeaderLogo" src="./brand-header.png?v=26-4-2-walk-route" alt="S.u.G OSAKA">
-      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.5.27 ADAPTIVE CORE / READINESS SIGNAL + DAILY RHYTHM + HYDRATION + TRAINING + CARE</small></div>
+      <div class="brandCopy"><h1>S.u.G BODY MANAGEMENT SYSTEM</h1><small>V26.5.28 ADAPTIVE CORE / READINESS SIGNAL + DAILY RHYTHM + HYDRATION + TRAINING + CARE</small></div>
     </div>
     <div class="headActions"><button id="readinessHeaderSignal" class="readinessHeaderSignal unknown" type="button" onclick="openRecoverySignal()" aria-label="今日の回復状態"><span class="readinessDot"></span><span class="readinessHeaderText">READINESS --</span></button><span id="cloudStatus" class="cloudStatus">Cloud</span><button id="exportAllBtn" class="secondary" onclick="backupAll()">全体バックアップ</button><button id="logoutBtn" class="secondary" onclick="logout()" style="display:none">ログアウト</button></div>
   </div>
@@ -1143,6 +1143,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
       <div class="sugHealthHeading"><div><h2>iPhoneヘルスケア連携</h2><div class="muted">標準のショートカットから歩数・睡眠・心拍・体重を取り込みます。</div></div><span id="sugHealthBadge" class="badge">未連携</span></div>
       <div id="sugHealthMetrics" class="sugHealthGrid"><div class="sugHealthMetric"><span>歩数</span><b>--</b></div><div class="sugHealthMetric"><span>睡眠</span><b>--</b></div><div class="sugHealthMetric"><span>心拍</span><b>--</b></div><div class="sugHealthMetric"><span>体重</span><b>--</b></div></div>
       <div id="sugHealthStatus" class="sugHealthStatus">まだ取り込んでいません。下の手順から初回設定してください。</div>
+      <div class="grid2" style="margin-top:10px"><div><label>正しい歩数</label><input id="sugHealthManualSteps" type="number" min="0" max="60000" step="1" placeholder="例：8500"></div><div><label>睡眠時間</label><input id="sugHealthManualSleep" type="number" min="0" max="24" step="0.1" placeholder="例：7.5"></div></div><button class="primary" type="button" style="width:100%;margin-top:8px" onclick="saveSugManualHealth()">正しい数値で更新</button>
       <details id="sugHealthGuide" class="sugHealthGuide"><summary>初回設定と毎日の自動実行</summary><ol><li>「連携URLをコピー」を押し、iPhoneの「ショートカット」を開く。</li><li>新しいショートカットに「ヘルスケアサンプルを検索」を追加し、歩数・睡眠・心拍・体重から必要な項目を選ぶ。</li><li>「テキスト」にコピーしたURLを貼り、[歩数]などを取得した変数に置き換える。不要な項目は空欄で構いません。</li><li>最後に「URLを開く」を追加して実行し、ヘルスケアの読み取りを許可する。</li><li>毎日自動で動かす場合は「オートメーション」→「時刻」→「すぐに実行」を設定する。</li></ol><code id="sugHealthShortcutUrl">ログインすると会員専用の連携URLを表示します。</code><div class="sugHealthNote">OuraやApple Watchの記録も、ヘルスケアに保存されていれば取り込めます。数値はURLの#以降で渡し、取り込み後すぐ消去します。</div></details>
       <div class="sugHealthActions"><button id="sugHealthCopyButton" class="primary" type="button" onclick="copySugHealthShortcutUrl()">連携URLをコピー</button><button class="secondary" type="button" onclick="openSugShortcutsApp()">ショートカットを開く</button></div>
     </div>
@@ -9131,6 +9132,6 @@ document.addEventListener('DOMContentLoaded',()=>{setTimeout(renderIdealVisionSu
 <script src="assets/four-week-plan/v26.5.23/engine.js"></script>
 <script src="assets/ideal-vision/v26.5.24/engine.js"></script>
 <script src="assets/simple-ui/v26.5.25/engine.js"></script>
-<script src="assets/health-sync/v26.5.27/engine.js"></script>
+<script src="assets/health-sync/v26.5.27/engine.js?v=26.5.28"></script>
 </body>
 </html>
