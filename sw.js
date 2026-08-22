@@ -1,4 +1,4 @@
-const SW_VERSION = 'sug-v26.5.37-member-patch';
+const SW_VERSION = 'sug-v26.5.38-member-reservation';
 self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', event => event.waitUntil((async()=>{
   await self.clients.claim();
@@ -12,8 +12,8 @@ self.addEventListener('fetch', event => {
         const type = res.headers.get('content-type') || '';
         if (!type.includes('text/html')) return res;
         let html = await res.text();
-        const tag = '<script src="assets/member-patch/v26.5.37/engine.js?v=26.5.37"></script>';
-        if (!html.includes('member-patch/v26.5.37/engine.js')) html = html.replace('</body>', tag + '\n</body>');
+        const tag = '<script src="assets/member-patch/v26.5.38/engine.js?v=26.5.38"></script>';
+        if (!html.includes('member-patch/v26.5.38/engine.js')) html = html.replace('</body>', tag + '\n</body>');
         const headers = new Headers(res.headers);
         headers.set('cache-control', 'no-store, no-cache, must-revalidate');
         headers.delete('content-length');
