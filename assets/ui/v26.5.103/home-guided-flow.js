@@ -1,7 +1,7 @@
 (()=>{
 'use strict';
 const STYLE=`<style id="sug-guided-style">
-body.sug-today-flow #sugPrimaryNavigation{display:none!important}
+body.sug-today-flow #sugPrimaryNavigation,body.sug-today-flow #sugCanonicalNav{display:none!important}
 body.sug-today-flow .sugFolderNav,body.sug-today-flow .homeHubGrid,body.sug-today-flow .hubGrid,body.sug-today-flow .dashboardHub{display:none!important}
 body.sug-focus-mode .panel.active .card{opacity:.10;pointer-events:none;transition:opacity .06s linear}
 body.sug-focus-mode .panel.active .card.sug-active-step{opacity:1;pointer-events:auto;box-shadow:0 0 0 3px #2f9bff,0 0 16px rgba(47,155,255,.22)!important;border-color:#2f9bff!important}
@@ -15,7 +15,7 @@ body.sug-focus-mode .panel.active .card.sug-active-step{opacity:1;pointer-events
 function member(){try{return typeof m==='function'?m():null}catch(e){return null}}
 function hasIdeal(){return !!(member()?.goalPlan||{}).idealVisionType}
 function clearFocus(){document.body.classList.remove('sug-focus-mode');document.querySelectorAll('.sug-active-step,.sug-input-focus,.sug-dim-control,.sug-dim-block').forEach(x=>x.classList.remove('sug-active-step','sug-input-focus','sug-dim-control','sug-dim-block'));document.querySelectorAll('.sug-step-badge').forEach(x=>x.remove())}
-function hideHub(){document.body.classList.add('sug-today-flow')}
+function hideHub(){document.body.classList.add('sug-today-flow');const nav=document.getElementById('sugCanonicalNav');if(nav)nav.style.setProperty('display','none','important')}
 function openSmart(){try{if(typeof window.openTab==='function')window.openTab('smart');else document.querySelector('.tab[data-tab="smart"]')?.click()}catch(e){}}
 function blockFor(el){return el?.closest('.grid2>div,.grid3>div,.row>div,label')||el?.parentElement}
 function todayControls(){const appetite=document.getElementById('smartAppetite'),day=document.getElementById('smartDayType');if(!appetite||!day)return null;const card=appetite.closest('.card')||document.querySelector('#smart .smartHero');const recalc=[...(card?.querySelectorAll('button')||[])].find(b=>/再計算|現在データ|計算/.test(b.textContent||''))||null;return{card,appetite,day,recalc}}
@@ -33,9 +33,9 @@ function suppressSaveAlert(){if(savedAlert)return;savedAlert=window.alert;window
 function idealPointer(e){if(e.target.closest?.('.visionSelectBtn,.visionQuickAction button'))suppressSaveAlert()}
 function idealClick(e){if(!e.target.closest?.('.visionSelectBtn,.visionQuickAction button'))return;setTimeout(()=>waitIdeal(),20)}
 function mount(){hideHub();if(hasIdeal()){document.getElementById('sug-guided-flow')?.remove();setTimeout(startToday,180);return}if(document.getElementById('sug-guided-flow'))return;const box=document.createElement('section');box.id='sug-guided-flow';box.innerHTML='<div class="eyebrow">TODAY FLOW</div><h2>理想の身体を選ぶ</h2><p>初回だけ設定。選んだら自動で次へ進みます。</p><button type="button">理想を選ぶ →</button>';box.querySelector('button').onclick=openIdeal;(document.querySelector('header')||document.body).insertAdjacentElement('afterend',box)}
-function boot(){mount();[100,300,700,1500].forEach(ms=>setTimeout(hideHub,ms))}
+function boot(){mount();[50,100,300,700,1500,3000].forEach(ms=>setTimeout(hideHub,ms));const mo=new MutationObserver(()=>hideHub());mo.observe(document.body,{childList:true,subtree:true});setTimeout(()=>mo.disconnect(),10000)}
 if(!document.getElementById('sug-guided-style'))document.head.insertAdjacentHTML('beforeend',STYLE);
 document.addEventListener('pointerdown',idealPointer,true);document.addEventListener('touchstart',idealPointer,true);document.addEventListener('change',onChange,true);document.addEventListener('click',idealClick,true);
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
-window.__SUG_GUIDED_HOME_VERSION__='26.5.118';
+window.__SUG_GUIDED_HOME_VERSION__='26.5.119';
 })();
