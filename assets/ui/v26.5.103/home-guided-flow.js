@@ -9,8 +9,8 @@ body.sug-focus-mode .panel.active .card.sug-active-step{box-shadow:0 0 0 3px #2f
 .sug-input-focus{outline:4px solid #2f9bff!important;outline-offset:2px!important;box-shadow:0 0 0 5px rgba(47,155,255,.12)!important;opacity:1!important;position:relative;z-index:3}
 .sug-dim-control,.sug-dim-block{opacity:.18!important;pointer-events:none!important}
 .sug-next-action{display:block!important;width:100%!important;margin:18px 0 2px!important;border:0!important;border-radius:14px!important;padding:17px 12px!important;background:linear-gradient(#f0cf69,#c99a27)!important;color:#111!important;font-size:17px!important;font-weight:900!important}
-#sug-guided-flow{margin:14px 18px 18px;padding:18px;border:1px solid #8b6a20;border-radius:20px;background:#11100d;color:#fff}
-#sug-guided-flow .eyebrow{color:#d8b34b;font-size:12px;font-weight:800}#sug-guided-flow h2{font-size:24px;margin:7px 0 4px}#sug-guided-flow p{color:#aaa;line-height:1.55}#sug-guided-flow button{width:100%;border:0;border-radius:14px;padding:17px 12px;background:linear-gradient(#f0cf69,#c99a27);font-size:18px;font-weight:900;color:#111}
+#sug-guided-flow{position:relative;z-index:5;margin:14px 18px 18px;padding:18px;border:1px solid #8b6a20;border-radius:20px;background:#11100d;color:#fff}
+#sug-guided-flow .eyebrow{color:#d8b34b;font-size:12px;font-weight:800}#sug-guided-flow h2{font-size:24px;margin:7px 0 4px}#sug-guided-flow p{color:#aaa;line-height:1.55}#sug-guided-flow button{position:relative;z-index:10;touch-action:manipulation;-webkit-tap-highlight-color:transparent;width:100%;border:0;border-radius:14px;padding:17px 12px;background:linear-gradient(#f0cf69,#c99a27);font-size:18px;font-weight:900;color:#111}
 </style>`;
 function member(){try{return typeof m==='function'?m():null}catch(e){return null}}
 function hasIdeal(){return !!(member()?.goalPlan||{}).idealVisionType}
@@ -36,12 +36,13 @@ function routeToday(){const t=todayControls();if(!t)return setTimeout(routeToday
 function startToday(){hideHub();openSmart();setTimeout(routeToday,180)}
 function onChange(e){const t=todayControls();if(!t)return;if(e.target===t.appetite){if(!hasValue(t.appetite))return;setTimeout(()=>hasValue(t.day)?runRecalc():focusTodayStep(1),40)}else if(e.target===t.day){if(!hasValue(t.day))return;setTimeout(runRecalc,40)}}
 function closeIdealAndAdvance(){try{window.closeIdealVision?.()}catch(e){}document.getElementById('sug-guided-flow')?.remove();setTimeout(startToday,180)}
-function openIdeal(){clearFocus();window.openIdealVision?.()}
+function forceOpenIdeal(){clearFocus();let opened=false;try{if(typeof window.openIdealVision==='function'){window.openIdealVision();opened=document.getElementById('idealVisionModal')?.classList.contains('open')}}catch(e){}if(opened)return true;const nativeBtn=document.querySelector('#idealVisionLaunchCard button');if(nativeBtn){try{nativeBtn.click();opened=document.getElementById('idealVisionModal')?.classList.contains('open')}catch(e){}}if(opened)return true;const modal=document.getElementById('idealVisionModal');if(modal){modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';try{window.renderIdealVision?.()}catch(e){}return true}return false}
 function idealClick(e){const hit=e.target.closest?.('.visionSelectBtn,.visionQuickAction button');if(!hit)return;setTimeout(closeIdealAndAdvance,180)}
-function mount(){hideHub();if(hasIdeal()){document.getElementById('sug-guided-flow')?.remove();setTimeout(startToday,180);return}if(document.getElementById('sug-guided-flow'))return;const box=document.createElement('section');box.id='sug-guided-flow';box.innerHTML='<div class="eyebrow">TODAY FLOW</div><h2>理想の身体を選ぶ</h2><p>初回だけ設定。選んだら自動で次へ進みます。</p><button type="button">理想を選ぶ →</button>';box.querySelector('button').onclick=openIdeal;(document.querySelector('header')||document.body).insertAdjacentElement('afterend',box)}
+function bindLaunch(btn){if(!btn||btn.dataset.sugLaunchBound==='1')return;btn.dataset.sugLaunchBound='1';const fire=e=>{e.preventDefault();e.stopPropagation();forceOpenIdeal()};btn.addEventListener('pointerup',fire,{passive:false});btn.addEventListener('touchend',fire,{passive:false});btn.addEventListener('click',fire,{passive:false})}
+function mount(){hideHub();if(hasIdeal()){document.getElementById('sug-guided-flow')?.remove();setTimeout(startToday,180);return}let box=document.getElementById('sug-guided-flow');if(!box){box=document.createElement('section');box.id='sug-guided-flow';box.innerHTML='<div class="eyebrow">TODAY FLOW</div><h2>理想の身体を選ぶ</h2><p>初回だけ設定。選んだら自動で次へ進みます。</p><button id="sugIdealLaunch" type="button">理想を選ぶ →</button>';(document.querySelector('header')||document.body).insertAdjacentElement('afterend',box)}bindLaunch(box.querySelector('#sugIdealLaunch'))}
 function boot(){mount();[50,200,800].forEach(ms=>setTimeout(hideHub,ms))}
 if(!document.getElementById('sug-guided-style'))document.head.insertAdjacentHTML('beforeend',STYLE);
 document.addEventListener('change',onChange,true);document.addEventListener('click',idealClick,true);
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
-window.__SUG_GUIDED_HOME_VERSION__='26.5.123';
+window.__SUG_GUIDED_HOME_VERSION__='26.5.124';
 })();
