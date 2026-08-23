@@ -1,1 +1,1 @@
-(function(){'use strict';const V='26.5.94';function apply(){document.querySelectorAll('.sugFolderOverlay,#sugInspectionPanel,.trainer-screening,.sugTrainerScreening,.sugRealHY,.sugHYRoles,.sugHYRoleGuide').forEach(e=>e.remove())}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>setTimeout(apply,250),{once:true});else setTimeout(apply,250);window.__SUG_UI_RESET__=V})();
+(function(){'use strict';window.__SUG_UI_RESET_DISABLED__='26.5.96';})();
