@@ -30,14 +30,13 @@ function runRecalc(){const t=todayControls();if(!t)return;clearFocus();try{if(t.
 function routeToday(){const t=todayControls();if(!t)return setTimeout(routeToday,120);const a=hasValue(t.appetite),d=hasValue(t.day);if(contextIsToday()&&a&&d)return runRecalc();if(!contextIsToday()){resetForNewDay();return focusTodayStep(0)}if(!a)return focusTodayStep(0);if(!d)return focusTodayStep(1);runRecalc()}
 function startToday(){hideHub();openSmart();setTimeout(routeToday,180)}
 function onChange(e){const t=todayControls();if(!t)return;if(e.target===t.appetite){if(!hasValue(t.appetite))return;setTimeout(()=>hasValue(t.day)?runRecalc():focusTodayStep(1),40)}else if(e.target===t.day){if(!hasValue(t.day))return;setTimeout(runRecalc,40)}}
-function closeIdealAndAdvance(){try{window.closeIdealVision?.()}catch(e){}document.getElementById('sug-guided-flow')?.remove();setTimeout(startToday,120)}
-function waitIdeal(n=0){if(hasIdeal())return closeIdealAndAdvance();if(n<60)setTimeout(()=>waitIdeal(n+1),80)}
+function closeIdealAndAdvance(){try{window.closeIdealVision?.()}catch(e){}document.getElementById('sug-guided-flow')?.remove();setTimeout(startToday,180)}
 function openIdeal(){clearFocus();window.openIdealVision?.()}
-function idealClick(e){if(!e.target.closest?.('.visionSelectBtn,.visionQuickAction button'))return;setTimeout(()=>waitIdeal(),20)}
+function idealClick(e){const hit=e.target.closest?.('.visionSelectBtn,.visionQuickAction button');if(!hit)return;setTimeout(closeIdealAndAdvance,180)}
 function mount(){hideHub();if(hasIdeal()){document.getElementById('sug-guided-flow')?.remove();setTimeout(startToday,180);return}if(document.getElementById('sug-guided-flow'))return;const box=document.createElement('section');box.id='sug-guided-flow';box.innerHTML='<div class="eyebrow">TODAY FLOW</div><h2>理想の身体を選ぶ</h2><p>初回だけ設定。選んだら自動で次へ進みます。</p><button type="button">理想を選ぶ →</button>';box.querySelector('button').onclick=openIdeal;(document.querySelector('header')||document.body).insertAdjacentElement('afterend',box)}
 function boot(){mount();[50,200,800].forEach(ms=>setTimeout(hideHub,ms))}
 if(!document.getElementById('sug-guided-style'))document.head.insertAdjacentHTML('beforeend',STYLE);
 document.addEventListener('change',onChange,true);document.addEventListener('click',idealClick,true);
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
-window.__SUG_GUIDED_HOME_VERSION__='26.5.121';
+window.__SUG_GUIDED_HOME_VERSION__='26.5.122';
 })();
