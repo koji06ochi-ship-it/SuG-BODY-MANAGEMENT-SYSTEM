@@ -1,31 +1,33 @@
 (()=>{
 'use strict';
-const VERSION='26.5.138';
+const VERSION='26.5.139';
 async function restoreSession(){
   try{
-    if(!window.sb||!window.sb.auth)return false;
-    const {data,error}=await window.sb.auth.getSession();
+    if(typeof sb==='undefined'||!sb?.auth)return false;
+    const {data,error}=await sb.auth.getSession();
     if(error||!data?.session?.user)return false;
-    window.accessToken=data.session.access_token||window.accessToken;
-    window.sessionUser=data.session.user||window.sessionUser;
-    try{window.showApp?.()}catch(e){}
-    try{await window.onSignedIn?.(data.session.user)}catch(e){}
+    accessToken=data.session.access_token||accessToken;
+    sessionUser=data.session.user||sessionUser;
+    try{showApp()}catch(e){}
+    try{await onSignedIn(data.session.user)}catch(e){console.error('session restore onSignedIn',e)}
     return true;
-  }catch(e){return false}
+  }catch(e){console.error('session restore',e);return false}
 }
 async function boot(){
-  for(const ms of [150,400,900,1800]){
+  for(const ms of [100,250,500,1000,1800]){
     await new Promise(r=>setTimeout(r,ms));
     if(await restoreSession())break;
   }
   try{
-    window.sb?.auth?.onAuthStateChange?.((event,session)=>{
-      if((event==='SIGNED_IN'||event==='INITIAL_SESSION'||event==='TOKEN_REFRESHED')&&session?.user){
-        window.accessToken=session.access_token||window.accessToken;
-        window.sessionUser=session.user||window.sessionUser;
-        try{window.showApp?.()}catch(e){}
-      }
-    });
+    if(typeof sb!=='undefined'&&sb?.auth){
+      sb.auth.onAuthStateChange((event,session)=>{
+        if((event==='SIGNED_IN'||event==='INITIAL_SESSION'||event==='TOKEN_REFRESHED')&&session?.user){
+          accessToken=session.access_token||accessToken;
+          sessionUser=session.user||sessionUser;
+          try{showApp()}catch(e){}
+        }
+      });
+    }
   }catch(e){}
   window.__SUG_AUTH_STABILITY_VERSION__=VERSION;
 }
