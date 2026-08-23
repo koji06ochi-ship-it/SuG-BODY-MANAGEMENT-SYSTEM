@@ -23,5 +23,5 @@ async function render(){
 }
 window.renderSugCurrentIdealV26541=render;
 function tick(){render().catch(()=>{})}
-document.addEventListener('DOMContentLoaded',()=>{setTimeout(tick,200);setTimeout(tick,1000);setTimeout(tick,2500)});setInterval(tick,1500);setTimeout(tick,100);
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>{setTimeout(tick,200);setTimeout(tick,1000);setTimeout(tick,2500)},{once:true});else{setTimeout(tick,100);setTimeout(tick,900);setTimeout(tick,2200)}
 })();
