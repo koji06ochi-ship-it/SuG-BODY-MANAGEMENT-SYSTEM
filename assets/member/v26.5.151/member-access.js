@@ -1,6 +1,6 @@
 (()=>{
 'use strict';
-const VERSION='26.5.151';
+const VERSION='26.5.163';
 const ACTIVE_ROLE='member';
 const TRAINER_ROLE='trainer';
 const BLOCKED_ROLES=new Set(['inactive','expired','disabled','cancelled','former']);
@@ -19,7 +19,7 @@ function wrapLogin(){if(window.__SUG151_LOGIN_WRAPPED__||typeof window.login!=='
 async function setRole(id,role){if(getRole()!==TRAINER_ROLE)return;let r;try{r=await apiPatch(`/rest/v1/profiles?id=eq.${encodeURIComponent(id)}`,{role})}catch(e){alert('会員証状態の更新に失敗しました。');return}if(!r?.ok){alert(`会員証状態の更新に失敗｜HTTP ${r?.status||''}`);return}try{await refreshMemberProfiles(id)}catch(_e){}renderAdmin()}
 function renderAdmin(){if(getRole()!==TRAINER_ROLE)return;const host=document.getElementById('adminBoard');if(!host)return;let card=document.getElementById('sug151MembershipAdmin');if(!card){card=document.createElement('section');card.id='sug151MembershipAdmin';card.className='card sug151MembershipAdmin';const anchor=document.getElementById('adminBrandHero')||host.firstElementChild;anchor?.after(card)}const rows=getProfiles().filter(p=>p.role!==TRAINER_ROLE);card.innerHTML=`<div class="row" style="align-items:center"><div><h2 style="margin-bottom:3px">デジタル会員証 / アプリ認証</h2><div class="muted">ACTIVE会員だけアプリ利用可。退会・失効・無効化は即時ログイン対象外にします。</div></div><button class="secondary" id="sug151Refresh">更新</button></div><div id="sug151MembershipRows" style="margin-top:9px">${rows.length?rows.map(p=>{const active=p.role===ACTIVE_ROLE;return `<div class="sug151MemberRow"><div><div class="sug151MemberName">${esc(p.display_name||'会員')}</div><div class="sug151MemberMeta">${esc(p.id)}</div><span class="sug151State ${active?'active':'blocked'}">${active?'ACTIVE':esc(String(p.role||'INVALID').toUpperCase())}</span></div><div class="sug151Actions">${active?`<button data-id="${esc(p.id)}" data-role="inactive">無効化</button><button data-id="${esc(p.id)}" data-role="expired">失効</button>`:`<button class="primary" data-id="${esc(p.id)}" data-role="member">再有効化</button>`}</div></div>`}).join(''):'<div class="muted">会員がいません。</div>'}</div>`;card.querySelector('#sug151Refresh').onclick=()=>{try{refreshMemberProfiles()}catch(_e){}};card.querySelectorAll('[data-id][data-role]').forEach(b=>b.onclick=()=>setRole(b.dataset.id,b.dataset.role))}
 function removeLegacyAdmin(){['sugQuickScreen','sugMovementErrorHub','sugMovementModulePanel','sugNeuroTabs','sugQuickScreenClinical'].forEach(id=>document.getElementById(id)?.remove())}
-function tick(){wrapLogin();removeLegacyAdmin();const role=getRole(),u=getUser();if(u&&role)enforce();if(role===TRAINER_ROLE)renderAdmin()}
+function tick(){wrapLogin();const role=getRole(),u=getUser();if(role&&role!==TRAINER_ROLE)removeLegacyAdmin();if(u&&role)enforce();if(role===TRAINER_ROLE)renderAdmin()}
 ensureStyle();if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>{tick();setInterval(tick,1000)},{once:true});else{tick();setInterval(tick,1000)}
 window.SUG_MEMBER_ACCESS={version:VERSION,enforce,state:membershipState,setRole};window.__SUG_MEMBER_ACCESS_VERSION__=VERSION;
 })();
