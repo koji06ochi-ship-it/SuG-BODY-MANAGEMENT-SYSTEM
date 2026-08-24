@@ -1,0 +1,16 @@
+(()=>{
+'use strict';
+const VERSION='26.5.159';
+function accessState(){try{return window.SUG_MEMBER_ACCESS?.state?.()||window.__SUG_MEMBER_ACCESS__||null}catch(_e){return null}}
+function rawRole(){try{return String(currentRole||window.currentRole||'')}catch(_e){return String(window.currentRole||'')}}
+function role(){const s=accessState();if(s?.role)return String(s.role);return rawRole()}
+function hide(el){if(el)el.style.setProperty('display','none','important')}
+function show(el){if(el)el.style.removeProperty('display')}
+function adminTargets(){return [document.querySelector('#sugCanonicalNav .sug98Card[data-key="manage"]'),document.querySelector('.tab[data-tab="adminBoard"]'),document.getElementById('adminBoard'),document.getElementById('exerciseMasterTab'),document.getElementById('exerciseMaster')]}
+function memberMode(){document.documentElement.classList.add('sug-customer-mode');document.documentElement.classList.remove('sug-trainer-mode');adminTargets().forEach(hide);['memberSelect','memberSelector','adminMemberSelect','adminMemberSelector','profileSelector'].forEach(id=>hide(document.getElementById(id)));document.querySelectorAll('[data-role="trainer-only"],.trainerOnly,.trainer-only,.adminOnly,.admin-only').forEach(hide);document.querySelectorAll('#sugCanonicalFolder .sug98App').forEach(b=>{if(/種目マスタ|会員管理|会員共有|全体バックアップ|セキュリティ/.test((b.textContent||'').trim()))hide(b)});const active=document.querySelector('.panel.active');if(active&&(active.id==='adminBoard'||active.id==='exerciseMaster')){try{window.openTab?.('dash')}catch(_e){}const d=document.getElementById('dash');if(d){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));d.classList.add('active');d.style.setProperty('display','block','important');window.scrollTo(0,0)}}}
+function trainerMode(){document.documentElement.classList.add('sug-trainer-mode');document.documentElement.classList.remove('sug-customer-mode');adminTargets().forEach(show)}
+function label(r){const h=document.querySelector('.headActions');if(!h)return;let s=document.getElementById('sug159Mode');if(!s){s=document.createElement('span');s.id='sug159Mode';s.style.cssText='font-size:9px;color:#f3d98b;border:1px solid #5a4a25;border-radius:999px;padding:5px 8px;white-space:nowrap';h.prepend(s)}s.textContent=r==='member'?'会員モード':r==='trainer'?'管理者モード':'';s.style.display=s.textContent?'inline-block':'none'}
+function apply(){const r=role();if(r==='member')memberMode();else if(r==='trainer')trainerMode();label(r)}
+document.addEventListener('click',e=>{if(role()!=='member')return;const t=e.target.closest?.('#sugCanonicalNav .sug98Card[data-key="manage"],.tab[data-tab="adminBoard"],#exerciseMasterTab');if(t){e.preventDefault();e.stopImmediatePropagation();try{window.openTab?.('dash')}catch(_e){}}},true);
+const mo=new MutationObserver(apply);function boot(){mo.observe(document.body,{childList:true,subtree:true});apply();setTimeout(apply,150);setTimeout(apply,500);setTimeout(apply,1200)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();setInterval(apply,700);window.__SUG_CUSTOMER_UI_VERSION__=VERSION;
+})();
