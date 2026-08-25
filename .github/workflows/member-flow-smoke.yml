@@ -29,6 +29,7 @@ jobs:
           sleep 2
       - name: Syntax check critical scripts
         run: |
+          node --check tests/member-flow-smoke.mjs
           node --check assets/ui/v26.5.175/training-start.js
           node --check assets/ui/v26.5.176/session-flow.js
           node --check assets/ui/v26.5.192/member-home-final.js
