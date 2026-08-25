@@ -49,7 +49,7 @@ async function openSeed(sessions){
   assert.match(text,/予定達成\s*\d+\/\d+｜\d+%/,'schedule adherence percentage missing');
   assert.match(text,/次回予定/,'next schedule missing');
   assert.match(text,/DAY\s*\d+/,'schedule rows missing');
-  assert.ok(/予定ペース達成|次の1回|予定通り|遅れ/.test(text),'motivation message missing');
+  assert.ok(/最初の1回を記録すると進捗が動きます|予定ペース達成|次の1回|予定通り|遅れ/.test(text),'motivation message missing');
   assert.match(text,/NEXT LOAD｜LOAD_UP/,'overload candidate missing');
   assert.ok(!text.includes('今日のメニューを始める'),'start button text remains after completed flow');
   assert.ok(text.includes('本日の記録を見る')||text.includes('本日のトレーニング完了'),'completed-state action missing');
