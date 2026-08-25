@@ -5,6 +5,10 @@ on:
       - 'member.html'
       - 'sw.js'
       - 'assets/ui/**'
+      - 'assets/member-home/**'
+      - 'assets/member/**'
+      - 'assets/health-sync/**'
+      - 'assets/ui-feedback/**'
       - 'tests/member-flow-smoke.mjs'
       - '.github/workflows/member-flow-smoke.yml'
   workflow_dispatch:
@@ -17,6 +21,42 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Syntax check member runtime
+        run: |
+          set -e
+          node --check tests/member-flow-smoke.mjs
+          node --check sw.js
+          for f in \
+            assets/member-home/v26.5.41/engine.js \
+            assets/member-home/v26.5.42/login-render.js \
+            assets/member-home/v26.5.44/onboarding.js \
+            assets/member-home/v26.5.45/food-flow.js \
+            assets/member-home/v26.5.49/force-food-home.js \
+            assets/member-home/v26.5.51/meal-ai-client.js \
+            assets/member-home/v26.5.51/food-photo.js \
+            assets/member-home/v26.5.57/craving-check.js \
+            assets/ui-feedback/v26.5.52/click-feedback.js \
+            assets/ui/v26.5.98/canonical-ui.js \
+            assets/ui/v26.5.99/health-shortcut-fix.js \
+            assets/health-sync/v26.5.27/engine.js \
+            assets/ui/v26.5.149/flow-controller.js \
+            assets/ui/v26.5.152/recovery-autofill.js \
+            assets/ui/v26.5.153/menu-continuation.js \
+            assets/member/v26.5.151/member-access.js \
+            assets/member/v26.5.151/member-card.js \
+            assets/ui/v26.5.167/finalizer.js \
+            assets/ui/v26.5.175/training-start.js \
+            assets/ui/v26.5.176/session-flow.js \
+            assets/ui/v26.5.184/session-training-bridge.js \
+            assets/ui/v26.5.192/member-home-final.js \
+            assets/ui/v26.5.193/state-migration.js \
+            assets/ui/v26.5.199/next-load-home.js \
+            assets/ui/v26.5.200/quest-entry.js \
+            assets/ui/v26.5.203/flow-complete-release.js \
+            assets/ui/v26.5.204/member-performance.js; do
+              echo "checking $f"
+              node --check "$f"
+          done
       - name: Install Playwright
         run: |
           npm init -y >/dev/null 2>&1
@@ -27,16 +67,5 @@ jobs:
           python3 -m http.server 8080 > /tmp/sug-http.log 2>&1 &
           echo $! > /tmp/sug-http.pid
           sleep 2
-      - name: Syntax check critical scripts
-        run: |
-          node --check tests/member-flow-smoke.mjs
-          node --check assets/ui/v26.5.175/training-start.js
-          node --check assets/ui/v26.5.176/session-flow.js
-          node --check assets/ui/v26.5.192/member-home-final.js
-          node --check assets/ui/v26.5.193/state-migration.js
-          node --check assets/ui/v26.5.199/next-load-home.js
-          node --check assets/ui/v26.5.203/flow-complete-release.js
-          node --check assets/ui/v26.5.204/member-performance.js
-          node --check sw.js
       - name: Browser smoke test
         run: node tests/member-flow-smoke.mjs
