@@ -11,7 +11,7 @@ const next=read('assets/ui/v26.5.199/next-load-home.js');
 const training=read('assets/ui/v26.5.175/training-start.js');
 const migration=read('assets/ui/v26.5.193/state-migration.js');
 
-must(sw,/flow-scroll-controller\.js','member injector inventory must be explicit');
+must(sw,/flow-scroll-controller\.js/,'member injector inventory must be explicit');
 must(sw,/skip=new Set\(\[[\s\S]*flow-scroll-controller\.js[\s\S]*startup-recovery\.js[\s\S]*flow-bootstrap\.js/,'member mode must skip legacy scroll/bootstrap controllers');
 must(sw,/member-performance\.js/,'member performance patch must be injected');
 must(session,/status:total&&completed===total\?'complete':completed>0\?'partial':'none'/,'partial/full completion rule missing');
