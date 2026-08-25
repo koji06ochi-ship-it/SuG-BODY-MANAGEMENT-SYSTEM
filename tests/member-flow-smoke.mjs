@@ -34,8 +34,8 @@ async function openSeed(seed){
   const context=await browser.newContext();
   const page=await context.newPage();
   const errors=[];
-  page.on('pageerror',e=>errors.push(String(e)));
-  page.on('console',m=>{if(m.type()==='error') errors.push(m.text())});
+  page.on('pageerror',e=>errors.push(e.stack||String(e)));
+  page.on('console',m=>{if(m.type()==='error') errors.push(`${m.text()} @ ${m.location().url||''}:${m.location().lineNumber||0}:${m.location().columnNumber||0}`)});
   await page.addInitScript(seed=>{for(const [k,v] of Object.entries(seed)) localStorage.setItem(k,JSON.stringify(v));},seed);
   await page.goto('http://127.0.0.1:8080/member.html',{waitUntil:'domcontentloaded'});
   await page.waitForURL(/entry=member/,{timeout:10000});
@@ -43,7 +43,6 @@ async function openSeed(seed){
   return {context,page,errors};
 }
 
-// 1) Legacy state must migrate and survive the member entry reload.
 {
   const legacyPlan={input:{goalType:'TEST',deadline:isoDate(deadline),trainingDays:3},feas:{weeks:4},week:[{parts:['胸']},{parts:['背中']},{parts:['脚']}],createdAt:new Date().toISOString()};
   const {context,page,errors}=await openSeed({
@@ -54,11 +53,10 @@ async function openSeed(seed){
   assert.equal(migrated.g?.goalPlan?.idealVisionType,'physique','ideal/goal v1→v2 migration failed');
   assert.ok(migrated.g?.goalPlan?.lastPlan,'goal plan did not survive migration');
   assert.equal(migrated.i?.idealVisionType,'physique','ideal shadow migration failed');
-  assert.equal(errors.length,0,`migration page errors: ${errors.join(' | ')}`);
+  assert.equal(errors.length,0,`migration page errors:\n${errors.join('\n---\n')}`);
   await context.close();
 }
 
-// 2) Completed training must populate HOME, NEXT LOAD and release guided-flow scroll locks.
 {
   const now=new Date().toISOString();
   const plan={input:{goalType:'筋肥大',deadline:isoDate(deadline),trainingDays:3},feas:{weeks:4},week:[{parts:['胸']},{parts:['背中']},{parts:['脚']}],createdAt:now};
@@ -87,7 +85,7 @@ async function openSeed(seed){
   for(const bad of ['flow-scroll-controller.js','startup-recovery.js','flow-bootstrap.js','movement-ai.js','trainer-clinical-guard.js']) assert.equal(result.scripts.some(x=>x.includes(bad)),false,`legacy member script still loaded: ${bad}`);
   assert.ok(result.scripts.some(x=>x.includes('member-performance.js')),'member performance patch not loaded');
   if(result.max>200) assert.ok(Math.abs(result.y-result.target)<120,`scroll position was hijacked (${result.target}→${result.y})`);
-  assert.equal(errors.length,0,`completed-flow page errors: ${errors.join(' | ')}`);
+  assert.equal(errors.length,0,`completed-flow page errors:\n${errors.join('\n---\n')}`);
   await context.close();
 }
 
