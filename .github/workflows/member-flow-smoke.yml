@@ -10,6 +10,7 @@ on:
       - 'assets/health-sync/**'
       - 'assets/ui-feedback/**'
       - 'tests/member-flow-smoke.mjs'
+      - 'tests/member-flow-completion.mjs'
       - '.github/workflows/member-flow-smoke.yml'
   workflow_dispatch:
 jobs:
@@ -25,6 +26,7 @@ jobs:
         run: |
           set -e
           node --check tests/member-flow-smoke.mjs
+          node --check tests/member-flow-completion.mjs
           node --check sw.js
           for f in \
             assets/member-home/v26.5.41/engine.js \
@@ -68,7 +70,9 @@ jobs:
           echo $! > /tmp/sug-http.pid
           sleep 2
       - name: Local browser smoke test
-        run: node tests/member-flow-smoke.mjs
+        run: |
+          node tests/member-flow-smoke.mjs
+          node tests/member-flow-completion.mjs
       - name: Wait for GitHub Pages deployment
         run: |
           set -e
@@ -83,4 +87,6 @@ jobs:
       - name: Public Pages browser smoke test
         env:
           SUG_BASE_URL: https://koji06ochi-ship-it.github.io/SuG-BODY-MANAGEMENT-SYSTEM
-        run: node tests/member-flow-smoke.mjs
+        run: |
+          node tests/member-flow-smoke.mjs
+          node tests/member-flow-completion.mjs
