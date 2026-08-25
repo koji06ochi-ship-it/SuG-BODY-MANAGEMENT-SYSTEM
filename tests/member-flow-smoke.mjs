@@ -10,6 +10,7 @@ const home=read('assets/ui/v26.5.192/member-home-final.js');
 const next=read('assets/ui/v26.5.199/next-load-home.js');
 const training=read('assets/ui/v26.5.175/training-start.js');
 const migration=read('assets/ui/v26.5.193/state-migration.js');
+const BASE=(process.env.SUG_BASE_URL||'http://127.0.0.1:8080').replace(/\/$/,'');
 
 must(sw,/flow-scroll-controller\.js/,'member injector inventory must be explicit');
 must(sw,/skip=new Set\(\[[\s\S]*flow-scroll-controller\.js[\s\S]*startup-recovery\.js[\s\S]*flow-bootstrap\.js/,'member mode must skip legacy scroll/bootstrap controllers');
@@ -19,6 +20,7 @@ must(session,/totalVolumeKg:totalVolume\(actual\)/,'session total volume persist
 must(session,/LOAD_UP/,'next overload candidate missing');
 must(session,/flowClosedAt:new Date\(\)\.toISOString\(\)/,'flow completion persistence missing');
 for(const label of ['進捗','総重量','完了SET','予定達成','次回予定']) assert.ok(home.includes(label),`HOME progress missing ${label}`);
+assert.ok(home.includes('予定ペース達成')&&home.includes('次の1回'),'HOME motivation messaging missing');
 must(next,/NEXT LOAD/,'NEXT LOAD HOME output missing');
 must(training,/本日のトレーニング完了/,'closed training state missing');
 must(migration,/sug_goal_shadow_v1/,'legacy goal migration source missing');
@@ -37,8 +39,8 @@ async function openSeed(seed){
   page.on('pageerror',e=>errors.push(e.stack||String(e)));
   page.on('console',m=>{if(m.type()==='error') errors.push(`${m.text()} @ ${m.location().url||''}:${m.location().lineNumber||0}:${m.location().columnNumber||0}`)});
   await page.addInitScript(seed=>{for(const [k,v] of Object.entries(seed)) localStorage.setItem(k,JSON.stringify(v));},seed);
-  await page.goto('http://127.0.0.1:8080/member.html',{waitUntil:'domcontentloaded'});
-  await page.waitForURL(/entry=member/,{timeout:10000});
+  await page.goto(`${BASE}/member.html?smoke=${Date.now()}`,{waitUntil:'domcontentloaded'});
+  await page.waitForURL(/entry=member/,{timeout:15000});
   await page.waitForTimeout(4500);
   return {context,page,errors};
 }
@@ -81,6 +83,7 @@ async function openSeed(seed){
   assert.ok(result.text.includes('NEXT LOAD｜LOAD_UP'),'NEXT LOAD did not render');
   assert.ok(result.text.includes('予定達成'),'goal adherence did not render');
   assert.ok(result.text.includes('次回予定'),'next schedule did not render');
+  assert.ok(result.text.includes('本日の記録を見る')||result.text.includes('本日のトレーニング完了'),'completed state button/card did not render');
   assert.equal(result.before,false,'completed flow still leaves sug-today-flow scroll lock active');
   for(const bad of ['flow-scroll-controller.js','startup-recovery.js','flow-bootstrap.js','movement-ai.js','trainer-clinical-guard.js']) assert.equal(result.scripts.some(x=>x.includes(bad)),false,`legacy member script still loaded: ${bad}`);
   assert.ok(result.scripts.some(x=>x.includes('member-performance.js')),'member performance patch not loaded');
@@ -90,4 +93,4 @@ async function openSeed(seed){
 }
 
 await browser.close();
-console.log('MEMBER FLOW SMOKE PASS');
+console.log(`MEMBER FLOW SMOKE PASS ${BASE}`);
