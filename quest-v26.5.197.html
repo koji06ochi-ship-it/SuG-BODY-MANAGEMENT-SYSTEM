@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080809">
+<title>S.u.G QUEST V26.5.197</title>
+<style>
+:root{--bg:#080809;--card:#141417;--card2:#1b1b20;--line:#34343b;--gold:#d8b35b;--gold2:#f4db91;--text:#f7f7f7;--muted:#a5a5ab;--ok:#78d99e;--bad:#ff7d7d;--warn:#ffd166;--purple:#9d74ff}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:radial-gradient(circle at 50% -10%,#241c0e 0,#0b0b0d 34%,#060607 100%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif}button{font:inherit}.wrap{max-width:760px;margin:auto;padding:0 12px 105px}.top{position:sticky;top:0;z-index:30;margin:0 -12px;padding:11px 12px;background:rgba(7,7,8,.94);backdrop-filter:blur(14px);border-bottom:1px solid #27272d}.toprow{display:flex;align-items:center;justify-content:space-between;gap:10px}.brand{font-weight:1000;letter-spacing:.08em}.brand em{font-style:normal;color:var(--gold2)}.ver{font-size:9px;color:#7e7e85;margin-top:2px}.rank{font-size:10px;color:var(--gold2);border:1px solid #66542c;background:#1b170e;border-radius:999px;padding:6px 9px}
+.hero{position:relative;margin-top:12px;overflow:hidden;background:linear-gradient(180deg,#19191c,#0f0f12);border:1px solid #4a3c23;border-radius:24px;box-shadow:0 18px 48px rgba(0,0,0,.38)}.hero:before{content:"";position:absolute;inset:-45% -10% auto;height:80%;background:radial-gradient(circle,#d8b35b25,transparent 68%)}.heroStage{position:relative;height:330px;display:flex;align-items:flex-end;justify-content:center;padding-top:16px}.heroMotion{height:305px;display:flex;align-items:flex-end;justify-content:center;animation:step .72s ease-in-out infinite alternate;transform-origin:50% 100%}.heroImg{height:300px;max-width:92vw;object-fit:contain;filter:drop-shadow(0 18px 24px #000);transition:filter .35s,transform .35s}.heroImg.fatigue{filter:grayscale(.35) brightness(.68) drop-shadow(0 18px 24px #000);transform:rotate(-2deg) scale(.96)}.heroImg.over{filter:saturate(.9) drop-shadow(0 18px 24px #000);transform:scaleX(1.10) scaleY(1.02)}.heroImg.pump{filter:saturate(1.25) contrast(1.08) drop-shadow(0 0 22px #f6bd556d) drop-shadow(0 18px 24px #000);transform:scale(1.07)}.heroImg.great{filter:saturate(1.25) drop-shadow(0 0 26px #ffd66a88) drop-shadow(0 18px 24px #000);transform:scale(1.04)}.heroMotion.slow{animation-duration:1.65s}@keyframes step{from{transform:translateX(-5px) translateY(0) rotate(-.7deg)}to{transform:translateX(5px) translateY(-7px) rotate(.7deg)}}.speech{position:absolute;right:12px;top:14px;max-width:47%;padding:9px 11px;background:#fff;color:#111;border-radius:14px 14px 3px 14px;font-size:11px;font-weight:900;box-shadow:0 8px 18px #0006}.heroBottom{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:8px;padding:0 13px 13px}.mini{background:#0d0d10;border:1px solid #303037;border-radius:13px;padding:10px}.mini span{display:block;color:#999;font-size:9px}.mini b{display:block;font-size:18px;margin-top:2px}.gold{color:var(--gold2)}.bar{height:9px;background:#24242a;border-radius:99px;overflow:hidden;margin-top:7px}.fill{height:100%;width:0;background:linear-gradient(90deg,#65ce91,#f2c85f,#ef6b6b);border-radius:99px;transition:width .35s}
+.sec{margin-top:12px;background:linear-gradient(180deg,var(--card),#0f0f12);border:1px solid var(--line);border-radius:18px;padding:13px}.sec h2{font-size:13px;color:var(--gold2);margin:0 0 10px}.quest{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;background:#0d0d10;border:1px solid #2d2d34;border-radius:13px;padding:10px;margin-bottom:7px}.quest.done{background:#0f1813;border-color:#315e44}.quest strong{font-size:11px}.quest small{display:block;font-size:9px;color:#999;margin-top:3px;line-height:1.45}.qbtn{border:1px solid #4a4a52;background:#202026;color:#fff;border-radius:10px;padding:8px 9px;font-size:10px;font-weight:900}.qbtn.done{border-color:#315e44;color:#92e5b2;background:#132019}.walletRow{display:flex;justify-content:space-between;align-items:flex-end;gap:8px}.wallet{font-size:32px;font-weight:1000;color:var(--gold2)}.level{font-size:10px;color:#aaa;text-align:right}.enemy{background:radial-gradient(circle at 50% 0,#421823,#171014 62%);border:1px solid #6a303b;border-radius:16px;padding:12px}.enemyTop{display:grid;grid-template-columns:62px 1fr;gap:10px;align-items:center}.enemyIcon{width:62px;height:62px;border-radius:15px;background:#241318;border:1px solid #66313b;display:grid;place-items:center;font-size:38px}.enemy h3{margin:0;font-size:16px}.enemy p{font-size:9px;color:#c7afb4;margin:4px 0 0;line-height:1.5}.hp{height:11px;background:#2b171a;border-radius:99px;overflow:hidden;margin-top:10px}.hpFill{height:100%;background:linear-gradient(90deg,#ef4444,#ff9a52);transition:width .3s}.btnrow{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:9px}.btn{border:1px solid #414149;background:#202026;color:#fff;border-radius:11px;padding:10px 8px;font-weight:900;font-size:10px}.btn.goldbtn{border:0;color:#090909;background:linear-gradient(180deg,#ecd27f,#b78a32)}.btn.redbtn{background:#2b1618;border-color:#683439;color:#ffc0c0}.reward{background:linear-gradient(135deg,#18140c,#262016);border:1px solid #66542e;border-radius:14px;padding:11px}.reward h3{font-size:15px;margin:0;color:var(--gold2)}.reward p{font-size:10px;line-height:1.7;color:#ddd;margin:7px 0 10px}.chips{display:flex;gap:6px;flex-wrap:wrap}.chip{font-size:8px;border:1px solid #4a4a52;border-radius:999px;padding:4px 7px;color:#bbb}.chip.plus{color:#98e9b8;border-color:#315e44}.chip.minus{color:#ffaaaa;border-color:#6b343a}.log{max-height:180px;overflow:auto;background:#0b0b0d;border:1px solid #28282f;border-radius:12px;padding:7px}.logline{font-size:9px;color:#aaa;border-bottom:1px solid #24242a;padding:6px 3px}.logline:last-child{border-bottom:0}.settings{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.overlay{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(0,0,0,.93)}.overlay.show{display:flex}.selectbox{width:min(680px,100%);background:#111114;border:1px solid #493c24;border-radius:22px;padding:16px}.selectbox h1{text-align:center;font-size:20px;margin:0 0 4px}.selectbox>p{text-align:center;font-size:10px;color:#aaa;margin:0 0 12px}.choices{display:grid;grid-template-columns:1fr 1fr;gap:10px}.choice{border:1px solid #35353d;background:#0c0c0f;color:#fff;border-radius:17px;padding:10px}.choice img{width:100%;height:240px;object-fit:contain}.choice h3{font-size:14px;margin:5px 0 2px}.choice small{font-size:9px;color:#999}.choice.sel{border-color:var(--gold);box-shadow:0 0 0 1px #d8b35b55 inset}.start{width:100%;margin-top:11px;border:0;border-radius:12px;padding:11px;font-weight:1000;background:linear-gradient(180deg,#ecd27f,#b78a32);color:#090909}.start:disabled{opacity:.35}
+.debug{display:none;margin-top:8px;padding-top:8px;border-top:1px solid #29292f}.debug.show{display:block}.debuggrid{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}.debug button{font-size:9px;padding:8px 3px}.foot{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:repeat(5,1fr);gap:4px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:rgba(9,9,11,.95);backdrop-filter:blur(14px);border-top:1px solid #2a2a30}.nav{border:0;background:none;color:#8f8f96;font-size:9px}.nav b{display:block;font-size:18px}.nav.on{color:var(--gold2)}
+@media(max-width:520px){.heroStage{height:300px}.heroMotion{height:278px}.heroImg{height:275px}.choice img{height:205px}.speech{max-width:50%;font-size:10px}.debuggrid{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<div id="overlay" class="overlay">
+  <div class="selectbox">
+    <h1>主人公＝将来の自分</h1>
+    <p>悠・柚ではなく、あなた自身の未来像をずっと育てる。</p>
+    <div class="choices">
+      <button class="choice" data-hero="hyottoko"><img src="./quest-hero-hyottoko.svg" alt="ひょっとこ"><h3>ひょっとこ</h3><small>筋肉質で腹はバキバキ。未来の自分。</small></button>
+      <button class="choice" data-hero="okame"><img src="./quest-hero-okame.svg" alt="おかめ"><h3>おかめ</h3><small>健康的に引き締まった未来の自分。</small></button>
+    </div>
+    <button id="start" class="start" disabled>この主人公で始める</button>
+  </div>
+</div>
+<div class="wrap">
+  <header class="top"><div class="toprow"><div><div class="brand">S.u.G <em>QUEST</em></div><div class="ver">V26.5.197 FUTURE SELF</div></div><div id="rank" class="rank">BEGINNER</div></div></header>
+
+  <section class="hero">
+    <div class="heroStage"><div id="heroMotion" class="heroMotion"><img id="heroImg" class="heroImg" src="./quest-hero-hyottoko.svg" alt="将来の自分"></div><div id="speech" class="speech">今日も一緒に進むで！</div></div>
+    <div class="heroBottom">
+      <div class="mini"><span>主人公の状態</span><b id="stateLabel">通常</b><div class="bar"><div id="recoveryBar" class="fill"></div></div></div>
+      <div class="mini"><span>TOTAL POINT</span><b id="pointsTop" class="gold">0pt</b></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>TODAY QUEST</h2>
+    <div id="quests"></div>
+  </section>
+
+  <section class="sec">
+    <div class="walletRow"><div><h2 style="margin-bottom:2px">POINT WALLET</h2><div id="wallet" class="wallet">0pt</div></div><div id="level" class="level">Lv.1</div></div>
+    <div class="bar"><div id="levelBar" class="fill"></div></div>
+    <div class="chips" style="margin-top:9px"><span class="chip plus">行動で加点</span><span class="chip minus">ルール違反で減点</span><span class="chip">0pt未満なし</span></div>
+  </section>
+
+  <section class="sec">
+    <h2>ENEMY EVENT</h2>
+    <div class="enemy">
+      <div class="enemyTop"><div id="enemyIcon" class="enemyIcon">👑</div><div><h3 id="enemyName">言い訳ササキング</h3><p id="enemyText">「今日は疲れたし明日でええか…」を倒せ。</p></div></div>
+      <div class="hp"><div id="enemyHp" class="hpFill"></div></div>
+      <div class="btnrow"><button id="attack" class="btn goldbtn">QUEST達成で攻撃</button><button id="nextEnemy" class="btn">次の敵</button></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>SNACK / RULE EVENT</h2>
+    <div class="btnrow"><button class="btn redbtn penalty" data-p="-50">ポテチ1袋 −50pt</button><button class="btn redbtn penalty" data-p="-100">予定外の深夜食 −100pt</button></div>
+    <p style="font-size:9px;color:#999;line-height:1.6;margin:8px 0 0">計画したケーキ・外食は減点なし。食べ物そのものではなく、自分で決めたルールを破った時だけイベント減点。</p>
+  </section>
+
+  <section class="sec">
+    <h2>10,000pt REWARD</h2>
+    <div class="reward"><h3>好きな1つを選択</h3><p>指定プロテイン / S.u.G Tシャツ / S.u.G水筒 / 提携店2,000円食事券<br>＋ 越智サイン入り達成カード</p><button id="reward" class="btn goldbtn" style="width:100%">10,000ptで交換</button></div>
+  </section>
+
+  <section class="sec">
+    <h2>QUEST LOG</h2><div id="log" class="log"></div>
+  </section>
+
+  <section class="sec">
+    <h2>設定</h2><div class="settings"><button id="changeHero" class="btn">主人公を変更</button><button id="debugToggle" class="btn">状態テスト</button></div>
+    <div id="debug" class="debug"><div class="debuggrid"><button class="btn state" data-s="normal">通常</button><button class="btn state" data-s="fatigue">疲労</button><button class="btn state" data-s="over">OVER</button><button class="btn state" data-s="pump">パンプ</button><button class="btn state" data-s="great">絶好調</button></div></div>
+  </section>
+</div>
+<nav class="foot"><button class="nav on"><b>⌂</b>HOME</button><button class="nav"><b>⚔</b>QUEST</button><button class="nav"><b>⌖</b>MAP</button><button class="nav"><b>🎁</b>SHOP</button><button class="nav"><b>♟</b>MY</button></nav>
+<script>
+(()=>{
+const KEY='sugQuestV2';
+const today=()=>new Date().toISOString().slice(0,10);
+const base={hero:null,points:0,state:'normal',enemy:0,enemyHp:100,day:today(),done:{},logs:[],rewardCount:0};
+let d={...base};
+try{const x=JSON.parse(localStorage.getItem(KEY)||'null');if(x)d={...base,...x,done:{...(x.done||{})},logs:Array.isArray(x.logs)?x.logs:[]}}catch(e){}
+if(d.day!==today()){d.day=today();d.done={};d.enemyHp=100;}
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const heroes={hyottoko:{img:'./quest-hero-hyottoko.svg',name:'ひょっとこ'},okame:{img:'./quest-hero-okame.svg',name:'おかめ'}};
+const states={normal:{label:'通常',speech:'今日も一緒に進むで！',cls:'',slow:false,recovery:70},fatigue:{label:'疲労ぎみ',speech:'今日は回復もQUESTやで。',cls:'fatigue',slow:true,recovery:38},over:{label:'カロリーOVER傾向',speech:'少し戻そ。まだ全然いける。',cls:'over',slow:false,recovery:65},pump:{label:'トレーニング後',speech:'パンプ完了！ええ感じや！',cls:'pump',slow:false,recovery:78},great:{label:'絶好調',speech:'今日の主人公、最強や。',cls:'great',slow:false,recovery:95}};
+const questDefs=[
+ {id:'walk3',title:'3km歩く',sub:'まずは街へ出る',pt:50},
+ {id:'walk5',title:'5km歩く',sub:'歩行ルートを伸ばす',pt:100},
+ {id:'steps10k',title:'10,000歩達成',sub:'日常活動量を確保',pt:150},
+ {id:'training',title:'トレーニング完了',sub:'予定したセッションを実施',pt:100},
+ {id:'food',title:'食事写真を記録',sub:'食べたものを残す',pt:50},
+ {id:'care',title:'ストレッチ / ケア',sub:'回復行動もQUEST',pt:50},
+ {id:'route',title:'WALK ROUTE達成',sub:'淡路・天王寺・京橋など目的地まで歩く',pt:300}
+];
+const enemies=[
+ {name:'言い訳ササキング',icon:'👑',text:'「今日は疲れたし明日でええか…」を倒せ。'},
+ {name:'逆ショートスリーパー松',icon:'🎂',text:'ハチマキ＋ケーキ。夜更かし誘惑イベント。'},
+ {name:'ポテチ魔王',icon:'🥔',text:'予定外の一袋で現れる。計画内ならノーダメージ。'},
+ {name:'夜ふかし伯爵',icon:'🧛',text:'睡眠を削ってくる。回復行動で弱らせろ。'},
+ {name:'ゴロゴロスライム',icon:'🟢',text:'歩数不足で巨大化。歩けば歩くほどHPが減る。'},
+ {name:'ドカ食いキング',icon:'🍗',text:'週末に出現。計画した食事ならノーダメージ。'}
+];
+function save(){localStorage.setItem(KEY,JSON.stringify(d))}
+function log(msg){d.logs.unshift(new Date().toLocaleTimeString('ja-JP',{hour:'2-digit',minute:'2-digit'})+'  '+msg);d.logs=d.logs.slice(0,60);save();renderLog()}
+function addPoints(n,msg){d.points=Math.max(0,d.points+n);log((n>=0?'+':'')+n+'pt  '+msg);render()}
+function rankOf(p){if(p>=50000)return'GOD';if(p>=30000)return'LEGEND';if(p>=15000)return'WARRIOR';if(p>=5000)return'HERO';return'BEGINNER'}
+function renderQuests(){const box=$('#quests');box.innerHTML='';questDefs.forEach(q=>{const done=!!d.done[q.id];const el=document.createElement('div');el.className='quest'+(done?' done':'');el.innerHTML='<div><strong>'+q.title+'</strong><small>'+q.sub+' ・ +'+q.pt+'pt</small></div><button class="qbtn '+(done?'done':'')+'" data-id="'+q.id+'">'+(done?'達成済':'達成')+'</button>';box.appendChild(el)});$$('.qbtn').forEach(b=>b.onclick=()=>completeQuest(b.dataset.id))}
+function completeQuest(id){if(d.done[id])return;const q=questDefs.find(x=>x.id===id);if(!q)return;d.done[id]=true;d.points+=q.pt;d.enemyHp=Math.max(0,d.enemyHp-15);if(id==='training')d.state='pump';if(id==='steps10k'||id==='route')if(d.state==='normal')d.state='great';log(q.title+' 達成 +'+q.pt+'pt');render()}
+function renderHero(){const h=heroes[d.hero]||heroes.hyottoko;const s=states[d.state]||states.normal;$('#heroImg').src=h.img;$('#heroImg').className='heroImg '+s.cls;$('#heroMotion').className='heroMotion'+(s.slow?' slow':'');$('#stateLabel').textContent=s.label;$('#speech').textContent=s.speech;$('#recoveryBar').style.width=s.recovery+'%'}
+function renderEnemy(){const e=enemies[d.enemy%enemies.length];$('#enemyName').textContent=e.name;$('#enemyIcon').textContent=e.icon;$('#enemyText').textContent=e.text;$('#enemyHp').style.width=d.enemyHp+'%';if(d.enemyHp<=0){$('#enemyText').textContent='撃破！次の敵へ進める。'}}
+function renderLog(){const box=$('#log');box.innerHTML=d.logs.length?d.logs.map(x=>'<div class="logline">'+x+'</div>').join(''):'<div class="logline">まだ記録なし。今日のQUESTから開始。</div>'}
+function render(){renderHero();renderQuests();renderEnemy();$('#wallet').textContent=d.points.toLocaleString()+'pt';$('#pointsTop').textContent=d.points.toLocaleString()+'pt';const lv=Math.floor(d.points/1000)+1;$('#level').textContent='Lv.'+lv+' / '+rankOf(d.points);$('#rank').textContent=rankOf(d.points);$('#levelBar').style.width=(d.points%1000)/10+'%';save();renderLog()}
+function showSelect(){let pick=d.hero;$('#overlay').classList.add('show');$$('.choice').forEach(c=>c.classList.toggle('sel',c.dataset.hero===pick));$('#start').disabled=!pick;$$('.choice').forEach(c=>c.onclick=()=>{pick=c.dataset.hero;$$('.choice').forEach(x=>x.classList.toggle('sel',x===c));$('#start').disabled=false});$('#start').onclick=()=>{d.hero=pick;save();$('#overlay').classList.remove('show');render()}}
+$('#attack').onclick=()=>{const count=Object.values(d.done).filter(Boolean).length;if(!count){log('攻撃失敗：まずQUESTを1つ達成');return}d.enemyHp=Math.max(0,d.enemyHp-10);log('敵へ攻撃 −10HP');render()};
+$('#nextEnemy').onclick=()=>{d.enemy=(d.enemy+1)%enemies.length;d.enemyHp=100;log('次の敵：'+enemies[d.enemy].name);render()};
+$$('.penalty').forEach(b=>b.onclick=()=>addPoints(Number(b.dataset.p),b.textContent.replace(/−?\d+pt.*/,'')));
+$('#reward').onclick=()=>{if(d.points<10000){log('REWARDまであと '+(10000-d.points).toLocaleString()+'pt');return}d.points-=10000;d.rewardCount++;log('10,000pt REWARD交換 '+d.rewardCount+'回目');render()};
+$('#changeHero').onclick=showSelect;$('#debugToggle').onclick=()=>$('#debug').classList.toggle('show');$$('.state').forEach(b=>b.onclick=()=>{d.state=b.dataset.s;log('状態テスト：'+states[d.state].label);render()});
+if(!d.hero)showSelect();render();
+})();
+</script>
+</body>
+</html>
