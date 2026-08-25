@@ -67,5 +67,20 @@ jobs:
           python3 -m http.server 8080 > /tmp/sug-http.log 2>&1 &
           echo $! > /tmp/sug-http.pid
           sleep 2
-      - name: Browser smoke test
+      - name: Local browser smoke test
+        run: node tests/member-flow-smoke.mjs
+      - name: Wait for GitHub Pages deployment
+        run: |
+          set -e
+          URL='https://koji06ochi-ship-it.github.io/SuG-BODY-MANAGEMENT-SYSTEM/member.html'
+          ok=0
+          for i in $(seq 1 30); do
+            body=$(curl -fsSL --max-time 15 "$URL?deploycheck=$GITHUB_SHA-$i" || true)
+            if printf '%s' "$body" | grep -q '26.5.204'; then ok=1; break; fi
+            sleep 5
+          done
+          test "$ok" = 1
+      - name: Public Pages browser smoke test
+        env:
+          SUG_BASE_URL: https://koji06ochi-ship-it.github.io/SuG-BODY-MANAGEMENT-SYSTEM
         run: node tests/member-flow-smoke.mjs
