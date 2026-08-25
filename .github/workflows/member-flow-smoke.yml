@@ -1,0 +1,41 @@
+name: member flow smoke
+on:
+  push:
+    paths:
+      - 'member.html'
+      - 'sw.js'
+      - 'assets/ui/**'
+      - 'tests/member-flow-smoke.mjs'
+      - '.github/workflows/member-flow-smoke.yml'
+  workflow_dispatch:
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Start local app
+        run: |
+          python3 -m http.server 8080 > /tmp/sug-http.log 2>&1 &
+          echo $! > /tmp/sug-http.pid
+          sleep 2
+      - name: Syntax check critical scripts
+        run: |
+          node --check assets/ui/v26.5.175/training-start.js
+          node --check assets/ui/v26.5.176/session-flow.js
+          node --check assets/ui/v26.5.192/member-home-final.js
+          node --check assets/ui/v26.5.193/state-migration.js
+          node --check assets/ui/v26.5.199/next-load-home.js
+          node --check assets/ui/v26.5.203/flow-complete-release.js
+          node --check assets/ui/v26.5.204/member-performance.js
+          node --check sw.js
+      - name: Browser smoke test
+        run: node tests/member-flow-smoke.mjs
