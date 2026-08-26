@@ -8,11 +8,20 @@ const page=await context.newPage();
 const errors=[];
 page.on('pageerror',e=>errors.push(String(e)));
 page.on('console',m=>{if(m.type()==='error') errors.push(m.text())});
+const questFrame=async()=>{
+  const deadline=Date.now()+15000;
+  while(Date.now()<deadline){
+    const f=page.frames().find(x=>/quest-v26\.5\.200\.html/.test(x.url()));
+    if(f)return f;
+    await page.waitForTimeout(150);
+  }
+  return null;
+};
 
 await page.goto(`${BASE}/member.html?smoke=${Date.now()}`,{waitUntil:'domcontentloaded'});
 await page.waitForURL(/quest\.html/,{timeout:15000});
 await page.waitForSelector('#app',{timeout:10000});
-const app=page.frames().find(f=>/quest-v26\.5\.200\.html/.test(f.url()));
+const app=await questFrame();
 assert.ok(app,'QUEST iframe not loaded');
 await app.waitForSelector('#choose',{timeout:10000});
 
@@ -37,7 +46,7 @@ await page.evaluate(now=>{
 await page.goto(`${BASE}/quest.html?returntest=${Date.now()}`,{waitUntil:'domcontentloaded'});
 await page.waitForSelector('#flowStatus',{timeout:10000});
 await page.waitForFunction(()=>document.querySelector('#flowStatus')?.textContent?.includes('トレ完了'),null,{timeout:10000});
-const app2=page.frames().find(f=>/quest-v26\.5\.200\.html/.test(f.url()));
+const app2=await questFrame();
 assert.ok(app2,'QUEST iframe missing after return');
 await app2.waitForSelector('#training',{state:'attached',timeout:10000});
 await page.waitForTimeout(1200);
