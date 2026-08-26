@@ -10,8 +10,7 @@ on:
       - 'assets/member/**'
       - 'assets/health-sync/**'
       - 'assets/ui-feedback/**'
-      - 'tests/member-flow-smoke.mjs'
-      - 'tests/member-flow-completion.mjs'
+      - 'tests/member-release-smoke.mjs'
       - '.github/workflows/member-flow-smoke.yml'
   workflow_dispatch:
 jobs:
@@ -26,8 +25,7 @@ jobs:
       - name: Syntax check member runtime
         run: |
           set -e
-          node --check tests/member-flow-smoke.mjs
-          node --check tests/member-flow-completion.mjs
+          node --check tests/member-release-smoke.mjs
           node --check sw.js
           for f in \
             assets/member-home/v26.5.41/engine.js \
@@ -57,7 +55,6 @@ jobs:
             assets/ui/v26.5.200/quest-entry.js \
             assets/ui/v26.5.203/flow-complete-release.js \
             assets/ui/v26.5.204/member-performance.js; do
-              echo "checking $f"
               node --check "$f"
           done
       - name: Install Playwright
@@ -70,24 +67,20 @@ jobs:
           python3 -m http.server 8080 > /tmp/sug-http.log 2>&1 &
           echo $! > /tmp/sug-http.pid
           sleep 2
-      - name: Local browser smoke test
-        run: |
-          node tests/member-flow-smoke.mjs
-          node tests/member-flow-completion.mjs
+      - name: Local release browser smoke
+        run: node tests/member-release-smoke.mjs
       - name: Wait for GitHub Pages deployment
         run: |
           set -e
           URL='https://koji06ochi-ship-it.github.io/SuG-BODY-MANAGEMENT-SYSTEM/member.html'
           ok=0
-          for i in $(seq 1 30); do
+          for i in $(seq 1 36); do
             body=$(curl -fsSL --max-time 15 "$URL?deploycheck=$GITHUB_SHA-$i" || true)
-            if printf '%s' "$body" | grep -q '26.5.213'; then ok=1; break; fi
+            if printf '%s' "$body" | grep -q '26.5.214'; then ok=1; break; fi
             sleep 5
           done
           test "$ok" = 1
-      - name: Public Pages browser smoke test
+      - name: Public Pages release browser smoke
         env:
           SUG_BASE_URL: https://koji06ochi-ship-it.github.io/SuG-BODY-MANAGEMENT-SYSTEM
-        run: |
-          node tests/member-flow-smoke.mjs
-          node tests/member-flow-completion.mjs
+        run: node tests/member-release-smoke.mjs
