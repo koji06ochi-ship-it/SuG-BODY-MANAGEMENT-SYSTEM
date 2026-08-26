@@ -70,12 +70,13 @@ const plan={input:{goalType:'筋肥大',deadline:isoDate(deadline),trainingDays:
 {
   const {context,frame,errors}=await openHub({});
   const result=await frame.evaluate(()=>{
+    try{ eval("db.current='__smoke__'; db.members.__smoke__=baseMember('Smoke Member')"); }catch(e){ return {ok:false,text:'MEMBER_SETUP:'+String(e)}; }
     if(typeof window.importSugHealthPayload!=='function') return {ok:false,text:'NO_IMPORT'};
     const r=window.importSugHealthPayload({steps:4321,sleep:7.5,heart:61,weight:67.5});
     if(typeof window.renderSugHealthSync==='function') window.renderSugHealthSync();
     return {ok:!!r?.ok,text:document.getElementById('sugHealthMetrics')?.innerText||document.body.innerText};
   });
-  assert.equal(result.ok,true,'Health 4項目payloadを受信できない');
+  assert.equal(result.ok,true,`Health 4項目payloadを受信できない: ${result.text}`);
   for(const value of ['4,321','7.5','61','67.5']) assert.ok(result.text.includes(value),`Health表示不足: ${value}`);
   assert.equal(errors.length,0,`Health受信表示でJS error:\n${errors.join('\n')}`);
   await context.close();
