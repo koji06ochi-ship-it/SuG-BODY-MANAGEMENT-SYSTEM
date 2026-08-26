@@ -1,0 +1,45 @@
+name: quest member smoke
+on:
+  push:
+    paths:
+      - 'member.html'
+      - 'quest.html'
+      - 'quest-v26.5.200.html'
+      - 'tests/quest-member-smoke.mjs'
+      - '.github/workflows/quest-member-smoke.yml'
+  workflow_dispatch:
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Start local app
+        run: |
+          python3 -m http.server 8080 >/tmp/sug-http.log 2>&1 &
+          sleep 2
+      - name: Local QUEST integration
+        run: node tests/quest-member-smoke.mjs
+      - name: Wait for GitHub Pages
+        run: |
+          set -e
+          URL='https://koji06ochi-ship-it.github.io/SuG-BODY-MANAGEMENT-SYSTEM/member.html'
+          ok=0
+          for i in $(seq 1 36); do
+            body=$(curl -fsSL --max-time 15 "$URL?deploycheck=$GITHUB_SHA-$i" || true)
+            if printf '%s' "$body" | grep -q 'quest.html'; then ok=1; break; fi
+            sleep 5
+          done
+          test "$ok" = 1
+      - name: Public Pages QUEST integration
+        env:
+          SUG_BASE_URL: https://koji06ochi-ship-it.github.io/SuG-BODY-MANAGEMENT-SYSTEM
+        run: node tests/quest-member-smoke.mjs
