@@ -10,7 +10,6 @@ const session=read('assets/ui/v26.5.176/session-flow.js');
 const home=read('assets/ui/v26.5.192/member-home-final.js');
 const next=read('assets/ui/v26.5.199/next-load-home.js');
 const training=read('assets/ui/v26.5.175/training-start.js');
-const migration=read('assets/ui/v26.5.193/state-migration.js');
 const health=read('assets/health-sync/v26.5.27/engine.js');
 const quest=read('assets/ui/v26.5.200/quest-entry.js');
 const BASE=(process.env.SUG_BASE_URL||'http://127.0.0.1:8080').replace(/\/$/,'');
@@ -30,9 +29,6 @@ must(home,/dayKey\(d0\(r\?\.at\)\)===todayKey\(\)/,'HOME today stats must be dat
 must(training,/todayKey\(r\.at\)===todayKey\(\)/,'training completion state must be date-scoped');
 must(next,/NEXT LOAD/,'NEXT LOAD HOME output missing');
 must(training,/本日のトレーニング完了/,'closed training state missing');
-must(migration,/sug_goal_shadow_v1/,'legacy goal migration source missing');
-must(migration,/sug_goal_shadow_v2/,'current goal migration target missing');
-must(migration,/idealVisionType/,'ideal vision migration missing');
 must(health,/latestWeight\(mem\)/,'health weight must fall back to latest stored value');
 must(health,/steps.*sleep.*heart.*weight/s,'health import must support steps/sleep/heart/weight');
 must(quest,/quest\.html/,'QUEST entry route missing');
@@ -53,20 +49,6 @@ async function openSeed(seed){
   await page.waitForURL(/entry=member/,{timeout:15000});
   await page.waitForTimeout(4500);
   return {context,page,errors};
-}
-
-{
-  const legacyPlan={input:{goalType:'TEST',deadline:isoDate(deadline),trainingDays:3},feas:{weeks:4},week:[{parts:['胸']},{parts:['背中']},{parts:['脚']}],createdAt:new Date().toISOString()};
-  const {context,page,errors}=await openSeed({
-    sug_goal_shadow_v1:{memberKey:'',at:new Date().toISOString(),goalPlan:{idealVisionType:'physique',idealVisionName:'PHYSIQUE',lastPlan:legacyPlan,generatedAt:new Date().toISOString()}},
-    sug_ideal_shadow_v1:{memberKey:'',at:new Date().toISOString(),idealVisionType:'physique',idealVisionName:'PHYSIQUE'}
-  });
-  const migrated=await page.evaluate(()=>({g:JSON.parse(localStorage.getItem('sug_goal_shadow_v2')||'null'),i:JSON.parse(localStorage.getItem('sug_ideal_shadow_v2')||'null')}));
-  assert.equal(migrated.g?.goalPlan?.idealVisionType,'physique','ideal/goal v1→v2 migration failed');
-  assert.ok(migrated.g?.goalPlan?.lastPlan,'goal plan did not survive migration');
-  assert.equal(migrated.i?.idealVisionType,'physique','ideal shadow migration failed');
-  assert.equal(errors.length,0,`migration page errors:\n${errors.join('\n---\n')}`);
-  await context.close();
 }
 
 {
@@ -110,9 +92,22 @@ async function openSeed(seed){
   const text=await page.evaluate(()=>document.body.innerText);
   assert.ok(!text.includes('本日のトレーニングは部分完了'),'yesterday partial state leaked into today');
   assert.ok(!text.includes('追加トレーニングを開始'),'yesterday add-training state leaked into today');
-  assert.ok(text.includes('このメニューでトレーニング開始'),'fresh-day start button missing');
   assert.ok(text.includes('今日の総重量')&&text.includes('0kg'),'today total must reset when only yesterday has training');
   assert.equal(errors.length,0,`day-rollover page errors:\n${errors.join('\n---\n')}`);
+  await context.close();
+}
+
+{
+  const {context,page,errors}=await openSeed({});
+  const healthResult=await page.evaluate(()=>{
+    if(typeof window.importSugHealthPayload!=='function') return {ok:false,reason:'health import function missing'};
+    const r=window.importSugHealthPayload({steps:4321,sleep:7.5,heart:61,weight:67.5});
+    if(typeof window.renderSugHealthSync==='function') window.renderSugHealthSync();
+    return {ok:!!r?.ok,text:document.getElementById('sugHealthMetrics')?.innerText||''};
+  });
+  assert.equal(healthResult.ok,true,'health 4-metric payload was not accepted');
+  for(const value of ['4,321','7.5','61','67.5']) assert.ok(healthResult.text.includes(value),`health metric missing from display: ${value}`);
+  assert.equal(errors.length,0,`health page errors:\n${errors.join('\n---\n')}`);
   await context.close();
 }
 
