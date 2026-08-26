@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'member.html'
+      - 'member-hub.html'
       - 'sw.js'
       - 'assets/ui/**'
       - 'assets/member-home/**'
@@ -80,7 +81,7 @@ jobs:
           ok=0
           for i in $(seq 1 30); do
             body=$(curl -fsSL --max-time 15 "$URL?deploycheck=$GITHUB_SHA-$i" || true)
-            if printf '%s' "$body" | grep -q '26.5.204'; then ok=1; break; fi
+            if printf '%s' "$body" | grep -q '26.5.213'; then ok=1; break; fi
             sleep 5
           done
           test "$ok" = 1
