@@ -5,27 +5,37 @@ import { chromium } from 'playwright';
 const read=p=>fs.readFileSync(p,'utf8');
 const must=(src,re,msg)=>assert.match(src,re,msg);
 const sw=read('sw.js');
+const memberHub=read('member-hub.html');
 const session=read('assets/ui/v26.5.176/session-flow.js');
 const home=read('assets/ui/v26.5.192/member-home-final.js');
 const next=read('assets/ui/v26.5.199/next-load-home.js');
 const training=read('assets/ui/v26.5.175/training-start.js');
 const migration=read('assets/ui/v26.5.193/state-migration.js');
+const health=read('assets/health-sync/v26.5.27/engine.js');
+const quest=read('assets/ui/v26.5.200/quest-entry.js');
 const BASE=(process.env.SUG_BASE_URL||'http://127.0.0.1:8080').replace(/\/$/,'');
 
 must(sw,/flow-scroll-controller\.js/,'member injector inventory must be explicit');
 must(sw,/skip=new Set\(\[[\s\S]*flow-scroll-controller\.js[\s\S]*startup-recovery\.js[\s\S]*flow-bootstrap\.js/,'member mode must skip legacy scroll/bootstrap controllers');
 must(sw,/member-performance\.js/,'member performance patch must be injected');
+must(memberHub,/entry=member&hub=1/,'member hub BODY must load member runtime mode');
+must(memberHub,/quest\.html/,'member hub QUEST route missing');
 must(session,/status:total&&completed===total\?'complete':completed>0\?'partial':'none'/,'partial/full completion rule missing');
 must(session,/totalVolumeKg:totalVolume\(actual\)/,'session total volume persistence missing');
 must(session,/LOAD_UP/,'next overload candidate missing');
 must(session,/flowClosedAt:new Date\(\)\.toISOString\(\)/,'flow completion persistence missing');
 for(const label of ['進捗','総重量','完了SET','予定達成','次回予定']) assert.ok(home.includes(label),`HOME progress missing ${label}`);
 assert.ok(home.includes('予定ペース達成')&&home.includes('次の1回'),'HOME motivation messaging missing');
+must(home,/dayKey\(d0\(r\?\.at\)\)===todayKey\(\)/,'HOME today stats must be date-scoped');
+must(training,/todayKey\(r\.at\)===todayKey\(\)/,'training completion state must be date-scoped');
 must(next,/NEXT LOAD/,'NEXT LOAD HOME output missing');
 must(training,/本日のトレーニング完了/,'closed training state missing');
 must(migration,/sug_goal_shadow_v1/,'legacy goal migration source missing');
 must(migration,/sug_goal_shadow_v2/,'current goal migration target missing');
 must(migration,/idealVisionType/,'ideal vision migration missing');
+must(health,/latestWeight\(mem\)/,'health weight must fall back to latest stored value');
+must(health,/steps.*sleep.*heart.*weight/s,'health import must support steps/sleep/heart/weight');
+must(quest,/quest\.html/,'QUEST entry route missing');
 
 const browser=await chromium.launch({headless:true});
 const today=new Date();
@@ -39,7 +49,7 @@ async function openSeed(seed){
   page.on('pageerror',e=>errors.push(e.stack||String(e)));
   page.on('console',m=>{if(m.type()==='error') errors.push(`${m.text()} @ ${m.location().url||''}:${m.location().lineNumber||0}:${m.location().columnNumber||0}`)});
   await page.addInitScript(seed=>{for(const [k,v] of Object.entries(seed)) localStorage.setItem(k,JSON.stringify(v));},seed);
-  await page.goto(`${BASE}/member.html?smoke=${Date.now()}`,{waitUntil:'domcontentloaded'});
+  await page.goto(`${BASE}/?entry=member&smoke=${Date.now()}`,{waitUntil:'domcontentloaded'});
   await page.waitForURL(/entry=member/,{timeout:15000});
   await page.waitForTimeout(4500);
   return {context,page,errors};
@@ -89,6 +99,20 @@ async function openSeed(seed){
   assert.ok(result.scripts.some(x=>x.includes('member-performance.js')),'member performance patch not loaded');
   if(result.max>200) assert.ok(Math.abs(result.y-result.target)<120,`scroll position was hijacked (${result.target}→${result.y})`);
   assert.equal(errors.length,0,`completed-flow page errors:\n${errors.join('\n---\n')}`);
+  await context.close();
+}
+
+{
+  const yesterday=new Date(); yesterday.setDate(yesterday.getDate()-1); yesterday.setHours(18,0,0,0);
+  const at=yesterday.toISOString();
+  const stale={at,flowClosedAt:at,completion:'partial',completedSets:2,totalSets:7,totalVolumeKg:350,next:'HOLD',exercises:[{name:'YESTERDAY ONLY',sets:[{set:1,load:10,reps:15},{set:2,load:10,reps:20}]}]};
+  const {context,page,errors}=await openSeed({sug_training_sessions_v1:[stale]});
+  const text=await page.evaluate(()=>document.body.innerText);
+  assert.ok(!text.includes('本日のトレーニングは部分完了'),'yesterday partial state leaked into today');
+  assert.ok(!text.includes('追加トレーニングを開始'),'yesterday add-training state leaked into today');
+  assert.ok(text.includes('このメニューでトレーニング開始'),'fresh-day start button missing');
+  assert.ok(text.includes('今日の総重量')&&text.includes('0kg'),'today total must reset when only yesterday has training');
+  assert.equal(errors.length,0,`day-rollover page errors:\n${errors.join('\n---\n')}`);
   await context.close();
 }
 
