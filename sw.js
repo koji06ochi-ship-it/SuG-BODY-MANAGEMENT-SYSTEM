@@ -1,4 +1,4 @@
-const SW_VERSION='sug-v26.5.246-pwa-asset-cache';
+const SW_VERSION='sug-v26.5.247-pwa-home-single-render';
 self.addEventListener('install',()=>self.skipWaiting());
 self.addEventListener('activate',event=>event.waitUntil((async()=>{for(const k of await caches.keys())await caches.delete(k);await self.clients.claim()})()));
 
@@ -27,7 +27,6 @@ const PWA_MEMBER_RUNTIME=[
 'assets/ui/v26.5.175/training-start.js',
 'assets/ui/v26.5.176/session-flow.js',
 'assets/ui/v26.5.184/session-training-bridge.js',
-'assets/ui/v26.5.192/member-home-final.js',
 'assets/ui/v26.5.193/state-migration.js',
 'assets/ui/v26.5.199/next-load-home.js',
 'assets/ui/v26.5.200/quest-entry.js',
