@@ -27,21 +27,7 @@ window.saveIdealVisionType=function(i){
     window.alert=realAlert;
   }
   try{window.closeIdealVision?.()}catch(_e){}
-  if(typeof window.SUG_START_TODAY_FLOW==='function'){
-    setTimeout(()=>window.SUG_START_TODAY_FLOW?.(),80);
-    return;
-  }
-  try{
-    if(typeof window.openTab==='function')window.openTab('smart');
-    else document.querySelector('.tab[data-tab="smart"]')?.click();
-  }catch(_e){}
-  setTimeout(()=>{
-    const appetite=document.getElementById('smartAppetite');
-    if(appetite){
-      appetite.scrollIntoView({behavior:'auto',block:'center'});
-      try{appetite.focus({preventScroll:true})}catch(_e){}
-    }
-  },180);
+  try{window.scrollTo({top:0,left:0,behavior:'auto'})}catch(_e){}
 };
-window.__SUG_IDEAL_CONFIRM_DIRECT_VERSION__='26.5.228';
+window.__SUG_IDEAL_CONFIRM_DIRECT_VERSION__='26.5.248';
 })();
