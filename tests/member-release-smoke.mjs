@@ -11,7 +11,7 @@ async function openHub(seed={}){
   page.on('pageerror',e=>errors.push(String(e)));
   page.on('console',m=>{ if(m.type()==='error') errors.push(m.text()); });
   await page.addInitScript(seed=>{ for(const [k,v] of Object.entries(seed)) localStorage.setItem(k,JSON.stringify(v)); },seed);
-  await page.goto(`${BASE}/member-hub.html?v=26.5.214&release=${Date.now()}`,{waitUntil:'domcontentloaded'});
+  await page.goto(`${BASE}/member-hub.html?v=26.5.223&release=${Date.now()}`,{waitUntil:'domcontentloaded'});
   await page.waitForSelector('#view');
   let frame;
   for(let i=0;i<60;i++){
@@ -30,7 +30,7 @@ const isoDate=d=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`
 const deadline=new Date(now); deadline.setDate(deadline.getDate()+28);
 const plan={input:{goalType:'筋肥大',deadline:isoDate(deadline),trainingDays:3},feas:{weeks:4},week:[{parts:['胸']},{parts:['背中']},{parts:['脚']}],createdAt:now.toISOString()};
 
-// ①②③④⑤⑦: 当日完了記録だけがHOME/TODAY FLOW/GOAL PROGRESSへ反映されること
+// 当日完了記録だけがHOME/TODAY FLOW/GOAL PROGRESSへ反映されること
 {
   const at=new Date().toISOString();
   const complete={at,flowClosedAt:at,completion:'complete',completedSets:2,totalSets:2,totalVolumeKg:120,next:'LOAD_UP',exercises:[{name:'TEST PRESS',sets:[{set:1,load:10,reps:5,rir:2},{set:2,load:10,reps:7,rir:1}]}]};
@@ -50,23 +50,38 @@ const plan={input:{goalType:'筋肥大',deadline:isoDate(deadline),trainingDays:
   await context.close();
 }
 
-// ①②③④⑦: 昨日の部分完了は今日へ絶対に漏らさない
+// 昨日の400kg・2SET・2種目の部分完了は今日の積み上げ/部分完了へ絶対に漏らさない
 {
   const yesterday=new Date(); yesterday.setDate(yesterday.getDate()-1); yesterday.setHours(18,0,0,0);
   const at=yesterday.toISOString();
-  const stale={at,flowClosedAt:at,completion:'partial',completedSets:2,totalSets:7,totalVolumeKg:350,next:'HOLD',exercises:[{name:'YESTERDAY ONLY',sets:[{set:1,load:10,reps:15},{set:2,load:10,reps:20}]}]};
+  const stale={
+    at,
+    flowClosedAt:at,
+    completion:'partial',
+    completedSets:2,
+    totalSets:7,
+    totalVolumeKg:400,
+    next:'HOLD',
+    exercises:[
+      {name:'YESTERDAY PRESS',sets:[{set:1,load:20,reps:10}]},
+      {name:'YESTERDAY ROW',sets:[{set:1,load:20,reps:10}]}
+    ]
+  };
   const {context,frame,errors}=await openHub({sug_training_sessions_v1:[stale]});
   const text=await frame.locator('body').innerText();
   assert.ok(!text.includes('本日のトレーニングは部分完了'),'昨日の部分完了が今日へ残留');
   assert.ok(!text.includes('追加トレーニングを開始'),'昨日の追加トレ開始が今日へ残留');
-  assert.ok(!/今日の総重量\s*350\s*kg/i.test(text),'昨日の350kgが今日の総重量へ残留');
+  assert.ok(!/今日の総重量\s*400\s*kg/i.test(text),'昨日の400kgが今日の総重量へ残留');
   assert.ok(!/今日の完了SET\s*2\s*SET/i.test(text),'昨日の2SETが今日の完了SETへ残留');
-  assert.ok(!/今日の種目\s*1/.test(text),'昨日の1種目が今日の種目数へ残留');
+  assert.ok(!/今日の種目\s*2/.test(text),'昨日の2種目が今日の種目数へ残留');
+  assert.ok(!/今日の積み上げ[\s\S]{0,300}400\s*kg/i.test(text),'昨日の400kgが「今日の積み上げ」へ残留');
+  assert.ok(!/今日の積み上げ[\s\S]{0,300}2\s*SET/i.test(text),'昨日の2SETが「今日の積み上げ」へ残留');
+  assert.ok(!/今日の積み上げ[\s\S]{0,300}2\s*種目/i.test(text),'昨日の2種目が「今日の積み上げ」へ残留');
   assert.equal(errors.length,0,`日付切替状態でJS error:\n${errors.join('\n')}`);
   await context.close();
 }
 
-// ⑥: S.u.G受信側が歩数・睡眠・心拍・体重を受けて表示できる
+// S.u.G受信側が歩数・睡眠・心拍・体重を受けて表示できる
 {
   const {context,frame,errors}=await openHub({});
   const result=await frame.evaluate(()=>{
@@ -82,7 +97,7 @@ const plan={input:{goalType:'筋肥大',deadline:isoDate(deadline),trainingDays:
   await context.close();
 }
 
-// ⑧: HUBからQUESTへ遷移でき、404/空画面にならない
+// HUBからQUESTへ遷移でき、404/空画面にならない
 {
   const {context,page,errors}=await openHub({});
   await page.click('button[data-page="quest"]');
