@@ -1,4 +1,5 @@
 (function(){'use strict';
+const qp=new URLSearchParams(location.search);if(qp.get('hub')==='1'||qp.get('entry')==='member'){document.getElementById('sugCanonicalNav')?.remove();document.getElementById('sugCanonicalFolder')?.remove();window.__SUG_CANONICAL_UI__='disabled-in-member-hub-26.5.236';return}
 const V='26.5.98';
 const GROUPS={
  training:{title:'トレ',icon:'🏋️',sub:'TRAINING',desc:'記録・POF・NEXT LOAD',items:[['今日のメニュー','🏋️',['smart','training','train']],['トレーニング記録','📝',['workout','trainingLog','log']],['種目マスタ','▦',['exerciseMaster']],['POF','◈',['POF','pof']],['NEXT LOAD','📈',['NEXT LOAD','nextLoad']]]},
