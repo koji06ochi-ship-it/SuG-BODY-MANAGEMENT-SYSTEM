@@ -103,7 +103,7 @@ const plan={input:{goalType:'筋肥大',deadline:isoDate(deadline),trainingDays:
   await page.click('button[data-page="quest"]');
   let qframe;
   for(let i=0;i<40;i++){
-    qframe=page.frames().find(x=>x!==page.mainFrame()&&x.url().includes('quest.html'));
+    qframe=page.frames().find(x=>x!==page.mainFrame()&&/shrine-quest-v26\.5\.206\.html|quest\.html/.test(x.url()));
     if(qframe) break;
     await page.waitForTimeout(250);
   }
