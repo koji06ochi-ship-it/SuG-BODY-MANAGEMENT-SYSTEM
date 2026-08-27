@@ -1,64 +1,55 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var health = HealthKitManager.shared
+    private static let base = "https://koji06ochi-ship-it.github.io/SuG-BODY-MANAGEMENT-SYSTEM/"
+
+    @State private var selectedTab = 0
+
+    @StateObject private var bodyStore = MemberWebViewStore(
+        url: URL(string: base + "?entry=member&hub=1&native=ios&v=26.5.242")!
+    )
+    @StateObject private var questStore = MemberWebViewStore(
+        url: URL(string: base + "shrine-quest-v26.5.206.html?embedded=1&native=ios&v=26.5.242")!
+    )
+    @StateObject private var walkStore = MemberWebViewStore(
+        url: URL(string: base + "walk-quest.html?embedded=1&native=ios&v=26.5.242")!
+    )
+    @StateObject private var cardStore = MemberWebViewStore(
+        url: URL(string: base + "?entry=member&hub=1&membercard=1&native=ios&v=26.5.242")!
+    )
 
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                VStack(spacing: 16) {
-                    Text("S.u.G MEMBER")
-                        .font(.title2.bold())
-
-                    VStack(spacing: 10) {
-                        statusRow("Apple Health", health.isAuthorized ? "連携済" : "未連携")
-                        statusRow("今日の歩数", "\(health.steps) 歩")
-                        statusRow("体重", health.weightKg.map { String(format: "%.1f kg", $0) } ?? "--")
-                        statusRow("安静時心拍", health.restingHeartRate.map { String(format: "%.0f bpm", $0) } ?? "--")
-                        statusRow("睡眠", health.sleepHours.map { String(format: "%.1f h", $0) } ?? "--")
-                    }
-                    .padding()
-                    .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 18))
-
-                    Button(health.isAuthorized ? "ヘルスケアを同期" : "ヘルスケアを許可") {
-                        Task {
-                            if health.isAuthorized {
-                                await health.refreshToday()
-                            } else {
-                                await health.requestAuthorization()
-                            }
-                        }
-                    }
-                    .buttonStyle(.borderedProminent)
-                    .controlSize(.large)
-
-                    if let last = health.lastSync {
-                        Text("最終同期 \(last.formatted(date: .omitted, time: .shortened))")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                    }
-
-                    if let error = health.errorMessage {
-                        Text(error)
-                            .font(.footnote)
-                            .foregroundStyle(.red)
-                    }
+        TabView(selection: $selectedTab) {
+            MemberWebView(store: bodyStore)
+                .tag(0)
+                .tabItem {
+                    Label("BODY", systemImage: "house.fill")
                 }
-                .padding()
-            }
-            .task {
-                if health.isAuthorized {
-                    await health.refreshToday()
+
+            MemberWebView(store: questStore)
+                .tag(1)
+                .tabItem {
+                    Label("QUEST", systemImage: "map.fill")
                 }
-            }
+
+            MemberWebView(store: walkStore)
+                .tag(2)
+                .tabItem {
+                    Label("WALK", systemImage: "figure.walk")
+                }
+
+            MemberWebView(store: cardStore)
+                .tag(3)
+                .tabItem {
+                    Label("会員証", systemImage: "person.text.rectangle.fill")
+                }
         }
-    }
-
-    private func statusRow(_ label: String, _ value: String) -> some View {
-        HStack {
-            Text(label)
-            Spacer()
-            Text(value).bold()
+        .tint(Color(red: 0.89, green: 0.72, blue: 0.28))
+        .toolbarBackground(Color.black, for: .tabBar)
+        .toolbarBackground(.visible, for: .tabBar)
+        .preferredColorScheme(.dark)
+        .task {
+            bodyStore.loadIfNeeded()
         }
     }
 }
