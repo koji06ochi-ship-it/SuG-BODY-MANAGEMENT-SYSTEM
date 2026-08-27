@@ -72,11 +72,11 @@ jobs:
       - name: Wait for GitHub Pages deployment
         run: |
           set -e
-          URL='https://koji06ochi-ship-it.github.io/SuG-BODY-MANAGEMENT-SYSTEM/member.html'
+          URL='https://koji06ochi-ship-it.github.io/SuG-BODY-MANAGEMENT-SYSTEM/member-hub.html'
           ok=0
           for i in $(seq 1 36); do
             body=$(curl -fsSL --max-time 15 "$URL?deploycheck=$GITHUB_SHA-$i" || true)
-            if printf '%s' "$body" | grep -q '26.5.214'; then ok=1; break; fi
+            if printf '%s' "$body" | grep -q 'V26.5.223'; then ok=1; break; fi
             sleep 5
           done
           test "$ok" = 1
