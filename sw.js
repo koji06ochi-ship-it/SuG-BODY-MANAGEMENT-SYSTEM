@@ -1,4 +1,4 @@
-const SW_VERSION='sug-v26.5.243-pwa-direct';
+const SW_VERSION='sug-v26.5.246-pwa-asset-cache';
 self.addEventListener('install',()=>self.skipWaiting());
 self.addEventListener('activate',event=>event.waitUntil((async()=>{for(const k of await caches.keys())await caches.delete(k);await self.clients.claim()})()));
 
@@ -58,10 +58,7 @@ function htmlResponse(res,html){
 
 self.addEventListener('fetch',event=>{
   const req=event.request;
-  if(req.mode!=='navigate'){
-    event.respondWith(fetch(req,{cache:'no-store'}));
-    return;
-  }
+  if(req.mode!=='navigate')return;
   event.respondWith((async()=>{
     try{
       const res=await fetch(req,{cache:'no-store'});
