@@ -1,5 +1,7 @@
 (()=>{'use strict';
 const FALLBACK_CONFIG={url:'https://nnqzxcgkqjnmtzcvorha.supabase.co',publishableKey:'sb_publishable_zcn7r2YSKDZa1lXJvmk3sg_GulOJXwI'};
+const ROM_TYPES=new Set(['PAIN_LIMITED_ROM','PASSIVE_LIMIT','ACTIVE_PASSIVE_GAP','AROM_LOW_PROM_UNKNOWN','ASYMMETRY','THORACIC_MOBILITY','DATA_RECHECK']);
+const MOVEMENT_TYPES=new Set(['MOVEMENT_CONTROL','SHOULDER_COORDINATION']);
 function cloudConfig(){
   const scopes=[window];
   try{if(window.parent&&window.parent!==window)scopes.push(window.parent)}catch(_){}
@@ -60,6 +62,32 @@ function latestCare(data,recovery){
     care_signal:'recovery'
   };
 }
+function latestIntegrated(data){
+  const rows=Array.isArray(data?.integratedAssessments)?data.integratedAssessments:[];
+  return rows.slice().sort((a,b)=>String(a?.createdAt||a?.date||'').localeCompare(String(b?.createdAt||b?.date||''))).at(-1)||null;
+}
+function gateStatus(cls){
+  const c=String(cls||'').toLowerCase();
+  if(c==='bad')return 'FAIL';
+  if(c==='warn')return 'CAUTION';
+  if(c==='good')return 'PASS';
+  return 'UNKNOWN';
+}
+function movementFromIntegrated(data){
+  const integrated=latestIntegrated(data);
+  if(!integrated)return {rom_status:'UNKNOWN',movement_status:'UNKNOWN'};
+  const candidates=Array.isArray(integrated.candidates)&&integrated.candidates.length?integrated.candidates:(Array.isArray(integrated.top)?integrated.top:[]);
+  function strongest(types){
+    const rows=candidates.filter(x=>types.has(String(x?.type||'')));
+    if(!rows.length)return 'UNKNOWN';
+    rows.sort((a,b)=>Number(b?.score||0)-Number(a?.score||0));
+    return gateStatus(rows[0]?.nextLoadGate?.cls||rows[0]?.level);
+  }
+  return {
+    rom_status:strongest(ROM_TYPES),
+    movement_status:strongest(MOVEMENT_TYPES)
+  };
+}
 function conditionFromData(data){
   const r=latestRecovery(data);
   return {
@@ -69,7 +97,7 @@ function conditionFromData(data){
       stress:Number(r.stress||0)
     }:null,
     care:latestCare(data,r),
-    movement:{rom_status:'UNKNOWN',movement_status:'UNKNOWN'}
+    movement:movementFromIntegrated(data)
   };
 }
 async function read(auth){
@@ -90,5 +118,5 @@ async function read(auth){
     return {ok:false,error:String(e?.message||e||'NETWORK_ERROR')};
   }
 }
-window.SuGCanonicalCondition={read,conditionFromData,latestRecovery,latestCare,careResponseFromRow};
+window.SuGCanonicalCondition={read,conditionFromData,latestRecovery,latestCare,careResponseFromRow,latestIntegrated,movementFromIntegrated};
 })();
