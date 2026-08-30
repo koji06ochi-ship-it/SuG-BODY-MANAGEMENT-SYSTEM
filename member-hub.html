@@ -7,17 +7,17 @@
 <meta name="theme-color" content="#080809">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>S.u.G MEMBER HUB V26.5.259</title>
+<title>S.u.G MEMBER HUB V26.5.260</title>
 <style>
 *{box-sizing:border-box}html,body{margin:0;height:100%;background:#080809;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif}.top{height:62px;display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-bottom:1px solid #3b3120;background:#09090bf5}.brand{font-weight:1000;letter-spacing:.08em}.brand b{color:#f1d17b}.ver{font-size:9px;color:#8f8f95}.frame{position:fixed;left:0;right:0;top:62px;bottom:82px;width:100%;height:calc(100% - 144px);border:0;background:#080809}.nav{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:8px 9px calc(8px + env(safe-area-inset-bottom));background:#09090bf5;border-top:1px solid #3b3120;z-index:50}.nav button{border:1px solid #34343b;background:#17171b;color:#bbb;border-radius:12px;padding:7px 4px 8px;font-size:9px;font-weight:900;min-height:64px}.nav button.on{color:#f1d17b;border-color:#7a6231;background:#1d1910}.nav b{display:flex;align-items:center;justify-content:center;height:31px;font-size:17px;margin-bottom:2px}.questIcon{width:34px;height:34px!important;margin:-2px auto 1px!important;border-radius:9px;background:#0a0a0c url('./assets/quest/quest-hero-hyottoko.webp?v=26.5.260') center/contain no-repeat;border:1px solid #8b7138;box-shadow:0 0 10px #d8b35b44}.nav button.on .questIcon{border-color:#f1d17b;box-shadow:0 0 14px #f1d17b66}
 </style>
 </head>
 <body>
-<header class="top"><div class="brand">S.u.G <b>MEMBER HUB</b></div><div class="ver">V26.5.259</div></header>
+<header class="top"><div class="brand">S.u.G <b>MEMBER HUB</b></div><div class="ver">V26.5.260</div></header>
 <iframe id="view" class="frame" title="S.u.G MEMBER"></iframe>
 <nav class="nav"><button data-page="body"><b>⌂</b>BODY</button><button data-page="quest"><b class="questIcon" aria-hidden="true"></b>QUEST</button><button data-page="walk"><b>🚶</b>WALK</button><button data-page="card"><b>▣</b>会員証</button></nav>
 <script>
-(()=>{'use strict';const V='26.5.259',f=document.getElementById('view'),btns=[...document.querySelectorAll('.nav button')],q=new URLSearchParams(location.search);const pages={body:`./member-home-v2.html?v=${V}`,quest:`./shrine-quest-v26.5.206.html?v=${V}&embedded=1`,walk:`./walk-quest.html?v=${V}&embedded=1`,card:`./?entry=member&hub=1&v=${V}&membercard=1`};function open(page){if(!pages[page])page='body';btns.forEach(x=>x.classList.toggle('on',x.dataset.page===page));f.src=pages[page];history.replaceState(null,'','?v='+V+'&page='+page)}btns.forEach(b=>b.addEventListener('click',()=>open(b.dataset.page),{passive:true}));open(q.get('page')||'body')})();
+(()=>{'use strict';const V='26.5.260',f=document.getElementById('view'),btns=[...document.querySelectorAll('.nav button')],q=new URLSearchParams(location.search);let current='body';const pages={body:`./member-home-v2.html?v=${V}`,quest:`./shrine-quest-v26.5.206.html?v=${V}&embedded=1`,walk:`./walk-quest.html?v=${V}&embedded=1`,card:`./?entry=member&hub=1&v=${V}&membercard=1`};function open(page){if(!pages[page])page='body';current=page;btns.forEach(x=>x.classList.toggle('on',x.dataset.page===page));f.src=pages[page];history.replaceState(null,'','?v='+V+'&page='+page)}f.addEventListener('load',()=>{if(current!=='body')return;try{const d=f.contentDocument;if(!d||d.getElementById('sugHealthV2Script'))return;const s=d.createElement('script');s.id='sugHealthV2Script';s.src=`assets/member/v2/health-v2.js?v=${V}`;d.body.appendChild(s)}catch(_){}});btns.forEach(b=>b.addEventListener('click',()=>open(b.dataset.page),{passive:true}));open(q.get('page')||'body')})();
 </script>
 </body>
 </html>
