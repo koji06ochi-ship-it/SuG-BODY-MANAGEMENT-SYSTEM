@@ -6,6 +6,7 @@ final class MemberWebViewStore: ObservableObject {
     let webView: WKWebView
     private let initialURL: URL
     private var didLoad = false
+    private var pendingHealthJSON: String?
 
     init(url: URL) {
         self.initialURL = url
@@ -41,6 +42,48 @@ final class MemberWebViewStore: ObservableObject {
     func reload() {
         webView.reload()
     }
+
+    func pushNativeHealth(
+        steps: Int,
+        sleepHours: Double?,
+        restingHeartRate: Double?,
+        weightKg: Double?,
+        syncedAt: Date?
+    ) {
+        let iso = ISO8601DateFormatter().string(from: syncedAt ?? Date())
+        var payload: [String: Any] = [
+            "source": "healthkit_native",
+            "steps": max(0, steps),
+            "syncedAt": iso
+        ]
+        if let sleepHours { payload["sleep"] = sleepHours }
+        if let restingHeartRate { payload["heartRate"] = restingHeartRate }
+        if let weightKg { payload["weight"] = weightKg }
+
+        guard JSONSerialization.isValidJSONObject(payload),
+              let data = try? JSONSerialization.data(withJSONObject: payload),
+              let json = String(data: data, encoding: .utf8) else { return }
+        pendingHealthJSON = json
+        deliverPendingHealth()
+    }
+
+    func deliverPendingHealth() {
+        guard let json = pendingHealthJSON else { return }
+        let js = """
+        (function(){
+          const payload = \(json);
+          window.__SUG_NATIVE_HEALTH__ = payload;
+          try { localStorage.setItem('sug_native_health_v1', JSON.stringify(payload)); } catch (_) {}
+          window.dispatchEvent(new CustomEvent('sug:native-health', { detail: payload }));
+          if (window.SuGHealthV2 && typeof window.SuGHealthV2.receiveNative === 'function') {
+            window.SuGHealthV2.receiveNative(payload);
+          }
+        })();
+        """
+        webView.evaluateJavaScript(js) { [weak self] _, error in
+            if error == nil { self?.pendingHealthJSON = nil }
+        }
+    }
 }
 
 struct MemberWebView: UIViewRepresentable {
@@ -55,10 +98,22 @@ struct MemberWebView: UIViewRepresentable {
     func updateUIView(_ uiView: WKWebView, context: Context) {}
 
     func makeCoordinator() -> Coordinator {
-        Coordinator()
+        Coordinator(store: store)
     }
 
     final class Coordinator: NSObject, WKNavigationDelegate {
+        weak var store: MemberWebViewStore?
+
+        init(store: MemberWebViewStore) {
+            self.store = store
+        }
+
+        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+            Task { @MainActor in
+                self.store?.deliverPendingHealth()
+            }
+        }
+
         func webView(
             _ webView: WKWebView,
             decidePolicyFor navigationAction: WKNavigationAction,
