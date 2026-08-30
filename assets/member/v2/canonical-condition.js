@@ -2,6 +2,7 @@
 const FALLBACK_CONFIG={url:'https://nnqzxcgkqjnmtzcvorha.supabase.co',publishableKey:'sb_publishable_zcn7r2YSKDZa1lXJvmk3sg_GulOJXwI'};
 const ROM_TYPES=new Set(['PAIN_LIMITED_ROM','PASSIVE_LIMIT','ACTIVE_PASSIVE_GAP','AROM_LOW_PROM_UNKNOWN','ASYMMETRY','THORACIC_MOBILITY','DATA_RECHECK']);
 const MOVEMENT_TYPES=new Set(['MOVEMENT_CONTROL','SHOULDER_COORDINATION']);
+const CARE_MAX_AGE_DAYS=45;
 function cloudConfig(){
   const scopes=[window];
   try{if(window.parent&&window.parent!==window)scopes.push(window.parent)}catch(_){}
@@ -31,6 +32,13 @@ function careResponseFromRow(x){
     worsened:(painDelta!=null&&painDelta<0)||(romDelta!=null&&romDelta<0)||(movementDelta!=null&&movementDelta<0)
   };
 }
+function ageDays(v){
+  const raw=String(v||'').trim();
+  if(!raw)return Infinity;
+  const t=Date.parse(raw.length===10?raw+'T00:00:00':raw);
+  if(!Number.isFinite(t))return Infinity;
+  return Math.max(0,(Date.now()-t)/86400000);
+}
 function latestCare(data,recovery){
   const signals=[];
   for(const c of (Array.isArray(data?.selfCare)?data.selfCare:[])){
@@ -42,8 +50,9 @@ function latestCare(data,recovery){
     const f=c?.followup24h;
     if(f?.pain!=null)signals.push({c,pain:Number(f.pain),at:f.savedAt||f.date,signal:'followup'});
   }
-  signals.sort((a,b)=>String(a?.at||'').localeCompare(String(b?.at||'')));
-  const s=signals.at(-1)||null;
+  const currentSignals=signals.filter(s=>ageDays(s.at)<=CARE_MAX_AGE_DAYS);
+  currentSignals.sort((a,b)=>String(a?.at||'').localeCompare(String(b?.at||'')));
+  const s=currentSignals.at(-1)||null;
   if(s){
     const c=s.c,f=c?.followup24h,response=careResponseFromRow(c);
     return {
@@ -130,5 +139,5 @@ async function read(auth){
     return {ok:false,error:String(e?.message||e||'NETWORK_ERROR')};
   }
 }
-window.SuGCanonicalCondition={read,conditionFromData,latestRecovery,latestCare,careResponseFromRow,latestIntegrated,movementFromIntegrated,movementAssessmentCurrent};
+window.SuGCanonicalCondition={read,conditionFromData,latestRecovery,latestCare,careResponseFromRow,latestIntegrated,movementFromIntegrated,movementAssessmentCurrent,ageDays};
 })();
