@@ -38,26 +38,35 @@ final class MemberWebViewStore: ObservableObject {
 
     func reload() { webView.reload() }
 
+    private var isBodyPage: Bool {
+        guard let path = webView.url?.path else { return false }
+        return path.contains("/apps/body/") || path.contains("member-home-v2.html")
+    }
+
     func installBodyRuntimeIfNeeded() {
-        guard webView.url?.path.contains("member-home-v2.html") == true else { return }
+        guard isBodyPage else { return }
         let js = """
         (function(){
-          const scripts = [
-            ['sugIdealV27Script','assets/member/v27/ideal-v27.js?v=27.0.2'],
-            ['sugHealthV2Script','assets/member/v2/health-v2.js?v=27.0.2']
-          ];
-          for (const pair of scripts) {
-            if (document.getElementById(pair[0])) continue;
-            const s = document.createElement('script');
-            s.id = pair[0];
-            s.src = pair[1];
-            s.onload = function(){
-              const p = window.__SUG_NATIVE_HEALTH__;
-              if (p && window.SuGHealthV2 && typeof window.SuGHealthV2.receiveNative === 'function') {
-                window.SuGHealthV2.receiveNative(p);
-              }
-            };
-            document.body.appendChild(s);
+          // Standalone BODY already loads its own runtime. Legacy BODY still needs adapters.
+          const isStandalone = location.pathname.indexOf('/apps/body/') !== -1;
+          if (!isStandalone) {
+            const scripts = [
+              ['sugIdealV27Script','assets/member/v27/ideal-v27.js?v=27.2'],
+              ['sugHealthV2Script','assets/member/v2/health-v2.js?v=27.2']
+            ];
+            for (const pair of scripts) {
+              if (document.getElementById(pair[0])) continue;
+              const s = document.createElement('script');
+              s.id = pair[0];
+              s.src = pair[1];
+              document.body.appendChild(s);
+            }
+          }
+          const p = window.__SUG_NATIVE_HEALTH__;
+          if (p) {
+            if (window.SuGBody && typeof window.SuGBody.receiveNative === 'function') window.SuGBody.receiveNative(p);
+            if (window.SuGHealthV2 && typeof window.SuGHealthV2.receiveNative === 'function') window.SuGHealthV2.receiveNative(p);
+            if (window.SuGV27 && typeof window.SuGV27.receiveNative === 'function') window.SuGV27.receiveNative(p);
           }
         })();
         """
@@ -85,6 +94,9 @@ final class MemberWebViewStore: ObservableObject {
           window.__SUG_NATIVE_HEALTH__ = payload;
           try { localStorage.setItem('sug_native_health_v1', JSON.stringify(payload)); } catch (_) {}
           window.dispatchEvent(new CustomEvent('sug:native-health', { detail: payload }));
+          if (window.SuGBody && typeof window.SuGBody.receiveNative === 'function') {
+            window.SuGBody.receiveNative(payload);
+          }
           if (window.SuGHealthV2 && typeof window.SuGHealthV2.receiveNative === 'function') {
             window.SuGHealthV2.receiveNative(payload);
           }
