@@ -1,0 +1,11 @@
+(()=>{'use strict';
+const FLOW_KEY='sug_food_walk_flow_v1';
+const read=(k,f)=>{try{return JSON.parse(localStorage.getItem(k)||'null')??f}catch{return f}};
+const write=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
+function currentFlow(){const f=read(FLOW_KEY,null);if(!f)return null;const d=new Date(),p=n=>String(n).padStart(2,'0'),today=`${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}`;return f.date===today?f:null}
+function currentRewardApi(){return window.SuGRewardsV2740||window.SuGRewardsV2738||null}
+function findPartner(name){const api=window.SuGPartnersV2722;if(!api)return null;const target=String(name||'').trim();return api.list({kind:'FOOD',activeOnly:true}).find(p=>String(p.name||'').trim()===target)||null}
+function handleReward(){const f=currentFlow();if(!f?.storeName)return alert('先に利用する店を決めてください');const partner=findPartner(f.storeName);if(!partner)return alert('この店は提携割引の対象ではありません。提携店でのみ1,000円OFFを交換できます。');const api=currentRewardApi();if(!api)return alert('交換所を読み込み中');const r=api.redeem('meal1000',{partnerId:partner.id});if(!r.ok){const msg={PARTNER_REQUIRED:'提携店を選んでください',POINTS_LOW:'ポイントが足りません',MONTHLY_BUDGET:'今月の運営原資上限です',MONTHLY_ITEM_LIMIT:'今月の交換上限です',COST_NOT_SET:'実費設定が未完了です'}[r.reason]||'交換できません';return alert(msg)}f.rewardCode=r.redemption.code;f.rewardUsedAt=new Date().toISOString();f.rewardPartnerId=partner.id;f.rewardName='提携飲食店 1,000円OFF';write(FLOW_KEY,f);window.dispatchEvent(new CustomEvent('sug:food-walk-reward',{detail:r.redemption}));alert(`1,000円OFF発行\n${r.redemption.code}`)}
+function patch(){const btn=document.getElementById('mnReward');if(!btn||btn.dataset.v2741==='1')return;btn.dataset.v2741='1';btn.textContent='提携飲食1,000円OFFを交換';btn.onclick=e=>{e.preventDefault();e.stopPropagation();handleReward()}}
+const mo=new MutationObserver(patch);mo.observe(document.documentElement,{childList:true,subtree:true});window.addEventListener('sug:partners-change',patch);window.addEventListener('sug:rewards-change',patch);setTimeout(patch,700);window.SuGFoodWalkRewardFixV2741={patch,handleReward,findPartner};
+})();
