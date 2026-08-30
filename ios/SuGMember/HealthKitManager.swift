@@ -28,12 +28,14 @@ final class HealthKitManager: ObservableObject {
 
     func requestAuthorization() async {
         guard HKHealthStore.isHealthDataAvailable() else {
+            isAuthorized = false
             errorMessage = "この端末ではAppleヘルスケアを利用できません。"
             return
         }
         do {
             try await store.requestAuthorization(toShare: [], read: readTypes)
             isAuthorized = true
+            errorMessage = nil
             await refreshToday()
         } catch {
             isAuthorized = false
@@ -91,8 +93,10 @@ final class HealthKitManager: ObservableObject {
 
     private func fetchLastNightSleepHours() async -> Double? {
         guard let type = HKCategoryType.categoryType(forIdentifier: .sleepAnalysis) else { return nil }
-        let start = Calendar.current.date(byAdding: .hour, value: -24, to: Date()) ?? Date().addingTimeInterval(-86400)
-        let predicate = HKQuery.predicateForSamples(withStart: start, end: Date(), options: [])
+        let now = Date()
+        let start = Calendar.current.date(byAdding: .hour, value: -24, to: now) ?? now.addingTimeInterval(-86400)
+        let predicate = HKQuery.predicateForSamples(withStart: start, end: now, options: [])
+
         return await withCheckedContinuation { continuation in
             let query = HKSampleQuery(sampleType: type, predicate: predicate, limit: HKObjectQueryNoLimit, sortDescriptors: nil) { _, samples, _ in
                 let asleepValues: Set<Int> = [
@@ -101,9 +105,31 @@ final class HealthKitManager: ObservableObject {
                     HKCategoryValueSleepAnalysis.asleepDeep.rawValue,
                     HKCategoryValueSleepAnalysis.asleepREM.rawValue
                 ]
-                let seconds = (samples as? [HKCategorySample] ?? [])
+
+                // Oura / Apple Watch / iPhone may contribute overlapping sleep samples.
+                // Merge intervals first so the same minute is never counted twice.
+                let intervals = (samples as? [HKCategorySample] ?? [])
                     .filter { asleepValues.contains($0.value) }
-                    .reduce(0.0) { $0 + $1.endDate.timeIntervalSince($1.startDate) }
+                    .map { (max($0.startDate, start), min($0.endDate, now)) }
+                    .filter { $0.1 > $0.0 }
+                    .sorted { $0.0 < $1.0 }
+
+                guard var current = intervals.first else {
+                    continuation.resume(returning: nil)
+                    return
+                }
+
+                var seconds = 0.0
+                for interval in intervals.dropFirst() {
+                    if interval.0 <= current.1 {
+                        current.1 = max(current.1, interval.1)
+                    } else {
+                        seconds += current.1.timeIntervalSince(current.0)
+                        current = interval
+                    }
+                }
+                seconds += current.1.timeIntervalSince(current.0)
+
                 continuation.resume(returning: seconds > 0 ? seconds / 3600 : nil)
             }
             store.execute(query)
