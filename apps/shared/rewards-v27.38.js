@@ -1,0 +1,1 @@
+(()=>{'use strict';window.SuGRewardsV2738=window.SuGRewardsV2737;})();
