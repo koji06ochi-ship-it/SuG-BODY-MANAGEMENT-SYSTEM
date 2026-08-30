@@ -16,6 +16,19 @@ function latestRecovery(data){
   const rows=Array.isArray(data?.recovery)?data.recovery:[];
   return rows.slice().sort((a,b)=>String(a?.date||'').localeCompare(String(b?.date||''))).at(-1)||null;
 }
+function careResponseFromRow(x){
+  const pb=x?.painBefore==null?null:Number(x.painBefore),pa=x?.painAfter==null?null:Number(x.painAfter);
+  const painDelta=Number.isFinite(pb)&&Number.isFinite(pa)?pb-pa:null;
+  const rb=x?.romBefore==null?null:Number(x.romBefore),ra=x?.romAfter==null?null:Number(x.romAfter);
+  const romDelta=Number.isFinite(rb)&&Number.isFinite(ra)?ra-rb:null;
+  const mb=x?.movementBefore==null?null:Number(x.movementBefore),ma=x?.movementAfter==null?null:Number(x.movementAfter);
+  const movementDelta=Number.isFinite(mb)&&Number.isFinite(ma)?mb-ma:null;
+  return {
+    painDelta,romDelta,movementDelta,
+    improved:(painDelta!=null&&painDelta>0)||(romDelta!=null&&romDelta>0)||(movementDelta!=null&&movementDelta>0),
+    worsened:(painDelta!=null&&painDelta<0)||(romDelta!=null&&romDelta<0)||(movementDelta!=null&&movementDelta<0)
+  };
+}
 function latestCare(data,recovery){
   const signals=[];
   for(const c of (Array.isArray(data?.selfCare)?data.selfCare:[])){
@@ -30,12 +43,12 @@ function latestCare(data,recovery){
   signals.sort((a,b)=>String(a?.at||'').localeCompare(String(b?.at||'')));
   const s=signals.at(-1)||null;
   if(s){
-    const c=s.c,f=c?.followup24h;
+    const c=s.c,f=c?.followup24h,response=careResponseFromRow(c);
     return {
       pain:Number.isFinite(s.pain)?s.pain:0,
       pain_area:c?.area||null,
       red_flag:c?.result==='medical'||c?.result==='stop',
-      response_state:s.signal==='followup'?(f?.status||'same'):'unknown',
+      response_state:s.signal==='followup'?(f?.status||'same'):response.worsened?'worse':response.improved?'better':'same',
       care_signal:s.signal
     };
   }
@@ -77,5 +90,5 @@ async function read(auth){
     return {ok:false,error:String(e?.message||e||'NETWORK_ERROR')};
   }
 }
-window.SuGCanonicalCondition={read,conditionFromData,latestRecovery,latestCare};
+window.SuGCanonicalCondition={read,conditionFromData,latestRecovery,latestCare,careResponseFromRow};
 })();
