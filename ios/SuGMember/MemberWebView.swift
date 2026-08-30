@@ -43,6 +43,26 @@ final class MemberWebViewStore: ObservableObject {
         webView.reload()
     }
 
+    func installNativeHealthBridgeIfNeeded() {
+        guard webView.url?.path.contains("member-home-v2.html") == true else { return }
+        let js = """
+        (function(){
+          if (document.getElementById('sugHealthV2Script')) return;
+          const s = document.createElement('script');
+          s.id = 'sugHealthV2Script';
+          s.src = 'assets/member/v2/health-v2.js?v=26.5.262';
+          s.onload = function(){
+            const p = window.__SUG_NATIVE_HEALTH__;
+            if (p && window.SuGHealthV2 && typeof window.SuGHealthV2.receiveNative === 'function') {
+              window.SuGHealthV2.receiveNative(p);
+            }
+          };
+          document.body.appendChild(s);
+        })();
+        """
+        webView.evaluateJavaScript(js)
+    }
+
     func pushNativeHealth(
         steps: Int,
         sleepHours: Double?,
@@ -110,6 +130,7 @@ struct MemberWebView: UIViewRepresentable {
 
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
             Task { @MainActor in
+                self.store?.installNativeHealthBridgeIfNeeded()
                 self.store?.deliverPendingHealth()
             }
         }
