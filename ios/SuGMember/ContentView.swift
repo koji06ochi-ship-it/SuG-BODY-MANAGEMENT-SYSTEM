@@ -7,7 +7,7 @@ struct ContentView: View {
     @StateObject private var health = HealthKitManager.shared
 
     @StateObject private var bodyStore = MemberWebViewStore(
-        url: URL(string: base + "member-home-v2.html?native=ios&v=26.5.262")!
+        url: URL(string: base + "apps/body/?native=ios&v=27.2")!
     )
     @StateObject private var questStore = MemberWebViewStore(
         url: URL(string: base + "shrine-quest-v26.5.206.html?embedded=1&native=ios&v=26.5.262")!
