@@ -40,7 +40,7 @@ final class MemberWebViewStore: ObservableObject {
         (function(){
           const isStandalone = location.pathname.indexOf('/apps/body/') !== -1;
           if (!isStandalone) {
-            const scripts = [['sugIdealV27Script','assets/member/v27/ideal-v27.js?v=27.37'],['sugHealthV2Script','assets/member/v2/health-v2.js?v=27.37']];
+            const scripts = [['sugIdealV27Script','assets/member/v27/ideal-v27.js?v=27.38'],['sugHealthV2Script','assets/member/v2/health-v2.js?v=27.38']];
             for (const pair of scripts) { if (document.getElementById(pair[0])) continue; const s=document.createElement('script'); s.id=pair[0]; s.src=pair[1]; document.body.appendChild(s); }
           }
           const p=window.__SUG_NATIVE_HEALTH__;
@@ -54,8 +54,8 @@ final class MemberWebViewStore: ObservableObject {
         guard isWalkPage else { return }
         let js = """
         (function(){
-          if (window.__SUG_WALK_NATIVE_V2737__) return;
-          window.__SUG_WALK_NATIVE_V2737__ = true;
+          if (window.__SUG_WALK_NATIVE_V2738__) return;
+          window.__SUG_WALK_NATIVE_V2738__ = true;
           const day=()=>new Date().toISOString().slice(0,10);
           function apply(p){
             if(!p||typeof p!=='object')return;
