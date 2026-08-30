@@ -66,6 +66,18 @@ function latestIntegrated(data){
   const rows=Array.isArray(data?.integratedAssessments)?data.integratedAssessments:[];
   return rows.slice().sort((a,b)=>String(a?.createdAt||a?.date||'').localeCompare(String(b?.createdAt||b?.date||''))).at(-1)||null;
 }
+function dateKey(v){
+  const s=String(v||'').trim();
+  const m=s.match(/^(\d{4}-\d{2}-\d{2})/);
+  return m?m[1]:null;
+}
+function movementAssessmentCurrent(integrated,recovery){
+  const assessed=dateKey(integrated?.createdAt||integrated?.date);
+  if(!assessed)return false;
+  const recoveryDate=dateKey(recovery?.date);
+  if(recoveryDate)return assessed>=recoveryDate;
+  return assessed===new Date().toISOString().slice(0,10);
+}
 function gateStatus(cls){
   const c=String(cls||'').toLowerCase();
   if(c==='bad')return 'FAIL';
@@ -73,9 +85,9 @@ function gateStatus(cls){
   if(c==='good')return 'PASS';
   return 'UNKNOWN';
 }
-function movementFromIntegrated(data){
+function movementFromIntegrated(data,recovery){
   const integrated=latestIntegrated(data);
-  if(!integrated)return {rom_status:'UNKNOWN',movement_status:'UNKNOWN'};
+  if(!integrated||!movementAssessmentCurrent(integrated,recovery))return {rom_status:'UNKNOWN',movement_status:'UNKNOWN'};
   const candidates=Array.isArray(integrated.candidates)&&integrated.candidates.length?integrated.candidates:(Array.isArray(integrated.top)?integrated.top:[]);
   function strongest(types){
     const rows=candidates.filter(x=>types.has(String(x?.type||'')));
@@ -97,7 +109,7 @@ function conditionFromData(data){
       stress:Number(r.stress||0)
     }:null,
     care:latestCare(data,r),
-    movement:movementFromIntegrated(data)
+    movement:movementFromIntegrated(data,r)
   };
 }
 async function read(auth){
@@ -118,5 +130,5 @@ async function read(auth){
     return {ok:false,error:String(e?.message||e||'NETWORK_ERROR')};
   }
 }
-window.SuGCanonicalCondition={read,conditionFromData,latestRecovery,latestCare,careResponseFromRow,latestIntegrated,movementFromIntegrated};
+window.SuGCanonicalCondition={read,conditionFromData,latestRecovery,latestCare,careResponseFromRow,latestIntegrated,movementFromIntegrated,movementAssessmentCurrent};
 })();
