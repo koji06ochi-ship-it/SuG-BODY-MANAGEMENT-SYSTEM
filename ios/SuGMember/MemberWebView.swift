@@ -28,119 +28,62 @@ final class MemberWebViewStore: ObservableObject {
         self.webView = view
     }
 
-    func loadIfNeeded() {
-        guard !didLoad else { return }
-        didLoad = true
-        var request = URLRequest(url: initialURL)
-        request.cachePolicy = .reloadIgnoringLocalCacheData
-        webView.load(request)
-    }
-
+    func loadIfNeeded() { guard !didLoad else { return }; didLoad = true; var request = URLRequest(url: initialURL); request.cachePolicy = .reloadIgnoringLocalCacheData; webView.load(request) }
     func reload() { webView.reload() }
 
-    private var isBodyPage: Bool {
-        guard let path = webView.url?.path else { return false }
-        return path.contains("/apps/body/") || path.contains("member-home-v2.html")
-    }
+    private var isBodyPage: Bool { guard let path = webView.url?.path else { return false }; return path.contains("/apps/body/") || path.contains("member-home-v2.html") }
 
     func installBodyRuntimeIfNeeded() {
         guard isBodyPage else { return }
         let js = """
         (function(){
-          // Standalone BODY already loads its own runtime. Legacy BODY still needs adapters.
           const isStandalone = location.pathname.indexOf('/apps/body/') !== -1;
           if (!isStandalone) {
-            const scripts = [
-              ['sugIdealV27Script','assets/member/v27/ideal-v27.js?v=27.2'],
-              ['sugHealthV2Script','assets/member/v2/health-v2.js?v=27.2']
-            ];
-            for (const pair of scripts) {
-              if (document.getElementById(pair[0])) continue;
-              const s = document.createElement('script');
-              s.id = pair[0];
-              s.src = pair[1];
-              document.body.appendChild(s);
-            }
+            const scripts = [['sugIdealV27Script','assets/member/v27/ideal-v27.js?v=27.32'],['sugHealthV2Script','assets/member/v2/health-v2.js?v=27.32']];
+            for (const pair of scripts) { if (document.getElementById(pair[0])) continue; const s=document.createElement('script'); s.id=pair[0]; s.src=pair[1]; document.body.appendChild(s); }
           }
-          const p = window.__SUG_NATIVE_HEALTH__;
-          if (p) {
-            if (window.SuGBody && typeof window.SuGBody.receiveNative === 'function') window.SuGBody.receiveNative(p);
-            if (window.SuGHealthV2 && typeof window.SuGHealthV2.receiveNative === 'function') window.SuGHealthV2.receiveNative(p);
-            if (window.SuGV27 && typeof window.SuGV27.receiveNative === 'function') window.SuGV27.receiveNative(p);
-          }
+          const p=window.__SUG_NATIVE_HEALTH__;
+          if(p){ if(window.SuGBody?.receiveNative)window.SuGBody.receiveNative(p); if(window.SuGHealthV2?.receiveNative)window.SuGHealthV2.receiveNative(p); if(window.SuGV27?.receiveNative)window.SuGV27.receiveNative(p); }
         })();
         """
         webView.evaluateJavaScript(js)
     }
 
-    func pushNativeHealth(steps: Int, sleepHours: Double?, restingHeartRate: Double?, weightKg: Double?, syncedAt: Date?) {
+    func pushNativeHealth(steps: Int, distanceKm: Double, sleepHours: Double?, heartRate: Double?, restingHeartRate: Double?, weightKg: Double?, syncedAt: Date?) {
         let iso = ISO8601DateFormatter().string(from: syncedAt ?? Date())
-        var payload: [String: Any] = ["source": "healthkit_native", "steps": max(0, steps), "syncedAt": iso]
+        var payload: [String: Any] = ["source":"healthkit_native","steps":max(0,steps),"distanceKm":max(0,distanceKm),"syncedAt":iso]
         if let sleepHours { payload["sleep"] = sleepHours }
-        if let restingHeartRate { payload["heartRate"] = restingHeartRate }
-        if let weightKg { payload["weight"] = weightKg }
-        guard JSONSerialization.isValidJSONObject(payload),
-              let data = try? JSONSerialization.data(withJSONObject: payload),
-              let json = String(data: data, encoding: .utf8) else { return }
-        pendingHealthJSON = json
-        deliverPendingHealth()
+        if let heartRate { payload["heartRate"] = heartRate; payload["latestHeartRate"] = heartRate }
+        if let restingHeartRate { payload["restingHeartRate"] = restingHeartRate }
+        if let weightKg { payload["weight"] = weightKg; payload["weightKg"] = weightKg }
+        guard JSONSerialization.isValidJSONObject(payload), let data=try? JSONSerialization.data(withJSONObject:payload), let json=String(data:data,encoding:.utf8) else { return }
+        pendingHealthJSON=json; deliverPendingHealth()
     }
 
     func deliverPendingHealth() {
-        guard let json = pendingHealthJSON else { return }
-        let js = """
+        guard let json=pendingHealthJSON else { return }
+        let js="""
         (function(){
-          const payload = \(json);
-          window.__SUG_NATIVE_HEALTH__ = payload;
-          try { localStorage.setItem('sug_native_health_v1', JSON.stringify(payload)); } catch (_) {}
-          window.dispatchEvent(new CustomEvent('sug:native-health', { detail: payload }));
-          if (window.SuGBody && typeof window.SuGBody.receiveNative === 'function') {
-            window.SuGBody.receiveNative(payload);
-          }
-          if (window.SuGHealthV2 && typeof window.SuGHealthV2.receiveNative === 'function') {
-            window.SuGHealthV2.receiveNative(payload);
-          }
-          if (window.SuGV27 && typeof window.SuGV27.receiveNative === 'function') {
-            window.SuGV27.receiveNative(payload);
-          }
+          const payload=\(json); window.__SUG_NATIVE_HEALTH__=payload;
+          try{localStorage.setItem('sug_native_health_v1',JSON.stringify(payload));}catch(_){}
+          window.dispatchEvent(new CustomEvent('sug:native-health',{detail:payload}));
+          if(window.SuGBody?.receiveNative)window.SuGBody.receiveNative(payload);
+          if(window.SuGHealthV2?.receiveNative)window.SuGHealthV2.receiveNative(payload);
+          if(window.SuGV27?.receiveNative)window.SuGV27.receiveNative(payload);
         })();
         """
-        webView.evaluateJavaScript(js) { [weak self] _, error in
-            if error == nil { self?.pendingHealthJSON = nil }
-        }
+        webView.evaluateJavaScript(js){[weak self] _,error in if error==nil{self?.pendingHealthJSON=nil}}
     }
 }
 
 struct MemberWebView: UIViewRepresentable {
     @ObservedObject var store: MemberWebViewStore
-    func makeUIView(context: Context) -> WKWebView {
-        store.webView.navigationDelegate = context.coordinator
-        store.loadIfNeeded()
-        return store.webView
-    }
+    func makeUIView(context: Context) -> WKWebView { store.webView.navigationDelegate=context.coordinator; store.loadIfNeeded(); return store.webView }
     func updateUIView(_ uiView: WKWebView, context: Context) {}
-    func makeCoordinator() -> Coordinator { Coordinator(store: store) }
-
-    final class Coordinator: NSObject, WKNavigationDelegate {
-        weak var store: MemberWebViewStore?
-        init(store: MemberWebViewStore) { self.store = store }
-        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-            Task { @MainActor in
-                self.store?.installBodyRuntimeIfNeeded()
-                self.store?.deliverPendingHealth()
-            }
-        }
-        func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-            guard let url = navigationAction.request.url else { decisionHandler(.allow); return }
-            let allowedHosts = ["koji06ochi-ship-it.github.io", "supabase.co"]
-            if let host = url.host,
-               !allowedHosts.contains(where: { host == $0 || host.hasSuffix("." + $0) }),
-               navigationAction.navigationType == .linkActivated {
-                UIApplication.shared.open(url)
-                decisionHandler(.cancel)
-                return
-            }
-            decisionHandler(.allow)
-        }
+    func makeCoordinator() -> Coordinator { Coordinator(store:store) }
+    final class Coordinator:NSObject,WKNavigationDelegate {
+        weak var store:MemberWebViewStore?; init(store:MemberWebViewStore){self.store=store}
+        func webView(_ webView:WKWebView,didFinish navigation:WKNavigation!){Task{@MainActor in self.store?.installBodyRuntimeIfNeeded(); self.store?.deliverPendingHealth()}}
+        func webView(_ webView:WKWebView,decidePolicyFor navigationAction:WKNavigationAction,decisionHandler:@escaping(WKNavigationActionPolicy)->Void){guard let url=navigationAction.request.url else{decisionHandler(.allow);return};let allowedHosts=["koji06ochi-ship-it.github.io","supabase.co"];if let host=url.host,!allowedHosts.contains(where:{host==$0||host.hasSuffix("."+$0)}),navigationAction.navigationType == .linkActivated{UIApplication.shared.open(url);decisionHandler(.cancel);return};decisionHandler(.allow)}
     }
 }
