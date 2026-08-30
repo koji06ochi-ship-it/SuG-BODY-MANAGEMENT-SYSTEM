@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "apps": [
+    {"id":"body","name":"S.u.G BODY","entry":"./body/","scope":["daily","recovery","nutrition","training"]},
+    {"id":"big3","name":"S.u.G BIG3 ANALYZER","entry":"./big3/","scope":["squat","bench","deadlift","video-analysis"]},
+    {"id":"performance","name":"S.u.G PERFORMANCE","entry":"./performance/","scope":["movement","mobility","control","output"]}
+  ],
+  "shared": ["member-id","handoff-summary"],
+  "forbidden_cross_scope": ["big3-video-in-body","performance-screen-in-body","daily-body-management-in-big3","daily-body-management-in-performance"]
+}
