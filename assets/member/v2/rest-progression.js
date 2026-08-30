@@ -12,7 +12,10 @@ const REP_RANGES={
 'デッドリフト':[5,5],'バーベルロー':[8,8],'DBベントオーバーロー':[10,10],'ラットプルダウン':[10,12],'リアデルトフライ':[15,15],'DBカール':[10,10],'アブドミナル':[15,20],
 'バックスクワット':[8,8],'レッグプレス':[10,10],'RDL':[10,10],'ブルガリアンスクワット':[10,10],'ケーブルアブダクション':[15,15],'ケーブルアダクション':[15,15],'カーフレイズ':[15,20]
 };
-const rangeFor=name=>REP_RANGES[name]||[8,12];
+function parseRepGuide(v){const raw=String(v||'').replace(/／左右|\/左右/g,'').trim(),m=raw.match(/(\d+)\s*[-〜~]\s*(\d+)/);if(m)return [Number(m[1]),Number(m[2])];const one=raw.match(/(\d+)/);return one?[Number(one[1]),Number(one[1])]:null}
+function findRepGuideInValue(value,name,depth=0){if(depth>4||value==null)return null;if(Array.isArray(value)){for(const x of value){const r=findRepGuideInValue(x,name,depth+1);if(r)return r}return null}if(typeof value!=='object')return null;if(String(value.name||value.exercise||value.exercise_name||'')===String(name||'')){const r=parseRepGuide(value.repGuide||value.rep_guide||value.reps||value.repRange);if(r)return r}for(const x of Object.values(value)){const r=findRepGuideInValue(x,name,depth+1);if(r)return r}return null}
+function canonicalRangeFor(name){const scopes=[window];try{if(window.parent&&window.parent!==window)scopes.push(window.parent)}catch(_){}try{if(window.top&&window.top!==window&&window.top!==window.parent)scopes.push(window.top)}catch(_){}for(const scope of scopes){try{if(typeof scope.findExerciseMaster==='function'){const master=scope.findExerciseMaster(name),r=parseRepGuide(master?.repGuide);if(r)return r}}catch(_){}}for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i)||'';if(!/exercise|master|training|menu/i.test(k))continue;try{const r=findRepGuideInValue(JSON.parse(localStorage.getItem(k)||'null'),name);if(r)return r}catch(_){}}return null}
+const rangeFor=name=>canonicalRangeFor(name)||REP_RANGES[name]||[8,12];
 const validSets=ex=>(ex?.sets||[]).filter(s=>s.done&&+s.load>0&&+s.reps>0);
 const best=ex=>{let out=null;validSets(ex).forEach(s=>{const reps=+s.reps,load=+s.load,rir=Math.max(0,+s.rir||0),e=load*(1+Math.min(15,reps)/30);if(!out||e>out.e)out={e,load,reps,rir}});return out};
 const setSummary=ex=>{const sets=validSets(ex);if(!sets.length)return null;const reps=sets.map(s=>+s.reps),loads=sets.map(s=>+s.load),rirs=sets.map(s=>Math.max(0,+s.rir||0)),planned=(ex?.sets||[]).length;return {count:sets.length,planned,allDone:sets.length===planned,minReps:Math.min(...reps),maxReps:Math.max(...reps),avgReps:reps.reduce((a,b)=>a+b,0)/reps.length,minRir:Math.min(...rirs),maxRir:Math.max(...rirs),sameLoad:loads.every(v=>Math.abs(v-loads[0])<.01),load:loads[0]}};
@@ -47,5 +50,5 @@ document.addEventListener('input',autosaveInput,true);
 document.addEventListener('input',autosaveSetRest,true);
 window.addEventListener('sug:session-complete',e=>{const merged=preserveSession(e.detail);bridgeCanonical(e.detail);const base=saveFor(e.detail,merged);render(base);requestPrivateForSession(e.detail,merged,base).then(items=>{render(items);applyToMenu()});localStorage.removeItem(WORKOUT_KEY)});
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>{enhanceSetRest();applyToMenu()},{once:true});else{enhanceSetRest();applyToMenu()}
-window.SuGRestProgression={analyze,parseRest,saveFor,render,prescription,applyToMenu,rangeFor,setSummary,preserveSession,prior,bridgeCanonical,requestPrivateForSession,representativeRest,enhanceSetRest,persistCanonicalEngine,engineHistoryCount};
+window.SuGRestProgression={analyze,parseRest,saveFor,render,prescription,applyToMenu,rangeFor,canonicalRangeFor,setSummary,preserveSession,prior,bridgeCanonical,requestPrivateForSession,representativeRest,enhanceSetRest,persistCanonicalEngine,engineHistoryCount};
 })();
