@@ -1,5 +1,5 @@
 (()=>{'use strict';
-const BUILD='26.5.257';
+const BUILD='26.5.258';
 const FALLBACK_CONFIG={url:'https://nnqzxcgkqjnmtzcvorha.supabase.co',publishableKey:'sb_publishable_zcn7r2YSKDZa1lXJvmk3sg_GulOJXwI'};
 const ROM_TYPES=new Set(['PAIN_LIMITED_ROM','PASSIVE_LIMIT','ACTIVE_PASSIVE_GAP','AROM_LOW_PROM_UNKNOWN','ASYMMETRY','THORACIC_MOBILITY','DATA_RECHECK']);
 const MOVEMENT_TYPES=new Set(['MOVEMENT_CONTROL','SHOULDER_COORDINATION']);
