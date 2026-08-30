@@ -1,96 +1,12 @@
 <!doctype html>
-<html lang="ja">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta http-equiv="Cache-Control" content="no-store,no-cache,must-revalidate,max-age=0">
-<meta name="theme-color" content="#080809">
-<title>S.u.G MEMBER HOME V2</title>
-<style>
-*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#080809;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif}body{overflow-x:hidden}.wrap{max-width:760px;margin:0 auto;padding:14px 14px 30px}.hero,.card{border:1px solid #34343b;background:linear-gradient(180deg,#151518,#101012);border-radius:18px;padding:16px;margin-bottom:12px}.hero{border-color:#7a6231;background:linear-gradient(145deg,#17140e,#0d0d0f)}.eyebrow{color:#d8b35b;font-size:11px;font-weight:900;letter-spacing:.12em}.hero h1{font-size:25px;margin:6px 0 4px}.muted{color:#9d9da3;font-size:12px;line-height:1.55}.gold{color:#f1d17b}.btn{width:100%;border:0;border-radius:14px;padding:15px 12px;font-size:15px;font-weight:900;margin-top:9px}.btnGold{background:linear-gradient(#f0cf69,#c99a27);color:#111}.btnDark{background:#19191e;color:#e8cd7d;border:1px solid #5f4f25}.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.mini{background:#0d0d10;border:1px solid #2c2c32;border-radius:14px;padding:12px;min-height:90px}.mini span{display:block;color:#999;font-size:10px}.mini b{display:block;margin-top:5px;color:#f1d17b;font-size:20px}.sectionTitle{font-size:15px;font-weight:900;margin:0 0 10px}.idealNow{display:flex;align-items:center;gap:12px}.idealThumb{width:88px;height:118px;object-fit:contain;background:#0a0a0c;border:1px solid #2d2d32;border-radius:12px}.idealMeta b{display:block;font-size:18px;color:#f1d17b}.idealMeta small{display:block;color:#aaa;margin-top:4px}.modal{position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.88);display:none;overflow:auto}.modal.open{display:block}.sheet{max-width:760px;margin:0 auto;min-height:100%;background:#09090b;padding:14px 14px calc(28px + env(safe-area-inset-bottom))}.toprow{display:flex;align-items:center;justify-content:space-between;gap:10px}.close{width:42px;height:42px;border-radius:999px;border:1px solid #444;background:#17171b;color:#fff;font-size:22px}.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}.seg button{padding:12px;border-radius:12px;border:1px solid #36363b;background:#151519;color:#bbb;font-weight:900}.seg button.on{color:#111;background:linear-gradient(#f0cf69,#c99a27);border-color:#d0a638}.typeRail{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;overflow-x:auto}.typeRail button{padding:10px 6px;border-radius:11px;border:1px solid #34343b;background:#131317;color:#aaa;font-size:10px;font-weight:900}.typeRail button.on{color:#f1d17b;border-color:#7a6231;background:#201a0f}.modelCard{margin-top:12px;border:1px solid #6e5828;border-radius:20px;background:linear-gradient(180deg,#14120d,#0b0b0d);padding:15px;text-align:center;min-height:600px}.modelCard img{display:block;width:100%;height:360px;object-fit:contain;margin:4px auto 8px}.modelCard h2{margin:4px 0 2px;font-size:26px}.modelCard .jp{color:#aaa;font-size:12px}.spec{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:13px}.spec div{background:#0d0d10;border:1px solid #303037;border-radius:12px;padding:11px}.spec span{display:block;color:#999;font-size:9px}.spec b{display:block;color:#f1d17b;margin-top:3px}.note{font-size:10px;color:#777;text-align:center;margin-top:8px}@media(max-width:420px){.wrap{padding-left:11px;padding-right:11px}.modelCard{min-height:560px}.modelCard img{height:320px}.typeRail{grid-template-columns:repeat(5,92px)}}
-</style>
-</head>
-<body>
-<main class="wrap">
-  <section class="hero">
-    <div class="eyebrow">TODAY FLOW</div>
-    <h1>理想の身体</h1>
-    <div class="muted">理想を確認してから、今日の状態へ進みます。HOME表示後の自動スクロール・後付けDOM・runtime注入は使いません。</div>
-    <button id="openIdeal" class="btn btnGold" type="button">理想を確認・変更する →</button>
-    <button id="startToday" class="btn btnDark" type="button">この理想で今日を始める →</button>
-  </section>
-
-  <section class="card">
-    <h2 class="sectionTitle">現在の理想</h2>
-    <div class="idealNow">
-      <img id="idealThumb" class="idealThumb" alt="理想体型">
-      <div class="idealMeta"><b id="idealName">未設定</b><small id="idealDetail">理想体型を選択してください</small></div>
-    </div>
-  </section>
-
-  <section class="card">
-    <h2 class="sectionTitle">今日の記録</h2>
-    <div class="grid">
-      <div class="mini"><span>トレーニング</span><b id="trainVal">--</b></div>
-      <div class="mini"><span>歩数</span><b id="stepsVal">--</b></div>
-      <div class="mini"><span>食事</span><b id="foodVal">--</b></div>
-      <div class="mini"><span>回復</span><b id="recoveryVal">--</b></div>
-    </div>
-  </section>
-
-  <section class="card">
-    <h2 class="sectionTitle">今日のメニュー</h2>
-    <div class="muted">新HOMEはまず安定性を優先。既存データを壊さず、各機能をここへ順番に移植します。</div>
-  </section>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta http-equiv="Cache-Control" content="no-store,no-cache,must-revalidate,max-age=0"><meta name="theme-color" content="#080809"><title>S.u.G MEMBER HOME V2</title><style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#080809;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif}body{overflow-x:hidden}.wrap{max-width:760px;margin:auto;padding:14px 14px 30px}.hero,.card{border:1px solid #34343b;background:linear-gradient(180deg,#151518,#101012);border-radius:18px;padding:16px;margin-bottom:12px}.hero{border-color:#7a6231;background:linear-gradient(145deg,#17140e,#0d0d0f)}.eyebrow{color:#d8b35b;font-size:11px;font-weight:900;letter-spacing:.12em}.hero h1{font-size:25px;margin:6px 0 4px}.muted{color:#9d9da3;font-size:12px;line-height:1.55}.btn{width:100%;border:0;border-radius:14px;padding:15px 12px;font-size:15px;font-weight:900;margin-top:9px}.btnGold{background:linear-gradient(#f0cf69,#c99a27);color:#111}.btnDark{background:#19191e;color:#e8cd7d;border:1px solid #5f4f25}.sectionTitle{font-size:15px;font-weight:900;margin:0 0 10px}.idealNow{display:flex;align-items:center;gap:12px}.idealThumb{width:88px;height:118px;object-fit:contain;background:#0a0a0c;border:1px solid #2d2d32;border-radius:12px}.idealMeta b{display:block;font-size:18px;color:#f1d17b}.idealMeta small{display:block;color:#aaa;margin-top:4px}.condition{display:grid;gap:10px}.q{background:#0d0d10;border:1px solid #2c2c32;border-radius:14px;padding:12px}.qhead{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:9px}.qhead b{font-size:13px}.qhead span{font-size:12px;color:#f1d17b;font-weight:900}.choices{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.choices button{min-height:38px;border:1px solid #34343b;border-radius:10px;background:#16161a;color:#aaa;font-size:11px;font-weight:900}.choices button.on{background:#d1a53d;color:#111;border-color:#f0cf69}.steps{display:grid;grid-template-columns:1fr auto;gap:8px}.steps input{width:100%;border:1px solid #34343b;border-radius:10px;background:#151519;color:#fff;padding:11px;font-size:16px}.saveState{font-size:11px;color:#8d8d94;margin-top:8px;text-align:center}.modal{position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.88);display:none;overflow:auto}.modal.open{display:block}.sheet{max-width:760px;margin:auto;min-height:100%;background:#09090b;padding:14px 14px 28px}.toprow{display:flex;align-items:center;justify-content:space-between}.close{width:42px;height:42px;border-radius:50%;border:1px solid #444;background:#17171b;color:#fff;font-size:22px}.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}.seg button,.typeRail button{padding:11px;border-radius:11px;border:1px solid #36363b;background:#151519;color:#bbb;font-weight:900}.seg button.on,.typeRail button.on{color:#111;background:linear-gradient(#f0cf69,#c99a27)}.typeRail{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;overflow:auto}.modelCard{margin-top:12px;border:1px solid #6e5828;border-radius:20px;background:#0e0d0b;padding:15px;text-align:center;min-height:560px}.modelCard img{width:100%;height:340px;object-fit:contain}.spec{display:grid;grid-template-columns:1fr 1fr;gap:8px}.spec div{background:#0d0d10;border:1px solid #303037;border-radius:12px;padding:11px}.spec span{display:block;color:#999;font-size:9px}.spec b{color:#f1d17b}@media(max-width:420px){.wrap{padding:11px}.typeRail{grid-template-columns:repeat(5,92px)}}
+</style></head><body><main class="wrap">
+<section class="hero"><div class="eyebrow">TODAY FLOW</div><h1>理想の身体</h1><div class="muted">理想を確認してから、今日の状態へ進みます。</div><button id="openIdeal" class="btn btnGold">理想を確認・変更する →</button></section>
+<section class="card"><h2 class="sectionTitle">現在の理想</h2><div class="idealNow"><img id="idealThumb" class="idealThumb"><div class="idealMeta"><b id="idealName">未設定</b><small id="idealDetail">理想体型を選択してください</small></div></div></section>
+<section class="card"><div class="eyebrow">TODAY CONDITION</div><h2 class="sectionTitle" style="margin-top:5px">今日の状態</h2><div class="condition" id="condition"></div><button id="saveCondition" class="btn btnGold">今日の状態を保存 →</button><div id="saveState" class="saveState"></div></section>
+<section class="card"><h2 class="sectionTitle">今日の判定</h2><div class="muted">睡眠・疲労・ストレス・痛み・歩数・食欲から、TRAIN / LIGHT / RECOVERY / CARE FIRST と推奨時間・RIRをここで判定します。</div></section>
+<section class="card"><h2 class="sectionTitle">今日のメニュー</h2><div class="muted">判定後に今日の部位・種目・SET・REP・RIR・RESTを表示します。</div></section>
 </main>
-
-<div id="idealModal" class="modal" aria-hidden="true">
-  <div class="sheet">
-    <div class="toprow"><div><div class="eyebrow">S.u.G OSAKA</div><h2 style="margin:4px 0 0">理想の体型を選ぶ</h2><div class="muted">あなたの理想の未来を一緒に作りましょう</div></div><button id="closeIdeal" class="close" type="button">×</button></div>
-    <div class="seg"><button data-gender="male" class="on" type="button">男性｜ひょっとこ</button><button data-gender="female" type="button">女性｜おかめ</button></div>
-    <div id="typeRail" class="typeRail"></div>
-    <div class="modelCard">
-      <img id="modelImg" alt="理想体型">
-      <h2 id="modelName">SLIM</h2>
-      <div id="modelJp" class="jp">スリム</div>
-      <div class="spec"><div><span>体脂肪率</span><b id="modelBf">12–18%</b></div><div><span>筋量イメージ</span><b id="modelMuscle">LOW–MID</b></div></div>
-      <button id="saveIdeal" class="btn btnGold" type="button">この体型を目標にする</button>
-    </div>
-    <div class="note">360°自動回転は後付けせず、まず固定表示で安定性を確認します。</div>
-  </div>
-</div>
-<script>
-(()=>{'use strict';
-const KEY='sug_ideal_shadow_v2';
-const male=[
- {key:'slim',name:'SLIM',jp:'スリム',bf:'12–18%',muscle:'LOW–MID',img:'assets/ideal-vision/v26.5.20/slim.webp'},
- {key:'athletic',name:'ATHLETIC',jp:'アスレチック',bf:'10–15%',muscle:'MID',img:'assets/ideal-vision/v26.5.20/athletic.webp'},
- {key:'fitness',name:'FITNESS',jp:'フィットネス',bf:'8–13%',muscle:'MID–HIGH',img:'assets/ideal-vision/v26.5.20/fitness.webp'},
- {key:'muscular',name:'MUSCULAR',jp:'マスキュラー',bf:'10–15%',muscle:'HIGH',img:'assets/ideal-vision/v26.5.20/muscular.webp'},
- {key:'physique',name:'PHYSIQUE',jp:'フィジーク',bf:'7–12%',muscle:'HIGH',img:'assets/ideal-vision/v26.5.20/physique.webp'}
-];
-const female=[
- {key:'slim',name:'SLIM',jp:'スリム',bf:'22–28%',muscle:'LOW–MID',img:'assets/ideal-vision/v26.5.24/okame-slim.webp'},
- {key:'athletic',name:'ATHLETIC',jp:'アスレチック',bf:'20–26%',muscle:'MID',img:'assets/ideal-vision/v26.5.24/okame-athletic.webp'},
- {key:'fitness',name:'FITNESS',jp:'フィットネス',bf:'19–25%',muscle:'MID–HIGH',img:'assets/ideal-vision/v26.5.24/okame-fitness.webp'},
- {key:'muscular',name:'MUSCULAR',jp:'マスキュラー',bf:'18–25%',muscle:'HIGH',img:'assets/ideal-vision/v26.5.24/okame-muscular.webp'},
- {key:'physique',name:'PHYSIQUE',jp:'フィジーク',bf:'18–24%',muscle:'HIGH',img:'assets/ideal-vision/v26.5.24/okame-physique.webp'}
-];
-let gender='male',index=0;
-const $=id=>document.getElementById(id), modal=$('idealModal');
-function read(){try{return JSON.parse(localStorage.getItem(KEY)||'null')}catch(_e){return null}}
-function types(){return gender==='female'?female:male}
-function renderRail(){const t=types();$('typeRail').innerHTML=t.map((x,i)=>`<button type="button" data-i="${i}" class="${i===index?'on':''}">${x.name}</button>`).join('');$('typeRail').querySelectorAll('button').forEach(b=>b.onclick=()=>{index=Number(b.dataset.i)||0;renderPicker()})}
-function renderPicker(){const x=types()[index];renderRail();$('modelImg').src=x.img;$('modelName').textContent=x.name;$('modelJp').textContent=x.jp;$('modelBf').textContent=x.bf;$('modelMuscle').textContent=x.muscle;document.querySelectorAll('[data-gender]').forEach(b=>b.classList.toggle('on',b.dataset.gender===gender))}
-function renderSaved(){const s=read();if(!s?.idealVisionType){$('idealThumb').style.visibility='hidden';$('idealName').textContent='未設定';$('idealDetail').textContent='理想体型を選択してください';return}const arr=s.gender==='female'?female:male;const x=arr.find(v=>v.key===s.idealVisionType)||arr[0];$('idealThumb').style.visibility='visible';$('idealThumb').src=x.img;$('idealName').textContent=x.name;$('idealDetail').textContent=`${s.gender==='female'?'女性':'男性'}｜体脂肪 ${x.bf}`}
-function open(){const s=read();if(s?.gender)gender=s.gender;const arr=types();index=Math.max(0,arr.findIndex(x=>x.key===s?.idealVisionType));renderPicker();modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
-function close(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow=''}
-$('openIdeal').onclick=open;$('closeIdeal').onclick=close;document.querySelectorAll('[data-gender]').forEach(b=>b.onclick=()=>{gender=b.dataset.gender==='female'?'female':'male';index=0;renderPicker()});
-$('saveIdeal').onclick=()=>{const x=types()[index];const old=read()||{};const value={...old,at:new Date().toISOString(),gender,idealVisionType:x.key,idealVisionName:x.name,idealVisionBodyFat:x.bf};localStorage.setItem(KEY,JSON.stringify(value));renderSaved();close()};
-$('startToday').onclick=()=>{const s=read();if(!s?.idealVisionType){open();return}location.href='./?entry=member&hub=1&flow=1&from=v2'};
-function todayStats(){try{const a=JSON.parse(localStorage.getItem('sug_training_sessions_v1')||'[]');if(Array.isArray(a)){const d=new Date(),k=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;let sets=0;for(const r of a){const rd=new Date(r?.at);const rk=`${rd.getFullYear()}-${String(rd.getMonth()+1).padStart(2,'0')}-${String(rd.getDate()).padStart(2,'0')}`;if(rk!==k)continue;for(const ex of r?.exercises||[])for(const st of ex?.sets||[])if(Number(st?.reps)>0)sets++}$('trainVal').textContent=sets?`${sets} SET`:'0 SET'}}catch(_e){}}
-renderSaved();todayStats();window.scrollTo(0,0);
-})();
-</script>
-</body>
-</html>
+<div id="idealModal" class="modal"><div class="sheet"><div class="toprow"><div><div class="eyebrow">S.u.G OSAKA</div><h2>理想の体型を選ぶ</h2><div class="muted">あなたの理想の未来を一緒に作りましょう</div></div><button id="closeIdeal" class="close">×</button></div><div class="seg"><button data-gender="male" class="on">男性｜ひょっとこ</button><button data-gender="female">女性｜おかめ</button></div><div id="typeRail" class="typeRail"></div><div class="modelCard"><img id="modelImg"><h2 id="modelName">SLIM</h2><div id="modelJp" class="muted">スリム</div><div class="spec"><div><span>体脂肪率</span><b id="modelBf"></b></div><div><span>筋量イメージ</span><b id="modelMuscle"></b></div></div><button id="saveIdeal" class="btn btnGold">この体型を目標にする</button></div></div></div>
+<script>(()=>{'use strict';const IK='sug_ideal_shadow_v2',CK='sug_today_condition_v2';const $=id=>document.getElementById(id);const male=[['slim','SLIM','スリム','12–18%','LOW–MID','assets/ideal-vision/v26.5.20/slim.webp'],['athletic','ATHLETIC','アスレチック','10–15%','MID','assets/ideal-vision/v26.5.20/athletic.webp'],['fitness','FITNESS','フィットネス','8–13%','MID–HIGH','assets/ideal-vision/v26.5.20/fitness.webp'],['muscular','MUSCULAR','マスキュラー','10–15%','HIGH','assets/ideal-vision/v26.5.20/muscular.webp'],['physique','PHYSIQUE','フィジーク','7–12%','HIGH','assets/ideal-vision/v26.5.20/physique.webp']];const female=[['slim','SLIM','スリム','22–28%','LOW–MID','assets/ideal-vision/v26.5.24/okame-slim.webp'],['athletic','ATHLETIC','アスレチック','20–26%','MID','assets/ideal-vision/v26.5.24/okame-athletic.webp'],['fitness','FITNESS','フィットネス','19–25%','MID–HIGH','assets/ideal-vision/v26.5.24/okame-fitness.webp'],['muscular','MUSCULAR','マスキュラー','18–25%','HIGH','assets/ideal-vision/v26.5.24/okame-muscular.webp'],['physique','PHYSIQUE','フィジーク','18–24%','HIGH','assets/ideal-vision/v26.5.24/okame-physique.webp']];let gender='male',idx=0,state={sleep:null,fatigue:null,stress:null,pain:null,steps:'',appetite:null};function read(k){try{return JSON.parse(localStorage.getItem(k)||'null')}catch(e){return null}}function arr(){return gender==='female'?female:male}function savedIdeal(){const s=read(IK);if(!s?.idealVisionType){$('idealThumb').style.visibility='hidden';return}const a=s.gender==='female'?female:male,x=a.find(v=>v[0]===s.idealVisionType)||a[0];$('idealThumb').style.visibility='visible';$('idealThumb').src=x[5];$('idealName').textContent=x[1];$('idealDetail').textContent=`${s.gender==='female'?'女性':'男性'}｜体脂肪 ${x[3]}`}function picker(){const a=arr(),x=a[idx];$('typeRail').innerHTML=a.map((v,i)=>`<button data-i="${i}" class="${i===idx?'on':''}">${v[1]}</button>`).join('');$('typeRail').querySelectorAll('button').forEach(b=>b.onclick=()=>{idx=+b.dataset.i;picker()});$('modelImg').src=x[5];$('modelName').textContent=x[1];$('modelJp').textContent=x[2];$('modelBf').textContent=x[3];$('modelMuscle').textContent=x[4];document.querySelectorAll('[data-gender]').forEach(b=>b.classList.toggle('on',b.dataset.gender===gender))}$('openIdeal').onclick=()=>{const s=read(IK);gender=s?.gender||'male';idx=Math.max(0,arr().findIndex(v=>v[0]===s?.idealVisionType));picker();$('idealModal').classList.add('open');document.body.style.overflow='hidden'};$('closeIdeal').onclick=()=>{$('idealModal').classList.remove('open');document.body.style.overflow=''};document.querySelectorAll('[data-gender]').forEach(b=>b.onclick=()=>{gender=b.dataset.gender;idx=0;picker()});$('saveIdeal').onclick=()=>{const x=arr()[idx],old=read(IK)||{};localStorage.setItem(IK,JSON.stringify({...old,at:new Date().toISOString(),gender,idealVisionType:x[0],idealVisionName:x[1],idealVisionBodyFat:x[3]}));savedIdeal();$('closeIdeal').click()};const qs=[['sleep','睡眠','悪い','良い'],['fatigue','疲労','強い','少ない'],['stress','ストレス','強い','少ない'],['pain','痛み','強い','なし'],['appetite','食欲','低い','高い']];function renderCondition(){const d=new Date().toISOString().slice(0,10),old=read(CK);if(old?.date===d)state={...state,...old};$('condition').innerHTML=qs.map(q=>`<div class="q"><div class="qhead"><b>${q[1]}</b><span>${state[q[0]]?state[q[0]]+'/5':'未入力'}</span></div><div class="choices">${[1,2,3,4,5].map(n=>`<button data-k="${q[0]}" data-v="${n}" class="${state[q[0]]===n?'on':''}">${n}</button>`).join('')}</div><div class="muted" style="display:flex;justify-content:space-between;margin-top:6px"><span>${q[2]}</span><span>${q[3]}</span></div></div>`).join('')+`<div class="q"><div class="qhead"><b>歩数</b><span>${state.steps?Number(state.steps).toLocaleString()+'歩':'未入力'}</span></div><div class="steps"><input id="stepsInput" type="number" inputmode="numeric" min="0" max="100000" value="${state.steps||''}" placeholder="今日の歩数"><button id="stepsSet" class="btn btnDark" style="width:auto;margin:0;padding:10px 14px">設定</button></div></div>`;$('condition').querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>{state[b.dataset.k]=+b.dataset.v;renderCondition()});$('stepsSet').onclick=()=>{state.steps=$('stepsInput').value;renderCondition()}}renderCondition();$('saveCondition').onclick=()=>{const d=new Date().toISOString().slice(0,10);localStorage.setItem(CK,JSON.stringify({...state,date:d,at:new Date().toISOString()}));$('saveState').textContent='保存しました';setTimeout(()=>{$('saveState').textContent=''},1500)};savedIdeal();window.scrollTo(0,0)})();</script></body></html>
