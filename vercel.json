@@ -1,5 +1,6 @@
 {
   "functions": {
-    "api/food-analyze.js": { "maxDuration": 30 }
+    "api/food-analyze.js": { "maxDuration": 30 },
+    "api/body-future-image.js": { "maxDuration": 60 }
   }
 }
