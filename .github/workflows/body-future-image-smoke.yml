@@ -15,7 +15,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          base='https://sug-private-engine.vercel.app'
+          base='https://sug-body-management-system.vercel.app'
           python3 - <<'PY'
           import base64,json,struct,zlib,binascii
           w=h=256
