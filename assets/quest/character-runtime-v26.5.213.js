@@ -1,6 +1,6 @@
 (()=>{
-  const VERSION='26.5.215';
-  const SPRITE_TEXT='./assets/quest/quest-v213-characters-sprite.webp?v='+VERSION;
+  const VERSION='26.5.216';
+  const SPRITE_URL='./assets/quest/quest-v213-characters-sprite.webp?v='+VERSION;
   const manifestUrl='./assets/quest/characters-v26.5.213.json?v='+VERSION;
   const PRIVATE_IDS=new Set(['family-core','yuto-baseball','yuzu-baby','yuto-yuzu-go','yuto-yuzu-nice','yuto-yuzu-thanks']);
   const css=`
@@ -13,24 +13,23 @@
   `;
   const lines={'main-party':'今日はどこ行く？ 街を歩いて、ひとつ解放しよ。','reflection-hero':'最後に今日の楽しかったこと、しんどかったこと、次どうするかを残そう。','habit-npc':'明日からやる、は禁止や。今日1個だけ終わらせよ。','daily-quest-guide':'今日やり！ まず目的地をひとつ。','training-achievement':'重量更新したらポイント獲得。動けりゃええねん。','reaction-npc':'そのあと？ 次の行動まで決めよか。','sports-quest':'スポーツQUEST発見。動いてクリアや。','collection-npc':'見つけたものは図鑑に残そ。','sleep-recovery-quest':'寝不足なら回復QUESTに切り替えや。','quest-start':'いけ!! 今日のQUEST開始！','quest-clear':'ナイス!! QUESTクリア！','partner-shop-greeting':'よろしくお願いします!! 店舗QUEST開始。','walking-route-quest':'歩けば街が解放される。次の地点まで行こ。','training-npc':'筋肉にただ積むだけや!!','history-route-boss-card':'歴史ルート解放。由緒とつながりを確認して次へ進め。'};
   async function loadManifest(){const r=await fetch(manifestUrl,{cache:'no-store'});if(!r.ok)throw new Error('character manifest '+r.status);return r.json()}
-  async function loadSprite(){const r=await fetch(SPRITE_TEXT,{cache:'no-store'});if(!r.ok)throw new Error('character sprite '+r.status);const b64=(await r.text()).replace(/\s+/g,'');if(!b64)throw new Error('empty sprite');return 'data:image/webp;base64,'+b64}
   function pos(i){const c=i%5,r=Math.floor(i/5);return `${c*25}% ${r*(100/3)}%`}
-  function setAvatar(el,i,sprite){el.style.backgroundImage=`url("${sprite}")`;el.style.backgroundPosition=pos(i)}
+  function setAvatar(el,i){el.style.backgroundImage=`url("${SPRITE_URL}")`;el.style.backgroundPosition=pos(i)}
   function label(c){return PRIVATE_IDS.has(c.id)?'QUEST CHARACTER':c.name}
   async function mount(doc){
     if(!doc||doc.getElementById('v213Characters'))return true;
     const today=doc.getElementById('today');if(!today)return false;
     if(!doc.getElementById('v213CharacterStyle')){const style=doc.createElement('style');style.id='v213CharacterStyle';style.textContent=css;doc.head.appendChild(style)}
     try{
-      const [data,sprite]=await Promise.all([loadManifest(),loadSprite()]);
+      const data=await loadManifest();
       const visible=data.characters.map((c,i)=>({c,i}));
       const box=doc.createElement('section');box.className='v213Characters';box.id='v213Characters';
       box.innerHTML='<h3>S.u.G QUEST CHARACTERS</h3><p>街探索・トレーニング・回復・歴史ルートで登場</p><div class="v213Strip"></div><div class="v213Dialogue"><div class="v213Avatar"></div><div><b></b><span></span></div></div>';
       const strip=box.querySelector('.v213Strip'),dlg=box.querySelector('.v213Dialogue'),dlgAvatar=dlg.querySelector('.v213Avatar'),dlgName=dlg.querySelector('b'),dlgLine=dlg.querySelector('span');
-      visible.forEach(({c,i},j)=>{const b=doc.createElement('button');b.className='v213Char';b.dataset.character=c.id;b.innerHTML='<div class="v213Avatar"></div><b></b><small></small>';setAvatar(b.querySelector('.v213Avatar'),i,sprite);b.querySelector('b').textContent=label(c);b.querySelector('small').textContent=c.role;b.onclick=()=>{strip.querySelectorAll('.v213Char').forEach(x=>x.classList.remove('on'));b.classList.add('on');dlg.classList.add('on');setAvatar(dlgAvatar,i,sprite);dlgName.textContent=label(c);dlgLine.textContent=lines[c.role]||'QUESTで登場するキャラクター。'};strip.appendChild(b);if(j===0)setTimeout(()=>b.click(),0)});
+      visible.forEach(({c,i},j)=>{const b=doc.createElement('button');b.className='v213Char';b.dataset.character=c.id;b.innerHTML='<div class="v213Avatar"></div><b></b><small></small>';setAvatar(b.querySelector('.v213Avatar'),i);b.querySelector('b').textContent=label(c);b.querySelector('small').textContent=c.role;b.onclick=()=>{strip.querySelectorAll('.v213Char').forEach(x=>x.classList.remove('on'));b.classList.add('on');dlg.classList.add('on');setAvatar(dlgAvatar,i);dlgName.textContent=label(c);dlgLine.textContent=lines[c.role]||'QUESTで登場するキャラクター。'};strip.appendChild(b);if(j===0)setTimeout(()=>b.click(),0)});
       const companion=today.querySelector('#questCompanion');const q=today.querySelector('.quest');if(companion)companion.insertAdjacentElement('afterend',box);else if(q)q.insertAdjacentElement('afterend',box);else today.prepend(box);
       doc.documentElement.dataset.questCharacters='ready';return true;
-    }catch(e){console.error('V215 characters',e);return false}
+    }catch(e){console.error('V216 characters',e);return false}
   }
   function retry(doc,n=0){Promise.resolve(mount(doc)).then(ok=>{if(!ok&&n<30)setTimeout(()=>retry(doc,n+1),200)})}
   function boot(){const f=document.getElementById('questFrame');if(f){const run=()=>{try{retry(f.contentDocument)}catch(e){console.error(e)}};f.addEventListener('load',run);run()}else retry(document)}
