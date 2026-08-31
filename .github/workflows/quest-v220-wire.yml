@@ -1,0 +1,31 @@
+name: QUEST V26.5.220 wire
+on:
+  push:
+    paths:
+      - '.github/workflows/quest-v220-wire.yml'
+permissions:
+  contents: write
+jobs:
+  wire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Wire V220
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('quest.html')
+          s=p.read_text()
+          s=s.replace('V26.5.219','V26.5.220')
+          s=s.replace('v=26.5.219','v=26.5.220')
+          p.write_text(s)
+          PY
+      - name: Commit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add quest.html
+          git diff --cached --quiet || git commit -m 'Activate QUEST V26.5.220 card cleanup'
+          git push origin HEAD:main
