@@ -11,17 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Diagnose live BODY API and test future image
+      - name: Test live BODY future image
         shell: bash
         run: |
-          set -u
-          base='https://sug-body-management-system.vercel.app'
-          for path in / /api/food-analyze /api/body-future-image; do
-            code=$(curl -sS --max-time 30 -o /tmp/probe -w '%{http_code}' "$base$path" || true)
-            echo "PROBE $path HTTP=$code"
-            head -c 240 /tmp/probe 2>/dev/null | tr '\n' ' '; echo
-          done
           set -euo pipefail
+          base='https://sug-private-engine.vercel.app'
           python3 - <<'PY'
           import base64,json,struct,zlib,binascii
           w=h=256
@@ -33,15 +27,14 @@ jobs:
           with open('/tmp/payload.json','w') as f:
               json.dump({'imageDataUrl':data,'months':3,'ideal':'SLIM','bodyFat':'22-28%'},f)
           PY
-          code=$(curl -sS --max-time 120 -o /tmp/body.json -w '%{http_code}' -H 'Content-Type: application/json' --data-binary @/tmp/payload.json "$base/api/body-future-image")
+          code=$(curl -sS --max-time 180 -o /tmp/body.json -w '%{http_code}' -H 'Content-Type: application/json' --data-binary @/tmp/payload.json "$base/api/body-future-image")
           echo "POST FUTURE HTTP=$code"
           python3 - <<'PY'
           import json
           raw=open('/tmp/body.json','rb').read()
-          print('body_prefix=',raw[:240].decode('utf-8','replace').replace('\n',' '))
+          print('body_prefix=',raw[:300].decode('utf-8','replace').replace('\n',' '))
           try:b=json.loads(raw)
           except Exception:raise SystemExit(1)
-          print('keys=',sorted(b.keys()))
           if 'error' in b:
               print('error=',b.get('error'));print('status=',b.get('status'));print('detail=',b.get('detail'))
           ok=bool(b.get('imageDataUrl') or b.get('imageUrl'))
