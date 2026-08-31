@@ -1,0 +1,58 @@
+name: QUEST V26.5.218 sprite repair
+on:
+  push:
+    paths:
+      - '.github/workflows/quest-v218-sprite-repair.yml'
+permissions:
+  contents: write
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Rebuild real WebP sprite and wire V218
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64, re
+          parts = [
+            'assets/quest/sprite-v217-0.txt',
+            'assets/quest/sprite-v217-1.txt',
+            'assets/quest/sprite-v217-2a.txt',
+            'assets/quest/sprite-v217-2b.txt',
+            'assets/quest/sprite-v217-3a.txt',
+            'assets/quest/sprite-v217-3b.txt',
+          ]
+          b64 = ''.join(''.join(Path(p).read_text().split()) for p in parts)
+          raw = base64.b64decode(b64, validate=True)
+          assert raw[:4] == b'RIFF' and raw[8:12] == b'WEBP', (raw[:12], len(raw))
+          out = Path('assets/quest/quest-v218-characters-sprite.webp')
+          out.write_bytes(raw)
+          print('sprite bytes', len(raw), raw[:12])
+
+          rp = Path('assets/quest/character-runtime-v26.5.213.js')
+          s = rp.read_text()
+          s = re.sub(r"const VERSION='[^']+';", "const VERSION='26.5.218';", s, count=1)
+          s = re.sub(r"const SPRITE_PARTS=.*?;\n", "const SPRITE_URL='./assets/quest/quest-v218-characters-sprite.webp?v='+VERSION;\n", s, count=1)
+          s = re.sub(r"async function loadSprite\(\)\{.*?\}\n  function pos", "async function loadSprite(){const src=SPRITE_URL;await new Promise((ok,bad)=>{const im=new Image();im.onload=()=>im.naturalWidth>0?ok():bad(new Error('sprite decode'));im.onerror=()=>bad(new Error('sprite decode'));im.src=src});return src}\n  function pos", s, count=1, flags=re.S)
+          s = s.replace("console.error('V217 characters'", "console.error('V218 characters'")
+          rp.write_text(s)
+
+          qp = Path('quest.html')
+          q = qp.read_text()
+          q = q.replace('V26.5.217', 'V26.5.218').replace('v=26.5.217', 'v=26.5.218')
+          qp.write_text(q)
+          PY
+          file assets/quest/quest-v218-characters-sprite.webp
+          test "$(head -c 4 assets/quest/quest-v218-characters-sprite.webp)" = "RIFF"
+      - name: Commit V218
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/quest/quest-v218-characters-sprite.webp assets/quest/character-runtime-v26.5.213.js quest.html
+          git commit -m 'Repair QUEST V26.5.218 character sprite as real WebP'
+          git push origin HEAD:main
