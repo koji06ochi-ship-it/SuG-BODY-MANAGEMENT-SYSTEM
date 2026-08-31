@@ -1,0 +1,34 @@
+name: wire QUEST V26.5.213
+on:
+  push:
+    paths:
+      - '.github/workflows/quest-v213-wire.yml'
+permissions:
+  contents: write
+jobs:
+  wire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Wire V26.5.213 character runtime
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('quest.html')
+          s=p.read_text()
+          s=s.replace('S.u.G QUEST V26.5.212','S.u.G QUEST V26.5.213')
+          s=s.replace('v=26.5.212&fresh=1','v=26.5.213&fresh=1')
+          s=s.replace("V26.5.212 · OSAKA EXPLORATION RPG","V26.5.213 · OSAKA EXPLORATION RPG")
+          tag='<script src="./assets/quest/character-runtime-v26.5.213.js?v=26.5.213"></script>'
+          if tag not in s:
+              s=s.replace('</body></html>',tag+'</body></html>')
+          p.write_text(s)
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add quest.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Connect QUEST V26.5.213 character runtime"
+          git push origin main
