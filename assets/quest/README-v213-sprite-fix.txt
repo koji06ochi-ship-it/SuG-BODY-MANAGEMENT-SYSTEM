@@ -1,0 +1,1 @@
+V26.5.213 sprite repaired from the 19 uploaded character images. Expected WebP magic bytes: RIFF....WEBP.
