@@ -2,9 +2,8 @@ name: quest member smoke
 on:
   push:
     paths:
-      - 'member.html'
       - 'quest.html'
-      - 'quest-v26.5.200.html'
+      - 'shrine-quest-v26.5.207.html'
       - 'tests/quest-member-smoke.mjs'
       - '.github/workflows/quest-member-smoke.yml'
   workflow_dispatch:
@@ -31,11 +30,11 @@ jobs:
       - name: Wait for GitHub Pages
         run: |
           set -e
-          URL='https://koji06ochi-ship-it.github.io/SuG-BODY-MANAGEMENT-SYSTEM/member.html'
+          URL='https://koji06ochi-ship-it.github.io/SuG-BODY-MANAGEMENT-SYSTEM/quest.html'
           ok=0
           for i in $(seq 1 36); do
             body=$(curl -fsSL --max-time 15 "$URL?deploycheck=$GITHUB_SHA-$i" || true)
-            if printf '%s' "$body" | grep -q 'quest.html'; then ok=1; break; fi
+            if printf '%s' "$body" | grep -q 'shrine-quest-v26.5.207.html'; then ok=1; break; fi
             sleep 5
           done
           test "$ok" = 1
