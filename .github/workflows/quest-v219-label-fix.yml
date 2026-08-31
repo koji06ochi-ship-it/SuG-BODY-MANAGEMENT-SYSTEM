@@ -1,0 +1,64 @@
+name: QUEST V26.5.219 label fix
+on:
+  push:
+    paths:
+      - '.github/workflows/quest-v219-label-fix.yml'
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Fix character labels and bump wrapper
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('assets/quest/characters-v26.5.213.json')
+          data=json.loads(p.read_text())
+          data['version']='26.5.219'
+          names={
+            'family-core':'QUEST CHARACTER',
+            'tomorrow-pig':'猪八戒とケーキ松',
+            'niki-tsumari':'つまり？',
+            'niki-sonoato':'そのあと？',
+            'niki-stop':'もう追わない',
+            'niki-serious':'本気なら向こうから来る',
+            'yuto-baseball':'QUEST CHARACTER',
+            'yuzu-baby':'QUEST CHARACTER',
+            'sleepover':'逆ショートスリーパー松',
+            'yuto-yuzu-go':'QUEST CHARACTER',
+            'yuto-yuzu-nice':'QUEST CHARACTER',
+            'yuto-yuzu-thanks':'QUEST CHARACTER',
+            'morinomiya-walk':'森ノ宮まで歩くマン',
+            'isonokami-warrior':'物部'
+          }
+          for c in data['characters']:
+            if c['id'] in names:
+              c['name']=names[c['id']]
+          p.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
+
+          r=Path('assets/quest/character-runtime-v26.5.213.js')
+          s=r.read_text()
+          s=s.replace("const VERSION='26.5.218'","const VERSION='26.5.219'")
+          r.write_text(s)
+
+          q=Path('quest.html')
+          s=q.read_text()
+          s=s.replace('S.u.G QUEST V26.5.218','S.u.G QUEST V26.5.219')
+          s=s.replace('v=26.5.218&fresh=1','v=26.5.219&fresh=1')
+          s=s.replace('V26.5.218 · OSAKA EXPLORATION RPG','V26.5.219 · OSAKA EXPLORATION RPG')
+          s=s.replace('character-runtime-v26.5.213.js?v=26.5.218','character-runtime-v26.5.213.js?v=26.5.219')
+          q.write_text(s)
+          PY
+      - name: Commit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/quest/characters-v26.5.213.json assets/quest/character-runtime-v26.5.213.js quest.html
+          git diff --cached --quiet || git commit -m 'Correct QUEST V26.5.219 character labels'
+          git push origin HEAD:main
