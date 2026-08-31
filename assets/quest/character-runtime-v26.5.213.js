@@ -1,5 +1,5 @@
 (()=>{
-  const VERSION='26.5.218';
+  const VERSION='26.5.219';
   const SPRITE_URL='./assets/quest/quest-v218-characters-sprite.webp?v='+VERSION;
   const manifestUrl='./assets/quest/characters-v26.5.213.json?v='+VERSION;
   const PRIVATE_IDS=new Set(['family-core','yuto-baseball','yuzu-baby','yuto-yuzu-go','yuto-yuzu-nice','yuto-yuzu-thanks']);
