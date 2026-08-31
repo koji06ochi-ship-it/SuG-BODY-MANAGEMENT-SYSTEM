@@ -1,0 +1,48 @@
+name: BODY future image smoke
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/body-future-image-smoke.yml'
+      - 'api/body-future-image.js'
+  workflow_dispatch:
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Call live future-image endpoint
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import base64,json,struct,zlib,binascii
+          w=h=256
+          raw=b''.join(b'\x00'+bytes([170,170,170])*w for _ in range(h))
+          def chunk(t,d):
+              return struct.pack('>I',len(d))+t+d+struct.pack('>I',binascii.crc32(t+d)&0xffffffff)
+          png=b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR',struct.pack('>IIBBBBB',w,h,8,2,0,0,0))+chunk(b'IDAT',zlib.compress(raw,9))+chunk(b'IEND',b'')
+          data='data:image/png;base64,'+base64.b64encode(png).decode()
+          with open('/tmp/payload.json','w') as f:
+              json.dump({'imageDataUrl':data,'months':3,'ideal':'SLIM','bodyFat':'22-28%'},f)
+          PY
+          code=$(curl -sS --max-time 120 -o /tmp/body.json -w '%{http_code}' -H 'Content-Type: application/json' --data-binary @/tmp/payload.json https://sug-body-management-system.vercel.app/api/body-future-image)
+          echo "HTTP=$code"
+          python3 - <<'PY'
+          import json
+          p='/tmp/body.json'
+          try:
+              b=json.load(open(p))
+          except Exception as e:
+              print('INVALID_JSON',e)
+              raise SystemExit(1)
+          print('keys=',sorted(b.keys()))
+          if 'error' in b:
+              print('error=',b.get('error'))
+              print('status=',b.get('status'))
+              print('detail=',b.get('detail'))
+          ok=bool(b.get('imageDataUrl') or b.get('imageUrl'))
+          print('image_present=',ok)
+          if not ok:
+              raise SystemExit(1)
+          PY
