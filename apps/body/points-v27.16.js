@@ -6,4 +6,5 @@ const $=id=>document.getElementById(id);let painting=false;function refresh(){if
 function syncAndRefresh(){api.sync();refresh()}
 $('saveSplit').onclick=()=>{const v=Number($('pomSplit').value);if(!Number.isFinite(v)||v<0||v>180){$('pomStatus').textContent='0〜180°で入力';return}const r=api.recordPom('開脚',v,180);$('pomStatus').textContent=r.earned?`開脚 ${v}°｜+${r.earned}pt`:`開脚 ${v}°を記録`;refresh()};$('saveFold').onclick=()=>{const v=Number($('pomFold').value);const r=api.recordPom('前屈',v,3);$('pomStatus').textContent=r.earned?`前屈更新｜+${r.earned}pt`:'前屈を記録';refresh()};window.addEventListener('sug:points-change',refresh);window.addEventListener('storage',e=>{if(['sug_walk_quest_v1','sug_body_training_log_v1'].includes(e.key))syncAndRefresh()});syncAndRefresh()}
 mount();
+if(!window.SuGFutureImageRuleV2763){const s=document.createElement('script');s.src='./future-image-rule-v27.63.js?v=27.63';document.head.appendChild(s)}
 })();
