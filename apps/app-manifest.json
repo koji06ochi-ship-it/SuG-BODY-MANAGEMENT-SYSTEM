@@ -1,5 +1,5 @@
 {
-  "version": "27.43",
+  "version": "27.44",
   "apps": [
     {"id":"body","name":"S.u.G BODY","entry":"./body/","scope":["daily","recovery","nutrition","training"]},
     {"id":"big3","name":"S.u.G BIG3 ANALYZER","entry":"./big3/","scope":["squat","bench","deadlift","video-analysis"]},
