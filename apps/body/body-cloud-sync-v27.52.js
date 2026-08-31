@@ -1,13 +1,13 @@
 (()=>{'use strict';
-const VERSION='27.52';
+const VERSION='27.55';
 const SUPA_URL='https://nnqzxcgkqjnmtzcvorha.supabase.co';
 const SUPA_KEY='sb_publishable_zcn7r2YSKDZa1lXJvmk3sg_GulOJXwI';
 const KEYS=[
   'sug_body_daily_v1','sug_body_training_log_v1','sug_body_training_draft_v1',
   'sug_v27_ideal','sug_ideal_shadow_v2','sug_body_weight_goal_v1',
   'sug_body_nutrition_weight_v1','sug_body_micronutrition_v1','sug_body_food_ai_v1',
-  'sug_points_v27_16','sug_body_weekly_response_v1','sug_body_weekly_plan_v1',
-  'sug_body_monthly_review_v1'
+  'sug_points_v1','sug_points_budget_v1','sug_pom_v1',
+  'sug_body_weekly_response_v1','sug_body_weekly_plan_v1','sug_body_monthly_review_v1'
 ];
 let sb=null,timer=0,busy=false,lastHash='';
 function client(){if(sb)return sb;if(!window.supabase)return null;sb=window.supabase.createClient(SUPA_URL,SUPA_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});return sb}
