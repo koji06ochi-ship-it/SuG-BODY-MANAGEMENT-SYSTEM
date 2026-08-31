@@ -1,0 +1,33 @@
+name: QUEST V26.5.214 wire
+on:
+  push:
+    paths:
+      - '.github/workflows/quest-v214-cache-bust.yml'
+permissions:
+  contents: write
+jobs:
+  wire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Update QUEST wrapper to V26.5.214
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('quest.html')
+          s=p.read_text()
+          s=s.replace('S.u.G QUEST V26.5.213','S.u.G QUEST V26.5.214')
+          s=s.replace('v=26.5.213&fresh=1','v=26.5.214&fresh=1')
+          s=s.replace('V26.5.213 · OSAKA EXPLORATION RPG','V26.5.214 · OSAKA EXPLORATION RPG')
+          s=s.replace('character-runtime-v26.5.213.js?v=26.5.213','character-runtime-v26.5.213.js?v=26.5.214')
+          p.write_text(s)
+          PY
+      - name: Commit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add quest.html
+          git diff --cached --quiet || git commit -m 'Activate QUEST V26.5.214 character display fix'
+          git push origin HEAD:main
