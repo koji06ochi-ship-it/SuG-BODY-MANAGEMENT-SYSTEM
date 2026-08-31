@@ -1,0 +1,25 @@
+{
+  "version": "26.5.213",
+  "status": "asset-slots-prepared",
+  "characters": [
+    {"id":"family-core","name":"悠翔・柚結・名前ニキ","role":"main-party","image":"quest-v213-family-core.webp"},
+    {"id":"osaka-thought","name":"心の思考が人生を創り","role":"reflection-hero","image":"quest-v213-osaka-thought.webp"},
+    {"id":"tomorrow-pig","name":"明日からやるニキ","role":"habit-npc","image":"quest-v213-tomorrow-pig.webp"},
+    {"id":"okame-daily","name":"おかめ 今日やり！","role":"daily-quest-guide","image":"quest-v213-okame-daily.webp"},
+    {"id":"power-bull","name":"重量更新の牛","role":"training-achievement","image":"quest-v213-power-bull.webp"},
+    {"id":"niki-tsumari","name":"ニキ つまり？","role":"reaction-npc","image":"quest-v213-niki-tsumari.webp"},
+    {"id":"niki-sonoato","name":"ニキ そのあと？","role":"reaction-npc","image":"quest-v213-niki-sonoato.webp"},
+    {"id":"niki-stop","name":"ニキ もう追わない","role":"reaction-npc","image":"quest-v213-niki-stop.webp"},
+    {"id":"niki-serious","name":"ニキ 本気なら向こうから来る","role":"reaction-npc","image":"quest-v213-niki-serious.webp"},
+    {"id":"yuto-baseball","name":"悠翔 野球","role":"sports-quest","image":"quest-v213-yuto-baseball.webp"},
+    {"id":"yuzu-baby","name":"柚結","role":"collection-npc","image":"quest-v213-yuzu-baby.webp"},
+    {"id":"sleepover","name":"寝かせろや","role":"sleep-recovery-quest","image":"quest-v213-sleepover.webp"},
+    {"id":"yuto-yuzu-go","name":"悠翔・柚結 いけ!!","role":"quest-start","image":"quest-v213-yuto-yuzu-go.webp"},
+    {"id":"yuto-yuzu-nice","name":"悠翔・柚結 ナイス!!","role":"quest-clear","image":"quest-v213-yuto-yuzu-nice.webp"},
+    {"id":"yuto-yuzu-thanks","name":"悠翔・柚結 よろしくお願いします!!","role":"partner-shop-greeting","image":"quest-v213-yuto-yuzu-thanks.webp"},
+    {"id":"morinomiya-walk","name":"森ノ宮ウォーク","role":"walking-route-quest","image":"quest-v213-morinomiya-walk.webp"},
+    {"id":"name-niki","name":"入れ墨は名前ニキ","role":"training-npc","image":"quest-v213-name-niki.webp"},
+    {"id":"isonokami-warrior","name":"石上之武","role":"history-route-boss-card","image":"quest-v213-isonokami-warrior.webp"},
+    {"id":"kusunoki-masanari","name":"楠木正成","role":"history-route-boss-card","image":"quest-v213-kusunoki-masanari.webp"}
+  ]
+}
