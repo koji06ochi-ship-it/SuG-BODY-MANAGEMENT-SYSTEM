@@ -4,7 +4,7 @@
   "characters": [
     {"id":"family-core","name":"悠翔・柚結・名前ニキ","role":"main-party","image":"quest-v213-family-core.webp"},
     {"id":"osaka-thought","name":"心の思考が人生を創り","role":"reflection-hero","image":"quest-v213-osaka-thought.webp"},
-    {"id":"tomorrow-pig","name":"明日からやるニキ","role":"habit-npc","image":"quest-v213-tomorrow-pig.webp"},
+    {"id":"tomorrow-pig","name":"猪八戒とケーキ松","role":"habit-npc","image":"quest-v213-tomorrow-pig.webp"},
     {"id":"okame-daily","name":"おかめ 今日やり！","role":"daily-quest-guide","image":"quest-v213-okame-daily.webp"},
     {"id":"power-bull","name":"重量更新の牛","role":"training-achievement","image":"quest-v213-power-bull.webp"},
     {"id":"niki-tsumari","name":"ニキ つまり？","role":"reaction-npc","image":"quest-v213-niki-tsumari.webp"},
