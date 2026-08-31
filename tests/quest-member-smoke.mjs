@@ -8,52 +8,37 @@ const page=await context.newPage();
 const errors=[];
 page.on('pageerror',e=>errors.push(String(e)));
 page.on('console',m=>{if(m.type()==='error') errors.push(m.text())});
-const questFrame=async()=>{
-  const deadline=Date.now()+15000;
-  while(Date.now()<deadline){
-    const f=page.frames().find(x=>/quest-v26\.5\.200\.html/.test(x.url()));
-    if(f)return f;
-    await page.waitForTimeout(150);
-  }
-  return null;
-};
 
-await page.goto(`${BASE}/member.html?smoke=${Date.now()}`,{waitUntil:'domcontentloaded'});
-await page.waitForURL(/quest\.html/,{timeout:15000});
-await page.waitForSelector('#app',{timeout:10000});
-const app=await questFrame();
-assert.ok(app,'QUEST iframe not loaded');
-await app.waitForSelector('#choose',{timeout:10000});
-
-const heroVisible=await app.locator('#choose').evaluate(el=>el.classList.contains('show'));
-if(heroVisible){
-  await app.locator('[data-hero="hyottoko"]').click();
-  await app.locator('#start').click();
+await page.goto(`${BASE}/quest.html?smoke=${Date.now()}`,{waitUntil:'domcontentloaded'});
+await page.waitForSelector('iframe',{timeout:10000});
+const deadline=Date.now()+15000;
+let app=null;
+while(Date.now()<deadline){
+  app=page.frames().find(f=>/shrine-quest-v26\.5\.207\.html/.test(f.url()));
+  if(app) break;
+  await page.waitForTimeout(150);
 }
-assert.ok(await app.locator('#home').isVisible(),'QUEST HOME not visible after hero selection');
+assert.ok(app,'QUEST V26.5.207 iframe not loaded');
+await app.waitForSelector('#home',{timeout:10000});
+assert.ok(await app.locator('#home').isVisible(),'QUEST home not visible');
+assert.equal(await app.locator('.shrine').count(),14,'expected 11 Kita shrines + 3 outer-route shrines');
+assert.match((await app.locator('#kitaProgress').innerText()).trim(),/北区 0\/11/,'Kita 11 progress missing');
+assert.equal((await app.locator('#wallet').innerText()).trim(),'0 pt','wallet should start at zero in clean context');
 
-await page.locator('#openFlow').click();
-await page.waitForURL(/entry=member/,{timeout:15000});
-await page.waitForTimeout(2500);
-assert.ok(/entry=member/.test(page.url()),'TODAY FLOW did not open from QUEST');
+await app.locator('[data-check="horikawa"]').click();
+assert.match((await app.locator('#kitaProgress').innerText()).trim(),/北区 1\/11/,'Kita progress did not update');
+assert.equal((await app.locator('#wallet').innerText()).trim(),'100 pt','wallet did not update after check-in');
+assert.match(await app.locator('[data-check="horikawa"]').innerText(),/CHECKED/,'check-in state did not persist in UI');
 
-const now=new Date().toISOString();
-await page.evaluate(now=>{
-  const rec={at:now,flowClosedAt:now,completion:'complete',completedSets:2,totalSets:2,totalVolumeKg:120,next:'LOAD_UP',exercises:[{name:'QUEST TEST PRESS',sets:[{set:1,load:10,reps:5,rir:2},{set:2,load:10,reps:7,rir:1}]}]};
-  localStorage.setItem('sug_training_sessions_v1',JSON.stringify([rec]));
-},now);
+await app.locator('[data-page="network"]').click();
+await app.waitForSelector('#map .hub',{timeout:5000});
+assert.match(await app.locator('#routebox').innerText(),/北区11社/,'Kita network route missing');
 
-await page.goto(`${BASE}/quest.html?returntest=${Date.now()}`,{waitUntil:'domcontentloaded'});
-await page.waitForSelector('#flowStatus',{timeout:10000});
-await page.waitForFunction(()=>document.querySelector('#flowStatus')?.textContent?.includes('トレ完了'),null,{timeout:10000});
-const app2=await questFrame();
-assert.ok(app2,'QUEST iframe missing after return');
-await app2.waitForSelector('#training',{state:'attached',timeout:10000});
-await page.waitForTimeout(1200);
-const trainingText=await app2.locator('#training').textContent();
-assert.match(trainingText||'',/完了/,'QUEST did not reflect completed training');
-const pointsText=await app2.locator('#pointsTop').innerText();
-assert.notEqual(pointsText.trim(),'0pt','QUEST points did not update after training completion');
+await app.locator('[data-page="learn"]').click();
+assert.match(await app.locator('#learn').innerText(),/●公式確認/,'evidence legend missing');
+assert.match(await app.locator('#learn').innerText(),/○伝承・現地由緒/,'tradition evidence legend missing');
+assert.match(await app.locator('#learn').innerText(),/△仮説/,'hypothesis evidence legend missing');
+
 assert.equal(errors.length,0,`browser errors:\n${errors.join('\n')}`);
 await browser.close();
-console.log(`QUEST MEMBER FLOW PASS ${BASE}`);
+console.log(`QUEST V26.5.207 PASS ${BASE}`);
