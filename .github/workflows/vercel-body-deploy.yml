@@ -1,0 +1,43 @@
+name: Vercel BODY API deploy
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'api/**'
+      - 'vercel.json'
+      - '.github/workflows/vercel-body-deploy.yml'
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require Vercel token
+        shell: bash
+        run: |
+          test -n "$VERCEL_TOKEN" || { echo 'VERCEL_TOKEN_MISSING'; exit 2; }
+      - name: Link project when IDs are available
+        shell: bash
+        run: |
+          if [ -n "${VERCEL_ORG_ID:-}" ] && [ -n "${VERCEL_PROJECT_ID:-}" ]; then
+            mkdir -p .vercel
+            printf '{"orgId":"%s","projectId":"%s"}\n' "$VERCEL_ORG_ID" "$VERCEL_PROJECT_ID" > .vercel/project.json
+          fi
+      - name: Deploy production
+        shell: bash
+        run: |
+          npx --yes vercel@latest deploy --prod --yes --token "$VERCEL_TOKEN" | tee /tmp/vercel-url.txt
+          url=$(tail -n 1 /tmp/vercel-url.txt | tr -d '\r')
+          echo "DEPLOY_URL=$url"
+          curl -fsS --max-time 30 "$url/api/body-future-image" -o /tmp/probe || code=$?
+          if [ "${code:-0}" -ne 0 ]; then
+            http=$(curl -sS --max-time 30 -o /tmp/probe -w '%{http_code}' "$url/api/body-future-image" || true)
+            echo "PROBE_HTTP=$http"
+            cat /tmp/probe
+            test "$http" = "405"
+          fi
