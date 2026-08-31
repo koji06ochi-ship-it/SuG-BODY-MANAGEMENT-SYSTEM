@@ -1,9 +1,9 @@
 {
-  "version": "27.44",
+  "version": "27.45",
   "apps": [
     {"id":"body","name":"S.u.G BODY","entry":"./body/","scope":["daily","recovery","nutrition","training"]},
     {"id":"big3","name":"S.u.G BIG3 ANALYZER","entry":"./big3/","scope":["squat","bench","deadlift","video-analysis"]},
-    {"id":"performance","name":"S.u.G PERFORMANCE","entry":"./performance/","scope":["movement","mobility","control","output"]},
+    {"id":"performance","name":"S.u.G PERFORMANCE","entry":"./performance/","scope":["movement","mobility","control","output","structured-test-records"]},
     {"id":"posture","name":"S.u.G POSTURE & MUSCLE ASSESSMENT","entry":"./posture/","scope":["landmark","angle","palpation","semg","anatomy-lines","retest"]}
   ],
   "shared": ["member-id","handoff-summary"],
