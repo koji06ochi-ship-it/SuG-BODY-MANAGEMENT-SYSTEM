@@ -43,8 +43,14 @@ final class MemberWebViewStore: ObservableObject {
             const scripts = [['sugIdealV27Script','assets/member/v27/ideal-v27.js?v=27.43'],['sugHealthV2Script','assets/member/v2/health-v2.js?v=27.43']];
             for (const pair of scripts) { if (document.getElementById(pair[0])) continue; const s=document.createElement('script'); s.id=pair[0]; s.src=pair[1]; document.body.appendChild(s); }
           }
+          if (!document.getElementById('sugBeautyBodyV2774')) {
+            const s=document.createElement('script');
+            s.id='sugBeautyBodyV2774';
+            s.src=isStandalone?'./beauty-body-engine-v27.74.js?v=27.74':'apps/body/beauty-body-engine-v27.74.js?v=27.74';
+            document.body.appendChild(s);
+          }
           const p=window.__SUG_NATIVE_HEALTH__;
-          if(p){ if(window.SuGBody?.receiveNative)window.SuGBody.receiveNative(p); if(window.SuGHealthV2?.receiveNative)window.SuGHealthV2.receiveNative(p); if(window.SuGV27?.receiveNative)window.SuGV27.receiveNative(p); }
+          if(p){ if(window.SuGBody?.receiveNative)window.SuGBody.receiveNative(p); if(window.SuGHealthV2?.receiveNative)window.SuGHealthV2.receiveNative(p); if(window.SuGV27?.receiveNative)window.SuGV27.receiveNative(p); if(window.SuGBeautyBody?.receiveHealth)window.SuGBeautyBody.receiveHealth(p); }
         })();
         """
         webView.evaluateJavaScript(js)
@@ -184,6 +190,7 @@ final class MemberWebViewStore: ObservableObject {
           if(window.SuGBody?.receiveNative)window.SuGBody.receiveNative(payload);
           if(window.SuGHealthV2?.receiveNative)window.SuGHealthV2.receiveNative(payload);
           if(window.SuGV27?.receiveNative)window.SuGV27.receiveNative(payload);
+          if(window.SuGBeautyBody?.receiveHealth)window.SuGBeautyBody.receiveHealth(payload);
         })();
         """
         webView.evaluateJavaScript(js){[weak self] _,error in if error==nil{self?.pendingHealthJSON=nil}}
