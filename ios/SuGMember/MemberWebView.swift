@@ -66,6 +66,7 @@ final class MemberWebViewStore: ObservableObject {
               if(Number.isFinite(Number(p.distanceKm))) s.distanceKm=Math.max(0,Number(p.distanceKm));
               if(Number.isFinite(Number(p.heartRate))) s.heartRate=Number(p.heartRate);
               if(Number.isFinite(Number(p.restingHeartRate))) s.restingHeartRate=Number(p.restingHeartRate);
+              if(Number.isFinite(Number(p.hrv))) s.hrv=Number(p.hrv);
               s.healthSyncedAt=p.syncedAt||new Date().toISOString();
               localStorage.setItem('sug_walk_quest_v1',JSON.stringify(s));
             }catch(_){}
@@ -89,12 +90,13 @@ final class MemberWebViewStore: ObservableObject {
         webView.evaluateJavaScript(js)
     }
 
-    func pushNativeHealth(steps: Int, distanceKm: Double, sleepHours: Double?, heartRate: Double?, restingHeartRate: Double?, weightKg: Double?, syncedAt: Date?) {
+    func pushNativeHealth(steps: Int, distanceKm: Double, sleepHours: Double?, heartRate: Double?, restingHeartRate: Double?, hrvMs: Double?, weightKg: Double?, syncedAt: Date?) {
         let iso = ISO8601DateFormatter().string(from: syncedAt ?? Date())
         var payload: [String: Any] = ["source":"healthkit_native","steps":max(0,steps),"distanceKm":max(0,distanceKm),"syncedAt":iso]
-        if let sleepHours { payload["sleep"] = sleepHours }
+        if let sleepHours { payload["sleep"] = sleepHours; payload["sleepHours"] = sleepHours }
         if let heartRate { payload["heartRate"] = heartRate; payload["latestHeartRate"] = heartRate }
         if let restingHeartRate { payload["restingHeartRate"] = restingHeartRate }
+        if let hrvMs { payload["hrv"] = hrvMs; payload["hrvMs"] = hrvMs }
         if let weightKg { payload["weight"] = weightKg; payload["weightKg"] = weightKg }
         guard JSONSerialization.isValidJSONObject(payload), let data=try? JSONSerialization.data(withJSONObject:payload), let json=String(data:data,encoding:.utf8) else { return }
         pendingHealthJSON=json; deliverPendingHealth()
