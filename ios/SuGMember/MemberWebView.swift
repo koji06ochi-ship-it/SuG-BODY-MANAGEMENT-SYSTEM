@@ -46,19 +46,25 @@ final class MemberWebViewStore: ObservableObject {
           if (!document.getElementById('sugBeautyBodyV2774')) {
             const s=document.createElement('script');
             s.id='sugBeautyBodyV2774';
-            s.src=isStandalone?'./beauty-body-engine-v27.74.js?v=27.78':'apps/body/beauty-body-engine-v27.74.js?v=27.78';
+            s.src=isStandalone?'./beauty-body-engine-v27.74.js?v=27.79':'apps/body/beauty-body-engine-v27.74.js?v=27.79';
             document.body.appendChild(s);
           }
           if (!document.getElementById('sugRecoveryBodyContextV2777')) {
             const s=document.createElement('script');
             s.id='sugRecoveryBodyContextV2777';
-            s.src=isStandalone?'./recovery-body-context-v27.77.js?v=27.78':'apps/body/recovery-body-context-v27.77.js?v=27.78';
+            s.src=isStandalone?'./recovery-body-context-v27.77.js?v=27.79':'apps/body/recovery-body-context-v27.77.js?v=27.79';
             document.body.appendChild(s);
           }
           if (!document.getElementById('sugNutritionRecoveryV2778')) {
             const s=document.createElement('script');
             s.id='sugNutritionRecoveryV2778';
-            s.src=isStandalone?'./nutrition-recovery-engine-v27.78.js?v=27.78':'apps/body/nutrition-recovery-engine-v27.78.js?v=27.78';
+            s.src=isStandalone?'./nutrition-recovery-engine-v27.78.js?v=27.79':'apps/body/nutrition-recovery-engine-v27.78.js?v=27.79';
+            document.body.appendChild(s);
+          }
+          if (!document.getElementById('sugFoodPhotoV2779')) {
+            const s=document.createElement('script');
+            s.id='sugFoodPhotoV2779';
+            s.src=isStandalone?'./food-photo-intake-v27.79.js?v=27.79':'apps/body/food-photo-intake-v27.79.js?v=27.79';
             document.body.appendChild(s);
           }
           const p=window.__SUG_NATIVE_HEALTH__;
