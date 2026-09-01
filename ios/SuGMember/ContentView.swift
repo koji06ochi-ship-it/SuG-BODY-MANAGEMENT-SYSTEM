@@ -5,11 +5,10 @@ struct ContentView: View {
     @Environment(\.scenePhase) private var scenePhase
     @State private var selectedTab = 0
     @StateObject private var health = HealthKitManager.shared
-    // 2026-09-03 Best of Miss demo: BODY opens the dedicated uninterrupted demo flow.
-    @StateObject private var bodyStore = MemberWebViewStore(url: URL(string: base + "apps/body/best-of-miss-demo-v27.71.html?native=ios&v=27.72")!)
-    @StateObject private var questStore = MemberWebViewStore(url: URL(string: base + "shrine-quest-v26.5.206.html?embedded=1&native=ios&v=27.72")!)
-    @StateObject private var walkStore = MemberWebViewStore(url: URL(string: base + "walk-quest.html?embedded=1&native=ios&v=27.72")!)
-    @StateObject private var cardStore = MemberWebViewStore(url: URL(string: base + "?entry=member&hub=1&membercard=1&native=ios&v=27.72")!)
+    @StateObject private var bodyStore = MemberWebViewStore(url: URL(string: base + "apps/body/best-of-miss-demo-v27.71.html?native=ios&v=27.73")!)
+    @StateObject private var questStore = MemberWebViewStore(url: URL(string: base + "shrine-quest-v26.5.206.html?embedded=1&native=ios&v=27.73")!)
+    @StateObject private var walkStore = MemberWebViewStore(url: URL(string: base + "walk-quest.html?embedded=1&native=ios&v=27.73")!)
+    @StateObject private var cardStore = MemberWebViewStore(url: URL(string: base + "?entry=member&hub=1&membercard=1&native=ios&v=27.73")!)
 
     private func pushHealth(to store: MemberWebViewStore) {
         store.pushNativeHealth(
@@ -27,7 +26,13 @@ struct ContentView: View {
             vo2Max: health.vo2Max,
             respiratoryRate: health.respiratoryRate,
             oxygenSaturationPercent: health.oxygenSaturationPercent,
+            recoveryScore: health.recoveryScore,
+            stressScore: health.stressScore,
+            recoveryStatus: health.recoveryStatus,
+            stressStatus: health.stressStatus,
+            recoveryConfidence: health.recoveryConfidence,
             workouts: health.recentWorkouts,
+            labResults: health.recentLabResults,
             syncedAt: health.lastSync
         )
     }
