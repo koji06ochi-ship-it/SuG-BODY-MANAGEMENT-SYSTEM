@@ -14,7 +14,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: jp.sugosaka.member
         CODE_SIGN_ENTITLEMENTS: SuGMember/SuGMember.entitlements
-        INFOPLIST_KEY_NSHealthShareUsageDescription: S.u.Gで歩数・睡眠・心拍・HRV・体重を取得し、コンディション管理と当日の運動判定に使用します。
+        INFOPLIST_KEY_NSHealthShareUsageDescription: S.u.Gで歩数・距離・活動エネルギー・運動時間・ワークアウト・睡眠・心拍・安静時心拍・HRV・体重・体脂肪率・除脂肪体重・VO2max・呼吸数・血中酸素を取得し、コンディション管理と当日の運動判定に使用します。
         INFOPLIST_KEY_NSHealthUpdateUsageDescription: S.u.Gはヘルスケアへデータを書き込みません。
         INFOPLIST_KEY_NSCameraUsageDescription: S.u.Gで身体評価・食事記録・トレーニング解析の撮影に使用します。
         INFOPLIST_KEY_NSPhotoLibraryUsageDescription: S.u.Gで身体写真・食事写真・トレーニング動画を選択するために使用します。
