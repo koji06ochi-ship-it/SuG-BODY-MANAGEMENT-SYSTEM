@@ -5,10 +5,10 @@ struct ContentView: View {
     @Environment(\.scenePhase) private var scenePhase
     @State private var selectedTab = 0
     @StateObject private var health = HealthKitManager.shared
-    @StateObject private var bodyStore = MemberWebViewStore(url: URL(string: base + "apps/body/best-of-miss-demo-v27.75.html?native=ios&v=27.75")!)
-    @StateObject private var questStore = MemberWebViewStore(url: URL(string: base + "shrine-quest-v26.5.206.html?embedded=1&native=ios&v=27.75")!)
-    @StateObject private var walkStore = MemberWebViewStore(url: URL(string: base + "walk-quest.html?embedded=1&native=ios&v=27.75")!)
-    @StateObject private var cardStore = MemberWebViewStore(url: URL(string: base + "?entry=member&hub=1&membercard=1&native=ios&v=27.75")!)
+    @StateObject private var bodyStore = MemberWebViewStore(url: URL(string: base + "apps/body/best-of-miss-demo-v27.76.html?native=ios&v=27.76")!)
+    @StateObject private var questStore = MemberWebViewStore(url: URL(string: base + "shrine-quest-v26.5.206.html?embedded=1&native=ios&v=27.76")!)
+    @StateObject private var walkStore = MemberWebViewStore(url: URL(string: base + "walk-quest.html?embedded=1&native=ios&v=27.76")!)
+    @StateObject private var cardStore = MemberWebViewStore(url: URL(string: base + "?entry=member&hub=1&membercard=1&native=ios&v=27.76")!)
 
     private func pushHealth(to store: MemberWebViewStore) {
         store.pushNativeHealth(
