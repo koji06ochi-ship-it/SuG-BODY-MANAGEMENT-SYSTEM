@@ -64,6 +64,8 @@ final class MemberWebViewStore: ObservableObject {
               if(s.date!==day()) s={date:day(),steps:0,points:0,checkins:[],route:[],event:false,supporters:0};
               if(Number.isFinite(Number(p.steps))) s.steps=Math.max(Number(s.steps||0),Number(p.steps));
               if(Number.isFinite(Number(p.distanceKm))) s.distanceKm=Math.max(0,Number(p.distanceKm));
+              if(Number.isFinite(Number(p.activeEnergyKcal))) s.activeEnergyKcal=Math.max(0,Number(p.activeEnergyKcal));
+              if(Number.isFinite(Number(p.exerciseMinutes))) s.exerciseMinutes=Math.max(0,Number(p.exerciseMinutes));
               if(Number.isFinite(Number(p.heartRate))) s.heartRate=Number(p.heartRate);
               if(Number.isFinite(Number(p.restingHeartRate))) s.restingHeartRate=Number(p.restingHeartRate);
               if(Number.isFinite(Number(p.hrv))) s.hrv=Number(p.hrv);
@@ -78,9 +80,9 @@ final class MemberWebViewStore: ObservableObject {
             }
             if(box){
               const dist=Number.isFinite(Number(p.distanceKm))?Number(p.distanceKm).toFixed(2)+' km':'--';
-              const hr=Number.isFinite(Number(p.heartRate))?Math.round(Number(p.heartRate))+' bpm':'--';
-              const rhr=Number.isFinite(Number(p.restingHeartRate))?Math.round(Number(p.restingHeartRate))+' bpm':'--';
-              box.innerHTML=`<div class="stat"><span>DISTANCE</span><b>${dist}</b></div><div class="stat"><span>HEART</span><b>${hr}</b></div><div class="stat"><span>RESTING HR</span><b>${rhr}</b></div>`;
+              const kcal=Number.isFinite(Number(p.activeEnergyKcal))?Math.round(Number(p.activeEnergyKcal))+' kcal':'--';
+              const ex=Number.isFinite(Number(p.exerciseMinutes))?Math.round(Number(p.exerciseMinutes))+' min':'--';
+              box.innerHTML=`<div class="stat"><span>DISTANCE</span><b>${dist}</b></div><div class="stat"><span>ACTIVE</span><b>${kcal}</b></div><div class="stat"><span>EXERCISE</span><b>${ex}</b></div>`;
             }
           }
           window.addEventListener('sug:native-health',e=>apply(e.detail));
@@ -90,14 +92,59 @@ final class MemberWebViewStore: ObservableObject {
         webView.evaluateJavaScript(js)
     }
 
-    func pushNativeHealth(steps: Int, distanceKm: Double, sleepHours: Double?, heartRate: Double?, restingHeartRate: Double?, hrvMs: Double?, weightKg: Double?, syncedAt: Date?) {
+    func pushNativeHealth(
+        steps: Int,
+        distanceKm: Double,
+        activeEnergyKcal: Double,
+        exerciseMinutes: Double,
+        sleepHours: Double?,
+        heartRate: Double?,
+        restingHeartRate: Double?,
+        hrvMs: Double?,
+        weightKg: Double?,
+        bodyFatPercentage: Double?,
+        leanBodyMassKg: Double?,
+        vo2Max: Double?,
+        respiratoryRate: Double?,
+        oxygenSaturationPercent: Double?,
+        workouts: [HealthWorkoutSummary],
+        syncedAt: Date?
+    ) {
         let iso = ISO8601DateFormatter().string(from: syncedAt ?? Date())
-        var payload: [String: Any] = ["source":"healthkit_native","steps":max(0,steps),"distanceKm":max(0,distanceKm),"syncedAt":iso]
+        var payload: [String: Any] = [
+            "source":"healthkit_native",
+            "steps":max(0,steps),
+            "distanceKm":max(0,distanceKm),
+            "activeEnergyKcal":max(0,activeEnergyKcal),
+            "exerciseMinutes":max(0,exerciseMinutes),
+            "syncedAt":iso
+        ]
         if let sleepHours { payload["sleep"] = sleepHours; payload["sleepHours"] = sleepHours }
         if let heartRate { payload["heartRate"] = heartRate; payload["latestHeartRate"] = heartRate }
         if let restingHeartRate { payload["restingHeartRate"] = restingHeartRate }
         if let hrvMs { payload["hrv"] = hrvMs; payload["hrvMs"] = hrvMs }
         if let weightKg { payload["weight"] = weightKg; payload["weightKg"] = weightKg }
+        if let bodyFatPercentage { payload["bodyFatPercentage"] = bodyFatPercentage; payload["bodyFat"] = bodyFatPercentage }
+        if let leanBodyMassKg { payload["leanBodyMassKg"] = leanBodyMassKg }
+        if let vo2Max { payload["vo2Max"] = vo2Max }
+        if let respiratoryRate { payload["respiratoryRate"] = respiratoryRate }
+        if let oxygenSaturationPercent { payload["oxygenSaturationPercent"] = oxygenSaturationPercent; payload["spo2"] = oxygenSaturationPercent }
+
+        let workoutPayload: [[String: Any]] = workouts.map { workout in
+            var item: [String: Any] = [
+                "activityType": Int(workout.activityTypeRaw),
+                "activityName": workout.activityName,
+                "startDate": workout.startDateISO,
+                "endDate": workout.endDateISO,
+                "durationMinutes": workout.durationMinutes
+            ]
+            if let activeEnergyKcal = workout.activeEnergyKcal { item["activeEnergyKcal"] = activeEnergyKcal }
+            if let distanceKm = workout.distanceKm { item["distanceKm"] = distanceKm }
+            return item
+        }
+        payload["workouts"] = workoutPayload
+        payload["recentWorkouts"] = workoutPayload
+
         guard JSONSerialization.isValidJSONObject(payload), let data=try? JSONSerialization.data(withJSONObject:payload), let json=String(data:data,encoding:.utf8) else { return }
         pendingHealthJSON=json; deliverPendingHealth()
     }
