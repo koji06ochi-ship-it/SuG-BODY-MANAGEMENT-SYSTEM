@@ -46,17 +46,30 @@ final class MemberWebViewStore: ObservableObject {
           if (!document.getElementById('sugBeautyBodyV2774')) {
             const s=document.createElement('script');
             s.id='sugBeautyBodyV2774';
-            s.src=isStandalone?'./beauty-body-engine-v27.74.js?v=27.77':'apps/body/beauty-body-engine-v27.74.js?v=27.77';
+            s.src=isStandalone?'./beauty-body-engine-v27.74.js?v=27.78':'apps/body/beauty-body-engine-v27.74.js?v=27.78';
             document.body.appendChild(s);
           }
           if (!document.getElementById('sugRecoveryBodyContextV2777')) {
             const s=document.createElement('script');
             s.id='sugRecoveryBodyContextV2777';
-            s.src=isStandalone?'./recovery-body-context-v27.77.js?v=27.77':'apps/body/recovery-body-context-v27.77.js?v=27.77';
+            s.src=isStandalone?'./recovery-body-context-v27.77.js?v=27.78':'apps/body/recovery-body-context-v27.77.js?v=27.78';
+            document.body.appendChild(s);
+          }
+          if (!document.getElementById('sugNutritionRecoveryV2778')) {
+            const s=document.createElement('script');
+            s.id='sugNutritionRecoveryV2778';
+            s.src=isStandalone?'./nutrition-recovery-engine-v27.78.js?v=27.78':'apps/body/nutrition-recovery-engine-v27.78.js?v=27.78';
             document.body.appendChild(s);
           }
           const p=window.__SUG_NATIVE_HEALTH__;
-          if(p){ if(window.SuGBody?.receiveNative)window.SuGBody.receiveNative(p); if(window.SuGHealthV2?.receiveNative)window.SuGHealthV2.receiveNative(p); if(window.SuGV27?.receiveNative)window.SuGV27.receiveNative(p); if(window.SuGBeautyBody?.receiveHealth)window.SuGBeautyBody.receiveHealth(p); if(window.SuGBodyContext?.receiveHealth)window.SuGBodyContext.receiveHealth(p); }
+          if(p){
+            if(window.SuGBody?.receiveNative)window.SuGBody.receiveNative(p);
+            if(window.SuGHealthV2?.receiveNative)window.SuGHealthV2.receiveNative(p);
+            if(window.SuGV27?.receiveNative)window.SuGV27.receiveNative(p);
+            if(window.SuGBeautyBody?.receiveHealth)window.SuGBeautyBody.receiveHealth(p);
+            if(window.SuGBodyContext?.receiveHealth)window.SuGBodyContext.receiveHealth(p);
+            if(window.SuGNutrition?.receiveHealth)window.SuGNutrition.receiveHealth(p);
+          }
         })();
         """
         webView.evaluateJavaScript(js)
@@ -198,6 +211,7 @@ final class MemberWebViewStore: ObservableObject {
           if(window.SuGV27?.receiveNative)window.SuGV27.receiveNative(payload);
           if(window.SuGBeautyBody?.receiveHealth)window.SuGBeautyBody.receiveHealth(payload);
           if(window.SuGBodyContext?.receiveHealth)window.SuGBodyContext.receiveHealth(payload);
+          if(window.SuGNutrition?.receiveHealth)window.SuGNutrition.receiveHealth(payload);
         })();
         """
         webView.evaluateJavaScript(js){[weak self] _,error in if error==nil{self?.pendingHealthJSON=nil}}
