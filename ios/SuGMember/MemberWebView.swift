@@ -107,7 +107,13 @@ final class MemberWebViewStore: ObservableObject {
         vo2Max: Double?,
         respiratoryRate: Double?,
         oxygenSaturationPercent: Double?,
+        recoveryScore: Int?,
+        stressScore: Int?,
+        recoveryStatus: String?,
+        stressStatus: String?,
+        recoveryConfidence: Double,
         workouts: [HealthWorkoutSummary],
+        labResults: [HealthLabResultSummary],
         syncedAt: Date?
     ) {
         let iso = ISO8601DateFormatter().string(from: syncedAt ?? Date())
@@ -117,6 +123,9 @@ final class MemberWebViewStore: ObservableObject {
             "distanceKm":max(0,distanceKm),
             "activeEnergyKcal":max(0,activeEnergyKcal),
             "exerciseMinutes":max(0,exerciseMinutes),
+            "recoveryModel":"sug_recovery_v1",
+            "stressMetricType":"physiological_load_estimate",
+            "recoveryConfidence":min(1,max(0,recoveryConfidence)),
             "syncedAt":iso
         ]
         if let sleepHours { payload["sleep"] = sleepHours; payload["sleepHours"] = sleepHours }
@@ -129,6 +138,10 @@ final class MemberWebViewStore: ObservableObject {
         if let vo2Max { payload["vo2Max"] = vo2Max }
         if let respiratoryRate { payload["respiratoryRate"] = respiratoryRate }
         if let oxygenSaturationPercent { payload["oxygenSaturationPercent"] = oxygenSaturationPercent; payload["spo2"] = oxygenSaturationPercent }
+        if let recoveryScore { payload["recoveryScore"] = recoveryScore }
+        if let stressScore { payload["stressScore"] = stressScore }
+        if let recoveryStatus { payload["recoveryStatus"] = recoveryStatus }
+        if let stressStatus { payload["stressStatus"] = stressStatus }
 
         let workoutPayload: [[String: Any]] = workouts.map { workout in
             var item: [String: Any] = [
@@ -144,6 +157,18 @@ final class MemberWebViewStore: ObservableObject {
         }
         payload["workouts"] = workoutPayload
         payload["recentWorkouts"] = workoutPayload
+
+        let labPayload: [[String: Any]] = labResults.map { lab in
+            var item: [String: Any] = ["name":lab.name,"sourceName":lab.sourceName]
+            if let value = lab.value { item["value"] = value }
+            if let unit = lab.unit { item["unit"] = unit }
+            if let referenceRange = lab.referenceRange { item["referenceRange"] = referenceRange }
+            if let interpretation = lab.interpretation { item["interpretation"] = interpretation }
+            if let effectiveDateISO = lab.effectiveDateISO { item["effectiveDate"] = effectiveDateISO }
+            return item
+        }
+        payload["labResults"] = labPayload
+        payload["recentLabResults"] = labPayload
 
         guard JSONSerialization.isValidJSONObject(payload), let data=try? JSONSerialization.data(withJSONObject:payload), let json=String(data:data,encoding:.utf8) else { return }
         pendingHealthJSON=json; deliverPendingHealth()
