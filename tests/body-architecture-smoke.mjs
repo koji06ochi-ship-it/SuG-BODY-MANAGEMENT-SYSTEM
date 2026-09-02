@@ -42,6 +42,21 @@ assert.match(rom, /rom-care-engine-v27\.82\.js/);
 assert.match(rom, /rom-care-analysis-v27\.82\.js/);
 assert.match(rom, /SuGRomCareData\.boot/);
 assert.match(rom, /SuGRomCareEngine\.boot/);
+assert.match(rom, /data-rom-care-compact="v27\.82"/);
+assert.match(rom, /今日のROM評価サマリー/);
+assert.match(rom, /優先CARE TOP3/);
+assert.match(rom, /detailGroup\('AROM \/ PROM詳細・胸椎ROM'/);
+assert.match(rom, /detailGroup\('SHR'/);
+assert.match(rom, /detailGroup\('Joint by Joint'/);
+assert.match(rom, /detailGroup\('Movement Screen'/);
+assert.match(rom, /detailGroup\('CARE RESPONSE'/);
+assert.match(rom, /detailGroup\('24H FOLLOW UP'/);
+assert.match(rom, /detailGroup\('Integrated CARE Decision'/);
+assert.match(rom, /detailGroup\('Medical Referral詳細'/);
+assert.match(css, /\.compactDetails/);
+for (const id of ['romResult', 'aromAsymmetry', 'jbjPriority', 'careResult', 'careReferralGate', 'integratedResult']) {
+  assert.equal((rom.match(new RegExp(`id="${id}"`, 'g')) || []).length, 1, `${id} must remain unique`);
+}
 assert.doesNotMatch(rom, /<iframe/i);
 assert.doesNotMatch(rom, /legacyPageUrl\(context\)/);
 assert.doesNotMatch(rom, /contentDocument/);
@@ -103,9 +118,12 @@ assert.match(normal, /S\.u\.G BODY/);
 assert.match(normal, /TODAY FLOW/);
 assert.match(normal, /data-rom-care-source="normal"/);
 assert.match(normal, /rom-care-v27\.82\.js/);
+assert.match(normal, /normalizeVisibleBodyVersions/);
 assert.match(miss, /BEST OF MISS|BEAUTY|MISS/i);
 assert.match(miss, /data-rom-care-source="miss"/);
 assert.match(miss, /rom-care-v27\.82\.js/);
+assert.match(miss, /BEST OF MISS BEAUTY BODY · V27\.82/);
+assert.doesNotMatch(miss, /BEST OF MISS BEAUTY BODY · V27\.76/);
 assert.match(miss, /大会BODY｜初回身体評価を始める/);
 assert.match(miss, /beauty-initial-assessment-v27\.82\.html/);
 

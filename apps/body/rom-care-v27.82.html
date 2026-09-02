@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#09090a">
 <link rel="stylesheet" href="../shared/rom-care-v27.82.css?v=27.82">
 </head>
-<body data-rom-care-runtime>
+<body data-rom-care-runtime data-rom-care-compact="v27.82">
 <header class="runtimeHeader">
   <div class="runtimeHead">
     <button id="romCareBack" class="runtimeBack" type="button">‹ BODY</button>
@@ -273,6 +273,126 @@
 
 
 </main>
+<script>
+(() => {
+  const byId = id => document.getElementById(id);
+  const cardOf = id => byId(id)?.closest('.card') || null;
+  const uniqueCards = cards => [...new Set(cards.filter(Boolean))];
+
+  const overviewCard = (eyebrow, title, copy = '') => {
+    const card = document.createElement('div');
+    card.className = 'card compactOverview';
+    card.innerHTML = `<div class="compactEyebrow">${eyebrow}</div><h2>${title}</h2>${copy ? `<div class="compactCopy">${copy}</div>` : ''}`;
+    return card;
+  };
+
+  const detailGroup = (title, copy, cards) => {
+    const list = uniqueCards(cards);
+    if (!list.length) return null;
+    const details = document.createElement('details');
+    details.className = 'compactDetails';
+    details.dataset.compactGroup = title;
+    details.innerHTML = `<summary><span><b>${title}</b><small>${copy}</small></span><span class="compactChevron" aria-hidden="true"></span></summary><div class="compactDetailsBody"></div>`;
+    list[0].before(details);
+    const body = details.querySelector('.compactDetailsBody');
+    list.forEach(card => body.append(card));
+    return details;
+  };
+
+  const inlineDetails = (host, title, copy, nodes) => {
+    const list = [...nodes].filter(Boolean);
+    if (!host || !list.length) return null;
+    const details = document.createElement('details');
+    details.className = 'compactDetails compactInlineDetails';
+    details.dataset.compactGroup = title;
+    details.innerHTML = `<summary><span><b>${title}</b><small>${copy}</small></span><span class="compactChevron" aria-hidden="true"></span></summary><div class="compactDetailsBody"></div>`;
+    list[0].before(details);
+    const body = details.querySelector('.compactDetailsBody');
+    list.forEach(node => body.append(node));
+    return details;
+  };
+
+  const carePanel = document.querySelector('[data-rom-care-panel="care"]');
+  const romPanel = document.querySelector('[data-rom-care-panel="rom"]');
+  if (!carePanel || !romPanel) return;
+
+  const carePrimary = cardOf('careArea');
+  const careResultCard = cardOf('careResult');
+  const referralCard = cardOf('careReferralGate');
+  const medicalFeedbackCard = cardOf('medicalVisitDate');
+  const integratedCard = cardOf('integratedResult');
+  const integratedHistoryCard = cardOf('integratedHistory');
+
+  const careAlert = overviewCard('MEDICAL GATE', '医療評価を優先すべき警告', '警告サインがある場合はセルフケアより先に確認してください。');
+  careAlert.classList.add('compactAlertSummary');
+  careAlert.append(byId('careReferralGate'));
+  carePanel.prepend(careAlert);
+
+  if (carePrimary) {
+    carePrimary.classList.add('compactPrimaryCard');
+    const title = carePrimary.querySelector('h2');
+    if (title) title.textContent = '痛み / 症状';
+    careAlert.after(carePrimary);
+    inlineDetails(
+      carePrimary,
+      '症状・CARE詳細入力',
+      'ROM BEFORE、発症状況、温冷、急性CARE、AROM / PROM連携',
+      carePrimary.querySelectorAll('.careResponseMeasure, .careToolGroup')
+    );
+  }
+
+  if (careResultCard) {
+    careResultCard.classList.add('compactOverview');
+    const title = careResultCard.querySelector('h2');
+    if (title) title.textContent = '今日のCARE判定 / 今日やること';
+    carePrimary?.after(careResultCard);
+  }
+
+  const carePriority = overviewCard('INTEGRATED CARE', '優先CARE TOP3', '全身回復と局所制約を分け、次に行うCAREを整理します。');
+  carePriority.append(byId('integratedResult'));
+  careResultCard?.after(carePriority);
+
+  if (integratedCard) carePanel.append(integratedCard);
+  if (integratedHistoryCard) carePanel.append(integratedHistoryCard);
+
+  detailGroup('CARE RESPONSE', '実施直後の痛み・ROM・動作反応を同条件で再評価', [cardOf('careAfterJudge'), cardOf('careResponseProfile')]);
+  detailGroup('24H FOLLOW UP', '翌日まで改善が維持されたかを記録', [cardOf('careFollowupJudge')]);
+  detailGroup('Integrated CARE Decision', 'CARE PRIORITYの更新・保存と根拠データ', [integratedCard]);
+  detailGroup('Medical Referral詳細', '医療機関検索、紹介サマリー、受診後フィードバック', [referralCard, medicalFeedbackCard]);
+  detailGroup('履歴・詳細データ', 'CARE、統合判定の保存履歴', [cardOf('careHistory'), integratedHistoryCard]);
+
+  const romResultCard = cardOf('romResult');
+  const asymmetryCard = cardOf('aromAsymmetry');
+  const jbjCard = cardOf('jbjPriority');
+  if (romResultCard) {
+    romResultCard.classList.add('compactOverview');
+    const title = romResultCard.querySelector('h2');
+    if (title) title.textContent = '今日のROM評価サマリー';
+    romPanel.prepend(romResultCard);
+  }
+  if (asymmetryCard) {
+    asymmetryCard.classList.add('compactOverview');
+    const title = asymmetryCard.querySelector('h2');
+    if (title) title.textContent = '左右差';
+    romResultCard?.after(asymmetryCard);
+  }
+
+  const romPriority = overviewCard('PRIORITY', '優先課題', '左右差とJoint by Jointから、次に確認する候補を表示します。');
+  romPriority.append(byId('jbjPriority'));
+  asymmetryCard?.after(romPriority);
+
+  const romNext = overviewCard('NEXT ASSESSMENT', '次にやる評価');
+  romNext.innerHTML += '<div class="compactNextAction"><b>AROM / PROM → 左右差</b><span>必要時だけSHR・胸椎ROM・Movement Screenへ進みます。</span></div>';
+  romPriority.after(romNext);
+
+  detailGroup('ROM画像解析', 'スクワット側面画像からボトムROMを確認', [cardOf('romFile')]);
+  detailGroup('AROM / PROM詳細・胸椎ROM', '関節ごとの自動可動域、他動可動域、痛み、判定', [cardOf('aromMovement'), cardOf('aromResult')]);
+  detailGroup('SHR', '肩甲上腕リズムの写真解析・判定', [cardOf('shrModelStatus'), cardOf('shrResult')]);
+  detailGroup('Joint by Joint', '優先課題の根拠MAPを確認', [jbjCard]);
+  detailGroup('Movement Screen', '片脚スクワット、ランジ、ヒンジ、両腕挙上', [cardOf('moveFile'), cardOf('moveResult')]);
+  detailGroup('履歴・詳細データ', 'AROM / PROM、SHR、Movement、ROMの保存履歴', [cardOf('shrHistory'), cardOf('aromHistory'), cardOf('moveHistory'), cardOf('romHistory')]);
+})();
+</script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="../shared/contracts.js?v=27.82"></script>
 <script src="../shared/rom-care-v27.82.js?v=27.82"></script>
@@ -289,4 +409,3 @@ window.SuGRomCareData.boot().then(result => {
 </script>
 </body>
 </html>
-
