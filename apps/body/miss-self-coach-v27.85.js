@@ -1,0 +1,73 @@
+const A='./assets/miss/';
+const S={img:{},metrics:{},issues:[],pri:[],done:new Set(),cur:null,demo:false};
+const E={
+  breathing:{t:'90/90 Breathing',i:A+'90-90-breathing.svg',w:'完全呼気で前側の肋骨を下げ、胸郭と骨盤を重ねる位置づくり。',d:'4〜5呼吸 × 2〜3set',f:'ハム・お腹・脇腹',c:'吐く時にみぞおちが少しへこみ、腰が反らない',n:'腰を反る／首に力が入る'},
+  wall:{t:'Wall Press Breathing',i:A+'wall-press-breathing.svg',w:'壁を押して前鋸筋・腹斜筋を使い、rib flareを出さずに呼吸する。',d:'4〜5呼吸 × 2set',f:'腹斜筋・前鋸筋・脇腹',c:'吸う時も前の肋骨がパカッと開かない',n:'胸を張りすぎる／腰を反る／肩をすくめる'},
+  thoracic:{t:'胸椎伸展',i:A+'thoracic-extension.svg',w:'腰を反る代償ではなく、胸椎そのものの伸展を出してデコルテ・肩ラインの土台を作る。',d:'6〜8回 × 2set',f:'背中上部・胸まわり',c:'腰ではなく胸の後ろが動く',n:'腰だけ反る／首をつめる'},
+  serratus:{t:'Serratus Reach',i:A+'serratus-reach.svg',w:'前鋸筋を使って肩甲骨を胸郭上で前へ滑らせ、肩・デコルテラインを整える。',d:'8〜12回 × 2set',f:'脇の下・前鋸筋・上背部',c:'肩をすくめず、肋骨が前に開かない',n:'肩をすくめる／rib flare'},
+  hipExt:{t:'Half-Kneeling Hip Flexor',i:A+'hip-extension.svg',w:'骨盤と肋骨を保ったまま股関節前面を伸ばし、脚を後ろへ出せる余裕を作る。',d:'30秒 × 2set / 左右',f:'股関節前面・臀部',c:'お尻を軽く締めても腰が反らない',n:'腰を反る／骨盤が横を向く'},
+  hip90:{t:'90/90 Hip Switch',i:A+'hip-90-90.svg',w:'股関節の内旋・外旋を左右で動かし、脚ラインを作る土台の左右差を減らす。',d:'8〜10回 × 2set',f:'臀部・股関節まわり',c:'左右で極端な詰まりや倒れ込みがない',n:'反動で倒す／痛みを我慢する'},
+  adductor:{t:'Adductor Rockback',i:A+'adductor-rockback.svg',w:'開脚に必要な内転筋と股関節の可動性を、腰の代償を減らして出す。',d:'8〜10回 × 2set / 左右',f:'内もも・股関節内側',c:'お尻を引いても背中が大きく丸まらない',n:'腰を丸めすぎる／膝に痛み'},
+  shoulderFlex:{t:'Wall Shoulder Flexion',i:A+'wall-shoulder-flexion.svg',w:'肋骨と腰を安定させたまま肩屈曲ROMを出し、デコルテ・肩ラインを整える。',d:'8〜10回 × 2set',f:'脇・肩・上背部',c:'腕を上げても腰が反らず肩がすくまない',n:'腰を反る／肩をすくめる'},
+  hamstring:{t:'Hamstring Hinge',i:A+'hamstring-hinge.svg',w:'前屈を腰だけで作らず、股関節からたたむ動きを覚える。',d:'8〜10回 × 2set',f:'ハムストリング・臀部',c:'背中を長く保ったまま股関節から倒れる',n:'腰だけ丸める／反動を使う'}
+};
+const IMP={
+  rib:'ウエスト・デコルテ：胸郭と骨盤が重なりにくく、正面のラインが崩れやすい',
+  thoracic:'デコルテ・肩：腕挙上で腰の代償が出やすく、上半身ラインに影響',
+  scap:'肩・背中：肩甲骨コントロール差が肩ラインに影響',
+  shoulder:'肩・デコルテ：肩高差が正面シルエットに出やすい',
+  shoulderRom:'デコルテ・肩：肩屈曲差が腕・肩・背中ラインに影響',
+  pelvis:'ウエスト・脚：骨盤差がウエスト〜脚ラインに影響',
+  hipExt:'ヒップ・脚：股関節伸展不足で腰反り代償や脚後面ラインに影響',
+  hipRot:'脚ライン：股関節回旋差が膝・つま先・片脚支持の左右差に影響',
+  hamstring:'前屈・脚後面：股関節ヒンジ不足で腰代償が出やすい',
+  adductor:'開脚・脚ライン：内ももと股関節可動性の左右差に影響',
+  head:'首・デコルテ：頭部位置が首〜上半身の見え方に影響',
+  trunk:'全身：体幹位置が立ち姿の安定感に影響'
+};
+const $=id=>document.getElementById(id),mid=(a,b)=>({x:(a.x+b.x)/2,y:(a.y+b.y)/2}),dist=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y),deg=(a,b)=>Math.atan2(b.y-a.y,b.x-a.x)*180/Math.PI;
+function bind(fid,iid,cid,k){$(fid).addEventListener('change',()=>{const f=$(fid).files?.[0];if(!f)return;const u=URL.createObjectURL(f),im=$(iid);im.onload=()=>{$(cid).classList.add('has');S.img[k]=im};im.src=u})}
+bind('frontFile','frontImg','capFront','front');bind('sideFile','sideImg','capSide','side');bind('backFile','backImg','capBack','back');
+function add(k,l,sc,src,m=''){S.issues.push({k,l,sc,src,m,impact:IMP[k]||''})}
+function photo(view,lm){const L=i=>lm[i];if(view!=='side'){const a=L(11),b=L(12),c=L(23),d=L(24);if(a&&b){let x=Math.abs(deg(a,b));x=Math.min(x,Math.abs(180-x));S.metrics[view+'ShoulderTilt']=x;if(x>2.2)add('shoulder','肩ラインの左右差',Math.min(5,2+x/2),'photo',x.toFixed(1)+'°')}if(c&&d){let x=Math.abs(deg(c,d));x=Math.min(x,Math.abs(180-x));S.metrics[view+'PelvisTilt']=x;if(x>2.2)add('pelvis','骨盤ラインの左右差',Math.min(5,2+x/2),'photo',x.toFixed(1)+'°')}const e=L(7),f=L(8);if(e&&f&&a&&b){const o=Math.abs(mid(e,f).x-mid(a,b).x)/(dist(a,b)||.1);S.metrics[view+'HeadOffset']=o;if(o>.10)add('head','頭部の左右偏位',Math.min(4.5,2+o*8),'photo',Math.round(o*100)+'% shoulder幅')}}else{const e=L(7)||L(8),a=L(11)||L(12),h=L(23)||L(24);if(e&&a&&h){const t=dist(a,h)||.1,f=Math.abs(e.x-a.x)/t,lean=Math.abs(a.x-h.x)/t;S.metrics.forwardHead=f;S.metrics.trunkLean=lean;if(f>.13)add('head','頭部前方位の傾向',Math.min(5,2+f*7),'photo',Math.round(f*100)+'% torso');if(lean>.10)add('trunk','体幹前後位置の偏り',Math.min(4.5,2+lean*7),'photo',Math.round(lean*100)+'% torso')}}}
+function checks(){
+  if($('ribCheck').checked)add('rib','rib flare 傾向',5,'check','呼気でも前側肋骨が浮きやすい');
+  if($('thoracicCheck').checked)add('thoracic','胸椎伸展の追加評価候補',4.5,'check','腕挙上で腰椎伸展代償');
+  if($('scapCheck').checked)add('scap','肩甲骨コントロール左右差',4,'check','腕挙上時に左右差');
+  if($('shoulderRomCheck').checked)add('shoulderRom','肩屈曲ROMの左右差候補',4.7,'check','腕を真上まで上げにくい');
+  if($('hipExtCheck').checked)add('hipExt','股関節伸展不足の候補',4.8,'check','脚を後ろへ引くと腰反り代償');
+  if($('hipRotCheck').checked)add('hipRot','股関節回旋の左右差候補',4.6,'check','90/90座位で左右差');
+  if($('forwardFoldCheck').checked)add('hamstring','前屈・ヒンジ制限の候補',4.2,'check','股関節から倒れにくい');
+  if($('straddleCheck').checked)add('adductor','開脚・内転筋可動性の候補',4.2,'check','内ももの詰まり／左右差');
+  if(!S.issues.length)add('trunk','大きな左右差は簡易評価で未検出',1,'good','現時点の簡易評価');
+}
+function dedupe(){const m=new Map;for(const i of S.issues)if(!m.has(i.k)||m.get(i.k).sc<i.sc)m.set(i.k,i);S.issues=[...m.values()].sort((a,b)=>b.sc-a.sc)}
+async function analyze(){S.demo=false;S.issues=[];S.metrics={};$('loading').classList.add('on');try{for(const v of ['front','side','back'])if(S.img[v]&&window.pose){const lm=await window.pose(S.img[v]);if(lm)photo(v,lm)}checks();dedupe();renderIssues();saveScan();$('resultCard').classList.remove('hidden');$('resultCard').scrollIntoView({behavior:'smooth',block:'start'})}finally{$('loading').classList.remove('on')}}
+function demoRun(){
+  S.demo=true;S.issues=[];S.metrics={frontShoulderTilt:4.6,frontPelvisTilt:2.9,forwardHead:.16};
+  add('shoulder','肩ラインの左右差',4.3,'photo','4.6°');
+  add('pelvis','骨盤ラインの左右差',3.5,'photo','2.9°');
+  add('rib','rib flare 傾向',5,'check','呼気でも前側肋骨が浮きやすい');
+  add('shoulderRom','肩屈曲ROMの左右差候補',4.7,'check','腕を真上まで上げにくい');
+  add('thoracic','胸椎伸展の追加評価候補',4.5,'check','腕挙上で腰椎伸展代償');
+  dedupe();renderIssues();$('history').textContent='デモ判定：保存していません。実際は本人の写真＋セルフチェックで更新。';$('resultCard').classList.remove('hidden');plan();$('resultCard').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function renderIssues(){$('issues').innerHTML=S.issues.map(i=>`<div class="issue"><div class="itop"><b>${i.l}</b><span class="pill ${i.src==='photo'?'photo':i.src==='check'?'check':''}">${i.src==='photo'?'写真で検出':i.src==='check'?'追加チェック':'良好'}</span></div><div class="impact">${i.impact||'現時点の簡易評価では大きな位置差を確認していません。'}</div><div class="metric">${i.m||''}</div></div>`).join('');if(!S.demo)history()}
+function saveScan(){try{const h=JSON.parse(localStorage.getItem('sug_miss_selfcoach_history')||'[]');h.push({at:new Date().toISOString(),metrics:S.metrics,issues:S.issues});localStorage.setItem('sug_miss_selfcoach_history',JSON.stringify(h.slice(-12)))}catch{}}
+function history(){try{const h=JSON.parse(localStorage.getItem('sug_miss_selfcoach_history')||'[]'),p=h.length>1?h[h.length-2]:null;if(!p){$('history').textContent='初回評価。次回撮影で前回差を表示。';return}const r=[];for(const k in S.metrics)if(Number.isFinite(p.metrics?.[k])){const d=S.metrics[k]-p.metrics[k];r.push(`${k}: ${d>0?'+':''}${d.toFixed(2)}`)}$('history').textContent=r.length?'前回差：'+r.slice(0,4).join(' / '):'前回データあり。同じ測定項目が不足。'}catch{}}
+function pickExercises(keys){
+  const out=[],push=k=>{if(k&&!out.includes(k))out.push(k)};
+  const primary={rib:'breathing',thoracic:'thoracic',scap:'serratus',shoulder:'serratus',shoulderRom:'shoulderFlex',pelvis:'hip90',hipExt:'hipExt',hipRot:'hip90',hamstring:'hamstring',adductor:'adductor',head:'thoracic',trunk:'breathing'};
+  const secondary={rib:'wall',thoracic:'breathing',scap:'wall',shoulder:'wall',shoulderRom:'serratus',pelvis:'breathing',hipExt:'breathing',hipRot:'adductor',hamstring:'hip90',adductor:'hip90',head:'serratus',trunk:'wall'};
+  keys.forEach(k=>push(primary[k]));keys.forEach(k=>push(secondary[k]));
+  if(!out.length){push('breathing');push('thoracic');push('serratus')}
+  return out.slice(0,4);
+}
+function plan(){S.pri=S.issues.filter(i=>i.src!=='good').slice(0,3);if(!S.pri.length)S.pri=[{k:'trunk',l:'姿勢維持',impact:'現状維持'}];$('top3').innerHTML=S.pri.map((p,i)=>`<div class="pri"><div class="rank">${i+1}</div><div><b>${p.l}</b><span>${p.impact||IMP[p.k]||''}</span></div></div>`).join('');const K=S.pri.map(x=>x.k),L=[];if(K.includes('rib'))L.push('胸郭と骨盤のstackを安定');if(K.includes('thoracic'))L.push('胸椎伸展を改善');if(K.some(k=>['scap','shoulder','shoulderRom'].includes(k)))L.push('肩甲骨・肩ROM・肩ラインを改善');if(K.includes('pelvis'))L.push('骨盤ラインの左右差を縮小');if(K.includes('hipExt'))L.push('股関節伸展を改善しヒップ〜脚後面ラインを整える');if(K.includes('hipRot'))L.push('股関節回旋の左右差を縮小');if(K.includes('hamstring'))L.push('股関節ヒンジと前屈を改善');if(K.includes('adductor'))L.push('開脚に必要な内もも・股関節可動性を改善');if(K.includes('head'))L.push('頭部位置を整え首〜デコルテを安定');if(!L.length)L.push('現在のラインを維持し動作中も崩れにくくする');$('longTerm').textContent='6〜8週間で '+L.join('・')+'。';const W=[];if(K.includes('rib'))W.push('呼吸');if(K.includes('thoracic'))W.push('胸椎');if(K.some(k=>['scap','shoulder','shoulderRom'].includes(k)))W.push('前鋸筋・肩ROM');if(K.includes('pelvis'))W.push('骨盤コントロール');if(K.includes('hipExt'))W.push('股関節伸展');if(K.includes('hipRot'))W.push('股関節回旋');if(K.includes('hamstring'))W.push('ヒンジ・ハム');if(K.includes('adductor'))W.push('内もも・開脚');$('week').textContent=(W.length?W.join('＋'):'呼吸＋胸椎＋肩甲骨')+'を優先。';renderEx(pickExercises(K));$('planCard').classList.remove('hidden');$('finish').classList.remove('hidden');$('planCard').scrollIntoView({behavior:'smooth',block:'start'})}
+function renderEx(order){$('exgrid').innerHTML=order.map(k=>`<button class="ex ${S.done.has(k)?'done':''}" data-k="${k}"><img src="${E[k].i}" alt="${E[k].t}"><div><b>${E[k].t}</b><span>${E[k].d}</span></div></button>`).join('');document.querySelectorAll('.ex').forEach(x=>x.onclick=()=>openEx(x.dataset.k))}
+function openEx(k){const e=E[k];S.cur=k;$('mimg').src=e.i;$('mtitle').textContent=e.t;$('mwhy').textContent=e.w;$('mdose').textContent=e.d;$('mfeel').textContent=e.f;$('mcheck').textContent=e.c;$('mng').textContent=e.n;$('completeBtn').textContent=S.done.has(k)?'完了済み':'この種目を完了';$('modal').classList.add('on')}
+function close(){$('modal').classList.remove('on')}
+$('completeBtn').onclick=()=>{if(S.cur)S.done.add(S.cur);renderEx(pickExercises(S.pri.map(x=>x.k)));close()};
+$('closeBtn').onclick=close;$('modal').onclick=e=>{if(e.target.id==='modal')close()};$('analyzeBtn').onclick=analyze;$('demoBtn').onclick=demoRun;$('planBtn').onclick=plan;
+$('saveBtn').onclick=()=>{if(S.demo){alert('デモ判定は保存しません');return}try{localStorage.setItem('sug_miss_today_'+new Date().toISOString().slice(0,10),JSON.stringify([...S.done]))}catch{}alert(`今日の実施 ${S.done.size} 種目を保存しました`)};
+try{const {FilesetResolver,PoseLandmarker}=await import('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.22-rc.20250304/+esm'),V=await FilesetResolver.forVisionTasks('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.22-rc.20250304/wasm'),P=await PoseLandmarker.createFromOptions(V,{baseOptions:{modelAssetPath:'https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task'},runningMode:'IMAGE',numPoses:1});window.pose=async im=>P.detect(im)?.landmarks?.[0]||null;$('aiStatus').textContent='姿勢AI READY';$('aiStatus').classList.add('ok')}catch(e){console.warn(e);$('aiStatus').textContent='AI未接続・チェックのみ'}
