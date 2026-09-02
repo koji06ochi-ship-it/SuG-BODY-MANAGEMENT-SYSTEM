@@ -12,6 +12,10 @@ const quest = read('shrine-quest-v26.5.208.html');
 const ios = read('ios/SuGMember/ContentView.swift');
 const legacy = read('index.html');
 const shared = read('apps/shared/rom-care-v27.82.js');
+const data = read('apps/shared/rom-care-data-v27.82.js');
+const engine = read('apps/shared/rom-care-engine-v27.82.js');
+const analysis = read('apps/shared/rom-care-analysis-v27.82.js');
+const css = read('apps/shared/rom-care-v27.82.css');
 
 // BODY hub must keep the three distinct product surfaces.
 assert.match(hub, /通常 BODY/);
@@ -22,16 +26,31 @@ assert.match(hub, /\.\/best-of-miss-demo-v27\.76\.html/);
 assert.match(hub, /rom-care-v27\.82\.js/);
 assert.match(hub, /SuGRomCare\.open\(\{source:'hub'/);
 
-// Shared ROM bridge reuses legacy functionality through an explicit message contract.
+// V27.82 ROM/CARE is now a standalone shared runtime, not a legacy iframe shell.
+assert.match(rom, /data-rom-care-runtime/);
+assert.match(rom, /data-rom-care-panel="rom"/);
+assert.match(rom, /data-rom-care-panel="care"/);
+assert.match(rom, /rom-care-v27\.82\.css/);
 assert.match(rom, /rom-care-v27\.82\.js/);
-assert.match(rom, /legacyPageUrl\(context\)/);
-assert.match(rom, /postMessage/);
+assert.match(rom, /rom-care-data-v27\.82\.js/);
+assert.match(rom, /rom-care-engine-v27\.82\.js/);
+assert.match(rom, /rom-care-analysis-v27\.82\.js/);
+assert.match(rom, /SuGRomCareData\.boot/);
+assert.match(rom, /SuGRomCareEngine\.boot/);
+assert.doesNotMatch(rom, /<iframe/i);
+assert.doesNotMatch(rom, /legacyPageUrl\(context\)/);
 assert.doesNotMatch(rom, /contentDocument/);
-assert.doesNotMatch(rom, /\.tab\[data-tab=/);
+
+// Shared module contracts and extracted runtime assets must exist.
 assert.match(shared, /sug:rom-care:ready/);
 assert.match(shared, /sug:rom-care:set-section/);
-assert.match(shared, /\.tab\[data-tab=/);
 assert.match(shared, /romCareShared/);
+assert.match(data, /SuGRomCareData/);
+assert.match(engine, /SuGRomCareEngine/);
+assert.match(analysis, /V27\.82|27\.82/);
+assert.ok(css.length > 0);
+
+// Legacy root remains available for compatibility/migration and is not deleted.
 assert.match(legacy, /data-tab="rom"/);
 assert.match(legacy, /data-tab="care"/);
 assert.match(legacy, /AROM \/ PROM/);
