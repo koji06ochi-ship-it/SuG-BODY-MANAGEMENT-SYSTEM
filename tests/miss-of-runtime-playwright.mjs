@@ -13,6 +13,34 @@ await page.goto(url, { waitUntil: 'domcontentloaded' });
 await page.waitForSelector('#missOfIntegratedEntry', { timeout: 15000 });
 await page.click('#missiStart');
 await page.waitForSelector('#missiShell:not([hidden])');
+
+// Candidate self-photo path: file selection, preview, and reuse of the BODY photo IndexedDB.
+const png = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9WlZ7cwAAAAASUVORK5CYII=', 'base64');
+for (const [view, name] of [['front','front.png'], ['side','side.png'], ['back','back.png']]) {
+  await page.locator(`input[type="file"][data-view="${view}"]`).setInputFiles({ name, mimeType: 'image/png', buffer: png });
+  await page.waitForFunction(v => document.querySelector(`#missiImg_${v}`)?.src?.startsWith('blob:'), view);
+}
+const photoKeys = await page.evaluate(async () => {
+  const db = await new Promise((resolve, reject) => {
+    const r = indexedDB.open('sug_body_photos_v1', 1);
+    r.onsuccess = () => resolve(r.result);
+    r.onerror = () => reject(r.error);
+  });
+  return await new Promise((resolve, reject) => {
+    const r = db.transaction('photos').objectStore('photos').getAllKeys();
+    r.onsuccess = () => resolve(r.result.map(String));
+    r.onerror = () => reject(r.error);
+  });
+});
+for (const view of ['front','side','back']) {
+  if (!photoKeys.some(k => k.endsWith(`:${view}`) && k.startsWith('miss:'))) throw new Error(`BODY photo IndexedDB missing ${view}`);
+}
+
+// Reload to verify the full judgement/action loop without depending on external pose-model networking.
+await page.reload({ waitUntil: 'domcontentloaded' });
+await page.waitForSelector('#missOfIntegratedEntry', { timeout: 15000 });
+await page.click('#missiStart');
+await page.waitForSelector('#missiShell:not([hidden])');
 await page.locator('[data-issue="rib"]').check();
 await page.locator('[data-issue="shoulderRom"]').check();
 await page.locator('[data-issue="hipExt"]').check();
