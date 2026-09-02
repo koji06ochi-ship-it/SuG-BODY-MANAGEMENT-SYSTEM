@@ -43,11 +43,15 @@
   <section class="shared"><b>COMMON DATA</b><p>HealthKit・回復・体重/体組成・栄養・ROM/CAREは共通基盤として扱い、通常BODYとBEST OF MISSで重複実装しない。</p></section>
   <div class="foot">S.u.G BODY MANAGEMENT SYSTEM</div>
 </main>
+<script src="../shared/rom-care-v27.82.js?v=27.82"></script>
 <script>
 const qs=new URLSearchParams(location.search);const native=qs.get('native')==='ios';
 const suffix=native?'?native=ios&v=27.82':'?v=27.82';
-const routes={normal:'./index.html'+suffix,rom:'./rom-care-v27.82.html'+suffix,miss:'./best-of-miss-demo-v27.76.html'+suffix};
-document.querySelectorAll('[data-dest]').forEach(b=>b.addEventListener('click',()=>{const u=routes[b.dataset.dest];if(u)location.href=u}));
+const routes={normal:'./index.html'+suffix,miss:'./best-of-miss-demo-v27.76.html'+suffix};
+document.querySelectorAll('[data-dest]').forEach(b=>b.addEventListener('click',()=>{
+  if(b.dataset.dest==='rom')return window.SuGRomCare.open({source:'hub',section:'rom',native});
+  const u=routes[b.dataset.dest];if(u)location.href=u;
+}));
 </script>
 </body>
 </html>

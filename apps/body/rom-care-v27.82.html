@@ -15,16 +15,50 @@
   <div class="title"><b>ROM / CARE</b><small>SHARED ASSESSMENT · V27.82</small></div>
   <div class="modes"><button class="mode on" data-mode="rom" type="button">ROM</button><button class="mode" data-mode="care" type="button">CARE</button></div>
 </header>
-<iframe id="legacy" class="frame" src="../../index.html?native=ios&v=27.82" title="S.u.G ROM CARE"></iframe>
+<iframe id="legacy" class="frame" src="about:blank" title="S.u.G ROM CARE"></iframe>
 <div id="status" class="status">ROMを接続中...</div>
+<script src="../shared/rom-care-v27.82.js?v=27.82"></script>
 <script>
-const frame=document.getElementById('legacy');const status=document.getElementById('status');let target='rom';let attempts=0;let timer=null;
-function hub(){const native=new URLSearchParams(location.search).get('native')==='ios';location.href='./hub-v27.82.html'+(native?'?native=ios&v=27.82':'?v=27.82')}
-document.getElementById('back').onclick=hub;
-function setMode(mode){target=mode;document.querySelectorAll('.mode').forEach(b=>b.classList.toggle('on',b.dataset.mode===mode));attempts=0;status.classList.remove('ok');status.textContent=(mode==='rom'?'ROM':'CARE')+'を接続中...';activate()}
-document.querySelectorAll('.mode').forEach(b=>b.onclick=()=>setMode(b.dataset.mode));
-function activate(){attempts++;try{const d=frame.contentDocument;if(!d)throw new Error('document not ready');const tab=d.querySelector('.tab[data-tab="'+target+'"]');const panel=d.getElementById(target);if(tab&&panel){tab.click();setTimeout(()=>{try{panel.scrollIntoView({block:'start'})}catch(_e){}},120);status.textContent=(target==='rom'?'ROM':'CARE')+' 接続済み';status.classList.add('ok');clearInterval(timer);return true}}catch(_e){}if(attempts>60){status.textContent='接続待ち：ログイン後に自動で開きます';attempts=0}return false}
-frame.addEventListener('load',()=>{attempts=0;activate();clearInterval(timer);timer=setInterval(activate,500)});timer=setInterval(activate,500);
+const shared=window.SuGRomCare;
+const context=shared.queryContext();
+const frame=document.getElementById('legacy');
+const status=document.getElementById('status');
+let target=context.section;
+let ready=false;
+let timeout=null;
+
+function updateMode(mode){
+  target=shared.normalizeSection(mode);
+  document.querySelectorAll('.mode').forEach(button=>button.classList.toggle('on',button.dataset.mode===target));
+}
+function showStatus(connected=false){
+  status.textContent=(target==='rom'?'ROM':'CARE')+(connected?' 接続済み':'を接続中...');
+  status.classList.toggle('ok',connected);
+}
+function postMode(){
+  if(!frame.contentWindow)return;
+  const origin=location.origin&&location.origin!=='null'?location.origin:'*';
+  frame.contentWindow.postMessage({type:shared.messages.setSection,section:target},origin);
+}
+function setMode(mode){
+  updateMode(mode);showStatus(false);postMode();
+}
+
+document.getElementById('back').onclick=()=>{location.href=shared.returnUrl(context)};
+document.querySelectorAll('.mode').forEach(button=>button.onclick=()=>setMode(button.dataset.mode));
+window.addEventListener('message',event=>{
+  if(location.origin&&location.origin!=='null'&&event.origin!==location.origin)return;
+  if(event.source!==frame.contentWindow)return;
+  if(event.data?.type===shared.messages.ready){
+    ready=true;updateMode(event.data.section);showStatus(true);clearTimeout(timeout);
+  }else if(event.data?.type===shared.messages.section){
+    updateMode(event.data.section);showStatus(true);
+  }
+});
+frame.addEventListener('load',()=>{ready=false;showStatus(false);postMode()});
+updateMode(target);showStatus(false);
+frame.src=shared.legacyPageUrl(context);
+timeout=setTimeout(()=>{if(!ready)status.textContent='接続待ち：ログイン後に自動で開きます'},15000);
 </script>
 </body>
 </html>
