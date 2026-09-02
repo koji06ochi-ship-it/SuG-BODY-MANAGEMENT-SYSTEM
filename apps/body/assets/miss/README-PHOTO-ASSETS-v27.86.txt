@@ -1,0 +1,1 @@
+V27.86 replaces the visible MISS exercise thumbnails with photo-based guidance assets. The former stick-figure SVGs remain only as fallback/reference assets.
