@@ -16,6 +16,8 @@ const data = read('apps/shared/rom-care-data-v27.82.js');
 const engine = read('apps/shared/rom-care-engine-v27.82.js');
 const analysis = read('apps/shared/rom-care-analysis-v27.82.js');
 const css = read('apps/shared/rom-care-v27.82.css');
+const monthlyReview = read('apps/body/monthly-review-v27.23.js');
+const futureImageRule = read('apps/body/future-image-rule-v27.63.js');
 
 // BODY hub must keep the three distinct product surfaces.
 assert.match(hub, /通常 BODY/);
@@ -49,6 +51,10 @@ assert.match(data, /SuGRomCareData/);
 assert.match(engine, /SuGRomCareEngine/);
 assert.match(analysis, /V27\.82|27\.82/);
 assert.ok(css.length > 0);
+
+// Key normal-BODY modules must at least parse; these previously broke the page at runtime.
+new vm.Script(monthlyReview, { filename: 'monthly-review-v27.23.js' });
+new vm.Script(futureImageRule, { filename: 'future-image-rule-v27.63.js' });
 
 // Legacy root remains available for compatibility/migration and is not deleted.
 assert.match(legacy, /data-tab="rom"/);
