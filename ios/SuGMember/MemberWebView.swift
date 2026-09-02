@@ -46,25 +46,37 @@ final class MemberWebViewStore: ObservableObject {
           if (!document.getElementById('sugBeautyBodyV2774')) {
             const s=document.createElement('script');
             s.id='sugBeautyBodyV2774';
-            s.src=isStandalone?'./beauty-body-engine-v27.74.js?v=27.79':'apps/body/beauty-body-engine-v27.74.js?v=27.79';
+            s.src=isStandalone?'./beauty-body-engine-v27.74.js?v=27.81':'apps/body/beauty-body-engine-v27.74.js?v=27.81';
             document.body.appendChild(s);
           }
           if (!document.getElementById('sugRecoveryBodyContextV2777')) {
             const s=document.createElement('script');
             s.id='sugRecoveryBodyContextV2777';
-            s.src=isStandalone?'./recovery-body-context-v27.77.js?v=27.79':'apps/body/recovery-body-context-v27.77.js?v=27.79';
+            s.src=isStandalone?'./recovery-body-context-v27.77.js?v=27.81':'apps/body/recovery-body-context-v27.77.js?v=27.81';
             document.body.appendChild(s);
           }
           if (!document.getElementById('sugNutritionRecoveryV2778')) {
             const s=document.createElement('script');
             s.id='sugNutritionRecoveryV2778';
-            s.src=isStandalone?'./nutrition-recovery-engine-v27.78.js?v=27.79':'apps/body/nutrition-recovery-engine-v27.78.js?v=27.79';
+            s.src=isStandalone?'./nutrition-recovery-engine-v27.78.js?v=27.81':'apps/body/nutrition-recovery-engine-v27.78.js?v=27.81';
             document.body.appendChild(s);
           }
           if (!document.getElementById('sugFoodPhotoV2779')) {
             const s=document.createElement('script');
             s.id='sugFoodPhotoV2779';
-            s.src=isStandalone?'./food-photo-intake-v27.79.js?v=27.79':'apps/body/food-photo-intake-v27.79.js?v=27.79';
+            s.src=isStandalone?'./food-photo-intake-v27.79.js?v=27.81':'apps/body/food-photo-intake-v27.79.js?v=27.81';
+            document.body.appendChild(s);
+          }
+          if (!document.getElementById('sugNextMealV2780')) {
+            const s=document.createElement('script');
+            s.id='sugNextMealV2780';
+            s.src=isStandalone?'./next-meal-guidance-v27.80.js?v=27.81':'apps/body/next-meal-guidance-v27.80.js?v=27.81';
+            document.body.appendChild(s);
+          }
+          if (!document.getElementById('sugMealTimingV2781')) {
+            const s=document.createElement('script');
+            s.id='sugMealTimingV2781';
+            s.src=isStandalone?'./meal-timing-v27.81.js?v=27.81':'apps/body/meal-timing-v27.81.js?v=27.81';
             document.body.appendChild(s);
           }
           const p=window.__SUG_NATIVE_HEALTH__;
@@ -75,6 +87,8 @@ final class MemberWebViewStore: ObservableObject {
             if(window.SuGBeautyBody?.receiveHealth)window.SuGBeautyBody.receiveHealth(p);
             if(window.SuGBodyContext?.receiveHealth)window.SuGBodyContext.receiveHealth(p);
             if(window.SuGNutrition?.receiveHealth)window.SuGNutrition.receiveHealth(p);
+            if(window.SuGNextMeal?.render)window.SuGNextMeal.render();
+            if(window.SuGMealTiming?.render)window.SuGMealTiming.render();
           }
         })();
         """
@@ -218,6 +232,8 @@ final class MemberWebViewStore: ObservableObject {
           if(window.SuGBeautyBody?.receiveHealth)window.SuGBeautyBody.receiveHealth(payload);
           if(window.SuGBodyContext?.receiveHealth)window.SuGBodyContext.receiveHealth(payload);
           if(window.SuGNutrition?.receiveHealth)window.SuGNutrition.receiveHealth(payload);
+          if(window.SuGNextMeal?.render)window.SuGNextMeal.render();
+          if(window.SuGMealTiming?.render)window.SuGMealTiming.render();
         })();
         """
         webView.evaluateJavaScript(js){[weak self] _,error in if error==nil{self?.pendingHealthJSON=nil}}
