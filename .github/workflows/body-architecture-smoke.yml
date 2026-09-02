@@ -47,3 +47,4 @@ jobs:
           node --check apps/shared/rom-care-data-v27.82.js
           node --check apps/shared/rom-care-engine-v27.82.js
           node --check apps/shared/rom-care-analysis-v27.82.js
+          node --check apps/body/beauty-initial-assessment-v27.82.js

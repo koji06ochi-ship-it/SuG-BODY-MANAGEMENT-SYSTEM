@@ -18,6 +18,9 @@ const analysis = read('apps/shared/rom-care-analysis-v27.82.js');
 const css = read('apps/shared/rom-care-v27.82.css');
 const monthlyReview = read('apps/body/monthly-review-v27.23.js');
 const futureImageRule = read('apps/body/future-image-rule-v27.63.js');
+const beautyAssessmentPage = read('apps/body/beauty-initial-assessment-v27.82.html');
+const beautyAssessment = read('apps/body/beauty-initial-assessment-v27.82.js');
+const beautyAssessmentCss = read('apps/body/beauty-initial-assessment-v27.82.css');
 
 // BODY hub must keep the three distinct product surfaces.
 assert.match(hub, /通常 BODY/);
@@ -103,6 +106,44 @@ assert.match(normal, /rom-care-v27\.82\.js/);
 assert.match(miss, /BEST OF MISS|BEAUTY|MISS/i);
 assert.match(miss, /data-rom-care-source="miss"/);
 assert.match(miss, /rom-care-v27\.82\.js/);
+assert.match(miss, /大会BODY｜初回身体評価を始める/);
+assert.match(miss, /beauty-initial-assessment-v27\.82\.html/);
+
+// BEST OF MISS initial assessment must cover the six requested domains and remain non-diagnostic.
+for (const label of ['正面・側面・背面', '呼吸・肋骨／胸郭', '胸椎', '骨盤・股関節', '肩・肩甲骨', '前屈・開脚', '大会に向けた身体課題 TOP3']) {
+  assert.ok(beautyAssessmentPage.includes(label), `beauty assessment missing ${label}`);
+}
+for (const label of ['WHY', 'WHAT', 'HOW', 'Before / After', '共通ROM / CARE']) assert.ok(beautyAssessmentPage.includes(label) || beautyAssessment.includes(label), `beauty assessment missing ${label}`);
+assert.match(beautyAssessmentPage, /ポージング技術を採点せず/);
+assert.match(beautyAssessmentPage, /医学的診断や傷病名の判定は行いません/);
+assert.match(beautyAssessment, /sug_body_photos_v1/);
+assert.match(beautyAssessment, /SuGRomCareData/);
+assert.ok(beautyAssessmentCss.length > 0);
+new vm.Script(beautyAssessment, { filename: 'beauty-initial-assessment-v27.82.js' });
+const beautySandbox = {};
+beautySandbox.window = beautySandbox;
+beautySandbox.globalThis = beautySandbox;
+vm.runInNewContext(beautyAssessment, beautySandbox);
+const beautyResult = beautySandbox.SuGBeautyAssessment.calculate({
+  photos: { front: true, side: true, back: true },
+  values: {
+    posture: 2, bodyAsymmetry: 2, shoulderLine: 2, waistLine: 2, pelvisLine: 2, legLine: 2,
+    ribFlare: 2, ribAsymmetry: 1, breathingExpansion: 2, ribPelvisStack: 2,
+    thoracicExtensionQuality: 2, thoracicRotationRight: 52, thoracicRotationLeft: 34,
+    pelvisTilt: 'anterior', hipExtensionRight: 8, hipExtensionLeft: 14,
+    hipInternalRotationRight: 25, hipInternalRotationLeft: 38,
+    hipExternalRotationRight: 48, hipExternalRotationLeft: 36,
+    shoulderFlexionRight: 142, shoulderFlexionLeft: 162,
+    scapularAsymmetry: 2, overheadMovementQuality: 2,
+    forwardFoldCm: 12, straddleAngle: 105
+  }
+});
+assert.equal(beautyResult.quality.completeSections, 6);
+assert.equal(beautyResult.top3.length, 3);
+assert.ok(beautyResult.top3.some(issue => issue.key === 'ribPelvis'));
+for (const issue of beautyResult.top3) {
+  assert.ok(issue.why && issue.what && issue.how.length >= 2, `${issue.key} must include WHY/WHAT/HOW`);
+}
 
 // Canonical QUEST 208 keeps the 11-shrine pilot and migration from older progress.
 assert.match(quest, /V26\.5\.208/);

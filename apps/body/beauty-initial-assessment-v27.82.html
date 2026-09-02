@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050506">
+<title>S.u.G BEAUTY BODY 初回身体評価 V27.82</title>
+<link rel="stylesheet" href="./beauty-initial-assessment-v27.82.css?v=27.82">
+</head>
+<body>
+<header class="assessmentTop">
+  <div class="topRow">
+    <button class="backLink" type="button" onclick="location.href='./best-of-miss-demo-v27.76.html?v=27.82'">‹ BEAUTY BODY</button>
+    <div><b>BODY BOTTLENECK ASSESSMENT</b><span>BEST OF MISS / MISS OF · V27.82</span></div>
+  </div>
+  <div id="assessmentProgress" class="assessmentProgress" aria-label="評価進捗"></div>
+</header>
+
+<main class="assessmentApp">
+  <section class="assessmentHero">
+    <div class="eyebrow">FIRST ASSESSMENT → TOP3 → RE-ASSESSMENT</div>
+    <h1>大会でより良く見える身体を作る。</h1>
+    <p>ポージング技術を採点せず、現在の身体ラインを制限している可能性がある可動域・左右差・胸郭―骨盤ポジションを整理します。</p>
+    <div class="safetyNote"><b>運動スクリーニングです。</b> 医学的診断や傷病名の判定は行いません。痛み・しびれ・強い症状がある場合は負荷を中止し、必要な医療評価を優先してください。</div>
+  </section>
+
+  <section class="assessmentPanel active" data-assessment-step="0">
+    <div class="card">
+      <div class="stepHead"><div><span>01 · PHOTO BASELINE</span><h2>正面・側面・背面</h2><p>同じ距離・高さ・照明で撮影。ポーズの上手さではなく、自然立位で身体ラインを比較します。</p></div></div>
+      <div class="typeRow" id="assessmentType">
+        <button type="button" data-type="initial">初回評価</button>
+        <button type="button" data-type="reassessment">再評価</button>
+      </div>
+      <div class="fieldGrid two">
+        <label>評価日<input type="date" data-field="assessmentDate"></label>
+        <label>大会・撮影日（任意）<input type="date" data-field="eventDate"></label>
+      </div>
+      <div class="photoGrid">
+        <label class="photoSlot"><span>正面</span><img id="assessmentPhotoFront" alt="正面写真プレビュー"><b>正面を撮る / 選ぶ</b><input type="file" accept="image/*" capture="environment" data-photo="front"></label>
+        <label class="photoSlot"><span>側面</span><img id="assessmentPhotoSide" alt="側面写真プレビュー"><b>側面を撮る / 選ぶ</b><input type="file" accept="image/*" capture="environment" data-photo="side"></label>
+        <label class="photoSlot"><span>背面</span><img id="assessmentPhotoBack" alt="背面写真プレビュー"><b>背面を撮る / 選ぶ</b><input type="file" accept="image/*" capture="environment" data-photo="back"></label>
+      </div>
+      <div id="photoStatus" class="statusLine">写真 0 / 3</div>
+      <div class="observationGrid">
+        <div class="scaleField"><b>姿勢</b><small>自然立位の全体ライン</small><div data-scale="posture"></div></div>
+        <div class="scaleField"><b>全身の左右差</b><small>正面・背面で比較</small><div data-scale="bodyAsymmetry"></div></div>
+        <div class="scaleField"><b>肩のライン</b><small>高さ・前後位置の差</small><div data-scale="shoulderLine"></div></div>
+        <div class="scaleField"><b>ウエストライン</b><small>左右のくびれ・前方突出</small><div data-scale="waistLine"></div></div>
+        <div class="scaleField"><b>骨盤位置</b><small>傾き・左右差の見え方</small><div data-scale="pelvisLine"></div></div>
+        <div class="scaleField"><b>脚のライン</b><small>股関節―膝―足部の連なり</small><div data-scale="legLine"></div></div>
+      </div>
+      <div class="navButtons"><button type="button" class="primary" data-next>呼吸・胸郭へ</button></div>
+    </div>
+  </section>
+
+  <section class="assessmentPanel" data-assessment-step="1">
+    <div class="card">
+      <div class="stepHead"><div><span>02 · BREATHING / RIBCAGE</span><h2>呼吸・肋骨／胸郭</h2><p>息を吐いた自然立位と吸気時の胸郭拡張を確認します。</p></div></div>
+      <div class="mechanism">肋骨が前方へ開く可能性 → 腰椎伸展で代償する可能性 → 腹部が前方へ見える → ウエストラインへ影響</div>
+      <div class="observationGrid single">
+        <div class="scaleField"><b>RIB FLARE</b><small>肋骨前面の開き</small><div data-scale="ribFlare"></div></div>
+        <div class="scaleField"><b>胸郭の左右差</b><small>下位肋骨・胸郭の左右差</small><div data-scale="ribAsymmetry"></div></div>
+        <div class="scaleField"><b>呼吸時の胸郭拡張</b><small>1 小さい → 5 良好</small><div data-scale="breathingExpansion"></div></div>
+        <div class="scaleField"><b>肋骨と骨盤の位置関係</b><small>前後・上下の重なり</small><div data-scale="ribPelvisStack"></div></div>
+      </div>
+      <div class="navButtons"><button type="button" class="primary" data-next>胸椎へ</button><button type="button" class="secondary" data-back>戻る</button></div>
+    </div>
+  </section>
+
+  <section class="assessmentPanel" data-assessment-step="2">
+    <div class="card">
+      <div class="stepHead"><div><span>03 · THORACIC</span><h2>胸椎</h2><p>伸展と回旋を同じ開始姿勢で測り、絶対値だけでなく左右差・前回差を優先します。</p></div></div>
+      <div class="scaleField"><b>胸椎伸展の動き</b><small>1 制限が明確 → 5 良好</small><div data-scale="thoracicExtensionQuality"></div></div>
+      <div class="fieldGrid three">
+        <label>胸椎伸展 °（任意）<input type="number" step="1" data-field="thoracicExtensionDeg" placeholder="同一測定法で比較"></label>
+        <label>右回旋 °<input type="number" step="1" data-field="thoracicRotationRight"></label>
+        <label>左回旋 °<input type="number" step="1" data-field="thoracicRotationLeft"></label>
+      </div>
+      <div class="sharedDataBox"><b>共通ROM / CAREを再利用</b><p>保存済みの胸椎・股関節・肩AROM/PROMとSHRをこの評価へ反映できます。</p><button id="importRomCare" type="button" class="secondary">共通ROM / CAREデータを反映</button><div id="romCareImportStatus" class="statusLine">未反映</div></div>
+      <div class="navButtons"><button type="button" class="primary" data-next>骨盤・股関節へ</button><button type="button" class="secondary" data-back>戻る</button></div>
+    </div>
+  </section>
+
+  <section class="assessmentPanel" data-assessment-step="3">
+    <div class="card">
+      <div class="stepHead"><div><span>04 · PELVIS / HIP</span><h2>骨盤・股関節</h2><p>骨盤位置と股関節の伸展・内旋・外旋を、左右同条件で確認します。</p></div></div>
+      <label class="selectField">骨盤傾斜<select data-field="pelvisTilt"><option value="">未評価</option><option value="neutral">中間位に近い</option><option value="anterior">前傾傾向</option><option value="posterior">後傾傾向</option><option value="unclear">判定保留</option></select></label>
+      <div class="metricSection"><b>股関節伸展 °</b><div class="fieldGrid two"><label>右<input type="number" step="1" data-field="hipExtensionRight"></label><label>左<input type="number" step="1" data-field="hipExtensionLeft"></label></div></div>
+      <div class="metricSection"><b>股関節内旋 °</b><div class="fieldGrid two"><label>右<input type="number" step="1" data-field="hipInternalRotationRight"></label><label>左<input type="number" step="1" data-field="hipInternalRotationLeft"></label></div></div>
+      <div class="metricSection"><b>股関節外旋 °</b><div class="fieldGrid two"><label>右<input type="number" step="1" data-field="hipExternalRotationRight"></label><label>左<input type="number" step="1" data-field="hipExternalRotationLeft"></label></div></div>
+      <div class="navButtons"><button type="button" class="primary" data-next>肩・肩甲骨へ</button><button type="button" class="secondary" data-back>戻る</button></div>
+    </div>
+  </section>
+
+  <section class="assessmentPanel" data-assessment-step="4">
+    <div class="card">
+      <div class="stepHead"><div><span>05 · SHOULDER / SCAPULA</span><h2>肩・肩甲骨</h2><p>肩関節ROM、肩甲骨位置、上肢挙上時の左右差・体幹代償を確認します。</p></div></div>
+      <div class="metricSection"><b>肩関節 屈曲AROM °</b><div class="fieldGrid two"><label>右<input type="number" step="1" data-field="shoulderFlexionRight"></label><label>左<input type="number" step="1" data-field="shoulderFlexionLeft"></label></div></div>
+      <div class="metricSection"><b>肩関節 外転AROM °（任意）</b><div class="fieldGrid two"><label>右<input type="number" step="1" data-field="shoulderAbductionRight"></label><label>左<input type="number" step="1" data-field="shoulderAbductionLeft"></label></div></div>
+      <div class="metricSection"><b>肩関節 外旋AROM °（任意）</b><div class="fieldGrid two"><label>右<input type="number" step="1" data-field="shoulderExternalRotationRight"></label><label>左<input type="number" step="1" data-field="shoulderExternalRotationLeft"></label></div></div>
+      <div class="observationGrid single">
+        <div class="scaleField"><b>肩甲骨位置の左右差</b><small>静止位で比較</small><div data-scale="scapularAsymmetry"></div></div>
+        <div class="scaleField"><b>上肢挙上時の動き</b><small>1 代償が明確 → 5 良好</small><div data-scale="overheadMovementQuality"></div></div>
+      </div>
+      <div class="navButtons"><button type="button" class="primary" data-next>柔軟性へ</button><button type="button" class="secondary" data-back>戻る</button></div>
+    </div>
+  </section>
+
+  <section class="assessmentPanel" data-assessment-step="5">
+    <div class="card">
+      <div class="stepHead"><div><span>06 · FLEXIBILITY</span><h2>前屈・開脚</h2><p>反動を使わず、同じ条件で前回差を追跡します。</p></div></div>
+      <div class="fieldGrid two">
+        <label>前屈｜指先と床の距離 cm<input type="number" step="0.5" data-field="forwardFoldCm" placeholder="届かない=＋ / 越える=−"></label>
+        <label>開脚角度 °<input type="number" step="1" min="0" max="180" data-field="straddleAngle"></label>
+      </div>
+      <div class="safetyNote">数値はS.u.Gの経時比較用です。痛みを押して終末域へ入れず、撮影・測定条件をそろえてください。</div>
+      <div class="navButtons"><button type="button" class="primary" data-result>大会BODY課題TOP3を作成</button><button type="button" class="secondary" data-back>戻る</button></div>
+    </div>
+  </section>
+
+  <section class="assessmentPanel" data-assessment-step="6">
+    <div class="card resultCard">
+      <div class="stepHead"><div><span>07 · INTEGRATED PRIORITY</span><h2>大会に向けた身体課題 TOP3</h2><p>見え方への影響候補と、次に行うモビリティ／トレーニングを整理します。</p></div></div>
+      <div id="assessmentQuality" class="qualityBox"></div>
+      <div id="assessmentTop3" class="top3"></div>
+      <div class="menuBlock"><span>IMPROVEMENT MENU</span><h3>TOP3から作る改善メニュー</h3><div id="assessmentMenu"></div></div>
+      <div class="flowTrack"><b>TRACK</b><div>初回評価 → 課題TOP3 → 改善メニュー → 実施 → 再評価 → Before / After → 大会まで追跡</div></div>
+      <div class="navButtons">
+        <button id="saveAssessment" type="button" class="primary">この評価を保存</button>
+        <button type="button" class="secondary" onclick="location.href='./best-of-miss-demo-v27.76.html?v=27.82&from=assessment'">BEAUTY BODYで改善メニューを実施</button>
+        <button id="startReassessment" type="button" class="secondary">再評価を開始</button>
+        <button type="button" class="secondary" data-rom-care-launch data-rom-care-source="miss" data-rom-care-section="rom">共通ROM / CAREを開く</button>
+        <button type="button" class="secondary" data-back>入力へ戻る</button>
+      </div>
+      <div id="assessmentSaveStatus" class="statusLine"></div>
+    </div>
+    <div class="card compareCard"><div class="stepHead"><div><span>BEFORE / AFTER</span><h2>3方向写真比較</h2><p>初回と最新再評価を同じ向きで並べます。写真は既存BODYと同じく、この端末内IndexedDBへ保存します。</p></div></div><div id="assessmentComparison"></div></div>
+    <div class="card historyCard"><div class="stepHead"><div><span>HISTORY</span><h2>大会までの変化</h2></div></div><div id="assessmentHistory"></div></div>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../shared/contracts.js?v=27.82"></script>
+<script src="../shared/rom-care-v27.82.js?v=27.82"></script>
+<script src="../shared/rom-care-data-v27.82.js?v=27.82"></script>
+<script src="./beauty-body-engine-v27.74.js?v=27.82"></script>
+<script src="./beauty-initial-assessment-v27.82.js?v=27.82"></script>
+</body>
+</html>
