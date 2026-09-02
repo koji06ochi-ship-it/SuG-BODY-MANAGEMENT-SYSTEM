@@ -21,7 +21,8 @@ assert.match(hub, /\.\/best-of-miss-demo-v27\.76\.html/);
 
 // Shared ROM bridge must reuse, not recreate/delete, the legacy ROM/CARE source.
 assert.match(rom, /\.\.\/\.\.\/index\.html/);
-assert.match(rom, /data-tab=\\?"\+target/);
+assert.match(rom, /querySelector\('\.tab\[data-tab=/);
+assert.match(rom, /tab\.click\(\)/);
 assert.match(legacy, /data-tab="rom"/);
 assert.match(legacy, /data-tab="care"/);
 assert.match(legacy, /AROM \/ PROM/);
