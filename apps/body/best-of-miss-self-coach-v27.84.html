@@ -1,0 +1,22 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#050506"><title>S.u.G BODY · MISS SELF COACH V27.84</title><link rel="stylesheet" href="./miss-self-coach-v27.82.css?v=27.84"></head><body><main class="app">
+<header class="top"><div class="brand"><div class="bm"><div class="seal">S.u.G</div><div><b>BODY MANAGEMENT</b><span>MISS SELF COACH · V27.84</span></div></div><div class="status" id="aiStatus">AI準備中</div></div></header>
+<section class="hero"><div class="eye">SELF SCAN → PLAN → ACTION</div><h1>撮る。知る。<br>今日やる。</h1><p>正面・側面・背面を1人で撮影。写真上の左右差・姿勢傾向とセルフチェックを統合し、課題TOP3、6〜8週目標、今週の重点、今日の行動まで落とします。</p></section>
+<section class="card"><div class="step">01 · SELF SCAN</div><h2>3方向を撮影</h2><div class="sub">全身が入る距離で自然に立つ。写真だけで診断せず、見える位置差＋追加チェックで原因候補を絞る。</div><div class="captures">
+<label class="cap" id="capFront"><input id="frontFile" type="file" accept="image/*" capture="environment"><img id="frontImg"><div class="hint">＋<br>正面を撮る</div><div class="lab">FRONT</div><div class="oktag">OK</div></label>
+<label class="cap" id="capSide"><input id="sideFile" type="file" accept="image/*" capture="environment"><img id="sideImg"><div class="hint">＋<br>側面を撮る</div><div class="lab">SIDE</div><div class="oktag">OK</div></label>
+<label class="cap" id="capBack"><input id="backFile" type="file" accept="image/*" capture="environment"><img id="backImg"><div class="hint">＋<br>背面を撮る</div><div class="lab">BACK</div><div class="oktag">OK</div></label></div>
+<div class="notice">写真AI：肩・骨盤の傾き、頭部位置、体幹位置。rib flare・胸椎・肩甲骨・股関節・肩ROMは写真だけで断定せず追加チェック。</div>
+<div class="checks">
+<label class="check"><input type="checkbox" id="ribCheck"><div><b>息を吐いても前の下側の肋骨が浮きやすい</b><span>みぞおち周辺が前に出る／腰を反らないと胸を張りにくい</span></div></label>
+<label class="check"><input type="checkbox" id="thoracicCheck"><div><b>両腕を上げると腰を反って代償しやすい</b><span>胸椎伸展・肩甲帯の追加評価候補</span></div></label>
+<label class="check"><input type="checkbox" id="scapCheck"><div><b>腕を上げた時、左右で肩甲骨の動きが違う</b><span>肩ROM・肩甲骨コントロールの追加評価候補</span></div></label>
+<label class="check"><input type="checkbox" id="shoulderRomCheck"><div><b>腕を真上まで上げにくい／左右差がある</b><span>肩屈曲ROM・デコルテラインの追加評価候補</span></div></label>
+<label class="check"><input type="checkbox" id="hipExtCheck"><div><b>片脚を後ろへ引くと腰を反らないと伸びない</b><span>股関節伸展不足・骨盤前傾代償の候補</span></div></label>
+<label class="check"><input type="checkbox" id="hipRotCheck"><div><b>90/90座位で左右どちらかが明らかにやりにくい</b><span>股関節内旋・外旋の左右差候補</span></div></label>
+<label class="check"><input type="checkbox" id="forwardFoldCheck"><div><b>前屈で股関節から倒れにくい</b><span>ハムストリング・股関節ヒンジの追加評価候補</span></div></label>
+<label class="check"><input type="checkbox" id="straddleCheck"><div><b>開脚で内ももが強く詰まる／左右差がある</b><span>内転筋・股関節可動性の追加評価候補</span></div></label>
+</div><button class="btn" id="analyzeBtn">写真＋セルフチェックを分析</button><div class="load" id="loading">姿勢ランドマークを解析中…</div></section>
+<section class="card hidden" id="resultCard"><div class="step">02 · WHAT IS DIFFERENT?</div><h2>今、何が違う？</h2><div class="sub">「歪み」と断定せず、写真で確認した位置差と追加チェックを分けて表示。</div><div class="issues" id="issues"></div><div class="history" id="history">初回評価。次回撮影で前回差を表示。</div><button class="btn" id="planBtn">大会に向けた課題TOP3へ</button></section>
+<section class="card hidden" id="planCard"><div class="step">03 · PRIORITY TOP 3</div><h2>優先する3つ</h2><div class="top3" id="top3"></div><div class="plan"><div class="prow"><small>LONG TERM · 6–8 WEEKS</small><b id="longTerm">--</b></div><div class="prow"><small>THIS WEEK</small><b id="week">--</b></div><div class="prow"><small>TODAY</small><b>あなたのTOP3に合わせた種目だけ表示。画像＋説明を開いてそのまま実施。</b></div></div><div class="exgrid" id="exgrid"></div><button class="btn sec" id="saveBtn">今日の実施を保存</button></section>
+<section class="card hidden" id="finish"><div class="step">04 · REASSESS</div><h2>次回、同じ条件で撮る</h2><div class="sub">同じ方向・距離・姿勢で再撮影。「改善した／残った」を比較して次の計画を更新。</div></section>
+</main><div class="modal" id="modal"><div class="sheet"><img id="mimg"><h3 id="mtitle"></h3><p id="mwhy"></p><div class="infos"><div class="info"><small>回数</small><b id="mdose"></b></div><div class="info"><small>感じる場所</small><b id="mfeel"></b></div><div class="info"><small>自己確認</small><b id="mcheck"></b></div><div class="info"><small>NG</small><b id="mng"></b></div></div><button class="btn" id="completeBtn">この種目を完了</button><button class="btn sec" id="closeBtn">閉じる</button></div></div><script type="module" src="./miss-self-coach-v27.84.js?v=27.84"></script></body></html>
