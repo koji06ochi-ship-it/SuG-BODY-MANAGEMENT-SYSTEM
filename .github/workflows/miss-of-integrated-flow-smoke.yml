@@ -1,0 +1,37 @@
+name: MISS OF integrated flow smoke
+
+on:
+  push:
+    branches:
+      - body/miss-of-integrated-flow
+    paths:
+      - 'apps/body/miss-of-integrated-flow-v27.81.js'
+      - 'apps/body/miss-of-integrated-flow-v27.81.css'
+      - 'apps/body/health-bridge-v27.64.js'
+      - 'apps/body/assets/miss/**'
+      - 'tests/miss-of-integrated-flow-smoke.mjs'
+      - '.github/workflows/miss-of-integrated-flow-smoke.yml'
+  pull_request:
+    paths:
+      - 'apps/body/miss-of-integrated-flow-v27.81.js'
+      - 'apps/body/miss-of-integrated-flow-v27.81.css'
+      - 'apps/body/health-bridge-v27.64.js'
+      - 'apps/body/assets/miss/**'
+      - 'tests/miss-of-integrated-flow-smoke.mjs'
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: JavaScript syntax
+        run: |
+          node --check apps/body/miss-of-integrated-flow-v27.81.js
+          node --check apps/body/health-bridge-v27.64.js
+      - name: Integrated flow contract
+        run: node tests/miss-of-integrated-flow-smoke.mjs
+      - name: Diff whitespace
+        run: git diff --check HEAD~1 HEAD
