@@ -3,7 +3,7 @@ name: MISS OF integrated flow smoke
 on:
   push:
     branches:
-      - body/miss-of-integrated-flow
+      - body/miss-of-integrated-current
     paths:
       - 'apps/body/miss-of-integrated-flow-v27.81.js'
       - 'apps/body/miss-of-integrated-flow-v27.81.css'
