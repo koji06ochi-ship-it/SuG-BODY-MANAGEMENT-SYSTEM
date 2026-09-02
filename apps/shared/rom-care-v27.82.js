@@ -178,6 +178,39 @@
     return true;
   }
 
+  function activateStandaloneSection(section, announce = true) {
+    if (!doc?.body?.hasAttribute('data-rom-care-runtime')) return false;
+    const normalized = normalizeSection(section);
+    doc.querySelectorAll('[data-rom-care-mode]').forEach(button => {
+      const active = normalizeSection(button.dataset.romCareMode) === normalized;
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+    doc.querySelectorAll('[data-rom-care-panel]').forEach(panel => {
+      panel.classList.toggle('active', panel.dataset.romCarePanel === normalized);
+    });
+    if (announce) postToParent({ type: MESSAGE_SECTION, section: normalized, version: VERSION });
+    return true;
+  }
+
+  function initStandaloneRuntime() {
+    if (!doc?.body?.hasAttribute('data-rom-care-runtime')) return false;
+    if (doc.body.dataset.romCareReady === '1') return true;
+    doc.body.dataset.romCareReady = '1';
+    const context = queryContext();
+    doc.querySelectorAll('[data-rom-care-mode]').forEach(button => {
+      button.addEventListener('click', () => activateStandaloneSection(button.dataset.romCareMode));
+    });
+    root.addEventListener('message', event => {
+      if (root.location?.origin && root.location.origin !== 'null' && event.origin !== root.location.origin) return;
+      if (event.data?.type !== MESSAGE_SET_SECTION) return;
+      activateStandaloneSection(event.data.section);
+    });
+    activateStandaloneSection(context.section, false);
+    postToParent({ type: MESSAGE_READY, section: context.section, features: FEATURES, version: VERSION });
+    return true;
+  }
+
   function installLegacyFocusStyle() {
     if (!doc || doc.getElementById('sug-rom-care-shared-style')) return;
     const style = doc.createElement('style');
@@ -234,6 +267,8 @@
     open,
     bindLaunchers,
     activateLegacySection,
+    activateStandaloneSection,
+    initStandaloneRuntime,
     messages: Object.freeze({ setSection: MESSAGE_SET_SECTION, ready: MESSAGE_READY, section: MESSAGE_SECTION })
   });
 
@@ -242,8 +277,12 @@
     bindLaunchers();
     if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', () => {
       bindLaunchers();
+      initStandaloneRuntime();
       initLegacyRuntime();
     });
-    else initLegacyRuntime();
+    else {
+      initStandaloneRuntime();
+      initLegacyRuntime();
+    }
   }
 })();
