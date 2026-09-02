@@ -7,6 +7,8 @@ on:
       - 'codex/**'
     paths:
       - 'apps/body/**'
+      - 'apps/shared/rom-care-*.js'
+      - 'apps/shared/rom-care-*.css'
       - 'shrine-quest-v26.5.20*.html'
       - 'ios/**'
       - 'index.html'
@@ -17,6 +19,8 @@ on:
   pull_request:
     paths:
       - 'apps/body/**'
+      - 'apps/shared/rom-care-*.js'
+      - 'apps/shared/rom-care-*.css'
       - 'shrine-quest-v26.5.20*.html'
       - 'ios/**'
       - 'index.html'
@@ -37,3 +41,9 @@ jobs:
           node-version: '22'
       - name: BODY architecture static smoke
         run: node tests/body-architecture-smoke.mjs
+      - name: ROM CARE shared JS syntax
+        run: |
+          node --check apps/shared/rom-care-v27.82.js
+          node --check apps/shared/rom-care-data-v27.82.js
+          node --check apps/shared/rom-care-engine-v27.82.js
+          node --check apps/shared/rom-care-analysis-v27.82.js
