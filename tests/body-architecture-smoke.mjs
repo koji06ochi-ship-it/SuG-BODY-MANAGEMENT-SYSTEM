@@ -43,6 +43,10 @@ assert.match(rom, /rom-care-analysis-v27\.82\.js/);
 assert.match(rom, /SuGRomCareData\.boot/);
 assert.match(rom, /SuGRomCareEngine\.boot/);
 assert.match(rom, /data-rom-care-compact="v27\.82"/);
+assert.match(rom, /再評価へ進む/);
+assert.match(rom, /BEAUTY BODY評価/);
+assert.match(rom, /共通BODYデータを確認中/);
+assert.match(data, /共通BODYデータ未接続｜この画面単体でも評価できます/);
 assert.match(rom, /今日のROM評価サマリー/);
 assert.match(rom, /優先CARE TOP3/);
 assert.match(rom, /detailGroup\('AROM \/ PROM詳細・胸椎ROM'/);
@@ -109,6 +113,9 @@ const pairs = api.aromAsymmetryPairs([
 ]);
 assert.equal(pairs.length, 1);
 assert.equal(pairs[0].diff, 9);
+assert.match(api.returnUrl({ source: 'miss' }), /beauty-initial-assessment-v27\.82\.html/);
+assert.match(api.returnUrl({ source: 'miss' }), /mode=reassessment/);
+assert.match(api.returnUrl({ source: 'normal' }), /apps\/body\/index\.html/);
 const member = {};
 api.ensureMemberCollections(member);
 for (const key of api.collectionNames) assert.ok(Array.isArray(member[key]), `${key} must be an array`);
@@ -132,6 +139,8 @@ for (const label of ['正面・側面・背面', '呼吸・肋骨／胸郭', '�
   assert.ok(beautyAssessmentPage.includes(label), `beauty assessment missing ${label}`);
 }
 for (const label of ['WHY', 'WHAT', 'HOW', 'Before / After', '共通ROM / CARE']) assert.ok(beautyAssessmentPage.includes(label) || beautyAssessment.includes(label), `beauty assessment missing ${label}`);
+assert.match(beautyAssessmentPage, /次へ：ROM \/ CAREで確認/);
+assert.match(beautyAssessment, /mode.*reassessment|reassessment.*mode/);
 assert.match(beautyAssessmentPage, /ポージング技術を採点せず/);
 assert.match(beautyAssessmentPage, /医学的診断や傷病名の判定は行いません/);
 assert.match(beautyAssessment, /sug_body_photos_v1/);

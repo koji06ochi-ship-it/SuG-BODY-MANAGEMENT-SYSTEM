@@ -18,7 +18,7 @@
       <button class="runtimeMode" type="button" data-rom-care-mode="care" aria-pressed="false">CARE</button>
     </div>
   </div>
-  <div id="romCareDataStatus" class="runtimeStatus">BODYセッションを確認中…</div>
+  <div id="romCareDataStatus" class="runtimeStatus">共通BODYデータを確認中…</div>
 </header>
 <main class="romCareMain">
   <section id="care" class="panel" data-rom-care-panel="care">
@@ -273,6 +273,9 @@
 
 
 </main>
+<div id="beautyReassessmentNav" class="beautyReassessmentNav" hidden>
+  <button id="beautyReassessmentButton" type="button">再評価へ進む</button>
+</div>
 <script>
 (() => {
   const byId = id => document.getElementById(id);
@@ -400,11 +403,29 @@
 <script src="../shared/rom-care-engine-v27.82.js?v=27.82"></script>
 <script type="module" src="../shared/rom-care-analysis-v27.82.js?v=27.82"></script>
 <script>
-document.getElementById('romCareBack').addEventListener('click', () => {
-  location.href = window.SuGRomCare.returnUrl(window.SuGRomCare.queryContext());
-});
+const romCareContext = window.SuGRomCare.queryContext();
+const romCareReturn = () => {
+  location.href = window.SuGRomCare.returnUrl(romCareContext);
+};
+const romCareBack = document.getElementById('romCareBack');
+romCareBack.textContent = romCareContext.source === 'miss' ? '‹ BEAUTY BODY評価' : '‹ BODY';
+romCareBack.addEventListener('click', romCareReturn);
+if (romCareContext.source === 'miss') {
+  document.body.classList.add('romCareBeautySource');
+  const beautyNav = document.getElementById('beautyReassessmentNav');
+  beautyNav.hidden = false;
+  document.getElementById('beautyReassessmentButton').addEventListener('click', romCareReturn);
+}
+function applyRomCareLocalOnlyMode() {
+  document.body.classList.add('romCareLocalOnly');
+  document.querySelectorAll('button[onclick*="save"]').forEach(button => {
+    button.disabled = true;
+    button.title = '共通データへの保存はBODYログイン時に利用できます';
+  });
+}
 window.SuGRomCareData.boot().then(result => {
-  if (result.ok) window.SuGRomCareEngine.boot();
+  if (result.ok || result.localOnly) window.SuGRomCareEngine.boot();
+  if (result.localOnly) applyRomCareLocalOnlyMode();
 });
 </script>
 </body>

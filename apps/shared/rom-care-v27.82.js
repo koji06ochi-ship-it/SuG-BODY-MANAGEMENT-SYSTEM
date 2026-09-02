@@ -129,10 +129,11 @@
     const relative = context.source === 'normal'
       ? '../body/index.html'
       : context.source === 'miss'
-        ? '../body/best-of-miss-demo-v27.76.html'
+        ? '../body/beauty-initial-assessment-v27.82.html'
         : '../body/hub-v27.82.html';
     const url = moduleRelativeUrl(relative);
     url.searchParams.set('v', VERSION);
+    if (context.source === 'miss') url.searchParams.set('mode', 'reassessment');
     if (context.native) url.searchParams.set('native', 'ios');
     if (context.memberId) url.searchParams.set('memberId', context.memberId);
     return url.toString();

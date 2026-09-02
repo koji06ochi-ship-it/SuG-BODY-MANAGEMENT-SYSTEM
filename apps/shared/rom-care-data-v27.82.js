@@ -13,7 +13,8 @@
     profile: null,
     saveTimer: null,
     saving: false,
-    ready: false
+    ready: false,
+    localOnly: false
   };
 
   function baseMember(name = '会員') {
@@ -72,16 +73,23 @@
     status('BODYセッションを確認中…');
     const auth = await authenticatedClient();
     if (!auth) {
+      state.client = null;
+      state.session = null;
+      state.memberId = '';
+      state.profile = null;
+      state.member = baseMember('未接続');
       state.ready = false;
-      status('BODYでログイン後にROM / CAREを開いてください。', 'warn');
+      state.localOnly = true;
+      status('共通BODYデータ未接続｜この画面単体でも評価できます');
       window.dispatchEvent(new CustomEvent('sug:rom-care:auth-required', {
         detail: { version: VERSION }
       }));
-      return { ok: false, reason: 'NO_SESSION' };
+      return { ok: false, reason: 'NO_SESSION', localOnly: true, member: state.member };
     }
 
     state.client = auth.client;
     state.session = auth.session;
+    state.localOnly = false;
     const sessionId = auth.session.user.id;
     const { data: ownProfile, error: profileError } = await state.client
       .from('profiles')
@@ -188,6 +196,7 @@
     persist,
     saveNow,
     remove,
-    isReady: () => state.ready
+    isReady: () => state.ready,
+    isLocalOnly: () => state.localOnly
   });
 })();

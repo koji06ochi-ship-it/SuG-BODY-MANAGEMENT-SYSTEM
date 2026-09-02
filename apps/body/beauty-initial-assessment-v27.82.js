@@ -408,6 +408,17 @@
     renderFields(); renderScales(); await loadDraftPhotos(); go(0);
   }
 
+  function reassessmentRequested() {
+    return new URLSearchParams(root.location?.search || '').get('mode') === 'reassessment' && records().length > 0;
+  }
+
+  function consumeReassessmentRequest() {
+    if (!root.history?.replaceState || !root.location?.href) return;
+    const url = new URL(root.location.href);
+    url.searchParams.delete('mode');
+    root.history.replaceState({}, '', url.toString());
+  }
+
   function bind() {
     document.querySelectorAll('[data-next]').forEach(button => button.onclick = () => go(state.step + 1));
     document.querySelectorAll('[data-back]').forEach(button => button.onclick = () => go(state.step - 1));
@@ -420,7 +431,14 @@
     $('startReassessment').onclick = startReassessment;
   }
   async function boot() {
-    restoreDraft(); bind(); renderFields(); renderScales(); renderPhotoStatus(); renderHistory(); renderComparison(); await loadDraftPhotos(); go(state.step);
+    const startFromRomCare = reassessmentRequested();
+    restoreDraft(); bind(); renderFields(); renderScales(); renderPhotoStatus(); renderHistory(); renderComparison();
+    if (startFromRomCare) {
+      consumeReassessmentRequest();
+      await startReassessment();
+      return;
+    }
+    await loadDraftPhotos(); go(state.step);
   }
 
   root.SuGBeautyAssessment = Object.freeze({ version: VERSION, issueCatalog: ISSUE_CATALOG, calculate, current: () => ({ ...snapshot(), result: state.result }), records });
