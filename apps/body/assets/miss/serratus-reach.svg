@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900">
+<rect width="720" height="900" rx="34" fill="#fff"/><rect x="18" y="18" width="684" height="864" rx="28" fill="none" stroke="#c8a34b" stroke-width="3"/>
+<text x="42" y="78" font-family="sans-serif" font-size="50" font-weight="800" fill="#111">Serratus Reach</text><text x="42" y="118" font-family="sans-serif" font-size="22" font-weight="700" fill="#a77d22">前鋸筋で肩甲骨を前に滑らせる</text>
+<line x1="135" y1="515" x2="495" y2="515" stroke="#222" stroke-width="16" stroke-linecap="round"/><circle cx="115" cy="505" r="29" fill="#222"/><line x1="445" y1="515" x2="445" y2="355" stroke="#222" stroke-width="15"/><line x1="445" y1="355" x2="515" y2="355" stroke="#222" stroke-width="15"/>
+<line x1="280" y1="470" x2="280" y2="260" stroke="#222" stroke-width="14"/><line x1="335" y1="470" x2="335" y2="240" stroke="#222" stroke-width="14"/><path d="M335 260 l0 -55" stroke="#c8a34b" stroke-width="10"/><path d="M320 214 l15 -22 15 22" fill="#c8a34b"/>
+<path d="M295 430 C330 410 365 420 390 445" fill="none" stroke="#59baff" stroke-width="9"/>
+<text x="42" y="635" font-family="sans-serif" font-size="24" font-weight="800" fill="#111">① 肋骨を整える</text><text x="42" y="680" font-family="sans-serif" font-size="24" font-weight="800" fill="#111">② 腕を天井へ伸ばす</text><text x="42" y="725" font-family="sans-serif" font-size="24" font-weight="800" fill="#111">③ 肩甲骨を前にスライド</text><text x="42" y="770" font-family="sans-serif" font-size="24" font-weight="800" fill="#111">④ 8〜12回 × 2set</text>
+<rect x="42" y="808" width="636" height="58" rx="16" fill="#f7f1e4"/><text x="62" y="845" font-family="sans-serif" font-size="20" font-weight="700" fill="#75561d">NG：肩をすくめる／肋骨が前に開く</text>
+</svg>
