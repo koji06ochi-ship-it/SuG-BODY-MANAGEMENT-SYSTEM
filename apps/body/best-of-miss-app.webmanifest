@@ -1,0 +1,12 @@
+{
+  "name": "BEST OF MISS · S.u.G",
+  "short_name": "BEST OF MISS",
+  "start_url": "./best-of-miss-app.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#050506",
+  "theme_color": "#12020b",
+  "icons": [
+    {"src":"./best-of-miss-icon-180.png?miss=20260903a","sizes":"180x180","type":"image/png","purpose":"any maskable"}
+  ]
+}
