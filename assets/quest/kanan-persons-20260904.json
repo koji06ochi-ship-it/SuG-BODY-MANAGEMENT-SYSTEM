@@ -1,0 +1,17 @@
+{
+  "collection": "河南町 PERSON COLLECTION",
+  "walkRule": "河南町内でWALK START後に記録した地域内歩数のみ有効。日全体の歩数は対象外。GPS到達だけでは取得できません。",
+  "certaintyLegend": {"●":"史料・公的資料で確認","○":"伝承・系図","△":"仮説・要検証","×":"偶然／未確認"},
+  "secretCandidates": [{"name":"前田慶次","status":"将来のSECRET候補","certainty":"×","note":"通常PERSONカードには含めない。河南町との関係は未確認。"}],
+  "persons": [
+    {"id":"nigihayahi","name":"饒速日命","era":"神話・古代伝承","place":"近つ飛鳥周辺（候補）","certainty":"△","certaintyNote":"河南町との直接関係は要検証","steps":4000,"gps":"近つ飛鳥風土記の丘（候補地点）","why":"古代交通と祭祀の痕跡を現地景観から考える","quest":"展示・案内板を確認し、確認できた事実と伝承を分けて答える","get":"地域内4,000歩 + GPS候補地点 + WHY正解","status":"available","unlockAfter":null},
+    {"id":"saigyo","name":"西行法師","era":"平安末期〜鎌倉初期","place":"弘川寺・西行墳","certainty":"●","certaintyNote":"河南町公式資料で弘川寺入滅を確認","steps":5000,"gps":"弘川寺","why":"西行はなぜ晩年の地に弘川寺を選んだのか","quest":"西行の歌と弘川寺の景観を結びつけて答える","get":"地域内5,000歩 + 弘川寺GPS + WHY正解","status":"available","unlockAfter":null},
+    {"id":"jiun","name":"似雲法師","era":"江戸時代","place":"弘川寺（伝承確認地点）","certainty":"○","certaintyNote":"西行顕彰との関係は伝承資料の追加確認が必要","steps":5000,"gps":"弘川寺","why":"後世の人々は西行をどのように顕彰したのか","quest":"現地案内で似雲法師の記述を探し、伝承として答える","get":"地域内5,000歩 + 弘川寺GPS + WHY正解","status":"locked","unlockAfter":"西行法師"},
+    {"id":"soga-ishikawa","name":"宗我石川宿禰","era":"古代伝承","place":"壹須何神社","certainty":"○","certaintyNote":"河南町公式資料が『まつったといわれる』と記載","steps":4500,"gps":"壹須何神社","why":"なぜこの地で蘇我氏祖先の祭祀伝承が残ったのか","quest":"神社の由緒を読み、史実と伝承の表現を区別する","get":"地域内4,500歩 + 壹須何神社GPS + WHY正解","status":"locked","unlockAfter":"似雲法師"},
+    {"id":"kusunoki-masashige","name":"楠木正成","era":"鎌倉末期〜南北朝","place":"平石城跡","certainty":"●","certaintyNote":"河南町公式資料で平石城跡をゆかりの地として確認","steps":5000,"gps":"平石城跡・持尾城跡の2地点","why":"地形は守りと連絡にどう生かされたか","quest":"2地点の地形を比較して答える","get":"地域内5,000歩 + GPS 2地点 + QUEST 2問","status":"active","unlockAfter":"宗我石川宿禰"},
+    {"id":"kusunoki-masanori","name":"楠木正儀","era":"南北朝時代","place":"平石城跡","certainty":"●","certaintyNote":"河南町公式観光資料で1359年の守備を確認","steps":7000,"gps":"平石城跡","why":"正儀はなぜ平石城を固めたのか","quest":"城跡の立地と当時の対立関係から答える","get":"地域内7,000歩 + 平石城跡GPS + WHY正解","status":"locked","unlockAfter":"楠木正成"},
+    {"id":"hiraiwa-shigenao","name":"平岩茂直","era":"時代未確認","place":"平石城跡（要検証）","certainty":"×","certaintyNote":"河南町公式資料の『平岩茂蔵』とは名が一致せず未確認","steps":5000,"gps":"平石城跡（検証地点）","why":"現地資料にこの人物名が確認できるか","quest":"案内板・公的資料で表記を照合する検証QUEST","get":"地域内5,000歩 + 検証地点GPS + 資料照合","status":"locked","unlockAfter":"楠木正儀"},
+    {"id":"hiraiwa-shigeyuki","name":"平岩茂幸","era":"時代未確認","place":"平石城跡（要検証）","certainty":"×","certaintyNote":"現時点で河南町との関係を公的資料から確認できず","steps":5000,"gps":"平石城跡（検証地点）","why":"同名人物と地域史の関係は確認できるか","quest":"一次・公的資料の記載有無を確認する検証QUEST","get":"地域内5,000歩 + 検証地点GPS + 資料照合","status":"locked","unlockAfter":"平岩茂直"},
+    {"id":"ishikawa-fusanaga","name":"石川総長","era":"古代〜中世説（要検証）","place":"石川流域（候補）","certainty":"△","certaintyNote":"人物比定と河南町との直接関係は追加検証が必要","steps":10000,"gps":"石川流域の指定候補地点","why":"地名・氏族名・人物名の一致は史実を示すのか","quest":"一致だけで断定できない理由を答えるMASTER検証","get":"章累積10,000歩 + GPS候補地点 + 検証QUEST","status":"locked","unlockAfter":"平岩茂幸"}
+  ]
+}
