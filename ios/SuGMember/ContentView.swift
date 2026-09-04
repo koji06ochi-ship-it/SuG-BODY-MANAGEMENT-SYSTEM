@@ -40,6 +40,7 @@ struct ContentView: View {
     private func refreshAndPush() async {
         await health.refreshToday()
         pushHealth(to: bodyStore)
+        pushHealth(to: questStore)
         pushHealth(to: walkStore)
     }
 
@@ -52,19 +53,19 @@ struct ContentView: View {
         }
         .tint(Color(red:0.89,green:0.72,blue:0.28)).toolbarBackground(Color.black,for:.tabBar).toolbarBackground(.visible,for:.tabBar).preferredColorScheme(.dark)
         .task {
-            bodyStore.loadIfNeeded(); walkStore.loadIfNeeded()
+            bodyStore.loadIfNeeded(); questStore.loadIfNeeded(); walkStore.loadIfNeeded()
             await health.requestAuthorization()
             await refreshAndPush()
         }
         .task(id: selectedTab) {
-            guard selectedTab == 0 || selectedTab == 2 else { return }
+            guard selectedTab == 0 || selectedTab == 1 || selectedTab == 2 else { return }
             while !Task.isCancelled {
                 if scenePhase == .active { await refreshAndPush() }
                 try? await Task.sleep(nanoseconds: 60_000_000_000)
             }
         }
         .onChange(of: selectedTab) { _, tab in
-            guard tab == 0 || tab == 2 else { return }
+            guard tab == 0 || tab == 1 || tab == 2 else { return }
             Task { await refreshAndPush() }
         }
         .onChange(of: scenePhase) { _, phase in
