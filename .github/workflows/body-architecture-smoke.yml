@@ -1,0 +1,50 @@
+name: BODY architecture smoke
+
+on:
+  push:
+    branches:
+      - main
+      - 'codex/**'
+    paths:
+      - 'apps/body/**'
+      - 'apps/shared/rom-care-*.js'
+      - 'apps/shared/rom-care-*.css'
+      - 'shrine-quest-v26.5.20*.html'
+      - 'ios/**'
+      - 'index.html'
+      - 'tests/body-architecture-smoke.mjs'
+      - 'AGENTS.md'
+      - 'docs/CODEX_BODY_ARCHITECTURE_V27.82.md'
+      - '.github/workflows/body-architecture-smoke.yml'
+  pull_request:
+    paths:
+      - 'apps/body/**'
+      - 'apps/shared/rom-care-*.js'
+      - 'apps/shared/rom-care-*.css'
+      - 'shrine-quest-v26.5.20*.html'
+      - 'ios/**'
+      - 'index.html'
+      - 'tests/body-architecture-smoke.mjs'
+      - 'AGENTS.md'
+      - 'docs/CODEX_BODY_ARCHITECTURE_V27.82.md'
+      - '.github/workflows/body-architecture-smoke.yml'
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: BODY architecture static smoke
+        run: node tests/body-architecture-smoke.mjs
+      - name: ROM CARE shared JS syntax
+        run: |
+          node --check apps/shared/rom-care-v27.82.js
+          node --check apps/shared/rom-care-data-v27.82.js
+          node --check apps/shared/rom-care-engine-v27.82.js
+          node --check apps/shared/rom-care-analysis-v27.82.js
+          node --check apps/body/beauty-initial-assessment-v27.82.js
