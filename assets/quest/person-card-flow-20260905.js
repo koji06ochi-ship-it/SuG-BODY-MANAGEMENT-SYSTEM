@@ -42,13 +42,16 @@
     if(p.unlockAfter){const parent=KANAN_PERSONS.find(x=>x.name===p.unlockAfter);if(!parent||!isGot(area,parent))return 'locked'}
     return 'available';
   }
-  function areaLabel(area){return area==='taishi'?'太子町':'河南町'}
+  function areaLabel(area){return area==='taishi'?'太子町':area==='chihaya'?'千早赤阪村':'河南町'}
   function requiredGps(p){const explicit=Number(p.gpsRequired);return Number.isFinite(explicit)&&explicit>0?Math.floor(explicit):(/2地点/.test(p.gps||'')?2:1)}
   function gpsPoints(p){return Array.isArray(p.gpsPoints)?p.gpsPoints.filter(x=>x&&x.id&&Number.isFinite(+x.lat)&&Number.isFinite(+x.lng)&&Number.isFinite(+x.radiusMeters)):[]}
   function validGpsChecks(p,s){const ids=new Set(gpsPoints(p).map(point=>String(point.id)));return (s.gpsChecks||[]).filter(id=>ids.has(String(id)))}
   function conditions(p,s){return {walk:Number(s.regionalSteps||0)>=Number(p.steps||0),gps:validGpsChecks(p,s).length>=requiredGps(p),why:s.whyClear===true}}
   function escapeHtml(value){return String(value==null?'':value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
   function portraitMarkup(p,index,area){
+    if(area==='chihaya'&&p.visual&&p.visual.asset){
+      return '<div class="personPortrait chihayaPortrait" style="--chihaya-art:url(\'./'+escapeHtml(p.visual.asset)+'?v=chihaya-persons-20260905a\');background-position:center,'+escapeHtml(p.visual.focalY||'top')+'"></div>';
+    }
     if(area==='taishi'){
       const spriteIndex=Number(p.visual&&p.visual.spriteIndex!=null?p.visual.spriteIndex:index),x=(spriteIndex%5)*25,y=[0,93.46][Math.floor(spriteIndex/5)]||0;
       return '<div class="personPortrait taishiPortrait" style="background-position:'+x+'% '+y+'%"></div>';
@@ -74,7 +77,7 @@
     document.getElementById('pdArt').innerHTML=portraitMarkup(p,index,area)+'<div class="personShade"></div>';
     document.getElementById('pdName').textContent=p.name;
     document.getElementById('pdEra').textContent=p.era+'　'+p.certainty+' 史実確度';
-    document.getElementById('pdCert').textContent=p.certainty+' '+p.certaintyNote;
+    document.getElementById('pdCert').textContent=p.existenceCertainty&&p.relationCertainty?'人物 '+p.existenceCertainty+' / 地域関係 '+p.relationCertainty+'　'+p.certaintyNote:p.certainty+' '+p.certaintyNote;
     document.getElementById('pdSummary').textContent=p.certaintyNote;
     document.getElementById('pdRelation').innerHTML='<b>WHY</b><br>'+escapeHtml(p.why)+'<br><br><b>現地QUEST</b><br>'+escapeHtml(p.quest);
     document.getElementById('pdGrid').innerHTML='<div class="detailBox"><b>関連地点</b>'+escapeHtml(p.place)+'</div><div class="detailBox"><b>必要歩数</b>'+areaLabel(area)+'内 '+Number(p.steps).toLocaleString()+'歩</div><div class="detailBox"><b>GPS条件</b>'+escapeHtml(p.gps)+'</div><div class="detailBox"><b>解放条件</b>'+(p.unlockAfter?escapeHtml(p.unlockAfter)+'取得後':'開始時から挑戦可')+'</div>';
@@ -95,6 +98,9 @@
   }
   function metric(label,value,done){return '<div class="questMetric'+(done?' done':'')+'"><b>'+(done?'✓ ':'')+label+'</b><span>'+value+'</span></div>'}
   function choicesFor(p){
+    if(Array.isArray(p.whyChoices)&&p.whyChoices.length===3){
+      return p.whyChoices.map(choice=>({text:String(choice.text||''),correct:choice.correct===true}));
+    }
     const wrong1='現地に到着した事実だけで、人物との関係が証明される。';
     const wrong2='人物名や地名が似ていれば、史実として断定できる。';
     const list=[{text:p.certaintyNote,correct:true},{text:wrong1,correct:false},{text:wrong2,correct:false}];
@@ -164,13 +170,13 @@
   window.returnToPersonCollection=function(){syncCollectionStates();go('area')};
   window.SUGQuest=Object.assign(window.SUGQuest||{}, {
     recordGpsCheck:markGpsCheck,
+    syncPersonCollection:syncCollectionStates,
     updateRegionalPresence:function(args){args=args||{};if(!progress.activeQuest||args.inside!==true||args.area!==progress.activeQuest.area)return false;const s=stateFor(progress.activeQuest.area,progress.activeQuest.id);if(!s.regionVerified){s.regionVerified=true;s.regionStepBaseline=totalSteps;s.regionalAtBaseline=Number(s.regionalSteps||0);saveProgress();if(activePerson)renderDetail()}return true},
     getPersonProgress:function(){return JSON.parse(JSON.stringify(progress))},
     distanceMeters:GPS_CORE&&GPS_CORE.distanceMeters
   });
   const originalActivate=window.activateArea;
-  window.activateArea=function(name){currentArea=name==='太子町'?'taishi':'kanan';const result=originalActivate(name);setTimeout(syncCollectionStates,0);return result};
-  const personListNode=document.getElementById('personList');if(personListNode)new MutationObserver(syncCollectionStates).observe(personListNode,{childList:true});
+  window.activateArea=function(name){currentArea=name==='太子町'?'taishi':name==='千早赤阪村'?'chihaya':'kanan';const result=originalActivate(name);setTimeout(syncCollectionStates,0);setTimeout(syncCollectionStates,400);setTimeout(syncCollectionStates,1200);return result};
   window.addEventListener('sug:quest-gps',event=>markGpsCheck(event.detail||{}));
   window.addEventListener('sug:native-health',event=>updateRegionalFromHealth(event.detail||{}));
   try{const initial=window.__SUG_NATIVE_HEALTH__||JSON.parse(localStorage.getItem('sug_native_health_v1')||'null');if(initial)updateRegionalFromHealth(initial)}catch(e){}

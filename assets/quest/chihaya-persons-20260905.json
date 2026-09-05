@@ -1,0 +1,144 @@
+{
+  "area": "千早赤阪村",
+  "chapter": "楠木一族と南朝――千早赤阪から始まる物語",
+  "walkRule": "千早赤阪村内でWALK START後に記録した地域内歩数のみ有効。日全体の歩数とWALK START前の歩数は対象外。GPS到達だけでは取得できません。",
+  "certaintyLegend": {"●":"史料・公的資料で確認","○":"伝承・系図","△":"仮説・要検証","×":"偶然／未確認"},
+  "persons": [
+    {
+      "id": "chihaya-kusunoki-masashige",
+      "name": "楠木正成",
+      "era": "鎌倉末期〜南北朝",
+      "certainty": "○",
+      "existenceCertainty": "●",
+      "relationCertainty": "○",
+      "certaintyNote": "人物と赤阪城・千早城での活動は史料・公的資料で確認できる。楠公誕生地は生誕地伝承として区別して扱う。",
+      "place": "楠公誕生地・下赤阪城跡",
+      "gps": "楠公誕生地／下赤阪の棚田・下赤阪城跡入口",
+      "gpsRequired": 2,
+      "gpsPoints": [
+        {"id":"chihaya-kusunoki-birthplace","name":"楠公誕生地","lat":34.4639008,"lng":135.625164,"radiusMeters":120,"sourceUrl":"https://map.yahoo.co.jp/v3/place/Gcvrf9xRl_M"},
+        {"id":"chihaya-shimo-akasaka-access","name":"下赤阪の棚田・下赤阪城跡入口","lat":34.4587848,"lng":135.6181751,"radiusMeters":180,"sourceUrl":"https://www.vill.chihayaakasaka.osaka.jp/kanko/shizen/11823.html"}
+      ],
+      "steps": 6000,
+      "status": "active",
+      "unlockAfter": "",
+      "why": "なぜ千早赤阪村が楠木正成の物語の中心地になるのか？",
+      "whyChoices": [
+        {"text":"生誕地伝承と、赤阪城・千早城など正成の戦いに関わる史跡が村内に集まるため。","correct":true},
+        {"text":"村内のすべての山城を正成が築いたと断定できるため。","correct":false},
+        {"text":"楠木という地名だけで出生地が史料上確定するため。","correct":false}
+      ],
+      "quest": "楠公誕生地と下赤阪の地形を歩き、確認できる史跡と生誕伝承を分けて答える。",
+      "get": "千早赤阪村内6,000歩＋楠公誕生地・下赤阪GPS 2地点＋WHYクリア",
+      "emblem": {"type":"KAMON","label":"正本菊水紋","asset":"kikusui-kusunoki-masanari-20260904.jpg","review":false,"basis":"既存の正本菊水紋assetを使用"},
+      "visual": {"asset":"chihaya-masashige-20260905.png","scene":"楠公誕生地・下赤阪の棚田・金剛山系","pose":"刀へ手を添え、山城群を示す前進構図","focalY":"top"}
+    },
+    {
+      "id": "chihaya-kusunoki-masayuki",
+      "name": "楠木正行",
+      "era": "南北朝時代",
+      "certainty": "○",
+      "existenceCertainty": "●",
+      "relationCertainty": "○",
+      "certaintyNote": "人物と正成の子としての活動は史料で確認できる。千早赤阪村カードでは楠木一族の地域的継承を扱い、個別の居住地とは断定しない。",
+      "place": "楠公誕生地・楠木一族関連地",
+      "gps": "楠公誕生地",
+      "gpsRequired": 1,
+      "gpsPoints": [{"id":"chihaya-kusunoki-birthplace","name":"楠公誕生地","lat":34.4639008,"lng":135.625164,"radiusMeters":120,"sourceUrl":"https://map.yahoo.co.jp/v3/place/Gcvrf9xRl_M"}],
+      "steps": 6500,
+      "status": "locked",
+      "unlockAfter": "楠木正成",
+      "why": "正行は父・正成の何を受け継いだと捉えられるか？",
+      "whyChoices": [
+        {"text":"南朝方を支える立場と、楠木一族を率いる責任を受け継いだ。","correct":true},
+        {"text":"正成とまったく同じ戦場・同じ生涯を繰り返した。","correct":false},
+        {"text":"千早赤阪村のすべての史跡を正行が築いた。","correct":false}
+      ],
+      "quest": "楠公誕生地周辺で父子の史料と後世の顕彰を見分け、継承された役割を考える。",
+      "get": "千早赤阪村内6,500歩＋楠公誕生地GPS＋WHYクリア",
+      "emblem": {"type":"CLAN","label":"楠木氏紋","asset":"kikusui-kusunoki-masanari-20260904.jpg","review":false,"basis":"楠木氏を示すCLAN表示。既存の正本菊水紋assetのみ使用"},
+      "visual": {"asset":"chihaya-masayuki-20260905.png","scene":"楠公誕生地・金剛山麓","pose":"青銀の旗を掲げて石段を駆け上がる若武者","focalY":"top"}
+    },
+    {
+      "id": "chihaya-kusunoki-masasue",
+      "name": "楠木正季",
+      "era": "鎌倉末期〜南北朝",
+      "certainty": "△",
+      "existenceCertainty": "●",
+      "relationCertainty": "△",
+      "certaintyNote": "正成の弟として行動した人物は史料で確認できる。千早赤阪村内の特定居所は確認できないため、氏族の信仰地との関係は要検証。",
+      "place": "建水分神社（楠木氏の氏神）",
+      "gps": "建水分神社",
+      "gpsRequired": 1,
+      "gpsPoints": [{"id":"chihaya-take-mikumari","name":"建水分神社","lat":34.459637,"lng":135.631592,"radiusMeters":110,"sourceUrl":"https://geoshape.ex.nii.ac.jp/nrct-poi/resource/28/280000358100.html"}],
+      "steps": 6500,
+      "status": "locked",
+      "unlockAfter": "楠木正行",
+      "why": "正季は正成とどのような関係にある人物か？",
+      "whyChoices": [
+        {"text":"正成の弟として行動した人物。村内の個別居所は確認できないため分けて扱う。","correct":true},
+        {"text":"正成の子で、楠公誕生地に住んだことが確定している。","correct":false},
+        {"text":"後醍醐天皇の弟で、建水分神社を創建した。","correct":false}
+      ],
+      "quest": "建水分神社で楠木氏の氏神という地域的関係を確認し、正季個人の史実と分ける。",
+      "get": "千早赤阪村内6,500歩＋建水分神社GPS＋WHYクリア",
+      "emblem": {"type":"CLAN","label":"楠木氏紋","asset":"kikusui-kusunoki-masanari-20260904.jpg","review":false,"basis":"楠木氏を示すCLAN表示。既存の正本菊水紋assetのみ使用"},
+      "visual": {"asset":"chihaya-masasue-20260905.png","scene":"建水分神社の鳥居・石段・社叢","pose":"薙刀で参道を守る正面寄りの防御構図","focalY":"top"}
+    },
+    {
+      "id": "chihaya-emperor-go-daigo",
+      "name": "後醍醐天皇",
+      "era": "鎌倉末期〜南北朝",
+      "certainty": "○",
+      "existenceCertainty": "●",
+      "relationCertainty": "○",
+      "certaintyNote": "人物と正成との政治・軍事的関係は史料で確認できる。建水分神社の現地再興を命じたという関係は村公式資料でも伝承表現のため○。",
+      "place": "建水分神社（再興伝承）",
+      "gps": "建水分神社",
+      "gpsRequired": 1,
+      "gpsPoints": [{"id":"chihaya-take-mikumari","name":"建水分神社","lat":34.459637,"lng":135.631592,"radiusMeters":110,"sourceUrl":"https://geoshape.ex.nii.ac.jp/nrct-poi/resource/28/280000358100.html"}],
+      "steps": 7500,
+      "status": "locked",
+      "unlockAfter": "楠木正季",
+      "why": "なぜ後醍醐天皇と楠木正成が千早赤阪村の章でつながるのか？",
+      "whyChoices": [
+        {"text":"倒幕・南朝方をめぐる史料上の関係があり、神社再興の当地伝承も残るため。","correct":true},
+        {"text":"後醍醐天皇が千早赤阪村に都を置いたことが確定しているため。","correct":false},
+        {"text":"後醍醐天皇自身が千早城を築いたため。","correct":false}
+      ],
+      "quest": "建水分神社で再興伝承を確認し、正成との史料上の関係と現地滞在を混同せず答える。",
+      "get": "千早赤阪村内7,500歩＋建水分神社GPS＋WHYクリア",
+      "emblem": {"type":"SYMBOL","label":"南朝の綸旨","mark":"綸","review":false,"basis":"天皇の命令文書を示すゲーム用歴史シンボル。家紋ではない"},
+      "visual": {"asset":"chihaya-go-daigo-20260905.png","scene":"建水分神社・金剛山系（政治的関係を示す象徴表現）","pose":"紫金の装束で綸旨を掲げる斜め構図","focalY":"top"}
+    },
+    {
+      "id": "chihaya-hisako",
+      "name": "久子",
+      "era": "鎌倉末期〜南北朝伝承",
+      "certainty": "△",
+      "existenceCertainty": "△",
+      "relationCertainty": "○",
+      "certaintyNote": "楠木正成の妻として伝わるが、久子という名称・出自・人物像には複数説がある。越智氏娘説などを断定しない。",
+      "place": "楠公誕生地・楠木一族伝承地",
+      "gps": "楠公誕生地",
+      "gpsRequired": 1,
+      "gpsPoints": [{"id":"chihaya-kusunoki-birthplace","name":"楠公誕生地","lat":34.4639008,"lng":135.625164,"radiusMeters":120,"sourceUrl":"https://map.yahoo.co.jp/v3/place/Gcvrf9xRl_M"}],
+      "steps": 7500,
+      "status": "locked",
+      "unlockAfter": "後醍醐天皇",
+      "why": "久子について、史料と伝承をどう分けて扱うべきか？",
+      "whyChoices": [
+        {"text":"正成の妻としての伝承を紹介しつつ、名称・出自・人物像の諸説は確定事項にしない。","correct":true},
+        {"text":"久子という名と越智氏出身説をすべて史料上確定として扱う。","correct":false},
+        {"text":"伝承人物なので地域との関係をすべて無関係とする。","correct":false}
+      ],
+      "quest": "楠公誕生地で一族伝承の伝わり方を見て、確認できる事実と後世の人物像を分ける。",
+      "get": "千早赤阪村内7,500歩＋楠公誕生地GPS＋WHYクリア",
+      "emblem": {"type":"SYMBOL","label":"楠木家伝承","mark":"縁","review":true,"basis":"妻としての伝承を示す歴史シンボル。本人固有の家紋ではない"},
+      "visual": {"asset":"chihaya-hisako-20260905.png","scene":"楠公誕生地・楠木一族伝承地","pose":"数珠と書状を持ち、振り返る非武装の女性像","focalY":"top"}
+    }
+  ],
+  "secretCandidates": [
+    {"id":"chihaya-secret-reserved","name":"？？？","type":"SECRET","certainty":"△","status":"未実装","note":"楠木一族の別伝承は史料確認後に追加する。赤瀬・越智関連および現代文化人は現段階で実カード化しない。"}
+  ]
+}
