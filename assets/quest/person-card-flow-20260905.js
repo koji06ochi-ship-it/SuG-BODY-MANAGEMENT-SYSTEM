@@ -2,6 +2,7 @@
   'use strict';
   const STORAGE_KEY='sug_quest_person_progress_v1';
   const STATUS_TEXT={active:'ACTIVE',available:'AVAILABLE',locked:'LOCK',get:'GET',clear:'CLEAR'};
+  const GPS_CORE=window.SUGQuestGps;
   let currentArea='kanan';
   let activePerson=null;
   let totalSteps=readTotalSteps();
@@ -42,8 +43,10 @@
     return 'available';
   }
   function areaLabel(area){return area==='taishi'?'太子町':'河南町'}
-  function requiredGps(p){return /2地点/.test(p.gps||'')?2:1}
-  function conditions(p,s){return {walk:Number(s.regionalSteps||0)>=Number(p.steps||0),gps:(s.gpsChecks||[]).length>=requiredGps(p),why:s.whyClear===true}}
+  function requiredGps(p){const explicit=Number(p.gpsRequired);return Number.isFinite(explicit)&&explicit>0?Math.floor(explicit):(/2地点/.test(p.gps||'')?2:1)}
+  function gpsPoints(p){return Array.isArray(p.gpsPoints)?p.gpsPoints.filter(x=>x&&x.id&&Number.isFinite(+x.lat)&&Number.isFinite(+x.lng)&&Number.isFinite(+x.radiusMeters)):[]}
+  function validGpsChecks(p,s){const ids=new Set(gpsPoints(p).map(point=>String(point.id)));return (s.gpsChecks||[]).filter(id=>ids.has(String(id)))}
+  function conditions(p,s){return {walk:Number(s.regionalSteps||0)>=Number(p.steps||0),gps:validGpsChecks(p,s).length>=requiredGps(p),why:s.whyClear===true}}
   function escapeHtml(value){return String(value==null?'':value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
   function portraitMarkup(p,index,area){
     if(area==='taishi'){
@@ -67,7 +70,7 @@
   }
   function renderDetail(){
     if(!activePerson)return;
-    const p=activePerson.person,area=activePerson.area,index=activePerson.index,s=stateFor(area,p.id),status=resolvedStatus(area,p),locked=status==='locked',started=s.questStartSteps!==null,c=conditions(p,s),gpsCount=(s.gpsChecks||[]).length,gpsNeed=requiredGps(p);
+    const p=activePerson.person,area=activePerson.area,index=activePerson.index,s=stateFor(area,p.id),status=resolvedStatus(area,p),locked=status==='locked',started=s.questStartSteps!==null,c=conditions(p,s),gpsCount=validGpsChecks(p,s).length,gpsNeed=requiredGps(p);
     document.getElementById('pdArt').innerHTML=portraitMarkup(p,index,area)+'<div class="personShade"></div>';
     document.getElementById('pdName').textContent=p.name;
     document.getElementById('pdEra').textContent=p.era+'　'+p.certainty+' 史実確度';
@@ -87,6 +90,7 @@
     else if(s.got){notice.className='questNotice ok';notice.textContent='CARD GET済み。取得状態はこの端末に保存されています。'}
     else if(!started){notice.className='questNotice';notice.textContent='WALK START後、地域確認済みの歩数だけを計測します。日全体の歩数では解除されません。'}
     else if(!s.regionVerified){notice.className='questNotice';notice.textContent='地域確認待ち。GPS CHECKまたはnative地域判定後から地域内歩数を計測します。'}
+    else if(s.gpsLastName){notice.className='questNotice ok';notice.innerHTML='<b>✓ GPS CHECK</b><br>'+escapeHtml(s.gpsLastName)+(Number.isFinite(+s.gpsLastDistance)?'<br>現在地 '+Math.round(+s.gpsLastDistance)+'m':'')}
     else{notice.className='questNotice'+(c.walk?' ok':'');notice.textContent=c.walk?'必要な地域内歩数を達成しました。':'地域内歩数を計測中です。'}
   }
   function metric(label,value,done){return '<div class="questMetric'+(done?' done':'')+'"><b>'+(done?'✓ ':'')+label+'</b><span>'+value+'</span></div>'}
@@ -117,12 +121,13 @@
     args=args||{};if(!activePerson)return false;
     const p=activePerson.person,area=activePerson.area;if(args.personId&&args.personId!==p.id)return false;if(args.area&&args.area!==area)return false;if(args.verified!==true)return false;
     const s=stateFor(area,p.id);if(s.questStartSteps===null)return false;
+    const id=String(args.spotId||''),point=gpsPoints(p).find(item=>String(item.id)===id);if(!point)return false;
     if(!s.regionVerified){s.regionVerified=true;s.regionStepBaseline=totalSteps;s.regionalAtBaseline=Number(s.regionalSteps||0)}
-    const id=String(args.spotId||p.gps||('gps-'+((s.gpsChecks||[]).length+1)));if(!s.gpsChecks.includes(id))s.gpsChecks.push(id);
+    if(!s.gpsChecks.includes(id))s.gpsChecks.push(id);
+    s.gpsLastName=String(args.spotName||point.name||p.gps);
+    s.gpsLastDistance=Number.isFinite(+args.distanceMeters)?Math.round(+args.distanceMeters):null;
     saveProgress();renderDetail();return true;
   }
-  function distanceMeters(lat1,lon1,lat2,lon2){const r=6371000,a1=lat1*Math.PI/180,a2=lat2*Math.PI/180,da=(lat2-lat1)*Math.PI/180,doa=(lon2-lon1)*Math.PI/180,a=Math.sin(da/2)**2+Math.cos(a1)*Math.cos(a2)*Math.sin(doa/2)**2;return 2*r*Math.atan2(Math.sqrt(a),Math.sqrt(1-a))}
-  function gpsPoints(p){return Array.isArray(p.gpsPoints)?p.gpsPoints.filter(x=>Number.isFinite(+x.lat)&&Number.isFinite(+x.lng)):[]}
 
   window.openPerson=function(id){
     const index=KANAN_PERSONS.findIndex(x=>x.id===id);if(index<0)return;
@@ -130,19 +135,19 @@
   };
   window.startPersonWalk=function(){
     if(!activePerson)return;const p=activePerson.person,area=activePerson.area;if(resolvedStatus(area,p)==='locked')return;
-    const s=stateFor(area,p.id);s.questStartSteps=totalSteps;s.regionalSteps=0;s.gpsChecks=[];s.whyClear=false;s.got=false;s.regionVerified=false;s.regionStepBaseline=null;s.regionalAtBaseline=0;s.startedAt=new Date().toISOString();progress.activeQuest={area:area,id:p.id};saveProgress();syncCollectionStates();renderDetail();
+    const s=stateFor(area,p.id);s.questStartSteps=totalSteps;s.regionalSteps=0;s.gpsChecks=[];s.gpsLastName=null;s.gpsLastDistance=null;s.whyClear=false;s.got=false;s.regionVerified=false;s.regionStepBaseline=null;s.regionalAtBaseline=0;s.startedAt=new Date().toISOString();progress.activeQuest={area:area,id:p.id};saveProgress();syncCollectionStates();renderDetail();
   };
   window.checkPersonGps=function(){
     if(!activePerson)return;const p=activePerson.person,points=gpsPoints(p),notice=document.getElementById('pdNotice');
-    if(!navigator.geolocation){notice.className='questNotice';notice.textContent='この端末では位置情報を取得できません。';return}
+    if(!points.length){notice.className='questNotice';notice.textContent='GPS地点は現在準備中です。';return}
+    if(!GPS_CORE||!navigator.geolocation){notice.className='questNotice';notice.textContent='この端末では位置情報を取得できません。';return}
     notice.className='questNotice';notice.textContent='現在地を確認しています…';
     navigator.geolocation.getCurrentPosition(pos=>{
-      if(!points.length){notice.className='questNotice';notice.textContent='現在地は取得しましたが、このGPS地点は座標未設定です。偽座標では判定しません。';return}
-      const unchecked=points.filter(point=>!stateFor(activePerson.area,p.id).gpsChecks.includes(String(point.id||point.name)));
-      const matched=unchecked.find(point=>distanceMeters(pos.coords.latitude,pos.coords.longitude,+point.lat,+point.lng)<=Number(point.radiusMeters||100));
-      if(matched){markGpsCheck({personId:p.id,area:activePerson.area,spotId:String(matched.id||matched.name),verified:true});notice.className='questNotice ok';notice.textContent='GPS CHECK完了：'+String(matched.name||p.gps)}
-      else{notice.className='questNotice';notice.textContent='指定地点の範囲外です。関連SPOTで再確認してください。'}
-    },()=>{notice.className='questNotice';notice.textContent='位置情報を取得できませんでした。端末の位置情報許可を確認してください。'},{enableHighAccuracy:true,timeout:12000,maximumAge:0});
+      const s=stateFor(activePerson.area,p.id),result=GPS_CORE.evaluatePosition(pos.coords.latitude,pos.coords.longitude,points,validGpsChecks(p,s));
+      if(!result.nearest){notice.className='questNotice'+(conditions(p,s).gps?' ok':'');notice.textContent=conditions(p,s).gps?'GPS CLEAR':'GPS地点は現在準備中です。';return}
+      if(result.matched){const point=result.matched.point,distance=Math.round(result.matched.distanceMeters);markGpsCheck({personId:p.id,area:activePerson.area,spotId:String(point.id),spotName:String(point.name||p.gps),distanceMeters:distance,verified:true});notice.className='questNotice ok';notice.innerHTML='<b>✓ GPS CHECK</b><br>'+escapeHtml(point.name||p.gps)+'<br>現在地 '+distance+'m'}
+      else{notice.className='questNotice';notice.innerHTML='指定地点まで 約'+Math.round(result.nearest.distanceMeters)+'m<br>もう少し近づいてください。'}
+    },error=>{notice.className='questNotice';notice.textContent=error&&error.code===1?'位置情報を許可してください。':'位置情報を取得できませんでした。電波状況を確認してください。'},{enableHighAccuracy:true,timeout:12000,maximumAge:0});
   };
   window.answerPersonWhy=function(button){
     if(!activePerson||button.disabled)return;const s=stateFor(activePerson.area,activePerson.person.id),result=document.getElementById('whyResult');
@@ -160,17 +165,9 @@
   window.SUGQuest=Object.assign(window.SUGQuest||{}, {
     recordGpsCheck:markGpsCheck,
     updateRegionalPresence:function(args){args=args||{};if(!progress.activeQuest||args.inside!==true||args.area!==progress.activeQuest.area)return false;const s=stateFor(progress.activeQuest.area,progress.activeQuest.id);if(!s.regionVerified){s.regionVerified=true;s.regionStepBaseline=totalSteps;s.regionalAtBaseline=Number(s.regionalSteps||0);saveProgress();if(activePerson)renderDetail()}return true},
-    getPersonProgress:function(){return JSON.parse(JSON.stringify(progress))}
+    getPersonProgress:function(){return JSON.parse(JSON.stringify(progress))},
+    distanceMeters:GPS_CORE&&GPS_CORE.distanceMeters
   });
-  function installDemoControls(){
-    if(new URLSearchParams(location.search).get('demo')!=='person-flow')return;
-    const panel=document.createElement('div');panel.id='personFlowDemo';panel.style.cssText='position:fixed;z-index:99;right:8px;bottom:72px;display:grid;gap:5px;padding:7px;border:1px solid #8b682e;border-radius:8px;background:#050403ee';
-    panel.innerHTML='<button id="demoGps" class="whyChoice">DEMO GPS</button><button id="demoSteps" class="whyChoice">DEMO REQUIRED STEPS</button>';
-    document.body.appendChild(panel);
-    panel.querySelector('#demoGps').onclick=()=>{if(activePerson)markGpsCheck({personId:activePerson.person.id,area:activePerson.area,spotId:'demo:'+activePerson.person.gps,verified:true})};
-    panel.querySelector('#demoSteps').onclick=()=>{if(activePerson)updateRegionalFromHealth({steps:totalSteps+Number(activePerson.person.steps||0)})};
-  }
-  installDemoControls();
   const originalActivate=window.activateArea;
   window.activateArea=function(name){currentArea=name==='太子町'?'taishi':'kanan';const result=originalActivate(name);setTimeout(syncCollectionStates,0);return result};
   const personListNode=document.getElementById('personList');if(personListNode)new MutationObserver(syncCollectionStates).observe(personListNode,{childList:true});

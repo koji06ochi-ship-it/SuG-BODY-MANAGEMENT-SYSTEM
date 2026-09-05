@@ -10,12 +10,17 @@
       "certaintyNote": "人物の存在と太子町・叡福寺の聖徳太子御廟との関係は公的資料で確認できる。",
       "place": "叡福寺・聖徳太子御廟",
       "gps": "叡福寺／聖徳太子御廟",
+      "gpsRequired": 2,
+      "gpsPoints": [
+        {"id":"taishi-eifukuji","name":"叡福寺境内","lat":34.51944337036,"lng":135.63967226931,"radiusMeters":100,"sourceUrl":"https://www.town.taishi.osaka.jp/kanko/rekishi_shiseki/eifukuji.html"},
+        {"id":"taishi-shotoku-mausoleum","name":"聖徳太子御廟","lat":34.519941,"lng":135.63924,"radiusMeters":120,"sourceUrl":"https://www.town.taishi.osaka.jp/kanko/rekishi_shiseki/syotokutaishi_haka.html"}
+      ],
       "steps": 5000,
       "status": "active",
       "unlockAfter": "",
       "why": "なぜ太子町が『王陵の谷』と呼ばれ、聖徳太子御廟がここにあるのか？",
       "quest": "叡福寺と御廟を歩き、太子町に残る飛鳥時代の王陵配置を確認する。",
-      "get": "太子町内5,000歩＋叡福寺GPS＋WHYクリア",
+      "get": "太子町内5,000歩＋叡福寺・聖徳太子御廟GPS 2地点＋WHYクリア",
       "emblem": {"type":"SYMBOL","label":"叡福寺御廟","mark":"廟","review":false,"basis":"聖徳太子御廟を地域シンボルとして使用"},
       "visual": {"scene":"叡福寺・御廟","pose":"正面寄りの飛鳥時代皇族装束。笏または巻物を持つ","spriteIndex":0}
     },
@@ -27,6 +32,10 @@
       "certaintyNote": "推古天皇と太子町の推古天皇陵は公的資料で確認できる。",
       "place": "推古天皇陵",
       "gps": "推古天皇陵",
+      "gpsRequired": 1,
+      "gpsPoints": [
+        {"id":"taishi-suiko-mausoleum","name":"推古天皇陵","lat":34.5118971,"lng":135.6495666,"radiusMeters":150,"sourceUrl":"https://www.town.taishi.osaka.jp/kanko/rekishi_shiseki/suikotennoryo.html"}
+      ],
       "steps": 5000,
       "status": "available",
       "unlockAfter": "聖徳太子",
@@ -44,6 +53,10 @@
       "certaintyNote": "日本書紀の改葬記事と河内磯長陵との関係が公的資料で確認できる。",
       "place": "用明天皇陵",
       "gps": "用明天皇陵",
+      "gpsRequired": 1,
+      "gpsPoints": [
+        {"id":"taishi-yomei-mausoleum","name":"用明天皇陵","lat":34.517527867956,"lng":135.64433224603,"radiusMeters":150,"sourceUrl":"https://www.town.taishi.osaka.jp/kanko/rekishi_shiseki/yomeitennoryo.html"}
+      ],
       "steps": 5000,
       "status": "locked",
       "unlockAfter": "聖徳太子",
@@ -61,6 +74,10 @@
       "certaintyNote": "敏達天皇と太子町の敏達天皇陵は公的資料で確認できる。",
       "place": "敏達天皇陵",
       "gps": "敏達天皇陵",
+      "gpsRequired": 1,
+      "gpsPoints": [
+        {"id":"taishi-bidatsu-mausoleum","name":"敏達天皇陵","lat":34.512645436718,"lng":135.63561444603,"radiusMeters":150,"sourceUrl":"https://www.town.taishi.osaka.jp/kanko/rekishi_shiseki/bidatsutennoryo.html"}
+      ],
       "steps": 5000,
       "status": "locked",
       "unlockAfter": "聖徳太子",
@@ -78,6 +95,10 @@
       "certaintyNote": "遣隋使としての人物は史料で確認できる。太子町の墓は古くから小野妹子墓と伝承されるため、当地との墓所関係は○。",
       "place": "小野妹子墓・科長神社周辺",
       "gps": "小野妹子墓",
+      "gpsRequired": 1,
+      "gpsPoints": [
+        {"id":"taishi-ono-imoko-tomb","name":"小野妹子墓","lat":34.5111542,"lng":135.6586086,"radiusMeters":120,"sourceUrl":"https://www.town.taishi.osaka.jp/kanko/rekishi_shiseki/ononoimoko_haka.html"}
+      ],
       "steps": 5000,
       "status": "locked",
       "unlockAfter": "推古天皇",
@@ -95,6 +116,10 @@
       "certaintyNote": "西方院に伝わる三尼公の一人。物部守屋の娘とする系譜は伝承として扱う。",
       "place": "西方院",
       "gps": "西方院",
+      "gpsRequired": 1,
+      "gpsPoints": [
+        {"id":"taishi-saihoin","name":"西方院","lat":34.5173066,"lng":135.6386426,"radiusMeters":100,"sourceUrl":"https://www.town.taishi.osaka.jp/kanko/rekishi_shiseki/saihoin.html"}
+      ],
       "steps": 6000,
       "status": "locked",
       "unlockAfter": "聖徳太子",
@@ -112,6 +137,10 @@
       "certaintyNote": "西方院に伝わる三尼公の一人。蘇我馬子の娘とする系譜は伝承として扱う。",
       "place": "西方院",
       "gps": "西方院",
+      "gpsRequired": 1,
+      "gpsPoints": [
+        {"id":"taishi-saihoin","name":"西方院","lat":34.5173066,"lng":135.6386426,"radiusMeters":100,"sourceUrl":"https://www.town.taishi.osaka.jp/kanko/rekishi_shiseki/saihoin.html"}
+      ],
       "steps": 6000,
       "status": "locked",
       "unlockAfter": "蘇我馬子",
@@ -129,6 +158,10 @@
       "certaintyNote": "西方院に伝わる三尼公の一人。小野妹子の娘とする系譜は伝承として扱う。",
       "place": "西方院",
       "gps": "西方院",
+      "gpsRequired": 1,
+      "gpsPoints": [
+        {"id":"taishi-saihoin","name":"西方院","lat":34.5173066,"lng":135.6386426,"radiusMeters":100,"sourceUrl":"https://www.town.taishi.osaka.jp/kanko/rekishi_shiseki/saihoin.html"}
+      ],
       "steps": 6000,
       "status": "locked",
       "unlockAfter": "小野妹子",
@@ -146,6 +179,10 @@
       "certaintyNote": "人物と587年の丁未の乱は史料で確認できる。太子町カードでは八尾の本拠地を混同せず、太子町側の聖徳太子・三尼公伝承との関係として扱う。",
       "place": "西方院・聖徳太子御廟関連ルート",
       "gps": "西方院",
+      "gpsRequired": 1,
+      "gpsPoints": [
+        {"id":"taishi-saihoin","name":"西方院","lat":34.5173066,"lng":135.6386426,"radiusMeters":100,"sourceUrl":"https://www.town.taishi.osaka.jp/kanko/rekishi_shiseki/saihoin.html"}
+      ],
       "steps": 8000,
       "status": "locked",
       "unlockAfter": "玉照姫",
@@ -162,7 +199,11 @@
       "certainty": "●",
       "certaintyNote": "人物と飛鳥政権での活動は史料で確認できる。太子町との具体的な墓所等は伝承と史実を分けて表示する。",
       "place": "竹内街道・西方院関連ルート",
-      "gps": "西方院／竹内街道",
+      "gps": "西方院",
+      "gpsRequired": 1,
+      "gpsPoints": [
+        {"id":"taishi-saihoin","name":"西方院","lat":34.5173066,"lng":135.6386426,"radiusMeters":100,"sourceUrl":"https://www.town.taishi.osaka.jp/kanko/rekishi_shiseki/saihoin.html"}
+      ],
       "steps": 8000,
       "status": "locked",
       "unlockAfter": "聖徳太子",
