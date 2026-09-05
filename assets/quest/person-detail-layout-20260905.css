@@ -35,3 +35,29 @@
 #personDetail #pdArt .taishiPortrait[style*="93.46%"]{
   background-position-y:100%!important;
 }
+
+#clear.simple{
+  padding-bottom:calc(116px + env(safe-area-inset-bottom));
+}
+
+#clearArt.legacyClearCard{
+  position:relative;
+  width:min(270px,78vw);
+  height:auto!important;
+  aspect-ratio:3/4.65;
+  margin:0 auto 14px;
+  overflow:hidden;
+  border:1px solid #b98e3c!important;
+  border-radius:15px;
+  background:#060504;
+  box-shadow:0 0 28px #d9a93f33;
+}
+
+#clearArt .legacyClearPortrait{
+  position:absolute;
+  inset:0;
+  background-image:linear-gradient(180deg,#0000 43%,#050403 88%),url("./kanan-person-card-scenes-20260904.webp?v=quest-clear-masashige-20260906a");
+  background-size:100% 100%,300% 300%;
+  background-position:center,50% 50%;
+  background-repeat:no-repeat;
+}
