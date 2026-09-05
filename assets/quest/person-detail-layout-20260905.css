@@ -1,0 +1,37 @@
+#personDetail.questDetail{
+  height:auto;
+  min-height:100vh;
+  overflow-y:visible;
+  padding-bottom:calc(116px + env(safe-area-inset-bottom));
+  scroll-padding-bottom:calc(116px + env(safe-area-inset-bottom));
+}
+
+#personDetail #pdArt.questDetailCard{
+  height:auto;
+  aspect-ratio:auto;
+}
+
+#personDetail #pdArt .personPortrait{
+  width:100%;
+  height:auto;
+  aspect-ratio:2/3;
+  background-size:100% 100%,300% auto!important;
+  background-repeat:no-repeat;
+}
+
+#personDetail #pdArt .personPortrait[style*="49.21%"]{
+  background-position-x:50%!important;
+}
+
+#personDetail #pdArt .personPortrait[style*="98.41%"]{
+  background-position-x:100%!important;
+}
+
+#personDetail #pdArt .taishiPortrait{
+  aspect-ratio:3/5;
+  background-size:100% 100%,500% auto!important;
+}
+
+#personDetail #pdArt .taishiPortrait[style*="93.46%"]{
+  background-position-y:100%!important;
+}
