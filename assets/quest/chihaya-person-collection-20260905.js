@@ -40,6 +40,7 @@
     }catch(error){personList.innerHTML='<div class="mut">千早赤阪村人物データを読み込めませんでした。</div>'}
   }
   window.activateArea=function(name){
+    document.body.classList.toggle('chihayaArea',name==='千早赤阪村');
     if(name!=='千早赤阪村'){
       const result=originalActivate(name);
       if(name==='河南町')resetKananSecret();

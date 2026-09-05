@@ -5,6 +5,11 @@
   background-repeat:no-repeat;
 }
 
+/* Keep the first PERSON row fully above the fixed bottom navigation on phones. */
+body.chihayaArea .areaHero{
+  height:205px;
+}
+
 #personDetail #pdArt .chihayaPortrait{
   width:100%;
   height:auto;
