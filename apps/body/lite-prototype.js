@@ -6,7 +6,7 @@ const localDay=(d=new Date())=>`${d.getFullYear()}-${String(d.getMonth()+1).padS
 const today=()=>localDay();
 const monthKey=(d=new Date())=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;
 const prevMonth=()=>{const d=new Date();d.setDate(1);d.setMonth(d.getMonth()-1);return monthKey(d)};
-const n=v=>Number.isFinite(Number(v))?Number(v):null;
+const n=v=>v===null||v===undefined||v===''?null:(Number.isFinite(Number(v))?Number(v):null);
 let health=j(HEALTH,{}),pref=j(PREF,{mode:'community',watch:false}),watchState=j(WATCH,{lastLocation:null,lastActivityAt:null}),lifeAll=j(LIFE,{}),watchId=null,lastQuestSignature='';
 const prior=j(DAILY,[]).find(x=>x.date===today())||{};
 let condition={fatigue:prior.condition?.fatigue??null,pain:prior.condition?.pain??null,subjective:prior.condition?.subjective??null};
@@ -38,9 +38,10 @@ function healthValue(...keys){for(const k of keys){if(health?.[k]!=null&&n(healt
 function rawQuest(){const q=j(QUEST,{});return String(q.date||'')===today()?q:{date:today(),steps:0,points:0,checkins:[],route:[],event:false}}
 function quest(){const q=rawQuest(),route=Array.isArray(q.route)?q.route:[],last=route.length?route[route.length-1]:null,checkins=Array.isArray(q.checkins)?q.checkins:[];return {date:q.date,checkins:checkins.length,checkinIds:checkins,points:n(q.points)||0,steps:n(q.steps),distanceKm:n(q.distanceKm),exerciseMinutes:n(q.exerciseMinutes),event:!!q.event,routeCount:route.length,lastLocation:last&&n(last.lat)!=null&&n(last.lng)!=null?{lat:n(last.lat),lng:n(last.lng),t:n(last.t)}:null,participated:checkins.length>0||(n(q.points)||0)>0||!!q.event}}
 function latestLocation(){const own=watchState.lastLocation,q=quest().lastLocation;if(own&&q)return (n(own.t)||0)>=(n(q.t)||0)?own:q;return own||q||null}
+function isTodayLocation(loc){const t=n(loc?.t);return t!=null&&localDay(new Date(t))===today()}
 function lastActivityAt(){const candidates=[watchState.lastActivityAt,health?.syncedAt,quest().lastLocation?.t].map(v=>typeof v==='number'?v:Date.parse(v||'')).filter(Number.isFinite);return candidates.length?Math.max(...candidates):null}
 function currentHealth(){return {steps:healthValue('steps','stepCount'),distanceKm:healthValue('distanceKm'),exerciseMinutes:healthValue('exerciseMinutes'),activeEnergyKcal:healthValue('activeEnergyKcal'),sleepHours:healthValue('sleep','sleepHours'),heartRate:healthValue('heartRate','latestHeartRate'),restingHeartRate:healthValue('restingHeartRate'),hrvMs:healthValue('hrv','hrvMs'),weightKg:healthValue('weight','weightKg')}}
-function record(){const q=quest();return {date:today(),mode:pref.mode,health:currentHealth(),condition:{...condition},lifestyle:{...lifestyle},quest:{checkins:q.checkins,points:q.points,participated:q.participated,event:q.event,routeCount:q.routeCount},watch:{enabled:!!pref.watch,lastActivityAt:lastActivityAt(),locationRecorded:!!latestLocation()},syncedAt:health?.syncedAt||new Date().toISOString()}}
+function record(){const q=quest(),loc=latestLocation();return {date:today(),mode:pref.mode,health:currentHealth(),condition:{...condition},lifestyle:{...lifestyle},quest:{checkins:q.checkins,points:q.points,participated:q.participated,event:q.event,routeCount:q.routeCount},watch:{enabled:!!pref.watch,lastActivityAt:lastActivityAt(),locationRecorded:isTodayLocation(loc)},syncedAt:health?.syncedAt||new Date().toISOString()}}
 function treasureState(r=record()){const states=TREASURES.map(t=>({...t,on:!!t.test(r)}));return {states,count:states.filter(x=>x.on).length}}
 function rankFor(avg){let rank=RANKS[0];for(const r of RANKS)if(avg>=r.min)rank=r;return {...rank,level:RANKS.indexOf(rank)+1}}
 function saveDaily(){const r=record(),all=j(DAILY,[]).filter(x=>x.date!==r.date);all.unshift(r);localStorage.setItem(DAILY,JSON.stringify(all.slice(0,365)));window.dispatchEvent(new CustomEvent('sug:body-lite-change',{detail:r}))}
