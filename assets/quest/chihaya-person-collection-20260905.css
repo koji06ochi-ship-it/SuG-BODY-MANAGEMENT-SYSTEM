@@ -1,8 +1,12 @@
 .personPortrait.chihayaPortrait{
-  background-image:linear-gradient(180deg,#0000 53%,#060504 100%),var(--chihaya-art);
+  background-image:linear-gradient(180deg,#0000 68%,#060504 100%),var(--chihaya-art);
   background-size:100% 100%,cover;
   background-position:center,center top;
   background-repeat:no-repeat;
+}
+
+.personCard.locked .chihayaPortrait + .personShade{
+  background:linear-gradient(180deg,#0000 70%,#050403b8 100%);
 }
 
 /* Keep the first PERSON row fully above the fixed bottom navigation on phones. */
