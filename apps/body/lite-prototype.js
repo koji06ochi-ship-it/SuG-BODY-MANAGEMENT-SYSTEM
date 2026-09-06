@@ -1,0 +1,64 @@
+(()=>{'use strict';
+const V='0.2.0',HEALTH='sug_native_health_v1',DAILY='sug_body_lite_daily_v1',PREF='sug_body_lite_pref_v1',QUEST='sug_walk_quest_v1',WATCH='sug_body_lite_watch_v1',PHOTO_DB='sug_body_lite_photos_v1',PHOTO_STORE='photos';
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const j=(k,f)=>{try{return JSON.parse(localStorage.getItem(k)||'null')??f}catch{return f}};
+const localDay=(d=new Date())=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+const today=()=>localDay();
+const monthKey=(d=new Date())=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;
+const prevMonth=()=>{const d=new Date();d.setDate(1);d.setMonth(d.getMonth()-1);return monthKey(d)};
+const n=v=>Number.isFinite(Number(v))?Number(v):null;
+let health=j(HEALTH,{}),pref=j(PREF,{mode:'community',watch:false}),watchState=j(WATCH,{lastLocation:null,lastActivityAt:null}),watchId=null,lastQuestSignature='';
+const prior=j(DAILY,[]).find(x=>x.date===today())||{};
+let condition={fatigue:prior.condition?.fatigue??null,pain:prior.condition?.pain??null,subjective:prior.condition?.subjective??null};
+function db(){return new Promise((res,rej)=>{const r=indexedDB.open(PHOTO_DB,1);r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains(PHOTO_STORE))r.result.createObjectStore(PHOTO_STORE)};r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)})}
+async function photoPut(k,v){const d=await db();return new Promise((res,rej)=>{const t=d.transaction(PHOTO_STORE,'readwrite');t.objectStore(PHOTO_STORE).put(v,k);t.oncomplete=()=>res();t.onerror=()=>rej(t.error)})}
+async function photoGet(k){const d=await db();return new Promise((res,rej)=>{const r=d.transaction(PHOTO_STORE).objectStore(PHOTO_STORE).get(k);r.onsuccess=()=>res(r.result||null);r.onerror=()=>rej(r.error)})}
+async function photoDel(k){const d=await db();return new Promise((res,rej)=>{const t=d.transaction(PHOTO_STORE,'readwrite');t.objectStore(PHOTO_STORE).delete(k);t.oncomplete=()=>res();t.onerror=()=>rej(t.error)})}
+function healthValue(...keys){for(const k of keys){if(health?.[k]!=null&&n(health[k])!=null)return n(health[k])}return null}
+function rawQuest(){const q=j(QUEST,{});return String(q.date||'')===today()?q:{date:today(),steps:0,points:0,checkins:[],route:[],event:false}}
+function quest(){const q=rawQuest(),route=Array.isArray(q.route)?q.route:[],last=route.length?route[route.length-1]:null,checkins=Array.isArray(q.checkins)?q.checkins:[];return {date:q.date,checkins:checkins.length,checkinIds:checkins,points:n(q.points)||0,steps:n(q.steps),distanceKm:n(q.distanceKm),exerciseMinutes:n(q.exerciseMinutes),event:!!q.event,routeCount:route.length,lastLocation:last&&n(last.lat)!=null&&n(last.lng)!=null?{lat:n(last.lat),lng:n(last.lng),t:n(last.t)}:null,participated:checkins.length>0||(n(q.points)||0)>0||!!q.event}}
+function latestLocation(){const own=watchState.lastLocation,q=quest().lastLocation;if(own&&q){return (n(own.t)||0)>=(n(q.t)||0)?own:q}return own||q||null}
+function lastActivityAt(){const candidates=[watchState.lastActivityAt,health?.syncedAt,quest().lastLocation?.t].map(v=>typeof v==='number'?v:Date.parse(v||'')).filter(Number.isFinite);return candidates.length?Math.max(...candidates):null}
+function record(){const q=quest();return {date:today(),mode:pref.mode,health:{steps:healthValue('steps','stepCount'),distanceKm:healthValue('distanceKm'),exerciseMinutes:healthValue('exerciseMinutes'),activeEnergyKcal:healthValue('activeEnergyKcal'),sleepHours:healthValue('sleep','sleepHours'),heartRate:healthValue('heartRate','latestHeartRate'),restingHeartRate:healthValue('restingHeartRate'),hrvMs:healthValue('hrv','hrvMs'),weightKg:healthValue('weight','weightKg')},condition:{...condition},quest:{checkins:q.checkins,points:q.points,participated:q.participated,event:q.event,routeCount:q.routeCount},watch:{enabled:!!pref.watch,lastActivityAt:lastActivityAt(),locationRecorded:!!latestLocation()},syncedAt:health?.syncedAt||new Date().toISOString()}}
+function saveDaily(){const r=record(),all=j(DAILY,[]).filter(x=>x.date!==r.date);all.unshift(r);localStorage.setItem(DAILY,JSON.stringify(all.slice(0,180)));window.dispatchEvent(new CustomEvent('sug:body-lite-change',{detail:r}))}
+function saveWatch(){localStorage.setItem(WATCH,JSON.stringify(watchState));window.dispatchEvent(new CustomEvent('sug:body-lite-watch-change',{detail:{...watchState,enabled:pref.watch}}))}
+function avg(xs,key){const vs=xs.map(x=>key.split('.').reduce((o,k)=>o?.[k],x)).map(n).filter(v=>v!=null);return vs.length?vs.reduce((a,b)=>a+b,0)/vs.length:null}
+function monthStats(key){const xs=j(DAILY,[]).filter(x=>String(x.date||'').startsWith(key));return {days:xs.length,steps:avg(xs,'health.steps'),exercise:avg(xs,'health.exerciseMinutes'),sleep:avg(xs,'health.sleepHours'),weight:avg(xs,'health.weightKg'),questDays:xs.filter(x=>x.quest?.participated).length,outsideDays:xs.filter(x=>x.watch?.locationRecorded||x.quest?.routeCount>0).length}}
+function delta(cur,prev,digits=0){if(cur==null||prev==null)return '--';const d=cur-prev;return `${d>=0?'+':''}${d.toFixed(digits)}`}
+function fmt(v,suffix='',digits=0){return v==null?'--':`${Number(v).toFixed(digits)}${suffix}`}
+function modeLabel(){return ({community:'COMMUNITY',senior:'SENIOR',sports:'SPORTS'})[pref.mode]||'COMMUNITY'}
+function renderHealth(){const vals={steps:healthValue('steps','stepCount'),distance:healthValue('distanceKm'),exercise:healthValue('exerciseMinutes'),sleep:healthValue('sleep','sleepHours'),heart:healthValue('restingHeartRate','heartRate','latestHeartRate'),weight:healthValue('weight','weightKg')};$('#mSteps').textContent=vals.steps==null?'--':Math.round(vals.steps).toLocaleString();$('#mDistance').textContent=fmt(vals.distance,' km',2);$('#mExercise').textContent=fmt(vals.exercise,' min');$('#mSleep').textContent=fmt(vals.sleep,' h',1);$('#mHeart').textContent=fmt(vals.heart,' bpm');$('#mWeight').textContent=fmt(vals.weight,' kg',1);$('#syncStatus').textContent=health?.syncedAt?`最終同期 ${new Date(health.syncedAt).toLocaleString('ja-JP')}`:'Healthデータ未同期'}
+function renderQuest(){const q=quest();$('#qCheckins').textContent=q.checkins;$('#qPoints').textContent=q.points.toLocaleString();$('#qStatus').textContent=q.participated?'参加あり':'本日未参加';if($('#qRoute'))$('#qRoute').textContent=q.routeCount?`${q.routeCount}地点`:'未記録'}
+function renderWatch(){const loc=latestLocation(),at=lastActivityAt();$('#watch').checked=!!pref.watch;$('#watchState').textContent=pref.watch?(watchId!=null?'ON｜位置更新中':'ON｜許可待ち/停止中'):'OFF';if($('#lastActivity'))$('#lastActivity').textContent=at?new Date(at).toLocaleString('ja-JP'):'--';if($('#lastLocation'))$('#lastLocation').textContent=loc?`${loc.lat.toFixed(5)}, ${loc.lng.toFixed(5)}`:'--';if($('#locationAccuracy'))$('#locationAccuracy').textContent=loc?.accuracy!=null?`精度 約${Math.round(loc.accuracy)}m`:'QUEST位置を含む';const map=$('#openMap');if(map)map.disabled=!loc}
+function renderMonth(){const c=monthStats(monthKey()),p=monthStats(prevMonth());$('#monthDays').textContent=c.days;$('#monthSteps').textContent=c.steps==null?'--':Math.round(c.steps).toLocaleString();$('#monthStepsDelta').textContent=`前月比 ${delta(c.steps,p.steps,0)} 歩/日`;$('#monthExercise').textContent=fmt(c.exercise,' min');$('#monthExerciseDelta').textContent=`前月比 ${delta(c.exercise,p.exercise,0)} min/日`;$('#monthSleep').textContent=fmt(c.sleep,' h',1);$('#monthSleepDelta').textContent=`前月比 ${delta(c.sleep,p.sleep,1)} h`;$('#monthWeight').textContent=fmt(c.weight,' kg',1);$('#monthWeightDelta').textContent=`前月比 ${delta(c.weight,p.weight,1)} kg`;$('#monthQuest').textContent=c.questDays;$('#monthQuestDelta').textContent=`前月 ${p.questDays}日`;if($('#monthOutside'))$('#monthOutside').textContent=c.outsideDays;if($('#monthOutsideDelta'))$('#monthOutsideDelta').textContent=`前月 ${p.outsideDays}日`}
+function renderMode(){$('#mode').value=pref.mode;$('#modeBadge').textContent=modeLabel();renderWatch()}
+function renderCondition(){for(const key of ['fatigue','pain','subjective']){$$(`[data-key="${key}"]`).forEach(b=>b.classList.toggle('on',condition[key]===+b.dataset.v))}}
+async function renderPhotos(){const m=monthKey();for(const view of ['front','side','back']){const img=$(`#photo_${view}`),blob=await photoGet(`${m}:${view}`);if(blob){img.src=URL.createObjectURL(blob);img.classList.add('has')}else{img.removeAttribute('src');img.classList.remove('has')}}}
+function summary(){const c=monthStats(monthKey()),q=quest(),at=lastActivityAt();return [`S.u.G BODY Lite｜${monthKey()}`,`MODE: ${modeLabel()}`,`平均歩数: ${c.steps==null?'--':Math.round(c.steps).toLocaleString()} 歩/日`,`平均活動: ${fmt(c.exercise,' min/日')}`,`平均睡眠: ${fmt(c.sleep,' h',1)}`,`平均体重: ${fmt(c.weight,' kg',1)}`,`QUEST参加日: ${c.questDays}日`,`外出/位置記録日: ${c.outsideDays}日`,`本日チェックイン: ${q.checkins}`,`疲労: ${condition.fatigue??'--'} / 5`,`痛み: ${condition.pain??'--'} / 5`,`最終活動: ${at?new Date(at).toLocaleString('ja-JP'):'--'}`].join('\n')}
+function renderAll(){renderHealth();renderQuest();renderMode();renderCondition();renderMonth();renderPhotos()}
+function applyHealth(p){if(!p||typeof p!=='object')return;health={...health,...p};try{localStorage.setItem(HEALTH,JSON.stringify(health))}catch{};watchState.lastActivityAt=Date.now();saveWatch();saveDaily();renderAll()}
+function stopWatch(){if(watchId!=null&&navigator.geolocation){navigator.geolocation.clearWatch(watchId);watchId=null}renderWatch()}
+function startWatch(){if(!pref.watch)return stopWatch();if(!navigator.geolocation){$('#watchError').textContent='この端末では位置情報を利用できません';return}if(watchId!=null)return;$('#watchError').textContent='位置情報の許可を確認しています';watchId=navigator.geolocation.watchPosition(pos=>{watchState.lastLocation={lat:pos.coords.latitude,lng:pos.coords.longitude,accuracy:pos.coords.accuracy,t:Date.now()};watchState.lastActivityAt=Date.now();saveWatch();saveDaily();$('#watchError').textContent='位置情報を更新しました';renderWatch()},err=>{$('#watchError').textContent=err.code===1?'位置情報が許可されていません':'位置情報を取得できません';stopWatch()},{enableHighAccuracy:false,maximumAge:60000,timeout:15000});renderWatch()}
+function questChanged(){const q=rawQuest(),sig=JSON.stringify({date:q.date,steps:q.steps,points:q.points,checkins:q.checkins,route:q.route,event:q.event});if(sig===lastQuestSignature)return;lastQuestSignature=sig;saveDaily();renderQuest();renderWatch();renderMonth();window.dispatchEvent(new CustomEvent('sug:quest-change',{detail:quest()}))}
+function boot(){
+  $('#mode').onchange=e=>{pref.mode=e.target.value;localStorage.setItem(PREF,JSON.stringify(pref));renderMode();saveDaily()};
+  $('#watch').onchange=e=>{pref.watch=!!e.target.checked;localStorage.setItem(PREF,JSON.stringify(pref));if(pref.watch)startWatch();else stopWatch();saveDaily();renderWatch()};
+  if($('#refreshLocation'))$('#refreshLocation').onclick=()=>{if(!pref.watch){$('#watchError').textContent='見守りモードをONにしてください';return}stopWatch();startWatch()};
+  if($('#openMap'))$('#openMap').onclick=()=>{const p=latestLocation();if(!p)return;window.open(`https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}`,'_blank')};
+  $$('.scale button').forEach(b=>b.onclick=()=>{condition[b.dataset.key]=+b.dataset.v;renderCondition();saveDaily()});
+  $$('input[type=file][data-view]').forEach(inp=>inp.onchange=async e=>{const f=e.target.files?.[0];if(!f)return;await photoPut(`${monthKey()}:${e.target.dataset.view}`,f);renderPhotos()});
+  $$('[data-del-photo]').forEach(b=>b.onclick=async()=>{await photoDel(`${monthKey()}:${b.dataset.delPhoto}`);renderPhotos()});
+  $('#copyReport').onclick=async()=>{const t=summary();try{await navigator.clipboard.writeText(t);$('#copyStatus').textContent='月次サマリーをコピーしました'}catch{$('#copyStatus').textContent=t}};
+  window.addEventListener('sug:native-health',e=>applyHealth(e.detail));
+  window.addEventListener('storage',e=>{if([HEALTH,QUEST,DAILY,PREF,WATCH].includes(e.key)){if(e.key===HEALTH)health=j(HEALTH,{});if(e.key===PREF)pref=j(PREF,pref);if(e.key===WATCH)watchState=j(WATCH,watchState);questChanged();renderAll()}});
+  window.addEventListener('pageshow',()=>{questChanged();if(pref.watch)startWatch();renderAll()});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)stopWatch();else if(pref.watch)startWatch()});
+  applyHealth(window.__SUG_NATIVE_HEALTH__||j(HEALTH,{}));
+  questChanged();
+  if(pref.watch)startWatch();
+  setInterval(questChanged,2000);
+  renderAll();
+}
+window.SuGBodyLite={version:V,receiveNative:applyHealth,render:renderAll,summary,record,quest,latestLocation,startWatch,stopWatch};
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
+})();

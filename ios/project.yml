@@ -19,6 +19,7 @@ targets:
         INFOPLIST_KEY_NSHealthUpdateUsageDescription: S.u.Gはヘルスケアへデータを書き込みません。
         INFOPLIST_KEY_NSCameraUsageDescription: S.u.Gで身体評価・食事記録・トレーニング解析の撮影に使用します。
         INFOPLIST_KEY_NSPhotoLibraryUsageDescription: S.u.Gで身体写真・食事写真・トレーニング動画を選択するために使用します。
+        INFOPLIST_KEY_NSLocationWhenInUseUsageDescription: S.u.G BODY Liteの見守りモードとWALK QUESTで、本人が許可したときだけ現在地・最終活動地点を記録するために使用します。
         GENERATE_INFOPLIST_FILE: YES
     entitlements:
       path: SuGMember/SuGMember.entitlements
