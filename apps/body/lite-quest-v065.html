@@ -4,18 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#03050b">
-<title>S.u.G BODY Lite v0.6.5</title>
+<title>S.u.G BODY Lite v0.6.6 FAMILY</title>
 <style>html,body{margin:0;background:#03050b;color:#f8f2df;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif}#loading{min-height:100vh;display:grid;place-items:center;text-align:center;color:#d9b85f;background:radial-gradient(circle at 50% 15%,#172443,#070910 52%,#020307)}#loading b{font-family:Georgia,"Hiragino Mincho ProN",serif;font-size:24px;display:block;margin-bottom:8px}#loading small{color:#8e8677}</style>
 </head>
 <body>
-<div id="loading"><div><b>S.u.G BODY Lite</b><small>AI QUEST HERO を読み込み中…</small></div></div>
+<div id="loading"><div><b>S.u.G BODY Lite</b><small>QUEST × FAMILY STORY を読み込み中…</small></div></div>
 <script>
 (async()=>{
  try{
   const r=await fetch('./lite-quest-v064.html?fresh='+Date.now(),{cache:'no-store'});
   let html=await r.text();
   html=html.replaceAll('./lite-monthly-v064.html?v=064','./lite-monthly-v065.html?v=065');
-  html=html.replaceAll('v0.6.4 UNLOCK','v0.6.5 AI HERO');
+  html=html.replaceAll('v0.6.4 UNLOCK','v0.6.6 FAMILY');
+  const familyNav=`<script>document.addEventListener('DOMContentLoaded',()=>{const nav=document.querySelector('.bottomNav');if(!nav)return;const items=[...nav.querySelectorAll('a,button')];const item=items.find(x=>(x.textContent||'').includes('コレクション'));if(!item)return;item.addEventListener('click',e=>{e.preventDefault();location.href='./lite-collection-v066.html?v=066'});});<\/script>`;
+  html=html.replace('</body>',familyNav+'</body>');
   document.open();document.write(html);document.close();
  }catch(e){document.getElementById('loading').innerHTML='<div><b>読み込みに失敗しました</b><small>ページを再読み込みしてください。</small></div>'}
 })();

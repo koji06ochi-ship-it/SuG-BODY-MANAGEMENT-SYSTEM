@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#02040a">
-<title>S.u.G BODY Lite｜今月の変化 v0.6.5 AI HERO</title>
+<title>S.u.G BODY Lite｜今月の変化 v0.6.6 FAMILY</title>
 <style>
 html,body{margin:0;background:#02040a;color:#f8efd4;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif}#loading{min-height:100vh;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 50% 14%,#28375d 0,#0b0d14 39%,#030408 73%);color:#e4c66f}#loading b{font-family:Georgia,"Hiragino Mincho ProN",serif;font-size:24px;display:block;margin-bottom:8px}#loading small{color:#887d65;letter-spacing:.12em}
 </style>
@@ -24,9 +24,10 @@ html,body{margin:0;background:#02040a;color:#f8efd4;font-family:-apple-system,Bl
 .cardImage.aiGenerated{box-shadow:inset 0 0 75px rgba(228,184,75,.07)}.cardImage.aiGenerated:before{content:"AI QUEST HERO";position:absolute;z-index:11;left:50%;bottom:18px;transform:translateX(-50%);padding:6px 10px;border:1px solid rgba(224,184,82,.42);border-radius:999px;background:rgba(4,5,8,.68);backdrop-filter:blur(8px);color:#d9bc69;font-size:7px;letter-spacing:.16em;white-space:nowrap}
 @media(max-width:560px){.sugAiAvatarBox{margin:8px 0 10px;padding:11px 10px}.sugAiAvatarCopy b{font-size:13px}.sugAiAvatarCopy span{font-size:8.5px}#sugAiAvatarBtn{padding:11px;font-size:9.5px}}
 </style>`;
+  const familyNav=`<script>document.addEventListener('DOMContentLoaded',()=>{const nav=document.querySelector('.bottomNav');if(!nav)return;const items=[...nav.querySelectorAll('a,button')];const item=items.find(x=>(x.textContent||'').includes('コレクション'));if(!item)return;item.addEventListener('click',e=>{e.preventDefault();location.href='./lite-collection-v066.html?v=066'});});<\/script>`;
   html=html.replace('</head>',css+'</head>');
-  html=html.replace(/v0\.6\.4/g,'v0.6.5 AI HERO');
-  html=html.replace('</body>','<script src="./lite-monthly-ai-v065.js?v=065"><\/script></body>');
+  html=html.replace(/v0\.6\.4/g,'v0.6.6 FAMILY');
+  html=html.replace('</body>','<script src="./lite-monthly-ai-v065.js?v=065"><\/script>'+familyNav+'</body>');
   document.open();document.write(html);document.close();
  }catch(e){document.getElementById('loading').innerHTML='<div><b>読み込みに失敗しました</b><small>ページを再読み込みしてください。</small></div>'}
 })();
