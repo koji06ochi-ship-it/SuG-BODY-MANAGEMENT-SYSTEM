@@ -5,7 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#03050b">
 <title>S.u.G BODY Lite</title>
-<style>html,body{margin:0;background:#03050b;color:#f8f2df;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif}#loading{min-height:100vh;display:grid;place-items:center;text-align:center;color:#d9b85f;background:radial-gradient(circle at 50% 15%,#172443,#070910 52%,#020307)}#loading b{font-family:Georgia,"Hiragino Mincho ProN",serif;font-size:24px;display:block;margin-bottom:8px}#loading small{color:#8e8677}</style>
+<style>
+html,body{margin:0;background:#03050b;color:#f8f2df;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif}
+#loading{min-height:100vh;display:grid;place-items:center;text-align:center;color:#d9b85f;background:radial-gradient(circle at 50% 15%,#172443,#070910 52%,#020307)}
+#loading b{font-family:Georgia,"Hiragino Mincho ProN",serif;font-size:24px;display:block;margin-bottom:8px}
+#loading small{color:#8e8677}
+</style>
 </head>
 <body>
 <div id="loading"><div><b>S.u.G BODY Lite</b><small>QUEST × BODY を読み込み中…</small></div></div>
@@ -14,25 +19,99 @@
   try{
     const r=await fetch('./lite-prototype.html?fresh='+Date.now(),{cache:'no-store'});
     let html=await r.text();
-    const bg=`<style id="sug-v052-celestial">
-html,body{background:#03050b!important}
-body{position:relative;isolation:isolate;background:radial-gradient(ellipse at 50% -8%,rgba(29,48,91,.72) 0%,rgba(9,14,28,.78) 34%,rgba(3,5,11,.96) 62%,#020307 100%)!important;background-attachment:fixed!important}
-.app,.bottomNav{position:relative;z-index:2}
-body:before{content:""!important;position:fixed!important;inset:0!important;pointer-events:none!important;z-index:0!important;opacity:.8!important;background-image:radial-gradient(circle at 8% 11%,rgba(255,246,210,.95) 0 1px,transparent 1.5px),radial-gradient(circle at 23% 26%,rgba(202,220,255,.8) 0 1px,transparent 1.5px),radial-gradient(circle at 77% 17%,rgba(255,227,150,.9) 0 1.2px,transparent 1.8px),radial-gradient(circle at 61% 39%,rgba(222,232,255,.65) 0 1px,transparent 1.6px),radial-gradient(circle at 89% 61%,rgba(241,201,104,.72) 0 1px,transparent 1.6px),radial-gradient(circle at 34% 72%,rgba(202,218,255,.72) 0 1px,transparent 1.6px);background-size:210px 210px,260px 260px,310px 310px,230px 230px,280px 280px,340px 340px!important;animation:sugStarDrift 30s ease-in-out infinite alternate!important}
-body:after{content:""!important;position:fixed!important;inset:-10%!important;pointer-events:none!important;z-index:0!important;background:radial-gradient(circle at 18% 28%,rgba(218,174,75,.10),transparent 22%),radial-gradient(circle at 80% 40%,rgba(51,88,156,.18),transparent 30%),radial-gradient(ellipse at 50% 88%,rgba(177,127,37,.08),transparent 30%)!important;filter:blur(10px)!important}
-.sugConstellation{position:fixed;right:-18px;top:68px;width:230px;height:170px;z-index:1;pointer-events:none;opacity:.5;filter:drop-shadow(0 0 8px rgba(233,198,102,.22))}.sugConstellation svg{width:100%;height:100%}.sugConstellation path{stroke:rgba(214,184,100,.36);stroke-width:1.2;fill:none}.sugConstellation circle{fill:rgba(247,220,142,.9)}.sugConstellation .north{r:3.2;filter:drop-shadow(0 0 5px rgba(255,221,120,.85))}
-.sugMist{position:fixed;left:-20%;bottom:-110px;width:140%;height:250px;z-index:1;pointer-events:none;background:radial-gradient(ellipse at 50% 100%,rgba(202,155,55,.13),rgba(44,56,91,.05) 42%,transparent 72%);filter:blur(18px)}
-.hero,.section,.details,.bottomNav{backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
-.hero{box-shadow:0 26px 90px rgba(0,0,0,.72),0 0 38px rgba(197,151,52,.08),inset 0 0 60px rgba(219,174,64,.06)!important}
-@keyframes sugStarDrift{from{transform:translate3d(0,0,0)}to{transform:translate3d(-8px,12px,0)}}
-@media(max-width:430px){.sugConstellation{width:190px;height:145px;right:-30px;top:78px;opacity:.42}}
+    const bg=`<style id="sug-v053-world">
+html,body{background:#02040a!important}
+body{position:relative;isolation:isolate;background:
+radial-gradient(ellipse at 48% -8%,rgba(31,53,99,.72) 0%,rgba(9,15,30,.84) 36%,rgba(3,5,12,.97) 64%,#020307 100%)!important;background-attachment:fixed!important}
+.app,.bottomNav{position:relative;z-index:3}
+body:before{content:""!important;position:fixed!important;inset:0!important;pointer-events:none!important;z-index:0!important;opacity:.92!important;
+background-image:
+radial-gradient(circle at 8% 11%,rgba(255,246,210,.95) 0 1px,transparent 1.5px),
+radial-gradient(circle at 23% 26%,rgba(202,220,255,.82) 0 1px,transparent 1.5px),
+radial-gradient(circle at 77% 17%,rgba(255,227,150,.95) 0 1.2px,transparent 1.8px),
+radial-gradient(circle at 61% 39%,rgba(222,232,255,.68) 0 1px,transparent 1.6px),
+radial-gradient(circle at 89% 61%,rgba(241,201,104,.75) 0 1px,transparent 1.6px),
+radial-gradient(circle at 34% 72%,rgba(202,218,255,.74) 0 1px,transparent 1.6px);
+background-size:210px 210px,260px 260px,310px 310px,230px 230px,280px 280px,340px 340px!important;
+animation:sugStarDrift 34s ease-in-out infinite alternate!important}
+body:after{content:""!important;position:fixed!important;inset:-10%!important;pointer-events:none!important;z-index:0!important;
+background:
+radial-gradient(circle at 18% 26%,rgba(218,174,75,.12),transparent 22%),
+radial-gradient(circle at 80% 38%,rgba(51,88,156,.20),transparent 30%),
+radial-gradient(ellipse at 50% 88%,rgba(177,127,37,.10),transparent 31%)!important;
+filter:blur(12px)!important}
+.sugWorld{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.sugWorld svg{width:100%;height:100%;display:block}
+.sugWorld .mapLine{fill:none;stroke:rgba(224,190,105,.10);stroke-width:1}
+.sugWorld .mapLineBlue{fill:none;stroke:rgba(132,161,220,.08);stroke-width:1}
+.sugWorld .ridgeBack{fill:url(#ridgeBack)}
+.sugWorld .ridgeMid{fill:url(#ridgeMid)}
+.sugWorld .ridgeFront{fill:url(#ridgeFront)}
+.sugWorld .fort{fill:rgba(203,164,73,.16)}
+.sugWorld .roadFill{fill:url(#roadGold)}
+.sugWorld .roadEdge{fill:none;stroke:rgba(225,186,88,.12);stroke-width:1.2}
+.sugWorld .mistBand{fill:url(#mistBand)}
+.sugWorld .mapSeal{fill:none;stroke:rgba(217,178,80,.09);stroke-width:1}
+.sugWorld .mapSealDot{fill:rgba(226,190,96,.11)}
+.sugConstellation{position:fixed;right:-10px;top:82px;width:220px;height:160px;z-index:2;pointer-events:none;opacity:.42;filter:drop-shadow(0 0 8px rgba(233,198,102,.22))}
+.sugConstellation svg{width:100%;height:100%}.sugConstellation path{stroke:rgba(214,184,100,.32);stroke-width:1.1;fill:none}.sugConstellation circle{fill:rgba(247,220,142,.88)}
+.sugMist{position:fixed;left:-20%;bottom:-110px;width:140%;height:250px;z-index:2;pointer-events:none;background:radial-gradient(ellipse at 50% 100%,rgba(202,155,55,.13),rgba(44,56,91,.05) 42%,transparent 72%);filter:blur(18px)}
+.topbar{background:linear-gradient(180deg,rgba(2,4,10,.97) 0,rgba(2,4,10,.88) 72%,transparent)!important}
+.hero{background:
+linear-gradient(145deg,rgba(35,24,7,.87),rgba(8,9,14,.84) 60%),
+radial-gradient(circle at 82% 14%,rgba(180,129,34,.16),transparent 38%)!important;
+box-shadow:0 26px 90px rgba(0,0,0,.74),0 0 40px rgba(197,151,52,.09),inset 0 0 60px rgba(219,174,64,.06)!important}
+.section{background:linear-gradient(180deg,rgba(11,13,18,.88),rgba(7,8,11,.84))!important}
+.section.gold{background:linear-gradient(145deg,rgba(27,18,7,.87),rgba(8,9,13,.84) 68%)!important}
+.details{background:rgba(7,8,11,.86)!important}
+.bottomNav{background:rgba(5,6,9,.91)!important}
+.hero,.section,.details,.bottomNav{backdrop-filter:blur(13px);-webkit-backdrop-filter:blur(13px)}
+.rank{font-size:clamp(13px,3.75vw,18px)!important;line-height:1.28!important;letter-spacing:-.02em!important;white-space:nowrap!important;word-break:keep-all!important}
+.heroStatus{grid-template-columns:minmax(0,1fr) auto!important}
+@keyframes sugStarDrift{from{transform:translate3d(0,0,0)}to{transform:translate3d(-9px,12px,0)}}
+@media(max-width:430px){
+.sugConstellation{width:185px;height:138px;right:-28px;top:88px;opacity:.34}
+.sugWorld{opacity:.95}
+.hero{border-color:rgba(175,132,47,.58)!important}
+.rank{font-size:clamp(13px,3.72vw,15px)!important}
+}
 </style>`;
-    const deco=`<div class="sugConstellation" aria-hidden="true"><svg viewBox="0 0 230 170" xmlns="http://www.w3.org/2000/svg"><path d="M196 20 L165 46 L132 42 L101 66 L72 86 L45 112 L22 140"/><circle class="north" cx="196" cy="20" r="3.2"/><circle cx="165" cy="46" r="2.4"/><circle cx="132" cy="42" r="2.2"/><circle cx="101" cy="66" r="2.5"/><circle cx="72" cy="86" r="2.3"/><circle cx="45" cy="112" r="2.4"/><circle cx="22" cy="140" r="2.1"/></svg></div><div class="sugMist" aria-hidden="true"></div>`;
+    const world=`<div class="sugWorld" aria-hidden="true">
+<svg viewBox="0 0 390 844" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="ridgeBack" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2b49" stop-opacity=".34"/><stop offset="1" stop-color="#060a12" stop-opacity=".08"/></linearGradient>
+  <linearGradient id="ridgeMid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16213a" stop-opacity=".43"/><stop offset="1" stop-color="#04060b" stop-opacity=".12"/></linearGradient>
+  <linearGradient id="ridgeFront" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#151a24" stop-opacity=".58"/><stop offset="1" stop-color="#020307" stop-opacity=".26"/></linearGradient>
+  <linearGradient id="roadGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d7ad54" stop-opacity=".03"/><stop offset=".58" stop-color="#c89539" stop-opacity=".08"/><stop offset="1" stop-color="#e3b758" stop-opacity=".16"/></linearGradient>
+  <linearGradient id="mistBand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bd8f32" stop-opacity="0"/><stop offset=".5" stop-color="#d1aa52" stop-opacity=".09"/><stop offset="1" stop-color="#bd8f32" stop-opacity="0"/></linearGradient>
+</defs>
+<path class="mapLine" d="M-30 180 C55 138 128 153 195 126 C261 100 334 105 430 62"/>
+<path class="mapLineBlue" d="M-10 220 C68 184 132 196 204 171 C280 143 335 151 410 117"/>
+<path class="mapLine" d="M-18 275 C65 244 127 249 196 226 C267 203 337 209 418 173"/>
+<path class="mapLineBlue" d="M-20 335 C61 305 135 317 202 293 C277 266 335 277 420 243"/>
+<path class="mapSeal" d="M40 410c0-35 28-63 63-63s63 28 63 63-28 63-63 63-63-28-63-63z"/>
+<path class="mapSeal" d="M57 410c0-25 20-46 46-46s46 21 46 46-20 46-46 46-46-21-46-46z"/>
+<circle class="mapSealDot" cx="103" cy="410" r="3"/>
+<path class="ridgeBack" d="M-20 388 L25 350 L54 366 L93 318 L129 352 L166 300 L204 344 L236 320 L276 355 L318 304 L359 346 L410 322 L410 520 L-20 520 Z"/>
+<path class="ridgeMid" d="M-20 445 L18 404 L61 429 L95 378 L138 430 L178 356 L221 418 L260 389 L305 438 L344 374 L410 432 L410 586 L-20 586 Z"/>
+<path class="ridgeFront" d="M-20 522 L38 470 L74 495 L118 451 L162 506 L212 438 L258 498 L308 458 L354 502 L410 468 L410 666 L-20 666 Z"/>
+<g class="fort" transform="translate(287 379)">
+  <path d="M0 54h66v8H0zM7 37h52v17H7zM13 27h40v10H13zM20 18h26v9H20z"/>
+  <path d="M18 18l15-12 15 12zM3 37l10-10 10 10zM46 37l10-10 10 10z"/>
+  <rect x="28" y="45" width="10" height="17" fill="rgba(2,4,8,.46)"/>
+</g>
+<path class="roadFill" d="M185 844 C175 760 180 690 194 628 C205 579 219 545 239 518 C231 555 226 592 229 635 C233 699 250 770 270 844 Z"/>
+<path class="roadEdge" d="M185 844 C175 760 180 690 194 628 C205 579 219 545 239 518"/>
+<path class="roadEdge" d="M270 844 C250 770 233 699 229 635 C226 592 231 555 239 518"/>
+<path class="mistBand" d="M-20 548 C90 510 283 525 410 492 L410 574 C267 603 85 587 -20 617 Z"/>
+</svg>
+</div>`;
+    const deco=`${world}<div class="sugConstellation" aria-hidden="true"><svg viewBox="0 0 230 170" xmlns="http://www.w3.org/2000/svg"><path d="M196 20 L165 46 L132 42 L101 66 L72 86 L45 112 L22 140"/><circle cx="196" cy="20" r="3.2"/><circle cx="165" cy="46" r="2.4"/><circle cx="132" cy="42" r="2.2"/><circle cx="101" cy="66" r="2.5"/><circle cx="72" cy="86" r="2.3"/><circle cx="45" cy="112" r="2.4"/><circle cx="22" cy="140" r="2.1"/></svg></div><div class="sugMist" aria-hidden="true"></div>`;
     html=html.replace('</head>',bg+'</head>');
     html=html.replace('<body>','<body>'+deco);
     html=html.replace(/<h1>\s*今日も、?<br>\s*自分が主人公。\s*<\/h1>/,'<h1 style="white-space:nowrap;font-size:23px;letter-spacing:-.06em">今日も自分が主人公。</h1>');
     html=html.replace(/<h1>\s*今日も自分が主人公。\s*<\/h1>/,'<h1 style="white-space:nowrap;font-size:23px;letter-spacing:-.06em">今日も自分が主人公。</h1>');
-    html=html.replace('v0.5 VISUAL','v0.5.2 CELESTIAL').replace('v0.5.1 VISUAL','v0.5.2 CELESTIAL');
+    html=html.replace('v0.5 VISUAL','v0.5.3 WORLD').replace('v0.5.1 VISUAL','v0.5.3 WORLD').replace('v0.5.2 CELESTIAL','v0.5.3 WORLD');
     document.open();document.write(html);document.close();
   }catch(e){document.getElementById('loading').innerHTML='<div><b>読み込みに失敗しました</b><small>ページを再読み込みしてください。</small></div>'}
 })();
