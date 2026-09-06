@@ -3,95 +3,63 @@ const frame=document.getElementById('questFrame');
 
 function installTenmaFoodQuest(doc){
   if(!doc||doc.querySelector('[data-tenma-food-installed]'))return;
-
-  const marker=doc.createElement('meta');
-  marker.dataset.tenmaFoodInstalled='';
-  doc.head.appendChild(marker);
+  const marker=doc.createElement('meta');marker.dataset.tenmaFoodInstalled='';doc.head.appendChild(marker);
 
   const style=doc.createElement('style');
-  style.dataset.tenmaFoodStyle='';
   style.textContent=`
-    .tenmaFoodMini .miniPic{display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#9d6f25,#241607 48%,#050403 100%);color:#ffe19a;font:700 34px Georgia,'Yu Mincho',serif;text-shadow:0 2px 10px #000}
-    .tenmaFoodMini{border-color:#b88936!important;box-shadow:0 0 12px #c9973b33}
+    .tenmaFoodHomeCard{margin-top:10px!important;border-color:#b88936!important;box-shadow:0 0 16px #c9973b33!important;background:linear-gradient(135deg,#181006,#050403)!important}
+    .tenmaFoodHomeCard .thumb{background:radial-gradient(circle at 35% 30%,#9d6f25,#241607 48%,#050403 100%);color:#ffe19a;font:700 34px Georgia,'Yu Mincho',serif}
+    .tenmaFoodHomeCard h3{color:#ffe19a!important}.tenmaFoodHomeCard .mut{color:#c9c1b1!important}
     .tenmaFoodAreaCard{border-color:#b88936!important;box-shadow:0 0 18px #c9973b26}
     .tenmaFoodAreaCard .scene{display:grid;place-items:center;background:radial-gradient(circle at 40% 30%,#a97928,#2b1909 48%,#050403 100%);color:#ffe19a;font:700 54px Georgia,'Yu Mincho',serif;text-shadow:0 3px 16px #000}
     .tenmaFoodAreaCard .areaText h3{font-size:21px!important}
     .tenmaFoodOverlay{position:fixed;z-index:99999;inset:0;overflow:auto;background:#020202;color:#fff;padding:calc(14px + env(safe-area-inset-top)) 12px calc(40px + env(safe-area-inset-bottom));font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif}
     .tenmaFoodTop{position:sticky;top:0;z-index:2;display:grid;grid-template-columns:42px 1fr 42px;align-items:center;padding:7px 0 13px;background:linear-gradient(#020202 78%,#02020200)}
-    .tenmaFoodBack{border:0;background:none;color:#f4d079;font-size:32px;text-align:left;padding:0 5px}
-    .tenmaFoodTitle{text-align:center;color:#f4d079;font:700 24px Georgia,'Yu Mincho',serif}
+    .tenmaFoodBack{border:0;background:none;color:#f4d079;font-size:32px;text-align:left;padding:0 5px}.tenmaFoodTitle{text-align:center;color:#f4d079;font:700 24px Georgia,'Yu Mincho',serif}
     .tenmaFoodHero{padding:20px 16px;border:1px solid #8b682e;border-radius:16px;background:radial-gradient(circle at 25% 10%,#5c3b13,#15100a 48%,#050403 100%);box-shadow:0 10px 28px #0008}
     .tenmaFoodHero small{color:#d7b86d;font-weight:800;letter-spacing:.12em}.tenmaFoodHero h2{margin:7px 0 6px;color:#ffe19a;font-size:28px}.tenmaFoodHero p{margin:0;color:#d8d0c0;font-size:11px;line-height:1.7}
-    .tenmaFoodProgress{display:flex;justify-content:space-between;align-items:end;margin:15px 0 7px}.tenmaFoodProgress b{font:700 30px Georgia,serif;color:#fff}.tenmaFoodProgress span{font-size:10px;color:#b7ad98}
+    .tenmaFoodProgress{display:flex;justify-content:space-between;align-items:end;margin:15px 0 7px}.tenmaFoodProgress b{font:700 30px Georgia,serif}.tenmaFoodProgress span{font-size:10px;color:#b7ad98}
     .tenmaFoodBar{height:8px;border:1px solid #755a2a;background:#1e211c;border-radius:10px;overflow:hidden}.tenmaFoodBar i{display:block;width:0;height:100%;background:linear-gradient(90deg,#73e86e,#08c85b)}
-    .tenmaFoodRules{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:12px 0 16px}.tenmaFoodRule{padding:10px 6px;border:1px solid #4f4229;border-radius:10px;background:#090909;text-align:center}.tenmaFoodRule b{display:block;color:#f1cd76;font-size:11px}.tenmaFoodRule span{display:block;margin-top:4px;color:#aaa;font-size:8px;line-height:1.4}
+    .tenmaFoodRules{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:12px 0 16px}.tenmaFoodRule{padding:10px 6px;border:1px solid #4f4229;border-radius:10px;background:#090909;text-align:center}.tenmaFoodRule b{display:block;color:#f1cd76;font-size:11px}.tenmaFoodRule span{display:block;margin-top:4px;color:#aaa;font-size:8px}
     .tenmaFoodSlots{display:grid;gap:8px}.tenmaFoodSlot{display:grid;grid-template-columns:42px 1fr 42px;align-items:center;gap:9px;padding:10px;border:1px solid #4f4229;border-radius:12px;background:linear-gradient(135deg,#12100b,#050504)}
     .tenmaFoodNo{width:38px;height:38px;display:grid;place-items:center;border:1px solid #8b682e;border-radius:50%;color:#f4d079;font:700 15px Georgia,serif}.tenmaFoodSlot h3{margin:0;color:#e8dfcd;font-size:12px}.tenmaFoodSlot p{margin:3px 0 0;color:#8f887a;font-size:9px}.tenmaFoodLock{text-align:center;color:#8f887a;font-size:17px}.tenmaFoodSlot.secret{border-color:#7b6031;background:radial-gradient(circle at 15% 50%,#2b210f,#050504 56%)}.tenmaFoodSlot.secret h3{color:#d8b85f;letter-spacing:.08em}
   `;
   doc.head.appendChild(style);
 
-  const openFood=()=>{
+  function openFood(){
     let overlay=doc.getElementById('tenmaFoodQuestOverlay');
     if(!overlay){
-      overlay=doc.createElement('section');
-      overlay.id='tenmaFoodQuestOverlay';
-      overlay.className='tenmaFoodOverlay';
-      overlay.innerHTML=`
-        <div class="tenmaFoodTop"><button class="tenmaFoodBack" type="button" aria-label="戻る">‹</button><div class="tenmaFoodTitle">S.u.G QUEST</div><div></div></div>
-        <div class="tenmaFoodHero">
-          <small>TENMA FOOD WALK</small>
-          <h2>天満 食べ歩きQUEST</h2>
-          <p>食べたい・体験したいを「歩く理由」に。天満の10スポットを、自分のペースで巡るQUEST。</p>
-          <div class="tenmaFoodProgress"><b>0 / 10</b><span>SHOP CARD</span></div>
-          <div class="tenmaFoodBar"><i></i></div>
-        </div>
-        <div class="tenmaFoodRules">
-          <div class="tenmaFoodRule"><b>STEP</b><span>歩数を記録</span></div>
-          <div class="tenmaFoodRule"><b>GPS</b><span>現地到達</span></div>
-          <div class="tenmaFoodRule"><b>QUEST</b><span>条件クリア</span></div>
-        </div>
-        <div class="tenmaFoodSlots">
-          ${Array.from({length:9},(_,i)=>`<div class="tenmaFoodSlot"><div class="tenmaFoodNo">${String(i+1).padStart(2,'0')}</div><div><h3>連携店舗 選定中</h3><p>SHOP / FOOD / EXPERIENCE</p></div><div class="tenmaFoodLock">🔒</div></div>`).join('')}
-          <div class="tenmaFoodSlot secret"><div class="tenmaFoodNo">10</div><div><h3>SECRET QUEST</h3><p>LAST BOSS / LOCKED</p></div><div class="tenmaFoodLock">?</div></div>
-        </div>`;
-      overlay.querySelector('.tenmaFoodBack').addEventListener('click',()=>{overlay.style.display='none'});
-      doc.body.appendChild(overlay);
+      overlay=doc.createElement('section');overlay.id='tenmaFoodQuestOverlay';overlay.className='tenmaFoodOverlay';
+      overlay.innerHTML=`<div class="tenmaFoodTop"><button class="tenmaFoodBack" type="button">‹</button><div class="tenmaFoodTitle">S.u.G QUEST</div><div></div></div><div class="tenmaFoodHero"><small>TENMA FOOD WALK</small><h2>天満 食べ歩きQUEST</h2><p>食べたい・体験したいを「歩く理由」に。天満の10スポットを、自分のペースで巡るQUEST。</p><div class="tenmaFoodProgress"><b>0 / 10</b><span>SHOP CARD</span></div><div class="tenmaFoodBar"><i></i></div></div><div class="tenmaFoodRules"><div class="tenmaFoodRule"><b>STEP</b><span>歩数を記録</span></div><div class="tenmaFoodRule"><b>GPS</b><span>現地到達</span></div><div class="tenmaFoodRule"><b>QUEST</b><span>条件クリア</span></div></div><div class="tenmaFoodSlots">${Array.from({length:9},(_,i)=>`<div class="tenmaFoodSlot"><div class="tenmaFoodNo">${String(i+1).padStart(2,'0')}</div><div><h3>連携店舗 選定中</h3><p>SHOP / FOOD / EXPERIENCE</p></div><div class="tenmaFoodLock">🔒</div></div>`).join('')}<div class="tenmaFoodSlot secret"><div class="tenmaFoodNo">10</div><div><h3>SECRET QUEST</h3><p>LAST BOSS / LOCKED</p></div><div class="tenmaFoodLock">?</div></div></div>`;
+      overlay.querySelector('.tenmaFoodBack').addEventListener('click',()=>overlay.style.display='none');doc.body.appendChild(overlay);
     }
-    overlay.style.display='block';
-    overlay.scrollTop=0;
-  };
+    overlay.style.display='block';overlay.scrollTop=0;
+  }
   doc.defaultView.openTenmaFoodQuest=openFood;
 
-  const miniWrap=doc.querySelector('#mini');
-  if(miniWrap&&!miniWrap.querySelector('.tenmaFoodMini')){
-    const mini=doc.createElement('button');
-    mini.type='button';
-    mini.className='mini tenmaFoodMini';
-    mini.innerHTML='<div class="miniPic">食</div><b>天満 食べ歩き</b><span>0/10</span><em>選定中</em>';
-    mini.addEventListener('click',openFood);
-    miniWrap.appendChild(mini);
+  const today=doc.querySelector('.today');
+  if(today&&!doc.querySelector('.tenmaFoodHomeCard')){
+    const card=doc.createElement('button');card.type='button';card.className='today tenmaFoodHomeCard';
+    card.innerHTML='<div class="thumb">食</div><div><h3>天満 食べ歩きQUEST</h3><div class="mut">10店舗を自由に巡る｜STEP＋GPS＋QUEST</div></div><div style="color:#f4d079;font-size:22px">›</div>';
+    card.addEventListener('click',openFood);today.insertAdjacentElement('afterend',card);
   }
 
   const areaList=doc.querySelector('#areaList');
   if(areaList&&!areaList.querySelector('.tenmaFoodAreaCard')){
-    const card=doc.createElement('button');
-    card.type='button';
-    card.className='areaCard tenmaFoodAreaCard';
+    const card=doc.createElement('button');card.type='button';card.className='areaCard tenmaFoodAreaCard';
     card.innerHTML='<div class="scene">食</div><div class="areaText"><h3>天満 食べ歩きQUEST</h3><p>食・体験・街歩き。10スポットを自由に巡る</p><div class="nums"><b>0/10</b><b>選定中</b></div><div class="prog"><i style="width:0%"></i></div></div>';
-    card.addEventListener('click',openFood);
-    areaList.appendChild(card);
+    card.addEventListener('click',openFood);areaList.appendChild(card);
   }
 }
 
 frame.addEventListener('load',()=>{
   const doc=frame.contentDocument;if(!doc)return;
-  const fix=doc.createElement('script');
-  fix.textContent="window.openHomeMasashige=async function(){if(typeof chosen!=='undefined')chosen='河南町';if(typeof render==='function')render();if(typeof activateArea==='function')activateArea('河南町');if(typeof loadPersons==='function')await loadPersons();if(typeof openPerson==='function')openPerson('kusunoki-masashige')};";
-  doc.body.appendChild(fix);
+  const fix=doc.createElement('script');fix.textContent="window.openHomeMasashige=async function(){if(typeof chosen!=='undefined')chosen='河南町';if(typeof render==='function')render();if(typeof activateArea==='function')activateArea('河南町');if(typeof loadPersons==='function')await loadPersons();if(typeof openPerson==='function')openPerson('kusunoki-masashige')};";doc.body.appendChild(fix);
   const today=doc.querySelector('.today');if(today)today.setAttribute('onclick','openHomeMasashige()');
   installTenmaFoodQuest(doc);
-  if(doc.querySelector('script[data-tenma-persons]'))return;
-  const css=doc.createElement('link');css.rel='stylesheet';css.href='./assets/quest/tenma-person-collection-20260906.css?v=tenma-persons-20260906b';css.dataset.tenmaPersons='';doc.head.appendChild(css);
-  const script=doc.createElement('script');script.src='./assets/quest/tenma-person-collection-20260906.js?v=tenma-persons-20260906b';script.dataset.tenmaPersons='';doc.body.appendChild(script);
+  if(!doc.querySelector('script[data-tenma-persons]')){
+    const css=doc.createElement('link');css.rel='stylesheet';css.href='./assets/quest/tenma-person-collection-20260906.css?v=tenma-persons-20260906b';css.dataset.tenmaPersons='';doc.head.appendChild(css);
+    const script=doc.createElement('script');script.src='./assets/quest/tenma-person-collection-20260906.js?v=tenma-persons-20260906b';script.dataset.tenmaPersons='';doc.body.appendChild(script);
+  }
 });
 </script></body></html>
