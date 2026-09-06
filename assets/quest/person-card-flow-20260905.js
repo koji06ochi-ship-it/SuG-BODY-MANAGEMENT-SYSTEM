@@ -59,6 +59,10 @@
     const x=[0,49.21,98.41][index%3],y=[0,50,100][Math.floor(index/3)]||0;
     return '<div class="personPortrait" style="background-position:'+x+'% '+y+'%"></div>';
   }
+  function masashigeKamonMarkup(p){
+    if(p.id!=='kusunoki-masashige'&&p.id!=='chihaya-kusunoki-masashige')return '';
+    return '<span class="emblemSlot"><span class="emblemType">'+escapeHtml(p.emblem.type)+'</span><span class="emblemMark"><img src="./assets/quest/kikusui-kusunoki-masanari-20260904.jpg?v=canonical-20260904b" alt="正本菊水紋"></span><span class="emblemLabel">'+escapeHtml(p.emblem.label)+'</span></span>';
+  }
   function syncCollectionStates(){
     const cards=document.querySelectorAll('#personList .personCard');
     if(!cards.length||!KANAN_PERSONS.length)return;
@@ -74,7 +78,7 @@
   function renderDetail(){
     if(!activePerson)return;
     const p=activePerson.person,area=activePerson.area,index=activePerson.index,s=stateFor(area,p.id),status=resolvedStatus(area,p),locked=status==='locked',started=s.questStartSteps!==null,c=conditions(p,s),gpsCount=validGpsChecks(p,s).length,gpsNeed=requiredGps(p);
-    document.getElementById('pdArt').innerHTML=portraitMarkup(p,index,area)+'<div class="personShade"></div>';
+    document.getElementById('pdArt').innerHTML=portraitMarkup(p,index,area)+'<div class="personShade"></div>'+masashigeKamonMarkup(p);
     document.getElementById('pdName').textContent=p.name;
     document.getElementById('pdEra').textContent=p.era+'　'+p.certainty+' 史実確度';
     document.getElementById('pdCert').textContent=p.existenceCertainty&&p.relationCertainty?'人物 '+p.existenceCertainty+' / 地域関係 '+p.relationCertainty+'　'+p.certaintyNote:p.certainty+' '+p.certaintyNote;
