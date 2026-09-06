@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#060606">
+<meta name="theme-color" content="#03050b">
 <title>S.u.G BODY Lite</title>
-<style>html,body{margin:0;background:#060606;color:#f8f2df;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif}#loading{min-height:100vh;display:grid;place-items:center;text-align:center;color:#d9b85f;background:radial-gradient(circle at 50% 15%,#3a2a0e,#090806 55%,#060606)}#loading b{font-family:Georgia,"Hiragino Mincho ProN",serif;font-size:24px;display:block;margin-bottom:8px}#loading small{color:#8e8677}</style>
+<style>html,body{margin:0;background:#03050b;color:#f8f2df;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif}#loading{min-height:100vh;display:grid;place-items:center;text-align:center;color:#d9b85f;background:radial-gradient(circle at 50% 15%,#172443,#070910 52%,#020307)}#loading b{font-family:Georgia,"Hiragino Mincho ProN",serif;font-size:24px;display:block;margin-bottom:8px}#loading small{color:#8e8677}</style>
 </head>
 <body>
 <div id="loading"><div><b>S.u.G BODY Lite</b><small>QUEST × BODY を読み込み中…</small></div></div>
@@ -14,9 +14,24 @@
   try{
     const r=await fetch('./lite-prototype.html?fresh='+Date.now(),{cache:'no-store'});
     let html=await r.text();
+    const bg=`<style id="sug-v052-celestial">
+html,body{background:#03050b!important}
+body{position:relative;background:radial-gradient(ellipse at 50% -8%,rgba(29,48,91,.72) 0%,rgba(9,14,28,.78) 34%,rgba(3,5,11,.96) 62%,#020307 100%)!important;background-attachment:fixed!important}
+body:before{content:""!important;position:fixed!important;inset:0!important;pointer-events:none!important;z-index:-3!important;opacity:.8!important;background-image:radial-gradient(circle at 8% 11%,rgba(255,246,210,.95) 0 1px,transparent 1.5px),radial-gradient(circle at 23% 26%,rgba(202,220,255,.8) 0 1px,transparent 1.5px),radial-gradient(circle at 77% 17%,rgba(255,227,150,.9) 0 1.2px,transparent 1.8px),radial-gradient(circle at 61% 39%,rgba(222,232,255,.65) 0 1px,transparent 1.6px),radial-gradient(circle at 89% 61%,rgba(241,201,104,.72) 0 1px,transparent 1.6px),radial-gradient(circle at 34% 72%,rgba(202,218,255,.72) 0 1px,transparent 1.6px);background-size:210px 210px,260px 260px,310px 310px,230px 230px,280px 280px,340px 340px!important;animation:sugStarDrift 30s ease-in-out infinite alternate!important}
+body:after{content:""!important;position:fixed!important;inset:-10%!important;pointer-events:none!important;z-index:-2!important;background:radial-gradient(circle at 18% 28%,rgba(218,174,75,.10),transparent 22%),radial-gradient(circle at 80% 40%,rgba(51,88,156,.18),transparent 30%),radial-gradient(ellipse at 50% 88%,rgba(177,127,37,.08),transparent 30%)!important;filter:blur(10px)!important}
+.sugConstellation{position:fixed;right:-18px;top:68px;width:230px;height:170px;z-index:-1;pointer-events:none;opacity:.5;filter:drop-shadow(0 0 8px rgba(233,198,102,.22))}.sugConstellation svg{width:100%;height:100%}.sugConstellation path{stroke:rgba(214,184,100,.36);stroke-width:1.2;fill:none}.sugConstellation circle{fill:rgba(247,220,142,.9)}.sugConstellation .north{r:3.2;filter:drop-shadow(0 0 5px rgba(255,221,120,.85))}
+.sugMist{position:fixed;left:-20%;bottom:-110px;width:140%;height:250px;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 50% 100%,rgba(202,155,55,.13),rgba(44,56,91,.05) 42%,transparent 72%);filter:blur(18px)}
+.hero,.section,.details,.bottomNav{backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.hero{box-shadow:0 26px 90px rgba(0,0,0,.72),0 0 38px rgba(197,151,52,.08),inset 0 0 60px rgba(219,174,64,.06)!important}
+@keyframes sugStarDrift{from{transform:translate3d(0,0,0)}to{transform:translate3d(-8px,12px,0)}}
+@media(max-width:430px){.sugConstellation{width:190px;height:145px;right:-30px;top:78px;opacity:.42}}
+</style>`;
+    const deco=`<div class="sugConstellation" aria-hidden="true"><svg viewBox="0 0 230 170" xmlns="http://www.w3.org/2000/svg"><path d="M196 20 L165 46 L132 42 L101 66 L72 86 L45 112 L22 140"/><circle class="north" cx="196" cy="20" r="3.2"/><circle cx="165" cy="46" r="2.4"/><circle cx="132" cy="42" r="2.2"/><circle cx="101" cy="66" r="2.5"/><circle cx="72" cy="86" r="2.3"/><circle cx="45" cy="112" r="2.4"/><circle cx="22" cy="140" r="2.1"/></svg></div><div class="sugMist" aria-hidden="true"></div>`;
+    html=html.replace('</head>',bg+'</head>');
+    html=html.replace('<body>','<body>'+deco);
     html=html.replace(/<h1>\s*今日も、?<br>\s*自分が主人公。\s*<\/h1>/,'<h1 style="white-space:nowrap;font-size:23px;letter-spacing:-.06em">今日も自分が主人公。</h1>');
     html=html.replace(/<h1>\s*今日も自分が主人公。\s*<\/h1>/,'<h1 style="white-space:nowrap;font-size:23px;letter-spacing:-.06em">今日も自分が主人公。</h1>');
-    html=html.replace('v0.5 VISUAL','v0.5.1 VISUAL');
+    html=html.replace('v0.5 VISUAL','v0.5.2 CELESTIAL').replace('v0.5.1 VISUAL','v0.5.2 CELESTIAL');
     document.open();document.write(html);document.close();
   }catch(e){document.getElementById('loading').innerHTML='<div><b>読み込みに失敗しました</b><small>ページを再読み込みしてください。</small></div>'}
 })();
