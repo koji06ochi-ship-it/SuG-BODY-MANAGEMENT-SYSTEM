@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050507">
+<title>S.u.G BODY Lite｜今月の変化</title>
+<style>
+html,body{margin:0;background:#050507;color:#f8efd4;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif}
+#loading{min-height:100vh;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 50% 15%,#332913,#0a0a0d 44%,#040406 75%);color:#e4c66f}
+#loading b{font-family:Georgia,"Hiragino Mincho ProN",serif;font-size:23px;display:block;margin-bottom:8px}#loading small{color:#887d65}
+</style>
+</head>
+<body>
+<div id="loading"><div><b>今月の変化</b><small>MONTHLY QUEST BOOK</small></div></div>
+<script>
+(async()=>{
+ try{
+  const r=await fetch('./lite-monthly.html?fresh='+Date.now(),{cache:'no-store'});
+  let html=await r.text();
+  const css=`<style id="sug-monthly-v062-book">
+@media(max-width:560px){
+  body{padding-bottom:calc(142px + env(safe-area-inset-bottom))!important}
+  .app{padding-left:12px!important;padding-right:12px!important;padding-bottom:70px!important}
+  .topbar{margin-left:-12px!important;margin-right:-12px!important;padding-left:16px!important;padding-right:16px!important}
+  .brandName{font-size:14px!important;letter-spacing:.11em!important}.brandSub{font-size:7px!important}
+
+  /* 月刊QUESTブック：上部を詰め、成果をすぐ見せる */
+  .hero{min-height:150px!important;margin:0 -12px!important;padding:16px 18px 12px!important}
+  .hero h1{font-size:33px!important;line-height:1!important;margin:7px 0 6px!important}.hero p{font-size:12px!important;letter-spacing:.04em!important}
+  .heroEy{font-size:8px!important}.heroQuote{top:78px!important;right:16px!important;width:130px!important;font-size:8.5px!important;line-height:1.5!important}
+  .world .ridge{top:63px!important;height:164px!important;opacity:.44!important}.world .castle{top:48px!important;right:-4px!important;transform:scale(.83);transform-origin:top right;opacity:.27!important}.world .mist{top:128px!important;height:110px!important}
+
+  .frame{margin-top:10px!important;border-color:rgba(202,164,70,.46)!important}
+  .achievement{padding:13px 10px!important;grid-template-columns:74px minmax(0,1fr) 58px!important;gap:8px!important}
+  .monthSeal{padding-right:7px!important}.monthSeal small{font-size:7px!important}.monthSeal b{font-size:30px!important}.monthSeal em{font-size:10px!important}
+  .achText h2{font-size:16px!important;margin-bottom:9px!important;white-space:nowrap!important}.achStats{gap:4px!important}.achStat span{font-size:6.8px!important;white-space:nowrap!important}.achStat b{font-size:19px!important}.achStat small{font-size:6.5px!important}
+  .deltaOrb{width:55px!important;height:55px!important}.deltaOrb b{font-size:15px!important}.deltaOrb small{font-size:6px!important}
+
+  /* 2カラム廃止：全部を一冊の章として縦読み */
+  .contentGrid{display:grid!important;grid-template-columns:1fr!important;gap:13px!important;margin-top:13px!important}
+  .contentGrid>.frame,.contentGrid>.panel,.bodyPanel,.lifePanel{grid-column:1!important;width:100%!important;min-width:0!important}
+  .panel{padding:15px!important}.cardPanel{padding:9px!important}
+  .panelHead{align-items:center!important;gap:8px!important;padding-bottom:10px!important}.panelHead h3{font-size:19px!important;line-height:1.05!important;white-space:nowrap!important;word-break:keep-all!important}.panelHead small{font-size:7px!important;line-height:1.15!important;letter-spacing:.08em!important;text-align:right!important}
+
+  /* 月間比較：スマホで読める表 */
+  .compare{font-size:10px!important;margin-top:8px!important}.compare th,.compare td{padding:10px 5px!important}.compare th:first-child,.compare td:first-child{width:39%!important}.metricName{font-size:9.5px!important;white-space:nowrap!important}.compare th{font-size:8px!important}
+
+  /* QUEST CARDを今月の主役へ */
+  .questCard{min-height:610px!important;border-color:#9a7831!important;box-shadow:0 24px 70px rgba(0,0,0,.58),inset 0 0 46px rgba(223,176,54,.08)!important}
+  .cardImage{height:382px!important;background:radial-gradient(circle at 56% 29%,rgba(211,165,67,.23),transparent 28%),linear-gradient(145deg,#202a39,#0b0b0d 58%,#2a1c0b)!important}
+  .cardImage img{filter:saturate(.86) contrast(1.08) brightness(.88)!important}
+  .verticalQuote{font-size:13px!important;left:16px!important;top:20px!important;letter-spacing:.1em!important}.rarity{font-size:8px!important;padding:8px 9px!important;right:13px!important;top:13px!important}
+  .silhouette{width:142px!important;height:238px!important;bottom:34px!important;opacity:.34!important;filter:drop-shadow(0 0 26px rgba(226,190,96,.18))}
+  .cardImage:not(:has(img.has)){background:radial-gradient(circle at 50% 40%,rgba(211,165,67,.14),transparent 26%),radial-gradient(circle at 50% 45%,rgba(60,69,92,.34),transparent 44%),linear-gradient(180deg,#171c27,#08090d 62%,#130e07)!important}
+  .cardImage:not(:has(img.has)):after{content:""!important;position:absolute!important;inset:18px!important;height:auto!important;left:18px!important;right:18px!important;bottom:18px!important;border:1px solid rgba(218,181,83,.18)!important;background:radial-gradient(circle at 50% 48%,rgba(228,191,91,.08),transparent 31%)!important;box-shadow:inset 0 0 55px rgba(219,179,73,.05)!important}
+  .cardImage:not(:has(img.has)) .silhouette:after{content:"封印中";position:absolute;z-index:7;left:50%;top:52%;transform:translate(-50%,-50%);white-space:nowrap;color:#e4c66f;font-size:11px;letter-spacing:.22em;border:1px solid rgba(214,178,78,.58);background:rgba(7,7,8,.84);padding:8px 12px;border-radius:999px;box-shadow:0 0 26px rgba(218,174,68,.13)}
+  .cardImage:not(:has(img.has)):before{content:"主人公写真を登録すると\A今月のQUEST CARDが解放されます";white-space:pre;position:absolute;z-index:8;left:50%;bottom:28px;transform:translateX(-50%);width:90%;text-align:center;color:#a99a75;font-size:9px;line-height:1.65;letter-spacing:.05em}
+  .cardTitle{padding:18px 15px 6px!important}.cardTitle b{font-size:29px!important}.cardTitle small{font-size:8px!important;margin-top:5px!important}.cardStory{font-size:10px!important;line-height:1.65!important;padding:4px 22px 14px!important}.effects{margin:0 16px 16px!important;padding-top:12px!important}.effect{font-size:8px!important}.effect b{font-size:12px!important;margin-top:4px!important}
+
+  /* 見た目の変化：全幅で写真を大きく */
+  .bodyPanel{grid-column:1!important}.bodyCompare{grid-template-columns:1fr 38px 1fr!important;gap:8px!important}.bodyBox{min-height:238px!important;padding:9px!important}.bodyBox b{font-size:13px!important}.bodyBox small{font-size:8px!important}.bodyPhoto{height:185px!important}.bodyGhost{height:150px!important;width:70px!important}.bodyBullets{font-size:8.5px!important;line-height:1.6!important}.arrow{font-size:28px!important}
+
+  /* 人生の断片：最後の章として読ませる */
+  .lifePanel{grid-column:1!important;min-height:0!important}.lifeQuote{font-size:19px!important;line-height:1.75!important;padding:16px 8px!important}.fragment{font-size:10px!important;line-height:1.7!important;padding-top:13px!important}.cta{font-size:10px!important;padding:12px!important;margin-top:13px!important}.saveRow{gap:9px!important;margin-top:10px!important}.saveBtn{font-size:9px!important;padding:11px 8px!important}.status{font-size:9px!important;margin-top:8px!important}
+
+  .bottomNav{padding-left:4px!important;padding-right:4px!important;padding-bottom:calc(10px + env(safe-area-inset-bottom))!important}.navItem{font-size:8px!important}.navIcon{font-size:19px!important}
+}
+</style>`;
+  const polish=`<script>
+  document.addEventListener('DOMContentLoaded',()=>{
+    const softenEmpty=()=>{
+      document.querySelectorAll('.compare tbody tr,.compare tr').forEach(tr=>{
+        const cells=[...tr.querySelectorAll('td')];
+        if(cells.length<2)return;
+        const values=cells.slice(1).map(td=>(td.textContent||'').trim());
+        const empty=values.length&&values.every(v=>!v||v==='--'||v==='→ 0'||v==='→0');
+        tr.style.opacity=empty?'.42':'1';
+      });
+    };
+    softenEmpty();
+    const obs=new MutationObserver(softenEmpty);obs.observe(document.body,{subtree:true,childList:true,characterData:true});
+  });
+  <\/script>`;
+  html=html.replace('</head>',css+'</head>');
+  html=html.replace(/v0\.6/g,'v0.6.2 BOOK');
+  html=html.replace('</body>',polish+'</body>');
+  document.open();document.write(html);document.close();
+ }catch(e){document.getElementById('loading').innerHTML='<div><b>読み込みに失敗しました</b><small>再読み込みしてください</small></div>'}
+})();
+</script>
+</body>
+</html>
