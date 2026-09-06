@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050507">
+<title>S.u.G BODY Lite｜今月の変化</title>
+<style>html,body{margin:0;background:#050507;color:#f8efd4;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif}#loading{min-height:100vh;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 50% 15%,#332913,#0a0a0d 44%,#040406 75%);color:#e4c66f}#loading b{font-family:Georgia,"Hiragino Mincho ProN",serif;font-size:23px;display:block;margin-bottom:8px}#loading small{color:#887d65}</style>
+</head>
+<body>
+<div id="loading"><div><b>今月の変化</b><small>S.u.G BODY Lite</small></div></div>
+<script>
+(async()=>{
+ try{
+  const r=await fetch('./lite-monthly.html?fresh='+Date.now(),{cache:'no-store'});
+  let html=await r.text();
+  const css=`<style id="sug-monthly-v061-mobile">
+@media(max-width:430px){
+  .app{padding-left:10px!important;padding-right:10px!important}
+  .topbar{margin-left:-10px!important;margin-right:-10px!important;padding-left:15px!important;padding-right:15px!important}
+  .brandName{font-size:14px!important;letter-spacing:.11em!important}.brandSub{font-size:7px!important}
+  .hero{min-height:166px!important;margin-left:-10px!important;margin-right:-10px!important;padding:20px 18px 14px!important}
+  .hero h1{font-size:34px!important;margin:8px 0 6px!important;line-height:1!important}.hero p{font-size:12px!important;letter-spacing:.05em!important}.heroEy{font-size:8px!important}.heroQuote{top:91px!important;right:16px!important;width:132px!important;font-size:8.5px!important;line-height:1.55!important}
+  .world .ridge{top:76px!important;height:176px!important;opacity:.43!important}.world .castle{top:63px!important;right:0!important;transform:scale(.86);transform-origin:top right;opacity:.26!important}.world .mist{top:145px!important;height:120px!important}
+  .frame{margin-top:8px!important}.achievement{padding:12px 10px!important;grid-template-columns:72px minmax(0,1fr) 58px!important;gap:8px!important}.monthSeal{padding-right:7px!important}.monthSeal small{font-size:7px!important}.monthSeal b{font-size:29px!important}.monthSeal em{font-size:10px!important}.achText h2{font-size:16px!important;margin-bottom:9px!important;white-space:nowrap!important}.achStats{gap:4px!important}.achStat span{font-size:6.7px!important;white-space:nowrap!important}.achStat b{font-size:18px!important}.achStat small{font-size:6.5px!important}.deltaOrb{width:54px!important;height:54px!important}.deltaOrb b{font-size:15px!important}.deltaOrb small{font-size:6px!important}
+  .contentGrid{grid-template-columns:1fr 1fr!important;gap:7px!important;margin-top:7px!important}.panel{padding:9px!important}.cardPanel{padding:6px!important}.panelHead{gap:5px!important;padding-bottom:7px!important;align-items:center!important}.panelHead h3{font-size:14px!important;line-height:1.05!important;white-space:nowrap!important;word-break:keep-all!important}.panelHead small{font-size:5.8px!important;line-height:1.15!important;letter-spacing:.06em!important;text-align:right!important}.compare{font-size:7.3px!important}.compare th,.compare td{padding:6px 2px!important}.metricName{font-size:7.2px!important;white-space:nowrap!important}
+  .questCard{min-height:330px!important}.cardImage{height:190px!important}.verticalQuote{font-size:9.5px!important;left:10px!important;top:14px!important}.rarity{font-size:6.5px!important;padding:6px!important}.cardTitle{padding:9px 8px 3px!important}.cardTitle b{font-size:16px!important}.cardStory{font-size:6.8px!important;padding:2px 10px 7px!important}.effects{margin:0 7px 7px!important;padding-top:6px!important}.effect{font-size:5.8px!important}.effect b{font-size:8px!important}
+  .silhouette{width:82px!important;height:137px!important;bottom:11px!important;opacity:.55!important;filter:drop-shadow(0 0 16px rgba(226,190,96,.12))}.cardImage:not(:has(img.has)) .silhouette:after{content:"未解放";position:absolute;left:50%;bottom:48%;transform:translate(-50%,50%);white-space:nowrap;color:#d8bd6e;font-size:8px;letter-spacing:.18em;border:1px solid rgba(214,178,78,.45);background:rgba(8,8,8,.72);padding:5px 7px;border-radius:999px}.cardImage:not(:has(img.has)):before{content:"主人公写真を登録すると\Aカードが解放されます";white-space:pre;position:absolute;z-index:4;left:50%;bottom:11px;transform:translateX(-50%);width:100%;text-align:center;color:#8e8269;font-size:6.5px;line-height:1.45;letter-spacing:.05em}
+  .bodyPanel{grid-column:1/2!important}.lifePanel{grid-column:2/3!important}.bodyBox{min-height:158px!important;padding:5px!important}.bodyPhoto{height:104px!important}.bodyGhost{height:88px!important;width:43px!important}.bodyBullets{font-size:6.5px!important}.lifeQuote{font-size:11px!important;line-height:1.55!important;padding:7px 1px!important}.fragment{font-size:7px!important}.cta{font-size:8px!important;padding:9px!important}.saveBtn{font-size:7px!important;padding:8px 5px!important}
+  .bottomNav{padding-left:3px!important;padding-right:3px!important}.navItem{font-size:8px!important}.navIcon{font-size:18px!important}
+}
+</style>`;
+  html=html.replace('</head>',css+'</head>');
+  html=html.replace(/v0\.6/g,'v0.6.1');
+  document.open();document.write(html);document.close();
+ }catch(e){document.getElementById('loading').innerHTML='<div><b>読み込みに失敗しました</b><small>再読み込みしてください</small></div>'}
+})();
+</script>
+</body>
+</html>
