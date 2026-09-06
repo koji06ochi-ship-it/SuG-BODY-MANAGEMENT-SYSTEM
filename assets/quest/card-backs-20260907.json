@@ -1,0 +1,85 @@
+{
+  "version": "2026-09-07",
+  "policy": {
+    "sourcePriority": ["公式HP・公的資料", "Google店舗情報", "公式SNS", "予約・グルメ媒体"],
+    "rule": "公開情報で確認できない人物名・メニュー・特典は推測で掲載しない。店舗確認後に追記する。"
+  },
+  "cards": [
+    {
+      "id": "S01-SHP-0101",
+      "type": "SHOP",
+      "name": "天満つくし D-Wish",
+      "back": {
+        "recommended": [
+          "カジュアルそば打ち体験（公開料金 3,900円〜）",
+          "自分で打ったそばを完成後その場で茹で、打ち立てを味わう体験"
+        ],
+        "staffPick": "店主・大槻泰三さん。旧『天満つくし』で石川肇氏からそば打ちを学び、師匠の遺志（Dying Wish）を継いで同じ場所にD-Wishを開業。",
+        "staff": "大槻泰三さん（店主）",
+        "story": "2023年7月オープン。『そば打ちをカジュアルに楽しむ』『おいしい思い出づくり』を掲げ、初心者でも完成できるレッスンを案内。公式HPでは来店者の9割が初心者と紹介されている。",
+        "access": "JR天満駅から徒歩約3分（公式アクセス表記）／完全予約制",
+        "quest": "店舗GPS到達＋そば打ち体験参加でSHOP CARD GET（S.u.G QUEST側の達成条件）",
+        "sourceLabel": "天満つくしD-Wish 公式HP・公式LP",
+        "sources": [
+          "https://temmatsukushi.com/",
+          "https://temmatsukushi.com/about-tsukushi/",
+          "https://temmatsukushi-lp.com/"
+        ]
+      }
+    },
+    {
+      "id": "S01-SHP-0102",
+      "type": "SHOP",
+      "name": "焼肉ホルモン瞭 天満店",
+      "back": {
+        "recommended": [
+          "名物 ぜっぴんカルビ 858円（税込）",
+          "名物 レッドライン 壺付け中落ちカルビ 2,068円（税込）",
+          "石焼ガーリックライス"
+        ],
+        "staffPick": "公開情報では、店主が目利きした厳選牛・新鮮ホルモンと、スタッフによる焼き加減のサポートを店の特徴として案内。",
+        "staff": "おすすめ店員さんの実名は公開情報で確認できないため、店舗確認後に掲載",
+        "story": "A5和牛を使った『ぜっぴんカルビ』を名物として掲載。上質な赤身・霜降り・ホルモンを提供し、スタッフが卓上で焼き加減をサポートする旨が公開ページで案内されている。",
+        "access": "大阪市北区天神橋4丁目8-23／JR天満駅至近",
+        "quest": "店舗GPS到達＋対象メニュー注文でSHOP CARD GET（対象メニューは店舗打合せ後に確定）",
+        "sourceLabel": "Hot Pepper グルメ掲載情報・Google店舗情報",
+        "sources": [
+          "https://www.hotpepper.jp/strJ004470437/",
+          "https://www.hotpepper.jp/strJ004470437/food/"
+        ]
+      }
+    },
+    {
+      "id": "kusunoki-masashige",
+      "type": "PERSON",
+      "name": "楠木正成",
+      "certainty": "●",
+      "back": {
+        "summary": "鎌倉時代末期から南北朝時代にかけて活躍した武将。大阪府は永仁2年（1294）生まれ、千早赤阪村の豪族出身とされる人物として紹介している。",
+        "career": [
+          "1331年、後醍醐天皇の討幕計画に呼応して赤阪城で挙兵。",
+          "1332年、千早城・楠木城（上赤阪城）などを中心に幕府軍と戦った。",
+          "1333年、後醍醐天皇の還幸時に兵庫津で合流したことを神戸市が紹介。",
+          "1336年5月25日、湊川の戦いで後醍醐天皇方として足利方と戦い、戦没。"
+        ],
+        "places": [
+          "赤阪城跡（下赤阪城跡）",
+          "楠木城跡（上赤阪城跡）",
+          "千早城跡",
+          "楠公誕生地（生誕地伝承）",
+          "湊川・会下山周辺"
+        ],
+        "localRelation": "千早赤阪村には赤阪城・楠木城・千早城など正成ゆかりの国史跡が集中。河南町には楠木正成の支城とされる持尾城跡があると町資料が紹介している。",
+        "emblem": "菊水紋（S.u.G QUEST登録カード表示）",
+        "quest": "河南町内5,000歩＋平石城跡・持尾城跡GPS＋QUEST 2問でCARD GET（S.u.G QUEST設定）",
+        "sourceLabel": "大阪府・千早赤阪村・河南町・神戸市 公的資料",
+        "sources": [
+          "https://www.pref.osaka.lg.jp/o070080/toshimiryoku/osakathemuseum/kusunokimasashige.html",
+          "https://www.vill.chihayaakasaka.osaka.jp/kanko/rekishi/index.html",
+          "https://www.vill.chihayaakasaka.osaka.jp/kakuka/kyoiku/syakaikyoiku/bunnkazai/9112.html",
+          "https://www.city.kobe.lg.jp/e90232/kuyakusho/hyogoku/shoukai/rekishi/history_4.html"
+        ]
+      }
+    }
+  ]
+}
