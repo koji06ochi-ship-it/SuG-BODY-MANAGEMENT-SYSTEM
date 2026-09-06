@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#060606">
+<title>S.u.G BODY Lite</title>
+<style>html,body{margin:0;background:#060606;color:#f8f2df;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif}#loading{min-height:100vh;display:grid;place-items:center;text-align:center;color:#d9b85f;background:radial-gradient(circle at 50% 15%,#3a2a0e,#090806 55%,#060606)}#loading b{font-family:Georgia,"Hiragino Mincho ProN",serif;font-size:24px;display:block;margin-bottom:8px}#loading small{color:#8e8677}</style>
+</head>
+<body>
+<div id="loading"><div><b>S.u.G BODY Lite</b><small>QUEST × BODY を読み込み中…</small></div></div>
+<script>
+(async()=>{
+  try{
+    const r=await fetch('./lite-prototype.html?fresh='+Date.now(),{cache:'no-store'});
+    let html=await r.text();
+    html=html.replace(/<h1>\s*今日も、?<br>\s*自分が主人公。\s*<\/h1>/,'<h1 style="white-space:nowrap;font-size:23px;letter-spacing:-.06em">今日も自分が主人公。</h1>');
+    html=html.replace(/<h1>\s*今日も自分が主人公。\s*<\/h1>/,'<h1 style="white-space:nowrap;font-size:23px;letter-spacing:-.06em">今日も自分が主人公。</h1>');
+    html=html.replace('v0.5 VISUAL','v0.5.1 VISUAL');
+    document.open();document.write(html);document.close();
+  }catch(e){document.getElementById('loading').innerHTML='<div><b>読み込みに失敗しました</b><small>ページを再読み込みしてください。</small></div>'}
+})();
+</script>
+</body>
+</html>
