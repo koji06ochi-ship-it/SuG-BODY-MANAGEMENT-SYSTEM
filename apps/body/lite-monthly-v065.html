@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#02040a">
+<title>S.u.G BODY Lite｜今月の変化 v0.6.5 AI HERO</title>
+<style>
+html,body{margin:0;background:#02040a;color:#f8efd4;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif}#loading{min-height:100vh;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 50% 14%,#28375d 0,#0b0d14 39%,#030408 73%);color:#e4c66f}#loading b{font-family:Georgia,"Hiragino Mincho ProN",serif;font-size:24px;display:block;margin-bottom:8px}#loading small{color:#887d65;letter-spacing:.12em}
+</style>
+</head>
+<body>
+<div id="loading"><div><b>AI QUEST 主人公</b><small>MONTHLY HERO CARD</small></div></div>
+<script>
+(async()=>{
+ try{
+  const r=await fetch('./lite-monthly-v064.html?fresh='+Date.now(),{cache:'no-store'});
+  let html=await r.text();
+  const css=`<style id="sug-ai-avatar-v065">
+.sugAiAvatarBox{position:relative;margin:10px 0 12px;padding:13px 12px;border:1px solid rgba(222,184,84,.34);background:radial-gradient(circle at 84% 20%,rgba(226,183,78,.09),transparent 27%),linear-gradient(145deg,rgba(20,18,14,.88),rgba(6,8,13,.92));box-shadow:inset 0 0 30px rgba(229,185,66,.035)}
+.sugAiAvatarCopy{display:flex;flex-direction:column;gap:4px;margin-bottom:10px}.sugAiAvatarCopy b{font-family:Georgia,"Hiragino Mincho ProN",serif;color:#ead49b;font-size:14px;letter-spacing:.08em}.sugAiAvatarCopy span{color:#9c927c;font-size:9px;line-height:1.55}
+#sugAiAvatarBtn{width:100%;border:1px solid #a07c32;border-radius:999px;padding:12px 13px;background:linear-gradient(180deg,rgba(73,53,19,.92),rgba(19,14,8,.95));color:#f0d37a;font-size:10px;font-weight:900;letter-spacing:.04em;box-shadow:0 0 24px rgba(217,170,57,.08)}#sugAiAvatarBtn:disabled{opacity:.55}
+.sugAiAvatarStatus{margin-top:8px;min-height:15px;color:#968b73;font-size:8.5px;line-height:1.55}.sugAiAvatarStatus[data-state="working"]{color:#d9bd6b}.sugAiAvatarStatus[data-state="done"]{color:#9ed69f}.sugAiAvatarStatus[data-state="error"]{color:#e9a09a}
+.cardImage.aiGenerated{box-shadow:inset 0 0 75px rgba(228,184,75,.07)}.cardImage.aiGenerated:before{content:"AI QUEST HERO";position:absolute;z-index:11;left:50%;bottom:18px;transform:translateX(-50%);padding:6px 10px;border:1px solid rgba(224,184,82,.42);border-radius:999px;background:rgba(4,5,8,.68);backdrop-filter:blur(8px);color:#d9bc69;font-size:7px;letter-spacing:.16em;white-space:nowrap}
+@media(max-width:560px){.sugAiAvatarBox{margin:8px 0 10px;padding:11px 10px}.sugAiAvatarCopy b{font-size:13px}.sugAiAvatarCopy span{font-size:8.5px}#sugAiAvatarBtn{padding:11px;font-size:9.5px}}
+</style>`;
+  html=html.replace('</head>',css+'</head>');
+  html=html.replace(/v0\.6\.4/g,'v0.6.5 AI HERO');
+  html=html.replace('</body>','<script src="./lite-monthly-ai-v065.js?v=065"><\/script></body>');
+  document.open();document.write(html);document.close();
+ }catch(e){document.getElementById('loading').innerHTML='<div><b>読み込みに失敗しました</b><small>ページを再読み込みしてください。</small></div>'}
+})();
+</script>
+</body>
+</html>
