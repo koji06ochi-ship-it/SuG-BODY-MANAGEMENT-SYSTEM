@@ -72,6 +72,27 @@
     });
   }
 
+  function fixLegacyMasashigeCard(){
+    const detail=document.getElementById('detailArt');
+    if(!detail)return;
+    const renderSharp=()=>{
+      detail.style.position='relative';
+      detail.style.width='min(300px,82vw)';
+      detail.style.height='auto';
+      detail.style.aspectRatio='3 / 4.65';
+      detail.style.margin='0 auto 14px';
+      detail.style.background='#060504';
+      detail.innerHTML='<div data-masashige-sharp style="position:absolute;inset:0;background-image:linear-gradient(180deg,#0000 48%,#050403aa 86%),url(\'./assets/quest/kanan-person-card-scenes-20260904.webp?v=masashige-sharp-20260907a\');background-size:100% 100%,300% 300%;background-position:center,50% 50%;background-repeat:no-repeat"></div>'
+        +'<img class="masashigeCrest" src="./assets/quest/kikusui-kusunoki-masanari-20260904.jpg?v=canonical-20260904b" alt="菊水紋">';
+    };
+    renderSharp();
+    const observer=new MutationObserver(()=>{
+      const legacy=detail.querySelector('img[src^="data:image"]');
+      if(legacy)renderSharp();
+    });
+    observer.observe(detail,{childList:true,subtree:true});
+  }
+
   async function loadTenma(){
     try{
       if(!cache){
@@ -109,5 +130,6 @@
     loadTenma();
   };
 
+  fixLegacyMasashigeCard();
   refreshTenmaSummary();
 })();
