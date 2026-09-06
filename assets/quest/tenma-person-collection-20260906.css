@@ -1,0 +1,29 @@
+body.tenmaArea .areaHero{height:285px;border-color:#c6973d;box-shadow:0 0 22px #d6a43b33}
+body.tenmaArea .collectionHead h2{color:#f7d77f;text-shadow:0 0 12px #d9a93f44}
+.tenmaPersonCard{background:#050403;isolation:isolate}
+.tenmaPortrait{height:100%;background-image:linear-gradient(180deg,#0000 52%,#060504 88%,#060504 100%),var(--tenma-art);background-position:center center,center var(--tenma-focal,top);background-size:100% 100%,100% auto;background-repeat:no-repeat}
+.tenmaPersonCard.locked .tenmaPortrait{filter:saturate(.78) brightness(.82)}
+.tenmaPersonCard.locked .personShade{background:linear-gradient(180deg,#0001 45%,#050403dd 82%)}
+.tenmaPersonInfo{bottom:8px}
+.tenmaPersonInfo .personName{font-size:16px}
+.tenmaRegion{margin-top:3px;color:#d6bd85;font-size:7px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tenmaClass{max-width:52px;color:#bcb19a;font-size:6px;letter-spacing:.05em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tenmaEmblem .emblemMark img{width:29px;height:29px;padding:3px;background:linear-gradient(145deg,#f2d686,#aa7622)}
+.tenmaMark{color:#f1c967;font:700 18px Georgia,'Yu Mincho',serif}
+.tenmaRouteCard{grid-column:1/-1;padding:14px;border:1px solid #824a9f;border-radius:13px;background:radial-gradient(circle at 85% 10%,#5e1d5738,#130914 42%,#050304 100%);box-shadow:0 0 20px #651b7b33}
+.tenmaRouteKicker{color:#dc76ee;font:800 8px Arial,sans-serif;letter-spacing:.19em}
+.tenmaRouteCard h3{margin:5px 0 10px;color:#ffe19a;font:700 17px Georgia,'Yu Mincho',serif}
+.tenmaRouteCard p{margin:10px 0 0;color:#c9b9cc;font-size:8px;line-height:1.65}
+.tenmaRouteChain{display:flex;flex-wrap:wrap;align-items:center;gap:4px;color:#f4d079;font-size:8px}
+.tenmaRouteChain span{padding:4px 6px;border:1px solid #64426b;border-radius:15px;background:#0a070b}
+.tenmaRouteChain b{color:#a957b8}
+.tenmaClanCard{grid-column:1/-1;position:relative;min-height:110px;padding:15px 74px 13px 14px;border:1px solid #9c6cba;border-radius:13px;background:linear-gradient(135deg,#1a0b1f,#060405 62%);box-shadow:0 8px 18px #0008}
+.tenmaClanCard .emblemSlot{right:12px;top:12px;width:52px;height:60px}
+.tenmaClanCard small{color:#d876eb;font:800 7px Arial,sans-serif;letter-spacing:.15em}
+.tenmaClanCard h3{margin:5px 0;color:#ffe19a;font:700 22px Georgia,'Yu Mincho',serif}
+.tenmaClanCard p,.tenmaClanCard div>div{margin:3px 0;color:#d4c8b4;font-size:9px;line-height:1.5}
+.tenmaSecretLocked{border-color:#79458c;background:radial-gradient(circle at 50% 35%,#3b143e 0,#110713 48%,#020202 100%);box-shadow:inset 0 0 30px #000,0 0 18px #6d247933}
+.tenmaSecretLocked .secretLabel{border-color:#9b55ad;color:#efb5ff}
+.tenmaSpot{cursor:default}
+.tenmaSpotMark{display:grid;place-items:center;background:radial-gradient(circle at 50% 35%,#79591f,#171006 65%);color:#ffe19a;font:700 31px Georgia,'Yu Mincho',serif;text-shadow:0 0 15px #e8bd58}
+@media(max-width:390px){.tenmaPersonInfo .personName{font-size:15px}.tenmaRegion{font-size:6.5px}.tenmaRouteCard h3{font-size:15px}}

@@ -42,13 +42,16 @@
     if(p.unlockAfter){const parent=KANAN_PERSONS.find(x=>x.name===p.unlockAfter);if(!parent||!isGot(area,parent))return 'locked'}
     return 'available';
   }
-  function areaLabel(area){return area==='taishi'?'太子町':area==='chihaya'?'千早赤阪村':'河南町'}
+  function areaLabel(area){return area==='tenma'?'天満':area==='taishi'?'太子町':area==='chihaya'?'千早赤阪村':'河南町'}
   function requiredGps(p){const explicit=Number(p.gpsRequired);return Number.isFinite(explicit)&&explicit>0?Math.floor(explicit):(/2地点/.test(p.gps||'')?2:1)}
   function gpsPoints(p){return Array.isArray(p.gpsPoints)?p.gpsPoints.filter(x=>x&&x.id&&Number.isFinite(+x.lat)&&Number.isFinite(+x.lng)&&Number.isFinite(+x.radiusMeters)):[]}
   function validGpsChecks(p,s){const ids=new Set(gpsPoints(p).map(point=>String(point.id)));return (s.gpsChecks||[]).filter(id=>ids.has(String(id)))}
   function conditions(p,s){return {walk:Number(s.regionalSteps||0)>=Number(p.steps||0),gps:validGpsChecks(p,s).length>=requiredGps(p),why:s.whyClear===true}}
   function escapeHtml(value){return String(value==null?'':value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
   function portraitMarkup(p,index,area){
+    if(area==='tenma'&&p.visual&&p.visual.asset){
+      return '<div class="personPortrait tenmaPortrait" style="--tenma-art:url(\'./'+escapeHtml(p.visual.asset)+'?v=tenma-persons-20260906a\');--tenma-focal:'+escapeHtml(p.visual.focalY||'top')+'"></div>';
+    }
     if(area==='chihaya'&&p.visual&&p.visual.asset){
       return '<div class="personPortrait chihayaPortrait" style="--chihaya-art:url(\'./'+escapeHtml(p.visual.asset)+'?v=chihaya-persons-20260905a\');background-position:center,'+escapeHtml(p.visual.focalY||'top')+'"></div>';
     }
@@ -180,9 +183,22 @@
     distanceMeters:GPS_CORE&&GPS_CORE.distanceMeters
   });
   const originalActivate=window.activateArea;
-  window.activateArea=function(name){currentArea=name==='太子町'?'taishi':name==='千早赤阪村'?'chihaya':'kanan';const result=originalActivate(name);setTimeout(syncCollectionStates,0);setTimeout(syncCollectionStates,400);setTimeout(syncCollectionStates,1200);return result};
+  window.activateArea=function(name){currentArea=name==='天満'?'tenma':name==='太子町'?'taishi':name==='千早赤阪村'?'chihaya':'kanan';const result=originalActivate(name);setTimeout(syncCollectionStates,0);setTimeout(syncCollectionStates,400);setTimeout(syncCollectionStates,1200);return result};
   window.addEventListener('sug:quest-gps',event=>markGpsCheck(event.detail||{}));
   window.addEventListener('sug:native-health',event=>updateRegionalFromHealth(event.detail||{}));
   try{const initial=window.__SUG_NATIVE_HEALTH__||JSON.parse(localStorage.getItem('sug_native_health_v1')||'null');if(initial)updateRegionalFromHealth(initial)}catch(e){}
   setTimeout(syncCollectionStates,0);
+})();
+
+(function loadTenmaPersonCollection(){
+  if(document.querySelector('script[data-tenma-persons]'))return;
+  const css=document.createElement('link');
+  css.rel='stylesheet';
+  css.href='./assets/quest/tenma-person-collection-20260906.css?v=tenma-persons-20260906a';
+  css.dataset.tenmaPersons='';
+  document.head.appendChild(css);
+  const script=document.createElement('script');
+  script.src='./assets/quest/tenma-person-collection-20260906.js?v=tenma-persons-20260906a';
+  script.dataset.tenmaPersons='';
+  document.body.appendChild(script);
 })();

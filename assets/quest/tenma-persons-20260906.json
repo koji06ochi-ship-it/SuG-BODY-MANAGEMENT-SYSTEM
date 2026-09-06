@@ -1,0 +1,269 @@
+{
+  "version": "2026-09-06",
+  "area": "tenma",
+  "areaName": "天満",
+  "chapter": {
+    "title": "学問・水運・反骨・都市",
+    "subtitle": "天満――学問・水運・反骨・都市を歩く"
+  },
+  "certaintyLegend": {
+    "●": "史料・公的資料で確認",
+    "○": "伝承・系図",
+    "△": "仮説・要検証",
+    "×": "偶然／未確認"
+  },
+  "scopeNote": "この版は人物ART・背景・家紋／氏族紋／SYMBOLの表示を実装する。歩数・GPS・WHY条件は次工程で登録する。",
+  "persons": [
+    {
+      "id": "tenma-sugawara-michizane",
+      "name": "菅原道真",
+      "era": "平安時代",
+      "region": "大阪天満宮・天満",
+      "classification": "PERSON / TENJIN",
+      "certainty": "●",
+      "certaintyNote": "天神信仰と大阪天満宮の関係は公的・公式資料で確認。紋章欄は特定の神紋を断定せず、梅を歴史SYMBOLとして扱う。",
+      "status": "active",
+      "visual": {
+        "asset": "tenma-michizane-20260906.webp",
+        "focalY": "top",
+        "background": "大阪天満宮の楼門・境内・梅。朝の光と舞う梅花。",
+        "composition": "紫〜深紅の平安装束、巻物を持つ正面斜めの主人公構図。"
+      },
+      "emblem": {
+        "type": "SYMBOL",
+        "label": "天神梅",
+        "asset": "tenma-symbol-tenjin-ume-20260906.svg",
+        "basis": "大阪天満宮の特定神紋を断定せず、天神信仰と梅の公式説明に基づく歴史SYMBOL。"
+      }
+    },
+    {
+      "id": "tenma-toyotomi-hideyoshi",
+      "name": "豊臣秀吉",
+      "era": "戦国〜安土桃山",
+      "region": "天満寺内町・大川水運",
+      "classification": "PERSON / TOYOTOMI",
+      "certainty": "●",
+      "certaintyNote": "秀吉期の天満本願寺寺内町と城下・水運の形成を公的資料に基づいて扱う。",
+      "status": "available",
+      "visual": {
+        "asset": "tenma-hideyoshi-20260906.webp",
+        "focalY": "top",
+        "background": "大坂城下へ連なる天満寺内町・運河・船着場。大坂城は遠景に限定。",
+        "composition": "豪華な陣羽織で水運の町を指し示す、動きのある太閤構図。"
+      },
+      "emblem": {
+        "type": "KAMON",
+        "label": "五七桐",
+        "asset": "tenma-kamon-goshichi-kiri-20260906.svg",
+        "basis": "豊臣氏を示す五七桐。生成画像内には描かず、確認済みSVGをカード上に重ねる。"
+      }
+    },
+    {
+      "id": "tenma-oshio-heihachiro",
+      "name": "大塩平八郎",
+      "era": "江戸後期",
+      "region": "天満市街・成正寺",
+      "classification": "PERSON / REBELLION",
+      "certainty": "●",
+      "certaintyNote": "大塩の乱と天満市街、成正寺の墓所を公的資料で確認。確証のない大塩家紋は付けない。",
+      "status": "locked",
+      "unlockAfter": "豊臣秀吉",
+      "visual": {
+        "asset": "tenma-oshio-20260906.webp",
+        "focalY": "top",
+        "background": "江戸後期の天満市街と成正寺を想起させる寺町。遠景に乱の緊張感。",
+        "composition": "蘭学・陽明学の書を携えた武士が前へ踏み出す緊迫構図。"
+      },
+      "emblem": {
+        "type": "SYMBOL",
+        "label": "陽明学・救民",
+        "mark": "義",
+        "basis": "確実な家紋資料を採用せず、人物の思想と行動を示す歴史SYMBOL。"
+      }
+    },
+    {
+      "id": "tenma-kawabata-yasunari",
+      "name": "川端康成",
+      "era": "明治〜昭和",
+      "region": "天神橋一丁目",
+      "classification": "PERSON / LITERATURE",
+      "certainty": "●",
+      "certaintyNote": "天神橋一丁目の生誕之地碑を大阪市の公的資料で確認。家紋は使用しない。",
+      "status": "locked",
+      "unlockAfter": "大塩平八郎",
+      "visual": {
+        "asset": "tenma-kawabata-20260906.webp",
+        "focalY": "top",
+        "background": "川端康成生誕之地碑と大阪天満宮周辺の雨の町並み。",
+        "composition": "若い文学者が原稿を抱えて歩く、静けさと強い視線の斜め構図。"
+      },
+      "emblem": {
+        "type": "SYMBOL",
+        "label": "本・原稿・ペン",
+        "mark": "書",
+        "basis": "家紋ではなく文学を示す歴史SYMBOL。"
+      }
+    },
+    {
+      "id": "tenma-watanabe-tsuna",
+      "name": "渡辺綱",
+      "era": "平安中期",
+      "region": "渡辺津・大川",
+      "classification": "PERSON / WATANABE CLAN",
+      "certainty": "○",
+      "certaintyNote": "渡辺党と大阪の中世水運を扱う。鬼退治は説話として分離し、渡辺星は本人の同時代使用紋と断定しない。",
+      "status": "locked",
+      "unlockAfter": "川端康成",
+      "visual": {
+        "asset": "tenma-watanabe-tsuna-20260906.webp",
+        "focalY": "top",
+        "background": "古代中世の渡辺津・大川、船着場と水辺の武士団。",
+        "composition": "水辺で刀を抜く平安武者。鬼を描かず、説話と史実を混同しない。"
+      },
+      "emblem": {
+        "type": "CLAN",
+        "label": "渡辺星",
+        "asset": "tenma-clan-watanabe-star-20260906.svg",
+        "basis": "三つ星に一文字を渡辺氏CLAN SYMBOLとして表示。綱本人の同時代使用とは断定しない。"
+      }
+    },
+    {
+      "id": "tenma-minamoto-yorimitsu",
+      "name": "源頼光",
+      "era": "平安中期",
+      "region": "摂津・渡辺津水陸路",
+      "classification": "PERSON / SETTSU GENJI",
+      "certainty": "○",
+      "certaintyNote": "摂津源氏と渡辺綱ら郎党の関係を扱う。後世の源氏家紋を本人の固定家紋として付けない。",
+      "status": "locked",
+      "unlockAfter": "渡辺綱",
+      "visual": {
+        "asset": "tenma-minamoto-yorimitsu-20260906.webp",
+        "focalY": "top",
+        "background": "摂津から渡辺津へつながる平安期の水陸交通・大川・船団。",
+        "composition": "騎馬で郎党と船団を率いる大将構図。"
+      },
+      "emblem": {
+        "type": "CLAN",
+        "label": "源氏 CLAN SYMBOL",
+        "mark": "源",
+        "basis": "平安中期本人に後世の家紋を固定せず、氏族名をCLAN SYMBOLとして表示。"
+      }
+    },
+    {
+      "id": "tenma-ogata-koan",
+      "name": "緒方洪庵",
+      "era": "江戸後期",
+      "region": "天満〜大川〜適塾",
+      "classification": "PERSON / MEDICINE / SCIENCE",
+      "certainty": "△",
+      "certaintyNote": "適塾は公的・公式資料で確認。天満から北浜へ向かうNEXT ROUTEとして扱い、天満直結とは断定しない。",
+      "status": "locked",
+      "unlockAfter": "源頼光",
+      "visual": {
+        "asset": "tenma-ogata-koan-20260906.webp",
+        "focalY": "top",
+        "background": "適塾の町家と、天満から大川を越える橋・北浜への動線。",
+        "composition": "蘭書と医学器具を手に診療へ急ぐ蘭方医。"
+      },
+      "emblem": {
+        "type": "SYMBOL",
+        "label": "蘭書・医学・適塾",
+        "mark": "蘭",
+        "basis": "家紋ではなく蘭学・医学・適塾を示す歴史SYMBOL。"
+      }
+    },
+    {
+      "id": "tenma-kobayashi-ichizo",
+      "name": "小林一三",
+      "era": "明治〜昭和",
+      "region": "天満→梅田 NEXT AREA",
+      "classification": "PERSON / BUSINESS / TRANSPORT",
+      "certainty": "△",
+      "certaintyNote": "阪急・梅田の都市開発は公式資料で確認。天満直結人物ではなく、梅田へ広がるNEXT AREAとして明示する。",
+      "status": "locked",
+      "unlockAfter": "緒方洪庵",
+      "visual": {
+        "asset": "tenma-kobayashi-ichizo-20260906.webp",
+        "focalY": "top",
+        "background": "梅田の阪急電車・ターミナル百貨店・都市計画の光景。",
+        "composition": "設計図を広げ、鉄道と街を同時に指揮する実業家。"
+      },
+      "emblem": {
+        "type": "SYMBOL",
+        "label": "鉄道・都市",
+        "mark": "鉄",
+        "basis": "家紋ではなく鉄道と都市開発を示す歴史SYMBOL。"
+      }
+    }
+  ],
+  "secretRoute": {
+    "title": "國重から始まる 越智・河野 SECRET ROUTE",
+    "chain": ["國重", "河野氏", "越智氏", "河野通信", "一遍", "瀬戸内海水運", "愛媛・大山祇神社"],
+    "caution": "國重の現代家系と歴史上の河野氏・越智氏を無条件に同一視しない。系譜は史料・系図の確度表示を保つ。",
+    "clanCards": [
+      {
+        "id": "tenma-secret-ochi-clan",
+        "name": "越智氏",
+        "certainty": "○",
+        "classification": "SECRET CLAN",
+        "chain": "越智氏 → 河野氏 → 河野通信 → 一遍",
+        "emblem": {
+          "type": "CLAN",
+          "label": "折敷に三文字",
+          "asset": "tenma-clan-orishiki-sanmonji-20260906.svg",
+          "basis": "河野氏CLAN SYMBOLとして表示。越智氏から河野氏への系譜は○として分離。"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "id": "tenma-secret-kono-michinobu",
+        "name": "河野通信",
+        "era": "鎌倉初期",
+        "region": "渡辺津→瀬戸内海→伊予",
+        "classification": "SECRET PERSON / KONO / OCHI",
+        "certainty": "○",
+        "visual": {
+          "asset": "tenma-secret-kono-michinobu-20260906.webp",
+          "background": "伊予・瀬戸内海・軍船。渡辺津の水運から続く海路。",
+          "composition": "軍船を背に長弓を構え、瀬戸内を率いる海の武将。"
+        },
+        "emblem": {
+          "type": "CLAN",
+          "label": "折敷に三文字",
+          "asset": "tenma-clan-orishiki-sanmonji-20260906.svg",
+          "basis": "河野氏CLANとして表示。通信本人の同時代使用紋とは断定しない。"
+        }
+      },
+      {
+        "id": "tenma-secret-ippen",
+        "name": "一遍",
+        "era": "鎌倉時代",
+        "region": "渡辺津・大川→四天王寺",
+        "classification": "SECRET PERSON / RELIGION / KONO",
+        "certainty": "○",
+        "visual": {
+          "asset": "tenma-secret-ippen-20260906.webp",
+          "background": "四天王寺へ向かう参詣路と渡辺津・大川の船。",
+          "composition": "念仏札を配りながら風の中を歩く遊行僧。"
+        },
+        "emblem": {
+          "type": "CLAN",
+          "label": "河野氏系譜 ○",
+          "asset": "tenma-clan-orishiki-sanmonji-20260906.svg",
+          "basis": "本人の使用家紋ではない。河野氏系譜○とCLAN SYMBOLを明確に分離。"
+        }
+      }
+    ]
+  },
+  "sources": [
+    "https://www.city.osaka.lg.jp/toshiseibi/page/0000116291.html",
+    "https://osakatemmangu.or.jp/keidai",
+    "https://www.city.osaka.lg.jp/kita/page/0000002346.html",
+    "https://www.city.osaka.lg.jp/kita/cmsfiles/contents/0000532/532510/18.19.pdf",
+    "https://www.tekijuku.osaka-u.ac.jp/ja/tekijuku/koan",
+    "https://www.hankyu.co.jp/company/ichizo/column1.html",
+    "https://www.city.imabari.ehime.jp/kanko/spot/?a=226"
+  ]
+}

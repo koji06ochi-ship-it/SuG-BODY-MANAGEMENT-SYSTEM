@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="title desc">
+  <title id="title">天神梅 歴史シンボル</title>
+  <desc id="desc">特定の神紋を表すものではなく、天神信仰と梅を示す五弁の梅花シンボル</desc>
+  <g fill="#111" stroke="#111" stroke-linejoin="round">
+    <circle cx="50" cy="50" r="12"/>
+    <ellipse cx="50" cy="25" rx="16" ry="21"/>
+    <ellipse cx="73.8" cy="42.3" rx="16" ry="21" transform="rotate(72 73.8 42.3)"/>
+    <ellipse cx="64.7" cy="70.2" rx="16" ry="21" transform="rotate(144 64.7 70.2)"/>
+    <ellipse cx="35.3" cy="70.2" rx="16" ry="21" transform="rotate(216 35.3 70.2)"/>
+    <ellipse cx="26.2" cy="42.3" rx="16" ry="21" transform="rotate(288 26.2 42.3)"/>
+  </g>
+  <circle cx="50" cy="50" r="5" fill="#d7aa43"/>
+</svg>
