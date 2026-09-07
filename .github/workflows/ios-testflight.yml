@@ -2,6 +2,11 @@ name: iOS TestFlight upload
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/ios-testflight.yml'
   schedule:
     - cron: '17 * * * *'
 
