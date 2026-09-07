@@ -20,7 +20,7 @@
   <h1>P8をコピー</h1>
   <p>ファイルはこのiPhone内で読み取るだけ。アップロード・保存・送信はしません。</p>
   <label for="file">1. 鍵ファイルを選ぶ</label>
-  <input id="file" type="file" accept=".p8,.txt,text/plain,application/octet-stream">
+  <input id="file" type="file">
   <button id="copy" class="btn" disabled>2. 鍵の中身をコピー</button>
   <a class="btn ghost" href="https://github.com/koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM/settings/secrets/actions">3. GitHub Secretを開く</a>
   <div id="status">まだファイルを選んでいません。</div>
@@ -48,7 +48,7 @@
       const text = await f.text();
       keyText = normalize(text);
       if (!keyText) {
-        status.textContent = 'このファイルから PRIVATE KEY を確認できませんでした。元の AuthKey_*.p8 を選んでください。';
+        status.textContent = 'このファイルから PRIVATE KEY を確認できませんでした。AuthKeyのファイルを選んでください。';
         return;
       }
       copy.disabled = false;
