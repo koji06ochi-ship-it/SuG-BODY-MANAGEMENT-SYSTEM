@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#02040a">
+<title>S.u.G BODY Lite｜歴史の断片 v0.7.4</title>
+<style>html,body{margin:0;background:#02040a;color:#f7edd2;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif}#loading{min-height:100vh;display:grid;place-items:center;text-align:center;color:#d9b85f;background:radial-gradient(circle at 50% 15%,#172443,#070910 52%,#020307)}#loading b{font-family:Georgia,"Hiragino Mincho ProN",serif;font-size:24px;display:block;margin-bottom:8px}#loading small{color:#8e8677}</style>
+</head>
+<body>
+<div id="loading"><div><b>S.u.G BODY Lite</b><small>歴史カードを読み込み中…</small></div></div>
+<script>
+(async()=>{
+ try{
+  const r=await fetch('./lite-history-v073.html?fresh='+Date.now(),{cache:'no-store'});
+  let html=await r.text();
+  html=html.replaceAll('v0.7.3','v0.7.4');
+  html=html.replaceAll('./lite-history-v073.html?v=073','./lite-history-v074.html?v=074');
+  html=html.replaceAll('./lite-quest-v065.html?v=073','./lite-quest-v065.html?v=074');
+  const patch=`<style>.cardSection{padding-top:6px}.cardLabel b{font-size:18px}.person{margin-top:14px}</style><script>(()=>{const apply=()=>{const chapter=document.querySelector('.chapter'),progress=document.querySelector('.progress'),card=document.querySelector('.cardSection'),person=document.querySelector('.person'),flip=document.querySelector('#historyCard');if(chapter&&progress&&card&&person&&card.previousElementSibling!==progress){progress.insertAdjacentElement('afterend',card)}const enforce=()=>{if(!flip)return;if(flip.classList.contains('sealed')){flip.classList.add('flipped');const s=document.querySelector('#cardStatus');const l=document.querySelector('#cardStageLabel');const h=document.querySelector('#flipHint');if(s)s.textContent='封印中｜裏面';if(l)l.textContent='未解放';if(h)h.textContent='3断片で表面が姿を現します'}};enforce();if(flip){new MutationObserver(enforce).observe(flip,{attributes:true,attributeFilter:['class']})}};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply();})();<\/script>`;
+  html=html.replace('</body>',patch+'</body>');
+  document.open();document.write(html);document.close();
+ }catch(e){document.getElementById('loading').innerHTML='<div><b>読み込みに失敗しました</b><small>ページを再読み込みしてください。</small></div>'}
+})();
+</script>
+</body>
+</html>
