@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#02040a">
+<title>S.u.G QUEST｜歴史カード確認 v0.7.7</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#02040a;color:#f7edd2;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif}body{padding:calc(14px + env(safe-area-inset-top)) 12px calc(26px + env(safe-area-inset-bottom));background:linear-gradient(180deg,#08101f,#02040a 55%,#020307)}.wrap{max-width:430px;margin:auto}.title{font-family:Georgia,"Hiragino Mincho ProN",serif;color:#ead08a;font-size:21px;margin:0 0 4px}.sub{font-size:9px;color:#8e836d;margin-bottom:12px}.controls{display:grid;gap:7px;margin-bottom:12px}.row{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.row button{border:1px solid rgba(191,151,61,.4);background:#0c0e13;color:#9d927d;border-radius:9px;padding:9px 4px;font-size:10px;font-weight:800}.row button.on{border-color:#d5aa4b;background:#3a2a0e;color:#ffe09a}.stage{font-size:10px;color:#b7a57f;text-align:center;margin:4px 0 8px}.card{position:relative;width:min(82vw,330px);aspect-ratio:3/4;margin:auto;border-radius:16px;overflow:hidden;border:1px solid rgba(229,186,79,.62);background:#05060a;box-shadow:0 14px 34px #0008}.card img{width:100%;height:100%;display:block;object-fit:cover}.card.partial img{filter:brightness(.45) saturate(.75)}.shade{display:none;position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(0,0,0,.72));align-items:end;justify-content:center;padding:18px;color:#f1d389;font-family:Georgia,"Hiragino Mincho ProN",serif;font-size:16px;text-align:center}.card.partial .shade{display:flex}.note{margin-top:12px;text-align:center;color:#756d60;font-size:8px;line-height:1.6}
+</style>
+</head>
+<body>
+<main class="wrap">
+ <h1 class="title">歴史カード確認</h1>
+ <div class="sub">軽量テスト｜本番データは変更しません</div>
+ <div class="controls">
+  <div class="row" id="regions"><button class="on" data-r="kanan">河南町</button><button data-r="taishi">太子町</button><button data-r="kusunoki">千早赤阪村</button></div>
+  <div class="row" id="stages"><button class="on" data-s="0">0/5 裏面</button><button data-s="3">3/5 半解放</button><button data-s="5">5/5 完成</button></div>
+ </div>
+ <div class="stage" id="label">河南町｜0/5｜封印中</div>
+ <div class="card" id="card"><img id="img" src="./assets/history/history-card-back-v075.svg?v=077" alt="歴史カード"><div class="shade">第一解放<br>あと2断片で完成</div></div>
+ <div class="note">地域と段階を押すだけ。表示中のカード画像1枚しか読み込みません。</div>
+</main>
+<script>
+(()=>{
+ const names={kanan:'河南町',taishi:'太子町',kusunoki:'千早赤阪村'};
+ const fronts={kanan:'./assets/history/kanan-card-v075.svg?v=077',taishi:'./assets/history/taishi-card-v075.svg?v=077',kusunoki:'./assets/history/kusunoki-card-v075.svg?v=077'};
+ const back='./assets/history/history-card-back-v075.svg?v=077';
+ let region='kanan',stage=0;
+ const img=document.getElementById('img'),card=document.getElementById('card'),label=document.getElementById('label');
+ function render(){card.classList.toggle('partial',stage===3);img.src=stage===0?back:fronts[region];label.textContent=`${names[region]}｜${stage}/5｜${stage===0?'封印中':stage===3?'第一解放':'完成'}`;document.querySelectorAll('#regions button').forEach(b=>b.classList.toggle('on',b.dataset.r===region));document.querySelectorAll('#stages button').forEach(b=>b.classList.toggle('on',Number(b.dataset.s)===stage))}
+ document.getElementById('regions').onclick=e=>{const b=e.target.closest('button[data-r]');if(!b)return;region=b.dataset.r;render()};
+ document.getElementById('stages').onclick=e=>{const b=e.target.closest('button[data-s]');if(!b)return;stage=Number(b.dataset.s);render()};
+})();
+</script>
+</body>
+</html>
