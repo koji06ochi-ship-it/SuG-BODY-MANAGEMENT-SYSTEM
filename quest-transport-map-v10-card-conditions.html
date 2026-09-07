@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#050403"><title>S.u.G QUEST｜MISSION CONDITIONS V10</title><style>html,body{margin:0;width:100%;height:100%;background:#000;overflow:hidden}iframe{border:0;width:100%;height:100%;display:block}#missionBtn{position:fixed;z-index:999;left:14px;bottom:calc(142px + env(safe-area-inset-bottom));border:1px solid #a17b34;border-radius:999px;padding:10px 13px;background:linear-gradient(135deg,#251a08,#090705);color:#ffe29a;font:900 10px -apple-system,BlinkMacSystemFont,sans-serif;box-shadow:0 8px 24px #000a}.panel{position:fixed;z-index:1000;inset:0;display:none;overflow:auto;background:#050403;color:#fff;padding:calc(16px + env(safe-area-inset-top)) 14px calc(34px + env(safe-area-inset-bottom));font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif}.panel.on{display:block}.head{position:sticky;top:0;background:linear-gradient(#050403 82%,#05040300);padding:4px 0 14px;z-index:2}.back{border:0;background:none;color:#f1cb72;font-size:30px}.title{margin:0;color:#ffe6a6;font:700 24px Georgia,'Yu Mincho',serif}.sub{margin:6px 0 0;color:#9f9582;font-size:10px;line-height:1.55}.area{margin:18px 0 8px;color:#d8b35b;font:800 11px Arial,sans-serif;letter-spacing:.12em}.mission{margin:8px 0;padding:12px;border:1px solid #5b4828;border-radius:13px;background:linear-gradient(145deg,#0f0c08,#080604)}.top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}.no{color:#d9b459;font:700 9px monospace}.name{margin-top:3px;color:#ffe8b1;font:700 17px Georgia,'Yu Mincho',serif}.type{color:#948873;font-size:8px;text-align:right}.bar{height:6px;background:#1c1811;border-radius:99px;overflow:hidden;margin:9px 0}.fill{height:100%;background:linear-gradient(90deg,#8e6c2e,#f2d583)}.reqs{display:grid;gap:5px}.req{display:flex;justify-content:space-between;gap:10px;padding:7px 8px;border:1px solid #302719;border-radius:8px;color:#cfc5b2;font-size:9px}.req.ok{border-color:#315d3d;color:#aef2bd}.req b{color:inherit}.mission.done{border-color:#8c6b31;box-shadow:0 0 18px #d2a44018}.pilot{margin-top:10px;padding-top:9px;border-top:1px solid #2f2618}.pilot button{margin:3px 4px 0 0;padding:7px 9px;border:1px solid #5b4828;border-radius:8px;background:#0b0906;color:#d9b459;font-size:8px;font-weight:800}.note{margin:16px 0;padding:11px;border:1px solid #333;border-radius:10px;color:#9b9385;font-size:9px;line-height:1.65}</style></head>
+<body>
+<iframe id="app" src="./quest-transport-map-v9-season01-24cards.html?v=conditions-v10-20260907"></iframe>
+<button id="missionBtn">MISSION 24</button>
+<section id="panel" class="panel"><div class="head"><button class="back" id="close">‹</button><h1 class="title">SEASON 01｜MISSION 24</h1><p class="sub">運ばれた道を、歩いてたどる。カードごとに取得条件を分離。</p></div><div id="list"></div><div class="note">PILOT MODE：歩数とQUEST CLEARは、BODY / Apple Health連携前の実証用ローカル状態です。GPS・マンホール取得は既存QUEST状態を参照します。正式版では歩数をHealth連携へ置換します。</div></section>
+<script>
+const BASE='sugQuestTransportV2',PILOT='sugQuestFieldV10';
+const cards=[
+['01','河南','PERSON','kanan',[['gps','河南GPS','kanan'],['steps','河南 5,000歩','kanan',5000],['quest','人物QUEST CLEAR','kanan-person']]],
+['02','河南マンホール','INFRA','kanan',[['manhole','マンホールKEY','kananManhole']]],
+['03','河南の農産物','CARGO','kanan',[['gps','河南GPS','kanan'],['quest','農産物QUEST CLEAR','kanan-cargo']]],
+['04','山の水','WATER','kanan',[['gps','河南GPS','kanan'],['quest','水QUEST CLEAR','kanan-water']]],
+['05','楠木正成〈千早城〉','PERSON','chihaya',[['gps','千早赤阪GPS','chihaya'],['steps','千早赤阪 6,000歩','chihaya',6000],['quest','千早城WHY CLEAR','chihaya-person']]],
+['06','千早赤阪マンホール','INFRA','chihaya',[['manhole','マンホールKEY','chihayaManhole']]],
+['07','金剛山・峠','ROUTE','chihaya',[['gps','千早赤阪GPS','chihaya'],['steps','山側 8,000歩','chihaya',8000],['quest','ROUTE CLEAR','chihaya-route']]],
+['08','千早攻略','ACHIEVEMENT','chihaya',[['combo','05＋06＋07取得',['05','06','07']]]],
+['09','聖徳太子','PERSON','taishi',[['gps','太子GPS','taishi'],['steps','太子 5,000歩','taishi',5000],['quest','聖徳太子WHY CLEAR','taishi-person']]],
+['10','太子マンホール','INFRA','taishi',[['manhole','マンホールKEY','taishiManhole']]],
+['11','竹内街道','ROUTE','taishi',[['gps','太子GPS','taishi'],['steps','竹内街道 6,000歩','taishi',6000],['quest','竹内街道CLEAR','taishi-route']]],
+['12','往来・街道','TRANSPORT','taishi',[['combo','09＋10＋11取得',['09','10','11']]]],
+['13','菅原道真','PERSON','tenma',[['gps','天満GPS','tenma'],['steps','天満 5,000歩','tenma',5000],['quest','道真WHY CLEAR','tenma-person']]],
+['14','天満マンホール探索','INFRA','tenma',[['manhole','マンホール探索KEY','tenmaManhole']]],
+['15','天満の商い','SHOP / SUPPLY','tenma',[['gps','天満GPS','tenma'],['quest','SHOP QUEST CLEAR','tenma-shop']]],
+['16','天満・川の町','ROUTE','tenma',[['gps','天満GPS','tenma'],['steps','天満〜川 6,000歩','tenma',6000],['quest','川ROUTE CLEAR','tenma-river']]],
+['17','近鉄','TRANSPORT','broad',[['combo','太子＋天満到達',['09','13']]]],
+['18','鉄道駅','TRANSPORT','broad',[['quest','駅CHECK CLEAR','rail-station']]],
+['19','米・野菜・水','CARGO','broad',[['combo','03＋04＋15取得',['03','04','15']]]],
+['20','刀剣','EQUIPMENT','broad',[['quest','刀剣QUEST CLEAR','equipment-sword']]],
+['21','甲冑','EQUIPMENT','broad',[['quest','甲冑QUEST CLEAR','equipment-armor']]],
+['22','家紋','CREST','broad',[['quest','家紋QUEST CLEAR','crest']]],
+['23','山側三地域制覇','MASTER','broad',[['combo','河南・千早・太子MASTER',['01','02','05','06','09','10']]]],
+['24','山から街へ','LEGEND','broad',[['combo','23＋13＋14＋16取得',['23','13','14','16']]]]
+];
+function base(){try{return JSON.parse(localStorage.getItem(BASE)||'{}')}catch(e){return {}}}
+function pilot(){try{return JSON.parse(localStorage.getItem(PILOT)||'{"steps":{},"quests":{},"got":{}}')}catch(e){return {steps:{},quests:{},got:{}}}}
+function save(p){localStorage.setItem(PILOT,JSON.stringify(p))}
+function okReq(r,p,b){if(r[0]==='gps'||r[0]==='manhole')return !!b[r[2]];if(r[0]==='steps')return (p.steps?.[r[2]]||0)>=r[3];if(r[0]==='quest')return !!p.quests?.[r[2]];if(r[0]==='combo')return r[2].every(id=>!!p.got?.[id]);return false}
+function evaluate(){const p=pilot(),b=base();let changed=true;while(changed){changed=false;for(const c of cards){if(p.got?.[c[0]])continue;if(c[4].every(r=>okReq(r,p,b))){p.got=p.got||{};p.got[c[0]]=true;changed=true}}}save(p);return p}
+function reqText(r,p,b){let status=okReq(r,p,b);let extra='';if(r[0]==='steps')extra=` ${(p.steps?.[r[2]]||0).toLocaleString()} / ${r[3].toLocaleString()}`;return `<div class="req ${status?'ok':''}"><b>${status?'✓':'○'} ${r[1]}</b><span>${extra|| (status?'CLEAR':'')}</span></div>`}
+function render(){const p=evaluate(),b=base(),list=document.getElementById('list');let area='';list.innerHTML='';for(const c of cards){if(c[3]!==area){area=c[3];const h=document.createElement('div');h.className='area';h.textContent=area==='broad'?'CROSS AREA / MASTER':area.toUpperCase();list.appendChild(h)}const done=!!p.got?.[c[0]],count=c[4].filter(r=>okReq(r,p,b)).length,rate=Math.round(count/c[4].length*100);const el=document.createElement('div');el.className='mission '+(done?'done':'');el.innerHTML=`<div class="top"><div><div class="no">S01-${c[0]}</div><div class="name">${c[1]}</div></div><div class="type">${c[2]}<br>${done?'GET ✓':rate+'%'}</div></div><div class="bar"><div class="fill" style="width:${done?100:rate}%"></div></div><div class="reqs">${c[4].map(r=>reqText(r,p,b)).join('')}</div><div class="pilot"></div>`;const tools=el.querySelector('.pilot');for(const r of c[4]){if(r[0]==='steps'){const bt=document.createElement('button');bt.textContent='+1,000歩 PILOT';bt.onclick=()=>{const x=pilot();x.steps=x.steps||{};x.steps[r[2]]=(x.steps[r[2]]||0)+1000;save(x);render()};tools.appendChild(bt)}if(r[0]==='quest'){const bt=document.createElement('button');bt.textContent=(p.quests?.[r[2]]?'CLEAR済':'QUEST CLEAR');bt.onclick=()=>{const x=pilot();x.quests=x.quests||{};x.quests[r[2]]=true;save(x);render()};tools.appendChild(bt)}}if(!tools.children.length)tools.remove();list.appendChild(el)}}
+document.getElementById('missionBtn').onclick=()=>{document.getElementById('panel').classList.add('on');render()};document.getElementById('close').onclick=()=>document.getElementById('panel').classList.remove('on');window.addEventListener('storage',render);
+</script></body></html>
