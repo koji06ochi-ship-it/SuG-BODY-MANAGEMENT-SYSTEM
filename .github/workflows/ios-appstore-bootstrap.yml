@@ -1,0 +1,35 @@
+name: iOS App Store bootstrap
+
+on:
+  workflow_dispatch:
+
+jobs:
+  bootstrap:
+    runs-on: macos-15
+    env:
+      APP_BUNDLE_ID: jp.sugosaka.member
+      APP_NAME: S.u.G
+      APP_SKU: SUG-IOS-20260908
+      APP_PRIMARY_LOCALE: ja
+      ASC_API_KEY_ID: ${{ secrets.ASC_API_KEY_ID }}
+      ASC_API_ISSUER_ID: ${{ secrets.ASC_API_ISSUER_ID }}
+      ASC_API_KEY_P8_BASE64: ${{ secrets.ASC_API_KEY_P8_BASE64 }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify App Store Connect secrets
+        run: |
+          set -euo pipefail
+          for key in ASC_API_KEY_ID ASC_API_ISSUER_ID ASC_API_KEY_P8_BASE64; do
+            if [ -z "${!key:-}" ]; then
+              echo "Missing GitHub Actions secret: $key"
+              exit 1
+            fi
+          done
+
+      - name: Install App Store Connect API dependencies
+        run: python3 -m pip install --quiet --disable-pip-version-check pyjwt cryptography requests
+
+      - name: Register Bundle ID, HealthKit and App Store app
+        working-directory: ios
+        run: python3 scripts/appstore_bootstrap.py
