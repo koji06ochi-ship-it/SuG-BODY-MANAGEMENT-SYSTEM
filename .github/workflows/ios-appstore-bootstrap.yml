@@ -11,7 +11,7 @@ jobs:
       APP_NAME: S.u.G
       APP_SKU: SUG-IOS-20260908
       APP_PRIMARY_LOCALE: ja
-      ASC_API_KEY_ID: M98C96K4YC
+      ASC_API_KEY_ID: MM98J638B7
       ASC_API_ISSUER_ID: d3a981e0-7557-4223-a67f-d026debee303
       ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
     steps:
