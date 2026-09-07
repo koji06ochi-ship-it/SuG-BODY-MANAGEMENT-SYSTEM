@@ -4,6 +4,7 @@ options:
 settings:
   base:
     IPHONEOS_DEPLOYMENT_TARGET: '17.0'
+    SWIFT_VERSION: '5.0'
 targets:
   SuGMember:
     type: application
@@ -13,7 +14,10 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: jp.sugosaka.member
+        MARKETING_VERSION: '1.0.0'
+        CURRENT_PROJECT_VERSION: '1'
         CODE_SIGN_ENTITLEMENTS: SuGMember/SuGMember.entitlements
+        INFOPLIST_KEY_CFBundleDisplayName: S.u.G
         INFOPLIST_KEY_NSHealthShareUsageDescription: S.u.Gで歩数・距離・活動エネルギー・運動時間・ワークアウト・睡眠・心拍・安静時心拍・HRV・体重・体脂肪率・除脂肪体重・VO2max・呼吸数・血中酸素を取得し、回復・身体負荷・コンディション管理と当日の運動判定に使用します。
         INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription: S.u.Gでクリニックの検査結果を読み取り、血液検査などの推移を身体コンディションと合わせて確認するために使用します。
         INFOPLIST_KEY_NSHealthUpdateUsageDescription: S.u.Gはヘルスケアへデータを書き込みません。
