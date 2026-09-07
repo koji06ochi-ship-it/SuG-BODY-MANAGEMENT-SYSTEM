@@ -19,9 +19,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Validate App Store bootstrap script
+      - name: Validate App Store automation scripts
         working-directory: ios
-        run: python3 -m py_compile scripts/appstore_bootstrap.py
+        run: |
+          python3 -m py_compile scripts/appstore_bootstrap.py
+          python3 -m py_compile scripts/appstore_signing.py
 
       - name: Select Xcode
         run: sudo xcode-select -s /Applications/Xcode_16.4.app/Contents/Developer || true
