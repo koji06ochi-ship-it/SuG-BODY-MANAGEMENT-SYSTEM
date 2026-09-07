@@ -2,6 +2,8 @@ name: iOS TestFlight upload
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
 
 permissions:
   contents: write
@@ -24,31 +26,46 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Verify App Store Connect private key secret
+      - name: Check whether TestFlight upload is needed
+        id: gate
+        shell: bash
         run: |
           set -euo pipefail
-          if [ -z "${ASC_API_KEY_P8:-}" ]; then
-            echo "Missing GitHub Actions secret: ASC_API_KEY_P8"
-            exit 1
+          if [ -f .ci-state/testflight-v1-uploaded.json ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "S.u.G TestFlight v1 has already been uploaded; nothing to do."
+            exit 0
           fi
+          if [ -z "${ASC_API_KEY_P8:-}" ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "ASC_API_KEY_P8 is not registered yet. Scheduled workflow will retry automatically."
+            exit 0
+          fi
+          echo "ready=true" >> "$GITHUB_OUTPUT"
+          echo "Apple private key is ready; starting signed TestFlight upload."
 
       - name: Normalize App Store Connect private key
+        if: steps.gate.outputs.ready == 'true'
         run: |
           set -euo pipefail
           ENCODED=$(printf '%s' "$ASC_API_KEY_P8" | base64 | tr -d '\n')
           echo "ASC_API_KEY_P8_BASE64=$ENCODED" >> "$GITHUB_ENV"
 
       - name: Install App Store Connect API dependencies
+        if: steps.gate.outputs.ready == 'true'
         run: python3 -m pip install --quiet --disable-pip-version-check pyjwt cryptography requests
 
       - name: Ensure Bundle ID, HealthKit and App Store app exist
+        if: steps.gate.outputs.ready == 'true'
         working-directory: ios
         run: python3 scripts/appstore_bootstrap.py
 
       - name: Clean previous S.u.G CI signing assets
+        if: steps.gate.outputs.ready == 'true'
         run: python3 ios/scripts/appstore_signing.py cleanup-state --state-file .ci-state/ios-signing.json
 
       - name: Create rotating distribution certificate and App Store profile
+        if: steps.gate.outputs.ready == 'true'
         id: signing
         run: |
           python3 ios/scripts/appstore_signing.py prepare \
@@ -56,6 +73,7 @@ jobs:
             --state-file .ci-state/ios-signing.json
 
       - name: Persist signing resource IDs for next rotation
+        if: steps.gate.outputs.ready == 'true'
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
@@ -67,6 +85,7 @@ jobs:
           fi
 
       - name: Install rotating signing assets
+        if: steps.gate.outputs.ready == 'true'
         env:
           P12_PATH: ${{ steps.signing.outputs.p12_path }}
           P12_PASSWORD: ${{ steps.signing.outputs.p12_password }}
@@ -93,16 +112,20 @@ jobs:
           echo "APPLE_TEAM_ID=$TEAM_ID" >> "$GITHUB_ENV"
 
       - name: Select Xcode
+        if: steps.gate.outputs.ready == 'true'
         run: sudo xcode-select -s /Applications/Xcode_16.4.app/Contents/Developer || true
 
       - name: Install XcodeGen
+        if: steps.gate.outputs.ready == 'true'
         run: brew install xcodegen
 
       - name: Generate Xcode project
+        if: steps.gate.outputs.ready == 'true'
         working-directory: ios
         run: xcodegen generate
 
       - name: Archive signed iOS app
+        if: steps.gate.outputs.ready == 'true'
         working-directory: ios
         run: |
           set -euo pipefail
@@ -122,6 +145,7 @@ jobs:
             archive
 
       - name: Export IPA
+        if: steps.gate.outputs.ready == 'true'
         run: |
           set -euo pipefail
           mkdir -p "$EXPORT_PATH"
@@ -149,6 +173,7 @@ jobs:
             -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist"
 
       - name: Upload to App Store Connect / TestFlight
+        if: steps.gate.outputs.ready == 'true'
         run: |
           set -euo pipefail
           mkdir -p "$HOME/.appstoreconnect/private_keys"
@@ -163,8 +188,28 @@ jobs:
             --apiKey "$ASC_API_KEY_ID" \
             --apiIssuer "$ASC_API_ISSUER_ID"
 
+      - name: Mark first TestFlight upload complete
+        if: steps.gate.outputs.ready == 'true'
+        run: |
+          set -euo pipefail
+          mkdir -p .ci-state
+          cat > .ci-state/testflight-v1-uploaded.json <<EOF
+          {
+            "bundleIdentifier": "$APP_BUNDLE_ID",
+            "appName": "$APP_NAME",
+            "workflowRun": "${{ github.run_number }}",
+            "uploadedAtUtc": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          }
+          EOF
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .ci-state/testflight-v1-uploaded.json
+          git commit -m "ci: mark first S.u.G TestFlight upload complete [skip ci]"
+          git pull --rebase
+          git push
+
       - name: Upload IPA artifact
-        if: always()
+        if: steps.gate.outputs.ready == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: SuGMember-TestFlight
