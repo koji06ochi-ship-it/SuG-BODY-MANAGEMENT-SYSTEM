@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#050403"><title>S.u.G QUEST｜SEASON 01 / 24 CARDS</title><style>html,body{margin:0;width:100%;height:100%;background:#000;overflow:hidden}iframe{border:0;width:100%;height:100%;display:block}</style></head>
+<body>
+<iframe id="app" src="./quest-transport-map-v8-manhole-cards.html?v=season01-24-v9-20260907"></iframe>
+<script>
+const app=document.getElementById('app');
+const EXTRA=[
+{id:'03',type:'CARGO',name:'河南の農産物',mark:'穫',sub:'山側で生まれ、街へ運ばれる地域の恵み。',need:s=>!!s.kanan,moved:'FOOD / AGRI GOODS',next:'太子・天満',role:'地域産品を「運搬」の物語へ接続するCARGO CARD。'},
+{id:'04',type:'WATER',name:'山の水',mark:'水',sub:'暮らしと農を支え、川・都市へ続く水。',need:s=>!!s.kanan,moved:'WATER',next:'天満天神の水・大川',role:'山から街へ続くWATER ROUTEの起点。'},
+{id:'07',type:'ROUTE',name:'金剛山・峠',mark:'峠',sub:'身体を使って越える山側の運搬路。',need:s=>!!s.chihaya,moved:'PEOPLE / GOODS',next:'千早攻略',role:'移動そのものをQUESTにする山岳ROUTE。'},
+{id:'08',type:'ACHIEVEMENT',name:'千早攻略',mark:'城',sub:'千早の山・城・INFRAを歩いてつないだ証。',need:s=>!!s.chihaya&&!!s.chihayaManhole,moved:'PEOPLE / MILITARY / GOODS',next:'太子・竹内街道',role:'千早赤阪エリアのMASTER条件へ進むACHIEVEMENT。'},
+{id:'11',type:'ROUTE',name:'竹内街道',mark:'道',sub:'人・物・文化が往来した古代の道。',need:s=>!!s.taishi,moved:'PEOPLE / GOODS / CULTURE',next:'天満・大阪市',role:'南河内から都市側へ抜ける主要TRANSPORT ROUTE。'},
+{id:'12',type:'TRANSPORT',name:'往来・街道',mark:'往',sub:'歩く・運ぶ・交流する。街道の機能そのもの。',need:s=>!!s.taishi,moved:'PEOPLE / GOODS / CULTURE',next:'天満 CITY GATE',role:'ROUTEを「運搬機能」として読むTRANSPORT CARD。'},
+{id:'15',type:'SHOP / SUPPLY',name:'天満の商い',mark:'商',sub:'届いた物が売買され、人が集まる都市側の供給点。',need:s=>!!s.tenma,moved:'FOOD / GOODS / MONEY / PEOPLE',next:'大川・中之島',role:'運ばれた物が都市で価値に変わるSUPPLY CARD。'},
+{id:'16',type:'ROUTE',name:'天満・川の町',mark:'川',sub:'天満から大川へ。都市と水運をつなぐ入口。',need:s=>!!s.tenma,moved:'WATER / PEOPLE / GOODS',next:'大川・堂島川',role:'SEASON 02「街から海へ」に接続する都市ROUTE。'},
+{id:'17',type:'TRANSPORT',name:'近鉄',mark:'鉄',sub:'南河内と大阪都市圏をつなぐ現代の移動網。',need:s=>!!s.taishi&&!!s.tenma,moved:'PEOPLE',next:'駅・CITY GATE',role:'歴史街道と現代交通を同じTRANSPORT MAPで重ねる。'},
+{id:'18',type:'TRANSPORT',name:'鉄道駅',mark:'駅',sub:'人の流れが集まり、次の地域へ分岐するHUB。',need:s=>!!s.tenma,moved:'PEOPLE',next:'天満・大阪市各AREA',role:'現代の移動を可視化するTRANSPORT HUB CARD。'},
+{id:'19',type:'CARGO',name:'米・野菜・水',mark:'荷',sub:'山側から暮らしへ届く、運ばれるもの。',need:s=>!!s.kanan&&!!s.taishi,moved:'FOOD / WATER / GOODS',next:'天満の商い',role:'複数地域を横断するCARGOセット。'},
+{id:'20',type:'EQUIPMENT',name:'刀剣',mark:'刀',sub:'人とともに運ばれ、歴史QUESTを強化する装備。',need:s=>!!s.tenma,moved:'EQUIPMENT / PEOPLE',next:'武将・國重系QUEST',role:'PERSONカードと組み合わせるEQUIPMENT CARD。'},
+{id:'21',type:'EQUIPMENT',name:'甲冑',mark:'甲',sub:'武将・戦・移動を支えた防具をカード化。',need:s=>!!s.chihaya,moved:'EQUIPMENT / MILITARY',next:'PHASE 2 甲冑＋刀',role:'第二段の甲冑・刀QUESTへ接続する装備カード。'},
+{id:'22',type:'CREST',name:'家紋',mark:'紋',sub:'人物・氏族・地域史を追うコレクションキー。',need:s=>!!s.kanan&&!!s.chihaya,moved:'IDENTITY / PEOPLE',next:'武将・氏族SECRET',role:'PERSONと歴史ルートを横断するCREST KEY。'},
+{id:'23',type:'MASTER',name:'山側三地域制覇',mark:'山',sub:'河南・千早赤阪・太子を歩いてつないだ証。',need:s=>!!s.kanan&&!!s.kananManhole&&!!s.chihaya&&!!s.chihayaManhole&&!!s.taishi&&!!s.taishiManhole,moved:'WATER / FOOD / PEOPLE / GOODS / CULTURE',next:'天満 CITY GATE',role:'南河内3地域を完了し都市側を開くMASTER CARD.'}
+];
+function reach(){let d=app.contentDocument;if(!d)return null;for(let i=0;i<3;i++){const f=d.getElementById('app');if(!f||!f.contentDocument)return null;d=f.contentDocument}return {d,w:d.defaultView}}
+function install(){const r=reach();if(!r||!r.d.body||r.d.querySelector('[data-season24-v9]'))return false;const {d,w}=r;const m=d.createElement('meta');m.dataset.season24V9='';d.head.appendChild(m);const style=d.createElement('style');style.textContent=`.miniCard.extraCard{background:radial-gradient(circle at 50% 0,#342a18,#090806 45%,#050403 78%);border-color:#705a30}.miniCard.extraCard .miniType{color:#e5bd63}.miniCard.extraCard .miniArt{background:radial-gradient(circle at 50% 35%,#725d32,#171108 68%,#050403);color:#ffe09a}.miniCard.masterCard{background:radial-gradient(circle at 50% 0,#4b3510,#120c05 45%,#050403 78%);border-color:#b58a36}`;d.head.appendChild(style);
+function state(){try{return JSON.parse(w.localStorage.getItem('sugQuestTransportV2')||'{}')}catch(e){return {}}}
+function openCard(c){const f=d.getElementById('front');f.className='face front'+(c.type==='MASTER'?' legend':'');f.style.setProperty('--glow','#4a3a20');f.style.setProperty('--art','#7b6539');f.innerHTML=`<div class="frame"></div><div class="frontTop"><span class="frontType">${c.type}</span><span class="frontNo">S01 / ${c.id}</span></div><div class="art" data-mark="${c.mark}"><div class="crest">${c.id}</div></div><div><div class="frontName">${c.name}</div><div class="frontSub">${c.sub}</div></div><div class="frontFoot"><span>TRANSPORT COLLECTION</span><b>GET</b></div>`;d.getElementById('backFace').innerHTML=`<div class="backType">${c.type} / S01-${c.id}</div><h2>${c.name}</h2><div class="backIntro">運ばれた道を、歩いてたどる。</div><div class="section"><b>WHAT MOVED?</b><p>${c.moved}</p></div><div class="section"><b>NEXT ROUTE</b><p>${c.next}</p></div><div class="section"><b>ROLE</b><p>${c.role}</p></div>`;d.getElementById('flip').classList.remove('flipped');d.getElementById('flipBtn').textContent='裏面を見る';d.getElementById('reveal').classList.add('on')}
+function append(){const g=d.getElementById('grid');if(!g)return;g.querySelectorAll('.extraCard').forEach(x=>x.remove());const s=state();EXTRA.forEach(c=>{const ok=c.need(s),b=d.createElement('button');b.className='miniCard extraCard '+(c.type==='MASTER'?'masterCard ':'')+(ok?'':'locked');b.innerHTML=`<div class="miniArt">${c.mark}</div><div class="miniType">S01-${c.id} / ${c.type}</div><h3>${c.name}</h3><div class="miniState">${ok?'GET ✓｜タップでカードを見る':'LOCKED'}</div>`;b.onclick=()=>{if(c.need(state())){d.getElementById('collection').classList.remove('on');openCard(c)}};g.appendChild(b)});const title=d.querySelector('.headTitle');if(title)title.textContent='SEASON 01 / 24 CARDS';const btn=d.getElementById('collectionBtn');if(btn)btn.textContent='CARD 24'}
+const old=w.renderCollection;w.renderCollection=function(){if(typeof old==='function')old();append()};append();new MutationObserver(()=>{if(d.getElementById('collection')?.classList.contains('on')&&!d.querySelector('.extraCard'))append()}).observe(d.body,{childList:true,subtree:true});return true}
+app.addEventListener('load',()=>{let n=0;const t=setInterval(()=>{n++;if(install()||n>80)clearInterval(t)},150)});
+</script></body></html>
