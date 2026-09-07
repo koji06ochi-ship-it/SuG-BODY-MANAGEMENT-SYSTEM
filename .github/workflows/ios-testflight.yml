@@ -18,36 +18,25 @@ jobs:
       APP_PROJECT: SuGMember.xcodeproj
       ARCHIVE_PATH: ${{ github.workspace }}/build/SuGMember.xcarchive
       EXPORT_PATH: ${{ github.workspace }}/build/export
-      ASC_API_KEY_ID: ${{ secrets.ASC_API_KEY_ID }}
-      ASC_API_ISSUER_ID: ${{ secrets.ASC_API_ISSUER_ID }}
+      ASC_API_KEY_ID: M98C96K4YC
+      ASC_API_ISSUER_ID: d3a981e0-7557-4223-a67f-d026debee303
       ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
-      ASC_API_KEY_P8_BASE64: ${{ secrets.ASC_API_KEY_P8_BASE64 }}
     steps:
       - uses: actions/checkout@v4
 
-      - name: Verify required Apple API secrets
+      - name: Verify App Store Connect private key secret
         run: |
           set -euo pipefail
-          if [ -z "${ASC_API_KEY_ID:-}" ]; then
-            echo "Missing GitHub Actions secret: ASC_API_KEY_ID"
-            exit 1
-          fi
-          if [ -z "${ASC_API_ISSUER_ID:-}" ]; then
-            echo "Missing GitHub Actions secret: ASC_API_ISSUER_ID"
-            exit 1
-          fi
-          if [ -z "${ASC_API_KEY_P8:-}" ] && [ -z "${ASC_API_KEY_P8_BASE64:-}" ]; then
-            echo "Missing GitHub Actions secret: set ASC_API_KEY_P8 (recommended) or ASC_API_KEY_P8_BASE64"
+          if [ -z "${ASC_API_KEY_P8:-}" ]; then
+            echo "Missing GitHub Actions secret: ASC_API_KEY_P8"
             exit 1
           fi
 
       - name: Normalize App Store Connect private key
         run: |
           set -euo pipefail
-          if [ -z "${ASC_API_KEY_P8_BASE64:-}" ]; then
-            ENCODED=$(printf '%s' "$ASC_API_KEY_P8" | base64 | tr -d '\n')
-            echo "ASC_API_KEY_P8_BASE64=$ENCODED" >> "$GITHUB_ENV"
-          fi
+          ENCODED=$(printf '%s' "$ASC_API_KEY_P8" | base64 | tr -d '\n')
+          echo "ASC_API_KEY_P8_BASE64=$ENCODED" >> "$GITHUB_ENV"
 
       - name: Install App Store Connect API dependencies
         run: python3 -m pip install --quiet --disable-pip-version-check pyjwt cryptography requests
