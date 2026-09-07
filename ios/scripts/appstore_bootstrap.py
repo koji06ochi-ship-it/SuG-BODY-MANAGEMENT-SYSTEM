@@ -80,7 +80,7 @@ def ensure_bundle() -> Dict[str, Any]:
 
 
 def ensure_healthkit(bundle_resource_id: str) -> None:
-    payload = api("GET", f"/bundleIds/{bundle_resource_id}/bundleIdCapabilities", params={"limit": 50})
+    payload = api("GET", f"/bundleIds/{bundle_resource_id}/bundleIdCapabilities")
     for item in payload.get("data", []):
         if item.get("attributes", {}).get("capabilityType") == "HEALTHKIT":
             print("HealthKit capability already enabled")
