@@ -85,6 +85,11 @@ def request_delete(path: str) -> None:
         last_response = response
         if response.status_code in (204, 404):
             return
+        if response.status_code == 409 and path.startswith("/certificates/"):
+            # Apple returns 409 when a certificate is already no longer in the
+            # issued state. For cleanup purposes that is already the desired end state.
+            print(f"Certificate is already non-issued; cleanup can continue: {path}")
+            return
         if response.status_code in TRANSIENT_STATUS and attempt < 3:
             wait = 3 * attempt
             print(f"Apple API transient HTTP {response.status_code} for DELETE {path}; retrying in {wait}s")
