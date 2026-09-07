@@ -51,10 +51,7 @@ jobs:
 
       - name: Normalize App Store Connect private key
         if: steps.gate.outputs.ready == 'true'
-        run: |
-          set -euo pipefail
-          ENCODED=$(printf '%s' "$ASC_API_KEY_P8" | base64 | tr -d '\n')
-          echo "ASC_API_KEY_P8_BASE64=$ENCODED" >> "$GITHUB_ENV"
+        run: python3 ios/scripts/normalize_asc_key.py
 
       - name: Install App Store Connect API dependencies
         if: steps.gate.outputs.ready == 'true'
