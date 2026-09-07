@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#02040a">
+<title>S.u.G BODY Lite｜歴史カード確認</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#02040a;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif}
+iframe{position:fixed;inset:0;width:100%;height:100%;border:0;background:#02040a}
+.testbar{position:fixed;z-index:9999;left:10px;right:10px;top:calc(8px + env(safe-area-inset-top));padding:8px;border:1px solid rgba(230,198,109,.72);border-radius:13px;background:rgba(3,5,11,.94);box-shadow:0 8px 28px #000b;backdrop-filter:blur(16px);color:#ead18b}
+.row{display:flex;gap:5px}.row+.row{margin-top:6px}.testbar button{flex:1;min-width:0;border:1px solid rgba(185,145,55,.45);border-radius:8px;background:#111018;color:#bcae8d;padding:8px 3px;font-size:10px;font-weight:800}.testbar button.on{background:linear-gradient(#5b4217,#1d1508);border-color:#d3aa4b;color:#ffe29a;box-shadow:inset 0 0 15px rgba(238,191,79,.12)}
+.note{font-size:8px;color:#837966;text-align:center;margin-top:5px;letter-spacing:.04em}
+.hideBtn{position:absolute;right:6px;top:-23px;border-radius:999px!important;flex:none!important;width:62px;background:rgba(3,5,11,.9)!important;color:#d7bf7b!important;padding:5px!important}
+.testbar.hidden{transform:translateY(calc(-100% - 16px))}.testbar{transition:.2s transform}.testbar.hidden .hideBtn{transform:translateY(calc(100% + 31px))}
+</style>
+</head>
+<body>
+<iframe id="app" src="./lite-history-v075.html?v=075" title="歴史の断片"></iframe>
+<div class="testbar" id="bar">
+ <button class="hideBtn" id="hide">隠す</button>
+ <div class="row" id="regions">
+  <button data-region="0" class="on">河南町</button>
+  <button data-region="1">太子町</button>
+  <button data-region="2">千早赤阪村</button>
+ </div>
+ <div class="row" id="stages">
+  <button data-stage="0" class="on">0/5 裏面</button>
+  <button data-stage="3">3/5 半解放</button>
+  <button data-stage="5">5/5 完成</button>
+ </div>
+ <div class="note">表示確認専用｜本番のQUEST進捗・保存データは変更しません</div>
+</div>
+<script>
+(()=>{'use strict';
+ const frame=document.getElementById('app'),bar=document.getElementById('bar');
+ let stage=0,region=0,ready=false;
+ const qa=(s,r=document)=>[...r.querySelectorAll(s)];
+ function doc(){try{return frame.contentDocument}catch{return null}}
+ function setText(d,id,text){const x=d.querySelector(id);if(x)x.textContent=text}
+ function applyStage(n){
+  const d=doc();if(!d)return;const card=d.querySelector('#historyCard');if(!card)return;
+  stage=n;card.classList.remove('sealed','partial','complete','flipped');
+  const person=d.querySelector('#person');if(person)person.classList.toggle('open',n>=3);
+  if(n===0){card.classList.add('sealed','flipped');setText(d,'#cardStatus','封印中｜裏面');setText(d,'#cardStageLabel','未解放');setText(d,'#flipHint','3断片で表面が姿を現します')}
+  if(n===3){card.classList.add('partial');setText(d,'#cardStatus','第一解放');setText(d,'#cardStageLabel','第一解放');setText(d,'#maskTitle','第一解放');setText(d,'#maskText','あと2断片でフルカード完成');setText(d,'#flipHint','カードをタップすると裏面を見られます')}
+  if(n===5){card.classList.add('complete');setText(d,'#cardStatus','CARD COMPLETE');setText(d,'#cardStageLabel','完成');setText(d,'#flipHint','カードをタップすると表／裏を切り替えられます')}
+  setText(d,'#count',n+' / 5');setText(d,'#cardSpots',n+' / 5');const p=d.querySelector('#bar');if(p)p.style.width=(n*20)+'%';
+  qa('#stages button').forEach(b=>b.classList.toggle('on',Number(b.dataset.stage)===n));
+ }
+ function chooseRegion(i){
+  const d=doc();if(!d)return;const rs=qa('.region',d);if(!rs[i])return;region=i;rs[i].click();qa('#regions button').forEach(b=>b.classList.toggle('on',Number(b.dataset.region)===i));setTimeout(()=>applyStage(stage),80)
+ }
+ function boot(){const d=doc();if(!d||!d.querySelector('#historyCard')){setTimeout(boot,120);return}ready=true;chooseRegion(region);applyStage(stage)}
+ frame.addEventListener('load',()=>setTimeout(boot,180));
+ document.getElementById('regions').addEventListener('click',e=>{const b=e.target.closest('button[data-region]');if(b&&ready)chooseRegion(Number(b.dataset.region))});
+ document.getElementById('stages').addEventListener('click',e=>{const b=e.target.closest('button[data-stage]');if(b&&ready)applyStage(Number(b.dataset.stage))});
+ document.getElementById('hide').onclick=()=>{bar.classList.toggle('hidden');document.getElementById('hide').textContent=bar.classList.contains('hidden')?'表示':'隠す'};
+})();
+</script>
+</body>
+</html>
