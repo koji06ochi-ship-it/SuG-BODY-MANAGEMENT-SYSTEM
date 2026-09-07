@@ -58,7 +58,11 @@ jobs:
 
       - name: Install App Store Connect API dependencies
         if: steps.gate.outputs.ready == 'true'
-        run: python3 -m pip install --quiet --disable-pip-version-check pyjwt cryptography requests
+        run: |
+          set -euo pipefail
+          python3 -m venv "$RUNNER_TEMP/sug-python"
+          "$RUNNER_TEMP/sug-python/bin/python" -m pip install --quiet --disable-pip-version-check pyjwt cryptography requests
+          echo "$RUNNER_TEMP/sug-python/bin" >> "$GITHUB_PATH"
 
       - name: Ensure Bundle ID, HealthKit and App Store app exist
         if: steps.gate.outputs.ready == 'true'
