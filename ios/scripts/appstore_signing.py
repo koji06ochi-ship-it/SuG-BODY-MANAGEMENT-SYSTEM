@@ -14,6 +14,7 @@ import jwt
 import requests
 
 API_BASE = "https://api.appstoreconnect.apple.com/v1"
+TRANSIENT_STATUS = {429, 500, 502, 503, 504}
 
 KEY_ID = os.environ["ASC_API_KEY_ID"]
 ISSUER_ID = os.environ["ASC_API_ISSUER_ID"]
@@ -36,27 +37,65 @@ TOKEN = make_token()
 HEADERS = {"Authorization": f"Bearer {TOKEN}", "Content-Type": "application/json"}
 
 
-def request(method: str, path: str, *, params: Optional[Dict[str, Any]] = None, body: Optional[Dict[str, Any]] = None, allow: Tuple[int, ...] = (200, 201)) -> Dict[str, Any]:
-    response = requests.request(
-        method,
-        API_BASE + path,
-        headers=HEADERS,
-        params=params,
-        json=body,
-        timeout=60,
+def request(
+    method: str,
+    path: str,
+    *,
+    params: Optional[Dict[str, Any]] = None,
+    body: Optional[Dict[str, Any]] = None,
+    allow: Tuple[int, ...] = (200, 201),
+    attempts: int = 5,
+) -> Dict[str, Any]:
+    last_response = None
+    for attempt in range(1, attempts + 1):
+        response = requests.request(
+            method,
+            API_BASE + path,
+            headers=HEADERS,
+            params=params,
+            json=body,
+            timeout=60,
+        )
+        last_response = response
+        if response.status_code in allow:
+            if not response.text.strip():
+                return {}
+            return response.json()
+
+        if response.status_code in TRANSIENT_STATUS and attempt < attempts:
+            wait = min(5 * (2 ** (attempt - 1)), 30)
+            print(
+                f"Apple API transient HTTP {response.status_code} for {method} {path}; "
+                f"retrying in {wait}s ({attempt}/{attempts})"
+            )
+            time.sleep(wait)
+            continue
+        break
+
+    assert last_response is not None
+    raise RuntimeError(
+        f"{method} {path} failed: HTTP {last_response.status_code}\n{last_response.text[:4000]}"
     )
-    if response.status_code not in allow:
-        raise RuntimeError(f"{method} {path} failed: HTTP {response.status_code}\n{response.text[:4000]}")
-    if not response.text.strip():
-        return {}
-    return response.json()
 
 
 def request_delete(path: str) -> None:
-    response = requests.delete(API_BASE + path, headers=HEADERS, timeout=60)
-    if response.status_code in (204, 404):
-        return
-    raise RuntimeError(f"DELETE {path} failed: HTTP {response.status_code}\n{response.text[:4000]}")
+    last_response = None
+    for attempt in range(1, 4):
+        response = requests.delete(API_BASE + path, headers=HEADERS, timeout=60)
+        last_response = response
+        if response.status_code in (204, 404):
+            return
+        if response.status_code in TRANSIENT_STATUS and attempt < 3:
+            wait = 3 * attempt
+            print(f"Apple API transient HTTP {response.status_code} for DELETE {path}; retrying in {wait}s")
+            time.sleep(wait)
+            continue
+        break
+
+    assert last_response is not None
+    raise RuntimeError(
+        f"DELETE {path} failed: HTTP {last_response.status_code}\n{last_response.text[:4000]}"
+    )
 
 
 def find_bundle_id() -> str:
@@ -113,7 +152,11 @@ def create_profile(bundle_resource_id: str, certificate_resource_id: str) -> Dic
             },
         }
     }
-    created = request("POST", "/profiles", body=body)["data"]
+    # A freshly created distribution certificate can take a few seconds to
+    # propagate through Apple's profile service. Give it a small head start;
+    # request() also retries transient 5xx responses with backoff.
+    time.sleep(5)
+    created = request("POST", "/profiles", body=body, attempts=5)["data"]
     print(f"Created provisioning profile {created['id']}")
     return created
 
@@ -178,53 +221,71 @@ def prepare(output_dir: Path, state_path: Path) -> int:
 
     certificate = create_certificate(csr_path.read_text(encoding="utf-8"))
     certificate_id = str(certificate["id"])
-    certificate_content = certificate.get("attributes", {}).get("certificateContent")
-    if not certificate_content:
-        raise RuntimeError("Apple did not return certificateContent")
-    cert_der_path.write_bytes(base64.b64decode(certificate_content))
-    run("openssl", "x509", "-inform", "DER", "-in", str(cert_der_path), "-out", str(cert_pem_path))
+    profile_id: Optional[str] = None
 
-    profile = create_profile(bundle_resource_id, certificate_id)
-    profile_id = str(profile["id"])
-    profile_content = profile.get("attributes", {}).get("profileContent")
-    if not profile_content:
-        raise RuntimeError("Apple did not return profileContent")
-    profile_path.write_bytes(base64.b64decode(profile_content))
+    try:
+        certificate_content = certificate.get("attributes", {}).get("certificateContent")
+        if not certificate_content:
+            raise RuntimeError("Apple did not return certificateContent")
+        cert_der_path.write_bytes(base64.b64decode(certificate_content))
+        run("openssl", "x509", "-inform", "DER", "-in", str(cert_der_path), "-out", str(cert_pem_path))
 
-    p12_password = secrets.token_urlsafe(24)
-    print(f"::add-mask::{p12_password}")
-    run(
-        "openssl",
-        "pkcs12",
-        "-export",
-        "-out",
-        str(p12_path),
-        "-inkey",
-        str(key_path),
-        "-in",
-        str(cert_pem_path),
-        "-password",
-        f"pass:{p12_password}",
-    )
+        profile = create_profile(bundle_resource_id, certificate_id)
+        profile_id = str(profile["id"])
+        profile_content = profile.get("attributes", {}).get("profileContent")
+        if not profile_content:
+            raise RuntimeError("Apple did not return profileContent")
+        profile_path.write_bytes(base64.b64decode(profile_content))
 
-    state = {
-        "bundleIdentifier": BUNDLE_ID,
-        "bundleResourceId": bundle_resource_id,
-        "certificateId": certificate_id,
-        "profileId": profile_id,
-        "createdAt": int(time.time()),
-    }
-    state_path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        p12_password = secrets.token_urlsafe(24)
+        print(f"::add-mask::{p12_password}")
+        run(
+            "openssl",
+            "pkcs12",
+            "-export",
+            "-out",
+            str(p12_path),
+            "-inkey",
+            str(key_path),
+            "-in",
+            str(cert_pem_path),
+            "-password",
+            f"pass:{p12_password}",
+        )
 
-    write_github_output("p12_path", str(p12_path))
-    write_github_output("p12_password", p12_password)
-    write_github_output("profile_path", str(profile_path))
-    write_github_output("profile_name", str(profile.get("attributes", {}).get("name", "S.u.G TestFlight CI")))
-    write_github_output("certificate_id", certificate_id)
-    write_github_output("profile_id", profile_id)
+        state = {
+            "bundleIdentifier": BUNDLE_ID,
+            "bundleResourceId": bundle_resource_id,
+            "certificateId": certificate_id,
+            "profileId": profile_id,
+            "createdAt": int(time.time()),
+        }
+        state_path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-    print(f"Prepared rotating signing assets for {BUNDLE_ID}")
-    return 0
+        write_github_output("p12_path", str(p12_path))
+        write_github_output("p12_password", p12_password)
+        write_github_output("profile_path", str(profile_path))
+        write_github_output("profile_name", str(profile.get("attributes", {}).get("name", "S.u.G TestFlight CI")))
+        write_github_output("certificate_id", certificate_id)
+        write_github_output("profile_id", profile_id)
+
+        print(f"Prepared rotating signing assets for {BUNDLE_ID}")
+        return 0
+    except Exception:
+        # If preparation fails before state is persisted, remove anything this
+        # attempt created so scheduled retries do not leak certificates/profiles.
+        if profile_id:
+            try:
+                print(f"Cleaning failed-attempt provisioning profile {profile_id}")
+                request_delete(f"/profiles/{profile_id}")
+            except Exception as cleanup_exc:
+                print(f"WARNING: could not clean provisioning profile {profile_id}: {cleanup_exc}", file=sys.stderr)
+        try:
+            print(f"Cleaning failed-attempt certificate {certificate_id}")
+            request_delete(f"/certificates/{certificate_id}")
+        except Exception as cleanup_exc:
+            print(f"WARNING: could not clean certificate {certificate_id}: {cleanup_exc}", file=sys.stderr)
+        raise
 
 
 def main() -> int:
