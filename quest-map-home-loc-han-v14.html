@@ -15,12 +15,15 @@ app.addEventListener('load',()=>{
   const d=app.contentDocument;if(!d)return;
   const st=d.createElement('style');st.textContent=`
   #reconBtn{position:fixed;z-index:720;right:10px;bottom:calc(82px + env(safe-area-inset-bottom));border:1px solid #d6ad57;border-radius:999px;background:#211b0df2;color:#ffe29c;padding:9px 12px;font:900 9px -apple-system;box-shadow:0 6px 18px #0008}
+  /* 旧PILOTマンホールの『蓋』マーカーはMAPでは非表示。保存済みカード/collectionは維持 */
+  .m-manhole{display:none!important}
   #reconLayer{position:fixed;z-index:1800;inset:0;display:none;background:#050a08f7;color:#f7f3e8;padding:calc(14px + env(safe-area-inset-top)) 12px calc(16px + env(safe-area-inset-bottom));overflow:auto}
-  #reconLayer.on{display:block}.reconShell{max-width:520px;margin:auto}.reconHead{position:sticky;top:0;z-index:2;background:#050a08f2;padding:4px 0 10px;display:flex;align-items:center;gap:8px}
-  .reconHead h2{margin:0;flex:1;color:#ffe3a0;font:700 20px Georgia,"Yu Mincho",serif}.reconClose{width:38px;height:38px;border:1px solid #555;border-radius:12px;background:#101915;color:#eee;font-size:20px}
+  #reconLayer.on{display:block} .reconShell{max-width:520px;margin:auto} .reconHead{position:sticky;top:0;z-index:2;background:#050a08f2;padding:4px 0 10px;display:flex;align-items:center;gap:8px}
+  .reconHead h2{margin:0;flex:1;color:#ffe3a0;font:700 20px Georgia,"Yu Mincho",serif} .reconClose{width:38px;height:38px;border:1px solid #555;border-radius:12px;background:#101915;color:#eee;font-size:20px}
   .reconNote{padding:10px;border:1px solid #66532f;border-radius:12px;background:#0b140f;color:#c7d0c8;font-size:9px;line-height:1.55;margin-bottom:10px}
-  .reconCats{display:flex;gap:5px;overflow:auto;margin-bottom:10px}.reconCat{flex:0 0 auto;border:1px solid #65706a;border-radius:999px;background:#0b1410;color:#ddd;padding:6px 8px;font-size:8px;font-weight:900}.reconCat.on{border-color:#d6ad57;background:#211b0d;color:#ffe29c}
-  .reconGrid{display:grid;grid-template-columns:1fr;gap:8px}.rp{display:grid;grid-template-columns:86px 1fr;gap:10px;padding:8px;border:1px solid #39463e;border-radius:14px;background:#09110e}.rp.secret{border-color:#6b465d;background:#120b11}.rp .noPhoto{width:86px;height:104px;border-radius:9px;background:#151d18;display:grid;place-items:center;color:#887b5d;font-size:9px;text-align:center}
+  .reconCats{display:flex;gap:5px;overflow:auto;margin-bottom:10px} .reconCat{flex:0 0 auto;border:1px solid #65706a;border-radius:999px;background:#0b1410;color:#ddd;padding:6px 8px;font-size:8px;font-weight:900}
+  .reconCat.on{border-color:#d6ad57;background:#211b0d;color:#ffe29c}
+  .reconGrid{display:grid;grid-template-columns:1fr;gap:8px} .rp{display:grid;grid-template-columns:86px 1fr;gap:10px;padding:8px;border:1px solid #39463e;border-radius:14px;background:#09110e}.rp.secret{border-color:#6b465d;background:#120b11}.rp .noPhoto{width:86px;height:104px;border-radius:9px;background:#151d18;display:grid;place-items:center;color:#887b5d;font-size:9px;text-align:center}
   .rp b{display:block;color:#fff0c6;font-size:12px}.rp small{display:block;color:#8e9a91;font-size:7px;margin-top:3px;line-height:1.5}.badge{display:inline-block;margin-top:5px;padding:3px 6px;border-radius:999px;background:#4a3415;color:#ffd98e;font-size:7px;font-weight:900}.tag{display:inline-block;margin:3px 3px 0 0;padding:2px 4px;border-radius:4px;background:#17231c;color:#b9c9be;font-size:6px}.manbox{margin:12px 0;padding:11px;border:1px solid #555c61;border-radius:13px;background:#0b0f12;color:#d8dde0;font-size:9px;line-height:1.7}`;
   d.head.appendChild(st);
   const btn=d.createElement('button');btn.id='reconBtn';btn.textContent='📍 ロケハン13';d.body.appendChild(btn);
@@ -28,7 +31,14 @@ app.addEventListener('load',()=>{
   let filter='ALL';const cats=[['ALL','全部'],...NEW_CATS,['MANHOLE','マンホール'],['WATER_CANDIDATE','給水候補']];
   function renderRecon(){const grid=layer.querySelector('.reconGrid');const arr=RECON_POINTS.filter(p=>filter==='ALL'||p.category===filter||p.tags?.includes(filter)||p.subtype===filter);grid.innerHTML=arr.map(p=>`<article class="rp ${p.secret?'secret':''}"><div class="noPhoto">${p.photo_sources.length?'PHOTO LINKED':'PHOTO PENDING'}</div><div><b>${p.icon} ${p.name}</b><small>${p.category}${p.subtype?'｜'+p.subtype:''}<br>${p.condition}<br>写真: ${p.photo_sources.length?p.photo_sources.join(', '):'未紐付け'}</small><span class="badge">位置確認待ち</span><div>${(p.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div></div></article>`).join('');layer.querySelectorAll('.reconCat').forEach(b=>b.classList.toggle('on',b.dataset.cat===filter));}
   const cbox=layer.querySelector('.reconCats');cbox.innerHTML=cats.map(c=>`<button class="reconCat" data-cat="${c[0]}">${c[1]}</button>`).join('');cbox.onclick=e=>{const b=e.target.closest('.reconCat');if(!b)return;filter=b.dataset.cat;renderRecon()};layer.querySelector('.reconClose').onclick=()=>layer.classList.remove('on');btn.onclick=()=>{filter='ALL';renderRecon();layer.classList.add('on')};
-  const f=d.getElementById('filters');if(f)NEW_CATS.forEach(c=>{const b=d.createElement('button');b.className='chip';b.textContent=c[1];b.onclick=e=>{e.stopPropagation();filter=c[0];renderRecon();layer.classList.add('on')};f.appendChild(b)});if(f){const b=d.createElement('button');b.className='chip';b.textContent='給水候補';b.onclick=e=>{e.stopPropagation();filter='WATER_CANDIDATE';renderRecon();layer.classList.add('on')};f.appendChild(b)}
+  // 既存フィルターへ新カテゴリ入口を追加。位置未確定なので押すと pending 一覧を開く。
+  const f=d.getElementById('filters');
+  if(f) NEW_CATS.forEach(c=>{const b=d.createElement('button');b.className='chip';b.textContent=c[1];b.onclick=(e)=>{e.stopPropagation();filter=c[0];renderRecon();layer.classList.add('on')};f.appendChild(b)});
+  // WATER候補
+  if(f){const b=d.createElement('button');b.className='chip';b.textContent='給水候補';b.onclick=(e)=>{e.stopPropagation();filter='WATER_CANDIDATE';renderRecon();layer.classList.add('on')};f.appendChild(b)}
+  // 実地点未確定の旧マンホールPILOTはフィルターも一旦隠す。
+  if(f){[...f.querySelectorAll('.chip')].forEach(b=>{if(b.textContent.trim()==='マンホール')b.style.display='none'})}
+  // 既存COLLECTIONを壊さず、ロケハン図鑑への導線だけ追加
   const oc=d.getElementById('openCollection');if(oc)oc.addEventListener('click',()=>setTimeout(()=>{const mp=d.getElementById('manholeProgress');if(mp&&!mp.dataset.recon){mp.dataset.recon='1';mp.innerHTML+=`<hr style="border:0;border-top:1px solid #39434a;margin:9px 0"><b>天満・北区 MANHOLE COLLECTION｜候補</b><br>EXPO 2025 / 大阪城 NORMAL / 大阪城 COLOR：現地撮影済・GPS位置確認待ち<br>??? / ???：未発見`; }},0));
 });
 </script></body></html>
