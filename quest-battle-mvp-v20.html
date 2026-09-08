@@ -18,6 +18,8 @@ html,body{margin:0;width:100%;height:100%;background:#000;color:var(--ink);font-
 #app{position:fixed;inset:0;width:100%;height:100%;border:0;background:#000}
 .battleLauncher{position:fixed;z-index:5000;right:12px;top:calc(12px + env(safe-area-inset-top));border:1px solid #d0a64b;border-radius:999px;padding:10px 13px;background:linear-gradient(145deg,#251a08,#080704);color:#ffe39b;font-size:10px;font-weight:1000;letter-spacing:.07em;box-shadow:0 8px 24px #000c,0 0 20px #d5a8442c}
 .battleLauncher b{color:#82eda3}
+.partnerLauncher{position:fixed;z-index:5000;right:12px;top:calc(57px + env(safe-area-inset-top));border:1px solid #cb7650;border-radius:999px;padding:9px 13px;background:linear-gradient(145deg,#32120b,#090504);color:#ffd0ae;font-size:9px;font-weight:1000;letter-spacing:.06em;box-shadow:0 8px 24px #000c,0 0 20px #c74c2928}
+.partnerLauncher b{color:#ff9474}
 .battleLayer{position:fixed;z-index:6000;inset:0;display:none;overflow:auto;background:radial-gradient(circle at 50% -5%,#15233b 0,#080a11 34%,#020306 76%);padding:calc(10px + env(safe-area-inset-top)) 12px calc(28px + env(safe-area-inset-bottom))}
 .battleLayer.on{display:block}
 .shell{width:min(440px,100%);margin:0 auto}
@@ -31,7 +33,7 @@ html,body{margin:0;width:100%;height:100%;background:#000;color:var(--ink);font-
 .heroIntro h1{position:relative;z-index:1;margin:6px 0 7px;color:#fff0c2;font:700 29px/1.08 Georgia,"Yu Mincho",serif}.heroIntro p{position:relative;z-index:1;margin:0;color:#c6beaf;font-size:10px;line-height:1.7}
 .modeChips{position:relative;z-index:1;display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}.modeChips span{padding:5px 7px;border:1px solid #4f432d;border-radius:999px;background:#06070bcc;color:#c9b888;font-size:7px;font-weight:900}
 .deckHead{display:flex;justify-content:space-between;align-items:end;margin:18px 2px 8px}.deckHead h2{margin:0;color:#f0d58f;font-size:12px;letter-spacing:.08em}.deckHead span{color:#8c887f;font-size:8px}
-.deck{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.deck{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
 .deckCard{position:relative;min-width:0;overflow:hidden;border:1px solid #584624;border-radius:11px;background:linear-gradient(160deg,#121520,#07090f);box-shadow:0 8px 18px #0007}
 .deckArt{height:83px;display:grid;place-items:center;position:relative;background:radial-gradient(circle at 50% 28%,var(--card-glow,#6f572e),#08090e 72%);color:#ffe3a0;font:700 29px Georgia,"Yu Mincho",serif}
 .deckArt.masashige{background-image:linear-gradient(180deg,#0000 35%,#06070ded 93%),url('./assets/quest/chihaya-masashige-20260905.png?v=battle-v20');background-size:cover;background-position:center 24%;color:transparent}
@@ -44,18 +46,21 @@ html,body{margin:0;width:100%;height:100%;background:#000;color:var(--ink);font-
 .saved{margin-top:10px;padding:9px 11px;border:1px solid #315e42;border-radius:10px;color:#9cf0b3;background:#07110b;font-size:8px;font-weight:900}
 .hud{margin-top:4px;padding:12px;border:1px solid #544327;border-radius:15px;background:#070910cc}.round{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.round b{color:#f2d27d;font-size:10px}.round span{color:#87909e;font-size:8px}.fighters{display:grid;grid-template-columns:1fr 36px 1fr;align-items:center;gap:7px}.fighter{text-align:center}.fighterName{height:26px;color:#eadcbf;font-size:9px;font-weight:900}.fighterHp{height:8px;overflow:hidden;border-radius:999px;background:#1b1d22}.fighterHp i{display:block;height:100%;width:100%;transition:width .35s ease;background:linear-gradient(90deg,#3fb463,#87eda2)}.fighter.enemy .fighterHp i{background:linear-gradient(90deg,#8f2723,#ff7b69)}.hpText{margin-top:4px;color:#a59d90;font:700 8px monospace}.vs{color:#806d4b;text-align:center;font:700 11px Georgia,serif}
 .arena{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:9px}.portrait{position:relative;height:150px;overflow:hidden;border:1px solid #574628;border-radius:15px;background:#08090d}.portrait.hero{background-image:linear-gradient(180deg,#0000 35%,#06070dfa 93%),url('./assets/quest/chihaya-masashige-20260905.png?v=battle-v20');background-size:cover;background-position:center 25%}.portrait.enemy{background:radial-gradient(circle at 50% 31%,#7c2b26,#210a09 38%,#060609 76%)}.portrait.enemy:before{content:"六";position:absolute;inset:24px 0 auto;text-align:center;color:#ffcfb6;font:700 72px Georgia,"Yu Mincho",serif;text-shadow:0 0 28px #ff493c55}.portrait .tag{position:absolute;left:8px;right:8px;bottom:8px;padding:6px;border:1px solid #7a6030;border-radius:8px;background:#050609dc;text-align:center;color:#e8cc82;font-size:7px;font-weight:900}.statusLine{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px;min-height:25px}.statusLine span{padding:5px 7px;border:1px solid #39404b;border-radius:999px;background:#080a10;color:#aeb7c5;font-size:7px;font-weight:900}.statusLine .on{border-color:#71602f;color:#efd17c}.apBox{display:flex;justify-content:space-between;align-items:center;margin-top:7px;padding:8px 9px;border:1px solid #354151;border-radius:9px;background:#070a10;color:#aab4c4;font-size:8px}.apBox b{color:#8fd5f1;font:900 10px monospace}
-.battleCards{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin-top:10px}.battleCard{position:relative;min-width:0;min-height:128px;padding:0;border:1px solid #5c4928;border-radius:11px;overflow:hidden;background:#080a0f;color:#fff;text-align:left;transition:.14s}.battleCard:active{transform:scale(.96)}.battleCard:disabled{opacity:.35;filter:grayscale(.7)}.battleCard .miniArt{height:64px;display:grid;place-items:center;background:radial-gradient(circle,var(--card-glow,#66522e),#07080c 72%);color:#ffe0a0;font:700 25px Georgia,"Yu Mincho",serif}.battleCard .miniArt.masashige{background-image:linear-gradient(180deg,#0000 36%,#06070def 92%),url('./assets/quest/chihaya-masashige-20260905.png?v=battle-v20');background-size:cover;background-position:center 24%;color:transparent}.battleCard .cardText{padding:6px 5px}.battleCard b{display:block;color:#f2dfb4;font-size:7px;line-height:1.25}.battleCard small{display:block;margin-top:3px;color:#9c978c;font-size:6px;line-height:1.25}.battleCard .cost{position:absolute;right:4px;top:4px;min-width:18px;padding:3px;border:1px solid #7192a5;border-radius:999px;background:#071019e8;text-align:center;color:#9edcf4;font:900 7px monospace}.battleCard.used:after{content:"USED";position:absolute;inset:0;display:grid;place-items:center;background:#020306bb;color:#bbb3a5;font-size:8px;font-weight:1000;letter-spacing:.12em}
+.battleCards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:10px}.battleCard{position:relative;min-width:0;min-height:128px;padding:0;border:1px solid #5c4928;border-radius:11px;overflow:hidden;background:#080a0f;color:#fff;text-align:left;transition:.14s}.battleCard:active{transform:scale(.96)}.battleCard:disabled{opacity:.35;filter:grayscale(.7)}.battleCard .miniArt{height:64px;display:grid;place-items:center;background:radial-gradient(circle,var(--card-glow,#66522e),#07080c 72%);color:#ffe0a0;font:700 25px Georgia,"Yu Mincho",serif}.battleCard .miniArt.masashige{background-image:linear-gradient(180deg,#0000 36%,#06070def 92%),url('./assets/quest/chihaya-masashige-20260905.png?v=battle-v20');background-size:cover;background-position:center 24%;color:transparent}.battleCard .cardText{padding:6px 5px}.battleCard b{display:block;color:#f2dfb4;font-size:7px;line-height:1.25}.battleCard small{display:block;margin-top:3px;color:#9c978c;font-size:6px;line-height:1.25}.battleCard .cost{position:absolute;right:4px;top:4px;min-width:18px;padding:3px;border:1px solid #7192a5;border-radius:999px;background:#071019e8;text-align:center;color:#9edcf4;font:900 7px monospace}.battleCard.used:after{content:"USED";position:absolute;inset:0;display:grid;place-items:center;background:#020306bb;color:#bbb3a5;font-size:8px;font-weight:1000;letter-spacing:.12em}
 .log{margin-top:9px;padding:9px 10px;border:1px solid #30343e;border-radius:10px;background:#05070b;max-height:92px;overflow:auto}.log p{margin:0 0 5px;color:#aeb4bd;font-size:8px;line-height:1.45}.log p:first-child{color:#f0d17b}.log p:last-child{margin-bottom:0}
 .turnBtn{margin-top:9px;padding:12px;border:1px solid #67522c;border-radius:11px;background:linear-gradient(145deg,#171108,#090a0e);color:#e9c86e;font-weight:1000;width:100%}
 .result{text-align:center;margin-top:9px;padding:18px 14px;border:1px solid #82642d;border-radius:18px;background:radial-gradient(circle at 50% 0,#3b2a0c,#0a0b10 45%,#040509 80%)}.result .big{margin:6px 0;color:#ffe49d;font:700 34px Georgia,"Yu Mincho",serif}.result p{margin:0;color:#bcb3a3;font-size:9px;line-height:1.65}.rewardCard{width:min(250px,75vw);aspect-ratio:3/4.7;margin:15px auto;padding:14px;border:2px solid #d2a448;border-radius:19px;background:radial-gradient(circle at 50% 12%,#73521b,#171006 42%,#050506 76%);box-shadow:0 16px 40px #000c,0 0 28px #d0a23f33;display:flex;flex-direction:column;justify-content:space-between}.rewardCard .rewardSeal{height:62%;display:grid;place-items:center;border:1px solid #947035;border-radius:13px;background:radial-gradient(circle,#71332a,#100807 70%);color:#ffe2b0;font:700 74px Georgia,"Yu Mincho",serif}.rewardCard h2{margin:0;color:#fff0bd;font:700 22px Georgia,"Yu Mincho",serif}.rewardCard small{color:#bba66d;font-size:7px;letter-spacing:.12em}
 .lose{border-color:#653834;background:radial-gradient(circle at 50% 0,#32110f,#09090e 48%,#040509 80%)}
 .toast{position:fixed;z-index:7000;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));width:min(390px,90vw);transform:translate(-50%,25px);padding:11px 13px;border:1px solid #5b8c68;border-radius:12px;background:#071109f3;color:#bdf8c9;font-size:9px;font-weight:900;opacity:0;pointer-events:none;transition:.22s}.toast.on{opacity:1;transform:translate(-50%,0)}
-@media(max-width:360px){.deckArt{height:70px}.portrait{height:130px}.battleCard{min-height:119px}.battleCard .miniArt{height:58px}.heroIntro h1{font-size:26px}}
+.partnerHero{border-color:#8a472f;background:radial-gradient(circle at 85% 10%,#572016,#160907 38%,#07080d 80%)}
+.partnerStatus{display:grid;grid-template-columns:112px 1fr;gap:12px;margin-top:13px;padding:12px;border:1px solid #75412f;border-radius:16px;background:#0b0707}.ryoCard{height:156px;border:1px solid #bf704c;border-radius:14px;background:radial-gradient(circle at 50% 28%,#9a3e26,#280b08 45%,#080608 78%);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:inset 0 0 30px #ff7a3422}.ryoCard strong{color:#ffe0bd;font:700 50px Georgia,"Yu Mincho",serif}.ryoCard span{margin-top:8px;color:#ffb083;font-size:10px;font-weight:1000}.ryoInfo h2{margin:4px 0;color:#ffe3c5;font:700 22px Georgia,"Yu Mincho",serif}.ryoInfo p{margin:0;color:#b9a59b;font-size:8px;line-height:1.6}.xpTrack{height:8px;margin-top:10px;border-radius:999px;background:#25100c;overflow:hidden}.xpTrack i{display:block;height:100%;background:linear-gradient(90deg,#d44f2c,#ffd07d);transition:width .3s}.xpText{margin-top:5px;color:#df9b72;font:900 8px monospace}.levelEffects{margin-top:12px;display:grid;grid-template-columns:repeat(4,1fr);gap:5px}.levelEffects div{padding:7px 4px;border:1px solid #493026;border-radius:9px;background:#090707;text-align:center;color:#8f7d74;font-size:6px;line-height:1.45}.levelEffects div.on{border-color:#c16d48;background:#1b0b08;color:#ffd0ad}.levelEffects b{display:block;font-size:8px}.menuGrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.menuCard{position:relative;min-height:112px;padding:12px;border:1px solid #6f3e2d;border-radius:13px;background:linear-gradient(145deg,#1c0c08,#090709);color:#f5d5bd;text-align:left}.menuCard:disabled{opacity:.55}.menuMark{display:grid;place-items:center;width:42px;height:42px;border:1px solid #9b583d;border-radius:11px;background:#2b0d08;color:#ffd1ad;font:700 20px Georgia,"Yu Mincho",serif}.menuCard b{display:block;margin-top:8px;font-size:10px}.menuCard small{display:block;margin-top:3px;color:#a88e81;font-size:7px;line-height:1.4}.menuCard em{position:absolute;right:8px;top:8px;color:#89e3a0;font-size:7px;font-style:normal;font-weight:1000}.visitRule{margin-top:12px;padding:11px;border:1px dashed #6b4433;border-radius:12px;color:#b39b8d;background:#0b0808;font-size:8px;line-height:1.65}.visitRule b{color:#ffd2ad}
+@media(max-width:360px){.deckArt{height:70px}.portrait{height:130px}.battleCard{min-height:119px}.battleCard .miniArt{height:58px}.heroIntro h1{font-size:26px}.partnerStatus{grid-template-columns:96px 1fr}.ryoCard{height:142px}}
 </style>
 </head>
 <body>
 <iframe id="app" src="./quest.html?v=battle-mvp-v20-iphone-direct-20260908" allow="geolocation"></iframe>
 <button id="battleLauncher" class="battleLauncher">⚔ BATTLE <b>MVP</b></button>
+<button id="partnerLauncher" class="partnerLauncher">🥩 瞭 <b>PARTNER</b></button>
 <section id="battleLayer" class="battleLayer" aria-hidden="true">
   <div class="shell">
     <header class="topbar">
@@ -66,9 +71,20 @@ html,body{margin:0;width:100%;height:100%;background:#000;color:var(--ink);font-
     <main id="screen"></main>
   </div>
 </section>
+<section id="partnerLayer" class="battleLayer" aria-hidden="true">
+  <div class="shell">
+    <header class="topbar">
+      <button id="closePartner" class="backBtn" aria-label="閉じる">‹</button>
+      <div class="brand"><b>焼肉ホルモン瞭</b><span>TENMA PARTNER QUEST</span></div>
+      <span></span>
+    </header>
+    <main id="partnerScreen"></main>
+  </div>
+</section>
 <div id="toast" class="toast"></div>
 <script>
 const STORAGE='sugQuestBattleMvpV20';
+const RYO_STORAGE='sugQuestRyoPartnerV21';
 const PLAYER_MAX=80,BOSS_MAX=120;
 const CARD_DEFS=[
   {id:'masashige',type:'BATTLE 武将',name:'楠木正成',effect:'敵へ攻撃',mark:'楠',glow:'#6f3d28',art:'masashige'},
@@ -77,40 +93,106 @@ const CARD_DEFS=[
   {id:'hakkenya',type:'駅守将 / RIVER GATE',name:'八軒家浜',effect:'水軍援護を強化',mark:'川',glow:'#2d647d'},
   {id:'kunishige',type:'SUPPORT / EQUIPMENT',name:'刀剣 國重',effect:'正成の攻撃＋8',mark:'刀',glow:'#72542e'}
 ];
+const RYO_MENUS=[
+  {id:'yakiniku',name:'焼肉補給',effect:'対象焼肉メニュー｜回復系',mark:'肉'},
+  {id:'hormone',name:'ホルモン士気',effect:'対象ホルモンメニュー｜攻撃系',mark:'炎'},
+  {id:'protein',name:'たんぱく兵糧',effect:'対象メニュー｜持久系',mark:'力'},
+  {id:'recommend',name:'店主おすすめ',effect:'おすすめメニュー｜特殊系',mark:'推'}
+];
+const RYO_LEVELS=[
+  {level:0,heal:0,attack:0,label:'未取得'},
+  {level:1,heal:12,attack:0,label:'初回来店'},
+  {level:2,heal:18,attack:0,label:'再来店'},
+  {level:3,heal:24,attack:4,label:'常連'},
+  {level:4,heal:30,attack:8,label:'盟友'}
+];
 const layer=document.getElementById('battleLayer');
+const partnerLayer=document.getElementById('partnerLayer');
 const screen=document.getElementById('screen');
+const partnerScreen=document.getElementById('partnerScreen');
 const toastBox=document.getElementById('toast');
 let battle=null,toastTimer=null;
 
 function freshStore(){return {unlocked:false,wins:0,bestTurns:null,victoryCard:false,lastPlayed:null}}
 function loadStore(){try{return {...freshStore(),...JSON.parse(localStorage.getItem(STORAGE)||'{}')}}catch(e){return freshStore()}}
 function saveStore(v){localStorage.setItem(STORAGE,JSON.stringify(v))}
+function freshRyo(){return {visits:0,claimed:[],lastClaim:null}}
+function loadRyo(){try{const v={...freshRyo(),...JSON.parse(localStorage.getItem(RYO_STORAGE)||'{}')};v.claimed=Array.isArray(v.claimed)?v.claimed:[];return v}catch(e){return freshRyo()}}
+function saveRyo(v){localStorage.setItem(RYO_STORAGE,JSON.stringify(v))}
+function ryoProfile(){const s=loadRyo();const level=Math.min(4,s.claimed.length);return {...RYO_LEVELS[level],visits:s.visits,claimed:s.claimed,lastClaim:s.lastClaim}}
+function ryoBattleCard(profile=ryoProfile()){return {id:'ryo',type:`PARTNER / LV.${profile.level}`,name:'焼肉ホルモン瞭',effect:profile.level?`HP＋${profile.heal}${profile.attack?` / ATK＋${profile.attack}`:''}`:'瞭QUESTで解放',mark:'瞭',glow:'#9a3e26'}}
+function cardsForBattle(){const r=ryoProfile();return r.level?[...CARD_DEFS,ryoBattleCard(r)]:CARD_DEFS}
 function esc(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function toast(msg){clearTimeout(toastTimer);toastBox.textContent=msg;toastBox.classList.add('on');toastTimer=setTimeout(()=>toastBox.classList.remove('on'),1900)}
 function openBattle(){layer.classList.add('on');layer.setAttribute('aria-hidden','false');renderDeck()}
 function closeBattle(){layer.classList.remove('on');layer.setAttribute('aria-hidden','true')}
+function openPartner(){partnerLayer.classList.add('on');partnerLayer.setAttribute('aria-hidden','false');renderPartner()}
+function closePartner(){partnerLayer.classList.remove('on');partnerLayer.setAttribute('aria-hidden','true')}
 
 function deckCard(c,unlocked){return `<div class="deckCard ${unlocked?'':'locked'}"><div class="deckArt ${c.art||''}" style="--card-glow:${c.glow}">${esc(c.mark)}</div><div class="deckMeta"><b>${esc(c.name)}</b><span>${esc(c.type)}<br>${esc(c.effect)}</span></div></div>`}
 
+function renderPartner(){
+  const s=loadRyo(),r=ryoProfile(),percent=Math.round(r.level/4*100);
+  partnerScreen.innerHTML=`
+    <section class="screen">
+      <div class="heroIntro partnerHero">
+        <div class="eyebrow">PARTNER SHOP / TENMA / PERMISSION OK</div>
+        <h1>食べるたび、<br>瞭が育つ。</h1>
+        <p>対象メニューでカードを集め、焼肉ホルモン瞭のPARTNER CARDをレベルアップ。再来店するほど、QUESTバトルで強くなる。</p>
+      </div>
+      <div class="partnerStatus">
+        <div class="ryoCard"><strong>瞭</strong><span>LEVEL ${r.level}</span></div>
+        <div class="ryoInfo">
+          <div class="eyebrow">PARTNER CARD</div>
+          <h2>焼肉ホルモン瞭</h2>
+          <p>${r.level?`${esc(r.label)}｜バトル効果 HP＋${r.heal}${r.attack?`・ATK＋${r.attack}`:''}`:'最初の対象メニューでカード解放'}</p>
+          <div class="xpTrack"><i style="width:${percent}%"></i></div>
+          <div class="xpText">MENU CARD ${r.level} / 4｜来店 ${r.visits}回</div>
+          <button id="goBattleFromRyo" class="secondary">このレベルでBATTLE確認</button>
+        </div>
+      </div>
+      <div class="levelEffects">
+        ${RYO_LEVELS.slice(1).map(x=>`<div class="${r.level>=x.level?'on':''}"><b>LV.${x.level}</b>HP＋${x.heal}${x.attack?`<br>ATK＋${x.attack}`:''}</div>`).join('')}
+      </div>
+      <div class="deckHead"><h2>MENU CARD｜別来店で1枚</h2><span>${r.level}/4 GET</span></div>
+      <div class="menuGrid">
+        ${RYO_MENUS.map(m=>{const got=s.claimed.includes(m.id);return `<button class="menuCard" data-ryo-menu="${m.id}" ${got?'disabled':''}><em>${got?'GET済':'＋1 EXP'}</em><span class="menuMark">${esc(m.mark)}</span><b>${esc(m.name)}</b><small>${esc(m.effect)}<br>${got?'瞭カードへ反映済み':'来店記録＋1・MENU CARD GET'}</small></button>`}).join('')}
+      </div>
+      <div class="visitRule"><b>再来店ルール</b><br>本番は店舗GPS＋QRで来店確認し、1回来店につき対象メニューカード1枚。違うメニューを集めるほど瞭カードがLV.1→LV.4へ成長する。MVPでは各ボタンを別来店として記録。</div>
+      <button id="resetRyo" class="danger">瞭PARTNER QUESTの実験データをリセット</button>
+      <p class="note">焼肉ホルモン瞭 天満店：提携・掲載許可済み。現在のMENU CARD名・効果数値は機能検証用の仮仕様。正式メニュー名・写真・特典は店舗確認後に差し替えます。</p>
+    </section>`;
+  partnerScreen.querySelectorAll('[data-ryo-menu]').forEach(b=>b.addEventListener('click',()=>claimRyoMenu(b.dataset.ryoMenu)));
+  document.getElementById('goBattleFromRyo').addEventListener('click',()=>{closePartner();openBattle()});
+  document.getElementById('resetRyo').addEventListener('click',resetRyoData);
+}
+
+function claimRyoMenu(id){
+  const s=loadRyo();if(s.claimed.includes(id))return;
+  s.claimed.push(id);s.visits=(s.visits||0)+1;s.lastClaim=Date.now();saveRyo(s);
+  const m=RYO_MENUS.find(x=>x.id===id),r=ryoProfile();renderPartner();toast(`${m.name} CARD GET｜焼肉ホルモン瞭 LV.${r.level}`)
+}
+function resetRyoData(){if(!confirm('瞭の来店回数・MENU CARD・レベルをリセットしますか？'))return;localStorage.removeItem(RYO_STORAGE);renderPartner();toast('瞭PARTNER QUESTをリセットしました')}
+
 function renderDeck(){
-  const s=loadStore();
+  const s=loadStore(),r=ryoProfile(),battleCards=cardsForBattle();
   screen.innerHTML=`
     <section class="screen">
       <div class="heroIntro">
         <div class="eyebrow">BATTLE MVP 01 / ONE BATTLE</div>
         <h1>集めたカードを、<br>戦力に変える。</h1>
         <p>スタンプで終わらない。現地で得た武将・食・交通・駅守将・装備を組み合わせ、六波羅追討軍を突破する機能実験。</p>
-        <div class="modeChips"><span>5 CARD DECK</span><span>TURN BATTLE</span><span>LOCAL SAVE</span><span>FIELD TEST</span></div>
+        <div class="modeChips"><span>5 + PARTNER</span><span>TURN BATTLE</span><span>LOCAL SAVE</span><span>FIELD TEST</span></div>
       </div>
-      <div class="deckHead"><h2>PILOT LOADOUT｜5</h2><span>${s.unlocked?'取得済み':'未取得'}</span></div>
-      <div class="deck">${CARD_DEFS.map(c=>deckCard(c,s.unlocked)).join('')}</div>
+      <div class="deckHead"><h2>PILOT LOADOUT｜${battleCards.length}</h2><span>${s.unlocked?'基本5枚取得済み':'未取得'}</span></div>
+      <div class="deck">${CARD_DEFS.map(c=>deckCard(c,s.unlocked)).join('')}${deckCard(ryoBattleCard(r),r.level>0)}</div>
       <div class="bossPreview"><div class="bossSeal">六</div><div><div class="eyebrow">BOSS / ROKUHARA</div><h3>六波羅追討軍</h3><p>ゲーム演出用の初回BOSS。史実上の経路・構成は正式版で史料区分を付けて実装。</p></div></div>
       ${s.unlocked?`
-        <button id="startBattle" class="primary">この5枚で戦う</button>
+        <button id="startBattle" class="primary">この${battleCards.length}枚で戦う</button>
         ${s.victoryCard?`<div class="saved">✓ 勝利カード「六波羅追討軍突破」保存済み｜勝利 ${s.wins}回${s.bestTurns?`｜最短 ${s.bestTurns}ターン`:''}</div>`:''}
         <button id="resetData" class="danger">BATTLE MVPの実験データをリセット</button>
       `:`<div class="unlockBox"><b>まず5枚を取得</b><p>本番はGPS・歩数・店舗QUESTで1枚ずつ解放。今回は効果検証のため、実験用デッキを一括取得します。</p></div><button id="claimCards" class="primary">実験用5枚をCARD GET</button>`}
-      <p class="note">※効果数値・敵設定・カード画像はMVP用の仮仕様。近鉄・八軒家浜との連携を示すものではありません。家紋は使用していません。</p>
+      <p class="note">※効果数値・敵設定・カード画像はMVP用の仮仕様。焼肉ホルモン瞭は提携・掲載許可済み。近鉄・八軒家浜との連携を示すものではありません。家紋は使用していません。</p>
     </section>`;
   document.getElementById('claimCards')?.addEventListener('click',claimCards);
   document.getElementById('startBattle')?.addEventListener('click',startBattle);
@@ -121,7 +203,8 @@ function claimCards(){const s=loadStore();s.unlocked=true;saveStore(s);renderDec
 function resetData(){if(!confirm('BATTLE MVPの勝利回数・取得状態をリセットしますか？'))return;localStorage.removeItem(STORAGE);battle=null;renderDeck();toast('BATTLE MVPをリセットしました')}
 
 function startBattle(){
-  battle={turn:1,hp:PLAYER_MAX,boss:BOSS_MAX,ap:2,moveCost:2,attack:18,navy:false,used:{egg:false,kintetsu:false,hakkenya:false,kunishige:false},ended:false,log:['六波羅追討軍が進路を塞いだ。5枚のカードで突破せよ。']};
+  const r=ryoProfile();
+  battle={turn:1,hp:PLAYER_MAX,boss:BOSS_MAX,ap:2,moveCost:2,attack:18,navy:false,ryoLevel:r.level,ryoHeal:r.heal,ryoAttack:r.attack,used:{egg:false,kintetsu:false,hakkenya:false,kunishige:false,ryo:false},ended:false,log:[`六波羅追討軍が進路を塞いだ。${r.level?'瞭を含む6枚':'基本5枚'}で突破せよ。`]};
   renderFight();
 }
 function pct(v,max){return Math.max(0,Math.min(100,Math.round(v/max*100)))}
@@ -156,6 +239,12 @@ function useCard(id){
     if(!canPay(1)){renderFight();return}
     battle.used.kunishige=true;battle.attack+=8;addLog('刀剣 國重を装備｜楠木正成の攻撃 18 → 26。');
   }
+  if(id==='ryo'){
+    if(!battle.ryoLevel||battle.used.ryo)return;
+    if(!canPay(1)){renderFight();return}
+    battle.used.ryo=true;const before=battle.hp;battle.hp=Math.min(PLAYER_MAX,battle.hp+battle.ryoHeal);battle.attack+=battle.ryoAttack;
+    addLog(`焼肉ホルモン瞭 LV.${battle.ryoLevel}｜体力を ${battle.hp-before} 回復${battle.ryoAttack?`・攻撃＋${battle.ryoAttack}`:''}`);
+  }
   if(battle.boss<=0){winBattle();return}
   renderFight();
 }
@@ -178,6 +267,7 @@ function battleCard(c){
   if(c.id==='egg'){used=battle.used.egg;disabled=battle.hp>=PLAYER_MAX||battle.ap<1}
   if(c.id==='hakkenya'){used=battle.used.hakkenya;disabled=battle.ap<1}
   if(c.id==='kunishige'){used=battle.used.kunishige;disabled=battle.ap<1}
+  if(c.id==='ryo'){used=battle.used.ryo;disabled=battle.ap<1||(battle.hp>=PLAYER_MAX&&battle.ryoAttack===0)}
   return `<button class="battleCard ${used?'used':''}" data-card="${c.id}" ${used||disabled?'disabled':''} style="--card-glow:${c.glow}"><span class="cost">${cost}</span><div class="miniArt ${c.art||''}">${esc(c.mark)}</div><div class="cardText"><b>${esc(c.name)}</b><small>${esc(c.effect)}</small></div></button>`;
 }
 
@@ -197,9 +287,10 @@ function renderFight(){
       <span class="${battle.attack>18?'on':''}">正成ATK ${battle.attack}</span>
       <span class="${battle.navy?'on':''}">水軍連携 ${battle.navy?'ON':'OFF'}</span>
       <span class="${battle.used.egg?'on':''}">卵 ${battle.used.egg?'使用済':'READY'}</span>
+      ${battle.ryoLevel?`<span class="${battle.used.ryo?'on':''}">瞭 LV.${battle.ryoLevel}</span>`:''}
     </div>
     <div class="apBox"><span>行動力｜カード右上が消費値</span><b>${battle.ap} / 2</b></div>
-    <div class="battleCards">${CARD_DEFS.map(battleCard).join('')}</div>
+    <div class="battleCards">${(battle.ryoLevel?[...CARD_DEFS,ryoBattleCard(RYO_LEVELS[battle.ryoLevel])]:CARD_DEFS).map(battleCard).join('')}</div>
     <div class="log">${battle.log.map(x=>`<p>${esc(x)}</p>`).join('')}</div>
     <button id="endTurn" class="turnBtn">ターン終了 → 敵の反撃</button>
     <button id="quitBattle" class="secondary">デッキ画面へ戻る</button>
@@ -217,7 +308,7 @@ function renderResult(win,s){
       <p>${win?`TURN ${battle.turn}で六波羅追討軍を突破。<br>集めたカードの効果が勝敗に反映された。`:'体力が尽きた。カードを使う順番を変えて再挑戦。'}</p>
       ${win?`<div class="rewardCard"><small>ACHIEVEMENT / MVP-01</small><div class="rewardSeal">破</div><div><h2>六波羅追討軍突破</h2><small>VICTORY CARD｜保存済み</small></div></div>`:''}
     </div>
-    <button id="retry" class="primary">同じ5枚で再戦</button>
+    <button id="retry" class="primary">同じデッキで再戦</button>
     <button id="backDeck" class="secondary">デッキ・取得状況を見る</button>
     ${win?`<div class="saved">✓ 勝利 ${s.wins}回｜最短 ${s.bestTurns}ターン｜この端末に保存済み</div>`:''}
   </section>`;
@@ -227,6 +318,8 @@ function renderResult(win,s){
 
 document.getElementById('battleLauncher').addEventListener('click',openBattle);
 document.getElementById('closeBattle').addEventListener('click',closeBattle);
+document.getElementById('partnerLauncher').addEventListener('click',openPartner);
+document.getElementById('closePartner').addEventListener('click',closePartner);
 </script>
 </body>
 </html>
