@@ -1,0 +1,225 @@
+name: Admin PDF page 11 overlap fix
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/admin-pdf-page11-fix.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix-page-11:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install PDF tools and Japanese font
+        run: |
+          python -m pip install --upgrade pip
+          pip install pymupdf
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk
+
+      - name: Fix page 11 without an enclosing box
+        run: |
+          python - <<'PY'
+          import fitz
+          import os
+          import pathlib
+          import sys
+
+          pdf_path = pathlib.Path('docs/admin/SuG_QUEST_Admin_Final.pdf')
+          preview_path = pathlib.Path('docs/admin/SuG_QUEST_Admin_Final_page11.png')
+          report_path = pathlib.Path('docs/admin/SuG_QUEST_Admin_Page11_fix.txt')
+
+          if not pdf_path.exists():
+              raise SystemExit(f'Missing PDF: {pdf_path}')
+
+          font_candidates = [
+              '/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc',
+              '/usr/share/fonts/opentype/noto/NotoSansCJKjp-Regular.otf',
+              '/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc',
+          ]
+          font_file = next((p for p in font_candidates if os.path.exists(p)), None)
+          if not font_file:
+              raise SystemExit('Japanese Noto CJK font not found')
+
+          doc = fitz.open(pdf_path)
+          if len(doc) < 11:
+              raise SystemExit(f'PDF has only {len(doc)} pages')
+          page = doc[10]
+          page_rect = page.rect
+
+          title_hits = page.search_for('選んだ武将')
+          if not title_hits:
+              raise SystemExit('Could not find title: 選んだ武将')
+          title_rect = title_hits[0]
+
+          def avg_fill(fill):
+              if not fill:
+                  return 1.0
+              vals = list(fill[:3])
+              return sum(vals) / len(vals)
+
+          # Find the large dark filled panel containing the title.
+          candidates = []
+          drawings = page.get_drawings()
+          for d in drawings:
+              r = fitz.Rect(d.get('rect'))
+              fill = d.get('fill')
+              if not fill:
+                  continue
+              if avg_fill(fill) > 0.28:
+                  continue
+              if not (r.contains(title_rect) or r.intersects(title_rect)):
+                  continue
+              if r.width < title_rect.width * 1.7 or r.height < title_rect.height * 3.0:
+                  continue
+              candidates.append((r.get_area(), r))
+
+          if candidates:
+              candidates.sort(key=lambda x: x[0])
+              box = candidates[0][1]
+          else:
+              # Conservative fallback around the right-side panel.
+              box = fitz.Rect(
+                  max(page_rect.x0, title_rect.x0 - page_rect.width * 0.08),
+                  max(page_rect.y0, title_rect.y0 - page_rect.height * 0.035),
+                  page_rect.x1 - page_rect.width * 0.025,
+                  min(page_rect.y1 - page_rect.height * 0.08, title_rect.y1 + page_rect.height * 0.22),
+              )
+
+          # Preserve the light/gold text that belonged to the panel before covering it.
+          selected_lines = []
+          text_dict = page.get_text('dict', clip=box)
+          for block in text_dict.get('blocks', []):
+              if block.get('type') != 0:
+                  continue
+              for line in block.get('lines', []):
+                  parts = []
+                  for span in line.get('spans', []):
+                      c = int(span.get('color', 0))
+                      rgb = ((c >> 16) & 255, (c >> 8) & 255, c & 255)
+                      lum = sum(rgb) / 3
+                      txt = span.get('text', '').strip()
+                      if txt and lum >= 105:
+                          parts.append(txt)
+                  line_text = ''.join(parts).strip()
+                  if line_text:
+                      selected_lines.append(line_text)
+
+          # Deduplicate while keeping reading order.
+          dedup = []
+          for t in selected_lines:
+              if t not in dedup:
+                  dedup.append(t)
+          selected_lines = dedup
+          if not any('選んだ武将' in x for x in selected_lines):
+              selected_lines.insert(0, '選んだ武将')
+
+          body_lines = [x for x in selected_lines if '選んだ武将' not in x]
+          body_text = '\n'.join(body_lines).strip()
+          if not body_text:
+              body_text = '元気 / 疲労 / 回復状態\n行動力 / スタミナ / 成長\n今日のおすすめQUEST'
+
+          # Remove the visual panel by covering it with the page background.
+          # No new rectangle/frame is drawn around the replacement text.
+          page.draw_rect(box, color=None, fill=(1, 1, 1), overlay=True)
+
+          # Narrow right-column placement so it no longer intrudes into the central diagram.
+          right_margin = page_rect.width * 0.035
+          new_x1 = page_rect.x1 - right_margin
+          new_x0 = max(page_rect.x0 + page_rect.width * 0.735, box.x0 + box.width * 0.48)
+          if new_x1 - new_x0 < page_rect.width * 0.17:
+              new_x0 = page_rect.x0 + page_rect.width * 0.72
+
+          new_y0 = box.y0 + page_rect.height * 0.012
+          new_y1 = min(box.y1 - page_rect.height * 0.012, page_rect.y1 - page_rect.height * 0.10)
+          text_rect = fitz.Rect(new_x0, new_y0, new_x1, new_y1)
+
+          fontname = 'jpfix'
+          page.insert_font(fontname=fontname, fontfile=font_file)
+          gold = (0.72, 0.52, 0.16)
+          dark = (0.08, 0.10, 0.14)
+
+          heading_h = min(30, text_rect.height * 0.22)
+          heading_rect = fitz.Rect(text_rect.x0, text_rect.y0, text_rect.x1, text_rect.y0 + heading_h)
+          page.insert_textbox(
+              heading_rect,
+              '選んだ武将',
+              fontname=fontname,
+              fontsize=13,
+              color=gold,
+              align=fitz.TEXT_ALIGN_LEFT,
+              overlay=True,
+          )
+
+          body_rect = fitz.Rect(text_rect.x0, heading_rect.y1 + 3, text_rect.x1, text_rect.y1)
+          # Start compact; this is intentionally unboxed and kept at the far right.
+          page.insert_textbox(
+              body_rect,
+              body_text,
+              fontname=fontname,
+              fontsize=8.5,
+              lineheight=1.35,
+              color=dark,
+              align=fitz.TEXT_ALIGN_LEFT,
+              overlay=True,
+          )
+
+          temp_path = pdf_path.with_name(pdf_path.stem + '_tmp.pdf')
+          doc.save(temp_path, garbage=4, deflate=True, clean=True)
+          doc.close()
+          temp_path.replace(pdf_path)
+
+          # Reopen and render page 11 for visual verification.
+          check = fitz.open(pdf_path)
+          check_page = check[10]
+          pix = check_page.get_pixmap(matrix=fitz.Matrix(2, 2), alpha=False)
+          pix.save(preview_path)
+
+          # Reject the result if the old region is still predominantly black.
+          clip_pix = check_page.get_pixmap(matrix=fitz.Matrix(1, 1), clip=box, alpha=False)
+          samples = clip_pix.samples
+          n = clip_pix.n
+          dark_pixels = 0
+          total = clip_pix.width * clip_pix.height
+          for i in range(0, len(samples), n):
+              r, g, b = samples[i], samples[i + 1], samples[i + 2]
+              if (r + g + b) / 3 < 65:
+                  dark_pixels += 1
+          dark_ratio = dark_pixels / max(total, 1)
+          check.close()
+          if dark_ratio > 0.28:
+              raise SystemExit(f'Validation failed: old box area remains too dark ({dark_ratio:.3f})')
+
+          report_path.write_text(
+              '\n'.join([
+                  'Page 11 overlap fix completed.',
+                  f'old_box={tuple(round(v, 2) for v in box)}',
+                  f'new_text_rect={tuple(round(v, 2) for v in text_rect)}',
+                  f'old_box_dark_ratio_after={dark_ratio:.4f}',
+                  'replacement_style=unboxed text at far right',
+              ]) + '\n',
+              encoding='utf-8',
+          )
+          print(report_path.read_text(encoding='utf-8'))
+          PY
+
+      - name: Commit corrected PDF and page 11 preview
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/admin/SuG_QUEST_Admin_Final.pdf \
+                  docs/admin/SuG_QUEST_Admin_Final_page11.png \
+                  docs/admin/SuG_QUEST_Admin_Page11_fix.txt
+          git commit -m 'fix: remove overlapping box from admin PDF page 11'
+          git push
