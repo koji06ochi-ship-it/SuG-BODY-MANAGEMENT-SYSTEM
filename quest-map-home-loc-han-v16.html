@@ -1,0 +1,50 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><meta http-equiv="Cache-Control" content="no-store,no-cache,must-revalidate,max-age=0"><title>S.u.G QUEST｜CLEAN MAP V16</title><style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#06100b}iframe{border:0;width:100%;height:100%;display:block}</style></head><body><iframe id="wrap" src="./quest-map-home-loc-han-v15.html?v=clean-base-v16" allow="geolocation"></iframe><script>
+const wrap=document.getElementById('wrap');
+function patchInner(){
+  try{
+    const wdoc=wrap.contentDocument;
+    const inner=wdoc&&wdoc.getElementById('app');
+    if(!inner)return setTimeout(patchInner,250);
+    const apply=()=>{
+      try{
+        const d=inner.contentDocument;if(!d)return;
+        const s=d.createElement('script');
+        s.textContent=`
+          try{
+            // OSM標準タイルを外し、店名/ホテル/歯科/飲食など第三者POIが出ない背景へ変更
+            map.eachLayer(function(layer){ if(layer instanceof L.TileLayer) map.removeLayer(layer); });
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png',{
+              maxZoom:20,
+              subdomains:'abcd',
+              attribution:'© OpenStreetMap © CARTO'
+            }).addTo(map).bringToBack();
+
+            // QUEST POINTは文字1字ではなく直感アイコンへ
+            CATEGORIES.temple[2]='⛩️';
+            CATEGORIES.shop[2]='🏪';
+            CATEGORIES.water[2]='💧';
+            CATEGORIES.sug[2]='S';
+            CATEGORIES.aed[2]='➕';
+            CATEGORIES.rest[2]='♨️';
+            CATEGORIES.road[2]='🏡';
+            CATEGORIES.river[2]='🚤';
+            CATEGORIES.manhole[2]='🕳️';
+            CATEGORIES.station[2]='🚃';
+            CATEGORIES.bus[2]='🚌';
+            CATEGORIES.taxi[2]='🚕';
+            CATEGORIES.history[2]='🏯';
+            POINTS.forEach(function(p){ if(p.cat==='station')p.mark='🚃'; if(p.cat==='manhole')p.mark='🕳️'; if(p.cat==='shop')p.mark='🏪'; if(p.cat==='temple')p.mark='⛩️'; if(p.cat==='water')p.mark='💧'; if(p.cat==='rest')p.mark='♨️'; if(p.cat==='bus')p.mark='🚌'; if(p.cat==='taxi')p.mark='🚕'; if(p.cat==='history')p.mark='🏯'; });
+            renderFilters();renderMarkers();
+          }catch(e){console.error('V16 patch',e)}
+        `;
+        d.body.appendChild(s);
+        const st=d.createElement('style');
+        st.textContent=`.marker{font-family:-apple-system,BlinkMacSystemFont,"Apple Color Emoji","Segoe UI Emoji",sans-serif;font-size:19px}.leaflet-tile-pane{filter:saturate(.78) sepia(.08) brightness(1.03)};`;
+        d.head.appendChild(st);
+      }catch(e){setTimeout(apply,250)}
+    };
+    if(inner.contentDocument&&inner.contentDocument.readyState==='complete')apply();else inner.addEventListener('load',apply,{once:true});
+  }catch(e){setTimeout(patchInner,250)}
+}
+wrap.addEventListener('load',patchInner);
+</script></body></html>
