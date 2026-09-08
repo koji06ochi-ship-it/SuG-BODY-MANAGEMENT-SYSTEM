@@ -6,28 +6,6 @@
   },
   "cards": [
     {
-      "id": "S01-SHP-0101",
-      "type": "SHOP",
-      "name": "天満つくし D-Wish",
-      "back": {
-        "recommended": [
-          "カジュアルそば打ち体験（公開料金 3,900円〜）",
-          "自分で打ったそばを完成後その場で茹で、打ち立てを味わう体験"
-        ],
-        "staffPick": "店主・大槻泰三さん。旧『天満つくし』で石川肇氏からそば打ちを学び、師匠の遺志（Dying Wish）を継いで同じ場所にD-Wishを開業。",
-        "staff": "大槻泰三さん（店主）",
-        "story": "2023年7月オープン。『そば打ちをカジュアルに楽しむ』『おいしい思い出づくり』を掲げ、初心者でも完成できるレッスンを案内。公式HPでは来店者の9割が初心者と紹介されている。",
-        "access": "JR天満駅から徒歩約3分（公式アクセス表記）／完全予約制",
-        "quest": "店舗GPS到達＋そば打ち体験参加でSHOP CARD GET（S.u.G QUEST側の達成条件）",
-        "sourceLabel": "天満つくしD-Wish 公式HP・公式LP",
-        "sources": [
-          "https://temmatsukushi.com/",
-          "https://temmatsukushi.com/about-tsukushi/",
-          "https://temmatsukushi-lp.com/"
-        ]
-      }
-    },
-    {
       "id": "S01-SHP-0102",
       "type": "SHOP",
       "name": "焼肉ホルモン瞭 天満店",
