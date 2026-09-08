@@ -17,12 +17,10 @@ targets:
         MARKETING_VERSION: '1.0.0'
         CURRENT_PROJECT_VERSION: '1'
         CODE_SIGN_ENTITLEMENTS: SuGMember/SuGMember.entitlements
-        INFOPLIST_KEY_CFBundleDisplayName: S.u.G
-        INFOPLIST_KEY_NSHealthShareUsageDescription: S.u.Gで歩数・距離・活動エネルギー・運動時間・ワークアウト・睡眠・心拍・安静時心拍・HRV・体重・体脂肪率・除脂肪体重・VO2max・呼吸数・血中酸素を取得し、回復・身体負荷・コンディション管理と当日の運動判定に使用します。
-        INFOPLIST_KEY_NSHealthUpdateUsageDescription: S.u.Gはヘルスケアへデータを書き込みません。
-        INFOPLIST_KEY_NSCameraUsageDescription: S.u.Gで身体評価・食事記録・トレーニング解析の撮影に使用します。
-        INFOPLIST_KEY_NSPhotoLibraryUsageDescription: S.u.Gで身体写真・食事写真・トレーニング動画を選択するために使用します。
-        INFOPLIST_KEY_NSLocationWhenInUseUsageDescription: S.u.G BODY Liteの見守りモードとWALK QUESTで、本人が許可したときだけ現在地・最終活動地点を記録するために使用します。
-        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_FILE: SuGMember/Info.plist
+        GENERATE_INFOPLIST_FILE: NO
+        TARGETED_DEVICE_FAMILY: '1'
+        SUPPORTS_MACCATALYST: NO
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
     entitlements:
       path: SuGMember/SuGMember.entitlements
