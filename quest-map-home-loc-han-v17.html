@@ -1,0 +1,64 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><meta http-equiv="Cache-Control" content="no-store,no-cache,must-revalidate,max-age=0"><title>S.u.G QUEST｜SELECTED POINTS V17</title><style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#06100b}iframe{border:0;width:100%;height:100%;display:block}</style></head><body><iframe id="wrap" src="./quest-map-home-loc-han-v16.html?v=selected-v17" allow="geolocation"></iframe><script>
+const wrap=document.getElementById('wrap');
+function waitInner(){
+  try{
+    const v16=wrap.contentDocument;
+    const v15=v16&&v16.getElementById('wrap');
+    const v15d=v15&&v15.contentDocument;
+    const v14=v15d&&v15d.getElementById('recon');
+    const v14d=v14&&v14.contentDocument;
+    const base=v14d&&v14d.getElementById('app');
+    if(!base||!base.contentDocument)return setTimeout(waitInner,250);
+    const apply=()=>{
+      const d=base.contentDocument;if(!d)return setTimeout(apply,200);
+      if(d.getElementById('v17patch'))return;
+      const s=d.createElement('script');s.id='v17patch';s.textContent=`
+      try{
+        // 一般地図の店は出さず、S.u.G QUESTが選んだ地点だけを表示する。
+        const selectedShops=[
+          {id:'partner-ryo-tenma',cat:'shop',name:'焼肉ホルモン瞭 天満店',lat:34.704843,lng:135.511216,mark:'🥩',featured:true,partner:true,get:'焼肉ホルモン瞭 PARTNER CARD',rule:'GPS到達＋歩行判定',radius:70,shop:'S.u.G QUEST提携店｜大阪市北区天神橋4-8-23'},
+          {id:'candidate-seiyosakan',cat:'shop',name:'西洋茶館',lat:34.70315804,lng:135.51161531,mark:'🫖',featured:true,candidate:true,get:'TEA DISCOVERY候補',rule:'GPS到達＋歩行判定',radius:70,shop:'ロケハン選定候補｜紅茶・ケーキ｜大阪市北区天神橋4-6-14'},
+          {id:'candidate-orangefields-bread',cat:'shop',name:'Orange Fields Bread Factory',lat:34.7034899,lng:135.5112592,mark:'🥐',featured:true,candidate:true,get:'BAKERY DISCOVERY候補',rule:'GPS到達＋歩行判定',radius:70,shop:'ロケハン選定候補｜パン・ベーカリー｜大阪市北区天神橋4-7-29'}
+        ];
+        selectedShops.forEach(p=>{if(!POINTS.some(x=>x.id===p.id))POINTS.push(p)});
+
+        // 安全・公共交通は意味が一目で分かるアイコンに固定。
+        CATEGORIES.police=['POLICE / KOBAN','🚓 警察・交番','🚓'];
+        CATEGORIES.emergency=['EMERGENCY','🚑 救急','🚑'];
+        CATEGORIES.aed[1]='➕ AED';CATEGORIES.aed[2]='➕';
+        CATEGORIES.bus[1]='🚌 バス';CATEGORIES.bus[2]='🚌';
+        CATEGORIES.station[1]='🚃 電車';CATEGORIES.station[2]='🚃';
+        CATEGORIES.taxi[1]='🚕 タクシー';CATEGORIES.taxi[2]='🚕';
+        CATEGORIES.shop[1]='選定店舗';CATEGORIES.shop[2]='🏪';
+        CATEGORIES.manhole[2]='🕳️';
+
+        // 仮座標PILOTは地図に出さない。正式地点・選定地点だけ表示。
+        markerIcon=function(p){
+          const done=state.owned.includes(p.id),icon=p.featured?p.mark:CATEGORIES[p.cat][2];
+          const extra=p.partner?' partnerPin':p.candidate?' candidatePin':'';
+          return L.divIcon({className:'',html:'<div class="marker m-'+p.cat+(done?' done':'')+extra+'">'+icon+'</div>',iconSize:[44,44],iconAnchor:[22,22]});
+        };
+        renderMarkers=function(){
+          markers.forEach(m=>map.removeLayer(m));markers.clear();
+          POINTS.filter(p=>!String(p.name).includes('PILOT')&&!String(p.id).startsWith('temma-manhole-')).filter(p=>activeCat==='all'||p.cat===activeCat).forEach(p=>{
+            const m=L.marker([p.lat,p.lng],{icon:markerIcon(p),zIndexOffset:p.featured?700:0}).addTo(map).on('click',()=>openPoint(p));markers.set(p.id,m);
+          });
+        };
+        renderFilters();renderMarkers();
+        [...document.querySelectorAll('.chip')].forEach(b=>{if(/警察|交番|救急|AED|バス|電車|タクシー/.test(b.textContent))b.classList.add('criticalChip')});
+      }catch(e){console.error('V17 patch',e)}
+      `;d.body.appendChild(s);
+      const st=d.createElement('style');st.textContent=`
+        .marker{width:44px!important;height:44px!important;border-radius:14px!important;font-family:-apple-system,BlinkMacSystemFont,"Apple Color Emoji","Segoe UI Emoji",sans-serif!important;font-size:21px!important}
+        .partnerPin{width:52px!important;height:52px!important;border-radius:17px!important;border:3px solid #ffe09a!important;background:#511d12!important;box-shadow:0 0 0 4px #d7a73b55,0 8px 20px #0009!important;font-size:25px!important}
+        .candidatePin{border:2px solid #e5c36f!important;background:#273027!important;box-shadow:0 7px 18px #0008!important}
+        .m-station,.m-bus,.m-taxi,.m-aed,.m-police,.m-emergency{width:50px!important;height:50px!important;border-radius:16px!important;border:3px solid #fff!important;box-shadow:0 0 0 4px #0b1c19aa,0 8px 20px #0009!important;font-size:25px!important}
+        .m-aed,.m-emergency{background:#d94047!important}.m-police{background:#174b7a!important}.m-station{background:#4d50a3!important}.m-bus{background:#24765e!important}.m-taxi{background:#c88a19!important}
+        .criticalChip{border:2px solid #f2d280!important;color:#fff6d7!important;background:#13201a!important;font-size:9px!important}
+      `;d.head.appendChild(st);
+    };
+    if(base.contentDocument.readyState==='complete')apply();else base.addEventListener('load',apply,{once:true});
+  }catch(e){setTimeout(waitInner,250)}
+}
+wrap.addEventListener('load',waitInner);setTimeout(waitInner,500);
+</script></body></html>
