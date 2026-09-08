@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#03050a">
 <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
 <meta http-equiv="Pragma" content="no-cache">
-<title>S.u.G QUEST｜BATTLE MVP V20</title>
+<title>S.u.G QUEST｜GAME LOOP V22</title>
 <style>
 :root{
   --bg:#03050a;--panel:#080b13;--panel2:#0d1019;--line:#6d5228;
@@ -20,6 +20,8 @@ html,body{margin:0;width:100%;height:100%;background:#000;color:var(--ink);font-
 .battleLauncher b{color:#82eda3}
 .partnerLauncher{position:fixed;z-index:5000;right:12px;top:calc(57px + env(safe-area-inset-top));border:1px solid #cb7650;border-radius:999px;padding:9px 13px;background:linear-gradient(145deg,#32120b,#090504);color:#ffd0ae;font-size:9px;font-weight:1000;letter-spacing:.06em;box-shadow:0 8px 24px #000c,0 0 20px #c74c2928}
 .partnerLauncher b{color:#ff9474}
+.collectionLauncher{position:fixed;z-index:5000;right:12px;top:calc(99px + env(safe-area-inset-top));border:1px solid #8070c3;border-radius:999px;padding:9px 13px;background:linear-gradient(145deg,#17112d,#07060c);color:#dcd3ff;font-size:9px;font-weight:1000;letter-spacing:.06em;box-shadow:0 8px 24px #000c,0 0 20px #8167e228}
+.collectionLauncher b{color:#a996ff}
 .battleLayer{position:fixed;z-index:6000;inset:0;display:none;overflow:auto;background:radial-gradient(circle at 50% -5%,#15233b 0,#080a11 34%,#020306 76%);padding:calc(10px + env(safe-area-inset-top)) 12px calc(28px + env(safe-area-inset-bottom))}
 .battleLayer.on{display:block}
 .shell{width:min(440px,100%);margin:0 auto}
@@ -54,6 +56,11 @@ html,body{margin:0;width:100%;height:100%;background:#000;color:var(--ink);font-
 .toast{position:fixed;z-index:7000;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));width:min(390px,90vw);transform:translate(-50%,25px);padding:11px 13px;border:1px solid #5b8c68;border-radius:12px;background:#071109f3;color:#bdf8c9;font-size:9px;font-weight:900;opacity:0;pointer-events:none;transition:.22s}.toast.on{opacity:1;transform:translate(-50%,0)}
 .partnerHero{border-color:#8a472f;background:radial-gradient(circle at 85% 10%,#572016,#160907 38%,#07080d 80%)}
 .partnerStatus{display:grid;grid-template-columns:112px 1fr;gap:12px;margin-top:13px;padding:12px;border:1px solid #75412f;border-radius:16px;background:#0b0707}.ryoCard{height:156px;border:1px solid #bf704c;border-radius:14px;background:radial-gradient(circle at 50% 28%,#9a3e26,#280b08 45%,#080608 78%);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:inset 0 0 30px #ff7a3422}.ryoCard strong{color:#ffe0bd;font:700 50px Georgia,"Yu Mincho",serif}.ryoCard span{margin-top:8px;color:#ffb083;font-size:10px;font-weight:1000}.ryoInfo h2{margin:4px 0;color:#ffe3c5;font:700 22px Georgia,"Yu Mincho",serif}.ryoInfo p{margin:0;color:#b9a59b;font-size:8px;line-height:1.6}.xpTrack{height:8px;margin-top:10px;border-radius:999px;background:#25100c;overflow:hidden}.xpTrack i{display:block;height:100%;background:linear-gradient(90deg,#d44f2c,#ffd07d);transition:width .3s}.xpText{margin-top:5px;color:#df9b72;font:900 8px monospace}.levelEffects{margin-top:12px;display:grid;grid-template-columns:repeat(4,1fr);gap:5px}.levelEffects div{padding:7px 4px;border:1px solid #493026;border-radius:9px;background:#090707;text-align:center;color:#8f7d74;font-size:6px;line-height:1.45}.levelEffects div.on{border-color:#c16d48;background:#1b0b08;color:#ffd0ad}.levelEffects b{display:block;font-size:8px}.menuGrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.menuCard{position:relative;min-height:112px;padding:12px;border:1px solid #6f3e2d;border-radius:13px;background:linear-gradient(145deg,#1c0c08,#090709);color:#f5d5bd;text-align:left}.menuCard:disabled{opacity:.55}.menuMark{display:grid;place-items:center;width:42px;height:42px;border:1px solid #9b583d;border-radius:11px;background:#2b0d08;color:#ffd1ad;font:700 20px Georgia,"Yu Mincho",serif}.menuCard b{display:block;margin-top:8px;font-size:10px}.menuCard small{display:block;margin-top:3px;color:#a88e81;font-size:7px;line-height:1.4}.menuCard em{position:absolute;right:8px;top:8px;color:#89e3a0;font-size:7px;font-style:normal;font-weight:1000}.visitRule{margin-top:12px;padding:11px;border:1px dashed #6b4433;border-radius:12px;color:#b39b8d;background:#0b0808;font-size:8px;line-height:1.65}.visitRule b{color:#ffd2ad}
+.collectionHero{border-color:#584783;background:radial-gradient(circle at 88% 8%,#2c1c5b,#0c0a18 40%,#07080d 80%)}
+.collectionSummary{display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:center;margin-top:12px;padding:12px;border:1px solid #4f466c;border-radius:15px;background:#080711}.collectionCount{width:82px;height:82px;border:7px solid #332b4d;border-top-color:#a890ff;border-right-color:#a890ff;border-radius:50%;display:grid;place-items:center;color:#ebddff;font:900 17px monospace}.collectionSummary h2{margin:0;color:#ece0ff;font:700 19px Georgia,"Yu Mincho",serif}.collectionSummary p{margin:5px 0 0;color:#a29aaf;font-size:8px;line-height:1.55}
+.nextTarget{margin-top:10px;padding:11px;border:1px solid #675430;border-radius:12px;background:linear-gradient(135deg,#171006,#0a0810);color:#c6baa0}.nextTarget b{display:block;margin-top:4px;color:#ffe09a;font-size:12px}.nextTarget span{font-size:7px;color:#9b8f79}
+.collectionGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.collectionCard{position:relative;min-width:0;padding:6px;border:1px solid #514665;border-radius:12px;background:linear-gradient(155deg,#11101c,#07080d);color:#fff;text-align:left}.collectionCard.locked{border-color:#292933;background:#08090c}.collectionArt{height:96px;display:grid;place-items:center;border-radius:9px;background:radial-gradient(circle,var(--collection-glow,#544181),#08090e 72%);color:#f0dcff;font:700 31px Georgia,"Yu Mincho",serif}.collectionCard.locked .collectionArt{background:radial-gradient(circle,#24242b,#090a0d 72%);color:#4c4b53;filter:grayscale(1)}.collectionNo{position:absolute;left:10px;top:10px;color:#cec3df;font:900 6px monospace}.rarity{position:absolute;right:10px;top:10px;padding:3px 5px;border:1px solid #8872bf;border-radius:999px;background:#0b0914db;color:#cdbdff;font-size:6px;font-weight:1000}.collectionCard h3{overflow:hidden;margin:7px 2px 0;color:#eadff5;font-size:8px;line-height:1.25;white-space:nowrap;text-overflow:ellipsis}.collectionCard p{margin:3px 2px 1px;color:#8e8798;font-size:6px}.collectionCard.locked h3{color:#5f5d66}
+.collectionDetail{margin-top:8px;padding:17px;border:1px solid #6c588f;border-radius:18px;background:radial-gradient(circle at 50% 0,#251a42,#0a0911 50%,#05060a)}.detailCard{width:min(260px,78vw);aspect-ratio:3/4.45;margin:0 auto;padding:12px;border:2px solid #9f83dd;border-radius:18px;background:radial-gradient(circle at 50% 18%,var(--collection-glow,#594080),#151023 43%,#06070a 78%);box-shadow:0 18px 46px #000c}.detailCard .collectionArt{height:64%;font-size:74px;background:radial-gradient(circle,#ffffff12,#0005)}.detailCard h2{margin:14px 0 4px;color:#f2e6ff;font:700 21px Georgia,"Yu Mincho",serif}.detailMeta{color:#a79db6;font-size:8px;line-height:1.65}.detailEffect{margin-top:12px;padding:10px;border:1px solid #514168;border-radius:10px;background:#08070d;color:#e2cdf7;font-size:9px;line-height:1.6}
 @media(max-width:360px){.deckArt{height:70px}.portrait{height:130px}.battleCard{min-height:119px}.battleCard .miniArt{height:58px}.heroIntro h1{font-size:26px}.partnerStatus{grid-template-columns:96px 1fr}.ryoCard{height:142px}}
 </style>
 </head>
@@ -61,6 +68,7 @@ html,body{margin:0;width:100%;height:100%;background:#000;color:var(--ink);font-
 <iframe id="app" src="./quest.html?v=battle-mvp-v20-iphone-direct-20260908" allow="geolocation"></iframe>
 <button id="battleLauncher" class="battleLauncher">⚔ BATTLE <b>MVP</b></button>
 <button id="partnerLauncher" class="partnerLauncher">🥩 瞭 <b>PARTNER</b></button>
+<button id="collectionLauncher" class="collectionLauncher">◇ COLLECTION <b>24</b></button>
 <section id="battleLayer" class="battleLayer" aria-hidden="true">
   <div class="shell">
     <header class="topbar">
@@ -79,6 +87,16 @@ html,body{margin:0;width:100%;height:100%;background:#000;color:var(--ink);font-
       <span></span>
     </header>
     <main id="partnerScreen"></main>
+  </div>
+</section>
+<section id="collectionLayer" class="battleLayer" aria-hidden="true">
+  <div class="shell">
+    <header class="topbar">
+      <button id="closeCollection" class="backBtn" aria-label="閉じる">‹</button>
+      <div class="brand"><b>COLLECTION 24</b><span>SEASON 01 / TRANSPORT</span></div>
+      <span></span>
+    </header>
+    <main id="collectionScreen"></main>
   </div>
 </section>
 <div id="toast" class="toast"></div>
@@ -106,10 +124,38 @@ const RYO_LEVELS=[
   {level:3,heal:24,attack:4,label:'常連'},
   {level:4,heal:30,attack:8,label:'盟友'}
 ];
+const COLLECTION_24=[
+  {id:'masashige',no:'S01-01',name:'楠木正成',type:'BATTLE 武将',area:'南河内',rarity:'SR',mark:'楠',glow:'#6f3d28',effect:'六波羅追討軍へ攻撃',source:'基本バトルデッキ',unlock:'base'},
+  {id:'egg',no:'S01-02',name:'河南の卵',type:'SUPPORT / FOOD',area:'河南町',rarity:'R',mark:'卵',glow:'#806a35',effect:'体力を回復',source:'河南町の補給QUEST',unlock:'base'},
+  {id:'kintetsu',no:'S01-03',name:'近鉄',type:'SUPPORT / TRANSPORT',area:'南河内',rarity:'SR',mark:'鉄',glow:'#624785',effect:'移動コストを軽減',source:'交通QUEST',unlock:'base'},
+  {id:'hakkenya',no:'S01-04',name:'八軒家浜',type:'駅守将 / RIVER GATE',area:'大阪水辺',rarity:'SR',mark:'川',glow:'#2d647d',effect:'水軍援護を解放',source:'八軒家浜GATE QUEST',unlock:'base'},
+  {id:'kunishige',no:'S01-05',name:'刀剣 國重',type:'SUPPORT / EQUIPMENT',area:'天満',rarity:'SR',mark:'刀',glow:'#72542e',effect:'楠木正成の攻撃を強化',source:'天満歴史QUEST',unlock:'base'},
+  {id:'ryo',no:'S01-06',name:'焼肉ホルモン瞭',type:'PARTNER',area:'天満',rarity:'R',mark:'瞭',glow:'#9a3e26',effect:'再来店で回復・攻撃効果が成長',source:'瞭PARTNER QUEST',unlock:'ryo'},
+  {id:'ryo-yakiniku',no:'S01-07',name:'焼肉補給',type:'MENU CARD',area:'天満・瞭',rarity:'N',mark:'肉',glow:'#a1462b',effect:'瞭カードへ経験値＋1',source:'対象メニュー／別来店',unlock:'ryo:yakiniku'},
+  {id:'ryo-hormone',no:'S01-08',name:'ホルモン士気',type:'MENU CARD',area:'天満・瞭',rarity:'N',mark:'炎',glow:'#a64228',effect:'瞭カードへ経験値＋1',source:'対象メニュー／別来店',unlock:'ryo:hormone'},
+  {id:'ryo-protein',no:'S01-09',name:'たんぱく兵糧',type:'MENU CARD',area:'天満・瞭',rarity:'N',mark:'力',glow:'#8e3529',effect:'瞭カードへ経験値＋1',source:'対象メニュー／別来店',unlock:'ryo:protein'},
+  {id:'ryo-recommend',no:'S01-10',name:'店主おすすめ',type:'MENU CARD',area:'天満・瞭',rarity:'R',mark:'推',glow:'#a55428',effect:'瞭カードへ経験値＋1',source:'対象メニュー／別来店',unlock:'ryo:recommend'},
+  {id:'rokugahara',no:'S01-11',name:'六波羅追討軍突破',type:'VICTORY CARD',area:'BATTLE',rarity:'UR',mark:'破',glow:'#733229',effect:'六波羅戦の勝利証明',source:'六波羅追討軍を撃破',unlock:'victory'},
+  {id:'station-kanan',no:'S01-12',name:'道の駅かなん 駅守将',type:'駅守将',area:'河南町',rarity:'SR',mark:'駅',glow:'#6c6330',effect:'河南の補給カードを強化',source:'現地GPS／今後解放',unlock:'future'},
+  {id:'station-taishi',no:'S01-13',name:'近つ飛鳥 駅守将',type:'駅守将',area:'太子町',rarity:'SR',mark:'葡',glow:'#65406d',effect:'街道・知略カードを強化',source:'現地GPS／今後解放',unlock:'future'},
+  {id:'station-chihaya',no:'S01-14',name:'ちはやあかさか 駅守将',type:'駅守将',area:'千早赤阪村',rarity:'SR',mark:'山',glow:'#315f46',effect:'山岳・防御カードを強化',source:'現地GPS／今後解放',unlock:'future'},
+  {id:'strawberry',no:'S01-15',name:'河南のいちご',type:'SUPPORT / FOOD',area:'河南町',rarity:'R',mark:'苺',glow:'#8b3548',effect:'士気上昇',source:'農産物QUEST／今後解放',unlock:'future'},
+  {id:'grape',no:'S01-16',name:'太子のぶどう',type:'SUPPORT / FOOD',area:'太子町',rarity:'R',mark:'葡',glow:'#583b78',effect:'知略バフ',source:'農産物QUEST／今後解放',unlock:'future'},
+  {id:'tofu',no:'S01-17',name:'千早の豆腐',type:'SUPPORT / FOOD',area:'千早赤阪村',rarity:'R',mark:'豆',glow:'#6b6a58',effect:'持久力回復',source:'地域店舗QUEST／今後解放',unlock:'future'},
+  {id:'water',no:'S01-18',name:'千早の清水',type:'SUPPORT / WATER',area:'千早赤阪村',rarity:'R',mark:'水',glow:'#326278',effect:'回復・浄化',source:'水QUEST／今後解放',unlock:'future'},
+  {id:'manhole',no:'S01-19',name:'天満マンホール',type:'INFRA CARD',area:'天満',rarity:'SR',mark:'蓋',glow:'#4d545d',effect:'都市の水運を接続',source:'INFRA QUEST／今後解放',unlock:'future'},
+  {id:'aqualiner',no:'S01-20',name:'アクアライナー',type:'TRANSPORT CARD',area:'大阪水辺',rarity:'SR',mark:'船',glow:'#286078',effect:'航路・移動支援',source:'水上交通QUEST／今後解放',unlock:'future'},
+  {id:'sanjikkokubune',no:'S01-21',name:'三十石船',type:'TRANSPORT CARD',area:'大阪水辺',rarity:'SR',mark:'舟',glow:'#655338',effect:'水運支援',source:'舟運QUEST／今後解放',unlock:'future'},
+  {id:'yatarasu',no:'S01-22',name:'熊野八咫烏',type:'GUIDE CARD',area:'熊野・水運',rarity:'UR',mark:'烏',glow:'#3c354d',effect:'巡礼と海路を導く',source:'熊野QUEST／今後解放',unlock:'future'},
+  {id:'murakami',no:'S01-23',name:'村上水軍',type:'BATTLE / NAVY',area:'瀬戸内',rarity:'UR',mark:'海',glow:'#244a67',effect:'水軍戦力を強化',source:'水軍QUEST／史料確認後',unlock:'future'},
+  {id:'wife-question',no:'S01-24',name:'楠木正成の妻？？？',type:'RESEARCH QUEST',area:'河内・大和・伊予',rarity:'QUEST',mark:'？',glow:'#6b5734',effect:'誰で、何を運んだのか',source:'△参加型研究QUEST',unlock:'future'}
+];
 const layer=document.getElementById('battleLayer');
 const partnerLayer=document.getElementById('partnerLayer');
+const collectionLayer=document.getElementById('collectionLayer');
 const screen=document.getElementById('screen');
 const partnerScreen=document.getElementById('partnerScreen');
+const collectionScreen=document.getElementById('collectionScreen');
 const toastBox=document.getElementById('toast');
 let battle=null,toastTimer=null;
 
@@ -128,6 +174,47 @@ function openBattle(){layer.classList.add('on');layer.setAttribute('aria-hidden'
 function closeBattle(){layer.classList.remove('on');layer.setAttribute('aria-hidden','true')}
 function openPartner(){partnerLayer.classList.add('on');partnerLayer.setAttribute('aria-hidden','false');renderPartner()}
 function closePartner(){partnerLayer.classList.remove('on');partnerLayer.setAttribute('aria-hidden','true')}
+function openCollection(){collectionLayer.classList.add('on');collectionLayer.setAttribute('aria-hidden','false');renderCollection()}
+function closeCollection(){collectionLayer.classList.remove('on');collectionLayer.setAttribute('aria-hidden','true')}
+
+function collectionOwned(card,b=loadStore(),r=loadRyo()){
+  if(card.unlock==='base')return !!b.unlocked;
+  if(card.unlock==='ryo')return r.claimed.length>0;
+  if(card.unlock.startsWith('ryo:'))return r.claimed.includes(card.unlock.split(':')[1]);
+  if(card.unlock==='victory')return !!b.victoryCard;
+  return false;
+}
+function collectionState(){const b=loadStore(),r=loadRyo();const owned=COLLECTION_24.filter(c=>collectionOwned(c,b,r));return {battle:b,ryo:r,owned,count:owned.length}}
+function collectionNext(state){
+  if(!state.battle.unlocked)return {title:'基本5枚を解放',sub:'BATTLE MVPで実験用デッキを取得',action:'battle'};
+  if(!state.ryo.claimed.length)return {title:'焼肉ホルモン瞭',sub:'最初の対象メニューカードを取得',action:'ryo'};
+  if(state.ryo.claimed.length<4){const next=RYO_MENUS.find(m=>!state.ryo.claimed.includes(m.id));return {title:next.name,sub:`瞭の別来店メニュー｜あと${4-state.ryo.claimed.length}枚でLV.4`,action:'ryo'};}
+  if(!state.battle.victoryCard)return {title:'六波羅追討軍突破',sub:'集めたデッキでBOSSを撃破',action:'battle'};
+  return {title:'道の駅かなん 駅守将',sub:'次期GPS QUEST｜COMING NEXT',action:null};
+}
+function collectionRarity(card){if(card.id==='ryo'){const lv=ryoProfile().level;return lv>=4?'UR':lv>=3?'SR':lv>=1?'R':'N'}return card.rarity}
+function collectionCardHtml(card,owned){return `<button class="collectionCard ${owned?'':'locked'}" data-collection="${card.id}" style="--collection-glow:${card.glow}"><span class="collectionNo">${card.no}</span><span class="rarity">${owned?collectionRarity(card):'LOCK'}</span><div class="collectionArt">${owned?esc(card.mark):'？'}</div><h3>${owned?esc(card.name):'未発見カード'}</h3><p>${owned?esc(card.area):esc(card.type)}</p></button>`}
+
+function renderCollection(){
+  const state=collectionState(),next=collectionNext(state),pct=Math.round(state.count/24*100);
+  collectionScreen.innerHTML=`<section class="screen">
+    <div class="heroIntro collectionHero"><div class="eyebrow">SEASON 01 / COLLECTION</div><h1>まだ見ぬ一枚を、<br>運びに行く。</h1><p>南河内から天満、川、海へ。取得したカードだけが姿を現し、店・交通・歴史・水軍が一つのデッキにつながる。</p></div>
+    <div class="collectionSummary"><div class="collectionCount">${state.count}/24</div><div><h2>${pct}% COMPLETE</h2><p>取得済み ${state.count}枚｜未発見 ${24-state.count}枚<br>カード効果・来店レベル・勝利報酬を自動反映。</p></div></div>
+    <div class="nextTarget"><span>NEXT TARGET</span><b>${esc(next.title)}</b><span>${esc(next.sub)}</span>${next.action?`<button id="nextTargetAction" class="secondary">このQUESTへ</button>`:''}</div>
+    <div class="deckHead"><h2>CARD INDEX｜24</h2><span>取得カードはタップで詳細</span></div>
+    <div class="collectionGrid">${COLLECTION_24.map(c=>collectionCardHtml(c,collectionOwned(c,state.battle,state.ryo))).join('')}</div>
+    <p class="note">未取得カードは実装予定を含むシルエット表示。歴史カードは ●史料確認／○伝承・系図／△仮説・研究課題 の確認後に正式解放します。家紋は未確定のため使用していません。</p>
+  </section>`;
+  collectionScreen.querySelectorAll('[data-collection]').forEach(b=>b.addEventListener('click',()=>openCollectionCard(b.dataset.collection)));
+  document.getElementById('nextTargetAction')?.addEventListener('click',()=>{closeCollection();next.action==='ryo'?openPartner():openBattle()});
+}
+function openCollectionCard(id){
+  const card=COLLECTION_24.find(c=>c.id===id),state=collectionState(),owned=collectionOwned(card,state.battle,state.ryo);
+  if(!owned){toast(`${card.no}｜未発見｜${card.source}`);return}
+  const rarity=collectionRarity(card),effect=card.id==='ryo'?`現在 LV.${ryoProfile().level}｜HP＋${ryoProfile().heal}${ryoProfile().attack?`・ATK＋${ryoProfile().attack}`:''}`:card.effect;
+  collectionScreen.innerHTML=`<section class="screen"><button id="backCollection" class="secondary">‹ COLLECTION 24へ戻る</button><div class="collectionDetail"><div class="detailCard" style="--collection-glow:${card.glow}"><div class="collectionArt">${esc(card.mark)}</div><h2>${esc(card.name)}</h2><div class="detailMeta">${card.no}｜${esc(rarity)}<br>${esc(card.type)}｜${esc(card.area)}</div><div class="detailEffect"><b>EFFECT</b><br>${esc(effect)}<br><br><b>GET</b><br>${esc(card.source)}</div></div></div></section>`;
+  document.getElementById('backCollection').addEventListener('click',renderCollection);
+}
 
 function deckCard(c,unlocked){return `<div class="deckCard ${unlocked?'':'locked'}"><div class="deckArt ${c.art||''}" style="--card-glow:${c.glow}">${esc(c.mark)}</div><div class="deckMeta"><b>${esc(c.name)}</b><span>${esc(c.type)}<br>${esc(c.effect)}</span></div></div>`}
 
@@ -320,6 +407,8 @@ document.getElementById('battleLauncher').addEventListener('click',openBattle);
 document.getElementById('closeBattle').addEventListener('click',closeBattle);
 document.getElementById('partnerLauncher').addEventListener('click',openPartner);
 document.getElementById('closePartner').addEventListener('click',closePartner);
+document.getElementById('collectionLauncher').addEventListener('click',openCollection);
+document.getElementById('closeCollection').addEventListener('click',closeCollection);
 </script>
 </body>
 </html>
