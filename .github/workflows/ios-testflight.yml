@@ -8,6 +8,9 @@ on:
     paths:
       - '.github/workflows/ios-testflight.yml'
       - 'ios/scripts/**'
+      - 'ios/ci/**'
+      - 'ios/project.yml'
+      - 'ios/SuGMember/**'
   schedule:
     - cron: '17 * * * *'
 
@@ -16,7 +19,7 @@ permissions:
 
 jobs:
   testflight:
-    runs-on: macos-15
+    runs-on: macos-26
     env:
       APP_BUNDLE_ID: jp.sugosaka.member
       APP_NAME: S.u.G
@@ -118,9 +121,28 @@ jobs:
           echo "PROFILE_NAME=$PROFILE_NAME" >> "$GITHUB_ENV"
           echo "APPLE_TEAM_ID=$TEAM_ID" >> "$GITHUB_ENV"
 
-      - name: Select Xcode
+      - name: Select Xcode 26+
         if: steps.gate.outputs.ready == 'true'
-        run: sudo xcode-select -s /Applications/Xcode_16.4.app/Contents/Developer || true
+        shell: bash
+        run: |
+          set -euo pipefail
+          XCODE_APP="/Applications/Xcode_26.6.app"
+          if [ ! -d "$XCODE_APP" ]; then
+            XCODE_APP=$(ls -d /Applications/Xcode_26*.app 2>/dev/null | tail -1 || true)
+          fi
+          test -n "$XCODE_APP"
+          sudo xcode-select -s "$XCODE_APP/Contents/Developer"
+          xcodebuild -version
+          IOS_SDK=$(xcrun --sdk iphoneos --show-sdk-version)
+          echo "iPhoneOS SDK: $IOS_SDK"
+          case "$IOS_SDK" in
+            26.*|27.*) ;;
+            *) echo "ERROR: App Store upload requires iOS 26 SDK or later"; exit 1 ;;
+          esac
+
+      - name: Generate AppIcon asset catalog
+        if: steps.gate.outputs.ready == 'true'
+        run: python3 ios/ci/generate_app_icon.py
 
       - name: Install XcodeGen
         if: steps.gate.outputs.ready == 'true'
