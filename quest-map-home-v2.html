@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#2b2113">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<title>S.u.G QUEST｜戦国古地図</title>
+<style>
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#21180d}iframe{border:0;width:100%;height:100%;display:block}
+</style>
+</head>
+<body>
+<iframe id="app" src="./quest-map-home-v1.html?v=sengoku-skin-v2-20260908" allow="geolocation"></iframe>
+<script>
+const app=document.getElementById('app');
+app.addEventListener('load',()=>{
+  const d=app.contentDocument;if(!d)return;
+  const style=d.createElement('style');
+  style.textContent=`
+  :root{--gold:#b98a38!important;--gold2:#f2d792!important;--ink:#2a2115!important;--green:#477a4d!important}
+  #map{background:#c9b27e!important}
+  .leaflet-tile-pane{filter:sepia(.92) saturate(.48) contrast(.92) brightness(1.06) hue-rotate(-9deg)}
+  .leaflet-overlay-pane,.leaflet-marker-pane{filter:none}
+  #map:after{content:"";position:absolute;inset:0;z-index:350;pointer-events:none;background:radial-gradient(circle at 50% 44%,transparent 48%,rgba(65,39,13,.16) 100%),repeating-linear-gradient(8deg,rgba(82,51,19,.025) 0 1px,transparent 1px 5px);mix-blend-mode:multiply}
+  .brand,.gps,.status,.bottomnav{background:rgba(44,32,18,.93)!important;border-color:#9a783e!important;box-shadow:0 5px 18px #0007!important}
+  .brand b{color:#f3d990!important;text-shadow:0 1px 0 #000}.brand span{color:#cbb98d!important}
+  .chip{background:rgba(72,54,30,.91)!important;border-color:#a88b58!important;color:#efe1bd!important}.chip.on{background:#23190d!important;color:#f6d889!important;border-color:#d4ad5b!important}
+  .status{color:#efe5c7!important}.status b{color:#a9d38d!important}
+  .bottomnav{border-radius:12px!important}.nav{color:#d4c7a4!important}.nav.on{background:#21170c!important;color:#f4d67f!important}
+  .marker{width:34px!important;height:42px!important;border-radius:4px 4px 12px 12px!important;border:1px solid #352414!important;box-shadow:0 5px 10px #0007!important;font-family:"Yu Mincho",serif!important;font-size:16px!important;color:#f2dfad!important;clip-path:polygon(0 0,100% 0,100% 78%,50% 100%,0 78%)!important}
+  .m-temple,.m-history{background:#5c2e1d!important}.m-shop{background:#7b3d2b!important}.m-water,.m-river{background:#355d64!important}.m-station,.m-bus,.m-taxi{background:#4c473e!important}.m-road,.m-rest{background:#5a603b!important}.m-manhole{background:#4b4a42!important}.m-sug{background:#16120c!important}.m-aed{background:#7b2f2c!important}
+  .avatarWrap{width:68px!important;height:78px!important;filter:drop-shadow(0 7px 4px #0008)!important;animation:sugBob .72s ease-in-out infinite alternate!important}.avatarHalo{left:9px!important;bottom:0!important;width:50px!important;height:16px!important;background:#b78c3b44!important;border:2px solid #d8b35caa!important}
+  .samurai{left:11px!important;top:0!important;width:47px!important;height:68px!important}
+  .kabuto{left:4px!important;top:2px!important;width:39px!important;height:23px!important;background:linear-gradient(145deg,#18130e,#51401f 62%,#b68a35)!important;border:2px solid #d6ad54!important;box-shadow:inset 0 -4px 0 #110e0a!important}
+  .kabuto:before,.kabuto:after{top:-10px!important;width:17px!important;height:17px!important;border-color:#d7b057!important}
+  .face{left:10px!important;top:20px!important;width:27px!important;height:22px!important;background:#d9ab82!important;border:2px solid #332116!important;box-shadow:inset 0 -3px 0 #b67d5a!important}
+  .face:after{content:"••";position:absolute;left:5px;top:1px;color:#24160f;font-size:8px;letter-spacing:5px}
+  .body{left:7px!important;top:40px!important;width:34px!important;height:27px!important;background:linear-gradient(90deg,#251a12,#4a261d,#251a12)!important;border:2px solid #cda64e!important;border-radius:6px 6px 11px 11px!important}
+  .body:before{content:"菊"!important;color:#e6c771!important;font:bold 11px "Yu Mincho",serif!important;line-height:22px!important}
+  .body:after{content:"";position:absolute;right:-9px;top:3px;width:5px;height:29px;background:#282018;border:1px solid #d7b45b;transform:rotate(18deg);border-radius:3px}
+  @keyframes sugBob{from{transform:translateY(0)}to{transform:translateY(-3px)}}
+  .sheet{background:linear-gradient(180deg,#2e2416,#171109 58%)!important;border-top-color:#a98546!important}.sheet h2{color:#f0d391!important}.photo{background:radial-gradient(circle at 50% 10%,#765c31,#20170d 68%)!important;border-color:#8b7040!important}.box,.stat{background:#20170e!important;border-color:#59462c!important}.box,.stat b{color:#e8dec1!important}.stat span{color:#a9956a!important}
+  `;
+  d.head.appendChild(style);
+  const brand=d.querySelector('.brand span');if(brand)brand.textContent='戦国古地図 / GPS FIELD';
+});
+</script>
+</body>
+</html>
