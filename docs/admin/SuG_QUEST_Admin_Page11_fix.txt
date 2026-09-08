@@ -1,0 +1,7 @@
+Page 11 raster rebuild completed.
+render_size=2401x1350
+detected_old_panel_px=(1646, 452, 2232, 996)
+rebuilt_data_boxes_px=(1411, 438, 1739, 653)
+unboxed_text_origin_px=(1898, 484)
+former_panel_dark_ratio_after=0.0001
+style=white background; no enclosing black rectangle; right data boxes restored
