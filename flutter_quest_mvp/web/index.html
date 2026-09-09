@@ -32,7 +32,28 @@
   <title>sug_quest_mvp</title>
   <link rel="manifest" href="manifest.json">
 </head>
-<body>
+<body style="margin:0;background:#081018;color:#f6d77a;font-family:-apple-system,BlinkMacSystemFont,sans-serif;">
+  <div id="boot-status" style="position:fixed;inset:0;display:grid;place-items:center;text-align:center;background:#081018;z-index:999999;padding:24px;">
+    <div><div style="font-size:28px;font-weight:900;letter-spacing:.04em;">S.u.G QUEST</div><div id="boot-detail" style="margin-top:10px;font-size:12px;color:#ddd;">APP LOADING...</div></div>
+  </div>
+  <script>
+    (() => {
+      const hideWhenFlutterStarts = () => {
+        if (document.querySelector('flt-glass-pane, flt-scene-host')) {
+          document.getElementById('boot-status')?.remove();
+          return true;
+        }
+        return false;
+      };
+      new MutationObserver(hideWhenFlutterStarts).observe(document.documentElement,{childList:true,subtree:true});
+      setTimeout(() => {
+        if (!hideWhenFlutterStarts()) {
+          const d=document.getElementById('boot-detail');
+          if(d) d.textContent='起動に時間がかかっています。再読み込みしてください。';
+        }
+      },12000);
+    })();
+  </script>
   <!--
     You can customize the "flutter_bootstrap.js" script.
     This is useful to provide a custom configuration to the Flutter loader
