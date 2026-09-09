@@ -72,5 +72,7 @@ jobs:
             echo "No generated changes"
           else
             git commit -m "feat: bootstrap validated native Flutter QUEST app"
+            git fetch origin main
+            git rebase origin/main
             git push origin HEAD:main
           fi
