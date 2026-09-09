@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#173141">
+<meta http-equiv="Cache-Control" content="no-store,no-cache,must-revalidate,max-age=0">
+<title>S.u.G QUEST｜MAP FIRST</title>
+<style>
+:root{--gold:#e0b351;--ink:#171512;--cream:#f7efd9;--dark:#101412;--green:#34a854;--blue:#3e86d8;--red:#d65348;--orange:#ef8d32;--purple:#8d5bc2}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif;background:#9fc7da;color:#111}
+button{font:inherit}.app{position:fixed;inset:0;overflow:hidden;background:#a7cee1}
+.map{position:absolute;inset:0 0 86px;background:linear-gradient(#79b5d4 0 12%,#d6dfc7 12% 100%);overflow:hidden}
+.map:before{content:"";position:absolute;inset:0;background:
+linear-gradient(90deg,transparent 0 47%,#85c6dd 47% 53%,transparent 53%),
+repeating-linear-gradient(28deg,transparent 0 74px,#f2e8cc 75px 96px,transparent 97px 150px),
+repeating-linear-gradient(-31deg,transparent 0 82px,#e9dfc5 83px 101px,transparent 102px 166px),
+repeating-linear-gradient(90deg,transparent 0 112px,#e9dfc5 113px 127px,transparent 128px 210px),
+radial-gradient(circle at 20% 46%,#7eb976 0 7%,transparent 7.4%),radial-gradient(circle at 78% 26%,#7eb976 0 9%,transparent 9.4%);opacity:.9}
+.river{position:absolute;left:45%;top:0;width:12%;height:100%;background:linear-gradient(90deg,#82c9e1,#4fa8ce 48%,#8fd1e6);transform:rotate(3deg);box-shadow:0 0 0 2px #d8f0f7aa}
+.road{position:absolute;background:#f4ead0;border:1px solid #dfd1b5;box-shadow:0 1px 2px #0001}.r1{left:4%;right:8%;height:18px;top:47%;transform:rotate(-7deg)}.r2{top:13%;bottom:4%;width:18px;left:29%;transform:rotate(8deg)}.r3{top:7%;bottom:0;width:16px;right:23%;transform:rotate(-6deg)}.r4{left:-4%;right:0;height:14px;top:72%;transform:rotate(5deg)}
+.block{position:absolute;width:54px;height:38px;background:#d9cab2;border:1px solid #c2ae90;border-radius:4px;box-shadow:inset 0 -4px 0 #b8a58a55}.b1{left:9%;top:24%}.b2{left:18%;top:57%}.b3{left:35%;top:31%}.b4{left:59%;top:52%}.b5{left:73%;top:38%}.b6{left:83%;top:69%}.b7{left:8%;top:77%}.b8{left:63%;top:80%}
+.header{position:absolute;z-index:50;top:0;left:0;right:0;padding:calc(10px + env(safe-area-inset-top)) 12px 10px;display:flex;align-items:center;gap:10px;background:linear-gradient(#0d1922e8,#0d1922a8 68%,transparent);color:#fff}
+.logo{width:46px;height:46px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;background:#15212b;color:#f3cf78;font:700 22px Georgia,serif;box-shadow:0 4px 16px #0005}.brand{flex:1;min-width:0}.brand b{display:block;color:#f6d67f;font:700 22px Georgia,"Yu Mincho",serif;letter-spacing:.04em}.brand span{display:block;margin-top:2px;color:#e6e4dd;font-size:8px;font-weight:800;letter-spacing:.06em}.status{display:flex;gap:6px}.pill{padding:7px 9px;border:1px solid #ffffff42;border-radius:999px;background:#0b1217c9;color:#fff;font-size:10px;font-weight:900}.pill.gold{color:#f5cf6c}.pill.steps{color:#fff}
+.areaTag{position:absolute;z-index:45;top:calc(78px + env(safe-area-inset-top));left:12px;padding:7px 10px;border-radius:10px;background:#f7efd9e8;border:1px solid #8e6e31;color:#3c2a12;font-size:10px;font-weight:900;box-shadow:0 4px 14px #0002}.areaTag b{color:#a2761e}
+.pin{position:absolute;z-index:20;transform:translate(-50%,-100%);border:0;background:none;padding:0;text-align:center;filter:drop-shadow(0 6px 5px #0005)}.pin .label{display:block;padding:6px 8px;border-radius:10px;background:#fffdf6;border:2px solid currentColor;color:#171512;font-size:10px;font-weight:900;white-space:nowrap}.pin .icon{margin:4px auto 0;width:46px;height:52px;border-radius:50% 50% 50% 6px;transform:rotate(-45deg);display:grid;place-items:center;border:3px solid #fff;box-shadow:0 0 0 2px currentColor;background:currentColor}.pin .icon i{transform:rotate(45deg);font-style:normal;color:#fff;font-size:22px}.pin .dist{display:inline-block;margin-top:4px;padding:3px 6px;border-radius:999px;background:#131313d8;color:#fff;font-size:8px;font-weight:900}.shrine{color:#d24b3f}.food{color:#ed8c2e}.shop{color:#33a85b}.history{color:#567bc9}.manhole{color:#555}.rest{color:#8058b3}.sug{color:#df4b8f}
+.p1{left:25%;top:38%}.p2{left:71%;top:31%}.p3{left:17%;top:61%}.p4{left:80%;top:61%}.p5{left:65%;top:77%}.p6{left:34%;top:79%}.p7{left:84%;top:83%}
+.avatar{position:absolute;z-index:30;left:50%;top:63%;transform:translate(-50%,-50%);width:118px;height:118px;display:grid;place-items:center}.avatar:before{content:"";position:absolute;inset:23px;border-radius:50%;border:3px solid #79dfff;background:#74dfff2e;box-shadow:0 0 0 14px #76d8ff1e,0 0 25px #2a9bdc99}.avatar img{position:relative;width:88px;height:105px;object-fit:cover;object-position:center 24%;clip-path:ellipse(38% 47% at 50% 50%);filter:drop-shadow(0 8px 5px #0006)}.avatarFallback{position:relative;width:72px;height:72px;border:2px solid #d3a84b;border-radius:50%;display:none;place-items:center;background:#1d1b17;color:#ffe19a;font:700 31px Georgia,serif}
+.locationPulse{position:absolute;left:50%;top:74%;width:14px;height:14px;border:3px solid #fff;border-radius:50%;background:#2788ff;box-shadow:0 0 0 8px #2b8cff44,0 0 22px #2588ff}
+.side{position:absolute;z-index:45;right:12px;bottom:118px;display:grid;gap:10px}.circle{width:52px;height:52px;border:2px solid #c89c42;border-radius:50%;display:grid;place-items:center;background:#111917e8;color:#fff;font-size:22px;box-shadow:0 7px 15px #0004}.circle small{display:block;font-size:7px;margin-top:-3px}
+.near{position:absolute;z-index:44;left:12px;right:78px;bottom:100px;display:grid;grid-template-columns:56px 1fr 42px;align-items:center;gap:9px;padding:8px;border:1px solid #8c6b2e;border-radius:15px;background:#fffaf0ed;box-shadow:0 10px 26px #0003}.near .thumb{height:52px;border-radius:10px;background:linear-gradient(145deg,#7d5c26,#21170b);display:grid;place-items:center;color:#ffe19a;font:700 24px Georgia,serif}.near h3{margin:0;font-size:13px}.near p{margin:4px 0 0;font-size:9px;color:#5d5549}.go{width:38px;height:38px;border:0;border-radius:50%;background:#161817;color:#f3ce74;font-size:25px}
+.bottom{position:absolute;z-index:60;left:0;right:0;bottom:0;height:calc(86px + env(safe-area-inset-bottom));padding:8px 8px env(safe-area-inset-bottom);display:grid;grid-template-columns:repeat(5,1fr);gap:3px;background:linear-gradient(#171714f6,#080907);border-top:1px solid #9b7632;box-shadow:0 -8px 24px #0005}.navbtn{border:0;background:none;color:#d8d0c1;font-size:9px;font-weight:800}.navbtn i{display:block;margin:auto auto 4px;font-style:normal;font-size:25px}.navbtn.on{color:#f3c95f}.navbtn.on:after{content:"";display:block;width:65%;height:3px;margin:5px auto 0;border-radius:3px;background:#f3c95f}
+.overlay{position:fixed;z-index:100;inset:0;display:none;background:#000}.overlay.on{display:block}.overlay iframe{width:100%;height:100%;border:0}.closeOverlay{position:fixed;z-index:110;right:12px;top:calc(12px + env(safe-area-inset-top));width:44px;height:44px;border:1px solid #d6b45d;border-radius:50%;background:#10100de8;color:#ffe19a;font-size:24px}
+.toast{position:fixed;z-index:200;left:50%;bottom:105px;transform:translateX(-50%) translateY(18px);opacity:0;pointer-events:none;padding:10px 14px;border-radius:999px;background:#111;color:#fff;font-size:10px;font-weight:800;transition:.2s}.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(max-width:360px){.brand b{font-size:19px}.pill{padding:6px 7px}.pin .label{font-size:9px}.near{right:70px}}
+</style>
+</head>
+<body>
+<div class="app">
+  <main class="map" id="map">
+    <div class="river"></div><div class="road r1"></div><div class="road r2"></div><div class="road r3"></div><div class="road r4"></div>
+    <i class="block b1"></i><i class="block b2"></i><i class="block b3"></i><i class="block b4"></i><i class="block b5"></i><i class="block b6"></i><i class="block b7"></i><i class="block b8"></i>
+    <header class="header"><div class="logo">S</div><div class="brand"><b>S.u.G QUEST</b><span>歩くほど、好きなまちが見えてくる</span></div><div class="status"><div class="pill gold">S 1,240</div><div class="pill steps">👟 <span id="stepCount">8,532</span></div></div></header>
+    <div class="areaTag">📍 <b>天満エリア</b>　QUEST 3 / 10</div>
+
+    <button class="pin history p1" onclick="openQuest('刀剣・歴史QUEST')"><span class="label">刀剣・歴史</span><span class="icon"><i>⚔</i></span><span class="dist">GPS CHECK</span></button>
+    <button class="pin shrine p2" onclick="openMaps('大阪天満宮')"><span class="label">大阪天満宮</span><span class="icon"><i>⛩</i></span><span class="dist">SPOT</span></button>
+    <button class="pin food p3" onclick="openQuest('食べ歩きQUEST')"><span class="label">食べ歩き</span><span class="icon"><i>🍴</i></span><span class="dist">CARD</span></button>
+    <button class="pin manhole p4" onclick="toast('マンホールQUESTは次に接続')"><span class="label">マンホール</span><span class="icon"><i>◎</i></span><span class="dist">SPOT</span></button>
+    <button class="pin rest p5" onclick="toast('休憩スポット')"><span class="label">休憩</span><span class="icon"><i>♨</i></span><span class="dist">REST</span></button>
+    <button class="pin sug p6" onclick="location.href='./quest-member.html'"><span class="label">S.u.G</span><span class="icon"><i>S.</i></span><span class="dist">MEMBER</span></button>
+    <button class="pin shop p7" onclick="toast('SHOPは掲載店確定後に接続')"><span class="label">SHOP</span><span class="icon"><i>店</i></span><span class="dist">LOCAL</span></button>
+
+    <div class="avatar" id="avatar"><img src="./assets/quest/chihaya-masashige-20260905.png?v=map-go-1" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" alt="現在地キャラクター"><div class="avatarFallback">正</div></div><div class="locationPulse" id="pulse"></div>
+
+    <div class="side"><button class="circle" onclick="locate()">➤</button><button class="circle" onclick="openQuest('地図からQUEST')">📜</button><button class="circle" onclick="location.href='./quest-member.html'">👤</button></div>
+    <section class="near"><div class="thumb">⚔</div><div><h3>NEXT QUEST　刀剣・歴史</h3><p>近づく → GPS CHECK → MISSION → CARD GET</p></div><button class="go" onclick="openQuest('NEXT QUEST')">›</button></section>
+  </main>
+  <nav class="bottom"><button class="navbtn on"><i>🗺</i>MAP</button><button class="navbtn" onclick="openQuest('QUEST')"><i>⚑</i>QUEST</button><button class="navbtn" onclick="openQuest('COLLECTION')"><i>▣</i>COLLECTION</button><button class="navbtn" onclick="toast('SHOPは店舗確定後に本接続')"><i>店</i>SHOP</button><button class="navbtn" onclick="location.href='./quest-member.html'"><i>♙</i>MY PAGE</button></nav>
+</div>
+<section class="overlay" id="questOverlay"><button class="closeOverlay" onclick="closeOverlay()">×</button><iframe id="questFrame" src="about:blank" allow="geolocation"></iframe></section>
+<div class="toast" id="toast"></div>
+<script>
+const overlay=document.getElementById('questOverlay'),frame=document.getElementById('questFrame');
+function openQuest(){frame.src='./quest.html?v=map-go-entry-20260909';overlay.classList.add('on')}
+function closeOverlay(){overlay.classList.remove('on');setTimeout(()=>frame.src='about:blank',180)}
+function openMaps(q){location.href='https://maps.apple.com/?q='+encodeURIComponent(q)}
+function toast(m){const e=document.getElementById('toast');e.textContent=m;e.classList.add('on');clearTimeout(window.__toast);window.__toast=setTimeout(()=>e.classList.remove('on'),1500)}
+function locate(){
+ if(!navigator.geolocation){toast('GPSを利用できません');return}
+ toast('現在地を取得中…');
+ navigator.geolocation.getCurrentPosition(p=>{
+  const cLat=34.7025,cLng=135.5110;
+  const dy=(cLat-p.coords.latitude)*21000,dx=(p.coords.longitude-cLng)*17000;
+  const x=Math.max(17,Math.min(83,50+dx)),y=Math.max(26,Math.min(78,63+dy));
+  document.getElementById('avatar').style.left=x+'%';document.getElementById('avatar').style.top=y+'%';
+  document.getElementById('pulse').style.left=x+'%';document.getElementById('pulse').style.top=(y+11)+'%';toast('現在地をMAPに反映した');
+ },()=>toast('位置情報を許可してGPS CHECK'))
+}
+const s=localStorage.getItem('sug_member_steps');if(s!==null)document.getElementById('stepCount').textContent=Number(s).toLocaleString('ja-JP');
+setTimeout(()=>{if(navigator.permissions){navigator.permissions.query({name:'geolocation'}).then(r=>{if(r.state==='granted')locate()}).catch(()=>{})}},500);
+</script>
+</body></html>
