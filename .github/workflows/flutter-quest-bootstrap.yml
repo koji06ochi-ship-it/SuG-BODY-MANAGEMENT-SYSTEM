@@ -1,0 +1,76 @@
+name: Flutter QUEST bootstrap
+
+on:
+  push:
+    paths:
+      - '.github/workflows/flutter-quest-bootstrap.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Generate native Flutter scaffold without losing QUEST code
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/sugquest
+          cp flutter_quest_mvp/lib/main.dart /tmp/sugquest/main.dart
+          cp flutter_quest_mvp/pubspec.yaml /tmp/sugquest/pubspec.yaml
+          cd flutter_quest_mvp
+          flutter create --project-name sug_quest_mvp --org jp.sug --platforms=android,ios,web .
+          cp /tmp/sugquest/main.dart lib/main.dart
+          cp /tmp/sugquest/pubspec.yaml pubspec.yaml
+
+      - name: Add Android and iOS location permissions
+        shell: python
+        run: |
+          from pathlib import Path
+
+          manifest = Path('flutter_quest_mvp/android/app/src/main/AndroidManifest.xml')
+          text = manifest.read_text()
+          marker = '<manifest xmlns:android="http://schemas.android.com/apk/res/android">'
+          perms = '''<manifest xmlns:android="http://schemas.android.com/apk/res/android">\n    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />\n    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />'''
+          if 'ACCESS_FINE_LOCATION' not in text:
+              text = text.replace(marker, perms, 1)
+              manifest.write_text(text)
+
+          plist = Path('flutter_quest_mvp/ios/Runner/Info.plist')
+          text = plist.read_text()
+          if 'NSLocationWhenInUseUsageDescription' not in text:
+              text = text.replace('</dict>', '    <key>NSLocationWhenInUseUsageDescription</key>\n    <string>S.u.G QUESTで現在地とQUESTスポットの到着判定に使用します。</string>\n</dict>', 1)
+              plist.write_text(text)
+
+      - name: Resolve packages
+        working-directory: flutter_quest_mvp
+        run: flutter pub get
+
+      - name: Analyze
+        working-directory: flutter_quest_mvp
+        run: flutter analyze
+
+      - name: Commit generated native app
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add flutter_quest_mvp
+          if git diff --cached --quiet; then
+            echo "No generated changes"
+          else
+            git commit -m "feat: bootstrap validated native Flutter QUEST app"
+            git push origin HEAD:main
+          fi
