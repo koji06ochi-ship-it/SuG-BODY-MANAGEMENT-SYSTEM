@@ -35,6 +35,8 @@ jobs:
           cp /tmp/sugquest/pubspec.yaml pubspec.yaml
           sed -i "/import 'dart:math' as math;/d" lib/main.dart
           rm -f test/widget_test.dart analysis_options.yaml
+          mkdir -p assets
+          cp ../assets/quest/chihaya-masashige-20260905.png assets/quest_avatar_chibi.png
 
       - name: Add Android and iOS location permissions
         shell: python
@@ -63,17 +65,29 @@ jobs:
         working-directory: flutter_quest_mvp
         run: flutter analyze
 
-      - name: Commit generated native app
+      - name: Build web preview
+        working-directory: flutter_quest_mvp
+        run: flutter build web --release --base-href "/SuG-BODY-MANAGEMENT-SYSTEM/flutter-native-preview/"
+
+      - name: Stage preview
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf flutter-native-preview
+          mkdir -p flutter-native-preview
+          cp -R flutter_quest_mvp/build/web/. flutter-native-preview/
+
+      - name: Commit generated native app and preview
         shell: bash
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add flutter_quest_mvp
+          git add flutter_quest_mvp flutter-native-preview
           if git diff --cached --quiet; then
             echo "No generated changes"
           else
-            git commit -m "feat: bootstrap validated native Flutter QUEST app"
+            git commit -m "feat: publish validated native Flutter QUEST preview"
             git fetch origin main
             git rebase origin/main
             git push origin HEAD:main
