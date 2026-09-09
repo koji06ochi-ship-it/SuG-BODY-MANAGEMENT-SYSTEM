@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f7f4ee">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<title>S.u.G QUEST｜デジタル会員証</title>
+<style>
+:root{--bg:#f7f4ee;--card:#fff;--ink:#111;--muted:#716b60;--gold:#b68a2e;--gold2:#d6b45d;--green:#19b84a;--line:#e7e0d3;--shadow:0 16px 38px rgba(56,42,15,.12)}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif}
+body{padding:calc(12px + env(safe-area-inset-top)) 14px calc(24px + env(safe-area-inset-bottom))}
+.app{width:min(460px,100%);margin:0 auto}.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}.back{border:0;background:none;font-size:28px;padding:6px;color:#111}.brand{text-align:center}.brand b{display:block;font-size:18px;letter-spacing:.08em}.brand span{display:block;margin-top:2px;font-size:8px;color:var(--muted);letter-spacing:.16em}.gear{font-size:22px;background:none;border:0}
+.member{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:var(--shadow)}.memberHead{display:flex;align-items:center;justify-content:space-between;gap:12px}.memberHead h1{font-size:23px;margin:0}.linepill{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border-radius:999px;background:#eaf9ef;color:#108d37;font-size:11px;font-weight:800}.linepill i{width:10px;height:10px;border-radius:50%;background:var(--green);display:inline-block}.id{margin-top:6px;color:var(--muted);font-size:11px}.barcode{height:72px;margin:16px 0 8px;border-radius:10px;background:repeating-linear-gradient(90deg,#111 0 2px,#fff 2px 4px,#111 4px 5px,#fff 5px 8px,#111 8px 12px,#fff 12px 14px);border:10px solid #fff;box-shadow:inset 0 0 0 1px #eee}.code{text-align:center;letter-spacing:.16em;font-size:11px;color:#3f3b33}
+.areaTitle{margin:18px 2px 9px;font-size:12px;font-weight:800;color:#5d513d}.areas{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.area{padding:10px 5px;border-radius:13px;background:linear-gradient(160deg,#f7f1e3,#fff);border:1px solid var(--line);text-align:center;font-size:10px;font-weight:800}.area.on{border-color:#d0af62;background:#fff8e8}.area small{display:block;margin-top:3px;color:var(--muted);font-size:7px}
+.grid{display:grid;grid-template-columns:1.15fr .85fr;gap:10px;margin-top:12px}.points,.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 8px 20px rgba(56,42,15,.06)}.ring{width:116px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;margin:auto;background:conic-gradient(var(--green) 0 252deg,#e8e7e2 252deg 360deg);position:relative}.ring:before{content:"";position:absolute;inset:12px;background:#fff;border-radius:50%}.ringText{position:relative;text-align:center}.ringText b{display:block;font-size:28px}.ringText span{font-size:8px;color:var(--muted)}.stats{display:grid;gap:10px}.stat{padding:12px}.stat span{display:block;color:var(--muted);font-size:9px}.stat b{display:block;margin-top:3px;font-size:20px}.stat.green b{color:var(--green)}
+.primary{width:100%;margin-top:13px;border:0;border-radius:14px;padding:15px 16px;background:linear-gradient(180deg,#d6b45d,#ad7f24);color:#fff;font-size:15px;font-weight:900;letter-spacing:.04em;box-shadow:0 10px 22px rgba(151,111,26,.25)}
+.section{margin-top:18px}.sectionHead{display:flex;justify-content:space-between;align-items:center;margin-bottom:9px}.sectionHead h2{margin:0;font-size:14px}.sectionHead a{font-size:10px;color:var(--gold);text-decoration:none}.cards{display:flex;gap:8px;overflow:auto;padding-bottom:4px}.collect{min-width:92px;height:126px;border-radius:14px;border:1px solid #d9c79a;background:linear-gradient(155deg,#1c1a16,#5e4821 54%,#14110c);color:#f7e6b2;padding:10px;display:flex;flex-direction:column;justify-content:space-between}.collect b{font-size:11px}.collect span{font-size:8px;color:#d8c696}.collect.lock{filter:grayscale(1);opacity:.45}
+.coupon{display:grid;grid-template-columns:1fr 1fr;gap:9px}.coupon article{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px;box-shadow:0 8px 18px rgba(56,42,15,.05)}.coupon strong{display:block;font-size:13px}.coupon b{display:block;margin-top:5px;color:var(--gold);font-size:17px}.coupon small{display:block;margin-top:5px;color:var(--muted);font-size:8px;line-height:1.4}
+.gps{margin-top:11px;padding:12px 14px;border-radius:14px;background:#eaf9ef;border:1px solid #bfe8cc;color:#16893a;font-size:11px;font-weight:800}.nav{position:sticky;bottom:calc(7px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(5,1fr);gap:5px;margin-top:18px;padding:7px;border-radius:18px;background:rgba(255,255,255,.94);border:1px solid var(--line);box-shadow:0 10px 30px rgba(0,0,0,.09);backdrop-filter:blur(10px)}.nav button{border:0;background:none;border-radius:12px;padding:8px 2px;font-size:9px;color:#6c675e}.nav button.active{background:#fff4d8;color:#8d6517;font-weight:900}.nav i{display:block;font-style:normal;font-size:18px;margin-bottom:2px}
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%) translateY(20px);opacity:0;background:#111;color:#fff;border-radius:999px;padding:10px 14px;font-size:10px;transition:.2s;pointer-events:none}.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="top"><button class="back" onclick="location.href='./quest-live.html'">‹</button><div class="brand"><b>S.u.G QUEST</b><span>DIGITAL MEMBER</span></div><button class="gear" onclick="toast('設定は実証版で順次追加')">⚙︎</button></div>
+
+  <section class="member">
+    <div class="memberHead"><div><h1>ゲスト会員</h1><div class="id">会員ID　<span id="memberId">SQ12345678</span></div></div><div class="linepill"><i></i>LINE連携中</div></div>
+    <div class="barcode" aria-label="membership barcode"></div><div class="code">0123 4567 8901 2345</div>
+    <div class="areaTitle">参加エリア</div>
+    <div class="areas"><div class="area on">天満<small>ACTIVE</small></div><div class="area on">河南<small>ACTIVE</small></div><div class="area">太子<small>SOON</small></div><div class="area">千早赤阪<small>SOON</small></div></div>
+    <div class="grid">
+      <div class="points"><div class="ring"><div class="ringText"><b id="points">700</b><span>現在のポイント</span></div></div></div>
+      <div class="stats"><div class="stat green"><span>取得カード</span><b><span id="cardsCount" style="display:inline;color:inherit;font-size:inherit">7</span>枚</b></div><div class="stat"><span>今日の歩数</span><b id="steps">8,532</b></div></div>
+    </div>
+    <button class="primary" onclick="location.href='./quest-live.html'">次のQUESTへ ›</button>
+  </section>
+
+  <section class="section"><div class="sectionHead"><h2>獲得したカード</h2><a href="#" onclick="toast('コレクション一覧は次段階で接続');return false">もっと見る ›</a></div><div class="cards"><div class="collect"><b>天満 QUEST</b><span>CARD 01</span></div><div class="collect"><b>河南 QUEST</b><span>CARD 02</span></div><div class="collect"><b>菅原道真</b><span>S01-13</span></div><div class="collect lock"><b>SECRET</b><span>LOCKED</span></div></div></section>
+
+  <section class="section"><div class="sectionHead"><h2>おすすめクーポン</h2><a href="#" onclick="toast('店舗クーポンは掲載店確定後に接続');return false">もっと見る ›</a></div><div class="coupon"><article><strong>参加店クーポン</strong><b>500円OFF</b><small>QUEST達成後に表示される店舗特典の例</small></article><article><strong>カード提示特典</strong><b>限定サービス</b><small>取得カードと店舗特典を連動する想定</small></article></div><div class="gps">📍 GPS達成でスタンプ・カード取得と連動</div></section>
+
+  <nav class="nav"><button class="active"><i>⌂</i>会員証</button><button onclick="toast('ポイント履歴は次段階')"><i>◉</i>ポイント</button><button onclick="toast('カード一覧は次段階')"><i>▣</i>カード</button><button onclick="toast('クーポン一覧は次段階')"><i>券</i>クーポン</button><button onclick="location.href='./quest-live.html'"><i>☰</i>QUEST</button></nav>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+(function(){
+  const id=localStorage.getItem('sug_member_id')||'SQ12345678';
+  localStorage.setItem('sug_member_id',id);
+  document.getElementById('memberId').textContent=id;
+  const p=localStorage.getItem('sug_member_points');if(p!==null)document.getElementById('points').textContent=p;
+  const c=localStorage.getItem('sug_member_cards');if(c!==null)document.getElementById('cardsCount').textContent=c;
+  const s=localStorage.getItem('sug_member_steps');if(s!==null)document.getElementById('steps').textContent=Number(s).toLocaleString('ja-JP');
+})();
+function toast(msg){const el=document.getElementById('toast');el.textContent=msg;el.classList.add('on');clearTimeout(window.__t);window.__t=setTimeout(()=>el.classList.remove('on'),1700)}
+</script>
+</body>
+</html>
