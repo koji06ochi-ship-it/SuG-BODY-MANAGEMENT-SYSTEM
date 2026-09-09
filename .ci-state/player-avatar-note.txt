@@ -1,0 +1,1 @@
+Player avatar source updated from user-provided chibi samurai reference on 2026-09-09. The Flutter build decodes .ci-state/player-avatar-small.b64 into assets/quest_avatar_chibi.webp.
