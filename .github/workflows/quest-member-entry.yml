@@ -1,0 +1,43 @@
+name: QUEST member entry patch
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/quest-member-entry.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch-member-entry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add member entry to QUEST shell
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('quest-battle-mvp-v20.html')
+          s=p.read_text(encoding='utf-8')
+          css_anchor='.collectionLauncher b{color:#a996ff}'
+          css_add='''\n.memberLauncher{position:fixed;z-index:5000;right:12px;top:calc(141px + env(safe-area-inset-top));border:1px solid #4da66b;border-radius:999px;padding:9px 13px;background:linear-gradient(145deg,#0c2a17,#060806);color:#cffff0;font-size:9px;font-weight:1000;letter-spacing:.06em;box-shadow:0 8px 24px #000c,0 0 20px #36b56a28;text-decoration:none}\n.memberLauncher b{color:#74ec9b}\n'''
+          body_anchor='<button id="collectionLauncher" class="collectionLauncher">◇ COLLECTION <b>24</b></button>'
+          body_add='''\n<a id="memberLauncher" class="memberLauncher" href="./quest-member.html">▣ 会員証 <b>LINE</b></a>'''
+          if 'class="memberLauncher"' not in s:
+              if css_anchor not in s or body_anchor not in s:
+                  raise SystemExit('Patch anchors not found')
+              s=s.replace(css_anchor,css_anchor+css_add,1)
+              s=s.replace(body_anchor,body_anchor+body_add,1)
+          p.write_text(s,encoding='utf-8')
+          assert 'quest-member.html' in s
+          print('member entry patched')
+          PY
+      - name: Commit patch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add quest-battle-mvp-v20.html
+          git diff --cached --quiet && exit 0
+          git commit -m 'feat: add digital member card entry to QUEST'
+          git push
