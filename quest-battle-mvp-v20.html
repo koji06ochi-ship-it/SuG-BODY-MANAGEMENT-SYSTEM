@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#03050a">
 <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
 <meta http-equiv="Pragma" content="no-cache">
-<title>S.u.G QUEST｜GAME LOOP V22</title>
+<title>S.u.G QUEST｜RPG MAP V23</title>
 <style>
 :root{
   --bg:#03050a;--panel:#080b13;--panel2:#0d1019;--line:#6d5228;
@@ -15,16 +15,42 @@
 }
 *{box-sizing:border-box}
 html,body{margin:0;width:100%;height:100%;background:#000;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif;overflow:hidden}
-#app{position:fixed;inset:0;width:100%;height:100%;border:0;background:#000}
+#app{position:fixed;inset:0;width:100%;height:100%;border:0;background:#000;visibility:hidden}
+body.coreMode #app{visibility:visible}
+.rpgHome{position:fixed;z-index:4000;inset:0;overflow:hidden;background:#06100d;color:#fff}
+body.coreMode .rpgHome{display:none}
+.rpgMapImage{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;image-rendering:pixelated;filter:saturate(1.35) contrast(1.14) brightness(.92);transform:scale(1.06)}
+.rpgHome:after{content:"";position:absolute;z-index:2;inset:0;pointer-events:none;background:linear-gradient(180deg,#03110b99 0,#0000 25%,#0000 67%,#020705aa 100%),repeating-linear-gradient(0deg,#fff0 0 3px,#0000000e 3px 4px)}
+.rpgHud{position:absolute;z-index:20;left:13px;right:13px;top:calc(10px + env(safe-area-inset-top));height:72px;display:grid;grid-template-columns:1fr 86px 44px;gap:7px}
+.rpgBrand,.rpgStatus{border:3px solid #6b4a20;background:linear-gradient(145deg,#f2dfadf2,#c8a96df2);box-shadow:inset 0 0 0 2px #f9e9bd,0 5px 0 #3a250e,0 10px 26px #0009;color:#251609}
+.rpgMenu{border:2px solid #b98b34;background:#151713f2;box-shadow:0 5px 0 #2a1a09,0 10px 26px #000b}
+.rpgBrand{padding:10px 12px}.rpgBrand b{display:block;color:#211307;font:900 19px/1 Georgia,"Yu Mincho",serif;letter-spacing:.06em}.rpgBrand span{display:block;margin-top:5px;color:#584322;font:900 7px/1.1 monospace;letter-spacing:.12em}
+.rpgStatus{display:grid;place-items:center;text-align:center;padding:6px}.rpgStatus b{color:#2b1a09;font:1000 10px Georgia,"Yu Mincho",serif}.rpgStatus span{color:#633d13;font:900 8px monospace}
+.rpgMenu{border-radius:10px;color:#f5d47e;font-size:22px}
+.gpsPill{position:absolute;z-index:21;left:18px;top:calc(93px + env(safe-area-inset-top));border:2px solid #c6963f;border-radius:999px;padding:9px 13px;background:#0c1511ee;color:#f6e1a5;font:1000 10px monospace;box-shadow:0 5px 0 #201508,0 10px 24px #0009}
+.mapPin{position:absolute;z-index:12;width:76px;min-height:94px;padding:7px 5px 8px;border:3px solid #6d4a1f;border-radius:5px;background:linear-gradient(90deg,#d9bd82,#fff1c7 18%,#f4dfae 82%,#c59d5c);color:#2a1608;box-shadow:inset 0 0 0 2px #fff0c6,0 5px 0 #3d270f,0 10px 20px #0008;transform:translate(-50%,-50%)}
+.mapPin small{display:block;min-height:30px;font:900 9px/1.35 Georgia,"Yu Mincho",serif}.mapPin b{display:grid;place-items:center;width:43px;height:43px;margin:4px auto 0;border:3px solid #b98636;border-radius:50%;background:radial-gradient(circle,var(--pin,#345c4d),#15120c 70%);color:#fff;font:1000 21px Georgia,"Yu Mincho",serif;text-shadow:0 2px 2px #000}
+.mapPin:after{content:"";position:absolute;left:50%;bottom:-10px;width:14px;height:14px;border-right:3px solid #6d4a1f;border-bottom:3px solid #6d4a1f;background:#e9cf96;transform:translateX(-50%) rotate(45deg)}
+.mapPin.lock{border-color:#6e6b60;background:linear-gradient(90deg,#9b978c,#d2cec0 18%,#b7b3a8 82%,#878378);color:#3c3a34;filter:grayscale(.85)}
+.mapPin.selected{animation:pinPulse 1.25s infinite;box-shadow:0 6px 0 #1c211b,0 0 0 7px #ffe08a33,0 0 28px #ffe08a99}
+@keyframes pinPulse{50%{transform:translate(-50%,-56%)}}
+.routeLine{position:absolute;z-index:5;height:7px;border-radius:999px;background:repeating-linear-gradient(90deg,#f1cd6b 0 11px,#1e241d 11px 18px);box-shadow:0 2px 0 #0008;transform-origin:left center;opacity:.88}
+.heroAvatar{position:absolute;z-index:15;left:50%;top:54%;width:78px;height:98px;transform:translate(-50%,-50%);border:3px solid #e1c166;border-radius:18px 18px 22px 22px;overflow:hidden;background:#090b0b;box-shadow:0 0 0 7px #4be8ff40,0 0 34px #2dd9ffb8}
+.heroAvatar img{width:100%;height:100%;object-fit:cover;object-position:22% 40%;image-rendering:auto;filter:contrast(1.12) saturate(.9)}
+.heroAvatar b{position:absolute;left:5px;right:5px;bottom:4px;padding:3px;background:#070a08dd;border:1px solid #a8873f;border-radius:5px;color:#ffe19a;text-align:center;font:900 8px monospace}
+.mapInfo{position:absolute;z-index:22;left:14px;right:14px;bottom:calc(78px + env(safe-area-inset-bottom));min-height:82px;display:grid;grid-template-columns:58px 1fr 76px;gap:9px;align-items:center;padding:9px;border:3px solid #68451b;background:linear-gradient(145deg,#f4e3b9f5,#cba96bf5);box-shadow:inset 0 0 0 2px #fff0c8,0 7px 0 #3c260e,0 14px 28px #0009;color:#241407}
+.mapInfoMark{height:58px;display:grid;place-items:center;border:3px solid #68451b;background:#252116;color:#ffe19b;font:1000 28px Georgia,"Yu Mincho",serif}.mapInfo h2{margin:0;color:#241407;font:900 14px Georgia,"Yu Mincho",serif}.mapInfo p{margin:5px 0 0;color:#5f4827;font:800 8px/1.4 monospace}.mapInfo button{height:48px;border:2px solid #5e3d17;border-radius:50%;background:#171711;color:#ffe39a;font:1000 9px monospace}
+.rpgNav{position:absolute;z-index:25;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(5,1fr);height:calc(68px + env(safe-area-inset-bottom));padding:6px 5px env(safe-area-inset-bottom);border-top:3px solid #574018;background:#090c09f5;box-shadow:0 -8px 26px #000b}
+.rpgNav button{border:0;border-right:1px solid #2d2d25;background:#10130f;color:#aaa590;font:900 7px monospace}.rpgNav button:last-child{border-right:0}.rpgNav b{display:block;margin-bottom:4px;color:#d4ae52;font-size:23px}.rpgNav .on{background:#241b0c;color:#ffe3a0}.rpgNav .on b{color:#ffe38c}
+.coreBack{display:none;position:fixed;z-index:5500;left:10px;top:calc(10px + env(safe-area-inset-top));border:1px solid #d4ac52;border-radius:999px;padding:9px 12px;background:#090b08ed;color:#ffe09a;font:1000 9px monospace;box-shadow:0 7px 18px #000a}body.coreMode .coreBack{display:block}
+.battleLauncher,.partnerLauncher,.collectionLauncher{display:none!important}
+@media(max-width:360px){.rpgHud{grid-template-columns:1fr 72px 40px}.rpgBrand b{font-size:16px}.mapInfo{grid-template-columns:52px 1fr 67px}.mapInfo h2{font-size:12px}}
 .battleLauncher{position:fixed;z-index:5000;right:12px;top:calc(12px + env(safe-area-inset-top));border:1px solid #d0a64b;border-radius:999px;padding:10px 13px;background:linear-gradient(145deg,#251a08,#080704);color:#ffe39b;font-size:10px;font-weight:1000;letter-spacing:.07em;box-shadow:0 8px 24px #000c,0 0 20px #d5a8442c}
 .battleLauncher b{color:#82eda3}
 .partnerLauncher{position:fixed;z-index:5000;right:12px;top:calc(57px + env(safe-area-inset-top));border:1px solid #cb7650;border-radius:999px;padding:9px 13px;background:linear-gradient(145deg,#32120b,#090504);color:#ffd0ae;font-size:9px;font-weight:1000;letter-spacing:.06em;box-shadow:0 8px 24px #000c,0 0 20px #c74c2928}
 .partnerLauncher b{color:#ff9474}
 .collectionLauncher{position:fixed;z-index:5000;right:12px;top:calc(99px + env(safe-area-inset-top));border:1px solid #8070c3;border-radius:999px;padding:9px 13px;background:linear-gradient(145deg,#17112d,#07060c);color:#dcd3ff;font-size:9px;font-weight:1000;letter-spacing:.06em;box-shadow:0 8px 24px #000c,0 0 20px #8167e228}
 .collectionLauncher b{color:#a996ff}
-.memberLauncher{position:fixed;z-index:5000;right:12px;top:calc(141px + env(safe-area-inset-top));border:1px solid #4da66b;border-radius:999px;padding:9px 13px;background:linear-gradient(145deg,#0c2a17,#060806);color:#cffff0;font-size:9px;font-weight:1000;letter-spacing:.06em;box-shadow:0 8px 24px #000c,0 0 20px #36b56a28;text-decoration:none}
-.memberLauncher b{color:#74ec9b}
-
 .battleLayer{position:fixed;z-index:6000;inset:0;display:none;overflow:auto;background:radial-gradient(circle at 50% -5%,#15233b 0,#080a11 34%,#020306 76%);padding:calc(10px + env(safe-area-inset-top)) 12px calc(28px + env(safe-area-inset-bottom))}
 .battleLayer.on{display:block}
 .shell{width:min(440px,100%);margin:0 auto}
@@ -68,11 +94,48 @@ html,body{margin:0;width:100%;height:100%;background:#000;color:var(--ink);font-
 </style>
 </head>
 <body>
+<main id="rpgHome" class="rpgHome">
+  <img id="rpgMapImage" class="rpgMapImage" alt="天満から南河内へ続くQUESTマップ">
+  <header class="rpgHud">
+    <div class="rpgBrand"><b>S.u.G QUEST</b><span>TRANSPORT RPG MAP / SEASON 01</span></div>
+    <div class="rpgStatus"><b>LEVEL 01</b><span id="rpgCount">0 / 24</span></div>
+    <button class="rpgMenu" aria-label="メニュー">☰</button>
+  </header>
+  <button id="gpsPill" class="gpsPill">GPS START｜歩行 <span id="rpgSteps">0</span>歩</button>
+
+  <span class="routeLine" style="left:21%;top:38%;width:41%;transform:rotate(21deg)"></span>
+  <span class="routeLine" style="left:49%;top:55%;width:36%;transform:rotate(-35deg)"></span>
+  <span class="routeLine" style="left:24%;top:69%;width:30%;transform:rotate(-28deg)"></span>
+
+  <button class="mapPin selected" data-mark="肉" data-name="天満・焼肉ホルモン瞭" data-copy="食べてMENU CARDを取得。再来店でPARTNER LEVEL UP。" data-action="partner" style="--pin:#8c3d27;left:21%;top:38%"><small>焼肉ホルモン<br>瞭</small><b>肉</b></button>
+  <button class="mapPin" data-mark="鉄" data-name="近鉄 TRANSPORT" data-copy="南河内へ人を運ぶ。バトルの移動コストを軽減。" data-action="battle" style="--pin:#6a4b88;left:75%;top:27%"><small>近鉄<br>TRANSPORT</small><b>鉄</b></button>
+  <button class="mapPin" data-mark="卵" data-name="河南町・補給QUEST" data-copy="河南の卵を取得して、バトル中に体力を回復。" data-action="core" style="--pin:#867330;left:20%;top:65%"><small>道の駅<br>かなん</small><b>卵</b></button>
+  <button class="mapPin" data-mark="葡" data-name="太子町・街道QUEST" data-copy="ぶどう・ワイン・竹内街道。知略と移動を強化。" data-action="core" style="--pin:#70436f;left:80%;top:64%"><small>近つ飛鳥<br>太子</small><b>葡</b></button>
+  <button class="mapPin" data-mark="山" data-name="千早赤阪村・山城QUEST" data-copy="楠木・金剛山・水と補給。防御と持久を強化。" data-action="core" style="--pin:#346348;left:48%;top:70%"><small>ちはや<br>あかさか</small><b>山</b></button>
+  <button class="mapPin" data-mark="川" data-name="八軒家浜 RIVER GATE" data-copy="道から川、そして海へ。水軍カードを強化。" data-action="battle" style="--pin:#2e6e82;left:84%;top:44%"><small>川の駅<br>八軒家浜</small><b>川</b></button>
+  <button class="mapPin lock" data-mark="蓋" data-name="マンホール INFRA" data-copy="現代の『運ぶ』。水道QUESTで解放予定。" data-action="core" style="left:10%;top:53%"><small>水道<br>INFRA</small><b>蓋</b></button>
+
+  <div class="heroAvatar"><img src="./assets/quest/chihaya-masashige-20260905.png?v=rpg-v23" alt="楠木正成"><b>楠木正成</b></div>
+
+  <section class="mapInfo">
+    <div id="mapInfoMark" class="mapInfoMark">肉</div>
+    <div><h2 id="mapInfoName">天満・焼肉ホルモン瞭</h2><p id="mapInfoCopy">食べてMENU CARDを取得。再来店でPARTNER LEVEL UP。</p></div>
+    <button id="mapInfoAction">QUESTへ</button>
+  </section>
+
+  <nav class="rpgNav" aria-label="メインメニュー">
+    <button class="on" data-rpg-nav="map"><b>⌾</b>MAP</button>
+    <button data-rpg-nav="quest"><b>巻</b>QUEST</button>
+    <button data-rpg-nav="collection"><b>◇</b>図鑑</button>
+    <button data-rpg-nav="shop"><b>店</b>SHOP</button>
+    <button data-rpg-nav="body"><b>＋</b>BODY</button>
+  </nav>
+</main>
+<button id="coreBack" class="coreBack">‹ RPG MAPへ</button>
 <iframe id="app" src="./quest.html?v=remove-tsukushi-20260908" allow="geolocation"></iframe>
 <button id="battleLauncher" class="battleLauncher">⚔ BATTLE <b>MVP</b></button>
 <button id="partnerLauncher" class="partnerLauncher">🥩 瞭 <b>PARTNER</b></button>
 <button id="collectionLauncher" class="collectionLauncher">◇ COLLECTION <b>24</b></button>
-<a id="memberLauncher" class="memberLauncher" href="./quest-member.html">▣ 会員証 <b>LINE</b></a>
 <section id="battleLayer" class="battleLayer" aria-hidden="true">
   <div class="shell">
     <header class="topbar">
@@ -405,6 +468,71 @@ function renderResult(win,s){
   </section>`;
   document.getElementById('retry').addEventListener('click',startBattle);
   document.getElementById('backDeck').addEventListener('click',renderDeck);
+}
+
+const rpgMapImage=document.getElementById('rpgMapImage');
+const rpgSteps=document.getElementById('rpgSteps');
+const rpgCount=document.getElementById('rpgCount');
+const mapInfoMark=document.getElementById('mapInfoMark');
+const mapInfoName=document.getElementById('mapInfoName');
+const mapInfoCopy=document.getElementById('mapInfoCopy');
+const mapInfoAction=document.getElementById('mapInfoAction');
+let selectedMapAction='partner',mapWatch=null,lastMapPosition=null;
+
+async function loadRpgMap(){
+  try{
+    const r=await fetch('./assets/quest/area-tenma-b64.txt?v=rpg-map-v23-20260909');
+    const b64=(await r.text()).replace(/[^A-Za-z0-9+/=]/g,'');
+    rpgMapImage.src='data:image/webp;base64,'+b64;
+  }catch(e){rpgMapImage.style.display='none'}
+}
+function readRpgSteps(){
+  try{const h=window.__SUG_NATIVE_HEALTH__||JSON.parse(localStorage.getItem('sug_native_health_v1')||'null');return Math.max(0,Math.round(Number(h?.steps)||0))}catch(e){return 0}
+}
+function refreshRpgHud(){
+  rpgSteps.textContent=readRpgSteps().toLocaleString();
+  try{rpgCount.textContent=collectionState().count+' / 24'}catch(e){rpgCount.textContent='0 / 24'}
+}
+function showRpgMap(){
+  document.body.classList.remove('coreMode');
+  closeBattle();closePartner();closeCollection();refreshRpgHud();
+  document.querySelectorAll('[data-rpg-nav]').forEach(b=>b.classList.toggle('on',b.dataset.rpgNav==='map'));
+}
+function openQuestCore(){document.body.classList.add('coreMode')}
+function runMapAction(action){
+  if(action==='partner'||action==='shop'){openPartner();return}
+  if(action==='battle'){openBattle();return}
+  if(action==='collection'){openCollection();return}
+  if(action==='body'){location.href='./index.html?v=quest-body-v23-20260909';return}
+  openQuestCore();
+}
+function selectMapPin(pin){
+  document.querySelectorAll('.mapPin').forEach(p=>p.classList.remove('selected'));pin.classList.add('selected');
+  mapInfoMark.textContent=pin.dataset.mark;mapInfoName.textContent=pin.dataset.name;mapInfoCopy.textContent=pin.dataset.copy;selectedMapAction=pin.dataset.action||'core';
+}
+function startMapGps(){
+  const pill=document.getElementById('gpsPill');
+  if(!navigator.geolocation){pill.firstChild.textContent='GPS非対応｜';return}
+  if(mapWatch!==null){navigator.geolocation.clearWatch(mapWatch);mapWatch=null;pill.firstChild.textContent='GPS START｜歩行 ';return}
+  pill.firstChild.textContent='GPS SEARCH｜歩行 ';
+  mapWatch=navigator.geolocation.watchPosition(pos=>{
+    const speed=Math.max(0,Number(pos.coords.speed)||0)*3.6;
+    pill.firstChild.textContent=`GPS LIVE ${speed.toFixed(1)} km/h｜歩行 `;
+    lastMapPosition=pos;refreshRpgHud();
+  },()=>{pill.firstChild.textContent='GPS再試行｜歩行 '},{enableHighAccuracy:true,maximumAge:3000,timeout:10000});
+}
+
+if(typeof document.querySelectorAll==='function'){
+  document.querySelectorAll('.mapPin').forEach(pin=>pin.addEventListener('click',()=>selectMapPin(pin)));
+  document.querySelectorAll('[data-rpg-nav]').forEach(b=>b.addEventListener('click',()=>{
+    const a=b.dataset.rpgNav;if(a==='map'){showRpgMap();return}runMapAction(a);
+  }));
+  document.getElementById('gpsPill')?.addEventListener('click',startMapGps);
+  document.getElementById('coreBack')?.addEventListener('click',showRpgMap);
+  document.querySelector('.rpgMenu')?.addEventListener('click',openCollection);
+  mapInfoAction?.addEventListener('click',()=>runMapAction(selectedMapAction));
+  window.addEventListener?.('sug:native-health',refreshRpgHud);
+  loadRpgMap();refreshRpgHud();
 }
 
 document.getElementById('battleLauncher').addEventListener('click',openBattle);
