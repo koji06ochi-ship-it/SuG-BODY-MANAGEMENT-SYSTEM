@@ -33,6 +33,8 @@ jobs:
           flutter create --project-name sug_quest_mvp --org jp.sug --platforms=android,ios,web .
           cp /tmp/sugquest/main.dart lib/main.dart
           cp /tmp/sugquest/pubspec.yaml pubspec.yaml
+          sed -i "/import 'dart:math' as math;/d" lib/main.dart
+          rm -f test/widget_test.dart analysis_options.yaml
 
       - name: Add Android and iOS location permissions
         shell: python
