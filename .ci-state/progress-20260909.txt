@@ -1,0 +1,1 @@
+MAP-first cleanup in progress: player avatar source added, bottom navigation reduced to MAP/QUEST/COLLECTION, Flutter build pipeline updated.
