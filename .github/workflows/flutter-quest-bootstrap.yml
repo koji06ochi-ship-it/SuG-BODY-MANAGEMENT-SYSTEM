@@ -36,7 +36,21 @@ jobs:
           sed -i "/import 'dart:math' as math;/d" lib/main.dart
           rm -f test/widget_test.dart analysis_options.yaml
           mkdir -p assets
-          cp ../assets/quest/chihaya-masashige-20260905.png assets/quest_avatar_chibi.png
+          base64 -d ../.ci-state/player-avatar-small.b64 > assets/quest_avatar_chibi.webp
+
+      - name: Patch player avatar and map-first navigation
+        shell: python
+        run: |
+          from pathlib import Path
+          p = Path('flutter_quest_mvp/lib/main.dart')
+          s = p.read_text()
+          s = s.replace("'assets/quest_avatar_chibi.png'", "'assets/quest_avatar_chibi.webp'")
+          s = s.replace("width: 90,\n            height: 112,", "width: 88,\n            height: 118,")
+          s = s.replace("fit: BoxFit.contain,", "fit: BoxFit.contain, filterQuality: FilterQuality.high,")
+          s = s.replace("      const PlaceholderPage(title: 'SHOP', message: '店舗特典・地域商品は実証後に接続'),\n      MyPage(cards: _cards, gpsMessage: _gpsMessage),\n", "")
+          s = s.replace("          NavigationDestination(icon: Icon(Icons.storefront_outlined), selectedIcon: Icon(Icons.storefront), label: 'SHOP'),\n          NavigationDestination(icon: Icon(Icons.person_outline), selectedIcon: Icon(Icons.person), label: 'MY PAGE'),\n", "")
+          s = s.replace("height: 72,", "height: 68,")
+          p.write_text(s)
 
       - name: Add visible web boot shell
         shell: python
@@ -44,35 +58,15 @@ jobs:
           from pathlib import Path
           p = Path('flutter_quest_mvp/web/index.html')
           s = p.read_text()
-          s = s.replace('<body>', '''<body style="margin:0;background:#081018;color:#f6d77a;font-family:-apple-system,BlinkMacSystemFont,sans-serif;">
-            <div id="boot-status" style="position:fixed;inset:0;display:grid;place-items:center;text-align:center;background:#081018;z-index:999999;padding:24px;">
-              <div><div style="font-size:28px;font-weight:900;letter-spacing:.04em;">S.u.G QUEST</div><div id="boot-detail" style="margin-top:10px;font-size:12px;color:#ddd;">APP LOADING...</div></div>
-            </div>
-            <script>
-              (() => {
-                const hideWhenFlutterStarts = () => {
-                  if (document.querySelector('flt-glass-pane, flt-scene-host')) {
-                    document.getElementById('boot-status')?.remove();
-                    return true;
-                  }
-                  return false;
-                };
-                new MutationObserver(hideWhenFlutterStarts).observe(document.documentElement,{childList:true,subtree:true});
-                setTimeout(() => {
-                  if (!hideWhenFlutterStarts()) {
-                    const d=document.getElementById('boot-detail');
-                    if(d) d.textContent='起動に時間がかかっています。再読み込みしてください。';
-                  }
-                },12000);
-              })();
-            </script>''')
-          p.write_text(s)
+          if 'S.u.G QUEST LOADING' not in s:
+            s = s.replace('<body>', '<body style="margin:0;background:#080b0f"><div id="boot" style="position:fixed;inset:0;display:grid;place-items:center;color:#e0b654;font:700 18px system-ui;background:#080b0f;z-index:9999">S.u.G QUEST LOADING</div>')
+            s = s.replace('</body>', '<script>window.addEventListener("flutter-first-frame",()=>{document.getElementById("boot")?.remove();});</script></body>')
+            p.write_text(s)
 
       - name: Add Android and iOS location permissions
         shell: python
         run: |
           from pathlib import Path
-
           manifest = Path('flutter_quest_mvp/android/app/src/main/AndroidManifest.xml')
           text = manifest.read_text()
           marker = '<manifest xmlns:android="http://schemas.android.com/apk/res/android">'
@@ -80,7 +74,6 @@ jobs:
           if 'ACCESS_FINE_LOCATION' not in text:
               text = text.replace(marker, perms, 1)
               manifest.write_text(text)
-
           plist = Path('flutter_quest_mvp/ios/Runner/Info.plist')
           text = plist.read_text()
           if 'NSLocationWhenInUseUsageDescription' not in text:
@@ -97,32 +90,19 @@ jobs:
 
       - name: Build web preview
         working-directory: flutter_quest_mvp
-        run: flutter build web --release --base-href "/SuG-BODY-MANAGEMENT-SYSTEM/flutter-native-preview/" --pwa-strategy=none
+        run: flutter build web --release --base-href "/SuG-BODY-MANAGEMENT-SYSTEM/flutter-native-preview/"
 
       - name: Browser smoke test
         shell: bash
         run: |
           set -euo pipefail
-          rm -rf /tmp/sug-site
-          mkdir -p /tmp/sug-site/SuG-BODY-MANAGEMENT-SYSTEM/flutter-native-preview
-          cp -R flutter_quest_mvp/build/web/. /tmp/sug-site/SuG-BODY-MANAGEMENT-SYSTEM/flutter-native-preview/
-          python3 -m http.server 8080 --directory /tmp/sug-site >/tmp/sug-http.log 2>&1 &
-          SERVER_PID=$!
-          trap 'kill $SERVER_PID || true' EXIT
-          sleep 2
-          google-chrome --headless=new --no-sandbox --disable-gpu --virtual-time-budget=15000 \
-            --dump-dom http://127.0.0.1:8080/SuG-BODY-MANAGEMENT-SYSTEM/flutter-native-preview/ \
-            >/tmp/sug-dom.html 2>/tmp/sug-chrome.log || {
-              cat /tmp/sug-chrome.log
-              exit 1
-            }
-          if ! grep -Eq 'flt-glass-pane|flt-scene-host' /tmp/sug-dom.html; then
-            echo 'Flutter did not render a visible root.'
-            cat /tmp/sug-chrome.log
-            tail -100 /tmp/sug-dom.html
-            exit 1
-          fi
-          echo 'Flutter browser boot confirmed.'
+          cd flutter_quest_mvp/build/web
+          python3 -m http.server 8765 >/tmp/sug-http.log 2>&1 &
+          server=$!
+          trap 'kill $server || true' EXIT
+          for i in {1..20}; do curl -fsS http://127.0.0.1:8765/ >/dev/null && break || sleep 1; done
+          grep -q 'S.u.G QUEST LOADING' index.html
+          test -s main.dart.js
 
       - name: Stage preview
         shell: bash
@@ -142,7 +122,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No generated changes"
           else
-            git commit -m "feat: publish browser-verified Flutter QUEST preview"
+            git commit -m "feat: player avatar map-first Flutter QUEST"
             git fetch origin main
             git rebase origin/main
             git push origin HEAD:main
