@@ -1,0 +1,19 @@
+name: sug_quest_mvp
+description: S.u.G QUEST native Flutter MVP - map first, GPS, mission, card get.
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  flutter_map: ^8.2.1
+  latlong2: ^0.9.1
+  geolocator: ^14.0.2
+  shared_preferences: ^2.5.3
+
+flutter:
+  uses-material-design: true
