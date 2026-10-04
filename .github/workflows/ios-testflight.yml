@@ -17,8 +17,13 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: ios-testflight-v1
+  cancel-in-progress: false
+
 jobs:
   testflight:
+    if: github.ref == 'refs/heads/main'
     runs-on: macos-26
     env:
       APP_BUNDLE_ID: jp.sugosaka.member
@@ -40,7 +45,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if [ -f .ci-state/testflight-v1-uploaded.json ]; then
+          # Check current main as well as the checkout (which may be an older run).
+          git fetch --no-tags origin main
+          if [ -f .ci-state/testflight-v1-uploaded.json ] || \
+            git cat-file -e FETCH_HEAD:.ci-state/testflight-v1-uploaded.json 2>/dev/null; then
             echo "ready=false" >> "$GITHUB_OUTPUT"
             echo "S.u.G TestFlight v1 has already been uploaded; nothing to do."
             exit 0
@@ -202,6 +210,7 @@ jobs:
             -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist"
 
       - name: Upload to App Store Connect / TestFlight
+        id: upload
         if: steps.gate.outputs.ready == 'true'
         run: |
           set -euo pipefail
@@ -218,24 +227,46 @@ jobs:
             --apiIssuer "$ASC_API_ISSUER_ID"
 
       - name: Mark first TestFlight upload complete
-        if: steps.gate.outputs.ready == 'true'
+        if: success() && steps.upload.outcome == 'success'
+        shell: bash
         run: |
           set -euo pipefail
-          mkdir -p .ci-state
-          cat > .ci-state/testflight-v1-uploaded.json <<EOF
+          # Build tools can modify tracked files; never stage or rebase that tree.
+          git status --short
+          git diff --name-only
+          STATE_TEMP=$(mktemp -d "$RUNNER_TEMP/testflight-state.XXXXXX")
+          STATE_WORKTREE="$STATE_TEMP/worktree"
+          trap 'git worktree remove --force "$STATE_WORKTREE" 2>/dev/null || true' EXIT
+          cat > "$STATE_TEMP/testflight-v1-uploaded.json" <<EOF
           {
             "bundleIdentifier": "$APP_BUNDLE_ID",
             "appName": "$APP_NAME",
             "workflowRun": "${{ github.run_number }}",
+            "workflowRunId": "${{ github.run_id }}",
             "uploadedAtUtc": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
           }
           EOF
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .ci-state/testflight-v1-uploaded.json
-          git commit -m "ci: mark first S.u.G TestFlight upload complete [skip ci]"
-          git pull --rebase
-          git push
+          # Retry only the marker push if main advances; never repeat the upload.
+          for attempt in 1 2 3; do
+            git fetch --no-tags origin main
+            git worktree add --detach "$STATE_WORKTREE" FETCH_HEAD
+            if [ -f "$STATE_WORKTREE/.ci-state/testflight-v1-uploaded.json" ]; then
+              echo "TestFlight completion marker already exists on main; preserving it."
+              exit 0
+            fi
+            mkdir -p "$STATE_WORKTREE/.ci-state"
+            cp "$STATE_TEMP/testflight-v1-uploaded.json" "$STATE_WORKTREE/.ci-state/"
+            git -C "$STATE_WORKTREE" config user.name "github-actions[bot]"
+            git -C "$STATE_WORKTREE" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git -C "$STATE_WORKTREE" add -- .ci-state/testflight-v1-uploaded.json
+            git -C "$STATE_WORKTREE" commit -m "ci: mark first S.u.G TestFlight upload complete [skip ci]"
+            if git -C "$STATE_WORKTREE" push origin HEAD:refs/heads/main; then
+              exit 0
+            fi
+            git worktree remove --force "$STATE_WORKTREE"
+          done
+          echo "ERROR: Could not persist TestFlight completion marker after 3 attempts."
+          exit 1
 
       - name: Upload IPA artifact
         if: steps.gate.outputs.ready == 'true'
