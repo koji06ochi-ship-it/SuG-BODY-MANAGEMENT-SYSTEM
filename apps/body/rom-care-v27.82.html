@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<title>S.u.G ROM / CARE V27.82</title>
+<meta name="theme-color" content="#09090a">
+<link rel="stylesheet" href="../shared/rom-care-v27.82.css?v=27.82">
+</head>
+<body data-rom-care-runtime data-rom-care-compact="v27.82">
+<header class="runtimeHeader">
+  <div class="runtimeHead">
+    <button id="romCareBack" class="runtimeBack" type="button">‹ BODY</button>
+    <div class="runtimeTitle"><b>ROM / CARE</b><small>SHARED ASSESSMENT · V27.82</small></div>
+    <div class="runtimeModes" aria-label="ROM CARE切替">
+      <button class="runtimeMode" type="button" data-rom-care-mode="rom" aria-pressed="false">ROM</button>
+      <button class="runtimeMode" type="button" data-rom-care-mode="care" aria-pressed="false">CARE</button>
+    </div>
+  </div>
+  <div id="romCareDataStatus" class="runtimeStatus">共通BODYデータを確認中…</div>
+</header>
+<main class="romCareMain">
+  <section id="care" class="panel" data-rom-care-panel="care">
+    <div class="card">
+      <div class="sectionLead"><div><h2>症状別セルフケア</h2><div class="muted">腰・首・肩・膝・足首・手首・肘。診断ではなく、痛む場所と動作 → 危険サイン確認 → 軽いセルフケア → 前後評価。</div></div><img class="sectionMascot" src="../../mascot-stretch.png?v=26-4-2-walk-route" alt=""></div>
+      <div class="notice">強い症状・外傷・神経症状などがある場合はセルフケアより医療評価を優先します。痛みやしびれが増える動きは中止してください。</div>
+      <div class="selfCareChoice" style="margin-top:9px"><div><label>部位</label><select id="careArea" onchange="renderCareQuestions();renderCareAcuteLink();renderCareThermalLink()"><option value="lowback">腰</option><option value="neck">首</option><option value="shoulder">肩</option><option value="knee">膝</option><option value="ankle">足首</option><option value="wrist">手首</option><option value="elbow">肘</option></select></div><div><label>痛み BEFORE 0-10</label><input id="carePainBefore" type="number" min="0" max="10" value="3" oninput="renderCareAromLink();renderCareAcuteLink();renderCareThermalLink()"></div></div>
+      <div class="selfCareChoice" style="margin-top:8px"><div><label>痛む場所</label><select id="careLocation"></select></div><div><label>痛む動作</label><select id="careMovement"></select></div></div>
+      <div class="careResponseMeasure"><div><label>ROMテスト名（任意）</label><input id="careRomTest" placeholder="例：肩関節屈曲 / 外転"></div><div><label>ROM BEFORE °</label><input id="careRomBefore" type="number" step="1" min="0" max="360"></div></div>
+      <div class="careResponseMeasure"><div><label>動作つらさ BEFORE 0-10（任意）</label><input id="careMoveBefore" type="number" min="0" max="10"></div><div><label>きっかけ</label><select id="careTrigger" onchange="renderCareAcuteLink();renderCareThermalLink()"><option value="training">トレーニング中 / 後</option><option value="daily">日常動作</option><option value="trauma">転倒・衝突などの外傷</option><option value="unknown">不明</option></select></div></div>
+      <div class="careResponseMeasure"><div><label>発症日（任意）</label><input id="careOnsetDate" type="date" onchange="renderCareAcuteLink();renderCareThermalLink()"></div><div><label>症状メモ（任意）</label><input id="careSymptomNote" placeholder="例：3日前から、熱感 / 腫れ / 冷え / こわばり、特定動作で再発" oninput="renderCareThermalLink()"></div></div>
+      <div class="careToolGroup"><div class="careToolGroupTitle"><span>ACUTE CARE / TAPING</span><span class="careToolTag">RICE → PEACE &amp; LOVE</span></div><div class="muted">急性反応がある場合は、RICE / PRICE / POLICE / PEACE &amp; LOVEを参照しつつ、保護・圧迫・挙上・段階的負荷などを症状と時期に合わせて候補化。冷却は必要時の短時間の症状緩和として記録し、必須処置とは扱いません。テーピングは一時的な支持・感覚入力・動作補助として反応を追跡します。</div><div class="grid2" style="margin-top:8px"><div><label>急性反応</label><select id="careAcuteState" onchange="renderCareAcuteLink();renderCareThermalLink()"><option value="none">特になし / 慢性的</option><option value="swelling">腫れ・熱感がある</option><option value="bruise">腫れ・内出血が目立つ</option><option value="early">外傷後まもない</option><option value="recovery">急性期を越えて回復中</option></select></div><div><label>テーピング目的（任意）</label><select id="careTapingGoal"><option value="none">未定 / 使用しない</option><option value="sensory">感覚入力・動作キュー</option><option value="assist">動作補助・軽い支持</option><option value="restrict">可動域制限・保護</option><option value="compression">圧迫・腫脹管理補助</option></select></div></div><div id="careAcuteLink" class="careAromLink" style="margin-top:8px">急性反応・発症時期からCARE候補を整理します。</div></div>
+      <div class="careToolGroup"><div class="careToolGroupTitle"><span>COLD / HEAT DECISION</span><span class="careToolTag">冷やす？温める？</span></div><div class="muted">発症時期・腫れ/熱感・こわばり・感覚状態から、COOL / HEAT / NONEを候補化します。冷却・温熱とも「治すための必須処置」とは断定せず、症状緩和と動きやすさを前後評価します。</div><div class="grid2" style="margin-top:8px"><div><label>温冷サイン</label><select id="careThermalState" onchange="renderCareThermalLink()"><option value="auto">AUTO｜急性反応・症状メモから判定</option><option value="hot_swollen">熱感・腫れ・ズキズキが目立つ</option><option value="cold_stiff">冷え・こわばり・動き出しが硬い</option><option value="pre_move_stiff">運動前に温めると動きやすそう</option><option value="neutral">どちらも特に当てはまらない</option><option value="sensation_issue">感覚低下 / 循環が不安</option></select></div><div><label>目的</label><select id="careThermalGoal" onchange="renderCareThermalLink()"><option value="symptom">症状を楽にする</option><option value="movement">動きやすさを出す</option><option value="recovery">回復期の補助</option></select></div></div><div id="careThermalLink" class="careAromLink" style="margin-top:8px">温冷サインからCOOL / HEAT / NONEを整理します。</div></div>
+      <div class="careToolGroup"><div class="careToolGroupTitle"><span>AROM / PROM CARE DECISION</span><span class="careToolTag">ROM連携</span></div><div class="muted">ROMタブで保存した同部位の最新AROM/PROMを自動参照。PROMも狭いか、PROMはあるがAROMだけ使えていないかでCARE候補を変えます。</div><div id="careAromLink" class="careAromLink" style="margin-top:8px">同部位の保存済みAROM/PROMを確認します。</div></div>
+      <h3>危険サイン確認</h3><div id="careFlags"></div>
+      <button class="primary" style="width:100%;margin-top:9px" onclick="evaluateSelfCare()">判定してセルフケアを表示</button>
+      <div id="careAreaPoster" class="carePosterWrap"></div>
+    </div>
+    <div class="card"><h2>判定 / メニュー</h2><div id="careResult"><span class="muted">上の項目を入力してください。</span></div></div>
+    <div class="card"><h2>実施後の再評価</h2><div class="grid2"><div><label>痛み AFTER 0-10</label><input id="carePainAfter" type="number" min="0" max="10"></div><div><label>ROM AFTER °（任意）</label><input id="careRomAfter" type="number" step="1" min="0" max="360"></div></div><div class="grid2" style="margin-top:8px"><div><label>動作つらさ AFTER 0-10（任意）</label><input id="careMoveAfter" type="number" min="0" max="10"></div><div style="display:flex;align-items:end"><button class="secondary" style="width:100%" onclick="saveSelfCareResult()">結果を保存</button></div></div><div id="careAfterJudge" class="notice" style="margin-top:8px">実施後に痛み・ROM・同じ動作を再評価します。</div></div>
+    <div class="card"><h2>翌日・24Hフォロー</h2><div class="muted">直後に良くても翌日に戻るCAREと、改善が維持されるCAREを分けます。24時間ぴったりでなくても、次回確認時刻を保存します。</div><div style="margin-top:8px"><label>フォローするCARE</label><select id="careFollowupSelect" onchange="loadCareFollowupForm()"></select></div><div id="careFollowupContext" class="careFollowupContext"><span class="muted">保存済みCAREを選択してください。</span></div><div class="grid2" style="margin-top:8px"><div><label>フォロー日</label><input id="careFollowupDate" type="date"></div><div><label>痛み 0-10</label><input id="careFollowupPain" type="number" min="0" max="10"></div></div><div class="grid2" style="margin-top:8px"><div><label>ROM °（任意）</label><input id="careFollowupRom" type="number" step="1" min="0" max="360"></div><div><label>動作つらさ 0-10（任意）</label><input id="careFollowupMove" type="number" min="0" max="10"></div></div><div class="careFollowupStatus"><div><label>体感</label><select id="careFollowupStatus"><option value="better">さらに改善 / 維持良好</option><option value="same" selected>ほぼ同じ</option><option value="worse">戻った / 悪化</option></select></div><div><label>メモ（任意）</label><input id="careFollowupNote" placeholder="例：翌朝は挙上時のみ少し違和感"></div></div><button class="secondary" style="width:100%;margin-top:9px" onclick="saveCareFollowup()">翌日・24H反応を保存</button><div id="careFollowupJudge" class="notice" style="margin-top:8px">直後反応と翌日反応を分けてCARE RESPONSEへ反映します。</div></div>
+    <div class="card"><h2>CARE RESPONSE PROFILE</h2><div class="muted">本人の過去反応から、同じ条件で反応しやすかったCAREプロトコルを更新します。複数CAREを同時実施した場合は“組み合わせへの反応”として扱い、各手技単独の因果とは断定しません。</div><div id="careResponseProfile" style="margin-top:9px"></div></div>
+    <div class="card"><h2>MEDICAL REFERRAL GATE</h2><div class="muted">S.u.Gは診断を行わず、CAREで拾った警告サイン・症状推移・反応不足を整理して、必要時に医療評価へつなぎます。緊急性は実際の症状と地域の医療体制に従って判断してください。</div><div id="careReferralGate"></div><div class="careToolGroup"><div class="careToolGroupTitle"><span>MEDICAL MAP</span><span class="careToolTag">Google Maps</span></div><div class="careToolWhy">受診候補になったとき、近くの医療機関をGoogle Mapsで検索します。現在地はS.u.Gへ保存しません。</div><div id="medicalMapLocation" class="mapEngineLocation">Google Maps側の現在地を使って検索できます。</div><div class="medicalMapActions"><button class="secondary" type="button" onclick="getMapCurrentLocation('medical')">現在地を取得</button><button class="secondary" type="button" onclick="openMedicalMap('orthopedic')">近くの整形外科を探す</button><button class="secondary" type="button" onclick="openMedicalMap('emergency')">救急外来を探す</button></div></div><div class="medicalGateActions"><button class="secondary" type="button" onclick="generateReferralSummary()">紹介サマリー生成</button><button class="secondary" type="button" onclick="copyReferralSummary()">サマリーをコピー</button><button class="secondary" type="button" onclick="downloadReferralSummary()">TXT保存</button></div><textarea id="careReferralSummary" class="medicalSummary" readonly placeholder="紹介サマリーを生成すると、症状・AROM/PROM・CARE反応・トレーニング情報を医療機関向けに整理します。" style="margin-top:9px"></textarea><button class="primary" type="button" style="width:100%;margin-top:8px" onclick="saveReferralRecord()">紹介記録として保存</button></div>
+    <div class="card"><h2>受診後フィードバック</h2><div class="muted">医療機関から受けた運動・負荷に関する指示だけを記録します。S.u.G側で診断名や治療内容を推測しません。</div><div class="medicalFeedbackGrid" style="margin-top:9px"><div><label>受診日</label><input id="medicalVisitDate" type="date"></div><div><label>医療機関名（任意）</label><input id="medicalFacility" placeholder="例：〇〇整形外科"></div><div><label>対象部位</label><select id="medicalArea" onchange="this.dataset.userChanged='1'"><option value="all">全身</option><option value="lowback">腰</option><option value="neck">首</option><option value="shoulder">肩</option><option value="knee">膝</option><option value="ankle">足首</option><option value="wrist">手首</option><option value="elbow">肘</option></select></div><div><label>運動・負荷指示</label><select id="medicalTrainingStatus"><option value="unknown">指示未入力</option><option value="stop_all">全身トレーニング中止</option><option value="stop_area">該当部位の負荷中止</option><option value="modified">該当部位は医療指示の範囲で調整</option><option value="cleared">トレーニング再開可</option></select></div><div><label>再診 / 再評価日（任意）</label><input id="medicalRecheckDate" type="date"></div><div><label>許可された動作・負荷（任意）</label><input id="medicalAllowed" placeholder="例：痛みのない範囲の軽負荷のみ"></div></div><div style="margin-top:8px"><label>医療機関からの指示・制限</label><textarea id="medicalInstructions" placeholder="例：頭上動作は一旦中止。2週間後に再評価。"></textarea></div><button class="primary" type="button" style="width:100%;margin-top:9px" onclick="saveMedicalFeedback()">受診後フィードバックを保存</button><div id="medicalFeedbackHistory" style="margin-top:9px"></div></div>
+    <div class="card"><h2>セルフケア履歴</h2><div id="careHistory"></div></div>
+  </section>
+  <section id="rom" class="panel" data-rom-care-panel="rom">
+    <div class="card">
+      <div class="sectionLead"><div><h2>ROMスクリーニング</h2><div class="muted">スクワットの側面画像から、2DランドマークでボトムROMを数値化。</div></div><img class="sectionMascot" src="../../mascot-basic.png?v=26-4-2-walk-route" alt=""></div>
+      <div class="notice">撮影：真横から全身を入れ、スクワット最下点で撮影。カメラは傾けず、肩・股関節・膝・足首・つま先が見える状態を推奨。</div>
+      <div class="grid2" style="margin-top:9px">
+        <div><label>日付</label><input id="romDate" type="date"></div>
+        <div><label>種目</label><select id="romExercise"><option value="squat">スクワット</option></select></div>
+      </div>
+      <div style="margin-top:8px"><label>側面画像</label><input id="romFile" type="file" accept="image/*" onchange="loadRomImage(this)"></div>
+      <div id="romModelStatus" class="romStatus">Poseモデル：未初期化</div>
+      <div id="romStage" class="romStage"><div class="romEmpty">スクワット最下点の側面画像を選択してください。<br>画像上に関節点と角度を描画します。</div></div>
+      <button id="romAnalyzeBtn" class="primary" style="width:100%;margin-top:9px" onclick="analyzeSquatRom()" disabled>スクワットROMを自動判定</button>
+      <div class="romLegend">※ 医療診断・競技審判ではありません。カメラ位置、衣服、身体の回旋、ランドマーク検出誤差の影響を受ける2Dトレーニングスクリーニングです。</div>
+    </div>
+    <div class="card">
+      <h2>ROM判定</h2>
+      <div id="romResult"><span class="muted">画像を解析すると結果が表示されます。</span></div>
+    </div>
+    <div class="card">
+      <div class="sectionLead"><div><h2>関節 AROM / PROM</h2><div class="muted">ストレッチ・コンディショニング側の関節可動域評価。AROM＝自力、PROM＝外力補助で確認。</div></div><img class="sectionMascot" src="../../mascot-stretch.png?v=26-4-2-walk-route" alt=""></div>
+      <div class="notice">PROMは痛みを押して無理に測らないでください。AROMだけでも判定可能。伸展は0°を基準とし、伸展不足はマイナス入力（例：膝伸展10°不足＝-10°）。</div>
+      <div class="grid2" style="margin-top:9px">
+        <div><label>日付</label><input id="aromDate" type="date"></div>
+        <div><label>左右</label><select id="aromSide"><option value="right">右</option><option value="left">左</option></select></div>
+      </div>
+      <div style="margin-top:8px"><label>関節 / 動作</label>
+        <select id="aromMovement" onchange="renderAromReference()">
+          <option value="knee_flex">膝｜屈曲</option>
+          <option value="knee_ext">膝｜伸展</option>
+          <option value="ankle_df">足関節｜背屈</option>
+          <option value="ankle_pf">足関節｜底屈</option>
+          <option value="hip_flex">股関節｜屈曲</option>
+          <option value="hip_ext">股関節｜伸展</option>
+          <option value="hip_abd">股関節｜外転</option>
+          <option value="hip_add">股関節｜内転</option>
+          <option value="hip_er">股関節｜外旋</option>
+          <option value="hip_ir">股関節｜内旋</option>
+          <option value="cervical_flex">頸椎｜屈曲</option>
+          <option value="cervical_ext">頸椎｜伸展</option>
+          <option value="cervical_rot">頸椎｜回旋</option>
+          <option value="cervical_lat">頸椎｜側屈</option>
+          <option value="shoulder_flex">肩｜屈曲</option>
+          <option value="shoulder_ext">肩｜伸展</option>
+          <option value="shoulder_abd">肩｜外転</option>
+          <option value="shoulder_er">肩｜外旋</option>
+          <option value="shoulder_ir">肩｜内旋</option>
+          <option value="shoulder_hflex">肩｜水平屈曲</option>
+          <option value="shoulder_hext">肩｜水平伸展</option>
+          <option value="thoracic_rot">胸椎｜回旋</option>
+          <option value="thoracic_flex">胸椎｜屈曲</option>
+          <option value="thoracic_ext">胸椎｜伸展</option>
+          <option value="thoracic_lat">胸椎｜側屈</option>
+          <option value="elbow_flex">肘｜屈曲</option>
+          <option value="elbow_ext">肘｜伸展</option>
+          <option value="forearm_pron">前腕｜回内</option>
+          <option value="forearm_sup">前腕｜回外</option>
+          <option value="wrist_flex">手関節｜掌屈</option>
+          <option value="wrist_ext">手関節｜背屈</option>
+          <option value="wrist_radial">手関節｜橈屈</option>
+          <option value="wrist_ulnar">手関節｜尺屈</option>
+          <option value="foot_inv">足部｜内がえし</option>
+          <option value="foot_ev">足部｜外がえし</option>
+        </select>
+      </div>
+      <div id="aromReference" class="notice" style="margin-top:8px"></div>
+      <div class="grid3" style="margin-top:8px">
+        <div><label>AROM °</label><input id="aromActive" type="number" step="1" placeholder="例 135"></div>
+        <div><label>PROM °（任意）</label><input id="aromPassive" type="number" step="1" placeholder="未測定可"></div>
+        <div><label>痛み 0-10</label><input id="aromPain" type="number" min="0" max="10" value="0"></div>
+      </div>
+      <div style="margin-top:8px"><label>メモ</label><input id="aromMemo" placeholder="例：膝前面に詰まり、終末域で張りなど"></div>
+      <button class="primary" style="width:100%;margin-top:9px" onclick="analyzeAromProm()">AROM / PROMを判定</button>
+    </div>
+    <div class="card">
+      <h2>AROM / PROM 判定</h2>
+      <div id="aromResult"><span class="muted">数値を入力すると、参考帯・AROM/PROM差・機能への影響候補を表示します。</span></div>
+    </div>
+    <div class="card">
+      <div class="sectionLead"><div><h2>肩甲上腕リズム（SHR）</h2><div class="muted">写真で腕の挙上角を自動検出＋肩甲骨だけ2点タップ。数字を自分で測らなくてOK。</div></div><img class="sectionMascot" src="../../mascot-stretch.png?v=26-4-2-walk-route" alt=""></div>
+
+      <div class="notice">
+        <b>撮影：</b>後ろから、全身または腰〜頭まで入るように撮影。①腕を体側に下ろした写真 ②同じ位置から腕を上げた写真。肩甲面挙上か外転が一番測りやすい。
+      </div>
+
+      <div class="grid2" style="margin-top:9px">
+        <div><label>日付</label><input id="shrDate" type="date"></div>
+        <div><label>測る側</label><select id="shrSide" onchange="window.resetShrAutoTap?.()"><option value="right">右</option><option value="left">左</option></select></div>
+      </div>
+
+      <div class="grid2" style="margin-top:8px">
+        <div><label>挙上面</label><select id="shrPlane"><option value="scaption">肩甲面挙上</option><option value="abduction">外転</option><option value="flexion">屈曲（後面写真では参考）</option></select></div>
+        <div><label>局面</label><select id="shrPhase"><option value="raising">挙上</option><option value="lowering">下降</option></select></div>
+      </div>
+
+      <div id="shrModelStatus" class="romStatus" style="margin-top:8px">Poseモデル：未読込</div>
+
+      <div class="shrPhotoGrid">
+        <div class="shrPhotoBox">
+          <h3>① START｜腕を下ろす</h3>
+          <input type="file" accept="image/*" onchange="window.loadShrPhoto?.('start',this)">
+          <div class="shrCanvasWrap"><canvas id="shrCanvasStart" class="shrCanvas" width="720" height="960"></canvas></div>
+          <div id="shrStartReadout" class="shrReadout">写真を選択してください。</div>
+        </div>
+        <div class="shrPhotoBox">
+          <h3>② UP｜腕を上げる</h3>
+          <input type="file" accept="image/*" onchange="window.loadShrPhoto?.('end',this)">
+          <div class="shrCanvasWrap"><canvas id="shrCanvasEnd" class="shrCanvas" width="720" height="960"></canvas></div>
+          <div id="shrEndReadout" class="shrReadout">写真を選択してください。</div>
+        </div>
+      </div>
+
+      <button id="shrAutoBtn" class="primary" style="width:100%;margin-top:9px" onclick="window.analyzeShrPhotos?.()">写真から腕角度を自動検出</button>
+
+      <div id="shrTapGuide" class="shrTapStep">
+        <b>次：</b> 自動検出後、START写真で「肩甲棘の根元」と「肩峰の後外側」を2点タップ。順番はどちらからでもOK。次にUP写真も同じ2点をタップ。
+      </div>
+
+      <div class="shrAutoValues">
+        <div class="shrAutoValue"><span>腕の挙上量｜START→UP 自動</span><b id="shrArmAuto">--</b></div>
+        <div class="shrAutoValue"><span>肩甲骨 START｜タップ</span><b id="shrScapStartAuto">--</b></div>
+        <div class="shrAutoValue"><span>肩甲骨 UP｜タップ</span><b id="shrScapEndAuto">--</b></div>
+      </div>
+
+      <input id="shrArm" type="hidden">
+      <input id="shrScapStart" type="hidden">
+      <input id="shrScapEnd" type="hidden">
+
+      <div class="row" style="gap:7px;margin-top:9px">
+        <button type="button" class="secondary" style="flex:1" onclick="window.resetShrTaps?.()">タップだけリセット</button>
+        <button type="button" class="secondary" style="flex:1" onclick="window.resetShrAutoTap?.()">写真評価をリセット</button>
+      </div>
+
+      <div class="grid2" style="margin-top:8px">
+        <div><label>痛み 0-10</label><input id="shrPain" type="number" min="0" max="10" value="0"></div>
+        <div><label>メモ</label><input id="shrMemo" placeholder="例：90°から肩すくみ"></div>
+      </div>
+
+      <button class="primary" style="width:100%;margin-top:9px" onclick="analyzeShr()">肩甲上腕リズムを判定</button>
+
+      <div class="romLegend">
+        ※ 腕角度はPose推定。肩甲骨は骨指標が通常のPoseモデルでは直接取れないため2点タップで補正します。写真角度・衣服・触診位置で誤差が出るため、診断ではなく同条件での左右/前回比較に使用。
+      </div>
+    </div>
+    <div class="card">
+      <h2>SHR判定</h2>
+      <div id="shrResult"><span class="muted">写真の自動検出＋4点タップが完了したら、上方回旋量・GH推定寄与・SHR比を表示します。</span></div>
+    </div>
+    <div class="card">
+      <h2>SHR履歴</h2>
+      <div id="shrHistory"><span class="muted">履歴なし</span></div>
+    </div>
+    <div class="card">
+      <h2>AROM / PROM 履歴</h2>
+      <div id="aromHistory"><span class="muted">履歴なし</span></div>
+    </div>    <div class="card">
+      <h2>左右差ランキング</h2>
+      <div class="muted">同日・同動作で左右を保存すると、自動で差が大きい順に表示。</div>
+      <div id="aromAsymmetry" style="margin-top:8px"><span class="muted">左右データなし</span></div>
+    </div>    <div class="card">
+      <div class="sectionLead"><div><h2>Joint by Joint MAP</h2><div class="muted">関節可動域・左右差・CARE・SHRを統合して、次に見る場所を自動整理。</div></div><img class="sectionMascot" src="../../mascot-basic.png?v=26-4-2-walk-route" alt=""></div>
+      <div class="notice">S.u.Gの運動スクリーニング用フレーム。ROMだけで「安定性不足」や原因筋を断定しません。膝・腰などの安定性は次の動作スクリーンと合わせて評価します。</div>
+      <button class="secondary" style="width:100%;margin-top:9px" onclick="renderJointByJoint()">最新データで更新</button>
+      <div id="jbjPriority" class="jbjPriority"><b>優先候補</b><br>評価データを入力すると表示します。</div>
+      <div id="jbjMap" class="jbjGrid"><span class="muted">評価データなし</span></div>
+    </div>
+
+    <div class="card">
+      <div class="sectionLead"><div><h2>動作スクリーン</h2><div class="muted">写真1枚からPoseを自動解析。動作の「傾向」を数値化して、ROM・CARE・Joint by Jointとつなげます。</div></div><img class="sectionMascot" src="../../mascot-running.png?v=26-4-2-walk-route" alt=""></div>
+      <div class="notice"><b>診断ではありません。</b> 2D写真はカメラ位置・奥行き・動作の瞬間で数値が変わります。同じ撮影条件で左右・前回比較を優先します。</div>
+
+      <div class="grid2" style="margin-top:9px">
+        <div><label>日付</label><input id="moveDate" type="date"></div>
+        <div><label>動作</label>
+          <select id="moveType" onchange="window.renderMoveGuide?.()">
+            <option value="sls_front">片脚スクワット｜正面</option>
+            <option value="lunge_side">ランジ｜側面</option>
+            <option value="hinge_side">ヒップヒンジ｜側面</option>
+            <option value="overhead_front">両腕挙上｜正面/背面</option>
+          </select>
+        </div>
+      </div>
+      <div class="grid2" style="margin-top:8px">
+        <div><label>評価側</label><select id="moveSide"><option value="right">右</option><option value="left">左</option></select></div>
+        <div><label>痛み 0-10</label><input id="movePain" type="number" min="0" max="10" value="0"></div>
+      </div>
+
+      <div id="moveGuide" class="aromPattern" style="margin-top:8px"></div>
+
+      <div style="margin-top:8px"><label>写真</label><input id="moveFile" type="file" accept="image/*" onchange="window.loadMovementPhoto?.(this)"></div>
+      <div id="moveModelStatus" class="romStatus" style="margin-top:8px">Poseモデル：未読込</div>
+      <div class="romCanvasWrap" style="margin-top:8px"><canvas id="moveCanvas" width="900" height="900"></canvas></div>
+
+      <button id="moveAnalyzeBtn" class="primary" style="width:100%;margin-top:9px" onclick="window.analyzeMovementScreen?.()">動作を自動解析</button>
+      <div style="margin-top:8px"><label>メモ</label><input id="moveMemo" placeholder="例：右膝が内側に入りやすい、腰に違和感など"></div>
+    </div>
+
+    <div class="card">
+      <h2>動作スクリーン判定</h2>
+      <div id="moveResult"><span class="muted">写真を選択して自動解析してください。</span></div>
+    </div>
+
+    <div class="card">
+      <div class="sectionLead"><div><h2>INTEGRATED CARE DECISION ENGINE</h2><div class="muted">CARE RESPONSE・24H反応・AROM/PROM・胸椎ROM・SHR・Joint by Joint・動作スクリーン・全身回復を横断し、Constraint Candidate＋CONFIDENCE＋Priority CARE TOP3を作成。</div></div><img class="sectionMascot" src="../../mascot-highfive.png?v=26-5-0-integrated-care" alt=""></div>
+      <div class="notice"><b>全身回復と局所制約を分離して判定。</b> 傷病名や原因筋を断定せず、「次に検証する制約候補」として表示します。警告症状・医療指示は最優先です。</div>
+      <button class="primary" style="width:100%;margin-top:9px" onclick="renderIntegratedAssessment(true)">最新データでCARE PRIORITYを更新</button>
+      <div id="integratedResult"><span class="muted">記録を入力すると自動で統合します。</span></div>
+      <button id="integratedSaveBtn" class="secondary" style="width:100%;margin-top:9px" onclick="saveIntegratedAssessment()">この統合判定を保存</button>
+    </div>
+
+    <div class="card">
+      <h2>統合判定履歴</h2>
+      <div id="integratedHistory"><span class="muted">履歴なし</span></div>
+    </div>
+
+    <div class="card">
+      <h2>動作スクリーン履歴</h2>
+      <div id="moveHistory"><span class="muted">履歴なし</span></div>
+    </div>
+
+    <div class="card">
+      <h2>動作ROM履歴</h2>
+      <div id="romHistory"><span class="muted">履歴なし</span></div>
+    </div>
+    <img id="romSourceImage" alt="" style="display:none">
+  </section>
+
+
+</main>
+<div id="beautyReassessmentNav" class="beautyReassessmentNav" hidden>
+  <button id="beautyReassessmentButton" type="button">再評価へ進む</button>
+</div>
+<script>
+(() => {
+  const byId = id => document.getElementById(id);
+  const cardOf = id => byId(id)?.closest('.card') || null;
+  const uniqueCards = cards => [...new Set(cards.filter(Boolean))];
+
+  const overviewCard = (eyebrow, title, copy = '') => {
+    const card = document.createElement('div');
+    card.className = 'card compactOverview';
+    card.innerHTML = `<div class="compactEyebrow">${eyebrow}</div><h2>${title}</h2>${copy ? `<div class="compactCopy">${copy}</div>` : ''}`;
+    return card;
+  };
+
+  const detailGroup = (title, copy, cards) => {
+    const list = uniqueCards(cards);
+    if (!list.length) return null;
+    const details = document.createElement('details');
+    details.className = 'compactDetails';
+    details.dataset.compactGroup = title;
+    details.innerHTML = `<summary><span><b>${title}</b><small>${copy}</small></span><span class="compactChevron" aria-hidden="true"></span></summary><div class="compactDetailsBody"></div>`;
+    list[0].before(details);
+    const body = details.querySelector('.compactDetailsBody');
+    list.forEach(card => body.append(card));
+    return details;
+  };
+
+  const inlineDetails = (host, title, copy, nodes) => {
+    const list = [...nodes].filter(Boolean);
+    if (!host || !list.length) return null;
+    const details = document.createElement('details');
+    details.className = 'compactDetails compactInlineDetails';
+    details.dataset.compactGroup = title;
+    details.innerHTML = `<summary><span><b>${title}</b><small>${copy}</small></span><span class="compactChevron" aria-hidden="true"></span></summary><div class="compactDetailsBody"></div>`;
+    list[0].before(details);
+    const body = details.querySelector('.compactDetailsBody');
+    list.forEach(node => body.append(node));
+    return details;
+  };
+
+  const carePanel = document.querySelector('[data-rom-care-panel="care"]');
+  const romPanel = document.querySelector('[data-rom-care-panel="rom"]');
+  if (!carePanel || !romPanel) return;
+
+  const carePrimary = cardOf('careArea');
+  const careResultCard = cardOf('careResult');
+  const referralCard = cardOf('careReferralGate');
+  const medicalFeedbackCard = cardOf('medicalVisitDate');
+  const integratedCard = cardOf('integratedResult');
+  const integratedHistoryCard = cardOf('integratedHistory');
+
+  const careAlert = overviewCard('MEDICAL GATE', '医療評価を優先すべき警告', '警告サインがある場合はセルフケアより先に確認してください。');
+  careAlert.classList.add('compactAlertSummary');
+  careAlert.append(byId('careReferralGate'));
+  carePanel.prepend(careAlert);
+
+  if (carePrimary) {
+    carePrimary.classList.add('compactPrimaryCard');
+    const title = carePrimary.querySelector('h2');
+    if (title) title.textContent = '痛み / 症状';
+    careAlert.after(carePrimary);
+    inlineDetails(
+      carePrimary,
+      '症状・CARE詳細入力',
+      'ROM BEFORE、発症状況、温冷、急性CARE、AROM / PROM連携',
+      carePrimary.querySelectorAll('.careResponseMeasure, .careToolGroup')
+    );
+  }
+
+  if (careResultCard) {
+    careResultCard.classList.add('compactOverview');
+    const title = careResultCard.querySelector('h2');
+    if (title) title.textContent = '今日のCARE判定 / 今日やること';
+    carePrimary?.after(careResultCard);
+  }
+
+  const carePriority = overviewCard('INTEGRATED CARE', '優先CARE TOP3', '全身回復と局所制約を分け、次に行うCAREを整理します。');
+  carePriority.append(byId('integratedResult'));
+  careResultCard?.after(carePriority);
+
+  if (integratedCard) carePanel.append(integratedCard);
+  if (integratedHistoryCard) carePanel.append(integratedHistoryCard);
+
+  detailGroup('CARE RESPONSE', '実施直後の痛み・ROM・動作反応を同条件で再評価', [cardOf('careAfterJudge'), cardOf('careResponseProfile')]);
+  detailGroup('24H FOLLOW UP', '翌日まで改善が維持されたかを記録', [cardOf('careFollowupJudge')]);
+  detailGroup('Integrated CARE Decision', 'CARE PRIORITYの更新・保存と根拠データ', [integratedCard]);
+  detailGroup('Medical Referral詳細', '医療機関検索、紹介サマリー、受診後フィードバック', [referralCard, medicalFeedbackCard]);
+  detailGroup('履歴・詳細データ', 'CARE、統合判定の保存履歴', [cardOf('careHistory'), integratedHistoryCard]);
+
+  const romResultCard = cardOf('romResult');
+  const asymmetryCard = cardOf('aromAsymmetry');
+  const jbjCard = cardOf('jbjPriority');
+  if (romResultCard) {
+    romResultCard.classList.add('compactOverview');
+    const title = romResultCard.querySelector('h2');
+    if (title) title.textContent = '今日のROM評価サマリー';
+    romPanel.prepend(romResultCard);
+  }
+  if (asymmetryCard) {
+    asymmetryCard.classList.add('compactOverview');
+    const title = asymmetryCard.querySelector('h2');
+    if (title) title.textContent = '左右差';
+    romResultCard?.after(asymmetryCard);
+  }
+
+  const romPriority = overviewCard('PRIORITY', '優先課題', '左右差とJoint by Jointから、次に確認する候補を表示します。');
+  romPriority.append(byId('jbjPriority'));
+  asymmetryCard?.after(romPriority);
+
+  const romNext = overviewCard('NEXT ASSESSMENT', '次にやる評価');
+  romNext.innerHTML += '<div class="compactNextAction"><b>AROM / PROM → 左右差</b><span>必要時だけSHR・胸椎ROM・Movement Screenへ進みます。</span></div>';
+  romPriority.after(romNext);
+
+  detailGroup('ROM画像解析', 'スクワット側面画像からボトムROMを確認', [cardOf('romFile')]);
+  detailGroup('AROM / PROM詳細・胸椎ROM', '関節ごとの自動可動域、他動可動域、痛み、判定', [cardOf('aromMovement'), cardOf('aromResult')]);
+  detailGroup('SHR', '肩甲上腕リズムの写真解析・判定', [cardOf('shrModelStatus'), cardOf('shrResult')]);
+  detailGroup('Joint by Joint', '優先課題の根拠MAPを確認', [jbjCard]);
+  detailGroup('Movement Screen', '片脚スクワット、ランジ、ヒンジ、両腕挙上', [cardOf('moveFile'), cardOf('moveResult')]);
+  detailGroup('履歴・詳細データ', 'AROM / PROM、SHR、Movement、ROMの保存履歴', [cardOf('shrHistory'), cardOf('aromHistory'), cardOf('moveHistory'), cardOf('romHistory')]);
+})();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../shared/contracts.js?v=27.82"></script>
+<script src="../shared/rom-care-v27.82.js?v=27.82"></script>
+<script src="../shared/rom-care-data-v27.82.js?v=27.82"></script>
+<script src="../shared/rom-care-engine-v27.82.js?v=27.82"></script>
+<script type="module" src="../shared/rom-care-analysis-v27.82.js?v=27.82"></script>
+<script>
+const romCareContext = window.SuGRomCare.queryContext();
+const romCareReturn = () => {
+  location.href = window.SuGRomCare.returnUrl(romCareContext);
+};
+const romCareBack = document.getElementById('romCareBack');
+romCareBack.textContent = romCareContext.source === 'miss' ? '‹ BEAUTY BODY評価' : '‹ BODY';
+romCareBack.addEventListener('click', romCareReturn);
+if (romCareContext.source === 'miss') {
+  document.body.classList.add('romCareBeautySource');
+  const beautyNav = document.getElementById('beautyReassessmentNav');
+  beautyNav.hidden = false;
+  document.getElementById('beautyReassessmentButton').addEventListener('click', romCareReturn);
+}
+function applyRomCareLocalOnlyMode() {
+  document.body.classList.add('romCareLocalOnly');
+  document.querySelectorAll('button[onclick*="save"]').forEach(button => {
+    button.disabled = true;
+    button.title = '共通データへの保存はBODYログイン時に利用できます';
+  });
+}
+window.SuGRomCareData.boot().then(result => {
+  if (result.ok || result.localOnly) window.SuGRomCareEngine.boot();
+  if (result.localOnly) applyRomCareLocalOnlyMode();
+});
+</script>
+</body>
+</html>

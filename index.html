@@ -519,6 +519,7 @@ window.SUG_WALK_ROUTE_URL = "https://sug-private-engine.vercel.app/api/v1/walkin
 </script>
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="apps/shared/rom-care-v27.82.js?v=27.82"></script>
 
 <style id="v26527VisionPatch">
 /* V26.5.27 IDEAL VISION: real 5-angle views + visible type rail + iPhone safe area */
@@ -2396,6 +2397,7 @@ async function loadMember(id){
   ["weights","meals","training","trainingRoutines","recovery","cycleHealth","hydration","dailyRhythm","dailySchedule","checkins","activity","healthVitals","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos","medicalReferrals"].forEach(k=>{
     if(!Array.isArray(db.members[id][k]))db.members[id][k]=[];
   });
+  window.SuGRomCare.ensureMemberCollections(db.members[id]);
   if(!db.members[id].restTargets || typeof db.members[id].restTargets!=="object" || Array.isArray(db.members[id].restTargets))db.members[id].restTargets={};
   if(!db.members[id].coachPlan || typeof db.members[id].coachPlan!=="object") db.members[id].coachPlan=baseMember(p?.display_name||"会員").coachPlan;
   db.members[id].coachPlan={...baseMember(p?.display_name||"会員").coachPlan,...db.members[id].coachPlan};
@@ -6896,17 +6898,10 @@ const AROM_REFERENCE={
 };
 
 function aromBand(v, ref){
-  if(v==null || !Number.isFinite(Number(v))) return {symbol:"—",text:"未測定",cls:""};
-  if(ref?.hasNorm===false) return {symbol:"↔",text:"前回・左右比較優先",cls:""};
-  v=Number(v);
-  if(v>=ref.ideal[0] && v<=ref.ideal[1]) return {symbol:"◎",text:"参考帯内",cls:"ok"};
-  if(v>=ref.warn[0] && v<=ref.warn[1]) return {symbol:"○",text:"参考帯付近",cls:"warn"};
-  return {symbol:"△",text:"参考帯外",cls:"bad"};
+  return window.SuGRomCare.aromBand(v,ref);
 }
 function aromGapThreshold(key){
-  if(["knee_ext","elbow_ext"].includes(key))return 5;
-  if(["ankle_df","ankle_pf"].includes(key))return 7;
-  return 10;
+  return window.SuGRomCare.aromGapThreshold(key);
 }
 function renderAromReference(){
   const key=document.getElementById("aromMovement")?.value||"knee_flex";
@@ -7422,17 +7417,7 @@ function renderJointByJoint(){
 function renderAromAsymmetry(){
   const box=document.getElementById("aromAsymmetry");if(!box||!m())return;
   const rows=m().aromAssessments||[];
-  const by={};
-  rows.forEach(x=>{
-    const k=`${x.date}__${x.key}`;
-    by[k]=by[k]||{date:x.date,key:x.key,label:x.label,left:null,right:null};
-    by[k][x.side]=x;
-  });
-  const pairs=Object.values(by).filter(x=>x.left&&x.right).map(x=>({
-    ...x,
-    diff:Math.abs(Number(x.right.active)-Number(x.left.active)),
-    r:Number(x.right.active),l:Number(x.left.active)
-  })).sort((a,b)=>b.diff-a.diff).slice(0,12);
+  const pairs=window.SuGRomCare.aromAsymmetryPairs(rows,12);
   box.innerHTML=pairs.map(x=>{
     const cls=x.diff>=15?"bad":x.diff>=10?"warn":"ok";
     const sym=x.diff>=15?"△":x.diff>=10?"○":"◎";
@@ -7599,21 +7584,9 @@ function saveRomResult(){
   alert("ROM判定を保存しました");
 }
 
-const ROM_REFERENCE={
-  knee:{ideal:[70,90],warn:[60,100],label:"参考 70〜90°"},
-  hip:{ideal:[55,75],warn:[45,85],label:"参考 55〜75°"},
-  ankle:{ideal:[95,115],warn:[90,120],label:"参考 95〜115°"},
-  trunk:{ideal:[25,45],warn:[20,50],label:"参考 25〜45°"},
-  depth:{ideal:[-3,3],warn:[-5,5],label:"参考 -3.0〜+3.0%"},
-  lr:{ideal:[0,10],warn:[0,15],label:"参考 0〜10°"}
-};
+const ROM_REFERENCE=window.SuGRomCare.ROM_REFERENCE;
 function romBand(value,key){
-  const r=ROM_REFERENCE[key];
-  if(value==null||!Number.isFinite(Number(value)))return {symbol:"—",text:"判定保留",cls:""};
-  const v=Number(value);
-  if(v>=r.ideal[0]&&v<=r.ideal[1])return {symbol:"◎",text:"参考帯内",cls:"ok"};
-  if(v>=r.warn[0]&&v<=r.warn[1])return {symbol:"○",text:"参考帯付近",cls:"warn"};
-  return {symbol:"△",text:"参考帯外",cls:"bad"};
+  return window.SuGRomCare.romBand(value,key,ROM_REFERENCE);
 }
 function romMetricCard(title,valueText,key,sub,valueForBand){
   const b=romBand(valueForBand,key),r=ROM_REFERENCE[key];
@@ -8237,6 +8210,7 @@ function normalizeMemberData(data,name="会員"){
   if(!x.goalPlan||typeof x.goalPlan!=="object"||Array.isArray(x.goalPlan))x.goalPlan=base.goalPlan; else x.goalPlan={...base.goalPlan,...x.goalPlan};
   if(!x.weeklyNutrition||typeof x.weeklyNutrition!=="object"||Array.isArray(x.weeklyNutrition))x.weeklyNutrition=base.weeklyNutrition; else x.weeklyNutrition={...base.weeklyNutrition,...x.weeklyNutrition};
   ["weights","meals","training","trainingRoutines","recovery","cycleHealth","hydration","dailyRhythm","dailySchedule","checkins","activity","selfCare","smartPlans","romAssessments","aromAssessments","shrAssessments","movementScreens","integratedAssessments","bodyMeasurements","responseExperiments","photos","medicalReferrals"].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});
+  window.SuGRomCare.ensureMemberCollections(x);
   if(!x.restTargets || typeof x.restTargets!=="object" || Array.isArray(x.restTargets))x.restTargets={};
   return x;
 }

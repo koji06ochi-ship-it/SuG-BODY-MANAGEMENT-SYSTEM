@@ -1,0 +1,13 @@
+{
+  "canonical_path": "C:\\Users\\User\\.codex\\visualizations\\2026\\10\\26\\01a1772a-59fd-7633-ab51-a930ef721f7d\\SUG_BODY_HANDOFF_20261026_01",
+  "backup_file": "SUG_BODY_CANONICAL_BACKUP_20261027.zip",
+  "backup_sha256": "F7F589A7A44A177CB5C4DE2FA5382A76A4912927025E003A5A9F987AD3F2D2E6",
+  "file_count": 3706,
+  "backup_bytes": 29938204,
+  "read_verify_bad": 0,
+  "secrets_included": 0,
+  "source_branch": "codex/body-architecture-v27.82",
+  "pre_sync_head": "68773b8c873bf5ecba5338cbc9480d7e5b7f37a0",
+  "created_at": "2026-10-27 Asia/Tokyo",
+  "restore": "Extract the ZIP into a new empty folder and verify BACKUP-MANIFEST-SHA256.json before use. Do not overwrite an existing worktree."
+}
