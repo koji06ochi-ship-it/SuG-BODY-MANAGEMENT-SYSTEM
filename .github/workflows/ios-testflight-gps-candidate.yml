@@ -1,11 +1,7 @@
 name: iOS TestFlight GPS candidate upload
 
 on:
-  pull_request:
-    types: [synchronize]
-    paths:
-      - 'ios/SuGMember/**'
-      - '.github/workflows/ios-testflight-gps-candidate.yml'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -16,7 +12,7 @@ concurrency:
 
 jobs:
   testflight:
-    if: github.event.pull_request.number == 46 && github.event.pull_request.head.repo.full_name == github.repository
+    if: github.ref == 'refs/heads/candidate/healthkit-gps-20261029'
     runs-on: macos-26
     env:
       APP_BUNDLE_ID: jp.sugosaka.member
