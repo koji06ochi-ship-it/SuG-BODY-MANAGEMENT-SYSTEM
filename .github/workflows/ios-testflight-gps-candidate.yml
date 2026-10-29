@@ -29,6 +29,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Verify approved seven-screen BODY is staged before signing
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in apps/body/daily-preview/index.html apps/body/daily-preview/seven-screen.js apps/body/daily-preview/seven-screen.css apps/body/daily-preview/health-intake.js; do
+            if [ ! -s "$file" ]; then
+              echo "::error::Missing seven-screen BODY asset: $file. Do not ship the legacy V27.76 page."
+              exit 1
+            fi
+          done
+          if grep -q 'best-of-miss-demo-v27.76.html' ios/SuGMember/ContentView.swift; then
+            echo "::error::iOS BODY still points at V27.76; stop distribution."
+            exit 1
+          fi
+
       - name: Verify signing secret and candidate commit
         id: gate
         shell: bash
