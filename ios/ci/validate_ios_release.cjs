@@ -55,7 +55,8 @@ check('XcodeGen embeds BodyWeb as resources', /path:\s*BodyWeb[\s\S]*?type:\s*fo
 check('XcodeGen references HealthKit entitlements', /CODE_SIGN_ENTITLEMENTS:\s*SuGMember\/SuGMember\.entitlements/.test(project));
 check('XcodeGen generates the HealthKit entitlement', /entitlements:[\s\S]*?properties:[\s\S]*?com\.apple\.developer\.healthkit:\s*true/.test(project));
 check('HealthKit entitlement enabled', /com\.apple\.developer\.healthkit[\s\S]*?<true\/>/.test(entitlements));
-check('Info.plist has read-only HealthKit usage copy', /NSHealthShareUsageDescription/.test(plist));
+check('Info.plist has both required HealthKit purpose strings', /NSHealthShareUsageDescription/.test(plist) && /NSHealthUpdateUsageDescription/.test(plist));
+check('HealthKit update purpose string discloses read-only behavior', /NSHealthUpdateUsageDescription[\s\S]*?書き込みを行いません/.test(plist));
 check('Info.plist keeps camera, photo and location usage copy', ['NSCameraUsageDescription','NSPhotoLibraryUsageDescription','NSLocationWhenInUseUsageDescription'].every(key => plist.includes(key)));
 check('Info.plist declares no non-exempt encryption', /ITSAppUsesNonExemptEncryption[\s\S]*?<false\/>/.test(plist));
 
