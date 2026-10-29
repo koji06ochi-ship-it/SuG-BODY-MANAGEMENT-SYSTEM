@@ -53,6 +53,7 @@ check('XcodeGen marketing version is 1.0.0', /MARKETING_VERSION:\s*'1\.0\.0'/.te
 check('XcodeGen default next build is 291', /CURRENT_PROJECT_VERSION:\s*'291'/.test(project));
 check('XcodeGen embeds BodyWeb as resources', /path:\s*BodyWeb[\s\S]*?type:\s*folder[\s\S]*?buildPhase:\s*resources/.test(project));
 check('XcodeGen references HealthKit entitlements', /CODE_SIGN_ENTITLEMENTS:\s*SuGMember\/SuGMember\.entitlements/.test(project));
+check('XcodeGen generates the HealthKit entitlement', /entitlements:[\s\S]*?properties:[\s\S]*?com\.apple\.developer\.healthkit:\s*true/.test(project));
 check('HealthKit entitlement enabled', /com\.apple\.developer\.healthkit[\s\S]*?<true\/>/.test(entitlements));
 check('Info.plist has read-only HealthKit usage copy', /NSHealthShareUsageDescription/.test(plist));
 check('Info.plist keeps camera, photo and location usage copy', ['NSCameraUsageDescription','NSPhotoLibraryUsageDescription','NSLocationWhenInUseUsageDescription'].every(key => plist.includes(key)));

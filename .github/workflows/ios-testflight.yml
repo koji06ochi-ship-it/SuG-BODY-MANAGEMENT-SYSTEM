@@ -211,7 +211,9 @@ jobs:
           test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleVersion' "$INFO")" = '${{ inputs.build_number }}'
           test -s "$APP_PATH/BodyWeb/index.html"
           test -s "$APP_PATH/BodyWeb/body-web-manifest.json"
-          codesign -d --entitlements :- "$APP_PATH" 2> "$RUNNER_TEMP/archive-entitlements.plist"
+          codesign -d --entitlements :- "$APP_PATH" \
+            > "$RUNNER_TEMP/archive-entitlements.plist" \
+            2> "$RUNNER_TEMP/archive-codesign-diagnostics.log"
           /usr/libexec/PlistBuddy -c 'Print :com.apple.developer.healthkit' "$RUNNER_TEMP/archive-entitlements.plist" | grep -qx true
 
       - name: Export IPA

@@ -29,3 +29,5 @@ targets:
         VALIDATE_PRODUCT: YES
     entitlements:
       path: SuGMember/SuGMember.entitlements
+      properties:
+        com.apple.developer.healthkit: true
