@@ -19,6 +19,7 @@ const webview = read('ios/SuGMember/MemberWebView.swift');
 const health = read('ios/SuGMember/HealthKitManager.swift');
 const packageScript = read('ios/scripts/package_body_web.cjs');
 const decryptScript = read('ios/scripts/decrypt_body_assets.cjs');
+const normalizeKeyScript = read('ios/scripts/normalize_asc_key.py');
 const bodyIndex = read('apps/body/daily-preview/index.html');
 const supabaseBridge = read('apps/body/daily-preview/body-supabase-bridge.js');
 const trainingSheet = read('apps/body/daily-preview/sheet-training.js');
@@ -44,6 +45,8 @@ check('workflow validates archived bundle, version, build and BODY resource', ['
 check('workflow preserves successful build 290', /CURRENT_PROJECT_VERSION='\$\{\{ inputs\.build_number \}\}'/.test(workflow) && /-le 290/.test(workflow));
 check('public workflow does not publish an extractable IPA artifact', !/actions\/upload-artifact/.test(workflow) && !/retention-days:/.test(workflow));
 check('workflow runs static release validation before signing', workflow.indexOf('validate_ios_release.cjs') > workflow.indexOf('package_body_web.cjs') && workflow.indexOf('validate_ios_release.cjs') < workflow.indexOf('appstore_signing.py prepare'));
+check('workflow removes only the known stale build 290 signing assets before prepare', /certificateId": "L366QFQ25R"/.test(workflow) && /profileId": "52RX8A3H8H"/.test(workflow) && workflow.indexOf('build290-stale-signing.json') < workflow.indexOf('appstore_signing.py prepare'));
+check('normalized App Store private key is masked before export', /::add-mask::\{encoded\}/.test(normalizeKeyScript) && normalizeKeyScript.indexOf('::add-mask::') < normalizeKeyScript.indexOf('ASC_API_KEY_P8_BASE64='));
 
 check('XcodeGen bundle id matches existing app', /PRODUCT_BUNDLE_IDENTIFIER:\s*jp\.sugosaka\.member/.test(project));
 check('XcodeGen marketing version is 1.0.0', /MARKETING_VERSION:\s*'1\.0\.0'/.test(project));

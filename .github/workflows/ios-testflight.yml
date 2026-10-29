@@ -109,6 +109,19 @@ jobs:
       - name: Validate release inputs before Apple signing
         run: node ios/ci/validate_ios_release.cjs
 
+      - name: Remove stale CI signing assets left by build 290
+        run: |
+          set -euo pipefail
+          cat > "$RUNNER_TEMP/build290-stale-signing.json" <<'EOF'
+          {
+            "bundleIdentifier": "jp.sugosaka.member",
+            "certificateId": "L366QFQ25R",
+            "profileId": "52RX8A3H8H"
+          }
+          EOF
+          python3 ios/scripts/appstore_signing.py cleanup-state \
+            --state-file "$RUNNER_TEMP/build290-stale-signing.json"
+
       - name: Create ephemeral distribution certificate and profile
         id: signing
         run: |

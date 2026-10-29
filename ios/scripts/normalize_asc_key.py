@@ -41,6 +41,7 @@ if not body:
 
 pem = HEADER + "\n" + "\n".join(textwrap.wrap(body, 64)) + "\n" + FOOTER + "\n"
 encoded = base64.b64encode(pem.encode("utf-8")).decode("ascii")
+print(f"::add-mask::{encoded}")
 
 output = os.environ.get("GITHUB_ENV")
 if not output:
