@@ -37,6 +37,7 @@ jobs:
       ASC_API_ISSUER_ID: d3a981e0-7557-4223-a67f-d026debee303
       ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
       BODY_ASSET_BUNDLE_KEY_B64: ${{ secrets.BODY_ASSET_BUNDLE_KEY_B64 }}
+      BODY_ASSET_DEPLOY_KEY: ${{ secrets.BODY_ASSET_DEPLOY_KEY }}
     steps:
       - uses: actions/checkout@v4
 
@@ -56,6 +57,7 @@ jobs:
           test -n "${ASC_API_ISSUER_ID:-}"
           test -n "${ASC_API_KEY_P8:-}"
           test -n "${BODY_ASSET_BUNDLE_KEY_B64:-}"
+          test -n "${BODY_ASSET_DEPLOY_KEY:-}"
 
       - name: Normalize App Store Connect private key
         run: python3 ios/scripts/normalize_asc_key.py
@@ -71,9 +73,25 @@ jobs:
         working-directory: ios
         run: python3 scripts/appstore_bootstrap.py --require-existing
 
-      - name: Restore protected BODY assets for this build
+      - name: Fetch and restore protected BODY assets for this build
         run: |
           set -euo pipefail
+          ASSET_SSH_DIR="$RUNNER_TEMP/body-assets-ssh"
+          ASSET_REPO_DIR="$RUNNER_TEMP/body-assets-repository"
+          mkdir -p "$ASSET_SSH_DIR"
+          printf '%s\n' "$BODY_ASSET_DEPLOY_KEY" > "$ASSET_SSH_DIR/id_ed25519"
+          chmod 600 "$ASSET_SSH_DIR/id_ed25519"
+          cat > "$ASSET_SSH_DIR/known_hosts" <<'EOF'
+          github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl
+          EOF
+          export GIT_SSH_COMMAND="ssh -i $ASSET_SSH_DIR/id_ed25519 -o IdentitiesOnly=yes -o UserKnownHostsFile=$ASSET_SSH_DIR/known_hosts -o StrictHostKeyChecking=yes"
+          git clone --depth 1 --branch main \
+            git@github.com:koji06ochi-ship-it/SuG-BODY-BUILD-ASSETS.git \
+            "$ASSET_REPO_DIR"
+          echo '98F9EDBDF3C3197F6697A3C2D30CDE9E5A737A51DC1D7C3666241E35D479893C  body-assets-291.enc' \
+            | (cd "$ASSET_REPO_DIR" && shasum -a 256 -c -)
+          mkdir -p ios/private-assets
+          cp "$ASSET_REPO_DIR/body-assets-291.enc" ios/private-assets/body-assets-291.enc
           node ios/scripts/decrypt_body_assets.cjs \
             --bundle ios/private-assets/body-assets-291.enc \
             --output apps/body/daily-preview/assets
@@ -225,7 +243,10 @@ jobs:
 
       - name: Remove restored BODY assets from the runner
         if: always()
-        run: rm -rf apps/body/daily-preview/assets
+        run: |
+          rm -rf apps/body/daily-preview/assets
+          rm -rf ios/private-assets
+          rm -rf "$RUNNER_TEMP/body-assets-repository" "$RUNNER_TEMP/body-assets-ssh"
 
       - name: Revoke ephemeral signing assets
         if: always() && steps.signing.outcome == 'success'
