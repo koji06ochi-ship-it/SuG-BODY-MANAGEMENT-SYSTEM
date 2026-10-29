@@ -1,0 +1,9 @@
+'use strict';
+// No UI/localStorage switch can enable billing. Activation requires a reviewed release.
+const foodConnectionPolicy=Object.freeze({enabled:false,costApproved:false,endpoint:'',timeoutMs:20000});
+const analyzeFoodPhoto=BodyFoodTransport.create(foodConnectionPolicy,(...args)=>fetch(...args));
+const analyzeButton=document.createElement('button');analyzeButton.type='button';analyzeButton.className='wide';analyzeButton.textContent='写真AI解析（接続準備中）';$('#photo').closest('label').after(analyzeButton);
+analyzeButton.onclick=()=>{text('#foodReviewStatus','写真AIは未接続です。無料で利用できる解析先が確認できていないため、写真を送信しません。手入力で記録できます。')};
+let foodPhotoRevision=0;$('#photo').addEventListener('change',()=>{foodPhotoRevision++;reviewCandidate=null;appliedCandidate=null;$('#applyFoodReview').hidden=true;$('#confirmFoodReplace').hidden=true;$('#foodReviewResult').replaceChildren();text('#foodReviewStatus','選択した写真に対応する解析結果はまだありません。')});
+// Called only by a future approved activation. No endpoint probe or automatic request.
+async function analyzeSelectedFoodPhoto(consent){if(!foodConnectionPolicy.enabled||!foodConnectionPolicy.costApproved)return analyzeFoodPhoto('',consent);if(TEST)throw Error('開発テスト領域から写真は送信しません');const file=$('#photo').files[0];if(!file)throw Error('写真を選択してください');if(!['image/jpeg','image/png','image/webp'].includes(file.type)||file.size>5500000)throw Error('JPEG/PNG/WebP、5.5MB以下の写真を選択してください');const revision=foodPhotoRevision;const image=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onerror=()=>reject(Error('写真を読み込めません'));reader.onload=()=>resolve(reader.result);reader.readAsDataURL(file)});const payload=await analyzeFoodPhoto(image,consent);if(revision!==foodPhotoRevision)throw Error('写真が変わったため、古い解析結果を表示しません');receiveFoodReview(payload,'approved-api')}

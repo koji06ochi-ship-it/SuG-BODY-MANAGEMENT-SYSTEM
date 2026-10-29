@@ -1,0 +1,210 @@
+name: iOS TestFlight GPS candidate upload
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ios-testflight-v1
+  cancel-in-progress: false
+
+jobs:
+  testflight:
+    if: github.ref == 'refs/heads/candidate/healthkit-gps-20261029'
+    runs-on: macos-26
+    env:
+      APP_BUNDLE_ID: jp.sugosaka.member
+      APP_NAME: S.u.G
+      APP_SKU: SUG-IOS-20260908
+      APP_PRIMARY_LOCALE: ja
+      APP_SCHEME: SuGMember
+      APP_PROJECT: SuGMember.xcodeproj
+      ARCHIVE_PATH: ${{ github.workspace }}/build/SuGMember.xcarchive
+      EXPORT_PATH: ${{ github.workspace }}/build/export
+      ASC_API_KEY_ID: MM98J638B7
+      ASC_API_ISSUER_ID: d3a981e0-7557-4223-a67f-d026debee303
+      ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify approved seven-screen BODY is staged before signing
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in apps/body/daily-preview/index.html apps/body/daily-preview/seven-screen.js apps/body/daily-preview/seven-screen.css apps/body/daily-preview/health-intake.js; do
+            if [ ! -s "$file" ]; then
+              echo "::error::Missing seven-screen BODY asset: $file. Do not ship the legacy V27.76 page."
+              exit 1
+            fi
+          done
+          if grep -q 'best-of-miss-demo-v27.76.html' ios/SuGMember/ContentView.swift; then
+            echo "::error::iOS BODY still points at V27.76; stop distribution."
+            exit 1
+          fi
+
+      - name: Verify signing secret and candidate commit
+        id: gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${ASC_API_KEY_P8:-}" || { echo "Missing ASC_API_KEY_P8"; exit 1; }
+          echo "ready=true" >> "$GITHUB_OUTPUT"
+
+      - name: Normalize App Store Connect private key
+        if: steps.gate.outputs.ready == 'true'
+        run: python3 ios/scripts/normalize_asc_key.py
+
+      - name: Install App Store Connect API dependencies
+        if: steps.gate.outputs.ready == 'true'
+        run: |
+          set -euo pipefail
+          python3 -m venv "$RUNNER_TEMP/sug-python"
+          "$RUNNER_TEMP/sug-python/bin/python" -m pip install --quiet --disable-pip-version-check pyjwt cryptography requests
+          echo "$RUNNER_TEMP/sug-python/bin" >> "$GITHUB_PATH"
+
+      - name: Ensure Bundle ID, HealthKit and App Store app exist
+        if: steps.gate.outputs.ready == 'true'
+        working-directory: ios
+        run: python3 scripts/appstore_bootstrap.py
+
+      - name: Create isolated distribution certificate and App Store profile
+        if: steps.gate.outputs.ready == 'true'
+        id: signing
+        run: |
+          python3 ios/scripts/appstore_signing.py prepare \
+            --output-dir "$RUNNER_TEMP/sug-signing" \
+            --state-file .ci-state/ios-signing.json
+
+      - name: Install rotating signing assets
+        if: steps.gate.outputs.ready == 'true'
+        env:
+          P12_PATH: ${{ steps.signing.outputs.p12_path }}
+          P12_PASSWORD: ${{ steps.signing.outputs.p12_password }}
+          PROFILE_PATH: ${{ steps.signing.outputs.profile_path }}
+        run: |
+          set -euo pipefail
+          KEYCHAIN_PATH="$RUNNER_TEMP/sug-signing.keychain-db"
+          KEYCHAIN_PASSWORD="$(uuidgen)"
+
+          security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+          security set-keychain-settings -lut 21600 "$KEYCHAIN_PATH"
+          security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+          security import "$P12_PATH" -P "$P12_PASSWORD" -A -t cert -f pkcs12 -k "$KEYCHAIN_PATH"
+          security list-keychain -d user -s "$KEYCHAIN_PATH" login.keychain-db
+          security set-key-partition-list -S apple-tool:,apple: -s -k "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+
+          security cms -D -i "$PROFILE_PATH" > "$RUNNER_TEMP/profile.plist"
+          PROFILE_UUID=$(/usr/libexec/PlistBuddy -c 'Print :UUID' "$RUNNER_TEMP/profile.plist")
+          PROFILE_NAME=$(/usr/libexec/PlistBuddy -c 'Print :Name' "$RUNNER_TEMP/profile.plist")
+          TEAM_ID=$(/usr/libexec/PlistBuddy -c 'Print :TeamIdentifier:0' "$RUNNER_TEMP/profile.plist")
+          mkdir -p "$HOME/Library/MobileDevice/Provisioning Profiles"
+          cp "$PROFILE_PATH" "$HOME/Library/MobileDevice/Provisioning Profiles/$PROFILE_UUID.mobileprovision"
+          echo "PROFILE_NAME=$PROFILE_NAME" >> "$GITHUB_ENV"
+          echo "APPLE_TEAM_ID=$TEAM_ID" >> "$GITHUB_ENV"
+
+      - name: Select Xcode 26+
+        if: steps.gate.outputs.ready == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          XCODE_APP="/Applications/Xcode_26.6.app"
+          if [ ! -d "$XCODE_APP" ]; then
+            XCODE_APP=$(ls -d /Applications/Xcode_26*.app 2>/dev/null | tail -1 || true)
+          fi
+          test -n "$XCODE_APP"
+          sudo xcode-select -s "$XCODE_APP/Contents/Developer"
+          xcodebuild -version
+          IOS_SDK=$(xcrun --sdk iphoneos --show-sdk-version)
+          echo "iPhoneOS SDK: $IOS_SDK"
+          case "$IOS_SDK" in
+            26.*|27.*) ;;
+            *) echo "ERROR: App Store upload requires iOS 26 SDK or later"; exit 1 ;;
+          esac
+
+      - name: Generate AppIcon asset catalog
+        if: steps.gate.outputs.ready == 'true'
+        run: python3 ios/ci/generate_app_icon.py
+
+      - name: Install XcodeGen
+        if: steps.gate.outputs.ready == 'true'
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        if: steps.gate.outputs.ready == 'true'
+        working-directory: ios
+        run: xcodegen generate
+
+      - name: Archive signed iOS GPS candidate
+        if: steps.gate.outputs.ready == 'true'
+        working-directory: ios
+        run: |
+          set -euo pipefail
+          mkdir -p "$(dirname "$ARCHIVE_PATH")"
+          xcodebuild \
+            -project "$APP_PROJECT" \
+            -scheme "$APP_SCHEME" \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -archivePath "$ARCHIVE_PATH" \
+            DEVELOPMENT_TEAM="$APPLE_TEAM_ID" \
+            PRODUCT_BUNDLE_IDENTIFIER="$APP_BUNDLE_ID" \
+            CURRENT_PROJECT_VERSION="$((1000 + ${{ github.run_number }}))" \
+            CODE_SIGN_STYLE=Manual \
+            CODE_SIGN_IDENTITY='Apple Distribution' \
+            PROVISIONING_PROFILE_SPECIFIER="$PROFILE_NAME" \
+            archive
+
+      - name: Export IPA
+        if: steps.gate.outputs.ready == 'true'
+        run: |
+          set -euo pipefail
+          mkdir -p "$EXPORT_PATH"
+          cat > "$RUNNER_TEMP/ExportOptions.plist" <<EOF
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+            <key>method</key><string>app-store-connect</string>
+            <key>destination</key><string>export</string>
+            <key>signingStyle</key><string>manual</string>
+            <key>teamID</key><string>$APPLE_TEAM_ID</string>
+            <key>stripSwiftSymbols</key><true/>
+            <key>uploadSymbols</key><true/>
+            <key>provisioningProfiles</key>
+            <dict>
+              <key>$APP_BUNDLE_ID</key><string>$PROFILE_NAME</string>
+            </dict>
+          </dict>
+          </plist>
+          EOF
+          xcodebuild -exportArchive \
+            -archivePath "$ARCHIVE_PATH" \
+            -exportPath "$EXPORT_PATH" \
+            -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist"
+
+      - name: Upload to App Store Connect / TestFlight
+        id: upload
+        if: steps.gate.outputs.ready == 'true'
+        run: |
+          set -euo pipefail
+          mkdir -p "$HOME/.appstoreconnect/private_keys"
+          KEY_PATH="$HOME/.appstoreconnect/private_keys/AuthKey_${ASC_API_KEY_ID}.p8"
+          echo "$ASC_API_KEY_P8_BASE64" | base64 --decode > "$KEY_PATH"
+          chmod 600 "$KEY_PATH"
+          IPA_PATH=$(find "$EXPORT_PATH" -maxdepth 1 -name '*.ipa' -print -quit)
+          test -n "$IPA_PATH"
+          xcrun altool --upload-app \
+            --type ios \
+            --file "$IPA_PATH" \
+            --apiKey "$ASC_API_KEY_ID" \
+            --apiIssuer "$ASC_API_ISSUER_ID"
+
+      - name: Upload IPA artifact
+        if: steps.gate.outputs.ready == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: SuGMember-TestFlight
+          path: build/export/*.ipa
+          if-no-files-found: ignore

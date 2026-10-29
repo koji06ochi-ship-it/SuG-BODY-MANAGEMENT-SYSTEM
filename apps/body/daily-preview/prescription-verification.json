@@ -1,0 +1,14 @@
+{
+  "logicTests": 20,
+  "logicResult": "PASS",
+  "classicScriptsParsed": 21,
+  "browser": "not run; previous timeout not retried",
+  "iphone": "not verified",
+  "baselineFiles": 654,
+  "baselineDifferences": [
+    "apps/body/index.html"
+  ],
+  "expectedDifference": "apps/body/index.html: one member-entry script tag",
+  "publication": false,
+  "externalAIRequests": 0
+}

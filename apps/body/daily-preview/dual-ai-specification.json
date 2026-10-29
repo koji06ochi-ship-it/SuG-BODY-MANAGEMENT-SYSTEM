@@ -1,0 +1,14 @@
+{
+  "providers": [
+    "gemini",
+    "openai"
+  ],
+  "selection": "BODY_FOOD_AI_PROVIDER; required",
+  "automaticFallback": false,
+  "automaticRetry": false,
+  "modelSelection": "explicit environment setting",
+  "enabled": false,
+  "costApproved": false,
+  "confirmedEnvironment": "local process and scoped env file names only",
+  "unknown": "deployed configuration, user account quotas"
+}

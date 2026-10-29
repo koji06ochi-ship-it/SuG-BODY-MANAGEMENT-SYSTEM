@@ -1,0 +1,108 @@
+{
+  "status": "UI candidate; not integrated",
+  "tabs": [
+    "今日",
+    "食事",
+    "MAP",
+    "記録・会員証"
+  ],
+  "subpages": [
+    "回復",
+    "10部位の確認"
+  ],
+  "storage": "sug_body_daily_candidate_20261026_v1",
+  "testStorage": "sug_body_daily_candidate_20261026_v1_test",
+  "external_requests": false,
+  "photo_storage": false,
+  "points_mutations": false,
+  "source_baseline": "b29b8e8ccf90b21eede51e3eaa9df02d830f7ee2",
+  "character": "original assets; no regeneration",
+  "original_entry_unchanged": true,
+  "json_schema": "sug-body-daily-candidate-v2",
+  "restore_storage": "BASE_KEY_restore_<32 hex>",
+  "restore_mode": "independent writable region; never overwrite source",
+  "care_guides": 10,
+  "food_edit_audit": true,
+  "weight_history": true,
+  "training": {
+    "storage": "workouts in candidate data",
+    "sets": "per-set kg and reps",
+    "comparison": "same name and condition; latest earlier day",
+    "auto_prescription": false
+  },
+  "excluded_character": "音姫 / 乙姫 / otohime (source image retained only)",
+  "sheet_based_features": [
+    "13 exercise choices",
+    "monthly volume and maximum weight by exercise/condition",
+    "531 main-set preview with explicit TM; no auto-save"
+  ],
+  "explanations": [
+    "progressive overload purpose and examples",
+    "volume vs performance",
+    "TM vs 1RM",
+    "531 weekly roles",
+    "deload and recovery",
+    "plus sets and program variants"
+  ],
+  "training_feedback": [
+    "effort",
+    "movement",
+    "pain",
+    "memo"
+  ],
+  "recall": "latest 10 records; draft only; no date or feedback copy; confirm replacing entered draft",
+  "plan_storage": "trainingPlans in isolated candidate data and JSON v2",
+  "plan_rounding": "floor to chosen increment on draft recall; raw preview remains unrounded",
+  "plan_completion_tracking": "week records displayed; completion not automatically determined",
+  "plan_record_link": [
+    "planId",
+    "planWeek"
+  ],
+  "daily_connection": {
+    "facts": [
+      "goal",
+      "weight",
+      "walking",
+      "sleep",
+      "recovery",
+      "food count",
+      "previous workout feedback"
+    ],
+    "choice_storage": "days[date].activityChoice",
+    "prescription": false
+  },
+  "food_ai_review": {
+    "contract": "existing dish/portionNote/kcal/p/f/c/warnings",
+    "enabled_source": "development fixture in test mode only",
+    "unknown_value": "empty, never coerced to zero",
+    "provenance": "estimateOriginal",
+    "network": false
+  },
+  "theme": {
+    "background": "warm white and light gray",
+    "text": "charcoal",
+    "accent": "muted gold",
+    "green_background": false
+  },
+  "menu_content": {
+    "source": "apps/body/app.js base",
+    "selection": [
+      "chosen body area",
+      "available time"
+    ],
+    "gates": [
+      "missing recovery",
+      "pain",
+      "strong fatigue/stress",
+      "rest choice"
+    ],
+    "goal_weight_activity_prescription": false
+  },
+  "journal": {
+    "daily_summary": true,
+    "workout_correction": "same ID; original retained as workoutEdits",
+    "health_read_key": "sug_native_health_v1",
+    "health_intake": "explicit date and selected values; no automatic device access",
+    "health_provenance": "healthReceipts"
+  }
+}
