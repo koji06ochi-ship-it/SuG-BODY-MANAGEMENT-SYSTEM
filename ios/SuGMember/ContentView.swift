@@ -5,6 +5,7 @@ struct ContentView: View {
     @Environment(\.scenePhase) private var scenePhase
     @State private var selectedTab = 0
     @StateObject private var health = HealthKitManager.shared
+    @StateObject private var gps = WalkLocationManager()
     @StateObject private var bodyStore = MemberWebViewStore(url: URL(string: base + "apps/body/best-of-miss-demo-v27.76.html?native=ios&v=27.81")!)
     @StateObject private var questStore = MemberWebViewStore(url: URL(string: base + "shrine-quest-v26.5.206.html?embedded=1&native=ios&v=27.81")!)
     @StateObject private var walkStore = MemberWebViewStore(url: URL(string: base + "walk-quest.html?embedded=1&native=ios&v=27.81")!)
@@ -48,7 +49,24 @@ struct ContentView: View {
         TabView(selection: $selectedTab) {
             MemberWebView(store: bodyStore).tag(0).tabItem { Label("BODY", systemImage: "house.fill") }
             MemberWebView(store: questStore).tag(1).tabItem { Label("QUEST", systemImage: "map.fill") }
-            MemberWebView(store: walkStore).tag(2).tabItem { Label("WALK", systemImage: "figure.walk") }
+            ZStack(alignment: .bottom) {
+                MemberWebView(store: walkStore)
+                VStack(spacing: 8) {
+                    HStack {
+                        Text(String(format: "GPS %.2f km", gps.distanceMeters / 1000))
+                        TimelineView(.periodic(from: .now, by: 1)) { context in
+                            Text(String(format: "%.0f 秒", gps.duration(at: context.date)))
+                        }
+                    }.font(.caption.monospacedDigit())
+                    if let error = gps.errorMessage {
+                        Text(error).font(.caption2).foregroundStyle(.orange)
+                    }
+                    Button(gps.isRecording ? "GPS記録を停止" : "GPS記録を開始") {
+                        if gps.isRecording { gps.stop() } else { gps.start() }
+                    }.buttonStyle(.borderedProminent)
+                }
+                .padding(12).frame(maxWidth: .infinity).background(.regularMaterial)
+            }.tag(2).tabItem { Label("WALK", systemImage: "figure.walk") }
             MemberWebView(store: cardStore).tag(3).tabItem { Label("会員証", systemImage: "person.text.rectangle.fill") }
         }
         .tint(Color(red:0.89,green:0.72,blue:0.28)).toolbarBackground(Color.black,for:.tabBar).toolbarBackground(.visible,for:.tabBar).preferredColorScheme(.dark)
