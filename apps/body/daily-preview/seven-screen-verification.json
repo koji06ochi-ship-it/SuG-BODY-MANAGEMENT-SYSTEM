@@ -1,0 +1,22 @@
+{
+  "syntaxCheck": "node --check passed",
+  "missingEntryReferences": [],
+  "duplicateStaticIds": [],
+  "definedScreens": [
+    "today",
+    "map",
+    "food",
+    "training",
+    "recovery",
+    "record",
+    "settings"
+  ],
+  "assetManifestMismatches": [],
+  "priorFilesChangedBeforeReportUpdates": [
+    "apps/body/daily-preview/index.html"
+  ],
+  "browserVerified": false,
+  "screenshotsCreated": false,
+  "deviceVerified": false,
+  "complete": false
+}

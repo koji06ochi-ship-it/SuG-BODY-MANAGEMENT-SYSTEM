@@ -1,0 +1,31 @@
+'use strict';
+const TEST=new URLSearchParams(location.search).get('test')==='1';
+const BASE_KEY='sug_body_daily_candidate_20261026_v1'+(TEST?'_test':'');
+const queryRestore=new URLSearchParams(location.search).get('archive');
+const RESTORE_ID=/^[a-f0-9]{32}$/.test(queryRestore||'')?queryRestore:null;
+const KEY=BASE_KEY+(RESTORE_ID?'_restore_'+RESTORE_ID:'');
+if(TEST)document.querySelector('.preview').textContent='開発テスト · 架空データ専用領域';
+const uid=()=>Array.from(crypto.getRandomValues(new Uint32Array(4)),n=>n.toString(16).padStart(8,'0')).join('');
+const day=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
+let data={profile:{},days:{},foods:[],cares:[]},readError=false;
+try{const raw=localStorage.getItem(KEY);if(!raw&&RESTORE_ID)throw Error('missing restore');if(raw){const x=JSON.parse(raw);if(!x||!x.profile||!x.days||!Array.isArray(x.foods)||!Array.isArray(x.cares))throw Error('invalid');data=x}}catch{readError=true}
+const $=s=>document.querySelector(s),text=(s,v)=>$(s).textContent=v;
+function notify(msg){text('#toast',msg);$('#toast').classList.add('show');clearTimeout(notify.timer);notify.timer=setTimeout(()=>$('#toast').classList.remove('show'),4000)}
+function save(next){if(readError){notify('保存済みデータを読めないため、上書きを停止しました。');return false}try{localStorage.setItem(KEY,JSON.stringify(next));data=next;render();notify('候補専用領域に保存しました');return true}catch{notify('保存できませんでした。入力は画面に残っています。');return false}}
+const nextData=()=>JSON.parse(JSON.stringify(data));
+function show(id){if(!document.getElementById(id)?.classList.contains('page'))id='today';document.querySelectorAll('.page').forEach(p=>p.hidden=p.id!==id);document.querySelectorAll('.bottom button').forEach(b=>{const active=b.dataset.page===id;b.classList.toggle('active',active);active?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current')});history.replaceState(null,'','#'+id);window.scrollTo(0,0)}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-page]');if(b)show(b.dataset.page)});window.addEventListener('hashchange',()=>show(location.hash.slice(1)));
+function fill(form,values){for(const[k,v]of Object.entries(values||{})){const f=$(form).elements.namedItem(k);if(f)f.value=v??''}}
+function item(list,title,detail){const d=document.createElement('div'),b=document.createElement('b'),s=document.createElement('small');b.textContent=title;s.textContent=detail;d.append(b,s);$(list).append(d)}
+function render(){const d=data.days[day()]||{},p=data.profile;text('#date',new Intl.DateTimeFormat('ja-JP',{month:'long',day:'numeric',weekday:'short'}).format(new Date()));text('#stepsMetric',d.steps===undefined?'—':Number(d.steps).toLocaleString('ja-JP'));text('#distanceMetric',d.distance??'—');text('#sleepMetric',d.sleep??'—');text('#weightMetric',p.weight||'—');text('#goalChip','目標：'+(p.goal||'未設定'));text('#memberName',p.name?p.name+'さんの記録':'あなたの記録');text('#planText',p.name?'記録を受け取りました。自動メニューは既存判定との接続後に表示します。':'基本情報と今日の調子を記録しましょう。');fill('#profileForm',p);fill('#walkForm',d);fill('#recoveryForm',d);$('#foodList').replaceChildren();const meals=data.foods.filter(f=>f.day===day());for(const f of meals)item('#foodList',f.dish,`${f.portion} · ${f.kcal===''?'栄養値未入力':f.kcal+' kcal'} · ${f.source==='development-fixture-confirmed'?'開発用候補・本人確認':f.source==='photo-ai-confirmed'?'写真AI推定・本人確認':'手入力'}`);if(!meals.length)item('#foodList','まだ記録がありません','写真を選んで、内容を確認しましょう。');$('#recordList').replaceChildren();for(const[k,v]of Object.entries(data.days).sort().reverse())item('#recordList',k,`歩数 ${v.steps??'—'}／距離 ${v.distance??'—'} km／睡眠 ${v.sleep??'—'} 時間`);for(const c of data.cares.slice().reverse())item('#recordList',c.part+' · '+c.day,[c.observation,c.hypothesis,c.action,c.change].filter(Boolean).join(' ／ '));if(!Object.keys(data.days).length&&!data.cares.length)item('#recordList','記録はこれから','本人領域の記録はここに取り込んでいません。')}
+function entries(form){return Object.fromEntries(new FormData(form))}
+$('#profileForm').onsubmit=e=>{e.preventDefault();const n=nextData();n.profile=entries(e.target);save(n)};
+for(const id of ['walkForm','recoveryForm'])$('#'+id).onsubmit=e=>{e.preventDefault();const n=nextData();n.days[day()]={...n.days[day()],...entries(e.target),source:'manual',updatedAt:new Date().toISOString()};save(n)};
+let photoURL;
+$('#photo').onchange=e=>{if(photoURL)URL.revokeObjectURL(photoURL);const f=e.target.files[0];$('#photoPreview').hidden=true;if(!f)return;if(!/^image\//.test(f.type)||f.size>15*1024*1024){notify('15MB以下の画像を選んでください');e.target.value='';return}photoURL=URL.createObjectURL(f);$('#photoPreview').onerror=()=>{notify('この画像形式は表示できません。JPEGまたはPNGを選んでください');$('#photoPreview').hidden=true};$('#photoPreview').src=photoURL;$('#photoPreview').hidden=false};
+$('#foodForm').onsubmit=e=>{e.preventDefault();const n=nextData();n.foods.push({...entries(e.target),day:day(),id:uid(),source:'manual',at:new Date().toISOString()});if(save(n)){e.target.reset();$('#photoPreview').hidden=true;if(photoURL)URL.revokeObjectURL(photoURL)}};
+const parts=['首','肩','肩甲骨周り','背中','腰','股関節','膝','足首','足裏','肘・手首'];let part='';
+parts.forEach((name,i)=>{const b=document.createElement('button'),s=document.createElement('small');s.textContent=String(i+1).padStart(2,'0')+' · CHECK';b.append(s,document.createTextNode(name));b.onclick=()=>{part=name;$('#careDetail').hidden=false;text('#careTitle',name+'の確認');$('#careForm').reset();document.querySelectorAll('#careGrid button').forEach(x=>x.classList.toggle('active',x===b));$('#careDetail').scrollIntoView({behavior:'smooth',block:'start'})};$('#careGrid').append(b)});
+$('#careForm').onsubmit=e=>{e.preventDefault();if(!part)return;const n=nextData();n.cares.push({...entries(e.target),part,day:day(),at:new Date().toISOString(),id:uid()});if(save(n))e.target.reset()};
+$('#export').onclick=()=>{const blob=new Blob([JSON.stringify({schema:'sug-body-daily-candidate-v1',exportedAt:new Date().toISOString(),data},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='body-candidate-records-'+day()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+render();show(location.hash.slice(1));if(readError)notify('保存データの読込エラー。上書きせず保護しています。');

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "date": "2026-10-26",
+  "storage": "existing candidate namespace; unchanged schema",
+  "sleepLightHoursBelow": 6,
+  "stepsLightRatioAbove": 1.5,
+  "stepsBaselineDays": 7,
+  "stepsMinimumSamples": 3,
+  "increaseMaxRatio": 0.1,
+  "recentSessionDays": 14,
+  "distinctSessionRequired": 2,
+  "initialWeight": "manual confirmation",
+  "531": "existing saved TM and explicit week; separate from ordinary progression",
+  "browserVerified": false,
+  "clinicalValidation": false
+}

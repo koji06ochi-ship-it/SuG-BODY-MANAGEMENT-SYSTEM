@@ -1,0 +1,10 @@
+{
+  "clientEnabled": false,
+  "costApproved": false,
+  "endpoint": "",
+  "timeoutMs": 20000,
+  "automaticRetry": false,
+  "serverEnableVariable": "BODY_FOOD_AI_ENABLED",
+  "unknownNutrients": null,
+  "realAnalysisVerified": false
+}
