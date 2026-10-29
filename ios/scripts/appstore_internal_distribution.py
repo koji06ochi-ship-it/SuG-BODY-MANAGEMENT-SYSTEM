@@ -62,12 +62,11 @@ def find_build(app_id: str, number: str):
     raise RuntimeError(f"Build {number} was not found for {BUNDLE_ID}")
 
 
-def internal_groups(app_id: str, build_id: str):
+def internal_groups(build_id: str):
     payload = request(
         "GET",
         "/betaGroups",
         params={
-            "filter[app]": app_id,
             "filter[builds]": build_id,
             "filter[isInternalGroup]": "true",
             "limit": 200,
@@ -91,13 +90,13 @@ def main() -> int:
     if target.get("attributes", {}).get("processingState") != "VALID":
         raise RuntimeError(f"Build {args.build_number} is not VALID")
 
-    source_groups = internal_groups(app_id, str(source["id"]))
+    source_groups = internal_groups(str(source["id"]))
     if not source_groups:
         raise RuntimeError(
             f"Build {args.source_build_number} has no existing internal beta group to reuse; "
             "no group or tester was created"
         )
-    target_groups = internal_groups(app_id, str(target["id"]))
+    target_groups = internal_groups(str(target["id"]))
     target_ids = {str(item["id"]) for item in target_groups}
     missing = [item for item in source_groups if str(item["id"]) not in target_ids]
 
@@ -121,7 +120,7 @@ def main() -> int:
     expected = {str(item["id"]) for item in source_groups}
     deadline = time.monotonic() + 300
     while True:
-        applied = internal_groups(app_id, str(target["id"]))
+        applied = internal_groups(str(target["id"]))
         applied_ids = {str(item["id"]) for item in applied}
         detail = request("GET", f"/builds/{target['id']}/buildBetaDetail").get("data", {}).get("attributes", {})
         state = detail.get("internalBuildState")
