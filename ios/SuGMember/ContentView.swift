@@ -59,7 +59,7 @@ struct ContentView: View {
                             healthSyncMessage = "同期中"
                             await health.requestAuthorization()
                             await refreshAndPush()
-                            healthSyncMessage = health.lastSync == nil ? "取得データを確認してください" : "取得処理完了"
+                            healthSyncMessage = health.lastSync == nil ? "HealthKit未取得・権限を確認" : "同期処理完了（値を確認）"
                             isHealthSyncing = false
                         }
                     } label: {
