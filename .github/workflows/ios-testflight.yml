@@ -223,15 +223,6 @@ jobs:
             --apiKey "$ASC_API_KEY_ID" \
             --apiIssuer "$ASC_API_ISSUER_ID"
 
-      - name: Keep IPA as short-lived workflow evidence
-        if: success() && steps.upload.outcome == 'success'
-        uses: actions/upload-artifact@v4
-        with:
-          name: SuGMember-TestFlight-${{ inputs.build_number }}
-          path: build/export/*.ipa
-          if-no-files-found: error
-          retention-days: 3
-
       - name: Remove restored BODY assets from the runner
         if: always()
         run: rm -rf apps/body/daily-preview/assets

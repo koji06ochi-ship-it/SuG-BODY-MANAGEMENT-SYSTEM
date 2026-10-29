@@ -38,7 +38,7 @@ check('workflow restores protected assets before packaging', workflow.indexOf('d
 check('workflow removes restored assets from runner', /if:\s*always\(\)[\s\S]*?rm -rf apps\/body\/daily-preview\/assets/.test(workflow));
 check('workflow validates archived bundle, version, build and BODY resource', ['CFBundleIdentifier','CFBundleShortVersionString','CFBundleVersion','BodyWeb/index.html'].every(value => workflow.includes(value)));
 check('workflow preserves successful build 290', /CURRENT_PROJECT_VERSION='\$\{\{ inputs\.build_number \}\}'/.test(workflow) && /-le 290/.test(workflow));
-check('workflow keeps uploaded IPA evidence for three days', /retention-days:\s*3/.test(workflow));
+check('public workflow does not publish an extractable IPA artifact', !/actions\/upload-artifact/.test(workflow) && !/retention-days:/.test(workflow));
 check('workflow runs static release validation before signing', workflow.indexOf('validate_ios_release.cjs') > workflow.indexOf('package_body_web.cjs') && workflow.indexOf('validate_ios_release.cjs') < workflow.indexOf('appstore_signing.py prepare'));
 
 check('XcodeGen bundle id matches existing app', /PRODUCT_BUNDLE_IDENTIFIER:\s*jp\.sugosaka\.member/.test(project));
