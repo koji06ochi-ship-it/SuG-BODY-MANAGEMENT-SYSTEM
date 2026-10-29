@@ -1,16 +1,30 @@
 import SwiftUI
 import WebKit
+import HealthKit
+
+@MainActor
+final class HealthKitScriptMessageHandler: NSObject, WKScriptMessageHandler {
+    weak var store: MemberWebViewStore?
+
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        guard message.name == "sugHealthKit", let body = message.body as? [String: Any] else { return }
+        Task { @MainActor [weak self] in await self?.store?.handleHealthKitMessage(body) }
+    }
+}
 
 @MainActor
 final class MemberWebViewStore: ObservableObject {
     let webView: WKWebView
     private let initialURL: URL
+    private let healthKitHandler: HealthKitScriptMessageHandler
     private var didLoad = false
     private var pendingHealthJSON: String?
 
     init(url: URL) {
         self.initialURL = url
         let config = WKWebViewConfiguration()
+        let healthKitHandler = HealthKitScriptMessageHandler()
+        config.userContentController.add(healthKitHandler, name: "sugHealthKit")
         config.websiteDataStore = .default()
         config.allowsInlineMediaPlayback = true
         config.mediaTypesRequiringUserActionForPlayback = []
@@ -26,12 +40,112 @@ final class MemberWebViewStore: ObservableObject {
         view.allowsBackForwardNavigationGestures = true
         view.customUserAgent = "S.u.G Member iOS/1.0"
         self.webView = view
+        self.healthKitHandler = healthKitHandler
+        healthKitHandler.store = self
     }
 
-    func loadIfNeeded() { guard !didLoad else { return }; didLoad = true; var request = URLRequest(url: initialURL); request.cachePolicy = .reloadIgnoringLocalCacheData; webView.load(request) }
+    deinit { webView.configuration.userContentController.removeScriptMessageHandler(forName: "sugHealthKit") }
+
+    func loadIfNeeded() {
+        guard !didLoad else { return }
+        didLoad = true
+        if initialURL.isFileURL {
+            webView.loadFileURL(initialURL, allowingReadAccessTo: initialURL.deletingLastPathComponent())
+        } else {
+            var request = URLRequest(url: initialURL)
+            request.cachePolicy = .reloadIgnoringLocalCacheData
+            webView.load(request)
+        }
+    }
     func reload() { webView.reload() }
 
-    private var isBodyPage: Bool { guard let path = webView.url?.path else { return false }; return path.contains("/apps/body/") || path.contains("member-home-v2.html") }
+    private func healthKitDailyPayload(_ health: HealthKitManager, at syncDate: Date = Date()) -> [String: Any] {
+        let calendar = Calendar.current
+        let isoFormatter = ISO8601DateFormatter()
+        let dayFormatter = DateFormatter()
+        dayFormatter.calendar = calendar
+        dayFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dayFormatter.timeZone = calendar.timeZone
+        dayFormatter.dateFormat = "yyyy-MM-dd"
+        let dayKey = dayFormatter.string(from: syncDate)
+        let coverageStart = isoFormatter.string(from: calendar.startOfDay(for: syncDate))
+        let coverageEnd = isoFormatter.string(from: syncDate)
+        var result: [String: Any] = [
+            "source": "healthkit_native",
+            "bridgeVersion": "1.0.0",
+            "day": dayKey,
+            "timeZone": calendar.timeZone.identifier,
+            "syncedAt": coverageEnd,
+            "coverageStart": coverageStart,
+            "coverageEnd": coverageEnd,
+            "isComplete": false,
+            "zeroIsMeasured": true
+        ]
+        var sampleIdsByField: [String: [String]] = [:]
+        func set(_ payloadKey: String, _ sampleKey: String, _ value: Any?) {
+            guard let value else { return }
+            result[payloadKey] = value
+            sampleIdsByField[sampleKey] = ["healthkit:\(dayKey):\(sampleKey):\(value)"]
+        }
+        set("steps", "steps", health.steps)
+        set("heartRate", "heart", health.heartRate)
+        set("sleepHours", "sleep", health.sleepHours)
+        set("activeEnergyKcal", "energy", health.activeEnergyKcal)
+        set("restingEnergyKcal", "restingEnergy", health.restingEnergyKcal)
+        result["sampleIdsByField"] = sampleIdsByField
+        return result
+    }
+
+    private func respondHealthKit(requestId: String, ok: Bool, result: [String: Any]? = nil, code: String? = nil) {
+        var response: [String: Any] = ["requestId": requestId, "ok": ok]
+        if let result { response["result"] = result }
+        if let code { response["error"] = ["code": code] }
+        guard JSONSerialization.isValidJSONObject(response),
+              let data = try? JSONSerialization.data(withJSONObject: response),
+              let json = String(data: data, encoding: .utf8) else { return }
+        webView.evaluateJavaScript("window.sugBodyHealthKitReceive && window.sugBodyHealthKitReceive(\(json));")
+    }
+
+    func handleHealthKitMessage(_ body: [String: Any]) async {
+        let requestId = String(describing: body["requestId"] ?? "")
+        let action = String(describing: body["action"] ?? "")
+        guard !requestId.isEmpty else { return }
+        let health = HealthKitManager.shared
+        switch action {
+        case "status":
+            respondHealthKit(requestId: requestId, ok: true, result: [
+                "available": HKHealthStore.isHealthDataAvailable(),
+                "authorizationRequestCompleted": health.authorizationRequestCompleted
+            ])
+        case "requestAuthorization":
+            await health.requestAuthorization()
+            if health.authorizationRequestCompleted {
+                respondHealthKit(requestId: requestId, ok: true, result: ["requested": true])
+            } else {
+                respondHealthKit(requestId: requestId, ok: false, code: "HEALTHKIT_AUTHORIZATION_FAILED")
+            }
+        case "readDailySnapshot":
+            guard health.authorizationRequestCompleted else {
+                respondHealthKit(requestId: requestId, ok: false, code: "HEALTHKIT_AUTHORIZATION_REQUIRED")
+                return
+            }
+            await health.refreshToday()
+            let payload = healthKitDailyPayload(health, at: health.lastSync ?? Date())
+            let hasMeasuredValue = ["steps", "heartRate", "sleepHours", "activeEnergyKcal", "restingEnergyKcal"].contains { payload[$0] != nil }
+            if hasMeasuredValue {
+                respondHealthKit(requestId: requestId, ok: true, result: payload)
+            } else {
+                respondHealthKit(requestId: requestId, ok: false, code: "HEALTHKIT_NO_DATA")
+            }
+        default:
+            respondHealthKit(requestId: requestId, ok: false, code: "HEALTHKIT_ACTION_INVALID")
+        }
+    }
+
+    private var isBodyPage: Bool {
+        guard let path = webView.url?.path else { return false }
+        return path.contains("/apps/body/") || path.contains("/BodyWeb/") || path.contains("member-home-v2.html")
+    }
     private var isQuestPage: Bool { guard let path = webView.url?.path else { return false }; return path.contains("shrine-quest") || path.contains("quest-live") || path.contains("quest-transport-map") }
     private var isWalkPage: Bool { webView.url?.path.contains("walk-quest.html") == true }
 
@@ -40,41 +154,42 @@ final class MemberWebViewStore: ObservableObject {
         let js = """
         (function(){
           const isStandalone = location.pathname.indexOf('/apps/body/') !== -1;
-          if (!isStandalone) {
+          const isCurrentDaily = location.pathname.indexOf('/daily-preview/') !== -1 || location.pathname.indexOf('/BodyWeb/') !== -1;
+          if (!isStandalone && !isCurrentDaily) {
             const scripts = [['sugIdealV27Script','assets/member/v27/ideal-v27.js?v=27.43'],['sugHealthV2Script','assets/member/v2/health-v2.js?v=27.43']];
             for (const pair of scripts) { if (document.getElementById(pair[0])) continue; const s=document.createElement('script'); s.id=pair[0]; s.src=pair[1]; document.body.appendChild(s); }
           }
-          if (!document.getElementById('sugBeautyBodyV2774')) {
+          if (!isCurrentDaily && !document.getElementById('sugBeautyBodyV2774')) {
             const s=document.createElement('script');
             s.id='sugBeautyBodyV2774';
             s.src=isStandalone?'./beauty-body-engine-v27.74.js?v=27.81':'apps/body/beauty-body-engine-v27.74.js?v=27.81';
             document.body.appendChild(s);
           }
-          if (!document.getElementById('sugRecoveryBodyContextV2777')) {
+          if (!isCurrentDaily && !document.getElementById('sugRecoveryBodyContextV2777')) {
             const s=document.createElement('script');
             s.id='sugRecoveryBodyContextV2777';
             s.src=isStandalone?'./recovery-body-context-v27.77.js?v=27.81':'apps/body/recovery-body-context-v27.77.js?v=27.81';
             document.body.appendChild(s);
           }
-          if (!document.getElementById('sugNutritionRecoveryV2778')) {
+          if (!isCurrentDaily && !document.getElementById('sugNutritionRecoveryV2778')) {
             const s=document.createElement('script');
             s.id='sugNutritionRecoveryV2778';
             s.src=isStandalone?'./nutrition-recovery-engine-v27.78.js?v=27.81':'apps/body/nutrition-recovery-engine-v27.78.js?v=27.81';
             document.body.appendChild(s);
           }
-          if (!document.getElementById('sugFoodPhotoV2779')) {
+          if (!isCurrentDaily && !document.getElementById('sugFoodPhotoV2779')) {
             const s=document.createElement('script');
             s.id='sugFoodPhotoV2779';
             s.src=isStandalone?'./food-photo-intake-v27.79.js?v=27.81':'apps/body/food-photo-intake-v27.79.js?v=27.81';
             document.body.appendChild(s);
           }
-          if (!document.getElementById('sugNextMealV2780')) {
+          if (!isCurrentDaily && !document.getElementById('sugNextMealV2780')) {
             const s=document.createElement('script');
             s.id='sugNextMealV2780';
             s.src=isStandalone?'./next-meal-guidance-v27.80.js?v=27.81':'apps/body/next-meal-guidance-v27.80.js?v=27.81';
             document.body.appendChild(s);
           }
-          if (!document.getElementById('sugMealTimingV2781')) {
+          if (!isCurrentDaily && !document.getElementById('sugMealTimingV2781')) {
             const s=document.createElement('script');
             s.id='sugMealTimingV2781';
             s.src=isStandalone?'./meal-timing-v27.81.js?v=27.81':'apps/body/meal-timing-v27.81.js?v=27.81';
@@ -238,10 +353,11 @@ final class MemberWebViewStore: ObservableObject {
     }
 
     func pushNativeHealth(
-        steps: Int,
-        distanceKm: Double,
-        activeEnergyKcal: Double,
-        exerciseMinutes: Double,
+        steps: Int?,
+        distanceKm: Double?,
+        restingEnergyKcal: Double?,
+        activeEnergyKcal: Double?,
+        exerciseMinutes: Double?,
         sleepHours: Double?,
         heartRate: Double?,
         restingHeartRate: Double?,
@@ -259,32 +375,60 @@ final class MemberWebViewStore: ObservableObject {
         recoveryConfidence: Double,
         workouts: [HealthWorkoutSummary],
         labResults: [HealthLabResultSummary],
+        authorizationRequestCompleted: Bool,
         syncedAt: Date?
     ) {
-        let iso = ISO8601DateFormatter().string(from: syncedAt ?? Date())
+        let syncDate = syncedAt ?? Date()
+        let formatter = ISO8601DateFormatter()
+        let iso = formatter.string(from: syncDate)
+        let coverageStart = formatter.string(from: Calendar.current.startOfDay(for: syncDate))
+        let dayFormatter = DateFormatter()
+        dayFormatter.calendar = Calendar.current
+        dayFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dayFormatter.timeZone = Calendar.current.timeZone
+        dayFormatter.dateFormat = "yyyy-MM-dd"
+        let dayKey = dayFormatter.string(from: syncDate)
         var payload: [String: Any] = [
             "source":"healthkit_native",
-            "steps":max(0,steps),
-            "distanceKm":max(0,distanceKm),
-            "activeEnergyKcal":max(0,activeEnergyKcal),
-            "exerciseMinutes":max(0,exerciseMinutes),
+            "day":dayKey,
+            "timeZone":Calendar.current.timeZone.identifier,
+            "energyUnit":"kcal",
+            "coverageStart":coverageStart,
+            "coverageEnd":iso,
+            "isComplete":false,
+            "zeroIsMeasured":true,
+            "authorizationRequestCompleted":authorizationRequestCompleted,
             "recoveryModel":"sug_recovery_v1",
             "stressMetricType":"physiological_load_estimate",
             "recoveryConfidence":min(1,max(0,recoveryConfidence)),
             "syncedAt":iso
         ]
-        if let sleepHours { payload["sleep"] = sleepHours; payload["sleepHours"] = sleepHours }
-        if let heartRate { payload["heartRate"] = heartRate; payload["latestHeartRate"] = heartRate }
-        if let restingHeartRate { payload["restingHeartRate"] = restingHeartRate }
-        if let hrvMs { payload["hrv"] = hrvMs; payload["hrvMs"] = hrvMs }
-        if let weightKg { payload["weight"] = weightKg; payload["weightKg"] = weightKg }
-        if let bodyFatPercentage { payload["bodyFatPercentage"] = bodyFatPercentage; payload["bodyFat"] = bodyFatPercentage }
+        var measuredFields: [String] = []
+        if let steps { payload["steps"] = max(0, steps); measuredFields.append("steps") }
+        if let distanceKm { payload["distanceKm"] = max(0, distanceKm); measuredFields.append("distanceKm") }
+        if let restingEnergyKcal { payload["restingEnergyKcal"] = max(0, restingEnergyKcal); measuredFields.append("restingEnergyKcal") }
+        if let activeEnergyKcal { payload["activeEnergyKcal"] = max(0, activeEnergyKcal); measuredFields.append("activeEnergyKcal") }
+        if let exerciseMinutes { payload["exerciseMinutes"] = max(0, exerciseMinutes); measuredFields.append("exerciseMinutes") }
+        payload["measuredFields"] = measuredFields
+        var sampleIdsByField: [String: [String]] = [:]
+        func sample(_ field: String, _ value: Any) { sampleIdsByField[field] = ["healthkit:\(dayKey):\(field):\(value)"] }
+        if let steps { sample("steps", max(0, steps)) }
+        if let distanceKm { sample("distance", max(0, distanceKm)) }
+        if let restingEnergyKcal { sample("restingEnergy", max(0, restingEnergyKcal)) }
+        if let activeEnergyKcal { sample("energy", max(0, activeEnergyKcal)) }
+        if let exerciseMinutes { sample("exerciseMinutes", max(0, exerciseMinutes)) }
+        if let sleepHours { payload["sleep"] = sleepHours; payload["sleepHours"] = sleepHours; sample("sleep", sleepHours) }
+        if let heartRate { payload["heartRate"] = heartRate; payload["latestHeartRate"] = heartRate; sample("heart", heartRate) }
+        if let restingHeartRate { payload["restingHeartRate"] = restingHeartRate; sample("restingHeart", restingHeartRate) }
+        if let hrvMs { payload["hrv"] = hrvMs; payload["hrvMs"] = hrvMs; sample("hrv", hrvMs) }
+        if let weightKg { payload["weight"] = weightKg; payload["weightKg"] = weightKg; sample("weight", weightKg) }
+        if let bodyFatPercentage { payload["bodyFatPercentage"] = bodyFatPercentage; payload["bodyFat"] = bodyFatPercentage; sample("bodyfat", bodyFatPercentage) }
         if let leanBodyMassKg { payload["leanBodyMassKg"] = leanBodyMassKg }
         if let vo2Max { payload["vo2Max"] = vo2Max }
         if let respiratoryRate { payload["respiratoryRate"] = respiratoryRate }
         if let oxygenSaturationPercent { payload["oxygenSaturationPercent"] = oxygenSaturationPercent; payload["spo2"] = oxygenSaturationPercent }
-        if let recoveryScore { payload["recoveryScore"] = recoveryScore }
-        if let stressScore { payload["stressScore"] = stressScore }
+        if let recoveryScore { payload["recoveryScore"] = recoveryScore; sample("recoveryScore", recoveryScore) }
+        if let stressScore { payload["stressScore"] = stressScore; sample("stressScore", stressScore) }
         if let recoveryStatus { payload["recoveryStatus"] = recoveryStatus }
         if let stressStatus { payload["stressStatus"] = stressStatus }
 
@@ -302,6 +446,9 @@ final class MemberWebViewStore: ObservableObject {
         }
         payload["workouts"] = workoutPayload
         payload["recentWorkouts"] = workoutPayload
+        sampleIdsByField["workouts"] = workouts.map { "healthkit:workout:\($0.startDateISO):\($0.endDateISO):\($0.activityTypeRaw)" }
+        payload["sampleIdsByField"] = sampleIdsByField
+        payload["sampleIds"] = Array(Set(sampleIdsByField.values.flatMap { $0 })).sorted()
 
         let labPayload: [[String: Any]] = labResults.map { lab in
             var item: [String: Any] = ["name":lab.name,"sourceName":lab.sourceName]

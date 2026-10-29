@@ -2,10 +2,19 @@ import SwiftUI
 
 struct ContentView: View {
     private static let base = "https://koji06ochi-ship-it.github.io/SuG-BODY-MANAGEMENT-SYSTEM/"
+    private static func bodyURL() -> URL {
+        if let bundleRoot = Bundle.main.url(forResource: "BodyWeb", withExtension: nil) {
+            return bundleRoot.appendingPathComponent("index.html").appending(queryItems: [
+                URLQueryItem(name: "native", value: "ios"),
+                URLQueryItem(name: "v", value: "20261029")
+            ])
+        }
+        return URL(string: base + "apps/body/daily-preview/index.html?native=ios&v=20261029")!
+    }
     @Environment(\.scenePhase) private var scenePhase
     @State private var selectedTab = 0
     @StateObject private var health = HealthKitManager.shared
-    @StateObject private var bodyStore = MemberWebViewStore(url: URL(string: base + "apps/body/best-of-miss-demo-v27.76.html?native=ios&v=27.81")!)
+    @StateObject private var bodyStore = MemberWebViewStore(url: ContentView.bodyURL())
     @StateObject private var questStore = MemberWebViewStore(url: URL(string: base + "shrine-quest-v26.5.206.html?embedded=1&native=ios&v=27.81")!)
     @StateObject private var walkStore = MemberWebViewStore(url: URL(string: base + "walk-quest.html?embedded=1&native=ios&v=27.81")!)
     @StateObject private var cardStore = MemberWebViewStore(url: URL(string: base + "?entry=member&hub=1&membercard=1&native=ios&v=27.81")!)
@@ -14,6 +23,7 @@ struct ContentView: View {
         store.pushNativeHealth(
             steps: health.steps,
             distanceKm: health.walkingDistanceKm,
+            restingEnergyKcal: health.restingEnergyKcal,
             activeEnergyKcal: health.activeEnergyKcal,
             exerciseMinutes: health.exerciseMinutes,
             sleepHours: health.sleepHours,
@@ -33,6 +43,7 @@ struct ContentView: View {
             recoveryConfidence: health.recoveryConfidence,
             workouts: health.recentWorkouts,
             labResults: health.recentLabResults,
+            authorizationRequestCompleted: health.authorizationRequestCompleted,
             syncedAt: health.lastSync
         )
     }
@@ -54,22 +65,22 @@ struct ContentView: View {
         .tint(Color(red:0.89,green:0.72,blue:0.28)).toolbarBackground(Color.black,for:.tabBar).toolbarBackground(.visible,for:.tabBar).preferredColorScheme(.dark)
         .task {
             bodyStore.loadIfNeeded(); questStore.loadIfNeeded(); walkStore.loadIfNeeded()
-            await health.requestAuthorization()
-            await refreshAndPush()
         }
         .task(id: selectedTab) {
             guard selectedTab == 0 || selectedTab == 1 || selectedTab == 2 else { return }
             while !Task.isCancelled {
-                if scenePhase == .active { await refreshAndPush() }
+                if scenePhase == .active && health.authorizationRequestCompleted { await refreshAndPush() }
                 try? await Task.sleep(nanoseconds: 60_000_000_000)
             }
         }
         .onChange(of: selectedTab) { _, tab in
             guard tab == 0 || tab == 1 || tab == 2 else { return }
+            guard health.authorizationRequestCompleted else { return }
             Task { await refreshAndPush() }
         }
         .onChange(of: scenePhase) { _, phase in
             guard phase == .active else { return }
+            guard health.authorizationRequestCompleted else { return }
             Task { await refreshAndPush() }
         }
     }

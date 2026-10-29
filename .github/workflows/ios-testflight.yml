@@ -2,28 +2,27 @@ name: iOS TestFlight upload
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - '.github/workflows/ios-testflight.yml'
-      - 'ios/scripts/**'
-      - 'ios/ci/**'
-      - 'ios/project.yml'
-      - 'ios/SuGMember/**'
-  schedule:
-    - cron: '17 * * * *'
+    inputs:
+      build_number:
+        description: 'App Store Connect build number (must be greater than 290)'
+        required: true
+        default: '291'
+        type: string
+      confirm_upload:
+        description: 'Type UPLOAD after final approval'
+        required: true
+        default: 'NO'
+        type: string
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: ios-testflight-v1
+  group: ios-testflight-latest
   cancel-in-progress: false
 
 jobs:
   testflight:
-    if: github.ref == 'refs/heads/main'
     runs-on: macos-26
     env:
       APP_BUNDLE_ID: jp.sugosaka.member
@@ -37,73 +36,69 @@ jobs:
       ASC_API_KEY_ID: MM98J638B7
       ASC_API_ISSUER_ID: d3a981e0-7557-4223-a67f-d026debee303
       ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
+      BODY_ASSET_BUNDLE_KEY_B64: ${{ secrets.BODY_ASSET_BUNDLE_KEY_B64 }}
     steps:
       - uses: actions/checkout@v4
 
-      - name: Check whether TestFlight upload is needed
-        id: gate
+      - name: Validate explicit release approval and build number
         shell: bash
         run: |
           set -euo pipefail
-          # Check current main as well as the checkout (which may be an older run).
-          git fetch --no-tags origin main
-          if [ -f .ci-state/testflight-v1-uploaded.json ] || \
-            git cat-file -e FETCH_HEAD:.ci-state/testflight-v1-uploaded.json 2>/dev/null; then
-            echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "S.u.G TestFlight v1 has already been uploaded; nothing to do."
-            exit 0
+          test '${{ inputs.confirm_upload }}' = 'UPLOAD'
+          case '${{ inputs.build_number }}' in
+            ''|*[!0-9]*) echo 'ERROR: build_number must be an integer'; exit 1 ;;
+          esac
+          if [ '${{ inputs.build_number }}' -le 290 ]; then
+            echo 'ERROR: build_number must preserve existing build 290 and be greater than 290'
+            exit 1
           fi
-          if [ -z "${ASC_API_KEY_P8:-}" ]; then
-            echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "ASC_API_KEY_P8 is not registered yet. Scheduled workflow will retry automatically."
-            exit 0
-          fi
-          echo "ready=true" >> "$GITHUB_OUTPUT"
-          echo "Apple private key is ready; starting signed TestFlight upload."
+          test -n "${ASC_API_KEY_ID:-}"
+          test -n "${ASC_API_ISSUER_ID:-}"
+          test -n "${ASC_API_KEY_P8:-}"
+          test -n "${BODY_ASSET_BUNDLE_KEY_B64:-}"
 
       - name: Normalize App Store Connect private key
-        if: steps.gate.outputs.ready == 'true'
         run: python3 ios/scripts/normalize_asc_key.py
 
       - name: Install App Store Connect API dependencies
-        if: steps.gate.outputs.ready == 'true'
         run: |
           set -euo pipefail
           python3 -m venv "$RUNNER_TEMP/sug-python"
           "$RUNNER_TEMP/sug-python/bin/python" -m pip install --quiet --disable-pip-version-check pyjwt cryptography requests
           echo "$RUNNER_TEMP/sug-python/bin" >> "$GITHUB_PATH"
 
-      - name: Ensure Bundle ID, HealthKit and App Store app exist
-        if: steps.gate.outputs.ready == 'true'
+      - name: Confirm existing Bundle ID, HealthKit and App Store app
         working-directory: ios
-        run: python3 scripts/appstore_bootstrap.py
+        run: python3 scripts/appstore_bootstrap.py --require-existing
 
-      - name: Clean previous S.u.G CI signing assets
-        if: steps.gate.outputs.ready == 'true'
-        run: python3 ios/scripts/appstore_signing.py cleanup-state --state-file .ci-state/ios-signing.json
+      - name: Restore protected BODY assets for this build
+        run: |
+          set -euo pipefail
+          node ios/scripts/decrypt_body_assets.cjs \
+            --bundle ios/private-assets/body-assets-291.enc \
+            --output apps/body/daily-preview/assets
 
-      - name: Create rotating distribution certificate and App Store profile
-        if: steps.gate.outputs.ready == 'true'
+      - name: Package latest BODY web assets for the app bundle
+        run: |
+          set -euo pipefail
+          node ios/scripts/package_body_web.cjs \
+            --source apps/body/daily-preview \
+            --output ios/BodyWeb \
+            --quest-asset assets/quest/person-gps-core-20260905.js
+          test -s ios/BodyWeb/index.html
+          test -s ios/BodyWeb/body-web-manifest.json
+
+      - name: Validate release inputs before Apple signing
+        run: node ios/ci/validate_ios_release.cjs
+
+      - name: Create ephemeral distribution certificate and profile
         id: signing
         run: |
           python3 ios/scripts/appstore_signing.py prepare \
             --output-dir "$RUNNER_TEMP/sug-signing" \
-            --state-file .ci-state/ios-signing.json
+            --state-file "$RUNNER_TEMP/ios-signing.json"
 
-      - name: Persist signing resource IDs for next rotation
-        if: steps.gate.outputs.ready == 'true'
-        run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .ci-state/ios-signing.json
-          if ! git diff --cached --quiet; then
-            git commit -m "ci: rotate iOS signing state [skip ci]"
-            git push
-          fi
-
-      - name: Install rotating signing assets
-        if: steps.gate.outputs.ready == 'true'
+      - name: Install ephemeral signing assets
         env:
           P12_PATH: ${{ steps.signing.outputs.p12_path }}
           P12_PASSWORD: ${{ steps.signing.outputs.p12_password }}
@@ -112,14 +107,12 @@ jobs:
           set -euo pipefail
           KEYCHAIN_PATH="$RUNNER_TEMP/sug-signing.keychain-db"
           KEYCHAIN_PASSWORD="$(uuidgen)"
-
           security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
           security set-keychain-settings -lut 21600 "$KEYCHAIN_PATH"
           security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
           security import "$P12_PATH" -P "$P12_PASSWORD" -A -t cert -f pkcs12 -k "$KEYCHAIN_PATH"
           security list-keychain -d user -s "$KEYCHAIN_PATH" login.keychain-db
           security set-key-partition-list -S apple-tool:,apple: -s -k "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
-
           security cms -D -i "$PROFILE_PATH" > "$RUNNER_TEMP/profile.plist"
           PROFILE_UUID=$(/usr/libexec/PlistBuddy -c 'Print :UUID' "$RUNNER_TEMP/profile.plist")
           PROFILE_NAME=$(/usr/libexec/PlistBuddy -c 'Print :Name' "$RUNNER_TEMP/profile.plist")
@@ -129,8 +122,7 @@ jobs:
           echo "PROFILE_NAME=$PROFILE_NAME" >> "$GITHUB_ENV"
           echo "APPLE_TEAM_ID=$TEAM_ID" >> "$GITHUB_ENV"
 
-      - name: Select Xcode 26+
-        if: steps.gate.outputs.ready == 'true'
+      - name: Select Xcode 26 or later
         shell: bash
         run: |
           set -euo pipefail
@@ -142,27 +134,22 @@ jobs:
           sudo xcode-select -s "$XCODE_APP/Contents/Developer"
           xcodebuild -version
           IOS_SDK=$(xcrun --sdk iphoneos --show-sdk-version)
-          echo "iPhoneOS SDK: $IOS_SDK"
           case "$IOS_SDK" in
             26.*|27.*) ;;
-            *) echo "ERROR: App Store upload requires iOS 26 SDK or later"; exit 1 ;;
+            *) echo "ERROR: iOS 26 SDK or later is required"; exit 1 ;;
           esac
 
       - name: Generate AppIcon asset catalog
-        if: steps.gate.outputs.ready == 'true'
         run: python3 ios/ci/generate_app_icon.py
 
       - name: Install XcodeGen
-        if: steps.gate.outputs.ready == 'true'
         run: brew install xcodegen
 
       - name: Generate Xcode project
-        if: steps.gate.outputs.ready == 'true'
         working-directory: ios
         run: xcodegen generate
 
-      - name: Archive signed iOS app
-        if: steps.gate.outputs.ready == 'true'
+      - name: Archive signed current BODY app
         working-directory: ios
         run: |
           set -euo pipefail
@@ -175,43 +162,53 @@ jobs:
             -archivePath "$ARCHIVE_PATH" \
             DEVELOPMENT_TEAM="$APPLE_TEAM_ID" \
             PRODUCT_BUNDLE_IDENTIFIER="$APP_BUNDLE_ID" \
-            CURRENT_PROJECT_VERSION="${{ github.run_number }}" \
+            MARKETING_VERSION='1.0.0' \
+            CURRENT_PROJECT_VERSION='${{ inputs.build_number }}' \
             CODE_SIGN_STYLE=Manual \
             CODE_SIGN_IDENTITY='Apple Distribution' \
             PROVISIONING_PROFILE_SPECIFIER="$PROFILE_NAME" \
             archive
 
+      - name: Verify archived identity, version and embedded BODY
+        shell: bash
+        run: |
+          set -euo pipefail
+          APP_PATH="$ARCHIVE_PATH/Products/Applications/SuGMember.app"
+          INFO="$APP_PATH/Info.plist"
+          test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "$INFO")" = "$APP_BUNDLE_ID"
+          test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$INFO")" = '1.0.0'
+          test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleVersion' "$INFO")" = '${{ inputs.build_number }}'
+          test -s "$APP_PATH/BodyWeb/index.html"
+          test -s "$APP_PATH/BodyWeb/body-web-manifest.json"
+          codesign -d --entitlements :- "$APP_PATH" 2> "$RUNNER_TEMP/archive-entitlements.plist"
+          /usr/libexec/PlistBuddy -c 'Print :com.apple.developer.healthkit' "$RUNNER_TEMP/archive-entitlements.plist" | grep -qx true
+
       - name: Export IPA
-        if: steps.gate.outputs.ready == 'true'
         run: |
           set -euo pipefail
           mkdir -p "$EXPORT_PATH"
           cat > "$RUNNER_TEMP/ExportOptions.plist" <<EOF
           <?xml version="1.0" encoding="UTF-8"?>
           <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-          <plist version="1.0">
-          <dict>
+          <plist version="1.0"><dict>
             <key>method</key><string>app-store-connect</string>
             <key>destination</key><string>export</string>
             <key>signingStyle</key><string>manual</string>
             <key>teamID</key><string>$APPLE_TEAM_ID</string>
             <key>stripSwiftSymbols</key><true/>
             <key>uploadSymbols</key><true/>
-            <key>provisioningProfiles</key>
-            <dict>
+            <key>provisioningProfiles</key><dict>
               <key>$APP_BUNDLE_ID</key><string>$PROFILE_NAME</string>
             </dict>
-          </dict>
-          </plist>
+          </dict></plist>
           EOF
           xcodebuild -exportArchive \
             -archivePath "$ARCHIVE_PATH" \
             -exportPath "$EXPORT_PATH" \
             -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist"
 
-      - name: Upload to App Store Connect / TestFlight
+      - name: Upload approved IPA to existing App Store Connect app
         id: upload
-        if: steps.gate.outputs.ready == 'true'
         run: |
           set -euo pipefail
           mkdir -p "$HOME/.appstoreconnect/private_keys"
@@ -226,52 +223,19 @@ jobs:
             --apiKey "$ASC_API_KEY_ID" \
             --apiIssuer "$ASC_API_ISSUER_ID"
 
-      - name: Mark first TestFlight upload complete
+      - name: Keep IPA as short-lived workflow evidence
         if: success() && steps.upload.outcome == 'success'
-        shell: bash
-        run: |
-          set -euo pipefail
-          # Build tools can modify tracked files; never stage or rebase that tree.
-          git status --short
-          git diff --name-only
-          STATE_TEMP=$(mktemp -d "$RUNNER_TEMP/testflight-state.XXXXXX")
-          STATE_WORKTREE="$STATE_TEMP/worktree"
-          trap 'git worktree remove --force "$STATE_WORKTREE" 2>/dev/null || true' EXIT
-          cat > "$STATE_TEMP/testflight-v1-uploaded.json" <<EOF
-          {
-            "bundleIdentifier": "$APP_BUNDLE_ID",
-            "appName": "$APP_NAME",
-            "workflowRun": "${{ github.run_number }}",
-            "workflowRunId": "${{ github.run_id }}",
-            "uploadedAtUtc": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          }
-          EOF
-          # Retry only the marker push if main advances; never repeat the upload.
-          for attempt in 1 2 3; do
-            git fetch --no-tags origin main
-            git worktree add --detach "$STATE_WORKTREE" FETCH_HEAD
-            if [ -f "$STATE_WORKTREE/.ci-state/testflight-v1-uploaded.json" ]; then
-              echo "TestFlight completion marker already exists on main; preserving it."
-              exit 0
-            fi
-            mkdir -p "$STATE_WORKTREE/.ci-state"
-            cp "$STATE_TEMP/testflight-v1-uploaded.json" "$STATE_WORKTREE/.ci-state/"
-            git -C "$STATE_WORKTREE" config user.name "github-actions[bot]"
-            git -C "$STATE_WORKTREE" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git -C "$STATE_WORKTREE" add -- .ci-state/testflight-v1-uploaded.json
-            git -C "$STATE_WORKTREE" commit -m "ci: mark first S.u.G TestFlight upload complete [skip ci]"
-            if git -C "$STATE_WORKTREE" push origin HEAD:refs/heads/main; then
-              exit 0
-            fi
-            git worktree remove --force "$STATE_WORKTREE"
-          done
-          echo "ERROR: Could not persist TestFlight completion marker after 3 attempts."
-          exit 1
-
-      - name: Upload IPA artifact
-        if: steps.gate.outputs.ready == 'true'
         uses: actions/upload-artifact@v4
         with:
-          name: SuGMember-TestFlight
+          name: SuGMember-TestFlight-${{ inputs.build_number }}
           path: build/export/*.ipa
-          if-no-files-found: ignore
+          if-no-files-found: error
+          retention-days: 3
+
+      - name: Remove restored BODY assets from the runner
+        if: always()
+        run: rm -rf apps/body/daily-preview/assets
+
+      - name: Revoke ephemeral signing assets
+        if: always() && steps.signing.outcome == 'success'
+        run: python3 ios/scripts/appstore_signing.py cleanup-state --state-file "$RUNNER_TEMP/ios-signing.json"

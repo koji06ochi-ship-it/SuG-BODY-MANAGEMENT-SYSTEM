@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import base64
+import argparse
 import json
 import os
 import sys
@@ -18,6 +19,7 @@ BUNDLE_ID = os.environ.get("APP_BUNDLE_ID", "jp.sugosaka.member")
 APP_NAME = os.environ.get("APP_NAME", "S.u.G")
 APP_SKU = os.environ.get("APP_SKU", "SUG-IOS-20260908")
 PRIMARY_LOCALE = os.environ.get("APP_PRIMARY_LOCALE", "ja")
+REQUIRE_EXISTING = False
 
 
 def make_token() -> str:
@@ -64,6 +66,12 @@ def ensure_bundle() -> Dict[str, Any]:
         print(f"Bundle ID exists: {BUNDLE_ID} ({existing['id']})")
         return existing
 
+    if REQUIRE_EXISTING:
+        raise RuntimeError(
+            f"Required existing Bundle ID was not found: {BUNDLE_ID}. "
+            "Creation is disabled for this release workflow."
+        )
+
     body = {
         "data": {
             "type": "bundleIds",
@@ -85,6 +93,12 @@ def ensure_healthkit(bundle_resource_id: str) -> None:
         if item.get("attributes", {}).get("capabilityType") == "HEALTHKIT":
             print("HealthKit capability already enabled")
             return
+
+    if REQUIRE_EXISTING:
+        raise RuntimeError(
+            "HealthKit capability is not enabled on the existing Bundle ID. "
+            "Automatic capability changes are disabled for this release workflow."
+        )
 
     body = {
         "data": {
@@ -123,6 +137,12 @@ def ensure_app() -> Dict[str, Any]:
         print(f"App Store Connect app exists: {existing.get('attributes', {}).get('name')} ({existing['id']})")
         return existing
 
+    if REQUIRE_EXISTING:
+        raise RuntimeError(
+            f"Required existing App Store Connect app was not found for {BUNDLE_ID}. "
+            "Creation is disabled for this release workflow."
+        )
+
     body = {
         "data": {
             "type": "apps",
@@ -148,6 +168,16 @@ def github_output(key: str, value: str) -> None:
 
 
 def main() -> int:
+    global REQUIRE_EXISTING
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--require-existing",
+        action="store_true",
+        help="Fail unless the Bundle ID, HealthKit capability and app already exist.",
+    )
+    args = parser.parse_args()
+    REQUIRE_EXISTING = args.require_existing
+
     bundle = ensure_bundle()
     ensure_healthkit(bundle["id"])
     app = ensure_app()

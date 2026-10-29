@@ -25,11 +25,14 @@ struct HealthLabResultSummary: Sendable {
 final class HealthKitManager: ObservableObject {
     static let shared = HealthKitManager()
 
-    @Published var isAuthorized = false
-    @Published var steps: Int = 0
-    @Published var walkingDistanceKm: Double = 0
-    @Published var activeEnergyKcal: Double = 0
-    @Published var exerciseMinutes: Double = 0
+    // HealthKit does not reveal whether each requested read type was denied.
+    // This flag means only that the authorization sheet completed successfully.
+    @Published var authorizationRequestCompleted = false
+    @Published var steps: Int?
+    @Published var walkingDistanceKm: Double?
+    @Published var restingEnergyKcal: Double?
+    @Published var activeEnergyKcal: Double?
+    @Published var exerciseMinutes: Double?
     @Published var weightKg: Double?
     @Published var bodyFatPercentage: Double?
     @Published var leanBodyMassKg: Double?
@@ -57,6 +60,7 @@ final class HealthKitManager: ObservableObject {
         [
             HKQuantityType.quantityType(forIdentifier: .stepCount),
             HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning),
+            HKQuantityType.quantityType(forIdentifier: .basalEnergyBurned),
             HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned),
             HKQuantityType.quantityType(forIdentifier: .appleExerciseTime),
             HKQuantityType.quantityType(forIdentifier: .bodyMass),
@@ -76,18 +80,18 @@ final class HealthKitManager: ObservableObject {
 
     func requestAuthorization() async {
         guard HKHealthStore.isHealthDataAvailable() else {
-            isAuthorized = false
+            authorizationRequestCompleted = false
             errorMessage = "この端末ではAppleヘルスケアを利用できません。"
             return
         }
 
         do {
             try await store.requestAuthorization(toShare: [], read: readTypes)
-            isAuthorized = true
+            authorizationRequestCompleted = true
             errorMessage = nil
             await refreshToday()
         } catch {
-            isAuthorized = false
+            authorizationRequestCompleted = false
             errorMessage = error.localizedDescription
         }
     }
@@ -95,6 +99,7 @@ final class HealthKitManager: ObservableObject {
     func refreshToday() async {
         async let s = fetchTodaySteps()
         async let d = fetchTodayWalkingDistanceKm()
+        async let re = fetchTodayRestingEnergyKcal()
         async let ae = fetchTodayActiveEnergyKcal()
         async let ex = fetchTodayExerciseMinutes()
         async let w = fetchLatestWeight()
@@ -126,6 +131,7 @@ final class HealthKitManager: ObservableObject {
 
         let stepsValue = await s
         let distanceValue = await d
+        let restingEnergyValue = await re
         let energyValue = await ae
         let exerciseValue = await ex
         let weightValue = await w
@@ -145,6 +151,7 @@ final class HealthKitManager: ObservableObject {
 
         steps = stepsValue
         walkingDistanceKm = distanceValue
+        restingEnergyKcal = restingEnergyValue
         activeEnergyKcal = energyValue
         exerciseMinutes = exerciseValue
         weightKg = weightValue
@@ -184,15 +191,19 @@ final class HealthKitManager: ObservableObject {
         return HKQuery.predicateForSamples(withStart: start, end: Date(), options: .strictStartDate)
     }
 
-    private func fetchTodayCumulative(identifier: HKQuantityTypeIdentifier, unit: HKUnit) async -> Double {
-        guard let type = HKQuantityType.quantityType(forIdentifier: identifier) else { return 0 }
+    private func fetchTodayCumulative(identifier: HKQuantityTypeIdentifier, unit: HKUnit) async -> Double? {
+        guard let type = HKQuantityType.quantityType(forIdentifier: identifier) else { return nil }
         return await withCheckedContinuation { continuation in
             let query = HKStatisticsQuery(
                 quantityType: type,
                 quantitySamplePredicate: todayPredicate(),
                 options: .cumulativeSum
-            ) { _, stats, _ in
-                continuation.resume(returning: stats?.sumQuantity()?.doubleValue(for: unit) ?? 0)
+            ) { _, stats, error in
+                guard error == nil, let quantity = stats?.sumQuantity() else {
+                    continuation.resume(returning: nil)
+                    return
+                }
+                continuation.resume(returning: quantity.doubleValue(for: unit))
             }
             store.execute(query)
         }
@@ -217,21 +228,29 @@ final class HealthKitManager: ObservableObject {
         }
     }
 
-    private func fetchTodaySteps() async -> Int {
-        Int((await fetchTodayCumulative(identifier: .stepCount, unit: .count())).rounded())
+    private func fetchTodaySteps() async -> Int? {
+        guard let value = await fetchTodayCumulative(identifier: .stepCount, unit: .count()) else { return nil }
+        return Int(value.rounded())
     }
 
-    private func fetchTodayWalkingDistanceKm() async -> Double {
-        let meters = await fetchTodayCumulative(identifier: .distanceWalkingRunning, unit: .meter())
+    private func fetchTodayWalkingDistanceKm() async -> Double? {
+        guard let meters = await fetchTodayCumulative(identifier: .distanceWalkingRunning, unit: .meter()) else { return nil }
         return max(0, meters / 1000)
     }
 
-    private func fetchTodayActiveEnergyKcal() async -> Double {
-        max(0, await fetchTodayCumulative(identifier: .activeEnergyBurned, unit: .kilocalorie()))
+    private func fetchTodayActiveEnergyKcal() async -> Double? {
+        guard let value = await fetchTodayCumulative(identifier: .activeEnergyBurned, unit: .kilocalorie()) else { return nil }
+        return max(0, value)
     }
 
-    private func fetchTodayExerciseMinutes() async -> Double {
-        max(0, await fetchTodayCumulative(identifier: .appleExerciseTime, unit: .minute()))
+    private func fetchTodayRestingEnergyKcal() async -> Double? {
+        guard let value = await fetchTodayCumulative(identifier: .basalEnergyBurned, unit: .kilocalorie()) else { return nil }
+        return max(0, value)
+    }
+
+    private func fetchTodayExerciseMinutes() async -> Double? {
+        guard let value = await fetchTodayCumulative(identifier: .appleExerciseTime, unit: .minute()) else { return nil }
+        return max(0, value)
     }
 
     private func fetchLatestWeight() async -> Double? {
@@ -252,7 +271,7 @@ final class HealthKitManager: ObservableObject {
 
     private func fetchLatestHeartRate() async -> Double? {
         guard let type = HKQuantityType.quantityType(forIdentifier: .heartRate) else { return nil }
-        return await latestQuantity(type: type, unit: HKUnit.count().unitDivided(by: .minute()))
+        return await latestQuantity(type: type, unit: HKUnit.count().unitDivided(by: .minute()), predicate: todayPredicate())
     }
 
     private func fetchLatestRestingHeartRate() async -> Double? {
@@ -281,12 +300,12 @@ final class HealthKitManager: ObservableObject {
         return value * 100
     }
 
-    private func latestQuantity(type: HKQuantityType, unit: HKUnit) async -> Double? {
+    private func latestQuantity(type: HKQuantityType, unit: HKUnit, predicate: NSPredicate? = nil) async -> Double? {
         await withCheckedContinuation { continuation in
             let sort = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
             let query = HKSampleQuery(
                 sampleType: type,
-                predicate: nil,
+                predicate: predicate,
                 limit: 1,
                 sortDescriptors: [sort]
             ) { _, samples, _ in
