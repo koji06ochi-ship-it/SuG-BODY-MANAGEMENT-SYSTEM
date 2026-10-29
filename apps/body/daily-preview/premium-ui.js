@@ -14,6 +14,10 @@
     settings: ['自分のこと。\nつながる記録。','身体情報・目標・連携・利用権限を本人が確認します。','assets/otohime-trainer-original.jpg','利用者提供の音姫トレーナー衣装原本','assets/baby-gold.jpeg']
   };
   const screenLabels={today:'S.u.G BODY · TODAY',map:'S.u.G BODY · WALK / SAFE',food:'S.u.G BODY · FOOD',training:'S.u.G BODY · TRAINING',recovery:'S.u.G BODY · RECOVERY',record:'S.u.G BODY · PROGRESS',settings:'S.u.G BODY · PROFILE'};
+  const officialIcons={
+    food:'<svg class="official-icon-svg" data-body-icon="food" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3v5M8 3v5M11 3v5M5 8c0 2 1.3 3 3 3s3-1 3-3M8 11v10M16 3v18M16 3c2.5 1.5 4 4 4 7h-4"/></svg>',
+    training:'<svg class="official-icon-svg" data-body-icon="training" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 8v8M4.5 9.5v5M2.5 11v2M7 12h10M17 8v8M19.5 9.5v5M21.5 11v2"/></svg>'
+  };
 
   function todayLabel() {
     const value = byId('date')?.textContent?.trim();
@@ -42,7 +46,7 @@
   function foodOverview() {
     const node=document.createElement('section');node.className='official-overview official-food-overview';
     const card=document.createElement('article');card.className='official-surface official-nutrition-summary';
-    card.innerHTML='<div class="official-summary-heading"><span class="official-round-icon">♨</span><div><small>今日の食事</small><h2>カロリー・PFC</h2></div></div>';
+    card.innerHTML=`<div class="official-summary-heading"><span class="official-round-icon">${officialIcons.food}</span><div><small>今日の食事</small><h2>カロリー・PFC</h2></div></div>`;
     const total=document.createElement('div');total.className='official-big-number';total.append(mirror('foodTotal'));
     const macros=document.createElement('p');macros.className='official-macro-line';macros.append(mirror('foodMacros','P — / F — / C —'));card.append(total,macros);
     node.append(card,actionStrip([
@@ -55,7 +59,7 @@
   }
   function trainingOverview() {
     const node=document.createElement('section');node.className='official-overview official-training-overview';
-    node.innerHTML='<article class="official-surface official-training-card"><header><span class="official-round-icon">◆</span><div><small>今週のトレーニング</small><h2>予定と実績を分けて記録</h2></div></header><div class="official-training-row"><span>今日の予定</span><b data-training="plan">未設定</b><i>›</i></div><div class="official-training-row"><span>前回の負荷</span><b data-training="previous">記録なし</b><i>›</i></div><div class="official-training-row"><span>今日の記録</span><b data-training="today">未記録</b><i>›</i></div></article>';
+    node.innerHTML=`<article class="official-surface official-training-card"><header><span class="official-round-icon">${officialIcons.training}</span><div><small>今週のトレーニング</small><h2>予定と実績を分けて記録</h2></div></header><div class="official-training-row"><span>今日の予定</span><b data-training="plan">未設定</b><i>›</i></div><div class="official-training-row"><span>前回の負荷</span><b data-training="previous">記録なし</b><i>›</i></div><div class="official-training-row"><span>今日の記録</span><b data-training="today">未記録</b><i>›</i></div></article>`;
     node.append(actionStrip([
       {label:'今日の記録',icon:'＋',focus:'trainingForm'},{label:'前回を呼出',icon:'↻',focus:'repeatTraining'},
       {label:'5/3/1計画',icon:'531',focus:'body531Plan'},{label:'負荷推移',icon:'⌁',focus:'trainingHistory'}
@@ -81,7 +85,7 @@
   }
   function recordOverview() {
     const node=document.createElement('section');node.className='official-overview official-record-overview';const grid=document.createElement('div');grid.className='official-chart-grid';
-    grid.append(miniChart('体重推移','▣','weight'),miniChart('食事サマリー','♨','food'),miniChart('トレーニング','◆','training'),miniChart('歩行記録','⌁','walk'),miniChart('睡眠・回復','☾','recovery'),miniChart('特典・ポイント','★','benefit'));
+    grid.append(miniChart('体重推移','▣','weight'),miniChart('食事サマリー',officialIcons.food,'food'),miniChart('トレーニング',officialIcons.training,'training'),miniChart('歩行記録','⌁','walk'),miniChart('睡眠・回復','☾','recovery'),miniChart('特典・ポイント','★','benefit'));
     node.append(grid,actionStrip([{label:'写真を記録',icon:'▣',focus:'bodyPhotoSlots'},{label:'記録を一覧',icon:'▤',focus:'recordList'},{label:'特典を確認',icon:'♕',focus:'memberBenefitCard'}],'積み重ねを確認'));return node;
   }
   function settingsOverview() {
@@ -92,7 +96,7 @@
 
   function decorateNav() {
     document.querySelector('header')?.classList.add('official-source-header');const nav=document.querySelector('.bottom');if(!nav)return;
-    const labels={today:['⌂','今日'],map:['⌖','マップ'],food:['♨','食事'],training:['◆','トレーニング'],recovery:['♡','回復＋'],record:['▤','記録・特典'],settings:['♙','プロフィール']};
+    const labels={today:['⌂','今日'],map:['⌖','マップ'],food:[officialIcons.food,'食事'],training:[officialIcons.training,'トレーニング'],recovery:['♡','回復＋'],record:['▤','記録・特典'],settings:['♙','プロフィール']};
     nav.querySelectorAll('[data-page]').forEach(node=>{const value=labels[node.dataset.page];if(!value||node.dataset.officialNav)return;node.dataset.officialNav='1';node.innerHTML=`<span>${value[0]}</span><small>${value[1]}</small>`});
   }
   function decoratePage(id) {
@@ -116,6 +120,9 @@
     const labels=['歩数','摂取カロリー','総消費カロリー','消費 − 摂取','回復状態','PFC'];
     board.querySelectorAll('.automatic-metric').forEach((card,index)=>{
       card.dataset.todayMetric=String(index+1);const label=card.querySelector('small'),value=card.querySelector('b'),source=card.querySelector('span');
+      if(index===1&&!card.querySelector('[data-body-icon="food"]')){
+        card.insertAdjacentHTML('afterbegin',officialIcons.food);card.classList.add('has-official-icon');
+      }
       if(label&&labels[index])label.textContent=labels[index];
       const raw=value?.textContent.trim()||'';let missing=/^(未取得|未算出|未入力|未記録|—)$/.test(raw);
       card.classList.remove('is-partial');
@@ -131,7 +138,7 @@
       if(missing&&source&&source.textContent!=='入力・取得なし')source.textContent='入力・取得なし';
     });
     let next=target.querySelector('[data-official-today-actions]');
-    if(!next){next=actionStrip([{label:'食事',icon:'♨',page:'food'},{label:'運動',icon:'◆',page:'training'},{label:'回復',icon:'☾',page:'recovery'}],'今日の記録');next.dataset.officialTodayActions='1';board.after(next)}
+    if(!next){next=actionStrip([{label:'食事',icon:officialIcons.food,page:'food'},{label:'運動',icon:officialIcons.training,page:'training'},{label:'回復',icon:'☾',page:'recovery'}],'今日の記録');next.dataset.officialTodayActions='1';board.after(next)}
     next.classList.add('official-today-actions');
     if(!next.querySelector('.official-today-record-primary')){
       const record=action('睡眠・疲れを記録する',{page:'recovery',icon:'✎',note:'ストレス・痛みも同じ画面で記録',className:'official-today-record-primary'});
