@@ -4,6 +4,8 @@ struct ContentView: View {
     private static let base = "https://koji06ochi-ship-it.github.io/SuG-BODY-MANAGEMENT-SYSTEM/"
     @Environment(\.scenePhase) private var scenePhase
     @State private var selectedTab = 0
+    @State private var isHealthSyncing = false
+    @State private var healthSyncMessage = "未同期"
     @StateObject private var health = HealthKitManager.shared
     @StateObject private var gps = WalkLocationManager()
     @StateObject private var bodyStore = MemberWebViewStore(url: URL(string: base + "apps/body/best-of-miss-demo-v27.76.html?native=ios&v=27.81")!)
@@ -49,15 +51,27 @@ struct ContentView: View {
         TabView(selection: $selectedTab) {
             ZStack(alignment: .topTrailing) {
                 MemberWebView(store: bodyStore)
-                Button {
-                    Task {
-                        await health.requestAuthorization()
-                        await refreshAndPush()
+                VStack(alignment: .trailing, spacing: 5) {
+                    Button {
+                        Task {
+                            guard !isHealthSyncing else { return }
+                            isHealthSyncing = true
+                            healthSyncMessage = "同期中"
+                            await health.requestAuthorization()
+                            await refreshAndPush()
+                            healthSyncMessage = health.lastSync == nil ? "取得データを確認してください" : "取得処理完了"
+                            isHealthSyncing = false
+                        }
+                    } label: {
+                        Label(isHealthSyncing ? "同期中" : "HEALTH同期", systemImage: "arrow.clockwise.heart")
+                            .font(.caption.bold())
+                            .padding(10)
+                            .background(.regularMaterial, in: Capsule())
                     }
-                } label: {
-                    Label("HEALTH同期", systemImage: "arrow.clockwise.heart")
-                        .font(.caption.bold())
-                        .padding(10)
+                    .disabled(isHealthSyncing)
+                    Text(healthSyncMessage)
+                        .font(.caption2)
+                        .padding(6)
                         .background(.regularMaterial, in: Capsule())
                 }
                 .accessibilityIdentifier("nativeHealthSync")
