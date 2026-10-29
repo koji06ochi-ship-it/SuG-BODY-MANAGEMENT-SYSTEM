@@ -47,7 +47,23 @@ struct ContentView: View {
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            MemberWebView(store: bodyStore).tag(0).tabItem { Label("BODY", systemImage: "house.fill") }
+            ZStack(alignment: .topTrailing) {
+                MemberWebView(store: bodyStore)
+                Button {
+                    Task {
+                        await health.requestAuthorization()
+                        await refreshAndPush()
+                    }
+                } label: {
+                    Label("HEALTH同期", systemImage: "arrow.clockwise.heart")
+                        .font(.caption.bold())
+                        .padding(10)
+                        .background(.regularMaterial, in: Capsule())
+                }
+                .accessibilityIdentifier("nativeHealthSync")
+                .padding(.top, 8)
+                .padding(.trailing, 12)
+            }.tag(0).tabItem { Label("BODY", systemImage: "house.fill") }
             MemberWebView(store: questStore).tag(1).tabItem { Label("QUEST", systemImage: "map.fill") }
             ZStack(alignment: .bottom) {
                 MemberWebView(store: walkStore)
