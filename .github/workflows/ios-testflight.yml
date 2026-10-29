@@ -9,7 +9,7 @@ on:
         default: '291'
         type: string
       confirm_upload:
-        description: 'Type UPLOAD for release or STATUS for a read-only processing check'
+        description: 'Type UPLOAD, STATUS, or DISTRIBUTE after approval'
         required: true
         default: 'NO'
         type: string
@@ -22,6 +22,30 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  distribute:
+    if: inputs.confirm_upload == 'DISTRIBUTE'
+    runs-on: ubuntu-latest
+    env:
+      APP_BUNDLE_ID: jp.sugosaka.member
+      ASC_API_KEY_ID: MM98J638B7
+      ASC_API_ISSUER_ID: d3a981e0-7557-4223-a67f-d026debee303
+      ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Normalize App Store Connect private key
+        run: python3 ios/scripts/normalize_asc_key.py
+
+      - name: Install internal distribution dependencies
+        run: python3 -m pip install --disable-pip-version-check --quiet pyjwt cryptography requests
+
+      - name: Reuse build 290 internal TestFlight access for build 291
+        run: |
+          python3 ios/scripts/appstore_internal_distribution.py \
+            --build-number '${{ inputs.build_number }}' \
+            --source-build-number '290' \
+            --apply
+
   status:
     if: inputs.confirm_upload == 'STATUS'
     runs-on: ubuntu-latest
