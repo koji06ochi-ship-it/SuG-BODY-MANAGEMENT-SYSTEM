@@ -106,7 +106,8 @@ struct NativeWalkHistoryView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var rows: [WalkSessionRecorder.Summary] = []
     @State private var status = "保存済みのネイティブGPS履歴です。Web記録とは合算しません。"
-    @State private var exporting=false,importing=false
+    @State private var exporting = false
+    @State private var importing = false
     @State private var document: WalkBackupDocument?
     var body: some View {
         NavigationStack { List {

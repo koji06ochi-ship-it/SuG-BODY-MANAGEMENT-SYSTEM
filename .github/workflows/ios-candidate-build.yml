@@ -12,18 +12,20 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
-    if: ${{ github.event.repository.private == false && github.event.head_commit.message == 'SUG_IOS_UNSIGNED_BUILD_20261107_APPROVED_ONCE' }}
+    if: ${{ github.event.repository.private == false && github.event.head_commit.message == 'SUG_IOS_INTEGRATION_RECHECK_20261107_APPROVED_ONCE' }}
     runs-on: macos-26
     timeout-minutes: 20
     strategy:
       fail-fast: false
       max-parallel: 1
       matrix:
-        app: [BODY, eVo, WALK]
+        app: [eVo, WALK]
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
       - name: Validate and build both SDKs without signing
         shell: bash
-        run: bash ios-delivery/ci/build-ios.sh '${{ matrix.app }}'
+        run: |
+          node ios-delivery/ci/navigation-race.test.mjs
+          bash ios-delivery/ci/build-ios.sh '${{ matrix.app }}'
