@@ -5,6 +5,11 @@ on:
     paths: ['.github/workflows/ios-six-testflight.yml']
   workflow_dispatch:
     inputs:
+      preflight_only:
+        description: 'Read-only Apple app/bundle/build-number check; no signing or upload'
+        type: boolean
+        default: true
+        required: true
       confirm_signing:
         type: boolean
         default: false
@@ -32,7 +37,7 @@ jobs:
   sign-and-upload:
     if: github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' && github.ref == 'refs/heads/sug/ios-six-testflight-20261108' && github.event.repository.private == false && github.actor == 'koji06ochi-ship-it' && inputs.confirm_signing == true && github.run_attempt == 1
     runs-on: macos-26
-    timeout-minutes: 180
+    timeout-minutes: ${{ inputs.preflight_only && 10 || 170 }}
     env:
       APPS_JSON: ${{ inputs.apps_json }}
       BUILD_NUMBERS_JSON: ${{ inputs.build_numbers_json }}
@@ -50,8 +55,9 @@ jobs:
           apps=json.loads(os.environ['APPS_JSON']);numbers=json.loads(os.environ['BUILD_NUMBERS_JSON'])
           assert apps and len(apps)<=6 and len(set(apps))==len(apps)
           assert all(a in {'BODY','eVo','WALK','WAY','GLOW','oTo'} for a in apps)
-          assert set(numbers)==set(apps)
-          assert all(isinstance(numbers[a],str) and numbers[a].isascii() and numbers[a].isdigit() and 0<int(numbers[a]) for a in apps)
+          if '${{ inputs.preflight_only }}' != 'true':
+              assert set(numbers)==set(apps)
+              assert all(isinstance(numbers[a],str) and numbers[a].isascii() and numbers[a].isdigit() and 0<int(numbers[a]) for a in apps)
           PY
       - name: Load authenticated iOS assets
         env:
@@ -65,8 +71,9 @@ jobs:
       - name: Existing app records and one new batch signing identity
         env:
           ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
-        run: python3 ci/sug-six/prepare-signing.py --root "$RUNNER_TEMP/sug-six" --work "$RUNNER_TEMP/sug-six-signing" --apps-json "$APPS_JSON" --approve-apple-signing
+        run: python3 ci/sug-six/prepare-signing.py --root "$RUNNER_TEMP/sug-six" --work "$RUNNER_TEMP/sug-six-signing" --apps-json "$APPS_JSON" --approve-apple-signing ${{ inputs.preflight_only && '--preflight-only' || '' }}
       - name: Import only the new batch identity into an ephemeral keychain
+        if: inputs.preflight_only != true
         run: |
           python3 - <<'PY'
           import json,os,pathlib,secrets
@@ -78,6 +85,7 @@ jobs:
           PY
           # Values written to GITHUB_ENV become available in the next step.
       - name: Archive, verify and optionally upload each approved app once
+        if: inputs.preflight_only != true
         env:
           ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
           SUG_UPLOAD_APPROVED: ${{ inputs.confirm_upload && 'yes' || 'no' }}

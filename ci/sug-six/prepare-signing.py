@@ -8,6 +8,7 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--root',required=True);parser.add_argument('--work',required=True)
     parser.add_argument('--apps-json',required=True);parser.add_argument('--approve-apple-signing',action='store_true')
+    parser.add_argument('--preflight-only',action='store_true')
     args=parser.parse_args()
     if not args.approve_apple_signing or os.environ.get('SUG_SIGNING_APPROVED')!='yes':
         raise RuntimeError('Apple signing approval required; no credentials loaded or API called')
@@ -41,13 +42,30 @@ def main():
     legacy.request=request
     # App records must already exist; app creation is NOT guessed through an unsupported API.
     targets=[]
+    preflight=[]
     for identity in identities:
         bundle=identity['bundleIdentifier'];legacy.BUNDLE_ID=bundle
-        bundle_resource=legacy.find_bundle_id()
+        found=request('GET','/bundleIds',params={'filter[identifier]':bundle,'limit':10}).get('data',[])
+        bundles=[b for b in found if b.get('attributes',{}).get('identifier')==bundle]
         apps_found=request('GET','/apps',params={'filter[bundleId]':bundle,'limit':10}).get('data',[])
         matches=[a for a in apps_found if a.get('attributes',{}).get('bundleId')==bundle]
-        if len(matches)!=1:raise RuntimeError('App Store Connect app record missing or ambiguous: '+bundle)
+        info={'app':identity['app'],'bundle':bundle,'bundleRegistered':len(bundles)==1,'appStoreId':matches[0]['id'] if len(matches)==1 else None}
+        if len(matches)==1:
+            builds=request('GET','/builds',params={'filter[app]':matches[0]['id'],'sort':'-uploadedDate','limit':200})
+            versions=[b.get('attributes',{}).get('version','') for b in builds.get('data',[])]
+            info['existingBuildNumbers']=versions
+            numeric=[int(v) for v in versions if v.isascii() and v.isdigit()]
+            info['proposedBuildNumber']=str(max([2026110800]+numeric)+1)
+        preflight.append(info)
+        if len(matches)!=1 or len(bundles)!=1:
+            if not args.preflight_only:raise RuntimeError('Required existing app/bundle record missing or ambiguous: '+bundle)
+            continue
+        bundle_resource=bundles[0]['id']
         targets.append({**identity,'bundleResourceId':bundle_resource,'appStoreId':matches[0]['id']})
+    print('SUG_APPLE_PREFLIGHT='+json.dumps(preflight,separators=(',',':')))
+    if args.preflight_only:
+        print('READ_ONLY_APPLE_PREFLIGHT_COMPLETE; no registration/certificate/profile/upload mutation')
+        return
     work.mkdir(mode=0o700)
     state={'format':'SUG_SIX_SIGNING_V1','certificateId':None,'profiles':[],'targets':targets,'oldAssetsDeleted':False}
     def save():
