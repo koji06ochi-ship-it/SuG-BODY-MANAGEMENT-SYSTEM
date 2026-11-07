@@ -1,22 +1,22 @@
 {
   "format": "SUG_IOS_ASSETS_V1",
-  "iv": "ad365693d2be092e8c8953eb",
-  "tag": "db03598f858827db9135794459d462e7",
+  "iv": "605afba029d931e41f9dbb9f",
+  "tag": "b4179e0a3f294686d54344ac774cfcb0",
   "chunks": [
     {
       "name": "assets.0000.enc",
       "bytes": 47185920,
-      "sha256": "b54342dbddff4e65928110adb6b0a5b699f857af81069d3bc9368153995529c7"
+      "sha256": "5d4cb8562a4be0364772bf15fc286479c17dd944be65dca70790389137e90cc4"
     },
     {
       "name": "assets.0001.enc",
       "bytes": 47185920,
-      "sha256": "0cadf828047962bb0f483148e5addc20d32dc4b2d2735b17f00fcf0dc5309ddb"
+      "sha256": "5b091f0751c072b1625fc8be53a225edd9068583464f84371299d090d913883c"
     },
     {
       "name": "assets.0002.enc",
-      "bytes": 14554072,
-      "sha256": "f9413b0b542b04bdffe055755009f5bb76bfe6e79f51b9d2b96244996dd9fdde"
+      "bytes": 14559085,
+      "sha256": "2eee94f0019b83e7687f4b4b7a2e92c85fef5a6e03c38acad8b2bbb4950d15b5"
     }
   ],
   "apps": [
@@ -27,5 +27,5 @@
     "GLOW",
     "oTo"
   ],
-  "inputManifestSHA256": "135fcf2a152ccad532f35aeb795145363d3d258f515038768e91b38d9c789efd"
+  "inputManifestSHA256": "e040cebf721bb9e59a7b2b68eba1f228e1b8c668b1555869c838f6a72d6c2370"
 }

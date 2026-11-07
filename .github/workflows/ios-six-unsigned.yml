@@ -12,7 +12,7 @@ on:
       apps_json:
         description: 'Approved source-complete targets. WAY only after confirmed body exists.'
         type: string
-        default: '["BODY","eVo","WALK","GLOW","oTo"]'
+        default: '["BODY","eVo"]'
         required: true
 permissions:
   contents: read
@@ -28,7 +28,7 @@ jobs:
       fail-fast: false
       max-parallel: 2
       matrix:
-        app: ${{ fromJSON(inputs.apps_json || '["BODY","eVo","WALK","GLOW","oTo"]') }}
+        app: ${{ fromJSON(inputs.apps_json || '["BODY","eVo"]') }}
     env:
       TARGET_APP: ${{ matrix.app }}
     steps:
