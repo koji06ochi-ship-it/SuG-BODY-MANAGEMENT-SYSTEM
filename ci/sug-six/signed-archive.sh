@@ -9,6 +9,24 @@ case "$app" in BODY) scheme=SuGBODY;bundle=jp.sugosaka.member;;eVo) scheme=SuGeV
 if [[ "$app" == WAY ]] && grep -q 'WAY_SOURCE_MISSING' "$root/WAY/iOS/Sources/WAYSourceMissing.swift";then echo 'WAY source is missing; not a signed placeholder';exit 64;fi
 test -n "${RUNNER_TEMP:-}"; test -n "${SUG_BUILD_NUMBER:-}"
 case "$SUG_BUILD_NUMBER" in ''|0|*[!0-9]*) echo 'Unique positive build number required';exit 2;;esac
+if [[ "$app" == BODY || "$app" == WALK || "$app" == eVo ]]; then
+  SUG_INFO_ROOT="$root" SUG_INFO_APP="$app" python3 - <<'PY_PURPOSE'
+import os,pathlib,plistlib
+root=pathlib.Path(os.environ['SUG_INFO_ROOT']).resolve()
+runner=pathlib.Path(os.environ['RUNNER_TEMP']).resolve()
+assert root.is_relative_to(runner) and root!=runner,'Only isolated runner sources may be patched'
+app=os.environ['SUG_INFO_APP'];assert app in {'BODY','eVo','WALK'}
+p=root/app/'iOS/Sources/Info.plist'
+before=plistlib.loads(p.read_bytes());after=dict(before)
+assert isinstance(before.get('NSHealthShareUsageDescription'),str) and before['NSHealthShareUsageDescription'].strip(),'HealthKit reading purpose required'
+if not after.get('NSHealthUpdateUsageDescription'):
+    after['NSHealthUpdateUsageDescription']='この版は、本人が同期を選んだ健康・活動データを読み取り、日々の記録の確認に使用します。ヘルスケアへの書き込みは要求せず、既存データを変更しません。'
+assert all(after[k]==v for k,v in before.items()),'Existing purpose and configuration must be preserved'
+if after!=before:p.write_bytes(plistlib.dumps(after,sort_keys=False))
+assert plistlib.loads(p.read_bytes()).get('NSHealthUpdateUsageDescription'),'HealthKit purpose missing'
+print('HEALTHKIT_PURPOSE_CHECK_PASS='+app+'; read-only behavior unchanged')
+PY_PURPOSE
+fi
 profile="$work/$app.mobileprovision"
 decoded="$work/$app.profile.plist"
 security cms -D -i "$profile" > "$decoded"
@@ -25,6 +43,10 @@ test ! -e "$archive"
 xcodebuild -project "$root/$app/iOS/$scheme.xcodeproj" -scheme "$scheme" -configuration Release -destination 'generic/platform=iOS' -archivePath "$archive" DEVELOPMENT_TEAM="$team" CURRENT_PROJECT_VERSION="$SUG_BUILD_NUMBER" CODE_SIGN_STYLE=Manual CODE_SIGN_IDENTITY='Apple Distribution' PROVISIONING_PROFILE_SPECIFIER="$profile_name" archive
 product="$archive/Products/Applications/$scheme.app"
 test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "$product/Info.plist")" = "$bundle"
+if [[ "$app" == BODY || "$app" == WALK || "$app" == eVo ]];then
+  test -n "$(/usr/libexec/PlistBuddy -c 'Print :NSHealthShareUsageDescription' "$product/Info.plist")"
+  test -n "$(/usr/libexec/PlistBuddy -c 'Print :NSHealthUpdateUsageDescription' "$product/Info.plist")"
+fi
 codesign --verify --deep --strict "$product"
 node "$root/ci/bundle-contract.mjs" --root "$root" --app "$app" --product "$product"
 options="$work/$app.ExportOptions.plist"

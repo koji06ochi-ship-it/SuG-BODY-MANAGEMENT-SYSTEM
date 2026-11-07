@@ -53,7 +53,7 @@ def main():
         created_bundle=False
         if not bundles and args.register_missing_bundles:
             if identity['app'] not in {'WALK','GLOW','oTo'}:raise RuntimeError('Outside confirmed missing-bundle scope')
-            created=request('POST','/bundleIds',body={'data':{'type':'bundleIds','attributes':{'identifier':bundle,'name':'S.u.G '+identity['app'],'platform':'IOS'}}})['data']
+            created=request('POST','/bundleIds',body={'data':{'type':'bundleIds','attributes':{'identifier':bundle,'name':'SUG '+identity['app'],'platform':'IOS'}}})['data']
             bundles=[created];created_bundle=True
             print('NEW_BUNDLE_ID='+identity['app']+':'+created['id'],flush=True)
             if identity['app']=='WALK':
