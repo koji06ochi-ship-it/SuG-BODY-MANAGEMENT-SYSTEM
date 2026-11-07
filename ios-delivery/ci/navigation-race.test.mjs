@@ -13,4 +13,4 @@ async function exercise(cancelled){const clicks=[],sleepResolvers=[];let active=
 const cancelled=await exercise(true),current=await exercise(false),observed={at:new Date().toISOString(),source,cancelledNavigationClicks:cancelled,currentNavigationClicks:current,scope:'Production prepare/ready functions in controlled JS VM. No browser or iPhone runtime claim.'};
 if(process.env.EXPECT_OLD_RACE==='1'){assert(cancelled.some(x=>x.includes('data-method')));observed.result='REPRODUCED_OLD_RACE';}
 else{assert.deepEqual(cancelled,[]);assert(current.some(x=>x.includes('data-method')));observed.result='PASS';}
-const out=path.join(root,'verification',process.env.EXPECT_OLD_RACE==='1'?'navigation-race-before.json':'navigation-race-after.json');fs.writeFileSync(out,JSON.stringify(observed,null,2));console.log(JSON.stringify(observed));
+const out=path.join(root,'verification',process.env.EXPECT_OLD_RACE==='1'?'navigation-race-before.json':'navigation-race-after.json');fs.mkdirSync(path.dirname(out),{recursive:true});fs.writeFileSync(out,JSON.stringify(observed,null,2));console.log(JSON.stringify(observed));
