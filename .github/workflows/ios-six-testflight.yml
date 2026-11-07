@@ -100,9 +100,13 @@ jobs:
           python3 - <<'PY'
           import json,os,subprocess
           apps=json.loads(os.environ['APPS_JSON']);numbers=json.loads(os.environ['BUILD_NUMBERS_JSON'])
+          failures=[]
           for app in apps:
               env={**os.environ,'SUG_BUILD_NUMBER':numbers[app]}
-              subprocess.run(['bash','ci/sug-six/signed-archive.sh',os.environ['RUNNER_TEMP']+'/sug-six',app,os.environ['RUNNER_TEMP']+'/sug-six-signing'],env=env,check=True)
+              result=subprocess.run(['bash','ci/sug-six/signed-archive.sh',os.environ['RUNNER_TEMP']+'/sug-six',app,os.environ['RUNNER_TEMP']+'/sug-six-signing'],env=env)
+              print('SUG_DELIVERY_RESULT='+json.dumps({'app':app,'buildNumber':numbers[app],'exitCode':result.returncode}),flush=True)
+              if result.returncode:failures.append(app)
+          if failures:raise SystemExit('Failed targets; no automatic retry: '+','.join(failures))
           PY
       - name: Report limited outcome
         if: always()

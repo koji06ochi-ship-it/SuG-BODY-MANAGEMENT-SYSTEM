@@ -55,7 +55,7 @@ def main():
             versions=[b.get('attributes',{}).get('version','') for b in builds.get('data',[])]
             info['existingBuildNumbers']=versions
             numeric=[int(v) for v in versions if v.isascii() and v.isdigit()]
-            info['proposedBuildNumber']=str(max([2026110800]+numeric)+1)
+            info['proposedBuildNumber']=str(max([0]+numeric)+1)
         preflight.append(info)
         if len(matches)!=1 or len(bundles)!=1:
             if not args.preflight_only:raise RuntimeError('Required existing app/bundle record missing or ambiguous: '+bundle)
