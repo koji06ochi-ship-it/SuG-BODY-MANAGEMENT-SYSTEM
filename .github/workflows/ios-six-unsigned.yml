@@ -1,5 +1,8 @@
 name: SUG six apps - approved full unsigned builds
 on:
+  push:
+    branches: ['sug/ios-six-testflight-20261108']
+    paths: ['.github/workflows/ios-six-unsigned.yml']
   workflow_dispatch:
     inputs:
       confirm_approved_build:
@@ -18,14 +21,14 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
-    if: github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' && github.ref == 'refs/heads/sug/ios-six-testflight-20261108' && github.event.repository.private == false && github.actor == 'koji06ochi-ship-it' && inputs.confirm_approved_build == true && github.run_attempt <= 2
+    if: github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' && github.ref == 'refs/heads/sug/ios-six-testflight-20261108' && github.event.repository.private == false && github.actor == 'koji06ochi-ship-it' && (github.event_name == 'push' || inputs.confirm_approved_build == true) && github.run_attempt <= 2
     runs-on: macos-26
     timeout-minutes: 20
     strategy:
       fail-fast: false
       max-parallel: 2
       matrix:
-        app: ${{ fromJSON(inputs.apps_json) }}
+        app: ${{ fromJSON(inputs.apps_json || '["BODY","eVo","WALK","GLOW","oTo"]') }}
     env:
       TARGET_APP: ${{ matrix.app }}
     steps:

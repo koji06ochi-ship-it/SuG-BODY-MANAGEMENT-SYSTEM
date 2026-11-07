@@ -1,5 +1,8 @@
 name: SUG six apps - approved private TestFlight batch
 on:
+  push:
+    branches: ['sug/ios-six-testflight-20261108']
+    paths: ['.github/workflows/ios-six-testflight.yml']
   workflow_dispatch:
     inputs:
       confirm_signing:
