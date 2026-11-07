@@ -1,0 +1,1 @@
+const s=document.getElementById('screen'),w=document.getElementById('width');function render(){for(const k of ['before','after'])document.getElementById(k).src=window.WHY_PHOTOS[s.value][k+'-'+w.value];document.body.dataset.width=w.value} s.addEventListener('change',render);w.addEventListener('change',render);render();

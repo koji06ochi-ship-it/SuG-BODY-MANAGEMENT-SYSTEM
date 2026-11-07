@@ -1,0 +1,85 @@
+name: WHY isolated iPhone build and approved private TestFlight
+on:
+  push:
+    branches: [sug/why-iphone-20261107]
+    paths: ['why-iphone/**', '.github/workflows/why-iphone.yml']
+permissions:
+  contents: read
+concurrency:
+  group: why-iphone-one-run
+  cancel-in-progress: false
+jobs:
+  unsigned:
+    if: ${{ github.event.repository.private == false && contains(fromJSON('["SUG_WHY_IPHONE_BUILD_APPROVED_ONCE","SUG_WHY_TESTFLIGHT_APPROVED_ONCE"]'), github.event.head_commit.message) }}
+    runs-on: macos-26
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with: {persist-credentials: false}
+      - run: bash why-iphone/ci/build.sh
+  testflight:
+    needs: unsigned
+    if: ${{ github.event.head_commit.message == 'SUG_WHY_TESTFLIGHT_APPROVED_ONCE' }}
+    runs-on: macos-26
+    timeout-minutes: 30
+    env:
+      APP_BUNDLE_ID: jp.sugosaka.why
+      APP_NAME: S.u.G WHY
+      APP_SKU: SUG-WHY-20261107
+      ASC_API_KEY_ID: MM98J638B7
+      ASC_API_ISSUER_ID: d3a981e0-7557-4223-a67f-d026debee303
+      ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
+      SUG_WHY_DISTRIBUTION_APPROVED: WHY_PRIVATE_TESTFLIGHT_20261107
+    steps:
+      - uses: actions/checkout@v4
+        with: {persist-credentials: false}
+      - name: Normalize existing Apple secret without printing it
+        run: |
+          python3 - <<'PY'
+          import os,base64
+          s=os.environ['ASC_API_KEY_P8'].strip().replace('\\n','\n')
+          if '-----BEGIN PRIVATE KEY-----' not in s: s=base64.b64decode(s).decode()
+          if '-----BEGIN PRIVATE KEY-----' not in s: raise SystemExit('Existing Apple key format invalid')
+          b=base64.b64encode(s.encode()).decode()
+          print('::add-mask::'+b)
+          with open(os.environ['GITHUB_ENV'],'a') as f: f.write('ASC_API_KEY_P8_BASE64='+b+'\n')
+          PY
+      - name: Install signer dependencies
+        run: |
+          python3 -m venv "$RUNNER_TEMP/why-python"
+          "$RUNNER_TEMP/why-python/bin/pip" install --disable-pip-version-check pyjwt cryptography requests
+          echo "$RUNNER_TEMP/why-python/bin" >> "$GITHUB_PATH"
+      - name: Create only WHY signing assets; never revoke previous assets
+        id: signing
+        run: python3 why-iphone/ci/prepare-signing.py
+      - name: Sign and archive WHY
+        env:
+          P12_PATH: ${{ steps.signing.outputs.p12_path }}
+          P12_PASSWORD: ${{ steps.signing.outputs.p12_password }}
+          PROFILE_PATH: ${{ steps.signing.outputs.profile_path }}
+        run: |
+          set -euo pipefail
+          KEYCHAIN="$RUNNER_TEMP/why.keychain-db"
+          PASS=$(uuidgen)
+          security create-keychain -p "$PASS" "$KEYCHAIN"
+          security unlock-keychain -p "$PASS" "$KEYCHAIN"
+          security import "$P12_PATH" -P "$P12_PASSWORD" -t cert -f pkcs12 -k "$KEYCHAIN"
+          security list-keychains -d user -s "$KEYCHAIN" login.keychain-db
+          security set-key-partition-list -S apple-tool:,apple: -s -k "$PASS" "$KEYCHAIN"
+          security cms -D -i "$PROFILE_PATH" > "$RUNNER_TEMP/profile.plist"
+          TEAM=$(/usr/libexec/PlistBuddy -c 'Print :TeamIdentifier:0' "$RUNNER_TEMP/profile.plist")
+          UUID=$(/usr/libexec/PlistBuddy -c 'Print :UUID' "$RUNNER_TEMP/profile.plist")
+          PROFILE=$(/usr/libexec/PlistBuddy -c 'Print :Name' "$RUNNER_TEMP/profile.plist")
+          mkdir -p "$HOME/Library/MobileDevice/Provisioning Profiles"
+          cp "$PROFILE_PATH" "$HOME/Library/MobileDevice/Provisioning Profiles/$UUID.mobileprovision"
+          xcodebuild -project why-iphone/iOS/SuGWHY.xcodeproj -scheme SuGWHY -configuration Release -destination 'generic/platform=iOS' -archivePath "$RUNNER_TEMP/WHY.xcarchive" DEVELOPMENT_TEAM="$TEAM" CURRENT_PROJECT_VERSION="${{ github.run_number }}" CODE_SIGN_STYLE=Manual CODE_SIGN_IDENTITY='Apple Distribution' PROVISIONING_PROFILE_SPECIFIER="$PROFILE" archive
+          cat > "$RUNNER_TEMP/ExportOptions.plist" <<EOF
+          <?xml version="1.0"?><plist version="1.0"><dict><key>method</key><string>app-store-connect</string><key>destination</key><string>export</string><key>signingStyle</key><string>manual</string><key>teamID</key><string>$TEAM</string><key>provisioningProfiles</key><dict><key>jp.sugosaka.why</key><string>$PROFILE</string></dict><key>testFlightInternalTestingOnly</key><true/></dict></plist>
+          EOF
+          xcodebuild -exportArchive -archivePath "$RUNNER_TEMP/WHY.xcarchive" -exportPath "$RUNNER_TEMP/why-export" -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist"
+      - name: Upload privately; no App Store release or tester invitations
+        run: |
+          set -euo pipefail
+          mkdir -p "$HOME/.appstoreconnect/private_keys"
+          echo "$ASC_API_KEY_P8_BASE64" | base64 --decode > "$HOME/.appstoreconnect/private_keys/AuthKey_${ASC_API_KEY_ID}.p8"
+          xcrun altool --upload-app --type ios --file "$RUNNER_TEMP/why-export/SuGWHY.ipa" --apiKey "$ASC_API_KEY_ID" --apiIssuer "$ASC_API_ISSUER_ID"

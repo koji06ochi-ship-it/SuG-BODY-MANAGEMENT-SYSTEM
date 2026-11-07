@@ -1,0 +1,18 @@
+:root{--coach-image:url('assets/coach-eight/coach-02-neutral.png')}
+#live-log .coach-avatar,.coach-title-avatar{background-image:var(--coach-image)}
+.coach-title-avatar{padding:0;cursor:pointer;min-height:0;transition:none}.coach-title-avatar:hover{background-color:#f8f3e8;background-image:var(--coach-image)}
+.home-coach{background:#fff;object-fit:contain;object-position:center bottom}
+.home-expression-button{position:absolute;right:0;top:270px;width:225px;font:500 14px/1.5 var(--sans);min-height:34px;border:0;padding:4px 0;color:#e8d2a0;text-decoration:underline;text-underline-offset:5px;background:none}
+#screen-home .hero{min-height:306px!important}
+#coach-picker{padding:22px;width:min(680px,calc(100% - 24px));max-height:calc(100dvh - 24px);border-radius:20px;background:#10231a;border-color:#627257}
+.coach-picker-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.coach-picker-heading h2{font-size:20px;margin:0}.coach-picker-heading button{border:0;font-size:15px;padding:6px 8px;min-height:44px}
+.coach-pose-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px 12px}.coach-pose-grid button{display:flex;flex-direction:column;align-items:center;padding:6px;border:2px solid transparent;border-radius:12px;min-width:0;background:#f5f1e7;color:#173127;gap:7px;font-size:14px;line-height:1.4;transition:none}.coach-pose-grid button[aria-pressed=true]{border-color:#e5bd60;background:#fff5d5}.coach-pose-grid button:hover{border-color:#e5bd60}.coach-pose-grid img{display:block;width:100%;aspect-ratio:320/439;object-fit:contain;background:#fff;border-radius:7px}.coach-pose-grid span{font-weight:600;white-space:nowrap}
+@media(max-width:760px){#screen-home .hero{min-height:245px!important}.home-coach{height:195px}.home-expression-button{top:204px;right:0;width:150px;min-height:32px}#coach-picker{padding:16px 12px}.coach-picker-heading{margin-bottom:12px}.coach-pose-grid{gap:10px 6px}.coach-pose-grid button{padding:3px;gap:6px;font-size:12px}.coach-picker-heading h2{font-size:19px}}
+@media(max-width:340px){#screen-home .hero{min-height:238px!important}.home-coach{height:185px}.home-expression-button{top:194px;width:117px}.coach-pose-grid button{font-size:11px}}
+@media(max-height:720px){#screen-home .hero{min-height:192px!important}.home-coach{height:143px}.home-expression-button{top:149px;min-height:32px}}
+
+@media(max-width:760px){.coach-pose-grid button{font-size:14px}.coach-pose-grid span{white-space:normal;overflow-wrap:anywhere;max-width:100%;min-height:2.8em;display:flex;align-items:center;justify-content:center}}
+
+/* Transparent assets: no white rectangle behind the character. */
+.home-coach,.coach-pose-grid img{background:transparent}
+.coach-title-avatar,#live-log .coach-avatar{background-color:transparent}

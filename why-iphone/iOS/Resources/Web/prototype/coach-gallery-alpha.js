@@ -1,0 +1,1 @@
+document.querySelectorAll('[data-alpha-bg]').forEach(b=>b.addEventListener('click',()=>{document.body.dataset.alphaBg=b.dataset.alphaBg;document.querySelectorAll('[data-alpha-bg]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)))}));

@@ -1,0 +1,419 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>トークン内訳・条件</title><link rel="stylesheet" href="review.css"><main><a href="index.html">評価一覧へ</a><h1>トークン内訳・条件</h1><pre class="report-text">{
+  "method": "ASCII文字数/4 + 非ASCII文字数×0.8のオフライン指標を、各記録の実測合計へ按分。内訳は実測ではない。V0.6最終プロンプトを参照するため、最初の試験時の正確な命令本文とは一致しない可能性がある。モデル専用トークナイザー・API token countは使っていない。",
+  "uncertainty": "削減後トークンは概算。少なくとも±30%の幅を想定し、実API効果測定は未実施。UTF8本文バイト数は実測。",
+  "newAPICalls": 0,
+  "billingInvoiceVerified": false,
+  "knowledgeClaimsKept": 16,
+  "historyTruncated": false,
+  "source": "https://developers.openai.com/api/docs/guides/token-counting",
+  "comparisons": [
+    {
+      "record": 1,
+      "actualHistoricalTotal": 2974,
+      "beforeComponentsEstimated": {
+        "system": 663,
+        "psychology": 419,
+        "science": 1652,
+        "history": 0,
+        "user": 10,
+        "other": 229
+      },
+      "afterComponentsEstimated": {
+        "system": 542,
+        "psychology": 240,
+        "science": 1029,
+        "history": 0,
+        "user": 10,
+        "other": 263
+      },
+      "afterTotalEstimated": 2085,
+      "estimatedReductionPercent": 30,
+      "serializedBytesBefore": 13400,
+      "serializedBytesAfter": 9265
+    },
+    {
+      "record": 2,
+      "actualHistoricalTotal": 3175,
+      "beforeComponentsEstimated": {
+        "system": 668,
+        "psychology": 422,
+        "science": 1663,
+        "history": 117,
+        "user": 20,
+        "other": 284
+      },
+      "afterComponentsEstimated": {
+        "system": 546,
+        "psychology": 242,
+        "science": 1036,
+        "history": 117,
+        "user": 20,
+        "other": 319
+      },
+      "afterTotalEstimated": 2280,
+      "estimatedReductionPercent": 28,
+      "serializedBytesBefore": 14159,
+      "serializedBytesAfter": 10024
+    },
+    {
+      "record": 3,
+      "actualHistoricalTotal": 3380,
+      "beforeComponentsEstimated": {
+        "system": 673,
+        "psychology": 425,
+        "science": 1674,
+        "history": 232,
+        "user": 20,
+        "other": 356
+      },
+      "afterComponentsEstimated": {
+        "system": 549,
+        "psychology": 244,
+        "science": 1043,
+        "history": 232,
+        "user": 20,
+        "other": 391
+      },
+      "afterTotalEstimated": 2479,
+      "estimatedReductionPercent": 27,
+      "serializedBytesBefore": 14922,
+      "serializedBytesAfter": 10787
+    },
+    {
+      "record": 4,
+      "actualHistoricalTotal": 2971,
+      "beforeComponentsEstimated": {
+        "system": 664,
+        "psychology": 420,
+        "science": 1652,
+        "history": 0,
+        "user": 7,
+        "other": 229
+      },
+      "afterComponentsEstimated": {
+        "system": 542,
+        "psychology": 241,
+        "science": 1029,
+        "history": 0,
+        "user": 7,
+        "other": 263
+      },
+      "afterTotalEstimated": 2082,
+      "estimatedReductionPercent": 30,
+      "serializedBytesBefore": 13385,
+      "serializedBytesAfter": 9250
+    },
+    {
+      "record": 5,
+      "actualHistoricalTotal": 3197,
+      "beforeComponentsEstimated": {
+        "system": 668,
+        "psychology": 423,
+        "science": 1664,
+        "history": 141,
+        "user": 26,
+        "other": 275
+      },
+      "afterComponentsEstimated": {
+        "system": 546,
+        "psychology": 242,
+        "science": 1036,
+        "history": 141,
+        "user": 26,
+        "other": 309
+      },
+      "afterTotalEstimated": 2301,
+      "estimatedReductionPercent": 28,
+      "serializedBytesBefore": 14241,
+      "serializedBytesAfter": 10106
+    },
+    {
+      "record": 6,
+      "actualHistoricalTotal": 3414,
+      "beforeComponentsEstimated": {
+        "system": 673,
+        "psychology": 425,
+        "science": 1674,
+        "history": 290,
+        "user": 26,
+        "other": 326
+      },
+      "afterComponentsEstimated": {
+        "system": 549,
+        "psychology": 244,
+        "science": 1043,
+        "history": 290,
+        "user": 26,
+        "other": 361
+      },
+      "afterTotalEstimated": 2513,
+      "estimatedReductionPercent": 26,
+      "serializedBytesBefore": 15058,
+      "serializedBytesAfter": 10923
+    },
+    {
+      "record": 7,
+      "actualHistoricalTotal": 2977,
+      "beforeComponentsEstimated": {
+        "system": 664,
+        "psychology": 420,
+        "science": 1652,
+        "history": 0,
+        "user": 12,
+        "other": 229
+      },
+      "afterComponentsEstimated": {
+        "system": 542,
+        "psychology": 241,
+        "science": 1029,
+        "history": 0,
+        "user": 12,
+        "other": 263
+      },
+      "afterTotalEstimated": 2087,
+      "estimatedReductionPercent": 30,
+      "serializedBytesBefore": 13406,
+      "serializedBytesAfter": 9271
+    },
+    {
+      "record": 8,
+      "actualHistoricalTotal": 3189,
+      "beforeComponentsEstimated": {
+        "system": 671,
+        "psychology": 424,
+        "science": 1671,
+        "history": 125,
+        "user": 17,
+        "other": 281
+      },
+      "afterComponentsEstimated": {
+        "system": 548,
+        "psychology": 243,
+        "science": 1041,
+        "history": 125,
+        "user": 17,
+        "other": 316
+      },
+      "afterTotalEstimated": 2290,
+      "estimatedReductionPercent": 28,
+      "serializedBytesBefore": 14155,
+      "serializedBytesAfter": 10020
+    },
+    {
+      "record": 9,
+      "actualHistoricalTotal": 3025,
+      "beforeComponentsEstimated": {
+        "system": 675,
+        "psychology": 427,
+        "science": 1680,
+        "history": 0,
+        "user": 10,
+        "other": 233
+      },
+      "afterComponentsEstimated": {
+        "system": 551,
+        "psychology": 245,
+        "science": 1047,
+        "history": 0,
+        "user": 10,
+        "other": 268
+      },
+      "afterTotalEstimated": 2120,
+      "estimatedReductionPercent": 30,
+      "serializedBytesBefore": 13397,
+      "serializedBytesAfter": 9262
+    },
+    {
+      "record": 10,
+      "actualHistoricalTotal": 3299,
+      "beforeComponentsEstimated": {
+        "system": 682,
+        "psychology": 431,
+        "science": 1697,
+        "history": 112,
+        "user": 29,
+        "other": 348
+      },
+      "afterComponentsEstimated": {
+        "system": 557,
+        "psychology": 247,
+        "science": 1057,
+        "history": 112,
+        "user": 29,
+        "other": 383
+      },
+      "afterTotalEstimated": 2385,
+      "estimatedReductionPercent": 28,
+      "serializedBytesBefore": 14418,
+      "serializedBytesAfter": 10283
+    },
+    {
+      "record": 11,
+      "actualHistoricalTotal": 3603,
+      "beforeComponentsEstimated": {
+        "system": 689,
+        "psychology": 436,
+        "science": 1715,
+        "history": 256,
+        "user": 31,
+        "other": 477
+      },
+      "afterComponentsEstimated": {
+        "system": 563,
+        "psychology": 250,
+        "science": 1068,
+        "history": 256,
+        "user": 31,
+        "other": 513
+      },
+      "afterTotalEstimated": 2680,
+      "estimatedReductionPercent": 26,
+      "serializedBytesBefore": 15529,
+      "serializedBytesAfter": 11394
+    },
+    {
+      "record": 12,
+      "actualHistoricalTotal": 3024,
+      "beforeComponentsEstimated": {
+        "system": 675,
+        "psychology": 427,
+        "science": 1680,
+        "history": 0,
+        "user": 9,
+        "other": 233
+      },
+      "afterComponentsEstimated": {
+        "system": 551,
+        "psychology": 245,
+        "science": 1047,
+        "history": 0,
+        "user": 9,
+        "other": 268
+      },
+      "afterTotalEstimated": 2120,
+      "estimatedReductionPercent": 30,
+      "serializedBytesBefore": 13394,
+      "serializedBytesAfter": 9259
+    },
+    {
+      "record": 13,
+      "actualHistoricalTotal": 3103,
+      "beforeComponentsEstimated": {
+        "system": 673,
+        "psychology": 425,
+        "science": 1675,
+        "history": 74,
+        "user": 25,
+        "other": 232
+      },
+      "afterComponentsEstimated": {
+        "system": 549,
+        "psychology": 244,
+        "science": 1043,
+        "history": 74,
+        "user": 25,
+        "other": 267
+      },
+      "afterTotalEstimated": 2202,
+      "estimatedReductionPercent": 29,
+      "serializedBytesBefore": 13755,
+      "serializedBytesAfter": 9620
+    },
+    {
+      "record": 14,
+      "actualHistoricalTotal": 3185,
+      "beforeComponentsEstimated": {
+        "system": 671,
+        "psychology": 424,
+        "science": 1669,
+        "history": 166,
+        "user": 24,
+        "other": 231
+      },
+      "afterComponentsEstimated": {
+        "system": 548,
+        "psychology": 243,
+        "science": 1040,
+        "history": 166,
+        "user": 24,
+        "other": 266
+      },
+      "afterTotalEstimated": 2286,
+      "estimatedReductionPercent": 28,
+      "serializedBytesBefore": 14124,
+      "serializedBytesAfter": 9989
+    },
+    {
+      "record": 15,
+      "actualHistoricalTotal": 3021,
+      "beforeComponentsEstimated": {
+        "system": 674,
+        "psychology": 426,
+        "science": 1679,
+        "history": 0,
+        "user": 9,
+        "other": 232
+      },
+      "afterComponentsEstimated": {
+        "system": 551,
+        "psychology": 244,
+        "science": 1046,
+        "history": 0,
+        "user": 9,
+        "other": 267
+      },
+      "afterTotalEstimated": 2117,
+      "estimatedReductionPercent": 30,
+      "serializedBytesBefore": 13394,
+      "serializedBytesAfter": 9259
+    },
+    {
+      "record": 16,
+      "actualHistoricalTotal": 3203,
+      "beforeComponentsEstimated": {
+        "system": 678,
+        "psychology": 428,
+        "science": 1687,
+        "history": 111,
+        "user": 14,
+        "other": 284
+      },
+      "afterComponentsEstimated": {
+        "system": 554,
+        "psychology": 246,
+        "science": 1051,
+        "history": 111,
+        "user": 14,
+        "other": 319
+      },
+      "afterTotalEstimated": 2295,
+      "estimatedReductionPercent": 28,
+      "serializedBytesBefore": 14087,
+      "serializedBytesAfter": 9952
+    },
+    {
+      "record": 17,
+      "actualHistoricalTotal": 3253,
+      "beforeComponentsEstimated": {
+        "system": 676,
+        "psychology": 427,
+        "science": 1683,
+        "history": 171,
+        "user": 12,
+        "other": 283
+      },
+      "afterComponentsEstimated": {
+        "system": 552,
+        "psychology": 245,
+        "science": 1048,
+        "history": 171,
+        "user": 12,
+        "other": 318
+      },
+      "afterTotalEstimated": 2347,
+      "estimatedReductionPercent": 28,
+      "serializedBytesBefore": 14321,
+      "serializedBytesAfter": 10186
+    }
+  ]
+}</pre></main></html>

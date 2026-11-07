@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' file:; script-src 'self' file:; style-src 'self' file:; img-src 'self' file: data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>S.u.G WHY｜独立画面試作</title>
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="live.css"><link rel="stylesheet" href="ux.css"><link rel="stylesheet" href="pages.css"><link rel="stylesheet" href="chat.css"><link rel="stylesheet" href="reading.css"><link rel="stylesheet" href="coach-set.css">
+<script defer src="scenarios.js"></script><script defer src="drafts.js"></script><script defer src="store.js"></script><script defer src="engine.js"></script><script defer src="recovery.js"></script><script defer src="gate.js"></script><script defer src="contracts.js"></script><script defer src="knowledge-data.js"></script><script defer src="app.js"></script><script defer src="prep.js"></script><script defer src="chat-view.js"></script><script defer src="live.js"></script><script defer src="cycle.js"></script><script defer src="ux.js"></script><script defer src="pages.js"></script><script defer src="reading.js"></script><script defer src="coach-set.js"></script>
+<script defer src="mobile.js"></script></head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+<aside class="sidebar">
+ <a class="wordmark" href="#home" aria-label="S.u.G WHY ホーム">S.u.G <em>WHY</em><small>自分で選ぶ、その理由を。</small></a>
+ <p class="concept">V0.8 CONVERSATION CANDIDATE<br>名称・ロゴ・配色は未承認</p>
+ <button id="nav-toggle" class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false">画面を選ぶ</button>
+ <nav id="main-nav" aria-label="メインナビゲーション">
+  <a href="#home" data-route="home"><span>01</span>ホーム</a>
+  <a href="#dialogue" data-route="dialogue"><span>02</span>対話</a>
+  <a href="#aspirations" data-route="aspirations"><span>03</span>ありたい姿・気になること</a>
+  <a href="#plans" data-route="plans"><span>04</span>試してみること</a>
+  <a href="#experiences" data-route="experiences"><span>05</span>経験と気づき</a>
+  <a href="#memory" data-route="memory"><span>06</span>記憶とデータ</a>
+ </nav>
+ <p class="sidebar-note">BE CONFIDENT.<br><strong>NEVER OVERCONFIDENT.</strong><br><span>自信は持つ。<br>ただし、過信はしない。</span></p>
+ <a class="docs-link" href="../v08/index.html">設計と検証記録 ↗</a>
+</aside>
+<div class="workspace">
+<header class="topbar"><span class="simulation"><i></i>模擬対話・AI未接続</span><span id="auth-status" class="auth-state">未認証・画面内試作</span><span class="integration">BODY / EVOLINK 未連携</span></header>
+<main id="main" tabindex="-1">
+ <div id="storage-error" role="alert" hidden><p id="storage-error-text"></p><button id="dismiss-storage-error" type="button">確認して閉じる</button><a href="#memory">JSONを書き出す</a></div>
+<section id="screen-home" class="screen">
+ <div class="eyebrow">CURIOSITY IS A BEGINNING</div>
+ <div class="hero"><div class="hero-copy"><p class="hero-brand">WHY<span>?</span></p><h1>「なんとなく」を、<br><em>理由のある選択に。</em></h1><p class="intro">自分で考え、選び、経験から気づく。<br>ありたい姿は、探しながら見つけてもいい。</p></div><div class="hero-art" aria-hidden="true"><span>?</span><i></i></div></div>
+ <form id="home-form" class="entry-form"><label for="home-input">今日は、何が気になっていますか？</label><div class="input-line"><textarea aria-describedby="entry-hint" id="home-input" maxlength="2000" rows="2" placeholder="「筋トレって限界まで必要？」からでも。" required></textarea><button class="arrow primary" type="submit" aria-label="疑問から対話を始める">対話を始める ↗</button></div></form>
+ <p id="entry-hint" class="quiet">目標がなくても、説明だけでも。Enterで改行、Ctrl＋Enterで送信できます。</p>
+ <div class="question-seeds"><span>たとえば</span><button type="button" data-seed="筋トレは限界までやらないと意味がない？">限界まで、必要？</button><button type="button" data-seed="何を目指したいか分からない">ありたい姿が分からない</button></div>
+ <div class="home-bottom"><div><span class="eyebrow">YOUR NEXT DISCOVERY</span><p id="home-next">まだ何も決めていなくていい。</p><a href="#experiences">経験を振り返る →</a></div><div class="home-principle"><p>目的は共有する。<br>方法は、固定しない。</p><span>続ける・変える・休む。選ぶのは自分。</span></div></div>
+</section>
+<section id="screen-dialogue" class="screen" hidden>
+ <div class="page-heading"><div><span class="eyebrow">DIALOGUE</span><h1>疑問から、<br class="mobile-break">ひとつずつ。</h1></div><button type="button" id="new-session">新しく話す</button></div>
+ <p class="screen-intro">入力は自由文。用意した経路だけで応答する画面試作です。実AIによる理解・判断は行いません。</p>
+ <div id="chat-log" class="chat-log" role="log" aria-label="現在の模擬対話の履歴" aria-live="off"></div>
+ <p id="session-status" class="quiet" role="status"></p><p id="response-announcement" class="sr-only" role="status"></p>
+ <form id="chat-form"><label for="chat-input">あなたの言葉で</label><textarea id="chat-input" maxlength="2000" rows="3" placeholder="気になること、訂正したいこと、話したいこと。" required></textarea><div class="form-actions"><button type="submit" class="primary" id="send-chat">送る ↗</button><button type="button" id="hold-chat">今は保留</button><button type="button" id="end-chat">今日は終わり</button><button type="button" id="open-consent-chat">外部送信する内容を確認（試作）</button></div></form>
+ <div id="suggestion" class="suggestion" hidden><p id="suggestion-text"></p><button type="button" id="view-suggestion">候補を編集してみる</button><span>まだあなたが選んだ行動ではありません。</span></div>
+ <details class="method-note"><summary>実AI経路と旧模擬対話について</summary><p>「旧模擬対話」は30シナリオのキーワード分岐です。「実AIサーバー」は送信同意後にサーバー側のResponses APIを使います。通信停止中は代替の固定応答を返しません。未対応の入力は理解したと装わず保留します。四択や固定台本を実AIと呼びません。訂正・拒否・終了を試せます。機微な実情報は入力せず、試作用の内容を使ってください。</p></details>
+</section>
+<section id="screen-aspirations" class="screen" hidden>
+ <span class="eyebrow">DIRECTION, NOT A DEADLINE</span><h1>ありたい姿も、<br>気になることも。</h1><p class="screen-intro">今は言葉にならなくてもいい。数値の目標は必要ありません。</p>
+ <form id="aspiration-form"><input type="hidden" id="aspiration-id"><label for="aspiration-text">大切にしたいこと・気になること</label><textarea id="aspiration-text" rows="3" maxlength="2000" placeholder="好きな服を楽しみたい。あるいは、まだ分からない。" required></textarea><label for="aspiration-status">今の状態</label><select id="aspiration-status"><option value="undecided">まだ決めていない</option><option value="exploring">探している</option><option value="confirmed">自分の言葉として確認した</option></select><div class="form-actions"><button class="primary" type="submit">自分の言葉を残す</button><button type="reset">入力を戻す</button></div></form>
+ <div id="aspiration-list" class="record-list"></div>
+</section>
+<section id="screen-plans" class="screen" hidden>
+ <span class="eyebrow">A SMALL EXPERIMENT</span><h1>試してみること。</h1><p class="screen-intro">納得できたときに、小さく。保留や休止も、ひとつの選択。</p>
+ <form id="plan-form"><input type="hidden" id="plan-id"><label for="plan-title">何を試す？</label><input id="plan-title" maxlength="2000" required placeholder="例：帰宅後に短く歩いてみる">
+ <label for="plan-reason">自分が選ぶ理由</label><textarea id="plan-reason" rows="2" maxlength="2000" placeholder="やらなければ、ではなく。自分が知りたいこと。"></textarea>
+ <div class="form-grid"><div><label for="plan-when">いつ</label><input id="plan-when" maxlength="2000" placeholder="例：夕食の前"></div><div><label for="plan-where">どこで</label><input id="plan-where" maxlength="2000" placeholder="例：無理なく歩ける場所"></div><div><label for="plan-amount">どの程度</label><input id="plan-amount" maxlength="2000" placeholder="自分が選ぶ時間・量"></div><div><label for="plan-prediction">何が起きそう？</label><input id="plan-prediction" maxlength="2000" placeholder="予想。空欄でもよい"></div></div>
+ <label for="plan-observe">何を確かめる？</label><input id="plan-observe" maxlength="2000" placeholder="負担、気分、始めやすさなど">
+ <label for="plan-stop">見直す・中止する条件</label><input id="plan-stop" maxlength="2000" placeholder="無理や痛みがあるときなど。状態は診断しません">
+ <label for="plan-status">今の選択</label><select id="plan-status"><option value="draft">候補として残す</option><option value="selected">自分で選んだ</option><option value="held">保留する</option><option value="paused">休止する</option><option value="completed">実施した</option></select><div class="form-actions"><button class="primary" type="submit">この状態で残す</button><button type="reset">入力を戻す</button></div></form><div id="plan-list" class="record-list"></div>
+</section>
+<section id="screen-experiences" class="screen" hidden>
+ <span class="eyebrow">EVERY EXPERIENCE ADDS VALUE</span><h1>経験から、気づく。</h1><p class="screen-intro">うまくいったかだけでなく、予想と何が違ったか。無理に学びを作らなくてもいい。</p>
+ <form id="experience-form"><input type="hidden" id="experience-id"><label for="experience-plan">関連する「試してみること」</label><select id="experience-plan"><option value="">関連付けずに残す</option></select><p id="experience-prediction" class="quiet"></p>
+ <label for="experience-actual">実際はどうだった？</label><textarea id="experience-actual" rows="3" maxlength="2000" placeholder="実施しなかった、も経験のひとつ。" required></textarea>
+ <div class="form-grid"><div><label for="experience-observed">観察したこと</label><textarea id="experience-observed" rows="2" maxlength="2000"></textarea></div><div><label for="experience-feeling">そのときの気持ち</label><textarea id="experience-feeling" rows="2" maxlength="2000"></textarea></div><div><label for="experience-interpretation">自分の解釈</label><textarea id="experience-interpretation" rows="2" maxlength="2000"></textarea></div><div><label for="experience-insight">新しく気づいたこと</label><textarea id="experience-insight" rows="2" maxlength="2000"></textarea></div><div><label for="experience-unknown">まだ分からないこと</label><textarea id="experience-unknown" rows="2" maxlength="2000"></textarea></div><div><label for="experience-next">次はどうしたい？</label><textarea id="experience-next" rows="2" maxlength="2000" placeholder="続ける、変える、今は何もしない。"></textarea></div></div>
+ <div class="form-actions"><button class="primary" type="submit">経験を残す</button><button type="reset">入力を戻す</button></div></form><div id="experience-list" class="record-list"></div>
+</section>
+<section id="screen-memory" class="screen" hidden>
+ <span class="eyebrow">YOUR WORDS, YOUR DATA</span><h1>記憶とデータ。</h1><p class="screen-intro">本人の言葉と模擬仮説を分けます。外部記録の取得・認証・API接続はありません。</p>
+ <div class="data-status"><span>BODY：未連携</span><span>EVOLINK：未連携</span><span>外部確認記録：0件</span></div>
+ <section class="data-section" id="ai-preparation"><h2>外部AIへ送る前に。</h2><p>この試作は外部通信しません。送信内容・同意・認証状態・費用上限を、接続前に確認できます。</p>
+<label for="profile-select">利用者を切り替える（試作）</label><select id="profile-select"><option value="guest">未認証のまま</option><option value="demo-a">利用者A（疑似認証）</option><option value="demo-b">利用者B（疑似認証）</option></select><p id="profile-status" role="status"></p><p class="prep-note">疑似認証は画面内の分離確認用です。本番の本人確認やアクセス制御ではありません。フォーム・記録・試算台帳を利用者ごとに分けます。</p>
+<div class="prep-row"><h3>送信内容と同意</h3><label for="prep-current">確認したい今回の入力（試作）</label><textarea id="prep-current" rows="3" maxlength="2000" placeholder="対話欄に入力してから開くか、ここに試作用の内容を記入。"></textarea>
+<button id="open-consent" type="button">送信内容を確認する</button><p id="consent-status" class="prep-status" role="status">送信同意なし。通信は常に停止しています。</p><button id="revoke-consent" type="button" disabled>試作内の同意を撤回する</button></div>
+<div class="prep-row"><h3>モデルごとの費用を試算する</h3><p>単価は未確認です。以下は架空単価・手入力上限による試算で、実料金ではありません。</p>
+<label for="model-select">試算用のモデル</label><select id="model-select"><option value="unset">未設定（試算できません）</option><option value="trial-a">試算A（架空単価）</option><option value="trial-b">試算B（架空単価）</option></select>
+<div class="model-fields"><div><label for="input-rate">入力100万トークンあたり（架空・円）</label><input id="input-rate" type="number" min="0" max="1000000" step="1" disabled></div><div><label for="output-rate">出力100万トークンあたり（架空・円）</label><input id="output-rate" type="number" min="0" max="1000000" step="1" disabled></div></div><button id="save-rates" type="button" disabled>未確認単価として更新</button>
+<div class="model-fields"><div><label for="input-tokens">1ターンの入力上限（トークン）</label><input id="input-tokens" type="number" min="0" max="100000" step="1" value="5500"></div><div><label for="output-tokens">1ターンの出力上限（トークン）</label><input id="output-tokens" type="number" min="0" max="100000" step="1" value="1500"></div></div><p class="prep-note">解釈・生成・修復の最大3段階を合計した仮の上限です。実モデルによるトークン計測は未実装。</p>
+<button id="estimate-cost" type="button">費用上限を試算</button><p id="cost-estimate" role="status">モデルと単価が未設定です。</p>
+<div class="prep-budget"><div><label for="budget-turn">1ターン上限（試算・円）</label><input id="budget-turn" type="number" min="0" step="0.01" value="12"></div><div><label for="budget-day">1日上限（試算・円）</label><input id="budget-day" type="number" min="0" step="0.01" value="23"></div><div><label for="budget-month">1か月上限（試算・円）</label><input id="budget-month" type="number" min="0" step="0.01" value="230"></div></div>
+<div class="form-actions"><button id="update-limits" type="button">試算上限を更新</button><button id="reserve-budget" type="button">費用枠を予約してみる（通信なし）</button><button id="stop-communication" type="button">通信停止を確認</button></div>
+<p id="budget-status" class="prep-status" role="status"></p><label class="check-label"><input type="checkbox" id="persist-ledger">この利用者の試算台帳を、このブラウザーに保存する</label><p class="prep-note">台帳は暗号化されません。入力原文・送信同意・単価設定は台帳に保存しません。初期状態は保存しません。</p><p id="prep-message" role="status" class="prep-summary"></p><div class="form-actions"><button id="reset-ledger" type="button">試算台帳を初期化（取消可）</button><button id="undo-ledger-reset" type="button" disabled>台帳の初期化を取り消す</button></div><div id="ledger-list" aria-label="この利用者の試算台帳"></div><button id="export-ledger" type="button">試算台帳JSONを表示</button><textarea id="ledger-export" rows="5" readonly aria-label="試算台帳JSON" hidden></textarea></div></section>
+<section class="data-section" id="knowledge-review"><h2>説明の根拠を確かめる。</h2><p>科学的な知識と、心理学的な問いかけは別に管理します。参照資料は整理中の候補で、専門家レビュー・回答への適用妥当性の検証は未実施です。</p><label for="knowledge-topic">確認する分野</label><select id="knowledge-topic"><option value="adaptation">筋肥大・筋力向上</option><option value="overload">漸進性過負荷</option><option value="rir-fatigue">RIR・限界・疲労</option><option value="programming">種目・頻度・セット・回数</option><option value="energy">総摂取エネルギー</option><option value="nutrition">PFCと栄養</option><option value="recovery">睡眠・休息・回復</option><option value="beliefs">身体変化の思い込み</option></select><div id="knowledge-list"></div></section>
+<section class="data-section"><h2>表示を調整する。</h2><label for="text-scale">文字の大きさ（このページ内）</label><select id="text-scale"><option value="1">100%</option><option value="2">200%</option></select><label class="check-label"><input type="checkbox" id="reduce-motion">このページの動きを減らす</label><p class="quiet">設定はこのページを開いている間だけ有効です。端末の設定は変更しません。</p></section>
+ <section class="data-section"><h2>保存するか、自分で選ぶ。</h2><p id="storage-status">この画面を開いている間だけ保持します。</p><label class="check-label"><input type="checkbox" id="persist">このブラウザーに、WHY試作のデータを保存する</label><p class="quiet">初期状態は保存しません。保存は暗号化されず、このブラウザーを使う人が確認できる可能性があります。</p><div class="form-actions"><button id="export-data" type="button">JSONを書き出す</button><button id="backup-view" type="button">JSONを表示</button><button id="read-local" type="button">端末内の保存を確認</button></div><textarea id="export-output" aria-label="書き出し用JSON" readonly rows="6" hidden></textarea></section>
+ <section class="data-section"><h2>保存から復元する。</h2><label for="import-file">WHY試作のJSONファイル（1MBまで）</label><input id="import-file" type="file" accept=".json,application/json"><label for="import-text">またはJSONを貼り付ける</label><textarea id="import-text" rows="4" maxlength="1048576" placeholder="外部サービスのデータは取り込みません。"></textarea><div class="form-actions"><button id="preview-import" type="button">内容を確認</button><button id="apply-import" type="button" disabled>確認した内容で復元</button><button id="undo-import" type="button" disabled>直前の復元を取り消す</button></div><p id="import-preview" role="status"></p><p class="quiet">復元前に件数を確認します。実データ・接続状態・未対応形式は拒否します。復元しても保存設定は自動で有効にしません。</p></section>
+ <section class="data-section"><h2>本人の言葉</h2><p>分類と確認は本人の操作で行います。AIは自由文から感情や価値観を確定しません。</p><div id="statement-list"></div></section>
+ <section class="data-section"><h2>模擬仮説</h2><p class="quiet">キーワード一致による分岐候補。あなたについて確認された事実ではありません。</p><div id="hypothesis-list"></div></section>
+ <section class="data-section"><h2>本人が確認した要約</h2><p>「ありたい姿・気になること」で「自分の言葉として確認した」を選んだ内容だけを表示します。</p><div id="summary-list"></div></section>
+ <section class="data-section"><h2>この試作だけを片付ける。</h2><button id="stage-delete" type="button">試作データの削除を確認</button><div id="delete-confirm" hidden><p>WHY試作の画面内データと、専用保存キーだけが対象です。直前の内容はこの画面内で復元できます。ほかのアプリやファイルには触れません。</p><button id="confirm-delete" type="button">WHY試作データを削除</button><button id="cancel-delete" type="button">やめる</button></div><button id="undo-delete" type="button" disabled>削除を取り消す</button></section>
+</section>
+</main>
+<footer><p>WIN OR LOSE. EVERY EXPERIENCE ADDS VALUE.</p><span>失敗とかちゃう。経験が価値を上げる。</span></footer>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<dialog id="edit-dialog" aria-labelledby="edit-heading"><form id="edit-form"><h2 id="edit-heading">自分の言葉を訂正する</h2><input id="edit-message-id" type="hidden"><label for="edit-text">訂正した内容</label><textarea id="edit-text" rows="4" maxlength="2000" required></textarea><label for="edit-type">本人による分類</label><select id="edit-type"><option value="unclassified">未分類のまま</option><option value="user-reported-fact">本人が述べた事実</option><option value="feeling">気持ち</option><option value="value">価値観・希望</option><option value="interpretation">解釈</option><option value="prediction">未来への予測</option></select><p>旧発言は訂正済みになり、その発言を根拠にした仮説は取り下げます。外部確認済みの事実には変換しません。</p><div class="form-actions"><button class="primary" type="submit">訂正を反映</button><button id="cancel-edit" type="button">戻る</button></div></form></dialog>
+<dialog id="consent-dialog" aria-labelledby="consent-heading"><h2 id="consent-heading">送信する内容を、自分で確認。</h2><p>外部AIは未接続です。これは同意操作の試作で、実際の事業者への送信許諾ではありません。</p><p id="preview-owner"></p>
+<fieldset><legend>確認に含める情報</legend><label class="check-label"><input type="checkbox" id="scope-turn" checked>今回の入力</label><label class="check-label"><input type="checkbox" id="scope-history">直近の会話（現行の発言のみ最大6件）</label><label class="check-label"><input type="checkbox" id="scope-values">本人が確認した情報</label><label class="check-label"><input type="checkbox" id="scope-hypotheses">未確認のAI仮説</label></fieldset><pre id="consent-payload"></pre><p id="consent-dialog-status" role="status"></p><div class="form-actions"><button id="grant-consent" class="primary" type="button">この内容に同意（試作内）</button><button id="refuse-consent" type="button">送信を拒否する</button><button id="close-consent" type="button">確認だけで戻る</button></div></dialog>
+</body></html>

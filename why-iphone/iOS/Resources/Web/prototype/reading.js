@@ -1,0 +1,10 @@
+(function(){'use strict';
+const home=document.getElementById('screen-home'),hero=home.querySelector('.hero'),portrait=document.createElement('img');portrait.src='assets/coach-original.png';portrait.alt='COACHのキャラクター';portrait.className='home-coach';hero.append(portrait);
+const label=home.querySelector('label[for="home-input"]');label.classList.remove('sr-only');label.textContent='今日は、何が気になる？';
+const btn=home.querySelector('button[type="submit"]');btn.textContent='COACHに話してみる';btn.setAttribute('aria-label','COACHに話してみる');
+const questions=document.createElement('div');questions.className='curiosity-links';questions.setAttribute('aria-label','疑問の例・選んでも送信しません');
+const icon='<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
+const entries=[{text:'限界まで、必要？',question:'筋トレは毎回限界までやる必要がある？',drawing:icon+'<path d="M7 18v12M13 13v22M35 13v22M41 18v12M13 24h22"/></svg>'},{text:'糖質って太る？',question:'糖質を食べると必ず太るの？',drawing:icon+'<path d="M8 26h32c-1 10-6 14-16 14S9 36 8 26Z"/><path d="M12 25c0-6 5-9 12-9s12 3 12 9M21 11l-2-5M29 11l2-5M8 44h32"/></svg>'}];
+for(const x of entries){const b=document.createElement('button');b.type='button';b.innerHTML=x.drawing+'<span>'+x.text+'</span>';b.addEventListener('click',()=>{const input=document.getElementById('home-input');input.value=x.question;input.dispatchEvent(new Event('input',{bubbles:true}));input.focus({preventScroll:true})});questions.append(b)}home.append(questions);
+const h=document.querySelector('#screen-dialogue .page-heading h1');h.textContent='COACH';h.classList.add('coach-title');const avatar=document.createElement('span');avatar.className='coach-title-avatar';avatar.setAttribute('aria-hidden','true');h.prepend(avatar);
+})();

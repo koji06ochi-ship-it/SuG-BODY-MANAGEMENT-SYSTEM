@@ -1,0 +1,53 @@
+{
+  "at": "2026-11-07T10:10:16.720Z",
+  "background": "transparent-alpha",
+  "generativeProcessing": false,
+  "opaqueSourcePreservedInParent": true,
+  "files": [
+    {
+      "path": "coach-01-smile.png",
+      "sha256": "2802fc8713305638295ce3e3764234de6a36cec693f0eba3a694c954a1e4158e",
+      "bytes": 296588
+    },
+    {
+      "path": "coach-02-neutral.png",
+      "sha256": "5ee589cbd26885e2ccad37602d1c9425906491e31b3e64c478665bfce130bf19",
+      "bytes": 303824
+    },
+    {
+      "path": "coach-03-discovery.png",
+      "sha256": "256f92814891c60976e72c28c68e0c490cd573bcfad8f413778790ce29d31430",
+      "bytes": 303007
+    },
+    {
+      "path": "coach-04-cheer.png",
+      "sha256": "6d6a5b707954cfd7ce9fee2ada86edfc97c6344e65dded25df7c63c3c18a342e",
+      "bytes": 310687
+    },
+    {
+      "path": "coach-05-serious.png",
+      "sha256": "4fb7d0397ff14464336291ecf94049cffbc709b73a852ce8a4e2c02736035dca",
+      "bytes": 329475
+    },
+    {
+      "path": "coach-06-thinking.png",
+      "sha256": "72821341bef825b247ea6c067f00a70d9497a9e83b72507c0fc86398622d23f1",
+      "bytes": 323462
+    },
+    {
+      "path": "coach-07-downcast.png",
+      "sha256": "dad447d262f8a072d5a8879f7e167f156c9237a9df983b9cdc74bbf5f40d1f61",
+      "bytes": 336464
+    },
+    {
+      "path": "coach-08-rest.png",
+      "sha256": "50ede20ddad78b4b8f3f34018e88b74aea1a1b8d12997d65ba90b699b21ba3f4",
+      "bytes": 325824
+    },
+    {
+      "path": "README.txt",
+      "sha256": "abc045476f5d0ed7303992be8002138934d1a105b12b966b2c02278d3828bcd2",
+      "bytes": 631
+    }
+  ]
+}

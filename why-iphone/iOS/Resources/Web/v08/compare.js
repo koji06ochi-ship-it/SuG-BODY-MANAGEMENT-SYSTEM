@@ -1,0 +1,1 @@
+'use strict';const $=id=>document.getElementById(id);$('screen').innerHTML=window.WHY_PHOTOS.map((p,i)=>'<option value="'+i+'">'+(i+1)+' '+p.name+'</option>').join('');function render(){const p=window.WHY_PHOTOS[$('screen').value||0];$('before').src=p.before;$('after').src=p.after;} $('screen').addEventListener('change',render);render();

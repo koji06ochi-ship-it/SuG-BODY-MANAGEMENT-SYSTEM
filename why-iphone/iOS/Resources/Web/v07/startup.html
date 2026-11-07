@@ -1,0 +1,47 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>起動方法</title><link rel="stylesheet" href="review.css"><main><a href="index.html">評価一覧へ</a><h1>起動方法</h1><pre class="report-text">S.u.G WHY V0.7｜品質改善候補（2026-11-06）
+
+START_WHY.cmd を起動し http://127.0.0.1:5193/ を開く。
+既存の実AI接続コードは維持。今回の追加API通信・実キー読取・追加課金は0。
+承認は停止のまま。実AIの代わりに固定応答を返すことはない。
+ローカルHTTP結合試験だけを操作する場合:
+node server/fixture-server.cjs → http://127.0.0.1:5194/
+ここで返る応答は「実AIではない」と表示する。
+
+今回の実装
+・受信usage/費用試算を回答検証の前に記録。未取得はnullで保持。
+・原文の任意暗号化保存、撤回、期限・容量制限。端末内監査鍵は本番認証の代替ではない。
+・本人が選ぶ会話→ありたい姿/計画→予想/経験→次の対話への記録共有。
+・原文と使用量の確認、不適切応答の端末内メモ（運営へは送信しない）。
+・17応答の再評価、AIの事実分類の保留、知識メタデータ/指示の重複送信削減。
+
+確認先
+v07/index.html: 改善と残課題の画面
+v07/REPORT.txt: 指定10項目の一括報告
+verification-v07/failure-investigation.json: 欠落の原因と確認できないこと
+verification-v07/17-response-review.json: 全17応答×10観点の開発者判断
+verification-v07/psychology-review.json: 10領域の証拠・未検証事項
+verification-v07/token-analysis.json: 推定内訳・実測バイト数
+verification-v07/trial-gates.json: 10人3か月の提供は現時点で不可
+
+修正検証
+node tests/v07-audit-regression.cjs
+node tests/v07-cycle-http.cjs
+外部APIや実キーを使わない再現検証。実AIの新応答品質・実請求額の合格ではない。
+欠落した過去1回の原文・usageは復元していない。
+
+データ
+手入力記録の保存は初期OFF。保存JSONとサーバー会話JSONは別。
+原文保存も初期OFF。許可時だけ最大20件/64KiB、24時間後はアクセス不可。
+期限切れの物理ファイルは次の起動・監査・保存操作時に削除する。
+本文を含まない費用監査メタデータは別管理。実請求額と未照合。
+runtime-v07の端末用鍵・原文・運用データは引継ぎZIPに含めない。
+旧runtime-v06の匿名17応答・台帳は保全した履歴。変更・穴埋めしない。
+
+未完成
+実認証、公開用の権限分離、3か月の保存/削除運用、運営の報告受付、専門家レビュー、
+iPhone実機・スクリーンリーダー、新コードの実AI品質評価。
+募集・公開はしない。名称・ロゴ・正式デザインも未承認のまま。
+
+V0.5/V0.6原本とUnity/EVOLINK/BODYは変更しない。
+v03〜v06資料・旧生成スクリプトは履歴。今回の結果はv07とverification-v07を見る。
+</pre></main></html>
