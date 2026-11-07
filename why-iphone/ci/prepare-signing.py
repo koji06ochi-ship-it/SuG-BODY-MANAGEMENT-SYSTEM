@@ -13,7 +13,11 @@ def load(name):
 
 bootstrap=load('appstore_bootstrap')
 # No HealthKit or unrelated capability changes. Existing user/role permissions are untouched.
-bootstrap.ensure_bundle();bootstrap.ensure_app()
+original_app_name=bootstrap.APP_NAME
+bootstrap.APP_NAME='SUG WHY'
+bootstrap.ensure_bundle()
+bootstrap.APP_NAME=original_app_name
+bootstrap.ensure_app()
 signer=load('appstore_signing')
 old_request=signer.request
 def one_request(method,path,**kwargs):

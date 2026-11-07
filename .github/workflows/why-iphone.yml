@@ -19,7 +19,7 @@ jobs:
       - run: bash why-iphone/ci/build.sh
   testflight:
     needs: unsigned
-    if: ${{ github.event.head_commit.message == 'SUG_WHY_TESTFLIGHT_APPROVED_ONCE' }}
+    if: ${{ always() && ((needs.unsigned.result == 'success' && github.event.head_commit.message == 'SUG_WHY_TESTFLIGHT_APPROVED_ONCE') || github.event.head_commit.message == 'SUG_WHY_SIGNING_METADATA_FIX') }}
     runs-on: macos-26
     timeout-minutes: 30
     env:
@@ -33,6 +33,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: {persist-credentials: false}
+      - name: Preserve the successful native build; limit metadata fix scope
+        if: ${{ github.event.head_commit.message == 'SUG_WHY_SIGNING_METADATA_FIX' }}
+        run: |
+          set -euo pipefail
+          git fetch --depth=2 origin d97144d0ec8a5be022f27654daf5fae9a386986d
+          git diff --name-only d97144d0ec8a5be022f27654daf5fae9a386986d HEAD > "$RUNNER_TEMP/fix-files"
+          if grep -vE '^(why-iphone/ci/prepare-signing.py|.github/workflows/why-iphone.yml)$' "$RUNNER_TEMP/fix-files"; then exit 1; fi
+          curl --fail --silent https://api.github.com/repos/koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM/actions/runs/42378976699/jobs > "$RUNNER_TEMP/prior-jobs.json"
+          python3 -c 'import json,sys; j=json.load(open(sys.argv[1])); assert any(x["name"]=="unsigned" and x["conclusion"]=="success" for x in j["jobs"])' "$RUNNER_TEMP/prior-jobs.json"
       - name: Normalize existing Apple secret without printing it
         run: |
           python3 - <<'PY'
