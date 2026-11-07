@@ -1,0 +1,100 @@
+name: SUG six apps - approved private TestFlight batch
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_signing:
+        type: boolean
+        default: false
+        required: true
+      confirm_upload:
+        type: boolean
+        default: false
+        required: true
+      apps_json:
+        description: 'Only full-build-passed targets. WAY requires confirmed product body.'
+        type: string
+        default: '["BODY","eVo","WALK","GLOW","oTo"]'
+        required: true
+      build_numbers_json:
+        description: 'Unique positive numeric build numbers, checked against each Apple app record'
+        type: string
+        default: '{}'
+        required: true
+permissions:
+  contents: read
+concurrency:
+  group: sug-six-testflight-approved
+  cancel-in-progress: false
+jobs:
+  sign-and-upload:
+    if: github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' && github.ref == 'refs/heads/sug/ios-six-testflight-20261108' && github.event.repository.private == false && github.actor == 'koji06ochi-ship-it' && inputs.confirm_signing == true && github.run_attempt == 1
+    runs-on: macos-26
+    timeout-minutes: 180
+    env:
+      APPS_JSON: ${{ inputs.apps_json }}
+      BUILD_NUMBERS_JSON: ${{ inputs.build_numbers_json }}
+      ASC_API_KEY_ID: MM98J638B7
+      ASC_API_ISSUER_ID: d3a981e0-7557-4223-a67f-d026debee303
+      SUG_SIGNING_APPROVED: 'yes'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Validate batch and build numbers before any Apple operation
+        run: |
+          python3 - <<'PY'
+          import json,os
+          apps=json.loads(os.environ['APPS_JSON']);numbers=json.loads(os.environ['BUILD_NUMBERS_JSON'])
+          assert apps and len(apps)<=6 and len(set(apps))==len(apps)
+          assert all(a in {'BODY','eVo','WALK','WAY','GLOW','oTo'} for a in apps)
+          assert set(numbers)==set(apps)
+          assert all(isinstance(numbers[a],str) and numbers[a].isascii() and numbers[a].isdigit() and 0<int(numbers[a]) for a in apps)
+          PY
+      - name: Load authenticated iOS assets
+        env:
+          SUG_SIX_BUILD_ASSET_KEY: ${{ secrets.SUG_SIX_BUILD_ASSET_KEY }}
+        run: node ci/sug-six/load-assets.mjs assets "$RUNNER_TEMP/sug-six"
+      - name: Install isolated signing dependencies
+        run: |
+          python3 -m venv "$RUNNER_TEMP/sug-sign-python"
+          "$RUNNER_TEMP/sug-sign-python/bin/python" -m pip install --quiet --disable-pip-version-check pyjwt cryptography requests
+          echo "$RUNNER_TEMP/sug-sign-python/bin" >> "$GITHUB_PATH"
+      - name: Existing app records and one new batch signing identity
+        env:
+          ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
+        run: python3 ci/sug-six/prepare-signing.py --root "$RUNNER_TEMP/sug-six" --work "$RUNNER_TEMP/sug-six-signing" --apps-json "$APPS_JSON" --approve-apple-signing
+      - name: Import only the new batch identity into an ephemeral keychain
+        run: |
+          python3 - <<'PY'
+          import json,os,pathlib,secrets
+          p=pathlib.Path(os.environ['RUNNER_TEMP'])/'sug-six-signing'
+          private=json.loads((p/'private.json').read_text());password=secrets.token_urlsafe(24)
+          print('::add-mask::'+private['password']);print('::add-mask::'+password)
+          with open(os.environ['GITHUB_ENV'],'a') as f:
+              f.write('SUG_P12_PASSWORD='+private['password']+'\nSUG_KEYCHAIN_PASSWORD='+password+'\n')
+          PY
+          # Values written to GITHUB_ENV become available in the next step.
+      - name: Archive, verify and optionally upload each approved app once
+        env:
+          ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
+          SUG_UPLOAD_APPROVED: ${{ inputs.confirm_upload && 'yes' || 'no' }}
+        run: |
+          KEYCHAIN="$RUNNER_TEMP/sug-six-signing.keychain-db"
+          security create-keychain -p "$SUG_KEYCHAIN_PASSWORD" "$KEYCHAIN"
+          security set-keychain-settings -lut 21600 "$KEYCHAIN"
+          security unlock-keychain -p "$SUG_KEYCHAIN_PASSWORD" "$KEYCHAIN"
+          security import "$RUNNER_TEMP/sug-six-signing/distribution.p12" -P "$SUG_P12_PASSWORD" -A -t cert -f pkcs12 -k "$KEYCHAIN"
+          security list-keychain -d user -s "$KEYCHAIN" login.keychain-db
+          security set-key-partition-list -S apple-tool:,apple: -s -k "$SUG_KEYCHAIN_PASSWORD" "$KEYCHAIN"
+          python3 - <<'PY'
+          import json,os,subprocess
+          apps=json.loads(os.environ['APPS_JSON']);numbers=json.loads(os.environ['BUILD_NUMBERS_JSON'])
+          for app in apps:
+              env={**os.environ,'SUG_BUILD_NUMBER':numbers[app]}
+              subprocess.run(['bash','ci/sug-six/signed-archive.sh',os.environ['RUNNER_TEMP']+'/sug-six',app,os.environ['RUNNER_TEMP']+'/sug-six-signing'],env=env,check=True)
+          PY
+      - name: Report limited outcome
+        if: always()
+        run: |
+          printf '%s\n' 'No main modification, no old certificate/profile cleanup, no public App Store submission, no outside invitation, no AI calls or artifact/cache upload.' >> "$GITHUB_STEP_SUMMARY"
+          printf '%s\n' 'Upload acceptance does not prove Apple processing, TestFlight availability or iPhone operation. New batch signing IDs remain in this run log; no existing signing asset is revoked.' >> "$GITHUB_STEP_SUMMARY"

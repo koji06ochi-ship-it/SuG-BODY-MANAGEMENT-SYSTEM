@@ -1,0 +1,31 @@
+{
+  "format": "SUG_IOS_ASSETS_V1",
+  "iv": "ad365693d2be092e8c8953eb",
+  "tag": "db03598f858827db9135794459d462e7",
+  "chunks": [
+    {
+      "name": "assets.0000.enc",
+      "bytes": 47185920,
+      "sha256": "b54342dbddff4e65928110adb6b0a5b699f857af81069d3bc9368153995529c7"
+    },
+    {
+      "name": "assets.0001.enc",
+      "bytes": 47185920,
+      "sha256": "0cadf828047962bb0f483148e5addc20d32dc4b2d2735b17f00fcf0dc5309ddb"
+    },
+    {
+      "name": "assets.0002.enc",
+      "bytes": 14554072,
+      "sha256": "f9413b0b542b04bdffe055755009f5bb76bfe6e79f51b9d2b96244996dd9fdde"
+    }
+  ],
+  "apps": [
+    "BODY",
+    "eVo",
+    "WALK",
+    "WAY",
+    "GLOW",
+    "oTo"
+  ],
+  "inputManifestSHA256": "135fcf2a152ccad532f35aeb795145363d3d258f515038768e91b38d9c789efd"
+}

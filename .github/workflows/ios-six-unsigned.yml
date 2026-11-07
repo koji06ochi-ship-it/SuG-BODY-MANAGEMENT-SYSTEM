@@ -1,0 +1,44 @@
+name: SUG six apps - approved full unsigned builds
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_approved_build:
+        type: boolean
+        default: false
+        required: true
+      apps_json:
+        description: 'Approved source-complete targets. WAY only after confirmed body exists.'
+        type: string
+        default: '["BODY","eVo","WALK","GLOW","oTo"]'
+        required: true
+permissions:
+  contents: read
+concurrency:
+  group: sug-six-unsigned-approved
+  cancel-in-progress: false
+jobs:
+  build:
+    if: github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' && github.ref == 'refs/heads/sug/ios-six-testflight-20261108' && github.event.repository.private == false && github.actor == 'koji06ochi-ship-it' && inputs.confirm_approved_build == true && github.run_attempt <= 2
+    runs-on: macos-26
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        app: ${{ fromJSON(inputs.apps_json) }}
+    env:
+      TARGET_APP: ${{ matrix.app }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Load only authenticated build inputs
+        env:
+          SUG_SIX_BUILD_ASSET_KEY: ${{ secrets.SUG_SIX_BUILD_ASSET_KEY }}
+        run: node ci/sug-six/load-assets.mjs assets "$RUNNER_TEMP/sug-six"
+      - name: Build full app for iPhoneOS and Simulator
+        run: bash "$RUNNER_TEMP/sug-six/ci/build-one.sh" "$TARGET_APP"
+      - name: Record scope
+        if: always()
+        run: |
+          printf '%s\n' 'Full app build only. No Apple API, signing, upload, AI, cache or artifact publication.' >> "$GITHUB_STEP_SUMMARY"
