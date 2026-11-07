@@ -81,6 +81,11 @@ def main():
     if args.preflight_only:
         print('APPLE_PREFLIGHT_COMPLETE; registration='+str(args.register_missing_bundles)+'; no certificate/profile/upload mutation')
         return
+    recovery_key=None
+    if os.environ.get('SUG_SIGNING_RECOVERY_APPROVED')=='yes':
+        encoded=os.environ.get('SUG_SIX_BUILD_ASSET_KEY','')
+        if len(encoded)!=64 or any(c not in '0123456789abcdef' for c in encoded):raise RuntimeError('Approved recovery requires the existing asset encryption key before certificate creation')
+        recovery_key=bytes.fromhex(encoded)
     work.mkdir(mode=0o700)
     state={'format':'SUG_SIX_SIGNING_V1','certificateId':None,'profiles':[],'targets':targets,'oldAssetsDeleted':False}
     def save():
@@ -97,6 +102,14 @@ def main():
     run('openssl','x509','-inform','DER','-in',str(der),'-out',str(cert))
     password=secrets.token_urlsafe(24);env={**os.environ,'SUG_P12_PASSWORD':password}
     run('openssl','pkcs12','-export','-out',str(p12),'-inkey',str(key),'-in',str(cert),'-passout','env:SUG_P12_PASSWORD',env=env)
+    private=work/'private.json';private.write_text(json.dumps({'p12':str(p12),'password':password}));os.chmod(private,0o600)
+    if recovery_key:
+        from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+        payload=json.dumps({'format':'SUG_SIGNING_RECOVERY_V1','certificateId':state['certificateId'],'p12':base64.b64encode(p12.read_bytes()).decode(),'password':password,'createdByRun':os.environ.get('GITHUB_RUN_ID'),'apiKeysIncluded':False},separators=(',',':')).encode()
+        nonce=secrets.token_bytes(12)
+        (work/'signing-recovery.enc').write_bytes(b'SUGSR1'+nonce+AESGCM(recovery_key).encrypt(nonce,payload,b'SUG_SIGNING_RECOVERY_V1'))
+        os.chmod(work/'signing-recovery.enc',0o600)
+        print('ENCRYPTED_SIGNING_RECOVERY_READY; no API key, no plaintext private key in logs/artifacts')
     time.sleep(5)  # Existing propagation delay; never retry a possibly completed mutation.
     for target in targets:
         # Existing proven profile payload, with the correct app name, one POST per target.
@@ -105,7 +118,6 @@ def main():
         state['profiles'].append({'app':target['app'],'id':profile['id'],'path':str(output)});save()
         print('NEW_BATCH_PROFILE_ID='+target['app']+':'+str(profile['id']))
         output.write_bytes(base64.b64decode(profile['attributes']['profileContent']));os.chmod(output,0o600)
-    private=work/'private.json';private.write_text(json.dumps({'p12':str(p12),'password':password}));os.chmod(private,0o600)
     print(json.dumps({'preparedTargets':[a['app'] for a in targets],'newCertificates':1,'oldAssetsDeleted':False,'privateFilesPublished':False}))
 
 if __name__=='__main__':main()

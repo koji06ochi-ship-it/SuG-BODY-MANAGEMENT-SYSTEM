@@ -5,6 +5,11 @@ on:
     paths: ['.github/workflows/ios-six-testflight.yml']
   workflow_dispatch:
     inputs:
+      retain_signing_recovery:
+        description: 'Separately approved encrypted signing recovery only; never API keys/plaintext'
+        type: boolean
+        default: false
+        required: true
       register_missing_bundles:
         description: 'Approved missing WALK/GLOW/oTo identifiers only; preflight mode required'
         type: boolean
@@ -76,6 +81,8 @@ jobs:
       - name: Existing app records and one new batch signing identity
         env:
           ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
+          SUG_SIX_BUILD_ASSET_KEY: ${{ inputs.retain_signing_recovery && secrets.SUG_SIX_BUILD_ASSET_KEY || '' }}
+          SUG_SIGNING_RECOVERY_APPROVED: ${{ inputs.retain_signing_recovery && 'yes' || 'no' }}
         run: python3 ci/sug-six/prepare-signing.py --root "$RUNNER_TEMP/sug-six" --work "$RUNNER_TEMP/sug-six-signing" --apps-json "$APPS_JSON" --approve-apple-signing ${{ inputs.preflight_only && '--preflight-only' || '' }} ${{ inputs.register_missing_bundles && '--register-missing-bundles' || '' }}
       - name: Import only the new batch identity into an ephemeral keychain
         if: inputs.preflight_only != true
@@ -116,5 +123,13 @@ jobs:
       - name: Report limited outcome
         if: always()
         run: |
-          printf '%s\n' 'No main modification, no old certificate/profile cleanup, no public App Store submission, no outside invitation, no AI calls or artifact/cache upload.' >> "$GITHUB_STEP_SUMMARY"
+          printf '%s\n' 'No main modification, no old certificate/profile cleanup, no public App Store submission, no outside invitation, no AI calls or plaintext/API-key artifact upload.' >> "$GITHUB_STEP_SUMMARY"
           printf '%s\n' 'Upload acceptance does not prove Apple processing, TestFlight availability or iPhone operation. New batch signing IDs remain in this run log; no existing signing asset is revoked.' >> "$GITHUB_STEP_SUMMARY"
+      - name: Preserve only separately approved encrypted signing recovery
+        if: always() && inputs.preflight_only != true && inputs.retain_signing_recovery == true
+        uses: actions/upload-artifact@v4
+        with:
+          name: sug-signing-recovery-${{ github.run_id }}
+          path: ${{ runner.temp }}/sug-six-signing/signing-recovery.enc
+          retention-days: 1
+          if-no-files-found: error
