@@ -5,6 +5,11 @@ on:
     paths: ['.github/workflows/ios-six-testflight.yml']
   workflow_dispatch:
     inputs:
+      replace_owned_failed_identity:
+        description: 'Separate approval: only cert 23G3T6T342 and profiles CV22FG9TNU/22URV7N638 from failed run'
+        type: boolean
+        default: false
+        required: true
       recovery_ciphertext:
         description: 'Approved AES-GCM envelope from prior run; empty only when creating the approved new identity'
         type: string
@@ -52,7 +57,7 @@ jobs:
   sign-and-upload:
     if: github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' && github.ref == 'refs/heads/sug/ios-six-testflight-20261108' && github.event.repository.private == false && github.actor == 'koji06ochi-ship-it' && inputs.confirm_signing == true && github.run_attempt == 1
     runs-on: macos-26
-    timeout-minutes: ${{ inputs.preflight_only && 8 || 60 }}
+    timeout-minutes: ${{ inputs.preflight_only && 8 || 59 }}
     env:
       APPS_JSON: ${{ inputs.apps_json }}
       BUILD_NUMBERS_JSON: ${{ inputs.build_numbers_json }}
@@ -89,7 +94,8 @@ jobs:
           SUG_SIX_BUILD_ASSET_KEY: ${{ inputs.retain_signing_recovery && secrets.SUG_SIX_BUILD_ASSET_KEY || '' }}
           SUG_SIGNING_RECOVERY_APPROVED: ${{ inputs.retain_signing_recovery && 'yes' || 'no' }}
           SUG_SIGNING_RECOVERY_CIPHERTEXT: ${{ inputs.recovery_ciphertext }}
-        run: python3 ci/sug-six/prepare-signing.py --root "$RUNNER_TEMP/sug-six" --work "$RUNNER_TEMP/sug-six-signing" --apps-json "$APPS_JSON" --approve-apple-signing ${{ inputs.preflight_only && '--preflight-only' || '' }} ${{ inputs.register_missing_bundles && '--register-missing-bundles' || '' }} ${{ inputs.recovery_ciphertext != '' && '--reuse-recovery' || '' }}
+          SUG_REPLACE_FAILED_IDENTITY_APPROVED: ${{ inputs.replace_owned_failed_identity && 'yes' || 'no' }}
+        run: python3 ci/sug-six/prepare-signing.py --root "$RUNNER_TEMP/sug-six" --work "$RUNNER_TEMP/sug-six-signing" --apps-json "$APPS_JSON" --approve-apple-signing ${{ inputs.preflight_only && '--preflight-only' || '' }} ${{ inputs.register_missing_bundles && '--register-missing-bundles' || '' }} ${{ inputs.recovery_ciphertext != '' && '--reuse-recovery' || '' }} ${{ inputs.replace_owned_failed_identity && '--replace-owned-failed-identity' || '' }}
       - name: Import only the new batch identity into an ephemeral keychain
         if: inputs.preflight_only != true
         run: |
@@ -129,7 +135,7 @@ jobs:
       - name: Report limited outcome
         if: always()
         run: |
-          printf '%s\n' 'No main modification, no old certificate/profile cleanup, no public App Store submission, no outside invitation, no AI calls or plaintext/API-key artifact upload.' >> "$GITHUB_STEP_SUMMARY"
+          printf '%s\n' 'No main modification, no unrelated certificate/profile cleanup, no public App Store submission, no outside invitation, no AI calls or plaintext/API-key artifact upload.' >> "$GITHUB_STEP_SUMMARY"
           printf '%s\n' 'Upload acceptance does not prove Apple processing, TestFlight availability or iPhone operation. New batch signing IDs remain in this run log; no existing signing asset is revoked.' >> "$GITHUB_STEP_SUMMARY"
       - name: Preserve only separately approved encrypted signing recovery
         if: always() && inputs.preflight_only != true && inputs.retain_signing_recovery == true
@@ -137,6 +143,9 @@ jobs:
           python3 - <<'PY'
           import os,pathlib,base64
           p=pathlib.Path(os.environ['RUNNER_TEMP'])/'sug-six-signing/signing-recovery.enc'
+          if not p.exists():
+              print('NO_NEW_SIGNING_IDENTITY_TO_RECOVER; no recovery payload published')
+              raise SystemExit(0)
           raw=p.read_bytes();assert raw.startswith(b'SUGSR1')
           print('SUG_SIGNING_RECOVERY_CIPHERTEXT='+base64.b64encode(raw).decode())
           PY

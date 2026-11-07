@@ -11,11 +11,14 @@ def main():
     parser.add_argument('--preflight-only',action='store_true')
     parser.add_argument('--register-missing-bundles',action='store_true')
     parser.add_argument('--reuse-recovery',action='store_true')
+    parser.add_argument('--replace-owned-failed-identity',action='store_true')
     args=parser.parse_args()
     if not args.approve_apple_signing or os.environ.get('SUG_SIGNING_APPROVED')!='yes':
         raise RuntimeError('Apple signing approval required; no credentials loaded or API called')
     if args.register_missing_bundles and not args.preflight_only:
         raise RuntimeError('Registration is isolated from archive/signing execution')
+    if args.replace_owned_failed_identity and (args.preflight_only or args.reuse_recovery or os.environ.get('SUG_REPLACE_FAILED_IDENTITY_APPROVED')!='yes'):
+        raise RuntimeError('Specific failed-resource replacement approval required')
     apps=json.loads(args.apps_json)
     allowed={'BODY','eVo','WALK','WAY','GLOW','oTo'}
     if not apps or len(apps)>6 or len(set(apps))!=len(apps) or any(a not in allowed for a in apps):
@@ -92,6 +95,26 @@ def main():
     def save():
         (work/'state.json').write_text(json.dumps(state,indent=2));os.chmod(work/'state.json',0o600)
     save()
+    if args.replace_owned_failed_identity:
+        # Exact three resources created by our failed run. No discovery-based cleanup.
+        failed_cert='23G3T6T342'
+        owned=[('BODY','CV22FG9TNU'),('eVo','22URV7N638')]
+        old=request('GET','/certificates/'+failed_cert)['data']
+        if old['id']!=failed_cert or old['attributes']['certificateType']!='DISTRIBUTION':raise RuntimeError('Unexpected failed certificate; no deletion')
+        checked=[]
+        for app,pid in owned:
+            item=request('GET','/profiles/'+pid,params={'include':'certificates,bundleId'})['data']
+            if item['id']!=pid or item['attributes']['name']!='S.u.G '+app+' CI 42421228576':raise RuntimeError('Profile was not created by the failed run; no deletion')
+            linked=item.get('relationships',{}).get('certificates',{}).get('data',[])
+            if [c['id'] for c in linked]!=[failed_cert]:raise RuntimeError('Unexpected profile certificate relationship; no deletion')
+            checked.append(pid)
+        # Verify every resource before performing even the first irreversible operation.
+        for pid in checked:
+            request('DELETE','/profiles/'+pid,allow=(204,))
+            print('REMOVED_OWN_FAILED_PROFILE_ID='+pid,flush=True)
+        request('DELETE','/certificates/'+failed_cert,allow=(204,))
+        state['replacedOwnedFailedIdentity']={'certificateId':failed_cert,'profiles':checked};save()
+        print('REVOKED_OWN_FAILED_CERTIFICATE_ID='+failed_cert,flush=True)
     def run(*cmd,**kw):subprocess.run(cmd,check=True,**kw)
     key=work/'distribution.key.pem';csr=work/'distribution.csr.pem';der=work/'distribution.cer';cert=work/'distribution.cert.pem';p12=work/'distribution.p12'
     if args.reuse_recovery:
