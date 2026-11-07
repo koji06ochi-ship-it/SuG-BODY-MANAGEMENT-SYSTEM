@@ -5,6 +5,11 @@ on:
     paths: ['.github/workflows/ios-six-testflight.yml']
   workflow_dispatch:
     inputs:
+      register_missing_bundles:
+        description: 'Approved missing WALK/GLOW/oTo identifiers only; preflight mode required'
+        type: boolean
+        default: false
+        required: true
       preflight_only:
         description: 'Read-only Apple app/bundle/build-number check; no signing or upload'
         type: boolean
@@ -71,7 +76,7 @@ jobs:
       - name: Existing app records and one new batch signing identity
         env:
           ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
-        run: python3 ci/sug-six/prepare-signing.py --root "$RUNNER_TEMP/sug-six" --work "$RUNNER_TEMP/sug-six-signing" --apps-json "$APPS_JSON" --approve-apple-signing ${{ inputs.preflight_only && '--preflight-only' || '' }}
+        run: python3 ci/sug-six/prepare-signing.py --root "$RUNNER_TEMP/sug-six" --work "$RUNNER_TEMP/sug-six-signing" --apps-json "$APPS_JSON" --approve-apple-signing ${{ inputs.preflight_only && '--preflight-only' || '' }} ${{ inputs.register_missing_bundles && '--register-missing-bundles' || '' }}
       - name: Import only the new batch identity into an ephemeral keychain
         if: inputs.preflight_only != true
         run: |

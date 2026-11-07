@@ -9,9 +9,12 @@ def main():
     parser.add_argument('--root',required=True);parser.add_argument('--work',required=True)
     parser.add_argument('--apps-json',required=True);parser.add_argument('--approve-apple-signing',action='store_true')
     parser.add_argument('--preflight-only',action='store_true')
+    parser.add_argument('--register-missing-bundles',action='store_true')
     args=parser.parse_args()
     if not args.approve_apple_signing or os.environ.get('SUG_SIGNING_APPROVED')!='yes':
         raise RuntimeError('Apple signing approval required; no credentials loaded or API called')
+    if args.register_missing_bundles and not args.preflight_only:
+        raise RuntimeError('Registration is isolated from archive/signing execution')
     apps=json.loads(args.apps_json)
     allowed={'BODY','eVo','WALK','WAY','GLOW','oTo'}
     if not apps or len(apps)>6 or len(set(apps))!=len(apps) or any(a not in allowed for a in apps):
@@ -47,15 +50,27 @@ def main():
         bundle=identity['bundleIdentifier'];legacy.BUNDLE_ID=bundle
         found=request('GET','/bundleIds',params={'filter[identifier]':bundle,'limit':10}).get('data',[])
         bundles=[b for b in found if b.get('attributes',{}).get('identifier')==bundle]
+        created_bundle=False
+        if not bundles and args.register_missing_bundles:
+            if identity['app'] not in {'WALK','GLOW','oTo'}:raise RuntimeError('Outside confirmed missing-bundle scope')
+            created=request('POST','/bundleIds',body={'data':{'type':'bundleIds','attributes':{'identifier':bundle,'name':'S.u.G '+identity['app'],'platform':'IOS'}}})['data']
+            bundles=[created];created_bundle=True
+            print('NEW_BUNDLE_ID='+identity['app']+':'+created['id'],flush=True)
+            if identity['app']=='WALK':
+                capability=request('POST','/bundleIdCapabilities',body={'data':{'type':'bundleIdCapabilities','attributes':{'capabilityType':'HEALTHKIT'},'relationships':{'bundleId':{'data':{'type':'bundleIds','id':created['id']}}}}})['data']
+                print('NEW_WALK_HEALTHKIT_CAPABILITY_ID='+capability['id'],flush=True)
         apps_found=request('GET','/apps',params={'filter[bundleId]':bundle,'limit':10}).get('data',[])
         matches=[a for a in apps_found if a.get('attributes',{}).get('bundleId')==bundle]
         info={'app':identity['app'],'bundle':bundle,'bundleRegistered':len(bundles)==1,'appStoreId':matches[0]['id'] if len(matches)==1 else None}
+        info['bundleCreatedThisRun']=created_bundle
         if len(matches)==1:
-            builds=request('GET','/builds',params={'filter[app]':matches[0]['id'],'sort':'-uploadedDate','limit':200})
+            builds=request('GET','/builds',params={'filter[app]':matches[0]['id'],'sort':'-uploadedDate','limit':200,'include':'buildBetaDetail,betaGroups'})
             versions=[b.get('attributes',{}).get('version','') for b in builds.get('data',[])]
             info['existingBuildNumbers']=versions
             numeric=[int(v) for v in versions if v.isascii() and v.isdigit()]
             info['proposedBuildNumber']=str(max([0]+numeric)+1)
+            details={d['id']:d for d in builds.get('included',[]) if d['type']=='buildBetaDetails'}
+            info['latestBuilds']=[{'id':b['id'],'version':b.get('attributes',{}).get('version'),'processingState':b.get('attributes',{}).get('processingState'),'usesNonExemptEncryption':b.get('attributes',{}).get('usesNonExemptEncryption'),'betaGroups':[g['id'] for g in b.get('relationships',{}).get('betaGroups',{}).get('data',[])],'betaDetail':details.get((b.get('relationships',{}).get('buildBetaDetail',{}).get('data') or {}).get('id'),{}).get('attributes',{})} for b in builds.get('data',[])[:3]]
         preflight.append(info)
         if len(matches)!=1 or len(bundles)!=1:
             if not args.preflight_only:raise RuntimeError('Required existing app/bundle record missing or ambiguous: '+bundle)
@@ -64,7 +79,7 @@ def main():
         targets.append({**identity,'bundleResourceId':bundle_resource,'appStoreId':matches[0]['id']})
     print('SUG_APPLE_PREFLIGHT='+json.dumps(preflight,separators=(',',':')))
     if args.preflight_only:
-        print('READ_ONLY_APPLE_PREFLIGHT_COMPLETE; no registration/certificate/profile/upload mutation')
+        print('APPLE_PREFLIGHT_COMPLETE; registration='+str(args.register_missing_bundles)+'; no certificate/profile/upload mutation')
         return
     work.mkdir(mode=0o700)
     state={'format':'SUG_SIX_SIGNING_V1','certificateId':None,'profiles':[],'targets':targets,'oldAssetsDeleted':False}
