@@ -36,13 +36,13 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: sug-six-testflight-approved
+  group: sug-six-${{ inputs.preflight_only && 'registration-status' || 'testflight' }}-approved
   cancel-in-progress: false
 jobs:
   sign-and-upload:
     if: github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' && github.ref == 'refs/heads/sug/ios-six-testflight-20261108' && github.event.repository.private == false && github.actor == 'koji06ochi-ship-it' && inputs.confirm_signing == true && github.run_attempt == 1
     runs-on: macos-26
-    timeout-minutes: ${{ inputs.preflight_only && 10 || 170 }}
+    timeout-minutes: ${{ inputs.preflight_only && 8 || 170 }}
     env:
       APPS_JSON: ${{ inputs.apps_json }}
       BUILD_NUMBERS_JSON: ${{ inputs.build_numbers_json }}
