@@ -1,0 +1,40 @@
+name: SUG GLOW and oTo native compiler check
+on:
+  push:
+    branches: [sug/ios-six-native-20261108]
+    paths:
+      - 'six-native/**'
+      - '.github/workflows/ios-added-native-check.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  swift-check:
+    if: github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' && github.ref == 'refs/heads/sug/ios-six-native-20261108'
+    runs-on: macos-26
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        app: [GLOW, oTo]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Typecheck actual native source against iPhoneOS and Simulator SDKs
+        env:
+          SUG_APP: ${{ matrix.app }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          case "$SUG_APP" in GLOW|oTo) ;; *) exit 2 ;; esac
+          xcodebuild -version
+          for sdk in iphoneos iphonesimulator; do
+            target=arm64-apple-ios17.0
+            if [[ "$sdk" == iphonesimulator ]]; then target=arm64-apple-ios17.0-simulator; fi
+            xcrun --sdk "$sdk" swiftc -typecheck -parse-as-library \
+              -sdk "$(xcrun --sdk "$sdk" --show-sdk-path)" -target "$target" \
+              -swift-version 5 -module-name "SuG${SUG_APP}" \
+              six-native/"$SUG_APP"/Sources/*.swift
+          done
+          echo 'Native source typecheck only. No app signing, resource bundle validation or physical iPhone test.'
