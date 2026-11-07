@@ -5,6 +5,11 @@ on:
     paths: ['.github/workflows/ios-six-testflight.yml']
   workflow_dispatch:
     inputs:
+      recovery_ciphertext:
+        description: 'Approved AES-GCM envelope from prior run; empty only when creating the approved new identity'
+        type: string
+        default: ''
+        required: false
       retain_signing_recovery:
         description: 'Separately approved encrypted signing recovery only; never API keys/plaintext'
         type: boolean
@@ -47,7 +52,7 @@ jobs:
   sign-and-upload:
     if: github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' && github.ref == 'refs/heads/sug/ios-six-testflight-20261108' && github.event.repository.private == false && github.actor == 'koji06ochi-ship-it' && inputs.confirm_signing == true && github.run_attempt == 1
     runs-on: macos-26
-    timeout-minutes: ${{ inputs.preflight_only && 8 || 170 }}
+    timeout-minutes: ${{ inputs.preflight_only && 8 || 60 }}
     env:
       APPS_JSON: ${{ inputs.apps_json }}
       BUILD_NUMBERS_JSON: ${{ inputs.build_numbers_json }}
@@ -83,7 +88,8 @@ jobs:
           ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
           SUG_SIX_BUILD_ASSET_KEY: ${{ inputs.retain_signing_recovery && secrets.SUG_SIX_BUILD_ASSET_KEY || '' }}
           SUG_SIGNING_RECOVERY_APPROVED: ${{ inputs.retain_signing_recovery && 'yes' || 'no' }}
-        run: python3 ci/sug-six/prepare-signing.py --root "$RUNNER_TEMP/sug-six" --work "$RUNNER_TEMP/sug-six-signing" --apps-json "$APPS_JSON" --approve-apple-signing ${{ inputs.preflight_only && '--preflight-only' || '' }} ${{ inputs.register_missing_bundles && '--register-missing-bundles' || '' }}
+          SUG_SIGNING_RECOVERY_CIPHERTEXT: ${{ inputs.recovery_ciphertext }}
+        run: python3 ci/sug-six/prepare-signing.py --root "$RUNNER_TEMP/sug-six" --work "$RUNNER_TEMP/sug-six-signing" --apps-json "$APPS_JSON" --approve-apple-signing ${{ inputs.preflight_only && '--preflight-only' || '' }} ${{ inputs.register_missing_bundles && '--register-missing-bundles' || '' }} ${{ inputs.recovery_ciphertext != '' && '--reuse-recovery' || '' }}
       - name: Import only the new batch identity into an ephemeral keychain
         if: inputs.preflight_only != true
         run: |

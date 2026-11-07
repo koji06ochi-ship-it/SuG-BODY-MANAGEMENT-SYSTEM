@@ -10,6 +10,7 @@ def main():
     parser.add_argument('--apps-json',required=True);parser.add_argument('--approve-apple-signing',action='store_true')
     parser.add_argument('--preflight-only',action='store_true')
     parser.add_argument('--register-missing-bundles',action='store_true')
+    parser.add_argument('--reuse-recovery',action='store_true')
     args=parser.parse_args()
     if not args.approve_apple_signing or os.environ.get('SUG_SIGNING_APPROVED')!='yes':
         raise RuntimeError('Apple signing approval required; no credentials loaded or API called')
@@ -93,15 +94,36 @@ def main():
     save()
     def run(*cmd,**kw):subprocess.run(cmd,check=True,**kw)
     key=work/'distribution.key.pem';csr=work/'distribution.csr.pem';der=work/'distribution.cer';cert=work/'distribution.cert.pem';p12=work/'distribution.p12'
-    run('openssl','genrsa','-out',str(key),'2048')
-    run('openssl','req','-new','-key',str(key),'-out',str(csr),'-subj','/CN=S.u.G approved six-app batch/O=S.u.G OSAKA/C=JP')
-    created=request('POST','/certificates',body={'data':{'type':'certificates','attributes':{'certificateType':'DISTRIBUTION','csrContent':csr.read_text()}}})['data']
-    state['certificateId']=created['id'];save()
-    print('NEW_BATCH_CERTIFICATE_ID='+str(created['id']))
-    der.write_bytes(base64.b64decode(created['attributes']['certificateContent']))
-    run('openssl','x509','-inform','DER','-in',str(der),'-out',str(cert))
-    password=secrets.token_urlsafe(24);env={**os.environ,'SUG_P12_PASSWORD':password}
-    run('openssl','pkcs12','-export','-out',str(p12),'-inkey',str(key),'-in',str(cert),'-passout','env:SUG_P12_PASSWORD',env=env)
+    if args.reuse_recovery:
+        if not recovery_key:raise RuntimeError('Reusing signing identity requires approved encrypted recovery')
+        from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+        from cryptography.hazmat.primitives.serialization import pkcs12,Encoding
+        from datetime import datetime,timezone
+        blob=base64.b64decode(os.environ.get('SUG_SIGNING_RECOVERY_CIPHERTEXT',''),validate=True)
+        if len(blob)>65536 or blob[:6]!=b'SUGSR1':raise RuntimeError('Invalid recovery envelope')
+        recovered=json.loads(AESGCM(recovery_key).decrypt(blob[6:18],blob[18:],b'SUG_SIGNING_RECOVERY_V1'))
+        if recovered.get('format')!='SUG_SIGNING_RECOVERY_V1' or recovered.get('apiKeysIncluded') is not False:raise RuntimeError('Wrong recovery payload')
+        cert_id=recovered['certificateId']
+        if not cert_id.isalnum() or len(cert_id)>32:raise RuntimeError('Invalid recovered certificate ID')
+        created=request('GET','/certificates/'+cert_id)['data']
+        if created['attributes']['certificateType'] not in {'DISTRIBUTION','IOS_DISTRIBUTION'}:raise RuntimeError('Wrong certificate type')
+        data=base64.b64decode(recovered['p12'],validate=True);password=recovered['password']
+        private_key,leaf,extra=pkcs12.load_key_and_certificates(data,password.encode())
+        if private_key is None or leaf is None or leaf.not_valid_after_utc<=datetime.now(timezone.utc):raise RuntimeError('Recovered identity missing or expired')
+        if leaf.public_bytes(Encoding.DER)!=base64.b64decode(created['attributes']['certificateContent']):raise RuntimeError('Recovered identity differs from Apple certificate')
+        if private_key.public_key().public_numbers()!=leaf.public_key().public_numbers():raise RuntimeError('Recovered key does not match certificate')
+        p12.write_bytes(data);state['certificateId']=cert_id;save()
+        print('REUSED_BATCH_CERTIFICATE_ID='+cert_id)
+    else:
+        run('openssl','genrsa','-out',str(key),'2048')
+        run('openssl','req','-new','-key',str(key),'-out',str(csr),'-subj','/CN=S.u.G approved six-app batch/O=S.u.G OSAKA/C=JP')
+        created=request('POST','/certificates',body={'data':{'type':'certificates','attributes':{'certificateType':'DISTRIBUTION','csrContent':csr.read_text()}}})['data']
+        state['certificateId']=created['id'];save()
+        print('NEW_BATCH_CERTIFICATE_ID='+str(created['id']))
+        der.write_bytes(base64.b64decode(created['attributes']['certificateContent']))
+        run('openssl','x509','-inform','DER','-in',str(der),'-out',str(cert))
+        password=secrets.token_urlsafe(24);env={**os.environ,'SUG_P12_PASSWORD':password}
+        run('openssl','pkcs12','-export','-out',str(p12),'-inkey',str(key),'-in',str(cert),'-passout','env:SUG_P12_PASSWORD',env=env)
     private=work/'private.json';private.write_text(json.dumps({'p12':str(p12),'password':password}));os.chmod(private,0o600)
     if recovery_key:
         from cryptography.hazmat.primitives.ciphers.aead import AESGCM
@@ -118,6 +140,6 @@ def main():
         state['profiles'].append({'app':target['app'],'id':profile['id'],'path':str(output)});save()
         print('NEW_BATCH_PROFILE_ID='+target['app']+':'+str(profile['id']))
         output.write_bytes(base64.b64decode(profile['attributes']['profileContent']));os.chmod(output,0o600)
-    print(json.dumps({'preparedTargets':[a['app'] for a in targets],'newCertificates':1,'oldAssetsDeleted':False,'privateFilesPublished':False}))
+    print(json.dumps({'preparedTargets':[a['app'] for a in targets],'newCertificates':0 if args.reuse_recovery else 1,'oldAssetsDeleted':False,'privateFilesPublished':False}))
 
 if __name__=='__main__':main()
