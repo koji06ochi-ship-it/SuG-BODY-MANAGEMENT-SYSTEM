@@ -56,7 +56,7 @@ final class WalkNativeBridge {
             window.__SUG_NATIVE_WALK_SNAPSHOT__ = payload;
             window.dispatchEvent(new CustomEvent('sug:native-walk', {detail: payload}));
             """, arguments: ["payload": payload, "expectedOrigin": "http://127.0.0.1:5413",
-                             "expectedPath": target.path], in: nil, contentWorld: .page) { [weak self] _ in
+                             "expectedPath": target.path], in: nil, in: .page) { [weak self] _ in
             self?.sending = false
         }
     }

@@ -12,14 +12,14 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
-    if: ${{ github.event.repository.private == false && github.event.head_commit.message == 'SUG_IOS_INTEGRATION_RECHECK_20261107_APPROVED_ONCE' }}
+    if: ${{ github.event.repository.private == false && github.event.head_commit.message == 'SUG_WALK_WEBKIT_CALLBACK_FIX_20261108_APPROVED_ONCE' }}
     runs-on: macos-26
     timeout-minutes: 20
     strategy:
       fail-fast: false
       max-parallel: 1
       matrix:
-        app: [eVo, WALK]
+        app: [WALK]
     steps:
       - uses: actions/checkout@v4
         with:

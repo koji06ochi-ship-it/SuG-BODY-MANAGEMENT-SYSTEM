@@ -24,7 +24,7 @@ import UniformTypeIdentifiers
     func load() { if web.url == nil { web.load(URLRequest(url: WalkNativeConfiguration.launchURL)) } }
     func shareSteps(_ steps: Double) {
         let payload: [String: Any] = ["steps": steps, "syncedAt": ISO8601DateFormatter().string(from: Date()), "source":"healthkit_native"]
-        web.callAsyncJavaScript("localStorage.setItem('sug_native_health_v1',JSON.stringify(payload));window.dispatchEvent(new CustomEvent('sug:native-health'));", arguments: ["payload":payload], in: nil, contentWorld: .page) { _ in }
+        web.callAsyncJavaScript("localStorage.setItem('sug_native_health_v1',JSON.stringify(payload));window.dispatchEvent(new CustomEvent('sug:native-health'));", arguments: ["payload":payload], in: nil, in: .page) { _ in }
     }
 }
 struct WalkWebView: UIViewRepresentable {
