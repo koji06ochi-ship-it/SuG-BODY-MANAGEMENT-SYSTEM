@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5776-22528-20261016",
+  "lat": 34.65842011646593,
+  "lng": 135.1709288206554,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/817cd0f2775c833f",
+      "lat": 34.656709492315,
+      "lng": 135.168917150114,
+      "category": "SAFE",
+      "name": "神戸ウイングスタジアム㈱",
+      "address": "神戸市兵庫区御崎町1-2-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区御崎町1-2-2",
+      "district": "兵庫区",
+      "sourceRow": 2028,
+      "sourceRows": [
+        2028
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b6e477e864405b01",
+      "lat": 34.6579275312652,
+      "lng": 135.168018360304,
+      "category": "SAFE",
+      "name": "神戸市環境局自動車管理事務所(中部車庫)",
+      "address": "神戸市兵庫区御崎町1丁目3－15",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区御崎町1丁目3－15",
+      "district": "兵庫区",
+      "sourceRow": 2077,
+      "sourceRows": [
+        2077
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8edae27fcfad88ea",
+      "lat": 34.659815143971,
+      "lng": 135.173087217282,
+      "category": "SAFE",
+      "name": "兵庫県立　兵庫工業高校",
+      "address": "神戸市兵庫区和田宮通2丁目1-63",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区和田宮通2丁目1-63",
+      "district": "兵庫区",
+      "sourceRow": 2122,
+      "sourceRows": [
+        2122
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bf172091f84754d5",
+      "lat": 34.659815143971,
+      "lng": 135.173087217282,
+      "category": "SAFE",
+      "name": "兵庫県立　神戸工業高等学校",
+      "address": "神戸市兵庫区和田宮通2-1-63",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区和田宮通2-1-63",
+      "district": "兵庫区",
+      "sourceRow": 2125,
+      "sourceRows": [
+        2125
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f5cd37db7b7092b2",
+      "lat": 34.6578332708075,
+      "lng": 135.171534158295,
+      "category": "SAFE",
+      "name": "和田岬地域福祉センター",
+      "address": "神戸市兵庫区浜山通1丁目1-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区浜山通1丁目1-5",
+      "district": "兵庫区",
+      "sourceRow": 2146,
+      "sourceRows": [
+        2146
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

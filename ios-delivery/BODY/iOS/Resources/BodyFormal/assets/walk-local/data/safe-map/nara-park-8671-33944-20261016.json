@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "nara-park-8671-33944-20261016",
+  "lat": 34.68713698316504,
+  "lng": 135.77929156442246,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "奈良市",
+  "source": "奈良市 公園オープンデータ",
+  "sourceUrl": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+  "sourceFileUrl": "https://www.city.nara.lg.jp/uploaded/attachment/200222.csv",
+  "sourceUpdatedAt": "2025-04-01",
+  "retrievedAt": "2026-10-15T15:58:16.669Z",
+  "sourceFileSha256": "d1b1be81bbdbaab587735acc5d5244377d1cdfe2f3bcec59af61dc6eb3a6f94f",
+  "license": "CC-BY-2.1-JP",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.1/jp/",
+  "data": [
+    {
+      "id": "municipality/nara/nara-city/554bba2811fefb54",
+      "lat": 34.68633037613845,
+      "lng": 135.77915001315606,
+      "category": "PUBLIC",
+      "name": "菅原公園",
+      "address": "",
+      "kind": "街区公園",
+      "source": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+      "sourceLabel": "奈良市 公園オープンデータ（市公表位置・精度保証なし）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-04-01",
+      "sourceRow": 30,
+      "sourceRows": [
+        30
+      ],
+      "duplicateSourceEntries": 1,
+      "accuracyNote": "奈良市公表データ。市の注意書きにより正確な公園図面との誤差があり、位置精度は保証されません。"
+    },
+    {
+      "id": "municipality/nara/nara-city/ac898ba52627fa8f",
+      "lat": 34.68708401305083,
+      "lng": 135.77927182130432,
+      "category": "PUBLIC",
+      "name": "菅原町東街区公園",
+      "address": "",
+      "kind": "街区公園",
+      "source": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+      "sourceLabel": "奈良市 公園オープンデータ（市公表位置・精度保証なし）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-04-01",
+      "sourceRow": 77,
+      "sourceRows": [
+        77
+      ],
+      "duplicateSourceEntries": 1,
+      "accuracyNote": "奈良市公表データ。市の注意書きにより正確な公園図面との誤差があり、位置精度は保証されません。"
+    },
+    {
+      "id": "municipality/nara/nara-city/6a0d1a4a2ccc7843",
+      "lat": 34.68799656030585,
+      "lng": 135.77945285880702,
+      "category": "PUBLIC",
+      "name": "すがはらパンダ公園",
+      "address": "",
+      "kind": "未供用",
+      "source": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+      "sourceLabel": "奈良市 公園オープンデータ（市公表位置・精度保証なし）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-04-01",
+      "sourceRow": 676,
+      "sourceRows": [
+        676
+      ],
+      "duplicateSourceEntries": 1,
+      "accuracyNote": "奈良市公表データ。市の注意書きにより正確な公園図面との誤差があり、位置精度は保証されません。"
+    }
+  ]
+}

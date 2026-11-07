@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5786-22546-20261016",
+  "lat": 34.71929801164584,
+  "lng": 135.27958572467892,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/6084aef28fcb3825",
+      "lat": 34.721266033332,
+      "lng": 135.278775839823,
+      "category": "SAFE",
+      "name": "神戸市立　福池小学校",
+      "address": "神戸市東灘区本山南町4-4-28",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区本山南町4-4-28",
+      "district": "東灘区",
+      "sourceRow": 1387,
+      "sourceRows": [
+        1387
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/702e42b9e66d0f89",
+      "lat": 34.7180046743779,
+      "lng": 135.28123009109,
+      "category": "SAFE",
+      "name": "キコーナ青木店",
+      "address": "神戸市東灘区北青木3丁目5-15",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区北青木3丁目5-15",
+      "district": "東灘区",
+      "sourceRow": 1452,
+      "sourceRows": [
+        1452
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c3e065c19ff9137b",
+      "lat": 34.7196856790333,
+      "lng": 135.277256648357,
+      "category": "SAFE",
+      "name": "ラ・フル－ル本山管理組合",
+      "address": "神戸市東灘区本山南町5丁目3－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区本山南町5丁目3－1",
+      "district": "東灘区",
+      "sourceRow": 1472,
+      "sourceRows": [
+        1472
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/955ecafbde03d134",
+      "lat": 34.717466654391,
+      "lng": 135.278986960128,
+      "category": "SAFE",
+      "name": "神戸市立　北青木児童館",
+      "address": "神戸市東灘区北青木4丁目6-31",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区北青木4丁目6-31",
+      "district": "東灘区",
+      "sourceRow": 1489,
+      "sourceRows": [
+        1489
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f07ba9fcfcd1ceab",
+      "lat": 34.7207597463612,
+      "lng": 135.277450143978,
+      "category": "SAFE",
+      "name": "福池地域福祉センター",
+      "address": "神戸市東灘区本山南町5丁目4-11",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区本山南町5丁目4-11",
+      "district": "東灘区",
+      "sourceRow": 1491,
+      "sourceRows": [
+        1491
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8d62f160c82e1158",
+      "lat": 34.7219022190104,
+      "lng": 135.281331327627,
+      "category": "SAFE",
+      "name": "エルヴェール神戸本山アーバンライフ",
+      "address": "神戸市東灘区本山南町3丁目ー6－16",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区本山南町3丁目ー6－16",
+      "district": "東灘区",
+      "sourceRow": 1498,
+      "sourceRows": [
+        1498
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c2f3b256094387fa",
+      "lat": 34.7202541533555,
+      "lng": 135.278013751152,
+      "category": "SAFE",
+      "name": "リハビリホーム　グランダ摂津本山",
+      "address": "神戸市東灘区本山南町5-2-12",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区本山南町5-2-12",
+      "district": "東灘区",
+      "sourceRow": 1547,
+      "sourceRows": [
+        1547
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/42bc7157f944d0ea",
+      "lat": 34.7173819158946,
+      "lng": 135.279018215054,
+      "category": "SAFE",
+      "name": "北青木会館",
+      "address": "神戸市東灘区北青木4-6-32",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区北青木4-6-32",
+      "district": "東灘区",
+      "sourceRow": 1578,
+      "sourceRows": [
+        1578
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0c798fea12e69ac2",
+      "lat": 34.7168226845808,
+      "lng": 135.281482477027,
+      "category": "SAFE",
+      "name": "聖ニコラス天使園分園",
+      "address": "神戸市東灘区青木6丁目6-16　ピアフェスタ青木駅前",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区青木6丁目6-16　ピアフェスタ青木駅前",
+      "district": "東灘区",
+      "sourceRow": 1614,
+      "sourceRows": [
+        1614
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/873a5303fe7568a1",
+      "lat": 34.7171444570246,
+      "lng": 135.280932229495,
+      "category": "SAFE",
+      "name": "阪神　青木駅",
+      "address": "神戸市東灘区北青木3丁目2-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区北青木3丁目2-1",
+      "district": "東灘区",
+      "sourceRow": 1636,
+      "sourceRows": [
+        1636
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9b7b6fa72b2de5b7",
+      "lat": 34.7204999600938,
+      "lng": 135.280060794212,
+      "category": "SAFE",
+      "name": "青い鳥学園　第２幼稚園",
+      "address": "神戸市東灘区本山南町4丁目3-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区本山南町4丁目3-1",
+      "district": "東灘区",
+      "sourceRow": 1656,
+      "sourceRows": [
+        1656
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d6072e3a973e0a49",
+      "lat": 34.720387962295,
+      "lng": 135.280490218204,
+      "category": "SAFE",
+      "name": "西口医院",
+      "address": "神戸市東灘区本山南町4丁目2-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区本山南町4丁目2-3",
+      "district": "東灘区",
+      "sourceRow": 1696,
+      "sourceRows": [
+        1696
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

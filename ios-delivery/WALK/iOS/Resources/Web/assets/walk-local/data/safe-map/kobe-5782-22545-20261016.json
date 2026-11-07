@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5782-22545-20261016",
+  "lat": 34.6947451188433,
+  "lng": 135.2730656336825,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/07d5f0c42ec85fc7",
+      "lat": 34.6951416853561,
+      "lng": 135.275266373332,
+      "category": "SAFE",
+      "name": "神戸市建設局東水環境センター（東部スラッジセンター）",
+      "address": "神戸市東灘区向洋町東2丁目1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町東2丁目1-1",
+      "district": "東灘区",
+      "sourceRow": 1601,
+      "sourceRows": [
+        1601
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/09fd8c61c09c1582",
+      "lat": 34.692260219048,
+      "lng": 135.270578235046,
+      "category": "SAFE",
+      "name": "リハ・ステップ（六アイデイサービスセンター）",
+      "address": "神戸市東灘区向洋町中1丁目9",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町中1丁目9",
+      "district": "東灘区",
+      "sourceRow": 1684,
+      "sourceRows": [
+        1684
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3b3eb10091c174fc",
+      "lat": 34.696692916497,
+      "lng": 135.275697200837,
+      "category": "SAFE",
+      "name": "株式会社上組 港運事業本部 六甲アイランド営業所",
+      "address": "神戸市東灘区向洋町東3丁目23",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町東3丁目23",
+      "district": "東灘区",
+      "sourceRow": 1703,
+      "sourceRows": [
+        1703
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/94ac5c1b23e4fb53",
+      "lat": 34.6948856544721,
+      "lng": 135.270720725515,
+      "category": "SAFE",
+      "name": "西日本宇佐美　神戸六甲アイランド",
+      "address": "神戸市東灘区向洋町東1-4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町東1-4",
+      "district": "東灘区",
+      "sourceRow": 1716,
+      "sourceRows": [
+        1716
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

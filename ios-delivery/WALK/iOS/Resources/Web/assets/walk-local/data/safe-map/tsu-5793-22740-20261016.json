@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5793-22740",
+  "lat": 34.760405,
+  "lng": 136.44496233333334,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.762191,
+      "lng": 136.44414,
+      "category": "SAFE",
+      "name": "安濃保健センター",
+      "address": "津市安濃町東観音寺418ｻﾝﾋﾙｽﾞ安濃内",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "安濃町東観音寺418ｻﾝﾋﾙｽﾞ安濃内",
+      "district": "安濃",
+      "sourceRow": 194,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/803179b0aa284dbf",
+      "sourceRows": [
+        194
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.759274,
+      "lng": 136.445362,
+      "category": "SAFE",
+      "name": "安濃交流会館",
+      "address": "津市安濃町東観音寺51-3",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "安濃町東観音寺51-3",
+      "district": "安濃",
+      "sourceRow": 195,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/47a0a377589b2d2a",
+      "sourceRows": [
+        195
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.75975,
+      "lng": 136.445385,
+      "category": "SAFE",
+      "name": "安濃中公民館",
+      "address": "津市安濃町東観音寺483",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "安濃町東観音寺483",
+      "district": "安濃",
+      "sourceRow": 198,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/b08c11913341f2e5",
+      "sourceRows": [
+        198
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

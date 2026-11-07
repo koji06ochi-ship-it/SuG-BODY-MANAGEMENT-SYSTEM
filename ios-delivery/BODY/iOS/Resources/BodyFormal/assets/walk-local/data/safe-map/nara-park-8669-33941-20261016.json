@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "nara-park-8669-33941-20261016",
+  "lat": 34.676441177928616,
+  "lng": 135.76607258206187,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "奈良市",
+  "source": "奈良市 公園オープンデータ",
+  "sourceUrl": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+  "sourceFileUrl": "https://www.city.nara.lg.jp/uploaded/attachment/200222.csv",
+  "sourceUpdatedAt": "2025-04-01",
+  "retrievedAt": "2026-10-15T15:58:16.669Z",
+  "sourceFileSha256": "d1b1be81bbdbaab587735acc5d5244377d1cdfe2f3bcec59af61dc6eb3a6f94f",
+  "license": "CC-BY-2.1-JP",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.1/jp/",
+  "data": [
+    {
+      "id": "municipality/nara/nara-city/f52ac20b4dc24ade",
+      "lat": 34.676171374495304,
+      "lng": 135.76550146472488,
+      "category": "PUBLIC",
+      "name": "中町街区公園",
+      "address": "",
+      "kind": "街区公園",
+      "source": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+      "sourceLabel": "奈良市 公園オープンデータ（市公表位置・精度保証なし）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-04-01",
+      "sourceRow": 554,
+      "sourceRows": [
+        554
+      ],
+      "duplicateSourceEntries": 1,
+      "accuracyNote": "奈良市公表データ。市の注意書きにより正確な公園図面との誤差があり、位置精度は保証されません。"
+    },
+    {
+      "id": "municipality/nara/nara-city/44faf5abe25267d7",
+      "lat": 34.67670036264085,
+      "lng": 135.76511434447792,
+      "category": "PUBLIC",
+      "name": "中町東阪街区公園",
+      "address": "",
+      "kind": "街区公園",
+      "source": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+      "sourceLabel": "奈良市 公園オープンデータ（市公表位置・精度保証なし）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-04-01",
+      "sourceRow": 597,
+      "sourceRows": [
+        597
+      ],
+      "duplicateSourceEntries": 1,
+      "accuracyNote": "奈良市公表データ。市の注意書きにより正確な公園図面との誤差があり、位置精度は保証されません。"
+    },
+    {
+      "id": "municipality/nara/nara-city/b76040172bc705e9",
+      "lat": 34.676451796649694,
+      "lng": 135.7676019369828,
+      "category": "PUBLIC",
+      "name": "五条畑一丁目第１号街区公園",
+      "address": "",
+      "kind": "街区公園",
+      "source": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+      "sourceLabel": "奈良市 公園オープンデータ（市公表位置・精度保証なし）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-04-01",
+      "sourceRow": 623,
+      "sourceRows": [
+        623
+      ],
+      "duplicateSourceEntries": 1,
+      "accuracyNote": "奈良市公表データ。市の注意書きにより正確な公園図面との誤差があり、位置精度は保証されません。"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5790-22527-20261016",
+  "lat": 34.74488795933385,
+  "lng": 135.163684999594,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/cd8a6be228eb0f8c",
+      "lat": 34.744255721452,
+      "lng": 135.162693145846,
+      "category": "SAFE",
+      "name": "神戸市立　筑紫が丘小学校",
+      "address": "神戸市北区筑紫が丘3丁目4－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区筑紫が丘3丁目4－1",
+      "district": "北区",
+      "sourceRow": 2238,
+      "sourceRows": [
+        2238
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/cef3c7515a381611",
+      "lat": 34.7455201972157,
+      "lng": 135.164676853342,
+      "category": "SAFE",
+      "name": "とみた歯科医院",
+      "address": "神戸市北区筑紫が丘4丁目2-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区筑紫が丘4丁目2-5",
+      "district": "北区",
+      "sourceRow": 2536,
+      "sourceRows": [
+        2536
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

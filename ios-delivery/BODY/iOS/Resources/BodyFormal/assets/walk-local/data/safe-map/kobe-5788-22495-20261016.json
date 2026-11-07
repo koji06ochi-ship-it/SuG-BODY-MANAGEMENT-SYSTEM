@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5788-22495-20261016",
+  "lat": 34.72859104256915,
+  "lng": 134.972789865656,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/effb20809742b559",
+      "lat": 34.7291625947859,
+      "lng": 134.972799563565,
+      "category": "SAFE",
+      "name": "特別養護老人ホーム　サンビラこうべ",
+      "address": "神戸市西区神出町宝勢774番地39",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区神出町宝勢774番地39",
+      "district": "西区",
+      "sourceRow": 598,
+      "sourceRows": [
+        598
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/39192eeb326cb3be",
+      "lat": 34.7280194903524,
+      "lng": 134.972780167747,
+      "category": "SAFE",
+      "name": "あゆみの里（社会福祉法人　あゆみの会）",
+      "address": "神戸市西区神出町宝勢858-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区神出町宝勢858-1",
+      "district": "西区",
+      "sourceRow": 644,
+      "sourceRows": [
+        644
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

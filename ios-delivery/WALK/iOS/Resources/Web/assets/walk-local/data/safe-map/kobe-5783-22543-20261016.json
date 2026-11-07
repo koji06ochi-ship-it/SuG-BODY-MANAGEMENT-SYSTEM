@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5783-22543-20261016",
+  "lat": 34.70248060719295,
+  "lng": 135.258567699368,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/e60e057c3e316d59",
+      "lat": 34.7028569949279,
+      "lng": 135.258069748966,
+      "category": "SAFE",
+      "name": "ティー・エム・ターミナル㈱神戸事業所",
+      "address": "神戸市東灘区御影浜町6番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影浜町6番",
+      "district": "東灘区",
+      "sourceRow": 1534,
+      "sourceRows": [
+        1534
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/db5b00f7013c7762",
+      "lat": 34.702104219458,
+      "lng": 135.25906564977,
+      "category": "SAFE",
+      "name": "昭和産業株式会社　神戸工場",
+      "address": "神戸市東灘区御影浜町5番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影浜町5番地",
+      "district": "東灘区",
+      "sourceRow": 1706,
+      "sourceRows": [
+        1706
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

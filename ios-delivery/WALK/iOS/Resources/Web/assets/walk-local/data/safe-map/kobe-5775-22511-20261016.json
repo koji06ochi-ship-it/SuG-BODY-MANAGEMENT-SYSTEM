@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5775-22511-20261016",
+  "lat": 34.652687240075736,
+  "lng": 135.06729754739533,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/d8496a0e55811d30",
+      "lat": 34.6527782396704,
+      "lng": 135.06664574252,
+      "category": "SAFE",
+      "name": "垂水健康公園",
+      "address": "神戸市垂水区名谷町字丸尾",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区名谷町字丸尾",
+      "district": "垂水区",
+      "sourceRow": 333,
+      "sourceRows": [
+        333
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8c94646111ea68d6",
+      "lat": 34.6501594433709,
+      "lng": 135.068882959264,
+      "category": "SAFE",
+      "name": "名谷地域福祉センター",
+      "address": "神戸市垂水区名谷町中坊487-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区名谷町中坊487-3",
+      "district": "垂水区",
+      "sourceRow": 391,
+      "sourceRows": [
+        391
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/cf5b45e5c25dd727",
+      "lat": 34.6551240371859,
+      "lng": 135.066363940402,
+      "category": "SAFE",
+      "name": "本州四国連絡高速道路　神戸管理センター",
+      "address": "神戸市垂水区名谷町549番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区名谷町549番",
+      "district": "垂水区",
+      "sourceRow": 437,
+      "sourceRows": [
+        437
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

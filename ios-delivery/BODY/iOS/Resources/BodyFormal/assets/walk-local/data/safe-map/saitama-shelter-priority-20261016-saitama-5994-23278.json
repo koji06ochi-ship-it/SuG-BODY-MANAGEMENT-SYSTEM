@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-shelter-saitama-5994-23278",
+  "lat": 35.967769,
+  "lng": 139.671926,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "埼玉県オープンデータポータル さいたま市 指定避難所",
+  "sourceUrl": "https://opendata.pref.saitama.lg.jp/resources/4757",
+  "sourceFileUrl": "https://opendata.pref.saitama.lg.jp/resource_download/4757",
+  "sourceUpdatedAt": "2026-04-01",
+  "retrievedAt": "2026-10-16T00:00:00.000Z",
+  "sourceFileSha256": "42d9e75eb4293706a921f7e111077954d3d03d018c3745d1fe0a305417b0c44a",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://www.digital.go.jp/resources/open_data/",
+  "data": [
+    {
+      "id": "municipality/saitama/saitama-shelter/527fd4fc2c8f586e",
+      "lat": 35.96740176,
+      "lng": 139.6717003,
+      "category": "SAFE",
+      "name": "河合小学校（指定避難所）",
+      "address": "埼玉県さいたま市岩槻区平林寺351",
+      "kind": "SHELTER",
+      "source": "https://opendata.pref.saitama.lg.jp/resources/4757",
+      "sourceLabel": "埼玉県オープンデータポータル さいたま市 指定避難所（開設状況・受入可否は未確認）",
+      "license": "PDL-1.0",
+      "sourceUpdatedAt": "2026-04-01",
+      "sourceRow": 234
+    }
+  ]
+}

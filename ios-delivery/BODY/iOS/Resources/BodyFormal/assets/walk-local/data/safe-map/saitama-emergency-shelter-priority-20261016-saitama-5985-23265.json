@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-emergency-shelter-saitama-5985-23265",
+  "lat": 35.912955036666666,
+  "lng": 139.5952667,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "埼玉県オープンデータポータル さいたま市 指定緊急避難場所",
+  "sourceUrl": "https://opendata.pref.saitama.lg.jp/resources/4758",
+  "sourceFileUrl": "https://opendata.pref.saitama.lg.jp/resource_download/4758",
+  "sourceUpdatedAt": "2026-04-01",
+  "retrievedAt": "2026-10-16T00:00:00.000Z",
+  "sourceFileSha256": "f7e56ea919d2c9411d249c5766fbbd0f8ba4e6efd1e6a06d8facd92ab486239a",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://www.digital.go.jp/resources/open_data/",
+  "data": [
+    {
+      "id": "municipality/saitama/saitama-emergency-shelter/10e0dd3582c55f73",
+      "lat": 35.92009529,
+      "lng": 139.59074,
+      "category": "SAFE",
+      "name": "大宮西中学校（指定緊急避難場所）",
+      "address": "埼玉県さいたま市西区三橋6-1558",
+      "kind": "EMERGENCY_SHELTER",
+      "source": "https://opendata.pref.saitama.lg.jp/resources/4758",
+      "sourceLabel": "埼玉県オープンデータポータル さいたま市 指定緊急避難場所（開設状況・受入可否は未確認）",
+      "license": "PDL-1.0",
+      "sourceUpdatedAt": "2026-04-01",
+      "sourceRow": 12
+    },
+    {
+      "id": "municipality/saitama/saitama-emergency-shelter/19c0900760925f74",
+      "lat": 35.913188,
+      "lng": 139.5959882,
+      "category": "SAFE",
+      "name": "三橋総合公園（指定緊急避難場所）",
+      "address": "埼玉県さいたま市西区三橋5-190",
+      "kind": "EMERGENCY_SHELTER",
+      "source": "https://opendata.pref.saitama.lg.jp/resources/4758",
+      "sourceLabel": "埼玉県オープンデータポータル さいたま市 指定緊急避難場所（開設状況・受入可否は未確認）",
+      "license": "PDL-1.0",
+      "sourceUpdatedAt": "2026-04-01",
+      "sourceRow": 21
+    },
+    {
+      "id": "municipality/saitama/saitama-emergency-shelter/ca8529badb132b6f",
+      "lat": 35.91686169,
+      "lng": 139.6042906,
+      "category": "SAFE",
+      "name": "農業機械研究部門（指定緊急避難場所）",
+      "address": "埼玉県さいたま市北区日進町1-40-2",
+      "kind": "EMERGENCY_SHELTER",
+      "source": "https://opendata.pref.saitama.lg.jp/resources/4758",
+      "sourceLabel": "埼玉県オープンデータポータル さいたま市 指定緊急避難場所（開設状況・受入可否は未確認）",
+      "license": "PDL-1.0",
+      "sourceUpdatedAt": "2026-04-01",
+      "sourceRow": 58
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "otsu-5817-22651-20261016",
+  "lat": 34.904764235,
+  "lng": 135.909733125,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "大津市",
+  "source": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+  "sourceUrl": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/999caef4-7e90-4fd2-98eb-fd94368e9a2f/resource/3e5b513e-de51-4459-af70-6fda94e1bed3/download/od405902026022700200.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2025-03-12",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "7899826cf95c365a07c87b3ad05aa2aa7d4adeb440a2c57269c84f98c1d85ea8",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/otsu/aed/1bae9203a2e9c13a",
+      "lat": 34.90528861,
+      "lng": 135.9108814,
+      "category": "SAFE",
+      "name": "大石緑地スポーツ村",
+      "address": "大津市大石淀一丁目3番32号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市大石淀一丁目3番32号",
+      "district": "大津市",
+      "sourceRow": 325,
+      "sourceRows": [
+        325
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/531c16ee78258d20",
+      "lat": 34.90534139,
+      "lng": 135.9109514,
+      "category": "SAFE",
+      "name": "大石緑地スポーツ村",
+      "address": "大津市大石淀一丁目3番32号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市大石淀一丁目3番32号",
+      "district": "大津市",
+      "sourceRow": 326,
+      "sourceRows": [
+        326
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/652115da4d5c001b",
+      "lat": 34.90539222,
+      "lng": 135.9109397,
+      "category": "SAFE",
+      "name": "大石緑地スポーツ村",
+      "address": "大津市大石淀一丁目3番32号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市大石淀一丁目3番32号",
+      "district": "大津市",
+      "sourceRow": 327,
+      "sourceRows": [
+        327
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/84f21e5c8413e20a",
+      "lat": 34.90303472,
+      "lng": 135.90616,
+      "category": "SAFE",
+      "name": "大津大石淀グラウンド・ゴルフ場",
+      "address": "大津市大石淀町737－6",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市大石淀町737－6",
+      "district": "大津市",
+      "sourceRow": 330,
+      "sourceRows": [
+        330
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

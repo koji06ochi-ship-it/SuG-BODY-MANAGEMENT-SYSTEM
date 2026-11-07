@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5776-22527-20261016",
+  "lat": 34.657634830657024,
+  "lng": 135.16569183407475,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/bdd3cce56396b813",
+      "lat": 34.6579977204852,
+      "lng": 135.166468876534,
+      "category": "SAFE",
+      "name": "神戸市立　浜山小学校",
+      "address": "神戸市兵庫区材木町4丁目2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区材木町4丁目2",
+      "district": "兵庫区",
+      "sourceRow": 2060,
+      "sourceRows": [
+        2060
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a4f467c721672f60",
+      "lat": 34.6564551188591,
+      "lng": 135.164833585331,
+      "category": "SAFE",
+      "name": "神戸市立　運南保育所",
+      "address": "神戸市兵庫区浜中町1丁目17－11",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区浜中町1丁目17－11",
+      "district": "兵庫区",
+      "sourceRow": 2101,
+      "sourceRows": [
+        2101
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/efe260d978827eb0",
+      "lat": 34.6584650514506,
+      "lng": 135.163922517116,
+      "category": "SAFE",
+      "name": "神戸市ものづくり工場",
+      "address": "神戸市兵庫区和田山通1丁目2-25",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区和田山通1丁目2-25",
+      "district": "兵庫区",
+      "sourceRow": 2111,
+      "sourceRows": [
+        2111
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/87d1044fa608100c",
+      "lat": 34.6576214318332,
+      "lng": 135.167542357318,
+      "category": "SAFE",
+      "name": "神戸市立　御崎児童館",
+      "address": "神戸市兵庫区御崎町1丁目3-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区御崎町1丁目3-2",
+      "district": "兵庫区",
+      "sourceRow": 2129,
+      "sourceRows": [
+        2129
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

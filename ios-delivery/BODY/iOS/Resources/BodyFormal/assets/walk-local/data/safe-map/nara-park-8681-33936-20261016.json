@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "id": "nara-park-8681-33936-20261016",
+  "lat": 34.725025141491535,
+  "lng": 135.74620393027806,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "奈良市",
+  "source": "奈良市 公園オープンデータ",
+  "sourceUrl": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+  "sourceFileUrl": "https://www.city.nara.lg.jp/uploaded/attachment/200222.csv",
+  "sourceUpdatedAt": "2025-04-01",
+  "retrievedAt": "2026-10-15T15:58:16.669Z",
+  "sourceFileSha256": "d1b1be81bbdbaab587735acc5d5244377d1cdfe2f3bcec59af61dc6eb3a6f94f",
+  "license": "CC-BY-2.1-JP",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.1/jp/",
+  "data": [
+    {
+      "id": "municipality/nara/nara-city/d97607c8143ac988",
+      "lat": 34.72580336617333,
+      "lng": 135.74662652514152,
+      "category": "PUBLIC",
+      "name": "育夢の社",
+      "address": "",
+      "kind": "未供用",
+      "source": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+      "sourceLabel": "奈良市 公園オープンデータ（市公表位置・精度保証なし）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-04-01",
+      "sourceRow": 321,
+      "sourceRows": [
+        321
+      ],
+      "duplicateSourceEntries": 1,
+      "accuracyNote": "奈良市公表データ。市の注意書きにより正確な公園図面との誤差があり、位置精度は保証されません。"
+    },
+    {
+      "id": "municipality/nara/nara-city/8d309d4ae613fda9",
+      "lat": 34.72598593355567,
+      "lng": 135.74584099131386,
+      "category": "PUBLIC",
+      "name": "中登美ヶ丘六丁目緑地",
+      "address": "",
+      "kind": "都市緑地",
+      "source": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+      "sourceLabel": "奈良市 公園オープンデータ（市公表位置・精度保証なし）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-04-01",
+      "sourceRow": 322,
+      "sourceRows": [
+        322
+      ],
+      "duplicateSourceEntries": 1,
+      "accuracyNote": "奈良市公表データ。市の注意書きにより正確な公園図面との誤差があり、位置精度は保証されません。"
+    },
+    {
+      "id": "municipality/nara/nara-city/75c762db17e53eb8",
+      "lat": 34.72438313650384,
+      "lng": 135.74437583670067,
+      "category": "PUBLIC",
+      "name": "夢彩の丘",
+      "address": "",
+      "kind": "街区公園",
+      "source": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+      "sourceLabel": "奈良市 公園オープンデータ（市公表位置・精度保証なし）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-04-01",
+      "sourceRow": 324,
+      "sourceRows": [
+        324
+      ],
+      "duplicateSourceEntries": 1,
+      "accuracyNote": "奈良市公表データ。市の注意書きにより正確な公園図面との誤差があり、位置精度は保証されません。"
+    },
+    {
+      "id": "municipality/nara/nara-city/bd02f28c051bccdb",
+      "lat": 34.7244750735094,
+      "lng": 135.74560428866567,
+      "category": "PUBLIC",
+      "name": "彩りの道　もえぎの丘",
+      "address": "",
+      "kind": "街区公園",
+      "source": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+      "sourceLabel": "奈良市 公園オープンデータ（市公表位置・精度保証なし）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-04-01",
+      "sourceRow": 325,
+      "sourceRows": [
+        325
+      ],
+      "duplicateSourceEntries": 1,
+      "accuracyNote": "奈良市公表データ。市の注意書きにより正確な公園図面との誤差があり、位置精度は保証されません。"
+    },
+    {
+      "id": "municipality/nara/nara-city/a05066a87ce6d6f3",
+      "lat": 34.72447763019186,
+      "lng": 135.747086317917,
+      "category": "PUBLIC",
+      "name": "彩りの道　あかねの杜",
+      "address": "",
+      "kind": "街区公園",
+      "source": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+      "sourceLabel": "奈良市 公園オープンデータ（市公表位置・精度保証なし）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-04-01",
+      "sourceRow": 327,
+      "sourceRows": [
+        327
+      ],
+      "duplicateSourceEntries": 1,
+      "accuracyNote": "奈良市公表データ。市の注意書きにより正確な公園図面との誤差があり、位置精度は保証されません。"
+    },
+    {
+      "id": "municipality/nara/nara-city/91ea8eef755911be",
+      "lat": 34.7250257090151,
+      "lng": 135.74768962192962,
+      "category": "PUBLIC",
+      "name": "ヤマザクラ北緑地",
+      "address": "",
+      "kind": "都市緑地",
+      "source": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+      "sourceLabel": "奈良市 公園オープンデータ（市公表位置・精度保証なし）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-04-01",
+      "sourceRow": 328,
+      "sourceRows": [
+        328
+      ],
+      "duplicateSourceEntries": 1,
+      "accuracyNote": "奈良市公表データ。市の注意書きにより正確な公園図面との誤差があり、位置精度は保証されません。"
+    }
+  ]
+}

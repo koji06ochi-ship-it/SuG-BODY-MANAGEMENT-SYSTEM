@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5803-22554-20261016",
+  "lat": 34.81951067,
+  "lng": 135.3267337833333,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/fb63ac3274540d77",
+      "lat": 34.81877046,
+      "lng": 135.3245103,
+      "category": "SAFE",
+      "name": "ＡＬＯＨＡ保育園",
+      "address": "兵庫県西宮市生瀬町２－２－２　山武ビル２階",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市生瀬町２－２－２　山武ビル２階",
+      "district": "西宮市",
+      "sourceRow": 132,
+      "sourceRows": [
+        132
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/ee867d63eaacd21c",
+      "lat": 34.82186231,
+      "lng": 135.3297848,
+      "category": "SAFE",
+      "name": "北摂中央病院",
+      "address": "兵庫県西宮市塩瀬町生瀬１２８１－５",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市塩瀬町生瀬１２８１－５",
+      "district": "西宮市",
+      "sourceRow": 708,
+      "sourceRows": [
+        708
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/acb22780ed1e018b",
+      "lat": 34.81921725,
+      "lng": 135.325132,
+      "category": "SAFE",
+      "name": "ＪＲ生瀬駅",
+      "address": "兵庫県西宮市生瀬町１丁目１－１３",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市生瀬町１丁目１－１３",
+      "district": "西宮市",
+      "sourceRow": 710,
+      "sourceRows": [
+        710
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/4d31b18bcf1224b7",
+      "lat": 34.81926009,
+      "lng": 135.3298082,
+      "category": "SAFE",
+      "name": "コミュニティ生瀬",
+      "address": "兵庫県西宮市生瀬町２丁目２２－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市生瀬町２丁目２２－１",
+      "district": "西宮市",
+      "sourceRow": 711,
+      "sourceRows": [
+        711
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/90e0796a0b6bc3a9",
+      "lat": 34.81915872,
+      "lng": 135.3266046,
+      "category": "SAFE",
+      "name": "コミュニティ西宮北",
+      "address": "兵庫県西宮市生瀬町２丁目８－７",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市生瀬町２丁目８－７",
+      "district": "西宮市",
+      "sourceRow": 715,
+      "sourceRows": [
+        715
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/19b4a8ba0679ef1e",
+      "lat": 34.81879519,
+      "lng": 135.3245628,
+      "category": "SAFE",
+      "name": "生活協同組合コープこうべコープミニ生瀬",
+      "address": "兵庫県西宮市生瀬町２丁目２－２",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市生瀬町２丁目２－２",
+      "district": "西宮市",
+      "sourceRow": 716,
+      "sourceRows": [
+        716
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

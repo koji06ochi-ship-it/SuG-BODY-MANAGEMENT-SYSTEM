@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5749-22789-20261016",
+  "lat": 34.4995431212653,
+  "lng": 136.73678579445036,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/07320222fbd027ba",
+      "lat": 34.4995610687297,
+      "lng": 136.736286646071,
+      "category": "SAFE",
+      "name": "伊勢市立浜郷小学校",
+      "address": "伊勢市黒瀬町1648-1",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市黒瀬町1648-1",
+      "sourceRow": 37,
+      "sourceRows": [
+        37
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/60e36bb5228ae470",
+      "lat": 34.499215,
+      "lng": 136.73694,
+      "category": "SAFE",
+      "name": "伊勢市立浜郷小学校　体育館",
+      "address": "伊勢市黒瀬町1648-1",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市黒瀬町1648-1",
+      "sourceRow": 38,
+      "sourceRows": [
+        38
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/ee34b06b1009de4e",
+      "lat": 34.4998532950662,
+      "lng": 136.73713073728,
+      "category": "SAFE",
+      "name": "伊勢市立浜郷保育所",
+      "address": "伊勢市黒瀬町1637-1",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市黒瀬町1637-1",
+      "sourceRow": 84,
+      "sourceRows": [
+        84
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

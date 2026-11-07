@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5784-22537-20261016",
+  "lat": 34.707941093963534,
+  "lng": 135.22450280161283,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/e5956dcf4e7ccc5f",
+      "lat": 34.7077853849421,
+      "lng": 135.227738648459,
+      "category": "SAFE",
+      "name": "神戸市立　西灘小学校",
+      "address": "神戸市灘区船寺通3丁目4番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区船寺通3丁目4番1号",
+      "district": "灘区",
+      "sourceRow": 1802,
+      "sourceRows": [
+        1802
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0e0b599c6535bde8",
+      "lat": 34.7097792069671,
+      "lng": 135.222111739075,
+      "category": "SAFE",
+      "name": "中井病院",
+      "address": "神戸市灘区泉通6-3-8",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区泉通6-3-8",
+      "district": "灘区",
+      "sourceRow": 1833,
+      "sourceRows": [
+        1833
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/960cece9da354b91",
+      "lat": 34.7085339191876,
+      "lng": 135.225673513673,
+      "category": "SAFE",
+      "name": "めばえの園保育園",
+      "address": "神戸市灘区灘南通4-4-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区灘南通4-4-2",
+      "district": "灘区",
+      "sourceRow": 1905,
+      "sourceRows": [
+        1905
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5986a56b3a97dd04",
+      "lat": 34.7058513465475,
+      "lng": 135.224507229535,
+      "category": "SAFE",
+      "name": "阪神　西灘駅",
+      "address": "神戸市灘区都通5丁目5－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区都通5丁目5－1",
+      "district": "灘区",
+      "sourceRow": 1966,
+      "sourceRows": [
+        1966
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/61b7eddd75f31e67",
+      "lat": 34.7075674615674,
+      "lng": 135.222814229081,
+      "category": "SAFE",
+      "name": "リベール灘アベリア管理組合",
+      "address": "神戸市灘区灘南通6-3-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区灘南通6-3-1",
+      "district": "灘区",
+      "sourceRow": 1967,
+      "sourceRows": [
+        1967
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/74a403f6815d75fe",
+      "lat": 34.7081292445695,
+      "lng": 135.224171449854,
+      "category": "SAFE",
+      "name": "JR摩耶駅",
+      "address": "神戸市灘区灘南通5丁目５番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区灘南通5丁目５番",
+      "district": "灘区",
+      "sourceRow": 2006,
+      "sourceRows": [
+        2006
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "yokkaichi-5819-22771-20261016",
+  "lat": 34.91439122,
+  "lng": 136.6278808,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "四日市市",
+  "source": "四日市市内公共施設 AED設置箇所一覧",
+  "sourceUrl": "https://data.bodik.jp/dataset/242021_00127",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/422f8da8-0b3c-4d84-b8dd-d88d18e914ce/resource/2a5eee8b-c455-4c2e-8553-b0d3d36e5ef2/download/242021_aed.csv",
+  "sourceUpdatedAt": "2024-12-18",
+  "sourcePageUpdatedAt": "2025-01-24",
+  "retrievedAt": "2026-10-15T15:44:16.747Z",
+  "sourceFileSha256": "c0880c81977c7fc444213ee84ef31a7b2e9e34f12d31e892064cbabb7d5159cf",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/yokkaichi/aed/d1923971649e1466",
+      "lat": 34.91476964,
+      "lng": 136.6272063,
+      "category": "SAFE",
+      "name": "楠小学校",
+      "address": "四日市市楠町北五味塚2060-9",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市楠町北五味塚2060-9",
+      "sourceRow": 22,
+      "sourceRows": [
+        22,
+        23
+      ],
+      "duplicateSourceEntries": 2
+    },
+    {
+      "id": "municipality/yokkaichi/aed/994939172ebf3d52",
+      "lat": 34.9140128,
+      "lng": 136.6285553,
+      "category": "SAFE",
+      "name": "楠こども園",
+      "address": "四日市市楠町北五味塚2060-63",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市楠町北五味塚2060-63",
+      "sourceRow": 133,
+      "sourceRows": [
+        133,
+        134
+      ],
+      "duplicateSourceEntries": 2
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5786-22542-20261016",
+  "lat": 34.71836064430581,
+  "lng": 135.25456221148153,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/b48799ade55e2678",
+      "lat": 34.7161655713364,
+      "lng": 135.25369427014,
+      "category": "SAFE",
+      "name": "神戸市立　御影中学校",
+      "address": "神戸市東灘区御影中町5-1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影中町5-1-1",
+      "district": "東灘区",
+      "sourceRow": 1389,
+      "sourceRows": [
+        1389
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/58fc8887aa186ce0",
+      "lat": 34.7204469995229,
+      "lng": 135.254144871238,
+      "category": "SAFE",
+      "name": "小林クリニック",
+      "address": "神戸市東灘区御影郡家1-30-17",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影郡家1-30-17",
+      "district": "東灘区",
+      "sourceRow": 1420,
+      "sourceRows": [
+        1420
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a1b8532a31857f65",
+      "lat": 34.7176281064587,
+      "lng": 135.254875776143,
+      "category": "SAFE",
+      "name": "神戸市立　御影保育所",
+      "address": "神戸市東灘区御影中町4丁目1－8",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影中町4丁目1－8",
+      "district": "東灘区",
+      "sourceRow": 1479,
+      "sourceRows": [
+        1479
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9a8267b758a43b78",
+      "lat": 34.7177939197798,
+      "lng": 135.255671535009,
+      "category": "SAFE",
+      "name": "兵庫県警　東灘警察署",
+      "address": "神戸市東灘区御影中町2丁目3番2号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影中町2丁目3番2号",
+      "district": "東灘区",
+      "sourceRow": 1517,
+      "sourceRows": [
+        1517
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/598c81dff6ee669e",
+      "lat": 34.7162421474859,
+      "lng": 135.255096681407,
+      "category": "SAFE",
+      "name": "グッドタイムリビング御影",
+      "address": "神戸市東灘区御影中町3丁目2-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影中町3丁目2-3",
+      "district": "東灘区",
+      "sourceRow": 1607,
+      "sourceRows": [
+        1607
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5752dadce1b401dd",
+      "lat": 34.7172405750492,
+      "lng": 135.256535704485,
+      "category": "SAFE",
+      "name": "イトマンスイミングスクール神戸御影校",
+      "address": "神戸市東灘区御影中町1丁目16-16",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影中町1丁目16-16",
+      "district": "東灘区",
+      "sourceRow": 1681,
+      "sourceRows": [
+        1681
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9f408aa25bcb164f",
+      "lat": 34.7168953385532,
+      "lng": 135.25508407022,
+      "category": "SAFE",
+      "name": "神戸トヨペット株式会社　御影店",
+      "address": "神戸市東灘区御影中町3丁目2-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影中町3丁目2-5",
+      "district": "東灘区",
+      "sourceRow": 1698,
+      "sourceRows": [
+        1698
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ee7b023be3ef524f",
+      "lat": 34.7215498027909,
+      "lng": 135.254086591702,
+      "category": "SAFE",
+      "name": "群華幼稚園",
+      "address": "神戸市東灘区御影郡家1丁目23-19",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影郡家1丁目23-19",
+      "district": "東灘区",
+      "sourceRow": 1709,
+      "sourceRows": [
+        1709
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7bf2a2186e9cc49f",
+      "lat": 34.7211793762985,
+      "lng": 135.254588352529,
+      "category": "SAFE",
+      "name": "JA兵庫六甲　御影JA総合センター",
+      "address": "神戸市東灘区御影郡家1丁目14番8号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影郡家1丁目14番8号",
+      "district": "東灘区",
+      "sourceRow": 1727,
+      "sourceRows": [
+        1727
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b593143f2c02d01d",
+      "lat": 34.7176281064587,
+      "lng": 135.254875776143,
+      "category": "SAFE",
+      "name": "神戸市東灘区　医師会",
+      "address": "神戸市東灘区御影中町4丁目1番8号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影中町4丁目1番8号",
+      "district": "東灘区",
+      "sourceRow": 1739,
+      "sourceRows": [
+        1739
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a4b7dc6443ca8443",
+      "lat": 34.7173313467958,
+      "lng": 135.254552011681,
+      "category": "SAFE",
+      "name": "セコム株式会社神戸東支社",
+      "address": "神戸市東灘区御影中町4-2-1スマイリングライフ",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影中町4-2-1スマイリングライフ",
+      "district": "東灘区",
+      "sourceRow": 1741,
+      "sourceRows": [
+        1741
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c9e618d5583a8322",
+      "lat": 34.719322165279,
+      "lng": 135.252335554321,
+      "category": "SAFE",
+      "name": "エニタイムフィットネス御影店",
+      "address": "神戸市東灘区御影1丁目1番地5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影1丁目1番地5",
+      "district": "東灘区",
+      "sourceRow": 1744,
+      "sourceRows": [
+        1744
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0cf805c74fefebfc",
+      "lat": 34.7192649201666,
+      "lng": 135.253767554242,
+      "category": "SAFE",
+      "name": "茅渟の浦学園　ちぬっこスカイWest",
+      "address": "神戸市東灘区御影郡家1丁目35番地5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影郡家1丁目35番地5",
+      "district": "東灘区",
+      "sourceRow": 1749,
+      "sourceRows": [
+        1749
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

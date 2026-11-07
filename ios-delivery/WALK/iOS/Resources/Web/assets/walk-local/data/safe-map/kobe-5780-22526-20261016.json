@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5780-22526-20261016",
+  "lat": 34.68255266647494,
+  "lng": 135.1589433200245,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/8b48394cf271b298",
+      "lat": 34.6817905528682,
+      "lng": 135.161228431789,
+      "category": "SAFE",
+      "name": "神戸市立　夢野の丘小学校",
+      "address": "神戸市兵庫区東山町4丁目20",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区東山町4丁目20",
+      "district": "兵庫区",
+      "sourceRow": 2053,
+      "sourceRows": [
+        2053
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/13c5029159c1b6e6",
+      "lat": 34.6830834338644,
+      "lng": 135.158524646733,
+      "category": "SAFE",
+      "name": "神戸市立　夢野児童館",
+      "address": "神戸市兵庫区湊川町7丁目6－5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区湊川町7丁目6－5",
+      "district": "兵庫区",
+      "sourceRow": 2054,
+      "sourceRows": [
+        2054
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ba233de24cd74f12",
+      "lat": 34.6836023555051,
+      "lng": 135.156112792142,
+      "category": "SAFE",
+      "name": "夢野老人ホーム（社会福祉法人　神戸光有会）",
+      "address": "神戸市兵庫区夢野町4丁目3－13",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区夢野町4丁目3－13",
+      "district": "兵庫区",
+      "sourceRow": 2068,
+      "sourceRows": [
+        2068
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2543888263469bd2",
+      "lat": 34.6815717509243,
+      "lng": 135.157392740995,
+      "category": "SAFE",
+      "name": "グループホーム　たのしい家湊川",
+      "address": "神戸市兵庫区湊川町9丁目12-7",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区湊川町9丁目12-7",
+      "district": "兵庫区",
+      "sourceRow": 2140,
+      "sourceRows": [
+        2140
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0f7d5b69679cb523",
+      "lat": 34.6830834338644,
+      "lng": 135.158524646733,
+      "category": "SAFE",
+      "name": "夢野地域福祉センター",
+      "address": "神戸市兵庫区湊川町7丁目6－5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区湊川町7丁目6－5",
+      "district": "兵庫区",
+      "sourceRow": 2143,
+      "sourceRows": [
+        2143
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0ac4d62056b8ce2e",
+      "lat": 34.6808975699672,
+      "lng": 135.158645389348,
+      "category": "SAFE",
+      "name": "本願寺派湊川保育園",
+      "address": "神戸市兵庫区湊川町9丁目2-16",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区湊川町9丁目2-16",
+      "district": "兵庫区",
+      "sourceRow": 2145,
+      "sourceRows": [
+        2145
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0f340756b32a47ad",
+      "lat": 34.6817905528682,
+      "lng": 135.161228431789,
+      "category": "SAFE",
+      "name": "神戸夢野幼稚園（学校法人　夢野学園）",
+      "address": "神戸市兵庫区東山町4丁目20番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区東山町4丁目20番",
+      "district": "兵庫区",
+      "sourceRow": 2151,
+      "sourceRows": [
+        2151
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/fed1ea36a846cb1e",
+      "lat": 34.6846016819377,
+      "lng": 135.159889480667,
+      "category": "SAFE",
+      "name": "せのお眼科医院",
+      "address": "神戸市兵庫区菊水町6丁目1-20-105",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区菊水町6丁目1-20-105",
+      "district": "兵庫区",
+      "sourceRow": 2160,
+      "sourceRows": [
+        2160
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

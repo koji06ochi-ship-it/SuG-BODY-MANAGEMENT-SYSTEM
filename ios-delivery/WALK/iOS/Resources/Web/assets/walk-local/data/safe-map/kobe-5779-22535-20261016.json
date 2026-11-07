@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5779-22535-20261016",
+  "lat": 34.6746680485151,
+  "lng": 135.212302674445,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/9a80a1f7cffc99b9",
+      "lat": 34.6746680485151,
+      "lng": 135.212302674445,
+      "category": "SAFE",
+      "name": "トラスコ中山株式会社　プラネット神戸",
+      "address": "神戸市中央区港島中町1－3－5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島中町1－3－5",
+      "district": "中央区",
+      "sourceRow": 892,
+      "sourceRows": [
+        892
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

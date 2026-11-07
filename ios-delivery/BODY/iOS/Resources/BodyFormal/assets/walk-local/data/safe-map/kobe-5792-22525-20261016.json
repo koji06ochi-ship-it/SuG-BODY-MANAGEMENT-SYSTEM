@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5792-22525-20261016",
+  "lat": 34.75428551971853,
+  "lng": 135.15414284266177,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/d0fb4d381f946f6c",
+      "lat": 34.7523210862789,
+      "lng": 135.150789500102,
+      "category": "SAFE",
+      "name": "箕谷地域福祉センター",
+      "address": "神戸市北区緑町4丁目6-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区緑町4丁目6-3",
+      "district": "北区",
+      "sourceRow": 2393,
+      "sourceRows": [
+        2393
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/237338eb3be4db9b",
+      "lat": 34.754086713535,
+      "lng": 135.155385029396,
+      "category": "SAFE",
+      "name": "神戸ほくと病院",
+      "address": "神戸市北区山田町下谷上字梅木谷37-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町下谷上字梅木谷37-3",
+      "district": "北区",
+      "sourceRow": 2455,
+      "sourceRows": [
+        2455
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/677f646b5c2cede8",
+      "lat": 34.753388605877,
+      "lng": 135.154786556596,
+      "category": "SAFE",
+      "name": "神戸の風　ケアハウス南風",
+      "address": "神戸市北区山田町下谷上字梅木谷39-11",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町下谷上字梅木谷39-11",
+      "district": "北区",
+      "sourceRow": 2456,
+      "sourceRows": [
+        2456
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c0a23ea3eb9e0fea",
+      "lat": 34.7573456731832,
+      "lng": 135.155610284553,
+      "category": "SAFE",
+      "name": "認定こども園　このみ保育園",
+      "address": "神戸市北区山田町下谷上字箕谷21-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町下谷上字箕谷21-1",
+      "district": "北区",
+      "sourceRow": 2487,
+      "sourceRows": [
+        2487
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "existing_files_checked": 654,
+  "existing_files_changed": [],
+  "browser": "cloud Chrome; 390px iframe, not iPhone",
+  "verified": [
+    "歩数4321・距離3.12の保存と今日への反映",
+    "睡眠7.5・回復入力の保存と再読込",
+    "基本情報の保存と再読込",
+    "手入力食事500kcalの保存と再読込",
+    "肩の確認記録の保存と再読込",
+    "10部位入口の表示",
+    "候補領域とtest領域の表示分離",
+    "390pxの今日・食事の最終画面",
+    "提供10画像のSHA一致",
+    "食事500→520kcal/P30g修正と件数不変",
+    "JSON実ダウンロードと体重/修正履歴の内容確認",
+    "腰ガイドの表示",
+    "390pxケア画面"
+  ],
+  "fixed": [
+    "HTTP開発URLでcrypto.randomUUID未提供→getRandomValuesに変更し食事保存復元確認",
+    "390pxで乙姫画像と文章の重なり→カラム幅分離"
+  ],
+  "not_verified": [
+    "写真ファイル選択の実操作",
+    "全10部位の保存",
+    "保存容量不足・破損データのブラウザー再現",
+    "実地図・GPS・HealthKit",
+    "写真AI",
+    "自動メニュー提案",
+    "ポイント精算",
+    "iPhone/Safari",
+    "既存本人データとの連携",
+    "ブラウザーJSON復元：ファイル選択が承認機構により拒否",
+    "別ブラウザー移行",
+    "日付切替の実ブラウザー再現"
+  ],
+  "new_core_tests": {
+    "passed": 11,
+    "failed": 0,
+    "file": "continuation-test.cjs"
+  },
+  "training": {
+    "assertions_passed": 10,
+    "browser": [
+      "two sessions saved",
+      "1200 to 1250 comparison",
+      "reload retained"
+    ],
+    "not_verified": [
+      "iPhone",
+      "browser JSON restore",
+      "real training history"
+    ]
+  },
+  "sheet_integration": {
+    "browser_verified": [
+      "monthly 2450 kg-reps, max62.5 from 2 test days",
+      "TM90 four weeks",
+      "otohime absent from today DOM and screenshot"
+    ],
+    "source_sheets_modified": false,
+    "source_records_imported": false
+  },
+  "reason_explanations": {
+    "syntax": "passed",
+    "browser": "both explanations expanded; text verified",
+    "screenshot": "training-explanation.jpg",
+    "iPhone": false
+  },
+  "training_reuse": {
+    "browser_verified": [
+      "two set draft recall",
+      "feedback save and reload",
+      "existing draft replacement prompt"
+    ],
+    "core_checks_passed": 4,
+    "real_user_records": false
+  },
+  "plan_save": {
+    "core_checks": 5,
+    "browser": [
+      "save",
+      "week1 draft volume1000",
+      "reload persisted",
+      "no workout created by plan"
+    ],
+    "screenshot": "saved-531-plan.jpg"
+  },
+  "plan_progress": {
+    "core_checks_passed": 6,
+    "browser_verified": [
+      "week1 linked workout",
+      "today 3 records 7 sets",
+      "reload persisted",
+      "unlink on exercise change"
+    ],
+    "screenshot": "today-plan-progress.jpg"
+  },
+  "daily_connection": {
+    "core_checks_passed": 7,
+    "browser": [
+      "facts aggregated",
+      "choice saved and reloaded",
+      "workout count unchanged"
+    ],
+    "individual_training_prescription": false
+  },
+  "food_review": {
+    "core_checks": 7,
+    "browser": [
+      "fixture candidate",
+      "500 to 520 correction",
+      "source label",
+      "reload"
+    ],
+    "real_ai": false,
+    "external_transmission": false
+  },
+  "light_theme": {
+    "browser": "390px today and food viewed",
+    "screenshots": [
+      "light-today-mobile.jpg",
+      "light-food-mobile.jpg"
+    ],
+    "functional_tests_repeated": false,
+    "other_pages_visual_review": "not completed"
+  },
+  "menu_content": {
+    "browser": [
+      "recovery choice suppresses candidates",
+      "PUSH30 yields 3 exercises",
+      "draft has 3 sets with weight unset"
+    ],
+    "clinical_validation": false,
+    "auto_weight": false
+  },
+  "latest_batch": {
+    "journal_core_assertions": 13,
+    "health_core_assertions": 12,
+    "browser": "edit buttons visible; subsequent mutation interrupted, status read timed out after 300s; reset interrupted after109.6s",
+    "journal_edit_save": "unverified",
+    "health_ui": "unverified",
+    "iPhone": "unverified",
+    "browser_retry": "stopped"
+  },
+  "integrated_data_flow": {
+    "assertions_passed": 17,
+    "browser": false,
+    "device": false,
+    "external_calls": false,
+    "missing_entry_assets": []
+  }
+}

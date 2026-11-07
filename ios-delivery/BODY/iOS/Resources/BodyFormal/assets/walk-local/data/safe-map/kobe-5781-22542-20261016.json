@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5781-22542-20261016",
+  "lat": 34.6914692777598,
+  "lng": 135.256066760623,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/6f6eb81f64847437",
+      "lat": 34.6914692777598,
+      "lng": 135.256066760623,
+      "category": "SAFE",
+      "name": "ケイヒン（株）六甲冷蔵流通センター",
+      "address": "神戸市東灘区向洋町西2丁目１",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町西2丁目１",
+      "district": "東灘区",
+      "sourceRow": 1398,
+      "sourceRows": [
+        1398
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/40589b41c5d2294d",
+      "lat": 34.6914692777598,
+      "lng": 135.256066760623,
+      "category": "SAFE",
+      "name": "㈱コープベーカリー（六甲アイランド食品工場）",
+      "address": "神戸市東灘区向洋町西2丁目1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町西2丁目1",
+      "district": "東灘区",
+      "sourceRow": 1511,
+      "sourceRows": [
+        1511
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

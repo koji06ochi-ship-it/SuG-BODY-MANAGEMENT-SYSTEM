@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5788-22503-20261016",
+  "lat": 34.730496265762696,
+  "lng": 135.0215383429045,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/3ee39bde6d8c53d1",
+      "lat": 34.7285660787673,
+      "lng": 135.022437384893,
+      "category": "SAFE",
+      "name": "ユニタイト株式会社",
+      "address": "神戸市西区高塚台3-1-12",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区高塚台3-1-12",
+      "district": "西区",
+      "sourceRow": 671,
+      "sourceRows": [
+        671
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1fca0df558fca21b",
+      "lat": 34.7324264527581,
+      "lng": 135.020639300916,
+      "category": "SAFE",
+      "name": "神戸天然物化学株式会社",
+      "address": "神戸市西区高塚台3丁目2-34",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区高塚台3丁目2-34",
+      "district": "西区",
+      "sourceRow": 797,
+      "sourceRows": [
+        797
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5773-22510-20261016",
+  "lat": 34.6401761596781,
+  "lng": 135.0623182463875,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/80b770f6ac6ee1bc",
+      "lat": 34.6404266265758,
+      "lng": 135.063496771999,
+      "category": "SAFE",
+      "name": "兵庫県立　神戸聴覚支援学校",
+      "address": "神戸市垂水区福田1－3－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区福田1－3－1",
+      "district": "垂水区",
+      "sourceRow": 293,
+      "sourceRows": [
+        293
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b74602f296e97244",
+      "lat": 34.6381272955732,
+      "lng": 135.061331678933,
+      "category": "SAFE",
+      "name": "神戸市立　高丸小学校",
+      "address": "神戸市垂水区大町2丁目6番9号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区大町2丁目6番9号",
+      "district": "垂水区",
+      "sourceRow": 308,
+      "sourceRows": [
+        308
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d27e1eeba6777d4e",
+      "lat": 34.6436806853289,
+      "lng": 135.063264375043,
+      "category": "SAFE",
+      "name": "神戸市立　向陽保育所",
+      "address": "神戸市垂水区向陽1丁目3-25",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区向陽1丁目3-25",
+      "district": "垂水区",
+      "sourceRow": 343,
+      "sourceRows": [
+        343
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/03e2d7904cbe2267",
+      "lat": 34.6384700312345,
+      "lng": 135.061180159575,
+      "category": "SAFE",
+      "name": "高丸幼稚園",
+      "address": "神戸市垂水区大町5丁目1-10",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区大町5丁目1-10",
+      "district": "垂水区",
+      "sourceRow": 447,
+      "sourceRows": [
+        447
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

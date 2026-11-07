@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5774-22526-20261016",
+  "lat": 34.64839077669005,
+  "lng": 135.1594721517995,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/324ec289ce4c26a8",
+      "lat": 34.6478005326164,
+      "lng": 135.159898081302,
+      "category": "SAFE",
+      "name": "神戸市環境局　苅藻島クリーンセンター",
+      "address": "神戸市長田区苅藻島町3丁目12－28",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区苅藻島町3丁目12－28",
+      "district": "長田区",
+      "sourceRow": 1282,
+      "sourceRows": [
+        1282
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/910e8e2e322f7a2a",
+      "lat": 34.6489810207637,
+      "lng": 135.159046222297,
+      "category": "SAFE",
+      "name": "(有)大清産廃",
+      "address": "神戸市長田区苅藻島町1丁目1-43",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区苅藻島町1丁目1-43",
+      "district": "長田区",
+      "sourceRow": 1339,
+      "sourceRows": [
+        1339
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

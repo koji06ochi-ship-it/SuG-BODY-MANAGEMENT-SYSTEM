@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5784-22541-20261016",
+  "lat": 34.70916656876609,
+  "lng": 135.24963870632027,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/bb150fda7414c961",
+      "lat": 34.7091335578952,
+      "lng": 135.24709616705,
+      "category": "SAFE",
+      "name": "キコーナタウン（株式会社　タウンライト）",
+      "address": "神戸市東灘区御影塚町3丁目4-6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影塚町3丁目4-6",
+      "district": "東灘区",
+      "sourceRow": 1453,
+      "sourceRows": [
+        1453
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5d518b076d25ac70",
+      "lat": 34.7090148236679,
+      "lng": 135.251908465445,
+      "category": "SAFE",
+      "name": "ロングステージ御影（社会福祉法人　鶯園　特別養護老人ホーム）",
+      "address": "神戸市東灘区御影石町1-2-18",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影石町1-2-18",
+      "district": "東灘区",
+      "sourceRow": 1600,
+      "sourceRows": [
+        1600
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/615dbb3efaef8b67",
+      "lat": 34.7085830929585,
+      "lng": 135.251050194517,
+      "category": "SAFE",
+      "name": "岩谷化学工場株式会社",
+      "address": "神戸市東灘区御影塚町1丁目1番34号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影塚町1丁目1番34号",
+      "district": "東灘区",
+      "sourceRow": 1609,
+      "sourceRows": [
+        1609
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/157bb0a3a948a71b",
+      "lat": 34.7099348005428,
+      "lng": 135.248499998269,
+      "category": "SAFE",
+      "name": "神戸酒心館",
+      "address": "神戸市東灘区御影塚町1丁目8-17",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影塚町1丁目8-17",
+      "district": "東灘区",
+      "sourceRow": 1633,
+      "sourceRows": [
+        1633
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

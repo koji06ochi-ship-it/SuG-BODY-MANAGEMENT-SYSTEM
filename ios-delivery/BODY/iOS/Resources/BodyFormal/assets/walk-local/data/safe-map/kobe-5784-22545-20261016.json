@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5784-22545-20261016",
+  "lat": 34.707149412205624,
+  "lng": 135.2749440814802,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/5bc54a3291aeab28",
+      "lat": 34.7057100820986,
+      "lng": 135.275736169796,
+      "category": "SAFE",
+      "name": "神戸市環境局東クリーンセンター",
+      "address": "神戸市東灘区魚崎浜町1-7",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区魚崎浜町1-7",
+      "district": "東灘区",
+      "sourceRow": 1458,
+      "sourceRows": [
+        1458
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e3d78d8a93b60664",
+      "lat": 34.704809068681,
+      "lng": 135.273484220628,
+      "category": "SAFE",
+      "name": "コープこうべ　協同購入センター東灘",
+      "address": "神戸市東灘区魚崎浜町1－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区魚崎浜町1－1",
+      "district": "東灘区",
+      "sourceRow": 1529,
+      "sourceRows": [
+        1529
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8210122358c6fe61",
+      "lat": 34.7080970271567,
+      "lng": 135.274633918016,
+      "category": "SAFE",
+      "name": "株式会社　神戸サンソ",
+      "address": "神戸市東灘区魚崎南町3丁目2-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区魚崎南町3丁目2-2",
+      "district": "東灘区",
+      "sourceRow": 1568,
+      "sourceRows": [
+        1568
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/79a88fa4ce99a6fe",
+      "lat": 34.7074069397531,
+      "lng": 135.274921056024,
+      "category": "SAFE",
+      "name": "株式会社　ケミカル工事",
+      "address": "神戸市東灘区魚崎浜町5-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区魚崎浜町5-5",
+      "district": "東灘区",
+      "sourceRow": 1622,
+      "sourceRows": [
+        1622
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/69e946e466a07b3c",
+      "lat": 34.7097239433387,
+      "lng": 135.275945042937,
+      "category": "SAFE",
+      "name": "魚崎会館",
+      "address": "神戸市東灘区魚崎南町3丁目6-7",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区魚崎南町3丁目6-7",
+      "district": "東灘区",
+      "sourceRow": 1677,
+      "sourceRows": [
+        1677
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

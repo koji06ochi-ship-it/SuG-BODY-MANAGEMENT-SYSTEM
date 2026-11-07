@@ -1,0 +1,11 @@
+{
+  "app": "BODY",
+  "scheme": "SuGBODY",
+  "bundleIdentifier": "jp.sugosaka.member",
+  "registrationEvidence": "Existing TestFlight marker",
+  "currentAppleStateVerified": false,
+  "signingTeamConfigured": false,
+  "buildExecuted": false,
+  "installedOnIPhone": false,
+  "privacyReviewComplete": false
+}

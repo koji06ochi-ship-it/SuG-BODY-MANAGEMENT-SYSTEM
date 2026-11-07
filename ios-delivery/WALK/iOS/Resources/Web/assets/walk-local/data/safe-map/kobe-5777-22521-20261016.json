@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5777-22521-20261016",
+  "lat": 34.66340216649886,
+  "lng": 135.12963220258234,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/5386ea991a0515ea",
+      "lat": 34.6644033703334,
+      "lng": 135.1270487072,
+      "category": "SAFE",
+      "name": "須磨学園",
+      "address": "神戸市須磨区板宿町3丁目15番14号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区板宿町3丁目15番14号",
+      "district": "須磨区",
+      "sourceRow": 2,
+      "sourceRows": [
+        2
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2c7a715e83ff2875",
+      "lat": 34.6633647318519,
+      "lng": 135.13120984428,
+      "category": "SAFE",
+      "name": "滝川中高等学校",
+      "address": "神戸市須磨区宝田町2丁目1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区宝田町2丁目1",
+      "district": "須磨区",
+      "sourceRow": 21,
+      "sourceRows": [
+        21
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/da149c74ec31817c",
+      "lat": 34.6624383973113,
+      "lng": 135.130638056267,
+      "category": "SAFE",
+      "name": "神戸市立　板宿児童館",
+      "address": "神戸市須磨区板宿町1丁目4-9",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区板宿町1丁目4-9",
+      "district": "須磨区",
+      "sourceRow": 128,
+      "sourceRows": [
+        128
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

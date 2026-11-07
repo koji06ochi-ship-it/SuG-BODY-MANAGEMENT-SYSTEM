@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5783-22561-20261016",
+  "lat": 34.70139767333333,
+  "lng": 135.36998763333335,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/22ceafe9712b29f7",
+      "lat": 34.70164675,
+      "lng": 135.3687223,
+      "category": "SAFE",
+      "name": "高須小学校",
+      "address": "兵庫県西宮市高須町１丁目１－４１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市高須町１丁目１－４１",
+      "district": "西宮市",
+      "sourceRow": 32,
+      "sourceRows": [
+        32
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/fcea3533c410ec67",
+      "lat": 34.70348257,
+      "lng": 135.3718275,
+      "category": "SAFE",
+      "name": "高須東保育所",
+      "address": "兵庫県西宮市高須町１丁目１－３９",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市高須町１丁目１－３９",
+      "district": "西宮市",
+      "sourceRow": 101,
+      "sourceRows": [
+        101
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/954a708411d34e04",
+      "lat": 34.6990637,
+      "lng": 135.3694131,
+      "category": "SAFE",
+      "name": "鳴尾浜臨海野球場・テニスコート",
+      "address": "兵庫県西宮市鳴尾浜１丁目５－２",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市鳴尾浜１丁目５－２",
+      "district": "西宮市",
+      "sourceRow": 192,
+      "sourceRows": [
+        192
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

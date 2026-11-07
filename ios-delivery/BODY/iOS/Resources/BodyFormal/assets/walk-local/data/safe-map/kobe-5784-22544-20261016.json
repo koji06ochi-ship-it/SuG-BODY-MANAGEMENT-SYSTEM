@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5784-22544-20261016",
+  "lat": 34.708329545308274,
+  "lng": 135.2672192327185,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/0550496dde700d39",
+      "lat": 34.7098814817656,
+      "lng": 135.26680522565,
+      "category": "SAFE",
+      "name": "モンセーヌ住吉川公園管理組合",
+      "address": "神戸市東灘区魚崎西町2丁目2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区魚崎西町2丁目2",
+      "district": "東灘区",
+      "sourceRow": 1425,
+      "sourceRows": [
+        1425
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/967ca4bc47430ef4",
+      "lat": 34.7088770226472,
+      "lng": 135.266404423751,
+      "category": "SAFE",
+      "name": "菊正宗酒造㈱　嘉宝蔵",
+      "address": "神戸市東灘区魚崎西町1丁目8－6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区魚崎西町1丁目8－6",
+      "district": "東灘区",
+      "sourceRow": 1460,
+      "sourceRows": [
+        1460
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d271cb89421558be",
+      "lat": 34.7073977360445,
+      "lng": 135.269804465961,
+      "category": "SAFE",
+      "name": "介護付有料老人ホームはぴね神戸魚崎",
+      "address": "神戸市東灘区魚崎南町5丁目5－21",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区魚崎南町5丁目5－21",
+      "district": "東灘区",
+      "sourceRow": 1494,
+      "sourceRows": [
+        1494
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8d23b5f9ac04f505",
+      "lat": 34.7071619407758,
+      "lng": 135.265862815512,
+      "category": "SAFE",
+      "name": "神戸新交通株式会社　六甲ライナー南魚崎駅",
+      "address": "神戸市東灘区魚崎西町1丁目1番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区魚崎西町1丁目1番",
+      "district": "東灘区",
+      "sourceRow": 1731,
+      "sourceRows": [
+        1731
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5780-22515-20261016",
+  "lat": 34.682970161948916,
+  "lng": 135.09404638065075,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/abaeaf2d7244cbc8",
+      "lat": 34.6828256810867,
+      "lng": 135.093466378429,
+      "category": "SAFE",
+      "name": "神戸市環境局落合クリーンセンター",
+      "address": "神戸市須磨区中落合3丁目1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区中落合3丁目1-1",
+      "district": "須磨区",
+      "sourceRow": 109,
+      "sourceRows": [
+        109
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/56c4ad76c66d4d09",
+      "lat": 34.6850970043186,
+      "lng": 135.094723221289,
+      "category": "SAFE",
+      "name": "稲守耳鼻咽喉科医院",
+      "address": "神戸市須磨区北落合2丁目1－10",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区北落合2丁目1－10",
+      "district": "須磨区",
+      "sourceRow": 110,
+      "sourceRows": [
+        110
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/881770f678c4bb75",
+      "lat": 34.6836817434944,
+      "lng": 135.095428733489,
+      "category": "SAFE",
+      "name": "北須磨文化センター",
+      "address": "神戸市須磨区中落合3丁目1－2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区中落合3丁目1－2",
+      "district": "須磨区",
+      "sourceRow": 145,
+      "sourceRows": [
+        145
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9e2ecb79ed87333b",
+      "lat": 34.680276218896,
+      "lng": 135.092567189396,
+      "category": "SAFE",
+      "name": "かわと内科　循環器内科クリニック",
+      "address": "神戸市須磨区中落合3丁目1-10",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区中落合3丁目1-10",
+      "district": "須磨区",
+      "sourceRow": 252,
+      "sourceRows": [
+        252
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

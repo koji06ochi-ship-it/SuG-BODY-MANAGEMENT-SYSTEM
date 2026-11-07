@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "id": "nara-park-8673-33935-20261016",
+  "lat": 34.69336356403748,
+  "lng": 135.74123247909898,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "奈良市",
+  "source": "奈良市 公園オープンデータ",
+  "sourceUrl": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+  "sourceFileUrl": "https://www.city.nara.lg.jp/uploaded/attachment/200222.csv",
+  "sourceUpdatedAt": "2025-04-01",
+  "retrievedAt": "2026-10-15T15:58:16.669Z",
+  "sourceFileSha256": "d1b1be81bbdbaab587735acc5d5244377d1cdfe2f3bcec59af61dc6eb3a6f94f",
+  "license": "CC-BY-2.1-JP",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.1/jp/",
+  "data": [
+    {
+      "id": "municipality/nara/nara-city/afcd6eab26fbf518",
+      "lat": 34.69460583952292,
+      "lng": 135.7420432413475,
+      "category": "PUBLIC",
+      "name": "学園中第４号街区公園",
+      "address": "",
+      "kind": "街区公園",
+      "source": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+      "sourceLabel": "奈良市 公園オープンデータ（市公表位置・精度保証なし）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-04-01",
+      "sourceRow": 396,
+      "sourceRows": [
+        396
+      ],
+      "duplicateSourceEntries": 1,
+      "accuracyNote": "奈良市公表データ。市の注意書きにより正確な公園図面との誤差があり、位置精度は保証されません。"
+    },
+    {
+      "id": "municipality/nara/nara-city/c2ae4c903bf79134",
+      "lat": 34.69265562715376,
+      "lng": 135.7417829714705,
+      "category": "PUBLIC",
+      "name": "学園中五丁目第３号街区公園",
+      "address": "",
+      "kind": "街区公園",
+      "source": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+      "sourceLabel": "奈良市 公園オープンデータ（市公表位置・精度保証なし）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-04-01",
+      "sourceRow": 529,
+      "sourceRows": [
+        529
+      ],
+      "duplicateSourceEntries": 1,
+      "accuracyNote": "奈良市公表データ。市の注意書きにより正確な公園図面との誤差があり、位置精度は保証されません。"
+    },
+    {
+      "id": "municipality/nara/nara-city/f249cf6e4b05e433",
+      "lat": 34.69328421457211,
+      "lng": 135.74103991730746,
+      "category": "PUBLIC",
+      "name": "富雄元町一丁目第３号街区公園",
+      "address": "",
+      "kind": "街区公園",
+      "source": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+      "sourceLabel": "奈良市 公園オープンデータ（市公表位置・精度保証なし）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-04-01",
+      "sourceRow": 545,
+      "sourceRows": [
+        545
+      ],
+      "duplicateSourceEntries": 1,
+      "accuracyNote": "奈良市公表データ。市の注意書きにより正確な公園図面との誤差があり、位置精度は保証されません。"
+    },
+    {
+      "id": "municipality/nara/nara-city/4805458fee3471a6",
+      "lat": 34.69290857490115,
+      "lng": 135.74006378627035,
+      "category": "PUBLIC",
+      "name": "富雄元町一丁目街区公園",
+      "address": "",
+      "kind": "街区公園",
+      "source": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+      "sourceLabel": "奈良市 公園オープンデータ（市公表位置・精度保証なし）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-04-01",
+      "sourceRow": 549,
+      "sourceRows": [
+        549
+      ],
+      "duplicateSourceEntries": 1,
+      "accuracyNote": "奈良市公表データ。市の注意書きにより正確な公園図面との誤差があり、位置精度は保証されません。"
+    }
+  ]
+}

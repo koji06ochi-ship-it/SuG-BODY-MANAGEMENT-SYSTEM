@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5789-22560-20261016",
+  "lat": 34.736668826666666,
+  "lng": 135.360992,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/ea938583a86f1379",
+      "lat": 34.7355299,
+      "lng": 135.3603415,
+      "category": "SAFE",
+      "name": "兵庫日産自動車株式会社\n上甲子園店",
+      "address": "兵庫県西宮市上甲子園５丁目１－５",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市上甲子園５丁目１－５",
+      "district": "西宮市",
+      "sourceRow": 366,
+      "sourceRows": [
+        366
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/720d1085f6cb4858",
+      "lat": 34.73476573,
+      "lng": 135.360884,
+      "category": "SAFE",
+      "name": "幼保連携型認定こども園　上甲子園こども園",
+      "address": "兵庫県西宮市上甲子園５丁目４－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市上甲子園５丁目４－１",
+      "district": "西宮市",
+      "sourceRow": 377,
+      "sourceRows": [
+        377
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/be477aa81b08473c",
+      "lat": 34.73971085,
+      "lng": 135.3617505,
+      "category": "SAFE",
+      "name": "西宮グリーンマンション　２号棟",
+      "address": "兵庫県西宮市高畑町１－２",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市高畑町１－２",
+      "district": "西宮市",
+      "sourceRow": 603,
+      "sourceRows": [
+        603
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5771-22508-20261016",
+  "lat": 34.6290820292933,
+  "lng": 135.05264595123634,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/22a09cf1152668c4",
+      "lat": 34.6295337211166,
+      "lng": 135.053650633831,
+      "category": "SAFE",
+      "name": "山陽　垂水駅",
+      "address": "神戸市垂水区神田町1－37",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区神田町1－37",
+      "district": "垂水区",
+      "sourceRow": 296,
+      "sourceRows": [
+        296
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9cb52d473d804c7f",
+      "lat": 34.6291919481663,
+      "lng": 135.053838906691,
+      "category": "SAFE",
+      "name": "JR　垂水駅",
+      "address": "神戸市垂水区神田町1-20",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区神田町1-20",
+      "district": "垂水区",
+      "sourceRow": 323,
+      "sourceRows": [
+        323
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/dfe720ce6250b7ad",
+      "lat": 34.6305015021065,
+      "lng": 135.052823522953,
+      "category": "SAFE",
+      "name": "三井住友銀行　垂水北出張所",
+      "address": "神戸市垂水区天ノ下町7-15",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区天ノ下町7-15",
+      "district": "垂水区",
+      "sourceRow": 329,
+      "sourceRows": [
+        329
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2fe310c775920495",
+      "lat": 34.6301137122374,
+      "lng": 135.052145156861,
+      "category": "SAFE",
+      "name": "JA兵庫六甲　垂水駅前出張所",
+      "address": "神戸市垂水区天ノ下町1-1-158",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区天ノ下町1-1-158",
+      "district": "垂水区",
+      "sourceRow": 336,
+      "sourceRows": [
+        336
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7479a3d96bea7e11",
+      "lat": 34.6279805560353,
+      "lng": 135.053642127385,
+      "category": "SAFE",
+      "name": "ジョイ垂水",
+      "address": "神戸市垂水区宮本町1-28",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区宮本町1-28",
+      "district": "垂水区",
+      "sourceRow": 398,
+      "sourceRows": [
+        398
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f5bf563834a5b03b",
+      "lat": 34.6277514027312,
+      "lng": 135.053383509612,
+      "category": "SAFE",
+      "name": "兵庫県警　垂水警察署　垂水駅前交番",
+      "address": "神戸市垂水区宮本町1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区宮本町1",
+      "district": "垂水区",
+      "sourceRow": 408,
+      "sourceRows": [
+        408
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/896d47c476a59783",
+      "lat": 34.6301137122374,
+      "lng": 135.052145156861,
+      "category": "SAFE",
+      "name": "イオン垂水店",
+      "address": "神戸市垂水区天ノ下町1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区天ノ下町1-1",
+      "district": "垂水区",
+      "sourceRow": 409,
+      "sourceRows": [
+        409
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0ddea4d65ed17c23",
+      "lat": 34.6262643424531,
+      "lng": 135.048728355352,
+      "category": "SAFE",
+      "name": "三井アウトレットパーク　マリンピア神戸",
+      "address": "神戸市垂水区海岸通12番地2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区海岸通12番地2",
+      "district": "垂水区",
+      "sourceRow": 415,
+      "sourceRows": [
+        415
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4217a4bed95c754d",
+      "lat": 34.6302873665559,
+      "lng": 135.053456191581,
+      "category": "SAFE",
+      "name": "喫茶レストラン　ブラジル",
+      "address": "神戸市垂水区神田町4-19",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区神田町4-19",
+      "district": "垂水区",
+      "sourceRow": 463,
+      "sourceRows": [
+        463
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

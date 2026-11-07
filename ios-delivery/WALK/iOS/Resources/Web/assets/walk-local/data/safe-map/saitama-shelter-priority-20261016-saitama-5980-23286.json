@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-shelter-saitama-5980-23286",
+  "lat": 35.88526,
+  "lng": 139.71928,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "埼玉県オープンデータポータル さいたま市 指定避難所",
+  "sourceUrl": "https://opendata.pref.saitama.lg.jp/resources/4757",
+  "sourceFileUrl": "https://opendata.pref.saitama.lg.jp/resource_download/4757",
+  "sourceUpdatedAt": "2026-04-01",
+  "retrievedAt": "2026-10-16T00:00:00.000Z",
+  "sourceFileSha256": "42d9e75eb4293706a921f7e111077954d3d03d018c3745d1fe0a305417b0c44a",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://www.digital.go.jp/resources/open_data/",
+  "data": [
+    {
+      "id": "municipality/saitama/saitama-shelter/3fd5c4530eb980d6",
+      "lat": 35.89211964,
+      "lng": 139.7124791,
+      "category": "SAFE",
+      "name": "美園中学校（指定避難所）",
+      "address": "埼玉県さいたま市緑区大崎2550-3",
+      "kind": "SHELTER",
+      "source": "https://opendata.pref.saitama.lg.jp/resources/4757",
+      "sourceLabel": "埼玉県オープンデータポータル さいたま市 指定避難所（開設状況・受入可否は未確認）",
+      "license": "PDL-1.0",
+      "sourceUpdatedAt": "2026-04-01",
+      "sourceRow": 214
+    },
+    {
+      "id": "municipality/saitama/saitama-shelter/d685ace5068b29ab",
+      "lat": 35.88189922,
+      "lng": 139.7157227,
+      "category": "SAFE",
+      "name": "県立浦和特別支援学校（指定避難所）",
+      "address": "埼玉県さいたま市緑区大崎58",
+      "kind": "SHELTER",
+      "source": "https://opendata.pref.saitama.lg.jp/resources/4757",
+      "sourceLabel": "埼玉県オープンデータポータル さいたま市 指定避難所（開設状況・受入可否は未確認）",
+      "license": "PDL-1.0",
+      "sourceUpdatedAt": "2026-04-01",
+      "sourceRow": 221
+    },
+    {
+      "id": "municipality/saitama/saitama-shelter/af0a621ff9d0340d",
+      "lat": 35.8895824,
+      "lng": 139.7178632,
+      "category": "SAFE",
+      "name": "美園公民館（指定避難所）",
+      "address": "埼玉県さいたま市緑区大門1973-1",
+      "kind": "SHELTER",
+      "source": "https://opendata.pref.saitama.lg.jp/resources/4757",
+      "sourceLabel": "埼玉県オープンデータポータル さいたま市 指定避難所（開設状況・受入可否は未確認）",
+      "license": "PDL-1.0",
+      "sourceUpdatedAt": "2026-04-01",
+      "sourceRow": 225
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5752-22776-20261016",
+  "lat": 34.51570361735868,
+  "lng": 136.66143540927,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/b0d7577806626414",
+      "lat": 34.5156319963192,
+      "lng": 136.661896922951,
+      "category": "SAFE",
+      "name": "伊勢市立明野小学校",
+      "address": "伊勢市小俣町明野1939",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市小俣町明野1939",
+      "sourceRow": 55,
+      "sourceRows": [
+        55
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/029c9463b03474cf",
+      "lat": 34.515419,
+      "lng": 136.661784,
+      "category": "SAFE",
+      "name": "伊勢市立明野小学校　体育館",
+      "address": "伊勢市小俣町明野1939",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市小俣町明野1939",
+      "sourceRow": 56,
+      "sourceRows": [
+        56
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/bab9b85d9cc9de6a",
+      "lat": 34.5150948127654,
+      "lng": 136.660963886897,
+      "category": "SAFE",
+      "name": "伊勢市明野放課後児童ｸﾗﾌﾞ",
+      "address": "伊勢市小俣町新村399-3　明野児童館内",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市小俣町新村399-3　明野児童館内",
+      "sourceRow": 107,
+      "sourceRows": [
+        107
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/6a68a7dafb179827",
+      "lat": 34.5168929121943,
+      "lng": 136.66136927613,
+      "category": "SAFE",
+      "name": "あけの学童クラブ",
+      "address": "伊勢市小俣町新村558-21",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市小俣町新村558-21",
+      "sourceRow": 111,
+      "sourceRows": [
+        111
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/dd117b83e8e53425",
+      "lat": 34.5154793655145,
+      "lng": 136.661162960372,
+      "category": "SAFE",
+      "name": "小俣総合体育館",
+      "address": "伊勢市小俣町新村401-1",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市小俣町新村401-1",
+      "sourceRow": 122,
+      "sourceRows": [
+        122
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

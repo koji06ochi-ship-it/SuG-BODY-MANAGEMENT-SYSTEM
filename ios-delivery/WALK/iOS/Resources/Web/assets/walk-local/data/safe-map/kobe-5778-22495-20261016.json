@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5778-22495-20261016",
+  "lat": 34.67054621862115,
+  "lng": 134.97576675375623,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/0004db37f342e3af",
+      "lat": 34.6717204671252,
+      "lng": 134.975923798067,
+      "category": "SAFE",
+      "name": "総合リハビリテーションセンター　のぞみの家",
+      "address": "神戸市西区曙町1070",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区曙町1070",
+      "district": "西区",
+      "sourceRow": 618,
+      "sourceRows": [
+        618
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/15f313b44f44763b",
+      "lat": 34.6734543473871,
+      "lng": 134.975666590973,
+      "category": "SAFE",
+      "name": "神戸市立　王塚台保育所",
+      "address": "神戸市西区王塚台5丁目115",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区王塚台5丁目115",
+      "district": "西区",
+      "sourceRow": 652,
+      "sourceRows": [
+        652
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/64ab09ca3337cf85",
+      "lat": 34.6681054183928,
+      "lng": 134.975590464136,
+      "category": "SAFE",
+      "name": "枝吉地域福祉センター",
+      "address": "神戸市西区枝吉4丁目48-4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区枝吉4丁目48-4",
+      "district": "西区",
+      "sourceRow": 718,
+      "sourceRows": [
+        718
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/78e422b7455d6427",
+      "lat": 34.6689046415795,
+      "lng": 134.975886161849,
+      "category": "SAFE",
+      "name": "ウェルシア神戸枝吉店",
+      "address": "神戸市西区枝吉4-34-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区枝吉4-34-1",
+      "district": "西区",
+      "sourceRow": 767,
+      "sourceRows": [
+        767
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

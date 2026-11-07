@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "yokkaichi-5826-22768-20261016",
+  "lat": 34.95862048,
+  "lng": 136.6090064,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "四日市市",
+  "source": "四日市市内公共施設 AED設置箇所一覧",
+  "sourceUrl": "https://data.bodik.jp/dataset/242021_00127",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/422f8da8-0b3c-4d84-b8dd-d88d18e914ce/resource/2a5eee8b-c455-4c2e-8553-b0d3d36e5ef2/download/242021_aed.csv",
+  "sourceUpdatedAt": "2024-12-18",
+  "sourcePageUpdatedAt": "2025-01-24",
+  "retrievedAt": "2026-10-15T15:44:16.747Z",
+  "sourceFileSha256": "c0880c81977c7fc444213ee84ef31a7b2e9e34f12d31e892064cbabb7d5159cf",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/yokkaichi/aed/ce69d938de8a58d7",
+      "lat": 34.95862048,
+      "lng": 136.6090064,
+      "category": "SAFE",
+      "name": "人権プラザ赤堀",
+      "address": "四日市市赤堀三丁目1番21号",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市赤堀三丁目1番21号",
+      "sourceRow": 188,
+      "sourceRows": [
+        188
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

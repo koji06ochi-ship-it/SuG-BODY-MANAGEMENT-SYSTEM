@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5775-22508-20261016",
+  "lat": 34.654105746679605,
+  "lng": 135.0511268223445,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/1d34f9dd3df61757",
+      "lat": 34.6556062777772,
+      "lng": 135.05055270079,
+      "category": "SAFE",
+      "name": "コープこうべ　コープ新多聞",
+      "address": "神戸市垂水区本多聞4丁目1-250",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区本多聞4丁目1-250",
+      "district": "垂水区",
+      "sourceRow": 366,
+      "sourceRows": [
+        366
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/cf259aaf013bc66e",
+      "lat": 34.652605215582,
+      "lng": 135.051700943899,
+      "category": "SAFE",
+      "name": "学が丘幼稚園",
+      "address": "神戸市垂水区学が丘1丁目10番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区学が丘1丁目10番",
+      "district": "垂水区",
+      "sourceRow": 436,
+      "sourceRows": [
+        436
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

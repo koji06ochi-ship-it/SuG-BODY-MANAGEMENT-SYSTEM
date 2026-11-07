@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5773-22522-20261016",
+  "lat": 34.6425010150309,
+  "lng": 135.136047494688,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/735e8255d3fe223d",
+      "lat": 34.6425010150309,
+      "lng": 135.136047494688,
+      "category": "SAFE",
+      "name": "ナナ・ファーム須磨",
+      "address": "神戸市須磨区外浜町4丁目1番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区外浜町4丁目1番1号",
+      "district": "須磨区",
+      "sourceRow": 229,
+      "sourceRows": [
+        229
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

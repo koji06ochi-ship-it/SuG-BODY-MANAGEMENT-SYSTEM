@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 620"><defs>
+<linearGradient id="sky" x2="0" y2="1"><stop stop-color="#001c16"/><stop offset=".47" stop-color="#073c42"/><stop offset=".71" stop-color="#698b86"/><stop offset=".83" stop-color="#ffd17b"/><stop offset="1" stop-color="#082b23"/></linearGradient>
+<radialGradient id="sun"><stop stop-color="#fffde0"/><stop offset=".12" stop-color="#fff4b0"/><stop offset=".3" stop-color="#ffcf57" stop-opacity=".85"/><stop offset="1" stop-color="#ffc34b" stop-opacity="0"/></radialGradient>
+<linearGradient id="distant" x2="0" y2="1"><stop stop-color="#5a8281"/><stop offset="1" stop-color="#163d38"/></linearGradient>
+<linearGradient id="mountain" x2="1" y2="1"><stop stop-color="#285b52"/><stop offset=".42" stop-color="#0b3330"/><stop offset="1" stop-color="#001a15"/></linearGradient>
+<linearGradient id="light" x2="0" y2="1"><stop stop-color="#f4d17d" stop-opacity=".85"/><stop offset="1" stop-color="#9dba71" stop-opacity="0"/></linearGradient>
+<linearGradient id="fade" x2="0" y2="1"><stop offset=".68" stop-color="#001c13" stop-opacity="0"/><stop offset="1" stop-color="#001c13"/></linearGradient>
+<filter id="cloud"><feTurbulence type="fractalNoise" baseFrequency=".008 .025" numOctaves="3" seed="7"/><feColorMatrix values="0 0 0 0 .5 0 0 0 0 .7 0 0 0 0 .65 0 0 0 .17 0"/></filter>
+<filter id="rock"><feTurbulence type="fractalNoise" baseFrequency=".018 .08" numOctaves="3" seed="12"/><feColorMatrix type="saturate" values="0" result="noise"/><feComposite in="noise" in2="SourceGraphic" operator="in" result="grain"/><feBlend in="SourceGraphic" in2="grain" mode="soft-light"/></filter></defs>
+<path fill="url(#sky)" d="M0 0h780v620H0z"/><path filter="url(#cloud)" opacity=".5" d="M0 170h780v300H0z"/><circle cx="232" cy="430" r="165" fill="url(#sun)"/>
+<g stroke="#ffdf91" stroke-width="2" opacity=".22"><path d="m232 430-130-110m130 110-63-160m63 160 10-167m-10 167 80-144m-80 144 151-100m-151 100 185-28m-185 28-201-29"/></g>
+<path d="m0 466 23-25 18 10 25-37 18 22 31-31 21 28 19-17 30 33 37-37 22 20 22-31 25 30 32-20 23 28 23-33 36 35 21-13 25 25 31-40 32 17 29-23 25 25 34-46 31 26 25-22 38 37 30-20 35 37v150H0z" fill="url(#distant)"/><circle cx="232" cy="431" r="9" fill="#ffffd5"/>
+<path d="m0 525 31-29 37 17 38-45 22 9 39-66 17 15 15-5 25 38 16 3 35 37 39-23 46 46 38-18 36 40 46-36 50 22 39-43 27 17 22-31 45 49 36-21 44 39 35-17 44 50v114H0z" fill="url(#mountain)" filter="url(#rock)"/>
+<path d="m166 411-38 66-22-9-38 45 58-29 25-9 24-40 9-9 15-5-12 28 18 13 35 1 35 37-37-15-30-6-21-15-35 25-46 37-46 8-40 25 71-54 54-37z" fill="url(#light)"/>
+<path d="m0 573 58-16 46 12 43-17 63 30 55-13 47 21 40-28 42 17 43-27 54 24 42-12 40 17 48-26 65 27 42-12 52 18v55H0z" fill="#043126"/>
+<g fill="#00231a"><path d="m18 511-12 32h7l-16 26h13L0 594h44l-14-25h12l-16-26h7zm41 31-10 25h6l-13 23h11l-14 25h38l-13-25h10l-13-23h6zm654-29-13 36h8l-18 31h13l-20 35h58l-20-35h13l-18-31h8zm45 40-10 27h6l-15 23h11l-15 23h42l-14-23h10l-14-23h7z"/></g><path fill="url(#fade)" d="M0 0h780v620H0z"/></svg>

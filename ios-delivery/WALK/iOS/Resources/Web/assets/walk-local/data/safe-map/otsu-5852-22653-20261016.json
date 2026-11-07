@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "id": "otsu-5852-22653-20261016",
+  "lat": 35.11574388857143,
+  "lng": 135.92052154285713,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "大津市",
+  "source": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+  "sourceUrl": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/999caef4-7e90-4fd2-98eb-fd94368e9a2f/resource/3e5b513e-de51-4459-af70-6fda94e1bed3/download/od405902026022700200.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2025-03-12",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "7899826cf95c365a07c87b3ad05aa2aa7d4adeb440a2c57269c84f98c1d85ea8",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/otsu/aed/3ae414a34d34c67b",
+      "lat": 35.11740472,
+      "lng": 135.9190817,
+      "category": "SAFE",
+      "name": "ローレルコート堅田",
+      "address": "大津市本堅田五丁目22番12号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市本堅田五丁目22番12号",
+      "district": "大津市",
+      "sourceRow": 68,
+      "sourceRows": [
+        68
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/4022df87c8386ab2",
+      "lat": 35.11459056,
+      "lng": 135.9186044,
+      "category": "SAFE",
+      "name": "株式会社京滋マツダ堅田店",
+      "address": "大津市本堅田四丁目13番9号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市本堅田四丁目13番9号",
+      "district": "大津市",
+      "sourceRow": 70,
+      "sourceRows": [
+        70
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/9d168ce85556358d",
+      "lat": 35.11583,
+      "lng": 135.9187142,
+      "category": "SAFE",
+      "name": "平和堂　アル・プラザ堅田",
+      "address": "大津市本堅田五丁目20番10号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市本堅田五丁目20番10号",
+      "district": "大津市",
+      "sourceRow": 71,
+      "sourceRows": [
+        71
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/b15e61f3f1219d79",
+      "lat": 35.11717,
+      "lng": 135.9197311,
+      "category": "SAFE",
+      "name": "京都信用金庫　堅田支店",
+      "address": "大津市本堅田五丁目22番36号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市本堅田五丁目22番36号",
+      "district": "大津市",
+      "sourceRow": 72,
+      "sourceRows": [
+        72
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/0be524327fafcefd",
+      "lat": 35.11445222,
+      "lng": 135.9216786,
+      "category": "SAFE",
+      "name": "大津市立堅田保育園",
+      "address": "大津市本堅田四丁目26番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市本堅田四丁目26番1号",
+      "district": "大津市",
+      "sourceRow": 78,
+      "sourceRows": [
+        78
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/2ac1e63e41420c3f",
+      "lat": 35.11727083,
+      "lng": 135.9235219,
+      "category": "SAFE",
+      "name": "大津市立北老人福祉センター",
+      "address": "大津市今堅田二丁目4番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市今堅田二丁目4番1号",
+      "district": "大津市",
+      "sourceRow": 81,
+      "sourceRows": [
+        81
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/ce1f9d10527ff06d",
+      "lat": 35.11348889,
+      "lng": 135.9223189,
+      "category": "SAFE",
+      "name": "琵琶湖大橋　翔裕館",
+      "address": "大津市本堅田四丁目4番18号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市本堅田四丁目4番18号",
+      "district": "大津市",
+      "sourceRow": 82,
+      "sourceRows": [
+        82
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

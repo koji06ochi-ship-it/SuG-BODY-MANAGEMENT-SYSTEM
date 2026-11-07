@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "id": "nara-park-8673-33942-20261016",
+  "lat": 34.693987575514825,
+  "lng": 135.7698865494851,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "奈良市",
+  "source": "奈良市 公園オープンデータ",
+  "sourceUrl": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+  "sourceFileUrl": "https://www.city.nara.lg.jp/uploaded/attachment/200222.csv",
+  "sourceUpdatedAt": "2025-04-01",
+  "retrievedAt": "2026-10-15T15:58:16.669Z",
+  "sourceFileSha256": "d1b1be81bbdbaab587735acc5d5244377d1cdfe2f3bcec59af61dc6eb3a6f94f",
+  "license": "CC-BY-2.1-JP",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.1/jp/",
+  "data": [
+    {
+      "id": "municipality/nara/nara-city/82d8d25515d213bd",
+      "lat": 34.69594872238534,
+      "lng": 135.7706128912352,
+      "category": "PUBLIC",
+      "name": "いこい公園",
+      "address": "",
+      "kind": "街区公園",
+      "source": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+      "sourceLabel": "奈良市 公園オープンデータ（市公表位置・精度保証なし）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-04-01",
+      "sourceRow": 2,
+      "sourceRows": [
+        2
+      ],
+      "duplicateSourceEntries": 1,
+      "accuracyNote": "奈良市公表データ。市の注意書きにより正確な公園図面との誤差があり、位置精度は保証されません。"
+    },
+    {
+      "id": "municipality/nara/nara-city/6fb27350ddb26898",
+      "lat": 34.694412231229755,
+      "lng": 135.7706275309711,
+      "category": "PUBLIC",
+      "name": "西大寺新池街区公園",
+      "address": "",
+      "kind": "街区公園",
+      "source": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+      "sourceLabel": "奈良市 公園オープンデータ（市公表位置・精度保証なし）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-04-01",
+      "sourceRow": 62,
+      "sourceRows": [
+        62
+      ],
+      "duplicateSourceEntries": 1,
+      "accuracyNote": "奈良市公表データ。市の注意書きにより正確な公園図面との誤差があり、位置精度は保証されません。"
+    },
+    {
+      "id": "municipality/nara/nara-city/2cc0560e67e4dd5f",
+      "lat": 34.69269309095732,
+      "lng": 135.76864716969988,
+      "category": "PUBLIC",
+      "name": "あやめ池南五丁目街区公園",
+      "address": "",
+      "kind": "街区公園",
+      "source": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+      "sourceLabel": "奈良市 公園オープンデータ（市公表位置・精度保証なし）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-04-01",
+      "sourceRow": 587,
+      "sourceRows": [
+        587
+      ],
+      "duplicateSourceEntries": 1,
+      "accuracyNote": "奈良市公表データ。市の注意書きにより正確な公園図面との誤差があり、位置精度は保証されません。"
+    },
+    {
+      "id": "municipality/nara/nara-city/506fe65fcd2614b0",
+      "lat": 34.69289625748689,
+      "lng": 135.76965860603423,
+      "category": "PUBLIC",
+      "name": "若葉台二丁目街区公園",
+      "address": "",
+      "kind": "街区公園",
+      "source": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+      "sourceLabel": "奈良市 公園オープンデータ（市公表位置・精度保証なし）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-04-01",
+      "sourceRow": 593,
+      "sourceRows": [
+        593
+      ],
+      "duplicateSourceEntries": 1,
+      "accuracyNote": "奈良市公表データ。市の注意書きにより正確な公園図面との誤差があり、位置精度は保証されません。"
+    }
+  ]
+}

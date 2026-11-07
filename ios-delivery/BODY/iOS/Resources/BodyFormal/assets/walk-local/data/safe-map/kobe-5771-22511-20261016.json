@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5771-22511-20261016",
+  "lat": 34.629326888828345,
+  "lng": 135.070097694731,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/1a37cde5e64e147e",
+      "lat": 34.6276092580053,
+      "lng": 135.068942851852,
+      "category": "SAFE",
+      "name": "神戸市立　平磯海づり公園",
+      "address": "神戸市垂水区平磯1-1-66",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区平磯1-1-66",
+      "district": "垂水区",
+      "sourceRow": 286,
+      "sourceRows": [
+        286
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a539d8537b6e54c3",
+      "lat": 34.6310445196514,
+      "lng": 135.07125253761,
+      "category": "SAFE",
+      "name": "指定障害福祉サービス事業所　ゆめの家",
+      "address": "神戸市垂水区城が山1-6-22",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区城が山1-6-22",
+      "district": "垂水区",
+      "sourceRow": 472,
+      "sourceRows": [
+        472
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

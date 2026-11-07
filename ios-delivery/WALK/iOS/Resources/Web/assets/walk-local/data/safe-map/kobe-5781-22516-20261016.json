@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5781-22516-20261016",
+  "lat": 34.6906327741168,
+  "lng": 135.10020433158127,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/5ba40225a4319aee",
+      "lat": 34.6915379866977,
+      "lng": 135.100917774375,
+      "category": "SAFE",
+      "name": "神戸信用金庫　白川台支店",
+      "address": "神戸市須磨区白川台3－62－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区白川台3－62－1",
+      "district": "須磨区",
+      "sourceRow": 90,
+      "sourceRows": [
+        90
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5de17a0a6be5754c",
+      "lat": 34.690082615984,
+      "lng": 135.100416129677,
+      "category": "SAFE",
+      "name": "白川台会館",
+      "address": "神戸市須磨区白川台3丁目63-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区白川台3丁目63-1",
+      "district": "須磨区",
+      "sourceRow": 157,
+      "sourceRows": [
+        157
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f2d50c8f2a8d7533",
+      "lat": 34.6903475587382,
+      "lng": 135.100567651092,
+      "category": "SAFE",
+      "name": "コープこうべ　コープ白川台",
+      "address": "神戸市須磨区白川台3丁目63－2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区白川台3丁目63－2",
+      "district": "須磨区",
+      "sourceRow": 168,
+      "sourceRows": [
+        168
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bbe64c9497a3ec46",
+      "lat": 34.6905629350473,
+      "lng": 135.098915771181,
+      "category": "SAFE",
+      "name": "白川台住宅管理組合",
+      "address": "神戸市須磨区白川台2丁目45-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区白川台2丁目45-2",
+      "district": "須磨区",
+      "sourceRow": 186,
+      "sourceRows": [
+        186
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5788-22523-20261016",
+  "lat": 34.728959281293754,
+  "lng": 135.1404483166525,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/f4decce0640c6ef1",
+      "lat": 34.7287400266314,
+      "lng": 135.140465015273,
+      "category": "SAFE",
+      "name": "神戸市立　鈴蘭台西町保育所",
+      "address": "神戸市北区鈴蘭台西町3丁目6番20号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鈴蘭台西町3丁目6番20号",
+      "district": "北区",
+      "sourceRow": 2336,
+      "sourceRows": [
+        2336
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/da39269c133f9a36",
+      "lat": 34.7291785359561,
+      "lng": 135.140431618032,
+      "category": "SAFE",
+      "name": "中村歯科医院",
+      "address": "神戸市北区鈴蘭台西町3丁目7-19",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鈴蘭台西町3丁目7-19",
+      "district": "北区",
+      "sourceRow": 2528,
+      "sourceRows": [
+        2528
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

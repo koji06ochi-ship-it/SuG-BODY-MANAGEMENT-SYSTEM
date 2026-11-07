@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-emergency-shelter-saitama-5993-23281",
+  "lat": 35.9602155,
+  "lng": 139.6909925,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "埼玉県オープンデータポータル さいたま市 指定緊急避難場所",
+  "sourceUrl": "https://opendata.pref.saitama.lg.jp/resources/4758",
+  "sourceFileUrl": "https://opendata.pref.saitama.lg.jp/resource_download/4758",
+  "sourceUpdatedAt": "2026-04-01",
+  "retrievedAt": "2026-10-16T00:00:00.000Z",
+  "sourceFileSha256": "f7e56ea919d2c9411d249c5766fbbd0f8ba4e6efd1e6a06d8facd92ab486239a",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://www.digital.go.jp/resources/open_data/",
+  "data": [
+    {
+      "id": "municipality/saitama/saitama-emergency-shelter/6d96214e5cefcf3d",
+      "lat": 35.96207629,
+      "lng": 139.6937085,
+      "category": "SAFE",
+      "name": "城北小学校（指定緊急避難場所）",
+      "address": "埼玉県さいたま市岩槻区岩槻6619",
+      "kind": "EMERGENCY_SHELTER",
+      "source": "https://opendata.pref.saitama.lg.jp/resources/4758",
+      "sourceLabel": "埼玉県オープンデータポータル さいたま市 指定緊急避難場所（開設状況・受入可否は未確認）",
+      "license": "PDL-1.0",
+      "sourceUpdatedAt": "2026-04-01",
+      "sourceRow": 252
+    },
+    {
+      "id": "municipality/saitama/saitama-emergency-shelter/94fb9b3ecc21970c",
+      "lat": 35.964755,
+      "lng": 139.689263,
+      "category": "SAFE",
+      "name": "城北中学校（指定緊急避難場所）",
+      "address": "埼玉県さいたま市岩槻区本宿392-1",
+      "kind": "EMERGENCY_SHELTER",
+      "source": "https://opendata.pref.saitama.lg.jp/resources/4758",
+      "sourceLabel": "埼玉県オープンデータポータル さいたま市 指定緊急避難場所（開設状況・受入可否は未確認）",
+      "license": "PDL-1.0",
+      "sourceUpdatedAt": "2026-04-01",
+      "sourceRow": 261
+    }
+  ]
+}

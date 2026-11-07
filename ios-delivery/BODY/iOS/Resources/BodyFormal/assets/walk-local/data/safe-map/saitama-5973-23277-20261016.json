@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5973-23277",
+  "lat": 35.84302861333333,
+  "lng": 139.66381945000003,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.84373726,
+      "lng": 139.6635113,
+      "category": "SAFE",
+      "name": "文化センター",
+      "address": "さいたま市根岸1-7-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "根岸1-7-1",
+      "district": "南区",
+      "sourceRow": 479,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/1465e46bc24776fa",
+      "sourceRows": [
+        479,
+        480,
+        481
+      ],
+      "duplicateSourceEntries": 3
+    },
+    {
+      "lat": 35.843456,
+      "lng": 139.6635671,
+      "category": "SAFE",
+      "name": "文化センター",
+      "address": "さいたま市根岸1-7-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "根岸1-7-1",
+      "district": "南区",
+      "sourceRow": 482,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/dcc4ea1f13df5ef0",
+      "sourceRows": [
+        482,
+        483
+      ],
+      "duplicateSourceEntries": 2
+    },
+    {
+      "lat": 35.8400479,
+      "lng": 139.6652486,
+      "category": "SAFE",
+      "name": "南浦和保育園",
+      "address": "さいたま市根岸2-19-3",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "根岸2-19-3",
+      "district": "南区",
+      "sourceRow": 484,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/4481999d0b5f0bfd",
+      "sourceRows": [
+        484
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

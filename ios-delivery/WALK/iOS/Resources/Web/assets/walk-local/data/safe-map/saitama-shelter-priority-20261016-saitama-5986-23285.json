@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-shelter-saitama-5986-23285",
+  "lat": 35.918549999999996,
+  "lng": 139.7130995,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "埼玉県オープンデータポータル さいたま市 指定避難所",
+  "sourceUrl": "https://opendata.pref.saitama.lg.jp/resources/4757",
+  "sourceFileUrl": "https://opendata.pref.saitama.lg.jp/resource_download/4757",
+  "sourceUpdatedAt": "2026-04-01",
+  "retrievedAt": "2026-10-16T00:00:00.000Z",
+  "sourceFileSha256": "42d9e75eb4293706a921f7e111077954d3d03d018c3745d1fe0a305417b0c44a",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://www.digital.go.jp/resources/open_data/",
+  "data": [
+    {
+      "id": "municipality/saitama/saitama-shelter/a957403dfd908717",
+      "lat": 35.918468,
+      "lng": 139.7129737,
+      "category": "SAFE",
+      "name": "老人福祉センター槻寿苑（指定避難所）",
+      "address": "埼玉県さいたま市岩槻区笹久保1393",
+      "kind": "SHELTER",
+      "source": "https://opendata.pref.saitama.lg.jp/resources/4757",
+      "sourceLabel": "埼玉県オープンデータポータル さいたま市 指定避難所（開設状況・受入可否は未確認）",
+      "license": "PDL-1.0",
+      "sourceUpdatedAt": "2026-04-01",
+      "sourceRow": 252
+    },
+    {
+      "id": "municipality/saitama/saitama-shelter/d3697fea297d4f30",
+      "lat": 35.9164211,
+      "lng": 139.7157123,
+      "category": "SAFE",
+      "name": "岩槻南部公民館（指定避難所）",
+      "address": "埼玉県さいたま市岩槻区笹久保1348-1",
+      "kind": "SHELTER",
+      "source": "https://opendata.pref.saitama.lg.jp/resources/4757",
+      "sourceLabel": "埼玉県オープンデータポータル さいたま市 指定避難所（開設状況・受入可否は未確認）",
+      "license": "PDL-1.0",
+      "sourceUpdatedAt": "2026-04-01",
+      "sourceRow": 257
+    }
+  ]
+}

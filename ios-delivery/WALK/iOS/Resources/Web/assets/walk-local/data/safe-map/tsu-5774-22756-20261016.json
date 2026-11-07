@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5774-22756",
+  "lat": 34.64564120000001,
+  "lng": 136.53989719999998,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.647029,
+      "lng": 136.540309,
+      "category": "SAFE",
+      "name": "たるみ作業所分場まつぼっくり作業所",
+      "address": "津市香良洲町5722",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "香良洲町5722",
+      "district": "香良洲",
+      "sourceRow": 216,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/94de7004bfdb1041",
+      "sourceRows": [
+        216
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.644064,
+      "lng": 136.539229,
+      "category": "SAFE",
+      "name": "香良洲総合支所",
+      "address": "津市香良洲町1878",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "香良洲町1878",
+      "district": "香良洲",
+      "sourceRow": 218,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/266d02022d3ffdf6",
+      "sourceRows": [
+        218
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.644579,
+      "lng": 136.539438,
+      "category": "SAFE",
+      "name": "久居消防署香良洲分遣所",
+      "address": "津市香良洲町1862-2",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "香良洲町1862-2",
+      "district": "香良洲",
+      "sourceRow": 222,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/4241baadc72c305d",
+      "sourceRows": [
+        222
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.647036,
+      "lng": 136.539865,
+      "category": "SAFE",
+      "name": "香良洲幼稚園",
+      "address": "津市香良洲町5722",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "香良洲町5722",
+      "district": "香良洲",
+      "sourceRow": 223,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/8ca97120e5b4dc5b",
+      "sourceRows": [
+        223
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.645498,
+      "lng": 136.540645,
+      "category": "SAFE",
+      "name": "香良洲放課後児童クラブなかよしキッズ",
+      "address": "津市香良洲町2214-2",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "香良洲町2214-2",
+      "district": "香良洲",
+      "sourceRow": 226,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/a7ca14d1e9c7a543",
+      "sourceRows": [
+        226
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

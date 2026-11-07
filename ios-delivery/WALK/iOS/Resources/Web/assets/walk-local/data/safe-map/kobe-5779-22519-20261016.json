@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5779-22519-20261016",
+  "lat": 34.67556847426734,
+  "lng": 135.1175503141704,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/f20c11d2a9860c4f",
+      "lat": 34.6758938546224,
+      "lng": 135.117177548391,
+      "category": "SAFE",
+      "name": "神戸市立　妙法寺小学校",
+      "address": "神戸市須磨区妙法寺桜ノ界地106-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区妙法寺桜ノ界地106-1",
+      "district": "須磨区",
+      "sourceRow": 70,
+      "sourceRows": [
+        70
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9e4d9ae647e0e7a2",
+      "lat": 34.6763784076024,
+      "lng": 135.119835882357,
+      "category": "SAFE",
+      "name": "株式会社　博甫園",
+      "address": "神戸市須磨区妙法寺字池の谷975",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区妙法寺字池の谷975",
+      "district": "須磨区",
+      "sourceRow": 106,
+      "sourceRows": [
+        106
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/51eba3760f763890",
+      "lat": 34.6745617200751,
+      "lng": 135.115023629238,
+      "category": "SAFE",
+      "name": "神戸市立　妙法寺児童館",
+      "address": "神戸市須磨区妙法寺字毘沙門山1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区妙法寺字毘沙門山1",
+      "district": "須磨区",
+      "sourceRow": 126,
+      "sourceRows": [
+        126
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e655d7de7a2484e7",
+      "lat": 34.6756529590754,
+      "lng": 135.117249995708,
+      "category": "SAFE",
+      "name": "妙法寺地域福祉センター",
+      "address": "神戸市須磨区妙法寺字桜ノ界地1－106",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区妙法寺字桜ノ界地1－106",
+      "district": "須磨区",
+      "sourceRow": 159,
+      "sourceRows": [
+        159
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/768d3de0c3bf8e50",
+      "lat": 34.6753554299614,
+      "lng": 135.118464515158,
+      "category": "SAFE",
+      "name": "妙法寺幼稚園",
+      "address": "神戸市須磨区妙法寺字前田77番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区妙法寺字前田77番地",
+      "district": "須磨区",
+      "sourceRow": 172,
+      "sourceRows": [
+        172
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

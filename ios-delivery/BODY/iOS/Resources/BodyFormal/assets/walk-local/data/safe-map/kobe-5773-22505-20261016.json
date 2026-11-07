@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5773-22505-20261016",
+  "lat": 34.641108024718505,
+  "lng": 135.03096306628498,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/0a5d9d0ba2bd5078",
+      "lat": 34.6437941482863,
+      "lng": 135.03036893672,
+      "category": "SAFE",
+      "name": "神戸市立　舞子小学校",
+      "address": "神戸市垂水区西舞子4丁目7－43",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区西舞子4丁目7－43",
+      "district": "垂水区",
+      "sourceRow": 314,
+      "sourceRows": [
+        314
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/05816073e623846a",
+      "lat": 34.6390638148342,
+      "lng": 135.031211810251,
+      "category": "SAFE",
+      "name": "みなと銀行　舞子支店",
+      "address": "神戸市垂水区舞子台6丁目20-15",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区舞子台6丁目20-15",
+      "district": "垂水区",
+      "sourceRow": 332,
+      "sourceRows": [
+        332
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c22df78e8f990057",
+      "lat": 34.6421237924728,
+      "lng": 135.030740905376,
+      "category": "SAFE",
+      "name": "おおもり歯科医院",
+      "address": "神戸市垂水区西舞子2-13-29",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区西舞子2-13-29",
+      "district": "垂水区",
+      "sourceRow": 466,
+      "sourceRows": [
+        466
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/acd54672fcbdae6c",
+      "lat": 34.6394503432807,
+      "lng": 135.031530612793,
+      "category": "SAFE",
+      "name": "ダイエー舞子店",
+      "address": "神戸市垂水区舞子台6丁目20-17",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区舞子台6丁目20-17",
+      "district": "垂水区",
+      "sourceRow": 473,
+      "sourceRows": [
+        473
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

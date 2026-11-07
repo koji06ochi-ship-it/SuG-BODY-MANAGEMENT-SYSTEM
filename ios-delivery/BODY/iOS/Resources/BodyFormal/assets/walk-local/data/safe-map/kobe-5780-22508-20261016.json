@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5780-22508-20261016",
+  "lat": 34.6806828772767,
+  "lng": 135.048202684623,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/b930cc423b041344",
+      "lat": 34.6806828772767,
+      "lng": 135.048202684623,
+      "category": "SAFE",
+      "name": "兵庫県立　伊川谷北高等学校　体育館",
+      "address": "神戸市西区学園西町6丁目1番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区学園西町6丁目1番",
+      "district": "西区",
+      "sourceRow": 606,
+      "sourceRows": [
+        606
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9cc727378496dfc3",
+      "lat": 34.6806828772767,
+      "lng": 135.048202684623,
+      "category": "SAFE",
+      "name": "兵庫県立　伊川谷北高等学校　普通教室棟",
+      "address": "神戸市西区学園西町6丁目1番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区学園西町6丁目1番",
+      "district": "西区",
+      "sourceRow": 607,
+      "sourceRows": [
+        607
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

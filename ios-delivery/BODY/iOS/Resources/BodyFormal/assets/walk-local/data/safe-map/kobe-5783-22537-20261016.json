@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5783-22537-20261016",
+  "lat": 34.70115561506465,
+  "lng": 135.2227863112235,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/4d847dfdde86569d",
+      "lat": 34.7016337005633,
+      "lng": 135.222393541446,
+      "category": "SAFE",
+      "name": "はっと保育園",
+      "address": "神戸市灘区摩耶海岸通2-3-14",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区摩耶海岸通2-3-14",
+      "district": "灘区",
+      "sourceRow": 1903,
+      "sourceRows": [
+        1903
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f50cb2b95edd2b64",
+      "lat": 34.700677529566,
+      "lng": 135.223179081001,
+      "category": "SAFE",
+      "name": "摩耶シーサイドプレイスイースト管理組合",
+      "address": "神戸市灘区摩耶海岸通1丁目1番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区摩耶海岸通1丁目1番",
+      "district": "灘区",
+      "sourceRow": 1960,
+      "sourceRows": [
+        1960
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

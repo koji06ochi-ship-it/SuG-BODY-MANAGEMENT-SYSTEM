@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5783-22538-20261016",
+  "lat": 34.70269736717023,
+  "lng": 135.23190608636733,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/ae90a98a815fbe4f",
+      "lat": 34.7032948069036,
+      "lng": 135.232064019226,
+      "category": "SAFE",
+      "name": "特別養護老人ホーム　ロングステージKOBE大石",
+      "address": "神戸市灘区大石南町2-4-22",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区大石南町2-4-22",
+      "district": "灘区",
+      "sourceRow": 1926,
+      "sourceRows": [
+        1926
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/dfa1613989b3dce7",
+      "lat": 34.7032335768616,
+      "lng": 135.230784406098,
+      "category": "SAFE",
+      "name": "日笠工業株式会社",
+      "address": "神戸市灘区大石南町3－3－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区大石南町3－3－1",
+      "district": "灘区",
+      "sourceRow": 1932,
+      "sourceRows": [
+        1932
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/101608c1b2b204b1",
+      "lat": 34.7015637177455,
+      "lng": 135.232869833778,
+      "category": "SAFE",
+      "name": "大阪湾広域臨海環境整備センター　兵庫建設事務所",
+      "address": "神戸市灘区灘浜町1-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区灘浜町1-2",
+      "district": "灘区",
+      "sourceRow": 1993,
+      "sourceRows": [
+        1993
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

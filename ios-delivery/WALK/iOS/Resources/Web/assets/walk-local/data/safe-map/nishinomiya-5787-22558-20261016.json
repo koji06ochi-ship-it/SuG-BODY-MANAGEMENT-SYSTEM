@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5787-22558-20261016",
+  "lat": 34.72621547,
+  "lng": 135.35046973333334,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/a7b1459e3006febb",
+      "lat": 34.72672466,
+      "lng": 135.352375,
+      "category": "SAFE",
+      "name": "今津小学校",
+      "address": "兵庫県西宮市今津二葉町４－１０",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市今津二葉町４－１０",
+      "district": "西宮市",
+      "sourceRow": 27,
+      "sourceRows": [
+        27
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/e2b8b923a62b9d10",
+      "lat": 34.72747606,
+      "lng": 135.3513568,
+      "category": "SAFE",
+      "name": "今津中学校",
+      "address": "兵庫県西宮市今津二葉町５－１５",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市今津二葉町５－１５",
+      "district": "西宮市",
+      "sourceRow": 53,
+      "sourceRows": [
+        53
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/da00722bf34902aa",
+      "lat": 34.72565469,
+      "lng": 135.3485549,
+      "category": "SAFE",
+      "name": "今津南保育所",
+      "address": "兵庫県西宮市今津出在家町１０－６",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市今津出在家町１０－６",
+      "district": "西宮市",
+      "sourceRow": 98,
+      "sourceRows": [
+        98
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/0cf08c6574cb2d32",
+      "lat": 34.72745786,
+      "lng": 135.3521316,
+      "category": "SAFE",
+      "name": "今津あいあい館",
+      "address": "兵庫県西宮市今津二葉町４－４９",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市今津二葉町４－４９",
+      "district": "西宮市",
+      "sourceRow": 172,
+      "sourceRows": [
+        172
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/fedf11b8ef17f4ec",
+      "lat": 34.72561281,
+      "lng": 135.3485391,
+      "category": "SAFE",
+      "name": "今津南市民館",
+      "address": "兵庫県西宮市今津出在家町１０－５",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市今津出在家町１０－５",
+      "district": "西宮市",
+      "sourceRow": 244,
+      "sourceRows": [
+        244
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/2421ae74a6fe0e7e",
+      "lat": 34.7257625,
+      "lng": 135.351818,
+      "category": "SAFE",
+      "name": "大関株式会社",
+      "address": "兵庫県西宮市今津出在家町４－９",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市今津出在家町４－９",
+      "district": "西宮市",
+      "sourceRow": 295,
+      "sourceRows": [
+        295
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/96c921068d1a66f2",
+      "lat": 34.72200234,
+      "lng": 135.351329,
+      "category": "SAFE",
+      "name": "今津南デイサービスセンター",
+      "address": "兵庫県西宮市今津巽町７－１０",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市今津巽町７－１０",
+      "district": "西宮市",
+      "sourceRow": 332,
+      "sourceRows": [
+        332
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/cef17243b8b95e28",
+      "lat": 34.72761472,
+      "lng": 135.3484292,
+      "category": "SAFE",
+      "name": "JT女子バレーボール部体育館",
+      "address": "兵庫県西宮市津門住江町１３－２０",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市津門住江町１３－２０",
+      "district": "西宮市",
+      "sourceRow": 334,
+      "sourceRows": [
+        334
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/fb61137fe51c82d7",
+      "lat": 34.72763359,
+      "lng": 135.349694,
+      "category": "SAFE",
+      "name": "日新信用金庫西宮今津支店",
+      "address": "兵庫県西宮市今津出在家町１－６",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市今津出在家町１－６",
+      "district": "西宮市",
+      "sourceRow": 344,
+      "sourceRows": [
+        344
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5794-22552-20261016",
+  "lat": 34.766432856666675,
+  "lng": 135.31487216666667,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/6eff645a7adeb5c4",
+      "lat": 34.76549141,
+      "lng": 135.3125849,
+      "category": "SAFE",
+      "name": "柏堂市民館",
+      "address": "兵庫県西宮市柏堂町１３－１５",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市柏堂町１３－１５",
+      "district": "西宮市",
+      "sourceRow": 247,
+      "sourceRows": [
+        247
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/db0b93be93441484",
+      "lat": 34.76471762,
+      "lng": 135.3174706,
+      "category": "SAFE",
+      "name": "北山緑化植物園",
+      "address": "兵庫県西宮市北山町１－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市北山町１－１",
+      "district": "西宮市",
+      "sourceRow": 274,
+      "sourceRows": [
+        274
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/e189028d4936ae6b",
+      "lat": 34.76908954,
+      "lng": 135.314561,
+      "category": "SAFE",
+      "name": "西宮協立リハビリテーション病院",
+      "address": "兵庫県西宮市鷲林寺南町２－１３",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市鷲林寺南町２－１３",
+      "district": "西宮市",
+      "sourceRow": 386,
+      "sourceRows": [
+        386
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

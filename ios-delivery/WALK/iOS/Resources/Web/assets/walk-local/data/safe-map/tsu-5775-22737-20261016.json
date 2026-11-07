@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5775-22737",
+  "lat": 34.654868,
+  "lng": 136.42430000000002,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.654622,
+      "lng": 136.425596,
+      "category": "SAFE",
+      "name": "たるみ作業所分場コスモス共同作業所",
+      "address": "津市一志町井関141",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "一志町井関141",
+      "district": "一志",
+      "sourceRow": 227,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/798d137de6772ab9",
+      "sourceRows": [
+        227
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.655114,
+      "lng": 136.423004,
+      "category": "SAFE",
+      "name": "白山消防署一志分署",
+      "address": "津市一志町田尻345-1",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "一志町田尻345-1",
+      "district": "一志",
+      "sourceRow": 239,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/253f87fa3c67fbb6",
+      "sourceRows": [
+        239
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

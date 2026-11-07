@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5775-22539-20261016",
+  "lat": 34.65310063339865,
+  "lng": 135.2370205573305,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/f7280ca499102c3c",
+      "lat": 34.6521360452117,
+      "lng": 135.236957366456,
+      "category": "SAFE",
+      "name": "神戸市環境局港島クリーンセンター",
+      "address": "神戸市中央区港島9-12-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島9-12-1",
+      "district": "中央区",
+      "sourceRow": 873,
+      "sourceRows": [
+        873
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a609b6bf93beadb7",
+      "lat": 34.6540652215856,
+      "lng": 135.237083748205,
+      "category": "SAFE",
+      "name": "商船港運株式会社 神戸事業部（神戸フレートセンター）",
+      "address": "神戸市中央区港島9丁目12",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島9丁目12",
+      "district": "中央区",
+      "sourceRow": 904,
+      "sourceRows": [
+        904
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5786-22502-20261016",
+  "lat": 34.71808286267987,
+  "lng": 135.01553770859533,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/9a6f08b0569b655d",
+      "lat": 34.7189874601966,
+      "lng": 135.017379716766,
+      "category": "SAFE",
+      "name": "神戸市営地下鉄　西神中央駅",
+      "address": "神戸市西区糀台5丁目",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区糀台5丁目",
+      "district": "西区",
+      "sourceRow": 485,
+      "sourceRows": [
+        485
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/61a4e5781679878e",
+      "lat": 34.7199489105908,
+      "lng": 135.016650166727,
+      "category": "SAFE",
+      "name": "三井住友銀行　西神中央支店",
+      "address": "神戸市西区糀台5丁目10-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区糀台5丁目10-2",
+      "district": "西区",
+      "sourceRow": 570,
+      "sourceRows": [
+        570
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/89f7ee24778e16f7",
+      "lat": 34.7199489105908,
+      "lng": 135.016650166727,
+      "category": "SAFE",
+      "name": "みなと銀行　西神中央支店",
+      "address": "神戸市西区糀台5丁目10-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区糀台5丁目10-2",
+      "district": "西区",
+      "sourceRow": 583,
+      "sourceRows": [
+        583
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/329b8aeac7c7652a",
+      "lat": 34.7173407179266,
+      "lng": 135.014587516135,
+      "category": "SAFE",
+      "name": "ラ・フォルテ西神中央　管理棟",
+      "address": "神戸市西区竹の台6丁目6番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区竹の台6丁目6番地",
+      "district": "西区",
+      "sourceRow": 637,
+      "sourceRows": [
+        637
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6543086b0a812ba2",
+      "lat": 34.717845046557,
+      "lng": 135.015039396807,
+      "category": "SAFE",
+      "name": "ラ・フォルテ西神中央　1番館",
+      "address": "神戸市西区竹の台6丁目6番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区竹の台6丁目6番地",
+      "district": "西区",
+      "sourceRow": 638,
+      "sourceRows": [
+        638
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/abcc97b4acf340f8",
+      "lat": 34.7168609113183,
+      "lng": 135.015081872207,
+      "category": "SAFE",
+      "name": "ラ・フォルテ西神中央　2番館",
+      "address": "神戸市西区竹の台6丁目6番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区竹の台6丁目6番地",
+      "district": "西区",
+      "sourceRow": 639,
+      "sourceRows": [
+        639
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6daa3a3730caafab",
+      "lat": 34.7167401770202,
+      "lng": 135.01427928427,
+      "category": "SAFE",
+      "name": "ラ・フォルテ西神中央　3番館",
+      "address": "神戸市西区竹の台6丁目6番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区竹の台6丁目6番地",
+      "district": "西区",
+      "sourceRow": 640,
+      "sourceRows": [
+        640
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8bb35ab6b797ea20",
+      "lat": 34.717182912743,
+      "lng": 135.014015713593,
+      "category": "SAFE",
+      "name": "ラ・フォルテ西神中央　4番館",
+      "address": "神戸市西区竹の台6丁目6番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区竹の台6丁目6番地",
+      "district": "西区",
+      "sourceRow": 641,
+      "sourceRows": [
+        641
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a53c007f2b084a36",
+      "lat": 34.7177558599922,
+      "lng": 135.013926526653,
+      "category": "SAFE",
+      "name": "ラ・フォルテ西神中央　5番館",
+      "address": "神戸市西区竹の台6丁目6番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区竹の台6丁目6番地",
+      "district": "西区",
+      "sourceRow": 642,
+      "sourceRows": [
+        642
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/122f26ede3480525",
+      "lat": 34.7177946529385,
+      "lng": 135.014454027583,
+      "category": "SAFE",
+      "name": "ラ・フォルテ西神中央　6番館",
+      "address": "神戸市西区竹の台6丁目6番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区竹の台6丁目6番地",
+      "district": "西区",
+      "sourceRow": 643,
+      "sourceRows": [
+        643
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0f483a5ebcf52e90",
+      "lat": 34.7164662473671,
+      "lng": 135.017411001002,
+      "category": "SAFE",
+      "name": "兵庫県警　神戸西警察署",
+      "address": "神戸市西区糀台5丁目12-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区糀台5丁目12-2",
+      "district": "西区",
+      "sourceRow": 743,
+      "sourceRows": [
+        743
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/abefb17249db08ce",
+      "lat": 34.7188145728522,
+      "lng": 135.014977602736,
+      "category": "SAFE",
+      "name": "神戸市立西神中央駅前西自転車駐車場",
+      "address": "神戸市西区竹の台6-4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区竹の台6-4",
+      "district": "西区",
+      "sourceRow": 787,
+      "sourceRows": [
+        787
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2a5ed15331fb47b5",
+      "lat": 34.719390834745,
+      "lng": 135.017537220533,
+      "category": "SAFE",
+      "name": "エキソアレ西神中央",
+      "address": "神戸市西区糀台5丁目9番地4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区糀台5丁目9番地4",
+      "district": "西区",
+      "sourceRow": 804,
+      "sourceRows": [
+        804
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

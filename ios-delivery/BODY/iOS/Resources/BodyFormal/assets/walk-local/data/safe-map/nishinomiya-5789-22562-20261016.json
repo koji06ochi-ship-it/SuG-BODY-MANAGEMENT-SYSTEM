@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5789-22562-20261016",
+  "lat": 34.737982871999996,
+  "lng": 135.3745895,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/f9d5207bd9e17c85",
+      "lat": 34.73606088,
+      "lng": 135.373278,
+      "category": "SAFE",
+      "name": "甲子園口　ほんわか保育園",
+      "address": "兵庫県西宮市甲子園口３丁目２０－７　ワコーレ甲子園口１０２号",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲子園口３丁目２０－７　ワコーレ甲子園口１０２号",
+      "district": "西宮市",
+      "sourceRow": 133,
+      "sourceRows": [
+        133
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/24b76ca41939ffc8",
+      "lat": 34.73471891,
+      "lng": 135.3733732,
+      "category": "SAFE",
+      "name": "ヒーローズにしのみや保育園",
+      "address": "西宮市甲子園口２丁目24-29　プレサンスロジェ甲子園口１階",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "甲子園口２丁目24-29　プレサンスロジェ甲子園口１階",
+      "district": "西宮市",
+      "sourceRow": 155,
+      "sourceRows": [
+        155
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/233f873bc08c2fd0",
+      "lat": 34.73758789,
+      "lng": 135.3736391,
+      "category": "SAFE",
+      "name": "上甲子園公民館",
+      "address": "兵庫県西宮市甲子園口３丁目９－２６",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲子園口３丁目９－２６",
+      "district": "西宮市",
+      "sourceRow": 200,
+      "sourceRows": [
+        200
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/fdff7fa764604304",
+      "lat": 34.73912599,
+      "lng": 135.3751926,
+      "category": "SAFE",
+      "name": "JR甲子園口駅",
+      "address": "兵庫県西宮市甲子園口２丁目１－３６",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲子園口２丁目１－３６",
+      "district": "西宮市",
+      "sourceRow": 329,
+      "sourceRows": [
+        329
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/112e5afd51ec9afd",
+      "lat": 34.73422043,
+      "lng": 135.3778901,
+      "category": "SAFE",
+      "name": "武庫川学院上甲子園キャンパス",
+      "address": "兵庫県西宮市戸崎町１－１３",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市戸崎町１－１３",
+      "district": "西宮市",
+      "sourceRow": 346,
+      "sourceRows": [
+        346
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/18b9f03a4b7194c1",
+      "lat": 34.7394615,
+      "lng": 135.3743436,
+      "category": "SAFE",
+      "name": "生活協同組合コープこうべ　コープ甲子園口",
+      "address": "兵庫県西宮市二見町３－２７",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市二見町３－２７",
+      "district": "西宮市",
+      "sourceRow": 601,
+      "sourceRows": [
+        601
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/a4eeb140c3bb0b53",
+      "lat": 34.73981034,
+      "lng": 135.3745302,
+      "category": "SAFE",
+      "name": "尼崎信用金庫甲子園口支店",
+      "address": "兵庫県西宮市二見町４－１５",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市二見町４－１５",
+      "district": "西宮市",
+      "sourceRow": 605,
+      "sourceRows": [
+        605
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/fa997f882d2ea2ec",
+      "lat": 34.73983985,
+      "lng": 135.3748114,
+      "category": "SAFE",
+      "name": "おかもとクリニック",
+      "address": "兵庫県西宮市甲子園口北町１－６",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲子園口北町１－６",
+      "district": "西宮市",
+      "sourceRow": 617,
+      "sourceRows": [
+        617
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/998af29b1022a011",
+      "lat": 34.73933121,
+      "lng": 135.3733314,
+      "category": "SAFE",
+      "name": "にしおか整骨院",
+      "address": "兵庫県西宮市二見町２－１８",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市二見町２－１８",
+      "district": "西宮市",
+      "sourceRow": 624,
+      "sourceRows": [
+        624
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/605694d4e5814049",
+      "lat": 34.73967172,
+      "lng": 135.3755054,
+      "category": "SAFE",
+      "name": "キコーナ甲子園口店",
+      "address": "兵庫県西宮市甲子園口北町２－３",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲子園口北町２－３",
+      "district": "西宮市",
+      "sourceRow": 656,
+      "sourceRows": [
+        656
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

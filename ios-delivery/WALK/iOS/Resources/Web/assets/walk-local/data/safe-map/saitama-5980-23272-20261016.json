@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5980-23272",
+  "lat": 35.884035488,
+  "lng": 139.63601902,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.883493,
+      "lng": 139.637417,
+      "category": "SAFE",
+      "name": "与野駅西口臨時自転車駐車場",
+      "address": "さいたま市下落合1055",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "下落合1055",
+      "district": "中央区",
+      "sourceRow": 280,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/7b4daf2a087a39a8",
+      "sourceRows": [
+        280
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.8836078,
+      "lng": 139.6373787,
+      "category": "SAFE",
+      "name": "与野駅西口臨時自転車駐車場",
+      "address": "さいたま市下落合1055",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "下落合1055",
+      "district": "中央区",
+      "sourceRow": 281,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/e17aaa9f9798bb29",
+      "sourceRows": [
+        281
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.88470452,
+      "lng": 139.6365664,
+      "category": "SAFE",
+      "name": "下落合コミュニティセンター",
+      "address": "さいたま市下落合1712",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "下落合1712",
+      "district": "中央区",
+      "sourceRow": 282,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/42e8a69056111aa7",
+      "sourceRows": [
+        282,
+        283
+      ],
+      "duplicateSourceEntries": 2
+    },
+    {
+      "lat": 35.8836676,
+      "lng": 139.6321666,
+      "category": "SAFE",
+      "name": "組合区画整理事業推進事務所",
+      "address": "さいたま市下落合2-18-6",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "下落合2-18-6",
+      "district": "中央区",
+      "sourceRow": 284,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/8b66b35a6541de3b",
+      "sourceRows": [
+        284
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

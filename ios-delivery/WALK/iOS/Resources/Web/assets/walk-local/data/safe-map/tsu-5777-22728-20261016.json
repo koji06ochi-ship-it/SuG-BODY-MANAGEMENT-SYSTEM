@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5777-22728",
+  "lat": 34.6650995,
+  "lng": 136.371845,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.666108,
+      "lng": 136.370713,
+      "category": "SAFE",
+      "name": "大三公民館",
+      "address": "津市白山町二本木1001-253",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "白山町二本木1001-253",
+      "district": "白山",
+      "sourceRow": 255,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/e40e5fb4d40f9243",
+      "sourceRows": [
+        255
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.664091,
+      "lng": 136.372977,
+      "category": "SAFE",
+      "name": "大三小学校",
+      "address": "津市白山町二本木296",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "白山町二本木296",
+      "district": "白山",
+      "sourceRow": 264,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/ecba8a7893ee0331",
+      "sourceRows": [
+        264
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

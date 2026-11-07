@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5772-22506-20261016",
+  "lat": 34.636059827041976,
+  "lng": 135.03928448191778,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/4a726682e9eac581",
+      "lat": 34.6365738247888,
+      "lng": 135.040916507467,
+      "category": "SAFE",
+      "name": "神戸市立　歌敷山中学校",
+      "address": "神戸市垂水区歌敷山2-4-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区歌敷山2-4-1",
+      "district": "垂水区",
+      "sourceRow": 275,
+      "sourceRows": [
+        275
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3b069d95f6d9d080",
+      "lat": 34.6354480560386,
+      "lng": 135.040600162184,
+      "category": "SAFE",
+      "name": "歌敷山保育園",
+      "address": "神戸市垂水区歌敷山2丁目5－9",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区歌敷山2丁目5－9",
+      "district": "垂水区",
+      "sourceRow": 339,
+      "sourceRows": [
+        339
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d1d5a259a35a515d",
+      "lat": 34.6364884959498,
+      "lng": 135.036079494237,
+      "category": "SAFE",
+      "name": "苔谷公園コミュニティセンター",
+      "address": "神戸市垂水区舞子台4丁目1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区舞子台4丁目1-1",
+      "district": "垂水区",
+      "sourceRow": 417,
+      "sourceRows": [
+        417
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d3dc8b541b22371d",
+      "lat": 34.6357289313907,
+      "lng": 135.039541763783,
+      "category": "SAFE",
+      "name": "コーポ歌敷山",
+      "address": "神戸市垂水区歌敷山4丁目9-38",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区歌敷山4丁目9-38",
+      "district": "垂水区",
+      "sourceRow": 448,
+      "sourceRows": [
+        448
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

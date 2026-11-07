@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5784-22560-20261016",
+  "lat": 34.70697527666667,
+  "lng": 135.36444106666667,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/38518070c5e86ea7",
+      "lat": 34.70505599,
+      "lng": 135.3648937,
+      "category": "SAFE",
+      "name": "高須西小学校",
+      "address": "兵庫県西宮市高須町２丁目１－４４",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市高須町２丁目１－４４",
+      "district": "西宮市",
+      "sourceRow": 33,
+      "sourceRows": [
+        33
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/29f336bfdeeabd6d",
+      "lat": 34.70555386,
+      "lng": 135.3654546,
+      "category": "SAFE",
+      "name": "高須西保育所",
+      "address": "兵庫県西宮市高須町２丁目１－４６",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市高須町２丁目１－４６",
+      "district": "西宮市",
+      "sourceRow": 83,
+      "sourceRows": [
+        83
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/9aa3e6489bfec938",
+      "lat": 34.70830506,
+      "lng": 135.3644404,
+      "category": "SAFE",
+      "name": "キッズルームアリス甲子園",
+      "address": "兵庫県西宮市枝川町８－６８",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市枝川町８－６８",
+      "district": "西宮市",
+      "sourceRow": 127,
+      "sourceRows": [
+        127
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/6a7a758a33807b2c",
+      "lat": 34.70855919,
+      "lng": 135.3621282,
+      "category": "SAFE",
+      "name": "浜甲子園体育館",
+      "address": "兵庫県西宮市枝川町２０－１５",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市枝川町２０－１５",
+      "district": "西宮市",
+      "sourceRow": 188,
+      "sourceRows": [
+        188
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/6715727c1cde96bc",
+      "lat": 34.7082918,
+      "lng": 135.3644292,
+      "category": "SAFE",
+      "name": "アリス甲子園",
+      "address": "兵庫県西宮市枝川町８－６８",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市枝川町８－６８",
+      "district": "西宮市",
+      "sourceRow": 498,
+      "sourceRows": [
+        498
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/ced5d423411911cb",
+      "lat": 34.70608576,
+      "lng": 135.3653003,
+      "category": "SAFE",
+      "name": "武庫川団地26号棟",
+      "address": "兵庫県西宮市高須町２丁目１－２６",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市高須町２丁目１－２６",
+      "district": "西宮市",
+      "sourceRow": 509,
+      "sourceRows": [
+        509
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5776-22511-20261016",
+  "lat": 34.6612118174049,
+  "lng": 135.070809229938,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/626c9aa4b052f284",
+      "lat": 34.6612118174049,
+      "lng": 135.070809229938,
+      "category": "SAFE",
+      "name": "名谷学童保育コーナー",
+      "address": "神戸市垂水区名谷町字大谷1896",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区名谷町字大谷1896",
+      "district": "垂水区",
+      "sourceRow": 352,
+      "sourceRows": [
+        352
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9835b5b267c8568f",
+      "lat": 34.6612118174049,
+      "lng": 135.070809229938,
+      "category": "SAFE",
+      "name": "特別養護老人ホーム　メープルホーム",
+      "address": "神戸市垂水区名谷町大谷1905-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区名谷町大谷1905-1",
+      "district": "垂水区",
+      "sourceRow": 438,
+      "sourceRows": [
+        438
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,1597 @@
+{
+  "schemaVersion": 1,
+  "dataset": "奈良市 都市公園（公表座標・精度保証なし）",
+  "retrievedAt": "2026-10-15T15:58:16.669Z",
+  "sourceRows": 691,
+  "uniquePoints": 691,
+  "rejectedRows": 0,
+  "duplicateRows": 0,
+  "features": 691,
+  "regions": 313,
+  "sourceUrl": "https://www.city.nara.lg.jp/soshiki/115/50044.html",
+  "sourceFileUrl": "https://www.city.nara.lg.jp/uploaded/attachment/200222.csv",
+  "sourceUpdatedAt": "2025-04-01",
+  "license": "CC-BY-2.1-JP",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.1/jp/",
+  "sourceFile": {
+    "path": "sources/nara-parks-20261016.csv",
+    "bytes": 182512,
+    "sha256": "d1b1be81bbdbaab587735acc5d5244377d1cdfe2f3bcec59af61dc6eb3a6f94f"
+  },
+  "index": {
+    "path": "catalog-additions-20261016-4.json",
+    "sha256": "e56672c0d93c53fc36d9538823b587a97d35a1fc96882515f02004e51a189073"
+  },
+  "notes": [
+    "住所列がないため住所は空欄。",
+    "奈良市は公園図面と位置に誤差があり精度保証なしと明記。",
+    "全索引・施設データは部分情報であり、施設の不存在を示さない。"
+  ],
+  "shards": [
+    {
+      "path": "nara-park-8675-33943-20261016.json",
+      "sha256": "b2f29e6578ad3fdc79f40c9a50748954ae2bf141071a2c37fdc1c46926851cdd",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8673-33942-20261016.json",
+      "sha256": "d94885d119af190254c275805b8c02995c63969a9dd1e117807cca2890364fe4",
+      "featureCount": 4
+    },
+    {
+      "path": "nara-park-8671-33954-20261016.json",
+      "sha256": "51508674b21a8e2145c0e7a0e55cafc9299a3d3c2ef5e4381e74c924a65e8200",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8679-33952-20261016.json",
+      "sha256": "e9dd2c14314006e0f8435e8dd0383caae2da70620e85d2d5eba8958ffadaf710",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8677-33957-20261016.json",
+      "sha256": "12b6f1f37f327142993d215706c7190b806fcaa06f7c1bdceb9fadf05ca541df",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8680-33944-20261016.json",
+      "sha256": "81a4c02d14ffaf799fde40b0d75fd9ef9cadf083abab8e36f7727a4678db22c9",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8680-33945-20261016.json",
+      "sha256": "84cb83d2900d717ee8d6d341ed10b7fa9039c917a14c88ca68bc5dcee907af8b",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8676-33960-20261016.json",
+      "sha256": "0283938def4218add22432442c1a77a5cb59c47f5f3108f874b41218ccd2a35a",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8672-33951-20261016.json",
+      "sha256": "3b091335d332858710d85ec03314ae71d8b0d6cd6b48d56594e586318938d041",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8673-33951-20261016.json",
+      "sha256": "59e6c78bb0b080a5744939884e51f397187cb487c32094c009029e0efb8eee70",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8673-33949-20261016.json",
+      "sha256": "f07782e56b342bc30e99d9e5172e13ce5e37f8288359714f3de8e437b01c5136",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8676-33948-20261016.json",
+      "sha256": "4673d341fc56e24491da5052123963adc5deca35fa180adbb45a7f44894fa0c3",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8674-33947-20261016.json",
+      "sha256": "a414ed72b29510f9769f777fb60fa9b96f25d5435c086e8d3914f315f0629022",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8678-33946-20261016.json",
+      "sha256": "7a5bab777c6f3d7b1a6849984b4c3472daac87889c2870eaa2e713bf13dc47ef",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8677-33942-20261016.json",
+      "sha256": "5cf42b2e64bca95eb2daf27f6f5d36623d24d3d9c8c44088f2b9f4521595e832",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8674-33944-20261016.json",
+      "sha256": "181c77d439f5dac55360b5af6e627ba0fbe584625d321e761bb7c58415429fbb",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8672-33943-20261016.json",
+      "sha256": "9163e2e24e6b4b1006676b716bdf5a705a4ecd1933976cccb756faf2a4e5c87c",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8678-33974-20261016.json",
+      "sha256": "b59c5dab090cd6c6c23cbdaada840e8ad2d652ce8e8e0182c62db54e9615106a",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8680-33984-20261016.json",
+      "sha256": "b2932f7cbc62af89c50c067085d01420935929a2def7ebb606f541d7cf81060b",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8674-33973-20261016.json",
+      "sha256": "bd5355eeac88993d0f4c07b1ce5f6ff106789fc76dafd8d94aa5f93683983fff",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8675-33958-20261016.json",
+      "sha256": "5ecea63bfe8b57f68e4fb4c2b9d415f335f827243e2503b1b3008b3f3b57a097",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8672-33954-20261016.json",
+      "sha256": "873326cf45bdd4b693afc5ea5a7e138f2097add790c3986794a093537868dd37",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8678-33944-20261016.json",
+      "sha256": "dd9244168248de22589fa3ad158476f7c84c3df027141d63906b451934005844",
+      "featureCount": 4
+    },
+    {
+      "path": "nara-park-8674-33959-20261016.json",
+      "sha256": "a54e2e43874a74da1b6c414c7de99807730349eb6984d8ecada184f89c8024e4",
+      "featureCount": 4
+    },
+    {
+      "path": "nara-park-8676-33952-20261016.json",
+      "sha256": "d728e65b0b7143380f1b09f3a635f13df6ca81f4f8f19448b06719d62b888ae3",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8674-33957-20261016.json",
+      "sha256": "776303f220fbe2ce3b939e3a9727360197be98c388fc00746195500e5f18a3cb",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8671-33944-20261016.json",
+      "sha256": "8d6afb54f695546198183255c1e0784ce2b2dff179cdb07e981ae112586656fa",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8677-33946-20261016.json",
+      "sha256": "cedcad9429510b275253f337f9995b1ed57ebc7760c0ac52322f9e92759dbc3f",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8677-33951-20261016.json",
+      "sha256": "2f75a18751212325ac061cebf424f2bd23887f6f7af4fa2fa84453743556eafd",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8678-33952-20261016.json",
+      "sha256": "7950499857a96664352bf90e6174ee10de084f2162141375591019460104b4a7",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8678-33943-20261016.json",
+      "sha256": "8b6ae839712b87d6d36ab34a3a6233bf2644f4a6c2f7d1b4c638e81d54b0e94b",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8674-33945-20261016.json",
+      "sha256": "d75f2bca3b59ff2b3d1b171e59b4ea06ff2c81793a1f085718a5b57e32e09722",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8675-33954-20261016.json",
+      "sha256": "a29d4c3294d36651b78644bfb0c28239a02bf3f17488fca559e2a478b718414f",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8673-33945-20261016.json",
+      "sha256": "6e77358c7b83e9c81956c1f461c740a5f616e302c09c47a6caf41fe7796c4cd1",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8672-33955-20261016.json",
+      "sha256": "38a8edc4778481d25b2b1314a3fbf385b23af28dfc9ddcac9c79671f175ba285",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8676-33943-20261016.json",
+      "sha256": "ecd440f8af26d9b60b107d911ee709a6c1566d48f522132274efa29d1502f13c",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8672-33953-20261016.json",
+      "sha256": "ce5b1232b0ab93c7cfc7f472d3393a489756c1ca0c5a5cc4d43c08239638c658",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8673-33953-20261016.json",
+      "sha256": "5baa07e0fe90de8e162fc398d36a79f5907df83b13ffaa1c197e4d72a0162976",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8675-33956-20261016.json",
+      "sha256": "256cd756128faf085f4f82bfb2242920cec9229647b5a10a1f464997c114e4b1",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8671-33955-20261016.json",
+      "sha256": "a51db4ec084c3b01bccd5d97888735e64e4a4309cefdae3f4cd639ae036066ba",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8680-33949-20261016.json",
+      "sha256": "107456947677ca48a5da5f1e71022575bfb3d1f73489af733742d9d2388f6009",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8681-33943-20261016.json",
+      "sha256": "137a772eeb552d36c28a1c4f106b50c1526504c9e206a2cdfd195c2bcf4154e8",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8671-33943-20261016.json",
+      "sha256": "d0d4556f6f6b129225c669a5b5790a0047e106178cb3208a843220db98e8ff50",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8676-33942-20261016.json",
+      "sha256": "47124acefdd5452da2e9907f51efdf3f6164edfee6d1d72c30c84a0dd838867e",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8675-33957-20261016.json",
+      "sha256": "d7ff8aa7c3a7aa087a241db4884b90d8ac925a42aed3baea5680deccacdc1830",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8672-33958-20261016.json",
+      "sha256": "f0f7bc3dfaaa1c8ce53de56ebf72a6a131b8cec11b0327f7c40f1f11ffa67f07",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8676-33959-20261016.json",
+      "sha256": "a7cfde597c46ca09a895b22ca47d8daa79a1e6ebc8b326c0522b08c45484a25f",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8678-33950-20261016.json",
+      "sha256": "fca200b2442ee0bd0fe0459413ba887c187fc30d747500967459d6bef50b4419",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8677-33958-20261016.json",
+      "sha256": "a19aee3034173028d00bcf542adce59e14443fc380ea167f3bccfef3810c2cf2",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8678-33949-20261016.json",
+      "sha256": "a5a0fa268b994229ff92d9443ac84684fe0cd710c384a7f59f8e6d3fa6f0d824",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8680-33950-20261016.json",
+      "sha256": "ca06c9a6c492db609a5560031435f5878e518a5e8fc898afc1f100597cef8971",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8677-33945-20261016.json",
+      "sha256": "41c48d5aac118e5bba72d8d809e4f82c0ca1e5119444dce121656146e6a3bdbd",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8679-33951-20261016.json",
+      "sha256": "4fa85fd18a1249f6bf51c0c30d7295b7dc823266252231b97781a5260cdb1fe4",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8678-33951-20261016.json",
+      "sha256": "76263ab9646170ad46d3b0725e970b53e26e65c18f8105c777fd9630f682ffca",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8679-33944-20261016.json",
+      "sha256": "57a5d5d3ef0c52fdc59557a6d1b7b24096acdd6f1d7f6fc2c4eec25611b85bc4",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8676-33954-20261016.json",
+      "sha256": "650016a9e4396e0356706100ec35047c95005025a641e1faff417e84b49e9f11",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8677-33954-20261016.json",
+      "sha256": "e6a7399b1d49f1c761c2f6ca51293d51c0b7df47920b5785728f6c0d516d0071",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8677-33953-20261016.json",
+      "sha256": "73c9064b9cc78fe880da7f692e90a41711ed4885eec20b0f20af27b29f38696e",
+      "featureCount": 4
+    },
+    {
+      "path": "nara-park-8677-33952-20261016.json",
+      "sha256": "801d56e08b456f01362a889c63f1635583a3a99e50f7baeeabc06657397c7400",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8676-33953-20261016.json",
+      "sha256": "bccfaf5a26c05312ca2035ce754d83e384fc6ee90119892bfb7fe2c6ff9fb0c2",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8671-33942-20261016.json",
+      "sha256": "c417e5c7c696e5e24175cf6be93f499981f1a98e55563e487b7810884f0c3f2b",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8677-33950-20261016.json",
+      "sha256": "c6c5dc17d745b1c31018bfe8411c088ae5990166a51e9e74fd317bfee0e9ce4b",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8673-33943-20261016.json",
+      "sha256": "6236dfec25870443e9a3d5989e7785eb8d0beb3d0bcdc25b98ca7dda33ec5677",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8673-33957-20261016.json",
+      "sha256": "6bcd5629be157899d7b01ecb5b2991c488c157f006e09104d029b67943b8d24b",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8675-33945-20261016.json",
+      "sha256": "73ba3cbd89fb316ae0202077f115d9d27e1efdd0d6700a23d0fec1b6b37e7cd4",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8672-33945-20261016.json",
+      "sha256": "a3304fd4a96a5cd40202d4f77fd3ea7368dc3fd049d6f3e31f54e55d91e63d3e",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8674-33943-20261016.json",
+      "sha256": "31356b1901855eb9bdb4f51f640d2bcd140fca5006175caf0cc414a6d5372e5a",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8677-33959-20261016.json",
+      "sha256": "bcfe36f0485abc8df39fd8288c4bad4f38c371da4a62aa84402ee59c431708e1",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8676-33961-20261016.json",
+      "sha256": "b43967b1519fe2798f6142fae2bf7845265c9cadbc445d63a2ca9983dbe20ede",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8676-33958-20261016.json",
+      "sha256": "140ac52bd9ecf282ee4639d830e7f63282153cdba124a22775501070316140b3",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8680-33943-20261016.json",
+      "sha256": "aedf9e6168d15e10b026ed2ab63acd5d200aa5b108e352cc4971adc2fb043254",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8671-33957-20261016.json",
+      "sha256": "51838425e2462a10c7dca71bd960d17dcdf1ef4e36f17ee2fed7e3ec0a077569",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8679-33945-20261016.json",
+      "sha256": "4fc041f554993cd85e1257c7e0410636fc977c8bc03e63660cf44ffb9bc2a7ab",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8679-33949-20261016.json",
+      "sha256": "4e21d43adf4f936b8272fc59e8bda22cec2dd9f679452f48f00b8233107c4956",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8678-33948-20261016.json",
+      "sha256": "e11f4001731d2bcf151c378203c158140f23374e882018e0b9e17e41477ce6ab",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8671-33952-20261016.json",
+      "sha256": "b81a9059de923fb6b515d278db39cee6bea52bdd90955094d5cb25104430da3c",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8679-33948-20261016.json",
+      "sha256": "e0b08f45287dad648c4a72f3becf92f0c54b9df213c2fdb8df8565b2fcc8442c",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8672-33952-20261016.json",
+      "sha256": "0511e7faeab43a3227d13a6bed8d0f94b5e99b0ed00a6f582d28dd056042f484",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8671-33951-20261016.json",
+      "sha256": "96b921f74324e2571c307e4703b9ce9dbb273c6209c03fce957cd243977122ca",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8671-33953-20261016.json",
+      "sha256": "ec52202f2cb3b5c4ebf51d9dc3851c8323f7542f8dc9bbc4e1a1abe7eac927a5",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8672-33946-20261016.json",
+      "sha256": "58ece20268eb09746f18ef2b14e7651bb7101d0b7fdfad2f4687c6b5b096a6b0",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8679-33947-20261016.json",
+      "sha256": "950c00614efee87665387bb1c22d5b3c9ac068695ffd5104c585d09c039ce60f",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8679-33946-20261016.json",
+      "sha256": "2818f596cc146afbc6e0460fff532939fb9bb9d368826601f83f0dbdb836bf04",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8669-33955-20261016.json",
+      "sha256": "37279effda2f184291bbb7104609693d2746f7bc0d19b8a005fdc306dfb04138",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8665-33955-20261016.json",
+      "sha256": "3a104be638d51e28a7e53ee5b8f4782674a2659d78ac3f3d43dc66e959d45246",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8669-33953-20261016.json",
+      "sha256": "13311912d0fe5e32af8d8a810fb52edce4f378d8f2d3fc3a7609b8909bd806df",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8666-33958-20261016.json",
+      "sha256": "fb48cdb44f093f4fb855f9caad6944378c94e17c41508df806735eac061c6b06",
+      "featureCount": 6
+    },
+    {
+      "path": "nara-park-8667-33958-20261016.json",
+      "sha256": "78b7045f049a45e6aec3ba7a851346aa7921a783f6056e178fd34c9a75db0936",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8668-33946-20261016.json",
+      "sha256": "a0997acdee509a5bee215cbaf87d0d77724c849ba578f483a8d500f7d63207eb",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8668-33949-20261016.json",
+      "sha256": "b1cbd9825c39c6e361f7b36695695fde2eb3b4b3831e4fb9fd7d45833fc28510",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8667-33954-20261016.json",
+      "sha256": "aa0278c1e3d73d6f9c099628ac2a6ed8940660a88923f98975c70d018d5edd7c",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8664-33956-20261016.json",
+      "sha256": "11e35d0aa2bfafb8732aa86f77ceaef0d0ffb77d63303f1960d5300f9b2f1d36",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8662-33954-20261016.json",
+      "sha256": "a3ecb52b5458fcb3879fd8769b22953f330ed88840f12473749ac58e492ea2b9",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8662-33956-20261016.json",
+      "sha256": "25fec5bc982ed88fd0cac47913e233a5241f8492cf41793e002894de26ba9abf",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8660-33956-20261016.json",
+      "sha256": "4b5a43a9cdd0778a9cc091f11a5c5d711384257be5c8a78002565e4527360d84",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8660-33955-20261016.json",
+      "sha256": "b0ed54d9f532711883ce118959a472b36847ddd4902f7e83b5d4ea8c03b26554",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8661-33955-20261016.json",
+      "sha256": "942c823a59d1f5d8a4de0e9061fe9e33ddf0fb99a423d49826d6303f4dbed2ca",
+      "featureCount": 4
+    },
+    {
+      "path": "nara-park-8660-33960-20261016.json",
+      "sha256": "6f77758471f08dcf0f2a035d8c527a198311e03e5917eeb86662b6d846e36f19",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8669-33959-20261016.json",
+      "sha256": "3a20798fd1b640e78f2f867b5c1cc15716f3b66747f4edb2eb6931478c95cc75",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8669-33961-20261016.json",
+      "sha256": "0167cabe12ec13e313356969020606fc724304526af1737da698b13c94bb5c24",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8665-33962-20261016.json",
+      "sha256": "8ce151fddfb7d5b2840b487ffcc99e573f796872f9204425650a64194c900147",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8664-33959-20261016.json",
+      "sha256": "b4895e9de8f13a80bd51926d9dfbcdcdcd5c5df7108a10e158527c16f8c0eea3",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8664-33960-20261016.json",
+      "sha256": "0bdf7cd0b60d5a37341e215f06879647ffe0208638fb7319866fdd9dbf198ab0",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8670-33954-20261016.json",
+      "sha256": "991bce7e8859148be250844ab177e65f9df4bf4348add160ab465682237653fc",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8657-33966-20261016.json",
+      "sha256": "99af7c746479ae74c75f91795a41d044b7445a32609895c2b26b010f2d9947dd",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8656-33972-20261016.json",
+      "sha256": "ddc1fbbd078e5b9a16a43260af5b6ab80cc649659c991555ae1e861741369727",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8660-33957-20261016.json",
+      "sha256": "fbb3fd0ba6c7bb86eeeb71aa605dc743910729ebd776c0083ac0a8d4aa47d155",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8667-33961-20261016.json",
+      "sha256": "310e2345358df0c44565f341c31460289be65527c5ed1878d68d5dd0dca9936a",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8666-33957-20261016.json",
+      "sha256": "ccd861f993480efa189aad6d8194fd74007535bde34b810f7ca06f0fc52fe942",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8667-33948-20261016.json",
+      "sha256": "968b814359821197f40a6aec6e31545984807795c6b399e264872e2ddb9b7637",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8661-33960-20261016.json",
+      "sha256": "7a7438be8abefc6e1240120bae94ed92be061f35cae1a6cbd2af23bcb580fb4c",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8664-33951-20261016.json",
+      "sha256": "d9e32f9a6f38d72c7f03384f823ecf15be6bb0d06673175df1c5b4e4e88872a4",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8663-33954-20261016.json",
+      "sha256": "846c2d3069d00ad690c191ace4d3c255b3ddaa27b095c155c911edd312a21a12",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8659-33958-20261016.json",
+      "sha256": "a83c12bff6c81593f4bfd9e6eae3b12fcae8d4fc07c5973357a6b455c33903a9",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8669-33943-20261016.json",
+      "sha256": "caf4896f5e5ef93f8dad5bcdd559cdd96dbd780d8b8e1a6724dd4e4ee84d9c65",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8670-33956-20261016.json",
+      "sha256": "3f0d41dd6fc8bf4673c63ce0c7e3fa3582c411322211c142e48c525fe1ad7d64",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8667-33957-20261016.json",
+      "sha256": "1a7e02e5b9684f439a8eaaacc676c7d71d9e9df113313a22ed51c2aefd36cde4",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8667-33952-20261016.json",
+      "sha256": "8ec083e6d1fca4de36cac4bb1354e797f292cea80cc919eec103a13a2547048b",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8666-33956-20261016.json",
+      "sha256": "db9bb3af0b62207547ecbb4d2b64836b560a504baee906aab65b283e3751ccbc",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8667-33949-20261016.json",
+      "sha256": "6eabbe8a9d7d88ffdc2de2a0a17ea59c68f1754e00cf8f9fad94d5317944dd0d",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8667-33956-20261016.json",
+      "sha256": "863076f67bb87c57923af48eaf3e550bfa269ddc314ae89d2d743d0fdf021e8f",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8666-33959-20261016.json",
+      "sha256": "102c42b093fa1ef23e0b324cdcf46744b006ac45c5f5536a4e66e4388202014d",
+      "featureCount": 5
+    },
+    {
+      "path": "nara-park-8665-33956-20261016.json",
+      "sha256": "6fef779d0c6db42ca51c7f67f90026136522a6b81a5e86ae984cb5f6f14dffb9",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8663-33960-20261016.json",
+      "sha256": "dd3c3f8b57b41619ebe91fe30fc74d5c349279c4d41179d23b1cf98461339c2a",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8662-33957-20261016.json",
+      "sha256": "b60dc4a6b014279e0902b396bdc1e64c68348aab33b464dd100e3f9e95b70032",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8663-33958-20261016.json",
+      "sha256": "a20b68b6758d027b2c199686deddf0c1356eade93ef3d7e931175a842cb45abe",
+      "featureCount": 7
+    },
+    {
+      "path": "nara-park-8665-33958-20261016.json",
+      "sha256": "c7fdb692346eca932dd0716943b70bd28444c4eff76b7005ce47ab548014e15c",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8665-33959-20261016.json",
+      "sha256": "c3fb74a0a8575ba298f2dab3a3ec6e240447f192a1d16852faf8ac91630a44b6",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8666-33949-20261016.json",
+      "sha256": "ca7014369a2b66db1123f6f245c5fa7d8b92b64c5cf3a19897f77d64621e6b12",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8669-33950-20261016.json",
+      "sha256": "62f2f3e94c44085f19661786d8d91719013ba12d84a51233828ea0bf21c25600",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8667-33959-20261016.json",
+      "sha256": "164847da026c9d374ae595f2f6c397b609b19586a56cbf011de6ded30bcf80bf",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8669-33954-20261016.json",
+      "sha256": "0106f8b84110249ab013ff773858bdce8dda84359fd726f91288ecc32829b3f7",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8667-33942-20261016.json",
+      "sha256": "a7077105b79a12defce80ae40aafd58424db7b9997fec6a47d887e224f36630b",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8665-33957-20261016.json",
+      "sha256": "10af41d2e27c48958735b0fc3bacaf209c75f9f3652481653929b18c4f265424",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8665-33943-20261016.json",
+      "sha256": "40ee9029c7623c7a39203264a3208a9794ff57ce5ef4b4bb03a1c5e1336cb01e",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8666-33942-20261016.json",
+      "sha256": "f6665b6ddf01a6553d28628131c95860045ba01c9de3734daa8400da497f6096",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8670-33949-20261016.json",
+      "sha256": "ec5b4a083d8d5d05b4c0e0ebcd7ed64a098f7cd316bc8938504046ae944b5e4a",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8669-33952-20261016.json",
+      "sha256": "d864ffc83fdacf1e45d41643ce64d68927f5d3bf65efdb6060da890f373bb78e",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8663-33957-20261016.json",
+      "sha256": "3ec19075a2797e92c9781df85e7a7c1a87d1f78a194f7562e75e28b4812de82f",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8664-33950-20261016.json",
+      "sha256": "8abfe6d77da074e2ac2b1db1178b6c95a2747b4ed686ab84f72725e9d5dcda15",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8665-33950-20261016.json",
+      "sha256": "132b615648c4b86af1fe721eefbdf7cedfe4150191af9ddf252a3f1611bafafc",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8665-33949-20261016.json",
+      "sha256": "da029bdad85d95709de5f05495582877443012ebfd14051d01a9236a95f65ccb",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8667-33946-20261016.json",
+      "sha256": "d5d07e744375d298264ec782436c0f20739f380c5181ef67323e90df83505446",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8670-33955-20261016.json",
+      "sha256": "81826296931be56a000b6a0d7ed5b5e0cdb963166c96c12b81a9127d615a7854",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8666-33946-20261016.json",
+      "sha256": "6e92ab5ff013b8175e1b196f51ebaf260901320d75c226daeb9f8d8a02b48fef",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8667-33951-20261016.json",
+      "sha256": "f8e5c67886fc307e01e48fd827635cb0ea87f6abbdd441afdefa6c7740bbc6be",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8668-33943-20261016.json",
+      "sha256": "abeb21c8396a58e229cd7e090f1678cf7adbabff18e8cefd0784840a8f4a95d0",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8668-33942-20261016.json",
+      "sha256": "7babbece37a2d96405b173a861cdd2987aeb5902718572367811d38f9f11cf10",
+      "featureCount": 4
+    },
+    {
+      "path": "nara-park-8670-33950-20261016.json",
+      "sha256": "8b4edc56c1b36f3250f634d0f45cc98d1ad23b968e655b0aa842b9600cb5b87d",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8669-33948-20261016.json",
+      "sha256": "1bc09a376f795e09680dd6524931e5edc514712702861f326723b32316df6c78",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8667-33943-20261016.json",
+      "sha256": "619ac9baf64eb59a3974fe0d8da39db03c0a6302a1383175bf1ad76e2bdc8935",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8669-33956-20261016.json",
+      "sha256": "2f7255fa6c0c018429c73aecd7eea097d7c22a0b80afc1afd1efe3ed1c3ecbad",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8669-33949-20261016.json",
+      "sha256": "258dd77ad5e9ccda47b0bb107364b3486e56e10ad90ad850ec19346f899cae1c",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8668-33962-20261016.json",
+      "sha256": "4674388cab9126fb08fbd2d8d07a6d9cabd796a7a9149fef1c077dd7c149bb27",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8669-33942-20261016.json",
+      "sha256": "0da7af7c752fcd1cca498c97904be90372741e89411e1e1b776a2efdd32c69bd",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8664-33955-20261016.json",
+      "sha256": "989cb66f3abbd0a0d8388b2172065c76603d257fe2344efe429fd2894b60d3e8",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8662-33958-20261016.json",
+      "sha256": "6d3a0df5b576c08d03e996932789acea18ad0046dbf91d2598e64ec749bad004",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8668-33955-20261016.json",
+      "sha256": "335af367b5ce67595d11d00b978fd54a0f5b528de1b427995e87e340b6ea4746",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8668-33957-20261016.json",
+      "sha256": "ad8ed3aaa664ff569e5241d51262d05113fe035b65ee63f17ae6c5c46536aa69",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8670-33942-20261016.json",
+      "sha256": "dd751a32fa3cea4c74006f9434af5a024199851103b1293bc671a19f9c6b7e8d",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8666-33947-20261016.json",
+      "sha256": "f497cbc072c3bd141394f004b2b98e57511c837f83285969940fa7b07758249b",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8666-33948-20261016.json",
+      "sha256": "f99b9da20ad53def7599e171a8fc24461f9684f97bc78da734ed02bba15a4368",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8668-33951-20261016.json",
+      "sha256": "d73f281245bee9da8e917eb2ab3c67e7c92a7fb578655c18f637b2555fd320c6",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8668-33958-20261016.json",
+      "sha256": "019a16a7d3e17c9a1c7f230c488bfa8737ea0742a59fda12a652ddbe85dc0c1a",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8670-33945-20261016.json",
+      "sha256": "2be309017d34567fbaed753e962f8d3a97413fa1adcea0e09c34413995d553bd",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8663-33955-20261016.json",
+      "sha256": "1141c250f9dc49477e5f700fdb527a95e2588b1b18c6e4d8061c4a0ff2b71806",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8664-33954-20261016.json",
+      "sha256": "abad90cb16560f8ad290b669cd02d439d40b4e1647e0515383b73a98784b0ca9",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8668-33952-20261016.json",
+      "sha256": "74f63533f5353f68112e3c8cfa1ed64ecf26bd86cb6371ceebbef48d55f08584",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8666-33944-20261016.json",
+      "sha256": "fc95ac540d642961bf604d434606935cc7c07d9562742b2efda3d32fb9d2767b",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8665-33945-20261016.json",
+      "sha256": "e72ee9d36565caed4add6e3c9679089105dd4525b04a5cb9302d3d3b1c0e1ef7",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8670-33952-20261016.json",
+      "sha256": "f720c2e27b267efa8eec74e4131a1320c576abd6537ec7375caa226594717fe7",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8665-33942-20261016.json",
+      "sha256": "4830e2cf9bdd047b731a201ccfb0aceffc832cdde7d5df4e5a96dc5ce867763e",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8668-33956-20261016.json",
+      "sha256": "2ebe8206fa066190aa810b73e076c8c3b563eca405cc9cf1103e1e3d1596d498",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8665-33953-20261016.json",
+      "sha256": "ace1fad5ab95901dbb30a0a5843a45833170427f3a802528fdc8c6cb3a20c870",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8666-33953-20261016.json",
+      "sha256": "948cd988c3ca5990e977da968b77837dcc9dec89ed6d2b31df98a47c6434b1db",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8663-33948-20261016.json",
+      "sha256": "807f2f0e0eb10a7886314699ae4f63225e1f43eae5f4e0e42c636ad5e550ae11",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8664-33952-20261016.json",
+      "sha256": "f110cd142bb2c512e66c61d551c8eb9b19d5a2ff34ed4640ca0205f20c17e4e7",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8662-33955-20261016.json",
+      "sha256": "9edf172dafea036c9b5db1be84d683926456ce2b6364384ac189f12d3314512d",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8669-33951-20261016.json",
+      "sha256": "9e118d1a10b39a3f907428bc206cfe911c851afb331268cef509a32734bb7929",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8663-33961-20261016.json",
+      "sha256": "8f3d6817f026dca315300e10822fdc62d0be284c85923c1e23620f8ab9577013",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8668-33950-20261016.json",
+      "sha256": "49e506dff9de5b2a7d2ffc1d93959503f7bf792d4b962274d35bbbe5077f57db",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8664-33961-20261016.json",
+      "sha256": "27f3c8779ebe8c95d91d255b1d5eeea5b385555bc4ac579d83dc140c56e25763",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8679-33940-20261016.json",
+      "sha256": "f99081dbea486a85c69809ae595854ca990e80ef0257585ff86db650d79b9024",
+      "featureCount": 7
+    },
+    {
+      "path": "nara-park-8681-33939-20261016.json",
+      "sha256": "0f56ae527b4cc19b73b63ff9158edc1c20985edc32b8b052bab22949d54b3d28",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8680-33940-20261016.json",
+      "sha256": "41314328624cad619af532bce1ee81e7ea6bb6199d2fa343eb578a743281d665",
+      "featureCount": 9
+    },
+    {
+      "path": "nara-park-8675-33935-20261016.json",
+      "sha256": "348925164b0d9dfc4133c2195c7656701f7a0fbd0395ba1f3756c2b88f26b4da",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8675-33939-20261016.json",
+      "sha256": "72a0bf7c39a7bb3f91546bfe67c6954fe2d0bb9b3f3416a26e772f62f70df4d3",
+      "featureCount": 6
+    },
+    {
+      "path": "nara-park-8681-33941-20261016.json",
+      "sha256": "b32c652402ae9fdd34ae928101e1cee9b2cb71f58a3c6082a1b3a5c9b7578548",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8681-33938-20261016.json",
+      "sha256": "1bff37682995f55281f9ac8693744db733a369ffc6bcc4f981472f27cd0019f4",
+      "featureCount": 4
+    },
+    {
+      "path": "nara-park-8674-33932-20261016.json",
+      "sha256": "def46ee8c423f24c478d1bd173844dad92a64ca7aa343466941601f74b4204aa",
+      "featureCount": 5
+    },
+    {
+      "path": "nara-park-8673-33932-20261016.json",
+      "sha256": "4ad3ba4cb1b81df588659f61a6f7d4212075343945afdcb7421b380c14d9abb4",
+      "featureCount": 6
+    },
+    {
+      "path": "nara-park-8678-33939-20261016.json",
+      "sha256": "f41240a63483082d08ad5bbe4f2e160df91d5911f0c69697984a9dec8c4bbf96",
+      "featureCount": 7
+    },
+    {
+      "path": "nara-park-8678-33934-20261016.json",
+      "sha256": "549196c66d7030948d0af622d4017b30a24f2b37b1d77c334ae4179d82b4e94f",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8680-33941-20261016.json",
+      "sha256": "6bd85d4706eefce103a8814b12ab82fa1c1b34d64999026b643c53e4b981b076",
+      "featureCount": 4
+    },
+    {
+      "path": "nara-park-8678-33942-20261016.json",
+      "sha256": "24871fdd3853e396f6ad5c195082cf8886e574e9f55e8f170453e58176a239d7",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8673-33937-20261016.json",
+      "sha256": "26f8b27792815548738e1bb554de0c387da10942c020d23ec2cc00b673f7e1c1",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8675-33934-20261016.json",
+      "sha256": "cd5b59244793cef944194a226da30baaeadbac5c539e67af423d9b2b9fbb533d",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8679-33936-20261016.json",
+      "sha256": "7c6c701edf91792f3a1d371a9059317c08138efd7ea9dee6b7673b0751971853",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8673-33934-20261016.json",
+      "sha256": "329741509253dac47d9cf4c2b77dfe0d4d20a1384f4e8e629285d90f371ecb66",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8677-33939-20261016.json",
+      "sha256": "3698b919a08cd48d4f89c8729052de9ae373516e3039190b5b31d8f0ce0f87ab",
+      "featureCount": 4
+    },
+    {
+      "path": "nara-park-8675-33938-20261016.json",
+      "sha256": "fd57154fb2783a889b53de2a0a4810075bccee9e11fa6383962a6c14351068ce",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8681-33936-20261016.json",
+      "sha256": "717a9e5da5c6719e04641cf3725f6e0760b2db4f97d472dc8893335cc1a078c0",
+      "featureCount": 6
+    },
+    {
+      "path": "nara-park-8681-33935-20261016.json",
+      "sha256": "8e9676ecb39e12cd2aacf26b401e0011f17482660c723c8424fcfad32fba24b3",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8680-33936-20261016.json",
+      "sha256": "e3ac56425e553d11a65d3f1da47cc7d5a28e8339843c1bf228e7c60b21004ab1",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8681-33937-20261016.json",
+      "sha256": "5f628bf5d7be8c167235759f5aa96ff520f72541a0869edaf3973c1fa710085c",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8674-33931-20261016.json",
+      "sha256": "58a3d6290945fd86ac1de9f28f43ec2561ad478f07e48b18f2958593818ff625",
+      "featureCount": 5
+    },
+    {
+      "path": "nara-park-8678-33941-20261016.json",
+      "sha256": "7496368d60f36d8821ac50a866002ed0bc0731675082c4b7b313fd1e9c15f81f",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8681-33942-20261016.json",
+      "sha256": "600157489b1215c92b4fe62f9046ba0fcdda5e02703bd17dcb94ba7d2fd0c67e",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8677-33932-20261016.json",
+      "sha256": "ac93a8c09f9fd26247993cebfb09f32274c856cb1b8be36dc40736794e495569",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8675-33933-20261016.json",
+      "sha256": "53eaeeba1a6f75a8ccc3de78cc94dad31410d9da9e87eee26dfdfe774221e9bd",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8676-33940-20261016.json",
+      "sha256": "609ba663bd38eab0482c98a7fb6510861c5ae16c624aa6bb866254103829c4af",
+      "featureCount": 4
+    },
+    {
+      "path": "nara-park-8674-33941-20261016.json",
+      "sha256": "f77fad47ab50c94d2847f6dd86cd19f978ff31816fa95ecb760acc3cb064e2f6",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8676-33939-20261016.json",
+      "sha256": "08fdaaeaf62cbaa290daba2a543054227ba3776d797e58be34101f0cff4041c1",
+      "featureCount": 4
+    },
+    {
+      "path": "nara-park-8676-33932-20261016.json",
+      "sha256": "0a51ad01d72baf77b1c8ab8427639b805ec516b20e299e3e8d525abf98c72896",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8675-33936-20261016.json",
+      "sha256": "521597532d428601c2412fcb3ebd3e866fb2dbc89df55f9d4483ff95025c42e2",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8675-33940-20261016.json",
+      "sha256": "2b0415e54f47eaa38bcd7660dc560c5282d3dafe8d1ae68da20b3407ea007c36",
+      "featureCount": 4
+    },
+    {
+      "path": "nara-park-8677-33940-20261016.json",
+      "sha256": "a396956a393a0de392fdede2715670e2c77f4e40280b53f05a335af8eea74fac",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8674-33934-20261016.json",
+      "sha256": "0be6c6f22139fd908c5fd620c3ed74d7e4c53082ebadc8e6dc1c33ccad54dfc5",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8680-33937-20261016.json",
+      "sha256": "416a38db9164ed76f9d05fecce32eb5ee56592058bdfa952d765a4bd3f25e85f",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8673-33931-20261016.json",
+      "sha256": "9b8fab7cbfd5dda44acb2dbe66955538cd9814a6960ded3611154b2adf2b1667",
+      "featureCount": 4
+    },
+    {
+      "path": "nara-park-8675-33932-20261016.json",
+      "sha256": "1ae3c8cb24c840332f1babe52293e74dcc841515943015496f2d329edf6b2898",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8678-33940-20261016.json",
+      "sha256": "ec93c29ae54709c55c6e704028f140590fd11f47afbef0809417571553d945e4",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8676-33931-20261016.json",
+      "sha256": "3a7902f4bb56eaa5341be4ae1ec09a0dfdb2370910753892ead20153f10a8ded",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8678-33938-20261016.json",
+      "sha256": "a8ec7cee2ef7b7e9f321416cdb3eab35bc5e8f93c6b9ec01df2edcaceb194831",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8674-33935-20261016.json",
+      "sha256": "46f85133b31ae9c39c9a8daed3fc38feb91daaddd4a0c96ce5ad9dc02a140fda",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8678-33933-20261016.json",
+      "sha256": "897fd1f7862c869b6a5e528da54ef1bd3b15d88948314069b498784260559cd3",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8679-33935-20261016.json",
+      "sha256": "4f08e60966baa5d04f5ffbc48df7ba7b664a9bce2d0de65e2d489b5ac17a2656",
+      "featureCount": 4
+    },
+    {
+      "path": "nara-park-8679-33941-20261016.json",
+      "sha256": "ea85d1369e5a3fd2b2695fe83d501360c911f7d04e7851fde5964ea9f2640bbe",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8674-33933-20261016.json",
+      "sha256": "0aaf6169781dd11fb37ecbc7afa3c21b88b803a24d95809b995e2058671052e1",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8673-33935-20261016.json",
+      "sha256": "b39382f8d34d3ca59fc0b3864c1e1cdff80b7c45a5bdeb0fe69161d6c07bc2ef",
+      "featureCount": 4
+    },
+    {
+      "path": "nara-park-8675-33937-20261016.json",
+      "sha256": "beb4e52b275e8c0bd2e67fafc1f69c014451f6015da1eadb1c5e376f8311ca5b",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8681-33940-20261016.json",
+      "sha256": "6d7defa3f383b86696e5a4c58629f0a61f1c1d73a39f5e89eb08c83675ab1392",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8680-33939-20261016.json",
+      "sha256": "4ef0695fbd721f67aba46bdb252d626a390734341e16339b798384c5b277c29f",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8677-33938-20261016.json",
+      "sha256": "21c83088724692e542a08f130659da707e4798914fca3f78f130801ca5845748",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8680-33938-20261016.json",
+      "sha256": "d8458353f9aa02a708b11fef368c404f2279cb78c0aedaf3bde2bf3cccdae55e",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8679-33933-20261016.json",
+      "sha256": "d16e6e4ebcc17f49585ecdb6b1f2d63517d49d1bd60e97eeb7ca6f60693c6cb9",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8680-33934-20261016.json",
+      "sha256": "dc4442e78dda25add926895229d2ff36ae5dcfef60a99530886819612fb7c622",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8679-33939-20261016.json",
+      "sha256": "705e318d3567f0cc3c4290d738fa2cf0e8b31de017d246c9a7818cad928d86cb",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8676-33941-20261016.json",
+      "sha256": "fd5a079d6bbc131a35f228c70caf957098b5a6424886ead892f02d551027edfc",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8673-33936-20261016.json",
+      "sha256": "001f6de7fe245e8fafe3e40a4238804907d95326aaebd9a9166e0a09a6a2bb5b",
+      "featureCount": 8
+    },
+    {
+      "path": "nara-park-8674-33936-20261016.json",
+      "sha256": "4c7a597bd381d203090835081b115e5393c21b2d900ca9c6a2133555e7efb1ce",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8676-33938-20261016.json",
+      "sha256": "c494b301e1b466a5d12543bc36dbe332c6229b0951834474a906bc705cf91d98",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8677-33941-20261016.json",
+      "sha256": "520b55ccafcaaf35399ccc899ffd52b3cb47098a82b5325415ba761ea2925d2a",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8678-33936-20261016.json",
+      "sha256": "89bf3d8e28f708b74e60ab5a097b3d6d8a48c75edbef65160b09ac56bfb8bdc2",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8676-33934-20261016.json",
+      "sha256": "8839d5100f9120d7ae7aa479f1731738308f82321c6eb63094f855fbf2f8834a",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8676-33935-20261016.json",
+      "sha256": "73b03f94dd7ae1bef3806eb4b69bac5d4604bc802b36b24527425bccb3d6bec0",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8677-33934-20261016.json",
+      "sha256": "40760882d61da9960873d8528063e27955a3d0b2906bd3db68c0ab64f4ba7bc6",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8677-33933-20261016.json",
+      "sha256": "c64e4d7e8efa89c0d3799fd24eb65e8ed731c28687b2c3561d2639c011cd2a68",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8679-33938-20261016.json",
+      "sha256": "cc18beb493f52bfb3bcdb30e3c3b330066aaec6c95d71899fe75ca728261ad3d",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8678-33935-20261016.json",
+      "sha256": "973d2885763236f8b60848a27ae30099aa4c9ef3d22a452babbd92c6c9eda7db",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8677-33935-20261016.json",
+      "sha256": "02f7f28cccaa9605ec01bf60d4041034d22b1ce297e869bfed4964941acac02d",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8679-33934-20261016.json",
+      "sha256": "326b2cd86e066549b3742b96fb7d0f0d17462fdb8fb304bbcfeaa53fe866c35c",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8674-33930-20261016.json",
+      "sha256": "6fdc0a39f00cefa74568024872a3e62c8a741663f7ca1c99d4fac0a572324e60",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8666-33941-20261016.json",
+      "sha256": "02e8ee7eb231be46abb7d20d265b3f9c73b066706056092a03ba985cdbda9c53",
+      "featureCount": 5
+    },
+    {
+      "path": "nara-park-8672-33940-20261016.json",
+      "sha256": "0f56a7993ff46221de4a4854f58c5908b5ff3757f843523d89d2810f97c5bc47",
+      "featureCount": 8
+    },
+    {
+      "path": "nara-park-8670-33935-20261016.json",
+      "sha256": "682e0219defdb9371f5d5fbd8e3947396e536aa0b45b2d624a6f447ace21d487",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8671-33940-20261016.json",
+      "sha256": "dc48244cf19885584a6ecfa95b387191014a77f4c10875c3fcbf10d95f62142a",
+      "featureCount": 5
+    },
+    {
+      "path": "nara-park-8667-33937-20261016.json",
+      "sha256": "fcb51f8df7d91fcb65facf12c8dede9bc3127712f084b0c80d36b3e359ae0cd9",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8669-33934-20261016.json",
+      "sha256": "662412d3938c961d70863033e7852d00c89c0ffb27d3512c9f2c1b665a268c1e",
+      "featureCount": 4
+    },
+    {
+      "path": "nara-park-8671-33935-20261016.json",
+      "sha256": "4843a5d1705b35956f7552068c3537aacff4663f4834911f392dfdf0149351af",
+      "featureCount": 4
+    },
+    {
+      "path": "nara-park-8669-33936-20261016.json",
+      "sha256": "6ec5e1e186ee70d561182f454056591f1a4707c19cc2ae608bf4b2303dfc1fa2",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8668-33934-20261016.json",
+      "sha256": "72d9de448c185e4f5e8caf1bb77387b4710edf7229b17e227e9c20afa1aaef58",
+      "featureCount": 4
+    },
+    {
+      "path": "nara-park-8667-33940-20261016.json",
+      "sha256": "080d9526f13b0e9ffedde5e9481aa4521a64ce8d92019ee0cd1ef9a75b968a16",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8665-33941-20261016.json",
+      "sha256": "0e359993cfdb9498ba85abb2b961a17e21aaae29f34300eb6193687761f2eb73",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8672-33941-20261016.json",
+      "sha256": "e158c30abe88f8857a36195544138fa528e21375c72e4b844a0dc6e723d907c3",
+      "featureCount": 7
+    },
+    {
+      "path": "nara-park-8669-33940-20261016.json",
+      "sha256": "023184f859b47d3c66d8b5b7fd7dc0b5fae25d74ec639644d896c592c7a59f10",
+      "featureCount": 5
+    },
+    {
+      "path": "nara-park-8669-33931-20261016.json",
+      "sha256": "eaf5add21089854ece9cf01cfb46d72bf19a3c88dc16a51265f1d471b7bade6e",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8669-33932-20261016.json",
+      "sha256": "b152350f785f361d95d6dedbc972b3be8426a34b2e2c04b2a8a2cdd981267edb",
+      "featureCount": 6
+    },
+    {
+      "path": "nara-park-8670-33933-20261016.json",
+      "sha256": "ad3cd69b22f80fb52af4eb5be60a90134031e150c2ea1a9b2a55fc32f838d749",
+      "featureCount": 7
+    },
+    {
+      "path": "nara-park-8672-33930-20261016.json",
+      "sha256": "1cb78ace2775e8295c81a2d8277803d4df35624aaa751111057f5104a122045f",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8672-33935-20261016.json",
+      "sha256": "83e130cfa5a367f2ca032fbbf8e61d18317e933cb16fc8441c63be9ccc772642",
+      "featureCount": 7
+    },
+    {
+      "path": "nara-park-8673-33940-20261016.json",
+      "sha256": "04cfed2933b4f104cea8482a85accaeb8de9317f9bd893a710e7270f0724319d",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8669-33938-20261016.json",
+      "sha256": "c9fabe764d6bb211a7c6ee2d2119babbeb8d8f2710b65701b7b8735b0375973e",
+      "featureCount": 5
+    },
+    {
+      "path": "nara-park-8668-33939-20261016.json",
+      "sha256": "278f55844e370e2baa25bbee67904ad957580762a4eff6930f35377195f10432",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8670-33931-20261016.json",
+      "sha256": "d6889c5f01fd09f4075bb36c3a0f68e7a92560cd0413c4cd8a2072a4c4bfb5af",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8672-33933-20261016.json",
+      "sha256": "20472c8ccd3469083297825e7dba2477968bd56750c69b17c33952ce9b0d9f36",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8670-33938-20261016.json",
+      "sha256": "f836a6fb660de13acf026b423db821dc31abdf8cd44261a4f6cb3caab4a0f6d8",
+      "featureCount": 4
+    },
+    {
+      "path": "nara-park-8670-33937-20261016.json",
+      "sha256": "b968e80a651e7cf92475f7e76980bfc3b429e885dc9a4970dc990f348ed67872",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8670-33932-20261016.json",
+      "sha256": "7f1d948edc97232b549600af46fdda82cc21232ddfd4dc6f012b87132852119a",
+      "featureCount": 5
+    },
+    {
+      "path": "nara-park-8671-33933-20261016.json",
+      "sha256": "e8ddfe3a962184bf5e3dfee08bb489b56be21d98551da779fabe5341e424b947",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8672-33937-20261016.json",
+      "sha256": "e1ef00dd9fb830ff6eced5002ea0355e5839fd4b7a653a8cfea82453bbf17112",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8669-33939-20261016.json",
+      "sha256": "36592451eff810de774338ff27e36e73103f95db4193c62d832a551cc32ee3e7",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8671-33932-20261016.json",
+      "sha256": "d9061aa3c9f4306a0e382aa3bf5477770a9d1f992da61db3b31d2f20efa28448",
+      "featureCount": 5
+    },
+    {
+      "path": "nara-park-8669-33941-20261016.json",
+      "sha256": "38700ec9a6e1438b82360812001e135a7103af16530286766bd8c2a6c7a0e0a2",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8671-33941-20261016.json",
+      "sha256": "2ec62295614aba1a2fca8cd999e1cedb4db396430575ff620f43ed6746f8cba9",
+      "featureCount": 5
+    },
+    {
+      "path": "nara-park-8670-33934-20261016.json",
+      "sha256": "d49667f499303b74034f7280e503e404a2ad8e9a9532ae630a7f801d64ba42b6",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8672-33936-20261016.json",
+      "sha256": "767bcfc9f1a928440362d5ffcae685056f2f8a9921da6630f234f374c5191302",
+      "featureCount": 5
+    },
+    {
+      "path": "nara-park-8666-33940-20261016.json",
+      "sha256": "5280716a29a552b3666d34af61cc5b9841687796a8b721e166d1eb2d5beec1ad",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8667-33941-20261016.json",
+      "sha256": "c36478cc644826241fbe0d5c501ef229589f1095d3adb5c123081245c84da204",
+      "featureCount": 4
+    },
+    {
+      "path": "nara-park-8672-33938-20261016.json",
+      "sha256": "2399cc155afad32b627b0e78735377fac3ffb570aa1078d3fa0c7cc9244d9742",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8666-33936-20261016.json",
+      "sha256": "a61e67aa5e22e71c4b9c2f758457c1e97eaf6c0e104bffb1599c5aabc9d87209",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8667-33936-20261016.json",
+      "sha256": "8d4e3949dd74acc267bb59d506bcb5fc0eb60a5a5497b6720f1b473b65464e36",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8666-33938-20261016.json",
+      "sha256": "bfa5de80cc2ede366521361eebe68f0b40b165af9d5c5a079069bff8f5a4c7f9",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8666-33937-20261016.json",
+      "sha256": "b793bd0f6ff1fb21033bb3b29f22e486fdaa616e820e0170f9a90f4372c0db8e",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8668-33941-20261016.json",
+      "sha256": "71501a011e317d861e6567c385027fd3889af97b9a7d1db4fbc248b4cbc79b4b",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8668-33940-20261016.json",
+      "sha256": "f98a29ba8297c2323dbf09915af4e362d9953eace7144dc57282c2281e8a5ffc",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8671-33931-20261016.json",
+      "sha256": "00872ab49682427314da959a46537260a5da9da372ab5dd4b9f8c251aab640d3",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8669-33933-20261016.json",
+      "sha256": "e748a0879b9f8096bb611a93047808db8e4f25a7ee528d8ce51e1887f722cb53",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8667-33939-20261016.json",
+      "sha256": "bb155bea32be2c96d7324b910736b1e5cbc68aea35393c8a8a56ac9370ba78e2",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8668-33932-20261016.json",
+      "sha256": "65155336f9b341f188d79a39571a55fa956047b1438791655a0b4c5b6525b883",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8669-33937-20261016.json",
+      "sha256": "d022ff84c47c222f1ee52065f5e5c72145683eb19e263208debf890b08adf8d7",
+      "featureCount": 3
+    },
+    {
+      "path": "nara-park-8670-33939-20261016.json",
+      "sha256": "ddf061020f98b785f6ea9952d80183ad22e49c525d46f9de29dc9126cbb16015",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8670-33936-20261016.json",
+      "sha256": "048f75ff43f2ced9e5c8b934d51b62ed68d782e0f1f9c827f620c3d911a0f655",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8671-33937-20261016.json",
+      "sha256": "70d6860d4b679e62b8f764017dfd2ad7ea1dad3627e0d4103145ca522a30d91e",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8671-33936-20261016.json",
+      "sha256": "3ab15089c400424f4644a99d158012104e9b3e3dc97f5e672cb7697f11cf69bd",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8672-33931-20261016.json",
+      "sha256": "3d33cea7e27a1584a2e47dd733837c96c9cd576cc32a588a1a337bbdf50b7a14",
+      "featureCount": 4
+    },
+    {
+      "path": "nara-park-8673-33930-20261016.json",
+      "sha256": "06b5c8d99c7a11c0aff97776b71287c80b0bdaa5526e974aa7eeaf64953451ec",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8659-33957-20261016.json",
+      "sha256": "c84b8cfc223c0d2d13fbbb705337b9378ddfec443f1658b8cabc14794e686dde",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8672-33944-20261016.json",
+      "sha256": "f56feacd4cae63fe51d87dcd67b9077df98527e5202459b05c2e0dea0acd061e",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8671-33945-20261016.json",
+      "sha256": "f6a059571e501d57c3c175f9914e90ffd2ab7bad3d64fba002bcd2af74726143",
+      "featureCount": 2
+    },
+    {
+      "path": "nara-park-8673-33958-20261016.json",
+      "sha256": "c4c55ca161198aa3a76bbbf08c7d15b6ab8599b0fde1455b5994bd47065141dd",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8677-33936-20261016.json",
+      "sha256": "b41c5bed25504ec1aff807e85c5fa1047930e95f8a1782f87df0b5f6e9efcc07",
+      "featureCount": 1
+    },
+    {
+      "path": "nara-park-8673-33955-20261016.json",
+      "sha256": "1f1a59c6ed38141866f4d066539c497516285c680d22f5c6225644203d612ff6",
+      "featureCount": 1
+    }
+  ]
+}

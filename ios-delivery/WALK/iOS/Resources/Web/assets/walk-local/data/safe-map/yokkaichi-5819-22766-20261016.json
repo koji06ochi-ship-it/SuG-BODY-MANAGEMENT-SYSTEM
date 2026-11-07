@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "yokkaichi-5819-22766-20261016",
+  "lat": 34.91630805666667,
+  "lng": 136.59667563333332,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "四日市市",
+  "source": "四日市市内公共施設 AED設置箇所一覧",
+  "sourceUrl": "https://data.bodik.jp/dataset/242021_00127",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/422f8da8-0b3c-4d84-b8dd-d88d18e914ce/resource/2a5eee8b-c455-4c2e-8553-b0d3d36e5ef2/download/242021_aed.csv",
+  "sourceUpdatedAt": "2024-12-18",
+  "sourcePageUpdatedAt": "2025-01-24",
+  "retrievedAt": "2026-10-15T15:44:16.747Z",
+  "sourceFileSha256": "c0880c81977c7fc444213ee84ef31a7b2e9e34f12d31e892064cbabb7d5159cf",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/yokkaichi/aed/a93f67dbc4f5e514",
+      "lat": 34.91574788,
+      "lng": 136.5967969,
+      "category": "SAFE",
+      "name": "河原田小学校",
+      "address": "四日市市河原田町70",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市河原田町70",
+      "sourceRow": 18,
+      "sourceRows": [
+        18
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/7f27dee91161b36e",
+      "lat": 34.91574337,
+      "lng": 136.5967969,
+      "category": "SAFE",
+      "name": "河原田小学校",
+      "address": "四日市市河原田町70",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市河原田町70",
+      "sourceRow": 19,
+      "sourceRows": [
+        19
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/fc222ca564c098ad",
+      "lat": 34.91743292,
+      "lng": 136.5964331,
+      "category": "SAFE",
+      "name": "河原田地区市民センター",
+      "address": "四日市市河原田町159",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市河原田町159",
+      "sourceRow": 150,
+      "sourceRows": [
+        150
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

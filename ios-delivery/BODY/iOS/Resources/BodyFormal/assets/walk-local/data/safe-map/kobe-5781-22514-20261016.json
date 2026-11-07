@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5781-22514-20261016",
+  "lat": 34.6891212622268,
+  "lng": 135.085155385342,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/29e38f29f3c4f60d",
+      "lat": 34.6885007014277,
+      "lng": 135.085451970205,
+      "category": "SAFE",
+      "name": "神戸市立　神の谷小学校",
+      "address": "神戸市須磨区神の谷5丁目1番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区神の谷5丁目1番1号",
+      "district": "須磨区",
+      "sourceRow": 73,
+      "sourceRows": [
+        73
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/03d0c29f0107bb68",
+      "lat": 34.6892473524699,
+      "lng": 135.084799734989,
+      "category": "SAFE",
+      "name": "宙カミーノ",
+      "address": "神戸市須磨区神の谷5丁目2－2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区神の谷5丁目2－2",
+      "district": "須磨区",
+      "sourceRow": 143,
+      "sourceRows": [
+        143
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6fb22177ce02a9d2",
+      "lat": 34.6893684975048,
+      "lng": 135.085184918087,
+      "category": "SAFE",
+      "name": "神の谷地域福祉センター",
+      "address": "神戸市須磨区神の谷5丁目2－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区神の谷5丁目2－1",
+      "district": "須磨区",
+      "sourceRow": 150,
+      "sourceRows": [
+        150
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/63867ea03ff9d3fe",
+      "lat": 34.6893684975048,
+      "lng": 135.085184918087,
+      "category": "SAFE",
+      "name": "神戸市立　神の谷児童館",
+      "address": "神戸市須磨区神の谷5丁目2－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区神の谷5丁目2－1",
+      "district": "須磨区",
+      "sourceRow": 156,
+      "sourceRows": [
+        156
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

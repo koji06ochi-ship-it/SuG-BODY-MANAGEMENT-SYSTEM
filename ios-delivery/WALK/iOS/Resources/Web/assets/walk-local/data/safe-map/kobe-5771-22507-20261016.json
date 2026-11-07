@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5771-22507-20261016",
+  "lat": 34.62905399883764,
+  "lng": 135.0442934356346,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/06feb589aa608c34",
+      "lat": 34.6266187507882,
+      "lng": 135.045022112606,
+      "category": "SAFE",
+      "name": "垂水温泉「太平のゆ」",
+      "address": "神戸市垂水区海岸通2166－2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区海岸通2166－2",
+      "district": "垂水区",
+      "sourceRow": 291,
+      "sourceRows": [
+        291
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/70a5b1758f327b4f",
+      "lat": 34.6312799657123,
+      "lng": 135.043646675067,
+      "category": "SAFE",
+      "name": "神戸市立　霞ヶ丘児童館",
+      "address": "神戸市垂水区五色山5丁目2-15",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区五色山5丁目2-15",
+      "district": "垂水区",
+      "sourceRow": 368,
+      "sourceRows": [
+        368
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/fd9987ba51080d19",
+      "lat": 34.6269702037627,
+      "lng": 135.043595715565,
+      "category": "SAFE",
+      "name": "ザ・レジデンス神戸舞子",
+      "address": "神戸市垂水区海岸通11番97",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区海岸通11番97",
+      "district": "垂水区",
+      "sourceRow": 372,
+      "sourceRows": [
+        372
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6c4f25c3f2a2dedd",
+      "lat": 34.6310766427555,
+      "lng": 135.04403535451,
+      "category": "SAFE",
+      "name": "霞ヶ丘地域福祉センター",
+      "address": "神戸市垂水区五色山4丁目15-8",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区五色山4丁目15-8",
+      "district": "垂水区",
+      "sourceRow": 388,
+      "sourceRows": [
+        388
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6a5a4cdc350f736e",
+      "lat": 34.6293244311695,
+      "lng": 135.045167320425,
+      "category": "SAFE",
+      "name": "五色塚古墳（管理事務所）",
+      "address": "神戸市垂水区五色山4丁目1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区五色山4丁目1",
+      "district": "垂水区",
+      "sourceRow": 416,
+      "sourceRows": [
+        416
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5789-22539-20261016",
+  "lat": 34.73676453619089,
+  "lng": 135.23578075868548,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/58732270569ec296",
+      "lat": 34.7341380393692,
+      "lng": 135.234644845088,
+      "category": "SAFE",
+      "name": "神戸大学  人間発達環境学研究科（体育館）",
+      "address": "神戸市灘区鶴甲3丁目11",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区鶴甲3丁目11",
+      "district": "灘区",
+      "sourceRow": 1776,
+      "sourceRows": [
+        1776
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3161c23914b60e88",
+      "lat": 34.7369677817446,
+      "lng": 135.237463050317,
+      "category": "SAFE",
+      "name": "鶴甲会館（財団法人　神戸市開発管理事業団）",
+      "address": "神戸市灘区鶴甲5丁目1番6号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区鶴甲5丁目1番6号",
+      "district": "灘区",
+      "sourceRow": 1867,
+      "sourceRows": [
+        1867
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b1569876f2a4f8d9",
+      "lat": 34.7364850356634,
+      "lng": 135.237994073224,
+      "category": "SAFE",
+      "name": "神戸市立　鶴甲児童館",
+      "address": "神戸市灘区鶴甲5-1-37",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区鶴甲5-1-37",
+      "district": "灘区",
+      "sourceRow": 1887,
+      "sourceRows": [
+        1887
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bc53dfb1fa3ed9ef",
+      "lat": 34.7380299018033,
+      "lng": 135.23551918187,
+      "category": "SAFE",
+      "name": "ケアハウスきしろ長寿の里",
+      "address": "神戸市灘区鶴甲5-1-50",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区鶴甲5-1-50",
+      "district": "灘区",
+      "sourceRow": 1907,
+      "sourceRows": [
+        1907
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/05139443868b30cd",
+      "lat": 34.7380299018033,
+      "lng": 135.23551918187,
+      "category": "SAFE",
+      "name": "養護老人ホーム六甲台ビラ",
+      "address": "神戸市灘区鶴甲5-1-50",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区鶴甲5-1-50",
+      "district": "灘区",
+      "sourceRow": 1908,
+      "sourceRows": [
+        1908
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ad50637f89dfd86c",
+      "lat": 34.7380299018033,
+      "lng": 135.23551918187,
+      "category": "SAFE",
+      "name": "特別養護老人ホームきしろ荘",
+      "address": "神戸市灘区鶴甲5-1-50",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区鶴甲5-1-50",
+      "district": "灘区",
+      "sourceRow": 1927,
+      "sourceRows": [
+        1927
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/57a8b61a4ccb2a67",
+      "lat": 34.7344058255367,
+      "lng": 135.234067373375,
+      "category": "SAFE",
+      "name": "神戸大学　人間発達環境学研究科グランド",
+      "address": "神戸市灘区鶴甲3-11",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区鶴甲3-11",
+      "district": "灘区",
+      "sourceRow": 1951,
+      "sourceRows": [
+        1951
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8b36c8a305fa3607",
+      "lat": 34.7380299018033,
+      "lng": 135.23551918187,
+      "category": "SAFE",
+      "name": "養護盲老人ホーム　千山荘",
+      "address": "神戸市灘区鶴甲5丁目1-50",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区鶴甲5丁目1-50",
+      "district": "灘区",
+      "sourceRow": 1991,
+      "sourceRows": [
+        1991
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

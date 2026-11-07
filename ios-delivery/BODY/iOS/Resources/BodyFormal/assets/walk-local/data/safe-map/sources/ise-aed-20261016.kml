@@ -1,0 +1,1357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<Style id="PolyStyle1">
+  <IconStyle>
+  <Icon>
+  <href>https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/005/573/aed4.png</href>
+  </Icon>
+  <scale>1</scale>
+  </IconStyle>
+</Style>
+<Placemark>
+<name>伊勢市役所本庁舎</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-8601</td></tr><tr><td>●所在地：</td><td>伊勢市岩渕1-7-29</td></tr><tr><td>●電話番号：</td><td>0596-21-5526</td></tr><tr><td>●使用可能時間帯等：</td><td>開庁日　8：30～17：15<br>（月曜日は19：00まで）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.709801388287,34.4873369104296</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市二見総合支所</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0696</td></tr><tr><td>●所在地：</td><td>伊勢市二見町茶屋420-1</td></tr><tr><td>●電話番号：</td><td>0596-42-1111</td></tr><tr><td>●使用可能時間帯等：</td><td>開庁日　8：30～17：15</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.779421396959,34.5060851175979</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市御薗総合支所（御薗公民館併設）</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-8501</td></tr><tr><td>●所在地：</td><td>伊勢市御薗町長屋1221</td></tr><tr><td>●電話番号：</td><td>0596-22-0235</td></tr><tr><td>●使用可能時間帯等：</td><td>開庁日　8：30～17：15<br>（公民館使用がある場合は22：00まで）<br>土日祝　9：00～17：00<br>（公民館使用がある場合は22：00まで）※12月29日～1月3日は閉庁・公民館休館）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.710236497137,34.5095834458873</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>大湊地区コミュニティセンター</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0001</td></tr><tr><td>●所在地：</td><td>伊勢市大湊町98-5</td></tr><tr><td>●電話番号：</td><td>0596-36-4534</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金・日　9：00～22：00<br>（17：15～22:00は利用がある場合のみ）<br>土・祝　9：00～22：00<br>(利用がある場合のみ）<br>※12月29日～１月３日は閉館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.734984543054,34.5270154757518</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>浜郷地区コミュニティセンター</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0018</td></tr><tr><td>●所在地：</td><td>伊勢市黒瀬町48</td></tr><tr><td>●電話番号：</td><td>0596-22-4880</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金・日  9：00～22：00<br>（17：15～22:00は利用がある場合のみ）<br>土・祝  9：00～22：00<br>(利用がある場合のみ）<br>※12月29日～１月３日は閉館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.728727215122,34.4962268734458</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>宮本地区コミュニティセンター</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0044</td></tr><tr><td>●所在地：</td><td>伊勢市前山町355-4</td></tr><tr><td>●電話番号：</td><td>0596-22-2232</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金・日  9：00～22：00<br>（17：15～22:00は利用がある場合のみ）<br>土・祝  9：00～22：00<br>(利用がある場合のみ）<br>※12月29日～１月３日は閉館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.688915993513,34.4674242492247</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>豊浜地区コミュニティセンター</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>515-0505</td></tr><tr><td>●所在地：</td><td>伊勢市西豊浜町3044-10</td></tr><tr><td>●電話番号：</td><td>0596-37-2038</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金・日  9：00～22：00<br>（17：15～22:00は利用がある場合のみ）<br>土・祝  9：00～22：00<br>(利用がある場合のみ）<br>※12月29日～１月３日は閉館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.703006493626,34.5294445880649</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>北浜地区コミュニティセンター</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>515-0507</td></tr><tr><td>●所在地：</td><td>伊勢市村松町3-1</td></tr><tr><td>●電話番号：</td><td>0596-37-2026</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金・日　9：00～22：00<br>（17：15～22:00は利用がある場合のみ）<br>土・祝　9：00～22：00<br>(利用がある場合のみ）<br>※12月29日～１月３日は閉館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.677658439934,34.5522430268558</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>城田地区コミュニティセンター</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0051</td></tr><tr><td>●所在地：</td><td>伊勢市上地町1809-1</td></tr><tr><td>●電話番号：</td><td>0596-22-3638</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金・日  9：00～22：00<br>（17：15～22:00は利用がある場合のみ）<br>土・祝  9：00～22：00<br>(利用がある場合のみ）<br>※12月29日～１月３日は閉館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.661450011783,34.4915836886294</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>四郷地区コミュニティセンター</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0014</td></tr><tr><td>●所在地：</td><td>伊勢市楠部町2484</td></tr><tr><td>●電話番号：</td><td>0596-22-2576</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金・日  9：00～22：00<br>（17：15～22:00は利用がある場合のみ）<br>土・祝  9：00～22：00<br>(利用がある場合のみ）<br>※12月29日～１月３日は閉館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.738148796794,34.4753631650838</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>沼木地区コミュニティセンター</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-1104</td></tr><tr><td>●所在地：</td><td>伊勢市上野町1215-1</td></tr><tr><td>●電話番号：</td><td>0596-39-1201</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金・日  9：00～22：00<br>（17：15～22:00は利用がある場合のみ）<br>土・祝  9：00～22：00<br>(利用がある場合のみ）<br>※12月29日～１月３日は閉館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.661004066786,34.4355101675522</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>三津コミュニティセンター</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0603</td></tr><tr><td>●所在地：</td><td>伊勢市二見町三津301</td></tr><tr><td>●電話番号：</td><td></td></tr><tr><td>●使用可能時間帯等：</td><td>開館時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.774178965088,34.501622677775</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>江コミュニティセンター</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0602</td></tr><tr><td>●所在地：</td><td>伊勢市二見町江683-2</td></tr><tr><td>●電話番号：</td><td></td></tr><tr><td>●使用可能時間帯等：</td><td>開館時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.792767155684,34.5048638654588</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>西コミュニティセンター</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0607</td></tr><tr><td>●所在地：</td><td>伊勢市二見町西866</td></tr><tr><td>●電話番号：</td><td></td></tr><tr><td>●使用可能時間帯等：</td><td>開館時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.757626354874,34.511787896034</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>光の街コミュニティセンター</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0611</td></tr><tr><td>●所在地：</td><td>伊勢市二見町光の街1019-4</td></tr><tr><td>●電話番号：</td><td>0596-42-2727</td></tr><tr><td>●使用可能時間帯等：</td><td>開館時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.76429652608,34.4984322510415</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>今一色コミュニティセンター</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0608</td></tr><tr><td>●所在地：</td><td>伊勢市二見町今一色120</td></tr><tr><td>●電話番号：</td><td></td></tr><tr><td>●使用可能時間帯等：</td><td>開館時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.748686069449,34.5176218234633</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立進修小学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0026</td></tr><tr><td>●所在地：</td><td>伊勢市宇治浦田2-16-43</td></tr><tr><td>●電話番号：</td><td>0596-22-2427</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.72185389425,34.4691472664413</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立進修小学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0026</td></tr><tr><td>●所在地：</td><td>伊勢市宇治浦田2-16-43</td></tr><tr><td>●電話番号：</td><td>0596-22-2427</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.721781,34.469415</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立修道小学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0015</td></tr><tr><td>●所在地：</td><td>伊勢市久世戸町5-1</td></tr><tr><td>●電話番号：</td><td>0596-24-9694</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.723621955798,34.4815207629076</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立修道小学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0015</td></tr><tr><td>●所在地：</td><td>伊勢市久世戸町5-1</td></tr><tr><td>●電話番号：</td><td>0596-24-9694</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.723468,34.481981</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立有緝小学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0008</td></tr><tr><td>●所在地：</td><td>伊勢市船江2-2-5</td></tr><tr><td>●電話番号：</td><td>0596-28-2450</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.716049,34.497486</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立有緝小学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0008</td></tr><tr><td>●所在地：</td><td>伊勢市船江2-2-5</td></tr><tr><td>●電話番号：</td><td>0596-28-2450</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.715436,34.497346</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立早修小学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0041</td></tr><tr><td>●所在地：</td><td>伊勢市常磐3-10-19</td></tr><tr><td>●電話番号：</td><td>0596-23-2993</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.69641169341,34.4885139403073</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立早修小学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0041</td></tr><tr><td>●所在地：</td><td>伊勢市常磐3-10-19</td></tr><tr><td>●電話番号：</td><td>0596-23-2993</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.696344,34.488207</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立中島小学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0064</td></tr><tr><td>●所在地：</td><td>伊勢市二俣1-2-17</td></tr><tr><td>●電話番号：</td><td>0596-23-5907</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：45</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.6920897425,34.4922273999744</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立中島小学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0064</td></tr><tr><td>●所在地：</td><td>伊勢市二俣1-2-17</td></tr><tr><td>●電話番号：</td><td>0596-23-5907</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.692652,34.49238</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立明倫小学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0036</td></tr><tr><td>●所在地：</td><td>伊勢市岡本1-18-21</td></tr><tr><td>●電話番号：</td><td>0596-24-3199</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.71043991455,34.4845398760904</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立明倫小学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0036</td></tr><tr><td>●所在地：</td><td>伊勢市岡本1-18-21</td></tr><tr><td>●電話番号：</td><td>0596-24-3199</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.710243,34.484746</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立厚生小学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0075</td></tr><tr><td>●所在地：</td><td>伊勢市一志町1-4</td></tr><tr><td>●電話番号：</td><td>0596-25-8386</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.705353963643,34.4922028618286</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立厚生小学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0075</td></tr><tr><td>●所在地：</td><td>伊勢市一志町1-4</td></tr><tr><td>●電話番号：</td><td>0596-25-8386</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.705682,34.491946</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立みなと小学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0001</td></tr><tr><td>●所在地：</td><td>伊勢市大湊町1282</td></tr><tr><td>●電話番号：</td><td>0596-63-5320</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.734240067162,34.5182782813487</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立みなと小学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0001</td></tr><tr><td>●所在地：</td><td>伊勢市大湊町1282</td></tr><tr><td>●電話番号：</td><td>0596-63-5320</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.733616722049,34.5181143002856</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立佐八小学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-1102</td></tr><tr><td>●所在地：</td><td>伊勢市佐八町2278-12</td></tr><tr><td>●電話番号：</td><td>0596-39-0790</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.660421650756,34.4650022659191</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立佐八小学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-1102</td></tr><tr><td>●所在地：</td><td>伊勢市佐八町2278-12</td></tr><tr><td>●電話番号：</td><td>0596-39-0790</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.660489,34.465171</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立宮山小学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0045</td></tr><tr><td>●所在地：</td><td>伊勢市旭町319</td></tr><tr><td>●電話番号：</td><td>0596-28-2540</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：45</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.697368812272,34.4739367536804</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立宮山小学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0045</td></tr><tr><td>●所在地：</td><td>伊勢市旭町319</td></tr><tr><td>●電話番号：</td><td>0596-28-2540</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.697269,34.473713</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立浜郷小学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0018</td></tr><tr><td>●所在地：</td><td>伊勢市黒瀬町1648-1</td></tr><tr><td>●電話番号：</td><td>0596-22-3701</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：45</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.736286646071,34.4995610687297</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立浜郷小学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0018</td></tr><tr><td>●所在地：</td><td>伊勢市黒瀬町1648-1</td></tr><tr><td>●電話番号：</td><td>0596-22-3701</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.73694,34.499215</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立四郷小学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0014</td></tr><tr><td>●所在地：</td><td>伊勢市楠部町2484</td></tr><tr><td>●電話番号：</td><td>0596-22-3397</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.737686706442,34.4753000587676</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立四郷小学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0014</td></tr><tr><td>●所在地：</td><td>伊勢市楠部町2484</td></tr><tr><td>●電話番号：</td><td>0596-22-3397</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.73702,34.475395</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立豊浜東小学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>515-0502</td></tr><tr><td>●所在地：</td><td>伊勢市東豊浜町299-1</td></tr><tr><td>●電話番号：</td><td>0596-37-2156</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.710527193879,34.5295315636429</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立豊浜東小学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>515-0502</td></tr><tr><td>●所在地：</td><td>伊勢市東豊浜町299-1</td></tr><tr><td>●電話番号：</td><td>0596-37-2156</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.710868,34.52973</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立豊浜西小学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>515-0505</td></tr><tr><td>●所在地：</td><td>伊勢市西豊浜町1779</td></tr><tr><td>●電話番号：</td><td>0596-37-2202</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.694401324057,34.5204416184565</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立豊浜西小学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>515-0505</td></tr><tr><td>●所在地：</td><td>伊勢市西豊浜町1779</td></tr><tr><td>●電話番号：</td><td>0596-37-2202</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.69441,34.519738</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立北浜小学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>515-0507</td></tr><tr><td>●所在地：</td><td>伊勢市村松町3285-1</td></tr><tr><td>●電話番号：</td><td>0596-37-2127</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.690499836013,34.543931742612</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立北浜小学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>515-0507</td></tr><tr><td>●所在地：</td><td>伊勢市村松町3285-1</td></tr><tr><td>●電話番号：</td><td>0596-37-2127</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.69007,34.543695</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立東大淀小学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>515-0509</td></tr><tr><td>●所在地：</td><td>伊勢市東大淀町351</td></tr><tr><td>●電話番号：</td><td>0596-37-2143</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.663127625024,34.5567576288517</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立東大淀小学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>515-0509</td></tr><tr><td>●所在地：</td><td>伊勢市東大淀町351</td></tr><tr><td>●電話番号：</td><td>0596-37-2143</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.663062,34.556172</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立城田小学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0051</td></tr><tr><td>●所在地：</td><td>伊勢市上地町1494</td></tr><tr><td>●電話番号：</td><td>0596-22-3641</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.663873172392,34.4909098662088</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立城田小学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0051</td></tr><tr><td>●所在地：</td><td>伊勢市上地町1494</td></tr><tr><td>●電話番号：</td><td>0596-22-3641</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.663872,34.491159</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立上野小学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-1104</td></tr><tr><td>●所在地：</td><td>伊勢市上野町2841-2</td></tr><tr><td>●電話番号：</td><td>0596-39-1211</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.654171246509,34.4343674320885</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立上野小学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-1104</td></tr><tr><td>●所在地：</td><td>伊勢市上野町2841-2</td></tr><tr><td>●電話番号：</td><td>0596-39-1211</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.653698,34.434151</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立小俣小学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0503</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町元町663-１</td></tr><tr><td>●電話番号：</td><td>0596-22-3555</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.673920351895,34.506816596912</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立小俣小学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0503</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町元町663-１</td></tr><tr><td>●電話番号：</td><td>0596-22-3555</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.673553,34.506402</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立明野小学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0501</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町明野1939</td></tr><tr><td>●電話番号：</td><td>0596-24-5171</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.661896922951,34.5156319963192</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立明野小学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0501</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町明野1939</td></tr><tr><td>●電話番号：</td><td>0596-24-5171</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.661784,34.515419</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>旧　今一色小学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0608</td></tr><tr><td>●所在地：</td><td>伊勢市二見町今一色3</td></tr><tr><td>●電話番号：</td><td>0596-22-7891</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（施設使用時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.750324,34.518351</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立倉田山中学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0016</td></tr><tr><td>●所在地：</td><td>伊勢市神田久志本町1645-2</td></tr><tr><td>●電話番号：</td><td>0596-22-9415</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.727256563799,34.4892622903033</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立倉田山中学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0016</td></tr><tr><td>●所在地：</td><td>伊勢市神田久志本町1645-2</td></tr><tr><td>●電話番号：</td><td>0596-22-9415</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.728504,34.490217</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立厚生中学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0071</td></tr><tr><td>●所在地：</td><td>伊勢市一之木5-5-3</td></tr><tr><td>●電話番号：</td><td>0596-28-3703</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.70941681466,34.5014847478042</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立厚生中学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0071</td></tr><tr><td>●所在地：</td><td>伊勢市一之木5-5-3</td></tr><tr><td>●電話番号：</td><td>0596-28-3703</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.710005,34.501526</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立伊勢宮川中学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0064</td></tr><tr><td>●所在地：</td><td>伊勢市二俣4-5-3</td></tr><tr><td>●電話番号：</td><td>0596-25-8315</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.690198679675,34.4826686029418</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立伊勢宮川中学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0064</td></tr><tr><td>●所在地：</td><td>伊勢市二俣4-5-3</td></tr><tr><td>●電話番号：</td><td>0596-25-8315</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.688972,34.482334</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立港中学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0005</td></tr><tr><td>●所在地：</td><td>伊勢市竹ケ鼻町78-10</td></tr><tr><td>●電話番号：</td><td>0596-36-4144</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.732552533931,34.5111449144681</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立港中学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0005</td></tr><tr><td>●所在地：</td><td>伊勢市竹ケ鼻町78-10</td></tr><tr><td>●電話番号：</td><td>0596-36-4144</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.733501,34.510722</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立桜浜中学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>515-0506</td></tr><tr><td>●所在地：</td><td>伊勢市植山町461</td></tr><tr><td>●電話番号：</td><td>0596-63-5605</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.684704,34.534793</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立桜浜中学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>515-0506</td></tr><tr><td>●所在地：</td><td>伊勢市植山町461番地</td></tr><tr><td>●電話番号：</td><td>0596-63-5605</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.684012,34.534771</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立城田中学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0054</td></tr><tr><td>●所在地：</td><td>伊勢市粟野町472</td></tr><tr><td>●電話番号：</td><td>0596-25-5978</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.672044415254,34.4863948779552</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立城田中学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0054</td></tr><tr><td>●所在地：</td><td>伊勢市粟野町472</td></tr><tr><td>●電話番号：</td><td>0596-25-5978</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.671542,34.485987</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立五十鈴中学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0028</td></tr><tr><td>●所在地：</td><td>伊勢市中村町444</td></tr><tr><td>●電話番号：</td><td>0596-24-4888</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.725160897776,34.4734182760668</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立五十鈴中学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0028</td></tr><tr><td>●所在地：</td><td>伊勢市中村町444</td></tr><tr><td>●電話番号：</td><td>0596-24-4888</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.724332,34.473087</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>二見体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0606</td></tr><tr><td>●所在地：</td><td>伊勢市二見町荘2033-1</td></tr><tr><td>●電話番号：</td><td>0596-42-1117</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　9：00～22：00（施設使用時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.772438,34.509863</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立小俣中学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0502</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町相合750</td></tr><tr><td>●電話番号：</td><td>0596-22-3610</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>2</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.669521046476,34.507476060077</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立小俣中学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0502</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町相合750</td></tr><tr><td>●電話番号：</td><td>0596-22-3610</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.670647,34.507652</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立御薗中学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-8502</td></tr><tr><td>●所在地：</td><td>伊勢市磯町2225</td></tr><tr><td>●電話番号：</td><td>0596-36-5139</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.710658676227,34.5147222376247</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立御薗中学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-8502</td></tr><tr><td>●所在地：</td><td>伊勢市磯町2225</td></tr><tr><td>●電話番号：</td><td>0596-36-5139</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.709785,34.514582</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立小俣幼稚園</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0505</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町本町1</td></tr><tr><td>●電話番号：</td><td>0596-22-4902</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.671484744754,34.5070673336483</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立明野幼稚園</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0501</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町明野1481</td></tr><tr><td>●電話番号：</td><td>0596-38-1234</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.665739452716,34.5254504643608</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市中学校給食共同調理場</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0003</td></tr><tr><td>●所在地：</td><td>伊勢市下野町564番地15</td></tr><tr><td>●電話番号：</td><td>0596-31-1155</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：30～17：15　土曜日、日曜日、祝日及び12月29日から1月3日は閉鎖</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.737077844136,34.5185842324861</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市労働福祉会館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0035</td></tr><tr><td>●所在地：</td><td>伊勢市勢田町613-13</td></tr><tr><td>●電話番号：</td><td>0596-20-1105</td></tr><tr><td>●使用可能時間帯等：</td><td>9：00～22：00<br>12月29日～1月3日及び毎週火曜日、祝日は<br>休館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.710949642167,34.4804081526957</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>いせ市民活動センター南館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0037</td></tr><tr><td>●所在地：</td><td>伊勢市岩渕1-2-29</td></tr><tr><td>●電話番号：</td><td>0596-20-4385</td></tr><tr><td>●使用可能時間帯等：</td><td>9：00～22：00<br>（水曜日※・年末年始以外　　※水曜日が祝日の場合は翌日）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.70797330423,34.4879132250057</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>シンフォニアテクノロジー響ホール伊勢</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0037</td></tr><tr><td>●所在地：</td><td>伊勢市岩渕1-13-15</td></tr><tr><td>●電話番号：</td><td>0596-28-5105</td></tr><tr><td>●使用可能時間帯等：</td><td>8:30～22:00<br>12月29日～1月3日以外</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.712693885522,34.4885074859373</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立明倫保育所</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0073</td></tr><tr><td>●所在地：</td><td>伊勢市吹上2-11-42</td></tr><tr><td>●電話番号：</td><td>0596-28－6775</td></tr><tr><td>●使用可能時間帯等：</td><td>保育所開所時間内<br>月～金曜日　7：30～18：30<br>土曜日　7：30～16：30<br>日曜日・祝日及び12月29日から1月3日は閉所</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.71585159712,34.4900160663947</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立浜郷保育所</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0018</td></tr><tr><td>●所在地：</td><td>伊勢市黒瀬町1637-1</td></tr><tr><td>●電話番号：</td><td>0596-22-1964</td></tr><tr><td>●使用可能時間帯等：</td><td>保育所開所時間内<br>月～金曜日　7：30～18：00<br>土曜日　7：30～16：30<br>日曜日・祝日及び12月29日から1月3日は閉所</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.73713073728,34.4998532950662</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立しごうこども園</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0022</td></tr><tr><td>●所在地：</td><td>伊勢市一宇田町891-1</td></tr><tr><td>●電話番号：</td><td>0596-25-6160</td></tr><tr><td>●使用可能時間帯等：</td><td>保育所開所時間内<br>月～金曜日　7：30～18：00<br>土曜日　7：30～16：30<br>日曜日・祝日及び12月29日から1月3日は閉所</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.754083752196,34.4773022625797</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立保育所きらら館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0041</td></tr><tr><td>●所在地：</td><td>伊勢市常磐2-4-40</td></tr><tr><td>●電話番号：</td><td>0596-21-4555</td></tr><tr><td>●使用可能時間帯等：</td><td>保育所開所時間内<br>月～金曜日7：00～19：00<br>土曜日7：00～18：00<br>日曜日・祝日（休日保育）7：30～18：00<br>12月29日から1月3日は閉所</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.696701429957,34.4934609522414</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立保育所しらとり園</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0506</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町湯田359</td></tr><tr><td>●電話番号：</td><td>0596-22-2735</td></tr><tr><td>●使用可能時間帯等：</td><td>保育所開所時間内<br>月～土曜日　7：30～18：00<br>日曜日・祝日及び12月29日から1月3日は閉所</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.655334,34.508862</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立保育所ゆりかご園</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0505</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町本町444</td></tr><tr><td>●電話番号：</td><td>0596-22-2016</td></tr><tr><td>●使用可能時間帯等：</td><td>保育所開所時間内<br>月～土曜日　7：30～18：00<br>日曜日・祝日及び12月29日から1月3日は閉所</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.666314740159,34.5045702404406</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立御薗第二保育園</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0805</td></tr><tr><td>●所在地：</td><td>伊勢市御薗町高向731</td></tr><tr><td>●電話番号：</td><td>0596-28-7300</td></tr><tr><td>●使用可能時間帯等：</td><td>保育所開所時間内<br>月～土曜日　7：30～18：00<br>日曜日・祝日及び12月29日から1月3日は閉所</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.699057267369,34.5007476056638</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>杉の子学童ｸﾗﾌﾞ（支援の単位１）</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0015</td></tr><tr><td>●所在地：</td><td>伊勢市久世戸町5-1 修道小学校内</td></tr><tr><td>●電話番号：</td><td>0596-23-1076</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.723792541033,34.4813980982573</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>すみれ学童ｸﾗﾌﾞ</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0041</td></tr><tr><td>●所在地：</td><td>伊勢市常磐3-10-44　旧早修幼稚園</td></tr><tr><td>●電話番号：</td><td>0596-29-0804</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.695920100764,34.489314283909</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>明照こどもｸﾗﾌﾞ　楓</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0073</td></tr><tr><td>●所在地：</td><td>伊勢市吹上2-5-41</td></tr><tr><td>●電話番号：</td><td>090-5629-4439</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.713273081313,34.4913855214205</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>明照こどもｸﾗﾌﾞ　楪</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0073</td></tr><tr><td>●所在地：</td><td>伊勢市吹上2-7-10</td></tr><tr><td>●電話番号：</td><td>080-1563-7950</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.714381531037,34.4910788960272</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>ひまわり学童ｸﾗﾌﾞ</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0045</td></tr><tr><td>●所在地：</td><td>伊勢市旭町319　宮山小学校敷地内</td></tr><tr><td>●電話番号：</td><td>0596-28-9003</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.696859675337,34.473544800758</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>とよはま学童ｸﾗﾌﾞ</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>515-0505</td></tr><tr><td>●所在地：</td><td>伊勢市西豊浜町1760　旧豊浜西幼稚園</td></tr><tr><td>●電話番号：</td><td>0596-37-7071</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.693939930573,34.5206341036524</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>放課後児童ｸﾗﾌﾞﾘﾝﾄﾞﾊﾞｰｸﾞ佐八</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-1102</td></tr><tr><td>●所在地：</td><td>伊勢市佐八町2060</td></tr><tr><td>●電話番号：</td><td>0596-39-6802</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.662387069718,34.4629015349375</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>放課後児童ｸﾗﾌﾞﾘﾝﾄﾞﾊﾞｰｸﾞ四郷</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0014</td></tr><tr><td>●所在地：</td><td>伊勢市楠部町2484　旧四郷幼稚園</td></tr><tr><td>●電話番号：</td><td>0596-24-6700</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.737132668495,34.4746337096817</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>学童ｸﾗﾌﾞ ﾚｲﾝﾎﾞｰｷｯｽﾞ</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-1104</td></tr><tr><td>●所在地：</td><td>伊勢市上野町2908　旧沼木幼稚園</td></tr><tr><td>●電話番号：</td><td>0596-67-5272</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.656751478417,34.434836465308</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>藍ちゃんの家　厚生学童部第１</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0072</td></tr><tr><td>●所在地：</td><td>伊勢市宮後1-10-21</td></tr><tr><td>●電話番号：</td><td>0596-65-7252</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.704859419978,34.4902291373111</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>藍ちゃんの家　厚生学童部第２</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0071</td></tr><tr><td>●所在地：</td><td>伊勢市一之木2-1-17</td></tr><tr><td>●電話番号：</td><td>090-5851-3185</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.705984,34.494212</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>藍ちゃんの家　城田学童部</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0051</td></tr><tr><td>●所在地：</td><td>伊勢市上地町1537-4　旧城田幼稚園</td></tr><tr><td>●電話番号：</td><td>080-1622-5021</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.661417342497,34.4909896267823</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>放課後児童ｸﾗﾌﾞ 銀のｽﾌﾟｰﾝ</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0009</td></tr><tr><td>●所在地：</td><td>伊勢市河崎1-14-21</td></tr><tr><td>●電話番号：</td><td>0596-63-5682</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.711173930007,34.4973717245683</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>放課後児童ｸﾗﾌﾞ 第２銀のｽﾌﾟｰﾝ</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0009</td></tr><tr><td>●所在地：</td><td>伊勢市河崎1-11-18</td></tr><tr><td>●電話番号：</td><td>0596-63-7061</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.711906224554,34.4971765327424</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市二見放課後児童ｸﾗﾌﾞ</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0609</td></tr><tr><td>●所在地：</td><td>伊勢市二見町茶屋63-4</td></tr><tr><td>●電話番号：</td><td>070-2464-3083</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.775511699888,34.5052964731423</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>二見老人福祉センター</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0609</td></tr><tr><td>●所在地：</td><td>伊勢市二見町茶屋348</td></tr><tr><td>●電話番号：</td><td>0596-44-0830</td></tr><tr><td>●使用可能時間帯等：</td><td>開館時　9：00～17：00<br>（休館：日・祝・12/28～1/4）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.778575320777,34.5062105308873</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市小俣放課後児童ｸﾗﾌﾞ</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0503</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町元町662-1　小俣児童館内</td></tr><tr><td>●電話番号：</td><td>0596-24-8412</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.673076152801,34.5072182074767</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市明野放課後児童ｸﾗﾌﾞ</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0507</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町新村399-3　明野児童館内</td></tr><tr><td>●電話番号：</td><td>0596-23-0187</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.660963886897,34.5150948127654</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市あさま児童ｾﾝﾀｰ</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0021</td></tr><tr><td>●所在地：</td><td>伊勢市朝熊町1994-1</td></tr><tr><td>●電話番号：</td><td>0596-24-9156</td></tr><tr><td>●使用可能時間帯等：</td><td>火～日：9:00～17：00<br>（祝日の翌日及び12月29日から1月3日は<br>閉館）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.753734952617,34.477965582431</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市黒瀬児童ｾﾝﾀｰ</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0018</td></tr><tr><td>●所在地：</td><td>伊勢市黒瀬町1736-2</td></tr><tr><td>●電話番号：</td><td>0596-24-0182</td></tr><tr><td>●使用可能時間帯等：</td><td>月～土：9:00～17：00<br>（祝日及び12月29日から1月3日は閉館）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.735061735594,34.5004535248687</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>おおぞら児童園</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0018</td></tr><tr><td>●所在地：</td><td>伊勢市黒瀬町562-103</td></tr><tr><td>●電話番号：</td><td>0596-20-4755</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金：8：30～17:30<br>（祝日及び12月29日から1月3日を除く）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.733415716644,34.4930510516264</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>あけの学童クラブ</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0507</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町新村558-21</td></tr><tr><td>●電話番号：</td><td>0596-20-7166</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.66136927613,34.5168929121943</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>北浜放課後児童クラブ</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>515-0507</td></tr><tr><td>●所在地：</td><td>伊勢市村松町3280-6　旧北浜幼稚園</td></tr><tr><td>●電話番号：</td><td>070-8793-4420</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.691303479628,34.5434601854666</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>なないろ学童クラブ</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0026</td></tr><tr><td>●所在地：</td><td>伊勢市宇治浦田2-16-43</td></tr><tr><td>●電話番号：</td><td>070-1612-7716</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.722428798675,34.4685793583617</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>にこにこ学童クラブ</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0503</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町元町545</td></tr><tr><td>●電話番号：</td><td>0596-27-5307</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.674255,34.508057</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>放課後児童ｸﾗﾌﾞﾘﾝﾄﾞﾊﾞｰｸﾞ修道</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0027</td></tr><tr><td>●所在地：</td><td>伊勢市桜木町55番地1　旧さくらぎ保育所</td></tr><tr><td>●電話番号：</td><td>0596-63-6577</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.717389839795,34.4733089984106</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>にこにこ学童クラブ小俣第２</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0503</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町元町554番地1</td></tr><tr><td>●電話番号：</td><td>0596-63-8815</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.674456578584,34.5086411782535</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>にこにこ学童クラブ前山</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0044</td></tr><tr><td>●所在地：</td><td>伊勢市前山町1351番地72</td></tr><tr><td>●電話番号：</td><td>0596-27-5307</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.686947947737,34.4698751768359</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>市営庭球場</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0014</td></tr><tr><td>●所在地：</td><td>伊勢市楠部町89-1</td></tr><tr><td>●電話番号：</td><td>0596-28-6386</td></tr><tr><td>●使用可能時間帯等：</td><td>8:30～17:15(4～10月は21:00まで・ナイター予約が無い場合は17:15で閉鎖）<br>12月29日～1月3日は休館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.722852588845,34.4824673155656</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>ダイムスタジアム伊勢（倉田山公園野球場）</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0014</td></tr><tr><td>●所在地：</td><td>伊勢市楠部町159-1</td></tr><tr><td>●電話番号：</td><td>0596-22-4323</td></tr><tr><td>●使用可能時間帯等：</td><td>8:30～22:00<br>(ナイター予約が無い場合は17：15で閉鎖）<br>12月29日～1月3日は休館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.733865737915,34.4896151240981</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢フットボールヴィレッジ</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0021</td></tr><tr><td>●所在地：</td><td>伊勢市朝熊町4383-426</td></tr><tr><td>●電話番号：</td><td>0596-63-8898</td></tr><tr><td>●使用可能時間帯等：</td><td>9:00～22:00<br>(ナイター予約が無い場合は17：15で閉鎖）<br>12月29日～1月3日は休館</td></tr><tr><td>●設置台数：</td><td>3</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.77164390865,34.4908166972212</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>小俣児童体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>515-0511</td></tr><tr><td>●所在地：</td><td>伊勢市野村町5-3</td></tr><tr><td>●電話番号：</td><td>0596-37-2246</td></tr><tr><td>●使用可能時間帯等：</td><td>火～日　9:00～22:00<br>12月29日～1月3日は休館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.664466637228,34.5287442442781</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>小俣総合体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0507</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町新村401-1</td></tr><tr><td>●電話番号：</td><td>0596-27-5491</td></tr><tr><td>●使用可能時間帯等：</td><td>9:00～22:00<br>12月29日～1月3日は休館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.661162960372,34.5154793655145</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>御薗Ｂ＆Ｇ海洋センター</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0806</td></tr><tr><td>●所在地：</td><td>伊勢市御薗町上條1173-1</td></tr><tr><td>●電話番号：</td><td>0596-36-4511</td></tr><tr><td>●使用可能時間帯等：</td><td>火～日　9:00～22:00<br>12月29日～1月3日は休館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.713343244882,34.513691180223</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>市民武道館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0041</td></tr><tr><td>●所在地：</td><td>伊勢市常磐3-8-9</td></tr><tr><td>●電話番号：</td><td>0596-22-7891</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　6:00～21:00（施設使用時のみ）<br>12月29日～1月3日は休館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.695855295638,34.4898170541848</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市生涯学習センター</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-8520</td></tr><tr><td>●所在地：</td><td>伊勢市黒瀬町562-12</td></tr><tr><td>●電話番号：</td><td>0596-21-0900</td></tr><tr><td>●使用可能時間帯等：</td><td>8:30～22:00<br>12月29日～1月3日及び第1,3,5月曜日は休館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.732374217801,34.4932547424321</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>小俣農村環境改善センター</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0505</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町本町3</td></tr><tr><td>●電話番号：</td><td>0596-25-5021</td></tr><tr><td>●使用可能時間帯等：</td><td>火～日　8:30～22:00<br>12月28日～1月4日及び毎週月曜日は休館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.670344591627,34.5060036021233</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢図書館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0076</td></tr><tr><td>●所在地：</td><td>伊勢市八日市場町13-35</td></tr><tr><td>●電話番号：</td><td>0596-21-0077</td></tr><tr><td>●使用可能時間帯等：</td><td>9:00～19:00<br>12月29日～1月4日及び毎週水曜日、毎月第２金曜日は休館<br>（但し特別休館あり）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.698193591912,34.4896689349723</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>小俣図書館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0505</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町本町2</td></tr><tr><td>●電話番号：</td><td>0596-29-3900</td></tr><tr><td>●使用可能時間帯等：</td><td>9:00～19:00<br>12月29日～1月4日及び毎週火曜日、毎月第２金曜日は休館<br>（但し特別休館あり）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.671127742799,34.5064207326443</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>みなとふれあいセンター</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0004</td></tr><tr><td>●所在地：</td><td>伊勢市神社港262-1</td></tr><tr><td>●電話番号：</td><td>0596-35-0811</td></tr><tr><td>●使用可能時間帯等：</td><td>月～土：8：30～17：00<br>12月29日～1月3日は休館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.735817527915,34.5127875050318</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市ハートプラザみその</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0804</td></tr><tr><td>●所在地：</td><td>伊勢市御薗町長屋2767</td></tr><tr><td>●電話番号：</td><td>0596-22-6602</td></tr><tr><td>●使用可能時間帯等：</td><td>8：30～22：00<br>祝日、12月29日～1月3日は休館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.707673270998,34.5095364566133</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市小俣保健センター</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0503</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町元町536</td></tr><tr><td>●電話番号：</td><td>0596-21-5557<br>(福祉総務課）</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金：8：30～17：00<br>12月29日～1月3日は休館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.675223851862,34.5078095893997</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>郷の恵　風輪（伊勢市都市農山村交流促進施設）</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-1106</td></tr><tr><td>●所在地：</td><td>伊勢市横輪町586番地</td></tr><tr><td>●電話番号：</td><td>0596-39-1741</td></tr><tr><td>●使用可能時間帯等：</td><td>9:00～17:00<br>月、木、年末年始を除く</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.672066410219,34.40543351976</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>民話の駅　蘇民（伊勢市二見地域農産物等活用型総合交流促進施設）</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0601</td></tr><tr><td>●所在地：</td><td>伊勢市二見町松下1335番地</td></tr><tr><td>●電話番号：</td><td>0596-44-1000</td></tr><tr><td>●使用可能時間帯等：</td><td>9:00～17:00　8/14、8/15、年始を除く</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.797228208042,34.500245209307</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>サンファームおばた</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0506</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町湯田55番地</td></tr><tr><td>●電話番号：</td><td>0596-26-0831</td></tr><tr><td>●使用可能時間帯等：</td><td>10:00～16:00<br>毎月第3水曜日、年末年始を除く</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.656579550757,34.5099656359573</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>市立伊勢総合病院</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0014</td></tr><tr><td>●所在地：</td><td>伊勢市楠部町3038</td></tr><tr><td>●電話番号：</td><td>0596-23-5111</td></tr><tr><td>●使用可能時間帯等：</td><td>365日 24時間</td></tr><tr><td>●設置台数：</td><td>7</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.728003504904,34.4826748318657</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢広域環境組合　粗大ごみ処理施設</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>515-0505</td></tr><tr><td>●所在地：</td><td>伊勢市西豊浜町653番地</td></tr><tr><td>●電話番号：</td><td>0596-37-1218</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　8:30～16:45<br>土日祝・年末年始・ゴールデンウィーク等長期休みは不可</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.675618886947,34.5202117384072</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢広域環境組合　可燃ごみ処理施設</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>515-0505</td></tr><tr><td>●所在地：</td><td>伊勢市西豊浜町653番地</td></tr><tr><td>●電話番号：</td><td>0596-37-1218</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　8:30～16:45<br>土日祝・年末年始・ゴールデンウィーク等長期休みは不可</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.675800096491,34.5208825860211</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢広域環境組合　リサイクルプラザ</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>515-0505</td></tr><tr><td>●所在地：</td><td>伊勢市西豊浜町653番地</td></tr><tr><td>●電話番号：</td><td>0596-38-2800</td></tr><tr><td>●使用可能時間帯等：</td><td>9:30～15:30 　<br>年末年始・ゴールデンウィーク等長期休みは不可</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.675490140587,34.5198925338112</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市防災センター</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0014</td></tr><tr><td>●所在地：</td><td>伊勢市楠部町159番地1</td></tr><tr><td>●電話番号：</td><td>0596-25-5719</td></tr><tr><td>●使用可能時間帯等：</td><td>9：00～17：00<br>12/28～1/4は休館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.734414732272,34.4877566108445</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>はまっこ学童ｸﾗﾌﾞ</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0001</td></tr><tr><td>●所在地：</td><td>伊勢市大湊町1282番地　みなと小学校内</td></tr><tr><td>●電話番号：</td><td>0596-36-3755</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.734032034874,34.518283673874</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立御薗小学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0804</td></tr><tr><td>●所在地：</td><td>伊勢市御薗町長屋1074-9</td></tr><tr><td>●電話番号：</td><td>0596-22-3414</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>2</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.708673,34.508027</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立御薗小学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0804</td></tr><tr><td>●所在地：</td><td>伊勢市御薗町長屋1074-9</td></tr><tr><td>●電話番号：</td><td>0596-22-3414</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.709520079175,34.5086897148621</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市御薗放課後児童ｸﾗﾌﾞ</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0804</td></tr><tr><td>●所在地：</td><td>伊勢市御薗町長屋2794-1　御薗こどもﾌﾟﾗｻﾞ内</td></tr><tr><td>●電話番号：</td><td>070-2464-3081</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.708348489983,34.5093262185005</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市倉庫及び水防倉庫</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-1102</td></tr><tr><td>●所在地：</td><td>伊勢市佐八町1069-3</td></tr><tr><td>●電話番号：</td><td>0596-39-1913</td></tr><tr><td>●使用可能時間帯等：</td><td>開庁日　8：30～17：15</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.66896700859,34.45707090009</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立御薗第一保育園</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0804</td></tr><tr><td>●所在地：</td><td>伊勢市御薗町長屋416-1</td></tr><tr><td>●電話番号：</td><td>0596-22-1574</td></tr><tr><td>●使用可能時間帯等：</td><td>保育所開所時間内<br>月～土曜日　7：30～18：00<br>日曜日・祝日及び12月29日から1月3日は閉所</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.708422303199,34.508479564661</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>朝熊市民館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0021</td></tr><tr><td>●所在地：</td><td>伊勢市朝熊町1677-11</td></tr><tr><td>●電話番号：</td><td>0596-25-1602</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　8：30～17：00</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.757318973541,34.4800994960414</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立二見浦小学校・二見中学校</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0611</td></tr><tr><td>●所在地：</td><td>伊勢市二見町光の街907-7</td></tr><tr><td>●電話番号：</td><td>0596-42-1120（二見浦小）<br>0596-42-1118（二見中）</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　8：15～16：40</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.759529113769,34.4984399871537</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立ふたみ保育園</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0611</td></tr><tr><td>●所在地：</td><td>伊勢市二見町光の街907-7</td></tr><tr><td>●電話番号：</td><td>0596-63-9977</td></tr><tr><td>●使用可能時間帯等：</td><td>保育所開所時間内<br>月～金曜日　7：30～19：00<br>土曜日7：30～18：00<br>日曜日、祝日及び12月29日から1月3日は閉所</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.760365962982,34.4989174581185</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>二見放課後児童クラブ</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0611</td></tr><tr><td>●所在地：</td><td>伊勢市二見町光の街907-7<br>二見浦小学校内</td></tr><tr><td>●電話番号：</td><td>070-2464-3083</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.760215759277,34.4981039874281</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>市営内宮前駐車場（管理棟）</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0024</td></tr><tr><td>●所在地：</td><td>伊勢市宇治今在家町<br>市営内宮前駐車場管理棟内</td></tr><tr><td>●電話番号：</td><td>0596-28-1150</td></tr><tr><td>●使用可能時間帯等：</td><td>365日 24時間</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.721768975257,34.4590347923163</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>市営宇治駐車場（管理棟）</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0026</td></tr><tr><td>●所在地：</td><td>伊勢市宇治浦田1丁目<br>市営宇治駐車場管理棟内</td></tr><tr><td>●電話番号：</td><td>0596-25-1114</td></tr><tr><td>●使用可能時間帯等：</td><td>365日 24時間</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.723646521568,34.4667218360402</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市休日・夜間応急診療所　（内科・小児科）</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0076</td></tr><tr><td>●所在地：</td><td>伊勢市八日市場町13-1</td></tr><tr><td>●電話番号：</td><td>0596-25-8795</td></tr><tr><td>●使用可能時間帯等：</td><td>毎夜間（19:30～22：00）<br>日・祝日・12/31～1/3の昼間<br>（10:00～12:00、13:00～17:00）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.698807066843,34.4897722212046</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市休日・夜間応急診療所　（歯科）</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0076</td></tr><tr><td>●所在地：</td><td>伊勢市八日市場町13-1</td></tr><tr><td>●電話番号：</td><td>0596-27-0829</td></tr><tr><td>●使用可能時間帯等：</td><td>日・祝日・12/31～1/3の昼間<br>（10:00～12:00、13:00～17:00）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.699042886102,34.4897615201707</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>放課後児童クラブ鷲ヶ浜ＬＢ</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0001</td></tr><tr><td>●所在地：</td><td>伊勢市大湊町1074-1</td></tr><tr><td>●電話番号：</td><td>070-1666-3456</td></tr><tr><td>●使用可能時間帯等：</td><td>放課後児童クラブ開設日時</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.742337978357,34.5279727398686</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市健康福祉ステーション６階</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0072</td></tr><tr><td>●所在地：</td><td>伊勢市宮後１丁目１番３５号　MiraISE（ミライセ）内</td></tr><tr><td>●電話番号：</td><td>0596-21-5712</td></tr><tr><td>●使用可能時間帯等：</td><td>8：30～17：15　月曜、祝日、12/29～1/3は閉所</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.708315014839,34.4919186979669</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市健康福祉ステーション７階</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0072</td></tr><tr><td>●所在地：</td><td>伊勢市宮後１丁目１番３５号　MiraISE（ミライセ）内</td></tr><tr><td>●電話番号：</td><td>0596-21-5712</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　8：30～17：15（月曜日は19：00まで）　　土日祝日、12/29～1/3は閉所</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.707998514175,34.4919363835086</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市健康福祉ステーション５階</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0072</td></tr><tr><td>●所在地：</td><td>伊勢市宮後１丁目１番３５号　MiraISE（ミライセ）内</td></tr><tr><td>●電話番号：</td><td>0596-21-5712</td></tr><tr><td>●使用可能時間帯等：</td><td>月～金　8：30～17：15（月曜日は19：00まで）　　土日祝日、12/29～1/3は閉所</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.708170175552,34.4918081632462</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>大仏山公園スポーツセンター</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0507</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町新村605</td></tr><tr><td>●電話番号：</td><td>0596-27-5491</td></tr><tr><td>●使用可能時間帯等：</td><td>9：00～22：00　12月29日～1月3日は休館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.655781269073,34.5186593719697</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市立二見浦小学校・二見中学校　体育館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0611</td></tr><tr><td>●所在地：</td><td>伊勢市二見町光の街907-7</td></tr><tr><td>●電話番号：</td><td>0596-42-1118</td></tr><tr><td>●使用可能時間帯等：</td><td>月～日　8：15～22：00（開館時のみ）</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.759325265884,34.4976884069469</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>尾崎咢堂記念館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0052</td></tr><tr><td>●所在地：</td><td>伊勢市川端町97-2</td></tr><tr><td>●電話番号：</td><td>0596-22-3198</td></tr><tr><td>●使用可能時間帯等：</td><td>9：00～16：30　12月29日～1月3日、毎週月曜日（祝日の場合は翌日）は休館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.682410240173,34.4904154132118</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢川崎商人館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0009</td></tr><tr><td>●所在地：</td><td>伊勢市川崎2丁目25番32号</td></tr><tr><td>●電話番号：</td><td>0596-22-4810</td></tr><tr><td>●使用可能時間帯等：</td><td>9：30～17：00　12月29日～1月3日、毎週火曜日（祝日の場合は翌日）は休館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.717547178268,34.4965919719057</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>山田奉行所記念館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0806</td></tr><tr><td>●所在地：</td><td>伊勢市御薗町上條1602</td></tr><tr><td>●電話番号：</td><td>0596-36-8833</td></tr><tr><td>●使用可能時間帯等：</td><td>9：00～16：00　12月29日～1月3日、毎週火曜日（祝日の場合は翌日）は休館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.716066598892,34.5212317534133</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市小俣総合支所</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0592</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町元町540</td></tr><tr><td>●電話番号：</td><td>0596-22-7858</td></tr><tr><td>●使用可能時間帯等：</td><td>開庁日　8：30～17：15</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.67495906353,34.5075026267425</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢市水道管理センター（中須水源地）</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0053</td></tr><tr><td>●所在地：</td><td>伊勢市中須町1961</td></tr><tr><td>●電話番号：</td><td>0596-23-3360</td></tr><tr><td>●使用可能時間帯等：</td><td>365日　24時間</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.66970193386,34.4782024311291</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>二見生涯学習センター</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0609</td></tr><tr><td>●所在地：</td><td>伊勢市二見町茶屋111-1</td></tr><tr><td>●電話番号：</td><td>0596-44-1832</td></tr><tr><td>●使用可能時間帯等：</td><td>火～日　8:30～22:00（施設使用時のみ）<br>12月29日～1月3日及び毎週月曜日は休館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.7773205317,34.5062880239827</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>離宮の湯</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0592</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町元町536</td></tr><tr><td>●電話番号：</td><td>0596-22-0548</td></tr><tr><td>●使用可能時間帯等：</td><td>水～月14：00～22：00　※火曜日（祝日の場合は翌日）及び1/1、1/2は休館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.67532,34.50767</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>伊勢古市参宮街道資料館</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>516-0034</td></tr><tr><td>●所在地：</td><td>伊勢市中之町69</td></tr><tr><td>●電話番号：</td><td>0596-22-8410</td></tr><tr><td>●使用可能時間帯等：</td><td>9：00～16：30　12月29日～1月3日、毎週月曜日（祝日の場合は翌日）、休日の翌日（ただしその日が日曜日の場合は除く）は休館</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.72033,34.47627</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>上下水道部庁舎</name>
+<description><![CDATA[ <table><tr><td>●郵便番号：</td><td>519-0502</td></tr><tr><td>●所在地：</td><td>伊勢市小俣町相合161番地</td></tr><tr><td>●電話番号：</td><td>0596-65-5276</td></tr><tr><td>●使用可能時間帯等：</td><td>開庁日　8：30～17：15</td></tr><tr><td>●設置台数：</td><td>1</td></tr></table> ]]></description>
+<styleUrl>#PolyStyle1</styleUrl>
+<Point>
+<coordinates>136.67528,34.51795</coordinates>
+</Point>
+</Placemark>
+</Document>
+</kml>

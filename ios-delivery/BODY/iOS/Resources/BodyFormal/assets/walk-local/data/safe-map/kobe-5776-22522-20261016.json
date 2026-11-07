@@ -1,0 +1,344 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5776-22522-20261016",
+  "lat": 34.65927675858014,
+  "lng": 135.1342629410515,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/84dd417569d64c2e",
+      "lat": 34.6596810018991,
+      "lng": 135.135172368672,
+      "category": "SAFE",
+      "name": "神戸市営地下鉄　板宿駅",
+      "address": "神戸市須磨区大黒町2丁目",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区大黒町2丁目",
+      "district": "須磨区",
+      "sourceRow": 25,
+      "sourceRows": [
+        25
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/fd8c6805a97ee255",
+      "lat": 34.6586442212143,
+      "lng": 135.13367590132,
+      "category": "SAFE",
+      "name": "神戸市　須磨区役所",
+      "address": "神戸市須磨区大黒町4丁目1－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区大黒町4丁目1－1",
+      "district": "須磨区",
+      "sourceRow": 34,
+      "sourceRows": [
+        34
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3e0f25732e633daf",
+      "lat": 34.657676727665,
+      "lng": 135.132912855203,
+      "category": "SAFE",
+      "name": "神戸市立　太田中学校",
+      "address": "神戸市須磨区大黒町5-1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区大黒町5-1-1",
+      "district": "須磨区",
+      "sourceRow": 38,
+      "sourceRows": [
+        38
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/97af2fdc288b6a81",
+      "lat": 34.6601708308033,
+      "lng": 135.134033155795,
+      "category": "SAFE",
+      "name": "山陽　板宿駅",
+      "address": "神戸市須磨区平田町3丁目3－10",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区平田町3丁目3－10",
+      "district": "須磨区",
+      "sourceRow": 52,
+      "sourceRows": [
+        52
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7e52b4e4717bc03e",
+      "lat": 34.6614969182241,
+      "lng": 135.134780912839,
+      "category": "SAFE",
+      "name": "神戸信用金庫　板宿支店",
+      "address": "神戸市須磨区飛松町1丁目1－6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区飛松町1丁目1－6",
+      "district": "須磨区",
+      "sourceRow": 81,
+      "sourceRows": [
+        81
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5c72eb0eb3d41f34",
+      "lat": 34.6564791432644,
+      "lng": 135.135731734515,
+      "category": "SAFE",
+      "name": "播州信用金庫　神戸西支店",
+      "address": "神戸市須磨区大池町4丁目1－37",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区大池町4丁目1－37",
+      "district": "須磨区",
+      "sourceRow": 82,
+      "sourceRows": [
+        82
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e1c0773f0cbd41d2",
+      "lat": 34.6595299279147,
+      "lng": 135.135342599912,
+      "category": "SAFE",
+      "name": "三井住友銀行　板宿支店",
+      "address": "神戸市須磨区大黒町2-1-9",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区大黒町2-1-9",
+      "district": "須磨区",
+      "sourceRow": 86,
+      "sourceRows": [
+        86
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/554a387184ac56e9",
+      "lat": 34.659280489918,
+      "lng": 135.135498733912,
+      "category": "SAFE",
+      "name": "みなと銀行　板宿支店",
+      "address": "神戸市須磨区戎町2－2－6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区戎町2－2－6",
+      "district": "須磨区",
+      "sourceRow": 92,
+      "sourceRows": [
+        92
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e119a65b9db4391d",
+      "lat": 34.657676727665,
+      "lng": 135.132912855203,
+      "category": "SAFE",
+      "name": "神戸市立　丸山中学校西野分校",
+      "address": "神戸市須磨区大黒町5丁目1－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区大黒町5丁目1－1",
+      "district": "須磨区",
+      "sourceRow": 119,
+      "sourceRows": [
+        119
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/aaa76afae050d3b5",
+      "lat": 34.6584176320941,
+      "lng": 135.133307870375,
+      "category": "SAFE",
+      "name": "神戸市立　須磨保育所",
+      "address": "神戸市須磨区大黒町4丁目1－2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区大黒町4丁目1－2",
+      "district": "須磨区",
+      "sourceRow": 124,
+      "sourceRows": [
+        124
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f8b6c62b7ab2029c",
+      "lat": 34.6598784368764,
+      "lng": 135.134958101581,
+      "category": "SAFE",
+      "name": "神戸市立　大黒児童館",
+      "address": "神戸市須磨区大黒町2丁目2－12",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区大黒町2丁目2－12",
+      "district": "須磨区",
+      "sourceRow": 127,
+      "sourceRows": [
+        127
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3a40d17a61148acb",
+      "lat": 34.6598784368764,
+      "lng": 135.134958101581,
+      "category": "SAFE",
+      "name": "大黒地域福祉センター",
+      "address": "神戸市須磨区大黒町2丁目2－12",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区大黒町2丁目2－12",
+      "district": "須磨区",
+      "sourceRow": 158,
+      "sourceRows": [
+        158
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/912a5d830b7813f5",
+      "lat": 34.6614346078098,
+      "lng": 135.13220315563,
+      "category": "SAFE",
+      "name": "アキヨシメディカルクリニック",
+      "address": "神戸市須磨区前池町3丁目3－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区前池町3丁目3－1",
+      "district": "須磨区",
+      "sourceRow": 170,
+      "sourceRows": [
+        170
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6fafc466e9b0a681",
+      "lat": 34.6596769207525,
+      "lng": 135.133527333416,
+      "category": "SAFE",
+      "name": "平田幼稚園",
+      "address": "神戸市須磨区平田町3丁目2-4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区平田町3丁目2-4",
+      "district": "須磨区",
+      "sourceRow": 179,
+      "sourceRows": [
+        179
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/115f32b55685927a",
+      "lat": 34.6579424346204,
+      "lng": 135.132025044166,
+      "category": "SAFE",
+      "name": "太田共同保育園（社会福祉法人 おおた）",
+      "address": "神戸市須磨区大黒町5丁目2-13",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区大黒町5丁目2-13",
+      "district": "須磨区",
+      "sourceRow": 200,
+      "sourceRows": [
+        200
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ea388750db55ca26",
+      "lat": 34.6591813757533,
+      "lng": 135.137458088274,
+      "category": "SAFE",
+      "name": "いたやど保育園（社会福祉法人　出合福祉会）",
+      "address": "神戸市須磨区大田町1丁目3-24",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区大田町1丁目3-24",
+      "district": "須磨区",
+      "sourceRow": 204,
+      "sourceRows": [
+        204
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3a7fa591381bc51f",
+      "lat": 34.6606590625118,
+      "lng": 135.133971185481,
+      "category": "SAFE",
+      "name": "JOYFIT24神戸板宿",
+      "address": "神戸市須磨区平田町2丁目3番地板宿グリーンタウン２階",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区平田町2丁目3番地板宿グリーンタウン２階",
+      "district": "須磨区",
+      "sourceRow": 255,
+      "sourceRows": [
+        255
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

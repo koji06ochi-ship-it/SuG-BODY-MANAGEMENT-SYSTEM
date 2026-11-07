@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5779-22515-20261016",
+  "lat": 34.678024280033256,
+  "lng": 135.09401718803448,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/9faa32e24c42dd76",
+      "lat": 34.6795075860199,
+      "lng": 135.094550860435,
+      "category": "SAFE",
+      "name": "神戸市営地下鉄　名谷駅",
+      "address": "神戸市須磨区中落合2丁目3－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区中落合2丁目3－1",
+      "district": "須磨区",
+      "sourceRow": 16,
+      "sourceRows": [
+        16
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/57f9976e50b7bdfc",
+      "lat": 34.6785330461277,
+      "lng": 135.095054889647,
+      "category": "SAFE",
+      "name": "㈱こうべ未来都市機構　須磨パティオ専門店",
+      "address": "神戸市須磨区中落合2丁目2－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区中落合2丁目2－1",
+      "district": "須磨区",
+      "sourceRow": 27,
+      "sourceRows": [
+        27
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b3fe6a09a01ba191",
+      "lat": 34.6781377063681,
+      "lng": 135.093694461442,
+      "category": "SAFE",
+      "name": "神戸市　須磨区役所　北須磨支所",
+      "address": "神戸市須磨区中落合2丁目2番6号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区中落合2丁目2番6号",
+      "district": "須磨区",
+      "sourceRow": 35,
+      "sourceRows": [
+        35
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ff593759623c8eef",
+      "lat": 34.6743928550668,
+      "lng": 135.091190186741,
+      "category": "SAFE",
+      "name": "神戸市立　竜が台小学校",
+      "address": "神戸市須磨区竜が台6丁目15番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区竜が台6丁目15番1号",
+      "district": "須磨区",
+      "sourceRow": 77,
+      "sourceRows": [
+        77
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a75b10530cbe8c1c",
+      "lat": 34.6783166074453,
+      "lng": 135.094270321308,
+      "category": "SAFE",
+      "name": "エス・パティオスポーツクラブ",
+      "address": "神戸市須磨区中落合2丁目2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区中落合2丁目2",
+      "district": "須磨区",
+      "sourceRow": 79,
+      "sourceRows": [
+        79
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/95c2c29b017e0904",
+      "lat": 34.6781377063681,
+      "lng": 135.093694461442,
+      "category": "SAFE",
+      "name": "三井住友銀行　北須磨支店",
+      "address": "神戸市須磨区中落合2-2-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区中落合2-2-5",
+      "district": "須磨区",
+      "sourceRow": 85,
+      "sourceRows": [
+        85
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/263c17643682872f",
+      "lat": 34.6799535866786,
+      "lng": 135.095765513461,
+      "category": "SAFE",
+      "name": "名谷みどり保育園（社会福祉法人　翠福社会）",
+      "address": "神戸市須磨区中落合2丁目3-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区中落合2丁目3-2",
+      "district": "須磨区",
+      "sourceRow": 87,
+      "sourceRows": [
+        87
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/42a1249674785f88",
+      "lat": 34.6781377063681,
+      "lng": 135.093694461442,
+      "category": "SAFE",
+      "name": "みなと銀行　　須磨ニュータウン",
+      "address": "神戸市須磨区中落合2－2－5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区中落合2－2－5",
+      "district": "須磨区",
+      "sourceRow": 94,
+      "sourceRows": [
+        94
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7effa7944170c779",
+      "lat": 34.6795075860199,
+      "lng": 135.094550860435,
+      "category": "SAFE",
+      "name": "新原歯科矯正歯科クリニック",
+      "address": "神戸市須磨区中落合2丁目3－1名谷駅2階",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区中落合2丁目3－1名谷駅2階",
+      "district": "須磨区",
+      "sourceRow": 118,
+      "sourceRows": [
+        118
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/296aafea11c88194",
+      "lat": 34.6762783699296,
+      "lng": 135.093698100801,
+      "category": "SAFE",
+      "name": "神戸市立　竜が台保育所",
+      "address": "神戸市須磨区竜が台1丁目11",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区竜が台1丁目11",
+      "district": "須磨区",
+      "sourceRow": 125,
+      "sourceRows": [
+        125
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3690444d3dc9c6c8",
+      "lat": 34.6781377063681,
+      "lng": 135.093694461442,
+      "category": "SAFE",
+      "name": "街角の年金相談センター北須磨",
+      "address": "神戸市須磨区中落合2-2-5 名谷センタービル7階",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区中落合2-2-5 名谷センタービル7階",
+      "district": "須磨区",
+      "sourceRow": 195,
+      "sourceRows": [
+        195
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3a9bfff8d2aa9d60",
+      "lat": 34.6783912559958,
+      "lng": 135.095690174671,
+      "category": "SAFE",
+      "name": "ダイエー名谷店",
+      "address": "神戸市須磨区中落合2丁目2-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区中落合2丁目2-2",
+      "district": "須磨区",
+      "sourceRow": 224,
+      "sourceRows": [
+        224
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f03598e3f57f397e",
+      "lat": 34.6775636847928,
+      "lng": 135.092069408545,
+      "category": "SAFE",
+      "name": "コジマ×ビックカメラ名谷店",
+      "address": "神戸市須磨区西落合1丁目1-11",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区西落合1丁目1-11",
+      "district": "須磨区",
+      "sourceRow": 251,
+      "sourceRows": [
+        251
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3ebda7ba50b5df48",
+      "lat": 34.6774513029618,
+      "lng": 135.09419550626,
+      "category": "SAFE",
+      "name": "名谷フォレスト保育園",
+      "address": "神戸市須磨区中落合2丁目1番地19",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区中落合2丁目1番地19",
+      "district": "須磨区",
+      "sourceRow": 254,
+      "sourceRows": [
+        254
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a828bc6c7607c7c1",
+      "lat": 34.6779174939883,
+      "lng": 135.094444152445,
+      "category": "SAFE",
+      "name": "大丸須磨店",
+      "address": "神戸市須磨区中落合2丁目2番地4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区中落合2丁目2番地4",
+      "district": "須磨区",
+      "sourceRow": 256,
+      "sourceRows": [
+        256
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "otsu-5831-22648-20261016",
+  "lat": 34.989601875,
+  "lng": 135.890719775,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "大津市",
+  "source": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+  "sourceUrl": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/999caef4-7e90-4fd2-98eb-fd94368e9a2f/resource/3e5b513e-de51-4459-af70-6fda94e1bed3/download/od405902026022700200.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2025-03-12",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "7899826cf95c365a07c87b3ad05aa2aa7d4adeb440a2c57269c84f98c1d85ea8",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/otsu/aed/ce192f2b99737de3",
+      "lat": 34.99195778,
+      "lng": 135.8907144,
+      "category": "SAFE",
+      "name": "滋賀県立膳所高等学校",
+      "address": "大津市膳所二丁目11番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市膳所二丁目11番1号",
+      "district": "大津市",
+      "sourceRow": 261,
+      "sourceRows": [
+        261
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/6cf0944c76a292c3",
+      "lat": 34.98843472,
+      "lng": 135.8910825,
+      "category": "SAFE",
+      "name": "大津市立膳所小学校",
+      "address": "大津市中庄二丁目8番37号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市中庄二丁目8番37号",
+      "district": "大津市",
+      "sourceRow": 268,
+      "sourceRows": [
+        268
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/422becce4be1e792",
+      "lat": 34.98740917,
+      "lng": 135.8914014,
+      "category": "SAFE",
+      "name": "大津市立膳所幼稚園",
+      "address": "大津市中庄二丁目6番5号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市中庄二丁目6番5号",
+      "district": "大津市",
+      "sourceRow": 270,
+      "sourceRows": [
+        270
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/db38fd53fb14d048",
+      "lat": 34.99060583,
+      "lng": 135.8896808,
+      "category": "SAFE",
+      "name": "特別養護老人ホーム　風流里",
+      "address": "大津市相模町10番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市相模町10番1号",
+      "district": "大津市",
+      "sourceRow": 271,
+      "sourceRows": [
+        271
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5774-22510-20261016",
+  "lat": 34.64828643236633,
+  "lng": 135.06411796209366,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/803d3d6611e636b2",
+      "lat": 34.6493284941781,
+      "lng": 135.063600189383,
+      "category": "SAFE",
+      "name": "神戸市立　福田中学校",
+      "address": "神戸市垂水区名谷町猿倉254",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区名谷町猿倉254",
+      "district": "垂水区",
+      "sourceRow": 282,
+      "sourceRows": [
+        282
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9a5eb3f2766f0ada",
+      "lat": 34.6493284941781,
+      "lng": 135.063600189383,
+      "category": "SAFE",
+      "name": "オービー・ホーム",
+      "address": "神戸市垂水区名谷町猿倉273－7",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区名谷町猿倉273－7",
+      "district": "垂水区",
+      "sourceRow": 292,
+      "sourceRows": [
+        292
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/89cd335f07a65b8d",
+      "lat": 34.6462023087428,
+      "lng": 135.065153507515,
+      "category": "SAFE",
+      "name": "JA兵庫六甲　垂水支店",
+      "address": "神戸市垂水区向陽3－1－27",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区向陽3－1－27",
+      "district": "垂水区",
+      "sourceRow": 294,
+      "sourceRows": [
+        294
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

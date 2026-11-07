@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5812-22533-20261016",
+  "lat": 34.872489559179336,
+  "lng": 135.20363739452236,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/348393ed2b39165e",
+      "lat": 34.8726182993481,
+      "lng": 135.203680984338,
+      "category": "SAFE",
+      "name": "神戸市立　長尾幼稚園",
+      "address": "神戸市北区長尾町宅原130",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区長尾町宅原130",
+      "district": "北区",
+      "sourceRow": 2350,
+      "sourceRows": [
+        2350
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e57d0a7fbc7a4b37",
+      "lat": 34.8722320788418,
+      "lng": 135.203550214891,
+      "category": "SAFE",
+      "name": "長尾地域福祉センター",
+      "address": "神戸市北区長尾町上津194-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区長尾町上津194-1",
+      "district": "北区",
+      "sourceRow": 2389,
+      "sourceRows": [
+        2389
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a137b96d887ef5cc",
+      "lat": 34.8726182993481,
+      "lng": 135.203680984338,
+      "category": "SAFE",
+      "name": "神戸市立　長尾児童館",
+      "address": "神戸市北区長尾町宅原130",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区長尾町宅原130",
+      "district": "北区",
+      "sourceRow": 2467,
+      "sourceRows": [
+        2467
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

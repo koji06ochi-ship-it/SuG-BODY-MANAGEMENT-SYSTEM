@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5739-22776-20261016",
+  "lat": 34.4351733164301,
+  "lng": 136.6588777726015,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/32f0f1e99cdd1fd0",
+      "lat": 34.4355101675522,
+      "lng": 136.661004066786,
+      "category": "SAFE",
+      "name": "沼木地区コミュニティセンター",
+      "address": "伊勢市上野町1215-1",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市上野町1215-1",
+      "sourceRow": 11,
+      "sourceRows": [
+        11
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/abb655de31d96eec",
+      "lat": 34.434836465308,
+      "lng": 136.656751478417,
+      "category": "SAFE",
+      "name": "学童ｸﾗﾌﾞ ﾚｲﾝﾎﾞｰｷｯｽﾞ",
+      "address": "伊勢市上野町2908　旧沼木幼稚園",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市上野町2908　旧沼木幼稚園",
+      "sourceRow": 98,
+      "sourceRows": [
+        98
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

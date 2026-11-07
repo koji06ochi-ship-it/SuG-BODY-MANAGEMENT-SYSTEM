@@ -1,0 +1,25 @@
+{
+  "dateJapan": "2026-10-26",
+  "baselineManifest": { "checked": 808, "mismatches": 0 },
+  "environment": "Windows local browser; 127.0.0.1:4187; test=1; fictional data",
+  "applicationFilesChanged": ["seven-screen.js"],
+  "syntaxCheck": "node --check seven-screen.js passed",
+  "browserConfirmed": [
+    "profile, food, walk, recovery, training and care drafts survive screen navigation",
+    "profile, food, walk, recovery, workout and care explicit saves survive reload",
+    "unknown food PFC remains unentered rather than zero",
+    "journal shows one meal, one workout and one set plus walk, recovery, weights and care",
+    "fixed: profile draft 66 was previously reset to saved 65 by recovery save",
+    "after fix: profile 66, walk 5000 and sleep 8 drafts survive other-screen saves",
+    "after explicit save and reload profile 66, walk 5000 and sleep 8 remain",
+    "unsaved food draft is absent after reload; no draft recovery implemented"
+  ],
+  "latestScreenshots": "input-persistence-evidence/",
+  "previousEvidencePreserved": "seven-screen-browser-result.json and seven-screen-evidence/",
+  "notVerifiedThisRun": ["iPhone", "HealthKit", "GPS", "photo AI", "JSON file restore", "storage quota failure", "browser date rollover", "concurrent tabs"],
+  "screenApproved": false,
+  "integratedIntoNormalBody": false,
+  "complete": false,
+  "published": false,
+  "externalAIPhotoSent": false
+}

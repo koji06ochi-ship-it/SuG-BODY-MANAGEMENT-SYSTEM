@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5774-22519-20261016",
+  "lat": 34.6465007428459,
+  "lng": 135.1152486072518,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/1462fe7873ee3eef",
+      "lat": 34.6464276347994,
+      "lng": 135.116232844541,
+      "category": "SAFE",
+      "name": "和高医院",
+      "address": "神戸市須磨区須磨寺町1丁目13－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区須磨寺町1丁目13－1",
+      "district": "須磨区",
+      "sourceRow": 53,
+      "sourceRows": [
+        53
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/895fda7bfaf3d8b4",
+      "lat": 34.6479691996535,
+      "lng": 135.116729395428,
+      "category": "SAFE",
+      "name": "西須磨幼稚園",
+      "address": "神戸市須磨区桜木町2丁目2－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区桜木町2丁目2－1",
+      "district": "須磨区",
+      "sourceRow": 175,
+      "sourceRows": [
+        175
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/667196fdb6558fab",
+      "lat": 34.6456881054344,
+      "lng": 135.114325450841,
+      "category": "SAFE",
+      "name": "千鳥幼稚園",
+      "address": "神戸市須磨区千守町1-3-21",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区千守町1-3-21",
+      "district": "須磨区",
+      "sourceRow": 180,
+      "sourceRows": [
+        180
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1ef5da22f2d2d753",
+      "lat": 34.644164557056,
+      "lng": 135.114528751136,
+      "category": "SAFE",
+      "name": "須磨の浦地域福祉センター",
+      "address": "神戸市須磨区千守町1-1-20",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区千守町1-1-20",
+      "district": "須磨区",
+      "sourceRow": 183,
+      "sourceRows": [
+        183
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ffa1e238550ffc7a",
+      "lat": 34.6482542172862,
+      "lng": 135.114426594313,
+      "category": "SAFE",
+      "name": "小野クリニック",
+      "address": "神戸市須磨区須磨寺町2丁目7番地5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区須磨寺町2丁目7番地5",
+      "district": "須磨区",
+      "sourceRow": 260,
+      "sourceRows": [
+        260
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

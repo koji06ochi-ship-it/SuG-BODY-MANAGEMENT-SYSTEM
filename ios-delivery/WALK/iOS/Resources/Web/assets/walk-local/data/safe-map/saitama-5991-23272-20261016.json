@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5991-23272",
+  "lat": 35.949615072,
+  "lng": 139.63760628,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.94963559,
+      "lng": 139.6376691,
+      "category": "SAFE",
+      "name": "東大宮コミュニティセンター",
+      "address": "さいたま市東大宮4-31-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "東大宮4-31-1",
+      "district": "見沼区",
+      "sourceRow": 233,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/c25708a516787f6f",
+      "sourceRows": [
+        233,
+        234,
+        235,
+        236
+      ],
+      "duplicateSourceEntries": 4
+    },
+    {
+      "lat": 35.949533,
+      "lng": 139.637355,
+      "category": "SAFE",
+      "name": "東大宮支所",
+      "address": "さいたま市東大宮4-31-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "東大宮4-31-1",
+      "district": "見沼区",
+      "sourceRow": 237,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/3dd946d33d766d1f",
+      "sourceRows": [
+        237
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

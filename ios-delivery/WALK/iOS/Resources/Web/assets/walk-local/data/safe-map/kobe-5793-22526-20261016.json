@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5793-22526-20261016",
+  "lat": 34.7621149080139,
+  "lng": 135.15719781685266,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/f96ed6f24737bc16",
+      "lat": 34.7630970778297,
+      "lng": 135.156531328539,
+      "category": "SAFE",
+      "name": "神戸市立　山田中学校",
+      "address": "神戸市北区山田町下谷上宮前15",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町下谷上宮前15",
+      "district": "北区",
+      "sourceRow": 2211,
+      "sourceRows": [
+        2211
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/671e8bf48761ba73",
+      "lat": 34.7621829816632,
+      "lng": 135.157823850293,
+      "category": "SAFE",
+      "name": "神戸市環境局北事業所",
+      "address": "神戸市北区山田町下谷上字五郎本1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町下谷上字五郎本1-1",
+      "district": "北区",
+      "sourceRow": 2314,
+      "sourceRows": [
+        2314
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8afdbc30b5ee60af",
+      "lat": 34.7610646645488,
+      "lng": 135.157238271726,
+      "category": "SAFE",
+      "name": "神戸市道路公社",
+      "address": "神戸市北区山田町下谷上字池ノ内6番１",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町下谷上字池ノ内6番１",
+      "district": "北区",
+      "sourceRow": 2430,
+      "sourceRows": [
+        2430
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

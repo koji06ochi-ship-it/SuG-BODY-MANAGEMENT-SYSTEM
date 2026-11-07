@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5793-22528-20261016",
+  "lat": 34.76240768545221,
+  "lng": 135.17069178709176,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/0ab48af36c82658b",
+      "lat": 34.7633761624569,
+      "lng": 135.16935535586,
+      "category": "SAFE",
+      "name": "神戸市立　谷上小学校",
+      "address": "神戸市北区山田町下谷上中上16",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町下谷上中上16",
+      "district": "北区",
+      "sourceRow": 2234,
+      "sourceRows": [
+        2234
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3976646df2806c7b",
+      "lat": 34.7632342672849,
+      "lng": 135.172774099668,
+      "category": "SAFE",
+      "name": "兵庫六甲農業協同組合　谷上支店",
+      "address": "神戸市北区谷上東町7-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区谷上東町7-3",
+      "district": "北区",
+      "sourceRow": 2302,
+      "sourceRows": [
+        2302
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ad8469150565c7d1",
+      "lat": 34.762952815973,
+      "lng": 135.172980286828,
+      "category": "SAFE",
+      "name": "播州信用金庫　谷上支店",
+      "address": "神戸市北区谷上東町8－29",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区谷上東町8－29",
+      "district": "北区",
+      "sourceRow": 2312,
+      "sourceRows": [
+        2312
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/aeb5c1da4fec1748",
+      "lat": 34.7615477627572,
+      "lng": 135.170724654399,
+      "category": "SAFE",
+      "name": "神戸電鉄㈱北神急行電鉄㈱　谷上駅",
+      "address": "神戸市北区谷上東町1番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区谷上東町1番1号",
+      "district": "北区",
+      "sourceRow": 2324,
+      "sourceRows": [
+        2324
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a1e5d4571f7e2613",
+      "lat": 34.7633761624569,
+      "lng": 135.16935535586,
+      "category": "SAFE",
+      "name": "谷上学童保育コーナー",
+      "address": "神戸市北区山田町下谷上字中上16",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町下谷上字中上16",
+      "district": "北区",
+      "sourceRow": 2330,
+      "sourceRows": [
+        2330
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a6c03299a4be69f4",
+      "lat": 34.7612907992283,
+      "lng": 135.169012468363,
+      "category": "SAFE",
+      "name": "谷上地域福祉センター",
+      "address": "神戸市北区谷上西町7-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区谷上西町7-3",
+      "district": "北区",
+      "sourceRow": 2384,
+      "sourceRows": [
+        2384
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/515a13e4e0007078",
+      "lat": 34.7615477627572,
+      "lng": 135.170724654399,
+      "category": "SAFE",
+      "name": "神戸電鉄㈱　谷上保育園",
+      "address": "神戸市北区谷上東町1番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区谷上東町1番1号",
+      "district": "北区",
+      "sourceRow": 2508,
+      "sourceRows": [
+        2508
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/32dd6ba49fd98b1f",
+      "lat": 34.7619357507033,
+      "lng": 135.170607421357,
+      "category": "SAFE",
+      "name": "神戸電鉄㈱　谷上保育園きらら分園",
+      "address": "神戸市北区谷上西町1番32号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区谷上西町1番32号",
+      "district": "北区",
+      "sourceRow": 2509,
+      "sourceRows": [
+        2509
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

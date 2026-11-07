@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5786-22521-20261016",
+  "lat": 34.72046039287955,
+  "lng": 135.12827478095775,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/e9b2bca0cb5a5da3",
+      "lat": 34.7192825901796,
+      "lng": 135.128552326572,
+      "category": "SAFE",
+      "name": "神戸市立　星和台中学校",
+      "address": "神戸市北区星和台1-6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区星和台1-6",
+      "district": "北区",
+      "sourceRow": 2207,
+      "sourceRows": [
+        2207
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4f388917aedbc75b",
+      "lat": 34.7216590874085,
+      "lng": 135.126230561082,
+      "category": "SAFE",
+      "name": "星和台鳴子地域福祉センター",
+      "address": "神戸市北区鳴子2丁目11-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鳴子2丁目11-1",
+      "district": "北区",
+      "sourceRow": 2385,
+      "sourceRows": [
+        2385
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/aec06ba5730ea54b",
+      "lat": 34.7217501491984,
+      "lng": 135.131072571644,
+      "category": "SAFE",
+      "name": "ひだか歯科クリニック",
+      "address": "神戸市北区南五葉3丁目4-24",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区南五葉3丁目4-24",
+      "district": "北区",
+      "sourceRow": 2531,
+      "sourceRows": [
+        2531
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/31625292fe1e390d",
+      "lat": 34.7191497447317,
+      "lng": 135.127243664533,
+      "category": "SAFE",
+      "name": "星和台幼稚園",
+      "address": "神戸市北区星和台2丁目16-13",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区星和台2丁目16-13",
+      "district": "北区",
+      "sourceRow": 2550,
+      "sourceRows": [
+        2550
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

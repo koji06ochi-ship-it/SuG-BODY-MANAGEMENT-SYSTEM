@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5787-22537-20261016",
+  "lat": 34.724194220567384,
+  "lng": 135.2257968172426,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/8a50b05f99988231",
+      "lat": 34.7245864934872,
+      "lng": 135.22241688756,
+      "category": "SAFE",
+      "name": "神戸市立　長峰中学校",
+      "address": "神戸市灘区長峰台2-2-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区長峰台2-2-1",
+      "district": "灘区",
+      "sourceRow": 1772,
+      "sourceRows": [
+        1772
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/796eadcca42d5b44",
+      "lat": 34.72382628209,
+      "lng": 135.225650931066,
+      "category": "SAFE",
+      "name": "特別養護老人ホームうみのほし",
+      "address": "神戸市灘区篠原北町3-11-15",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区篠原北町3-11-15",
+      "district": "灘区",
+      "sourceRow": 1957,
+      "sourceRows": [
+        1957
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1340823b29ccb20a",
+      "lat": 34.7242632754862,
+      "lng": 135.225723133364,
+      "category": "SAFE",
+      "name": "コンフォートヒルズ六甲",
+      "address": "神戸市灘区篠原北町3－11－14",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区篠原北町3－11－14",
+      "district": "灘区",
+      "sourceRow": 1959,
+      "sourceRows": [
+        1959
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2dc9181dae57dec6",
+      "lat": 34.7223201799151,
+      "lng": 135.22725441276,
+      "category": "SAFE",
+      "name": "コープこうべ　コープ篠原",
+      "address": "神戸市灘区篠原北町2丁目2番14号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区篠原北町2丁目2番14号",
+      "district": "灘区",
+      "sourceRow": 1969,
+      "sourceRows": [
+        1969
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f384898cddac2558",
+      "lat": 34.7259748718584,
+      "lng": 135.227938721463,
+      "category": "SAFE",
+      "name": "ジークレフ六甲の丘",
+      "address": "神戸市灘区篠原伯母野山町2丁目3－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区篠原伯母野山町2丁目3－1",
+      "district": "灘区",
+      "sourceRow": 1970,
+      "sourceRows": [
+        1970
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

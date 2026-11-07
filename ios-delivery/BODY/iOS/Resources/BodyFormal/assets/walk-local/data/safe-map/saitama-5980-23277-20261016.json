@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5980-23277",
+  "lat": 35.8827271,
+  "lng": 139.66348645,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.882009,
+      "lng": 139.662588,
+      "category": "SAFE",
+      "name": "大東保育園",
+      "address": "さいたま市大東2-18-7",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大東2-18-7",
+      "district": "浦和区",
+      "sourceRow": 402,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/adb2ab8d3a8a82d0",
+      "sourceRows": [
+        402
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.8834452,
+      "lng": 139.6643849,
+      "category": "SAFE",
+      "name": "大東放課後児童クラブ",
+      "address": "さいたま市大東3-14-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大東3-14-1",
+      "district": "浦和区",
+      "sourceRow": 403,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/89758623de955f7d",
+      "sourceRows": [
+        403
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

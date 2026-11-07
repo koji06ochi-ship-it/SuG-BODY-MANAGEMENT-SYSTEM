@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5788-22526-20261016",
+  "lat": 34.7301519721137,
+  "lng": 135.16020430420866,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/44ad6bc5125b52ef",
+      "lat": 34.7332577819477,
+      "lng": 135.161687652788,
+      "category": "SAFE",
+      "name": "神戸市環境局妙賀山クリーンセンター",
+      "address": "神戸市北区山田町小部字妙賀山1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町小部字妙賀山1-1",
+      "district": "北区",
+      "sourceRow": 2315,
+      "sourceRows": [
+        2315
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/29aaf5880392ac5f",
+      "lat": 34.7284018417445,
+      "lng": 135.157526036024,
+      "category": "SAFE",
+      "name": "神戸市立　小部児童館",
+      "address": "神戸市北区鈴蘭台北町7丁目11－40",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鈴蘭台北町7丁目11－40",
+      "district": "北区",
+      "sourceRow": 2333,
+      "sourceRows": [
+        2333
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/31e4a039472411a4",
+      "lat": 34.7287962926489,
+      "lng": 135.161399223814,
+      "category": "SAFE",
+      "name": "特別養護老人ホーム　さつき園",
+      "address": "神戸市北区山田町小部字杉ノ木3-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町小部字杉ノ木3-2",
+      "district": "北区",
+      "sourceRow": 2471,
+      "sourceRows": [
+        2471
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

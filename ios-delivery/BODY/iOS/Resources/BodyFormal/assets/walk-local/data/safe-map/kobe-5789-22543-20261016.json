@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5789-22543-20261016",
+  "lat": 34.736302526237154,
+  "lng": 135.2591822412665,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/aaebba266fb15071",
+      "lat": 34.7376300560711,
+      "lng": 135.258784024263,
+      "category": "SAFE",
+      "name": "神戸市立甲南斎場",
+      "address": "神戸市東灘区本山町田中字南小路423",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区本山町田中字南小路423",
+      "district": "東灘区",
+      "sourceRow": 1719,
+      "sourceRows": [
+        1719
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/171078b732f65089",
+      "lat": 34.7349749964032,
+      "lng": 135.25958045827,
+      "category": "SAFE",
+      "name": "マンション住吉川",
+      "address": "神戸市東灘区住吉台２－１２",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区住吉台２－１２",
+      "district": "東灘区",
+      "sourceRow": 1743,
+      "sourceRows": [
+        1743
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5975-23281",
+  "lat": 35.8540178,
+  "lng": 139.6871988,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.8540178,
+      "lng": 139.6871988,
+      "category": "SAFE",
+      "name": "善前放課後児童クラブ",
+      "address": "さいたま市太田窪2500-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "太田窪2500-1",
+      "district": "南区",
+      "sourceRow": 472,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/02e43a73fdf26408",
+      "sourceRows": [
+        472
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.8540178,
+      "lng": 139.6871988,
+      "category": "SAFE",
+      "name": "善前第二放課後児童クラブ（善前きんせんか）",
+      "address": "さいたま市太田窪2500-1　善前小学校内",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "太田窪2500-1　善前小学校内",
+      "district": "南区",
+      "sourceRow": 473,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/863154f6abff5342",
+      "sourceRows": [
+        473
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

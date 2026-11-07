@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5757-22781-20261016",
+  "lat": 34.54369564269287,
+  "lng": 136.69062443854702,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/51bda3f64c79b4f9",
+      "lat": 34.543931742612,
+      "lng": 136.690499836013,
+      "category": "SAFE",
+      "name": "伊勢市立北浜小学校",
+      "address": "伊勢市村松町3285-1",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市村松町3285-1",
+      "sourceRow": 45,
+      "sourceRows": [
+        45
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/cbb6039782236f4f",
+      "lat": 34.543695,
+      "lng": 136.69007,
+      "category": "SAFE",
+      "name": "伊勢市立北浜小学校　体育館",
+      "address": "伊勢市村松町3285-1",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市村松町3285-1",
+      "sourceRow": 46,
+      "sourceRows": [
+        46
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/860eeffa29552d3a",
+      "lat": 34.5434601854666,
+      "lng": 136.691303479628,
+      "category": "SAFE",
+      "name": "北浜放課後児童クラブ",
+      "address": "伊勢市村松町3280-6　旧北浜幼稚園",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市村松町3280-6　旧北浜幼稚園",
+      "sourceRow": 112,
+      "sourceRows": [
+        112
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

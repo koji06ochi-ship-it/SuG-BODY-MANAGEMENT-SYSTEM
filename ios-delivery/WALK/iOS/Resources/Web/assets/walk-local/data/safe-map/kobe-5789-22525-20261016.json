@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5789-22525-20261016",
+  "lat": 34.73810606473796,
+  "lng": 135.15240423091544,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/47dd1ff4113f125f",
+      "lat": 34.7371590370312,
+      "lng": 135.154292472579,
+      "category": "SAFE",
+      "name": "神戸中央病院附属介護老人保健施設",
+      "address": "神戸市北区惣山町2丁目1－9",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区惣山町2丁目1－9",
+      "district": "北区",
+      "sourceRow": 2282,
+      "sourceRows": [
+        2282
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a45278fd48909bef",
+      "lat": 34.7393119862486,
+      "lng": 135.151627266237,
+      "category": "SAFE",
+      "name": "神戸電鉄㈱　北鈴蘭台駅",
+      "address": "神戸市北区甲栄台4-1-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区甲栄台4-1-3",
+      "district": "北区",
+      "sourceRow": 2287,
+      "sourceRows": [
+        2287
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9fc2be187c294c41",
+      "lat": 34.7393933855211,
+      "lng": 135.151286235147,
+      "category": "SAFE",
+      "name": "コープこうべ　コープ北鈴蘭台",
+      "address": "神戸市北区甲栄台4丁目2番24号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区甲栄台4丁目2番24号",
+      "district": "北区",
+      "sourceRow": 2365,
+      "sourceRows": [
+        2365
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a979c5d118daf037",
+      "lat": 34.7350256644432,
+      "lng": 135.151593597562,
+      "category": "SAFE",
+      "name": "神戸地方法務局北出張所",
+      "address": "神戸市北区惣山町1丁目7－11",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区惣山町1丁目7－11",
+      "district": "北区",
+      "sourceRow": 2491,
+      "sourceRows": [
+        2491
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/cc16f02230e9d546",
+      "lat": 34.7386124452654,
+      "lng": 135.151382329692,
+      "category": "SAFE",
+      "name": "フジオカデンタルクリニック北鈴蘭台院",
+      "address": "神戸市北区甲栄台4丁目3-21",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区甲栄台4丁目3-21",
+      "district": "北区",
+      "sourceRow": 2532,
+      "sourceRows": [
+        2532
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/cd45e2a297fc00cf",
+      "lat": 34.7394465964847,
+      "lng": 135.151705297312,
+      "category": "SAFE",
+      "name": "たの歯科クリニック",
+      "address": "神戸市北区甲栄台4丁目1-13",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区甲栄台4丁目1-13",
+      "district": "北区",
+      "sourceRow": 2533,
+      "sourceRows": [
+        2533
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7a2e448d182b5110",
+      "lat": 34.739632910608,
+      "lng": 135.154624821805,
+      "category": "SAFE",
+      "name": "セコム株式会社神戸北営業所",
+      "address": "神戸市北区若葉台1-2-24",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区若葉台1-2-24",
+      "district": "北区",
+      "sourceRow": 2553,
+      "sourceRows": [
+        2553
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/88b3fa5436c8c276",
+      "lat": 34.7397592434409,
+      "lng": 135.153755758454,
+      "category": "SAFE",
+      "name": "こさか家庭医療クリニック",
+      "address": "神戸市北区若葉台1丁目1-43",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区若葉台1丁目1-43",
+      "district": "北区",
+      "sourceRow": 2569,
+      "sourceRows": [
+        2569
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0d075235d19bbdbe",
+      "lat": 34.7346133135986,
+      "lng": 135.151370299451,
+      "category": "SAFE",
+      "name": "認定こども園　太陽の子保育園",
+      "address": "神戸市北区惣山町１丁目７－５",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区惣山町１丁目７－５",
+      "district": "北区",
+      "sourceRow": 2576,
+      "sourceRows": [
+        2576
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

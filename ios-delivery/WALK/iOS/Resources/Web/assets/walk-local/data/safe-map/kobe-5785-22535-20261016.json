@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5785-22535-20261016",
+  "lat": 34.712086877144486,
+  "lng": 135.2121028020723,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/68f416ace41f9751",
+      "lat": 34.7106257795768,
+      "lng": 135.210248523046,
+      "category": "SAFE",
+      "name": "神戸市立　葺合高等学校",
+      "address": "神戸市中央区野崎通1-1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区野崎通1-1-1",
+      "district": "中央区",
+      "sourceRow": 973,
+      "sourceRows": [
+        973
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/26147f41a964771e",
+      "lat": 34.7114880841872,
+      "lng": 135.210192759474,
+      "category": "SAFE",
+      "name": "神戸婦人同情会籠池児童館",
+      "address": "神戸市中央区籠池通2-1-19",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区籠池通2-1-19",
+      "district": "中央区",
+      "sourceRow": 1019,
+      "sourceRows": [
+        1019
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5869c60015dcbded",
+      "lat": 34.7138030628363,
+      "lng": 135.210398048648,
+      "category": "SAFE",
+      "name": "松蔭中学校・高等学校",
+      "address": "神戸市灘区青谷町3－4－47",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区青谷町3－4－47",
+      "district": "灘区",
+      "sourceRow": 1758,
+      "sourceRows": [
+        1758
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2050fdb62635d77d",
+      "lat": 34.7112451483957,
+      "lng": 135.212431729419,
+      "category": "SAFE",
+      "name": "神戸市立　王子スポーツセンター　体育館",
+      "address": "神戸市灘区青谷町1丁目1番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区青谷町1丁目1番1号",
+      "district": "灘区",
+      "sourceRow": 1765,
+      "sourceRows": [
+        1765
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c0b78e368de88b2b",
+      "lat": 34.7121586396396,
+      "lng": 135.211638742466,
+      "category": "SAFE",
+      "name": "神戸海星女子学院小学校",
+      "address": "神戸市灘区青谷町2丁目7-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区青谷町2丁目7-1",
+      "district": "灘区",
+      "sourceRow": 1900,
+      "sourceRows": [
+        1900
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8c710204c3e172c3",
+      "lat": 34.7121586396396,
+      "lng": 135.211638742466,
+      "category": "SAFE",
+      "name": "神戸海星女子学院中学校・高等学校",
+      "address": "神戸市灘区青谷町2丁目7-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区青谷町2丁目7-1",
+      "district": "灘区",
+      "sourceRow": 1901,
+      "sourceRows": [
+        1901
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/04e288d09b1613be",
+      "lat": 34.7121586396396,
+      "lng": 135.211638742466,
+      "category": "SAFE",
+      "name": "神戸海星女子学院大学",
+      "address": "神戸市灘区青谷町2-7-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区青谷町2-7-1",
+      "district": "灘区",
+      "sourceRow": 1906,
+      "sourceRows": [
+        1906
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9522a5e633917700",
+      "lat": 34.7123860490534,
+      "lng": 135.213808587768,
+      "category": "SAFE",
+      "name": "神戸市立　王子スポーツセンター　テニスコート",
+      "address": "神戸市灘区青谷町1-1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区青谷町1-1-1",
+      "district": "灘区",
+      "sourceRow": 1925,
+      "sourceRows": [
+        1925
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0044502b6523ae36",
+      "lat": 34.7115569784694,
+      "lng": 135.214994156835,
+      "category": "SAFE",
+      "name": "王子動物園　動物科学資料館",
+      "address": "神戸市灘区王子町3-1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区王子町3-1-1",
+      "district": "灘区",
+      "sourceRow": 1929,
+      "sourceRows": [
+        1929
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c07d8eee7ea710ca",
+      "lat": 34.7132877500073,
+      "lng": 135.214037988135,
+      "category": "SAFE",
+      "name": "青谷愛児園（社会福祉法人　神戸婦人同情会）",
+      "address": "神戸市灘区青谷町2丁目1-9",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区青谷町2丁目1-9",
+      "district": "灘区",
+      "sourceRow": 1978,
+      "sourceRows": [
+        1978
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

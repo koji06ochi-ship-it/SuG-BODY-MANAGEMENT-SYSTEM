@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5775-22741",
+  "lat": 34.65213025,
+  "lng": 136.4476915,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.651734,
+      "lng": 136.448232,
+      "category": "SAFE",
+      "name": "川合児童館",
+      "address": "津市一志町八太1008-1",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "一志町八太1008-1",
+      "district": "一志",
+      "sourceRow": 233,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/52ba9c99a93629cc",
+      "sourceRows": [
+        233
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.651684,
+      "lng": 136.448905,
+      "category": "SAFE",
+      "name": "川合保育園",
+      "address": "津市一志町八太1017-1",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "一志町八太1017-1",
+      "district": "一志",
+      "sourceRow": 238,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/a56369b41f42352b",
+      "sourceRows": [
+        238
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.652425,
+      "lng": 136.44758,
+      "category": "SAFE",
+      "name": "川合幼稚園",
+      "address": "津市一志町八太1164-1",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "一志町八太1164-1",
+      "district": "一志",
+      "sourceRow": 241,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/315adabfe22a348a",
+      "sourceRows": [
+        241
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.652678,
+      "lng": 136.446049,
+      "category": "SAFE",
+      "name": "一志東小学校",
+      "address": "津市一志町八太785-1",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "一志町八太785-1",
+      "district": "一志",
+      "sourceRow": 243,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/8b8bbc4cac987081",
+      "sourceRows": [
+        243
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

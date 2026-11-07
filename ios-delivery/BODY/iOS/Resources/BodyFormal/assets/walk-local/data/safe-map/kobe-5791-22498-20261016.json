@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5791-22498-20261016",
+  "lat": 34.7468701004324,
+  "lng": 134.9895214930225,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/391af0fce1673fa8",
+      "lat": 34.7477585486308,
+      "lng": 134.988173773017,
+      "category": "SAFE",
+      "name": "JA兵庫六甲　神出支店",
+      "address": "神戸市西区神出町田井459-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区神出町田井459-1",
+      "district": "西区",
+      "sourceRow": 532,
+      "sourceRows": [
+        532
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c180a08c61935384",
+      "lat": 34.7462897489282,
+      "lng": 134.989929895257,
+      "category": "SAFE",
+      "name": "神出地域福祉センター",
+      "address": "神戸市西区神出町田井字長原34-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区神出町田井字長原34-2",
+      "district": "西区",
+      "sourceRow": 645,
+      "sourceRows": [
+        645
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/998104f8603eabbf",
+      "lat": 34.7462897489282,
+      "lng": 134.989929895257,
+      "category": "SAFE",
+      "name": "神戸市立　神出児童館",
+      "address": "神戸市西区神出町田井34-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区神出町田井34-2",
+      "district": "西区",
+      "sourceRow": 656,
+      "sourceRows": [
+        656
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/48a74c438e9be6a0",
+      "lat": 34.7471423552424,
+      "lng": 134.990052408559,
+      "category": "SAFE",
+      "name": "神戸市西区役所神出出張所",
+      "address": "神戸市西区神出町田井５０",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区神出町田井５０",
+      "district": "西区",
+      "sourceRow": 794,
+      "sourceRows": [
+        794
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

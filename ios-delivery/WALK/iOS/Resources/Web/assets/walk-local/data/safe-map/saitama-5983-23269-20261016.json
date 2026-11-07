@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5983-23269",
+  "lat": 35.902723,
+  "lng": 139.616953,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.902723,
+      "lng": 139.616953,
+      "category": "SAFE",
+      "name": "桜木第一放課後児童クラブ（桜木げんごろう）",
+      "address": "さいたま市桜木町4-328-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "桜木町4-328-1",
+      "district": "大宮区",
+      "sourceRow": 155,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/ba9025e210dd4f6f",
+      "sourceRows": [
+        155
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

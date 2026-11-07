@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5787-22546-20261016",
+  "lat": 34.7243414951947,
+  "lng": 135.27860185075463,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/20997c526548bcb5",
+      "lat": 34.7259432923005,
+      "lng": 135.276805579063,
+      "category": "SAFE",
+      "name": "たかぎ歯科医院",
+      "address": "神戸市東灘区田中町1-11-19",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区田中町1-11-19",
+      "district": "東灘区",
+      "sourceRow": 1378,
+      "sourceRows": [
+        1378
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/574c045f0809b5fb",
+      "lat": 34.7222001648752,
+      "lng": 135.276256893468,
+      "category": "SAFE",
+      "name": "コープこうべ　コープリビング甲南",
+      "address": "神戸市東灘区甲南町2丁目1番20号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区甲南町2丁目1番20号",
+      "district": "東灘区",
+      "sourceRow": 1509,
+      "sourceRows": [
+        1509
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/de7f62633b903cce",
+      "lat": 34.7230500888196,
+      "lng": 135.276863188402,
+      "category": "SAFE",
+      "name": "Konan Clover House",
+      "address": "神戸市東灘区甲南町１丁目3-14",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区甲南町１丁目3-14",
+      "district": "東灘区",
+      "sourceRow": 1522,
+      "sourceRows": [
+        1522
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6ea94a38102b90d6",
+      "lat": 34.7226615679607,
+      "lng": 135.276979240516,
+      "category": "SAFE",
+      "name": "ザ・本山プレミアム管理組合",
+      "address": "神戸市東灘区甲南町1丁目3-7",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区甲南町1丁目3-7",
+      "district": "東灘区",
+      "sourceRow": 1532,
+      "sourceRows": [
+        1532
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/47ecf87be476ae89",
+      "lat": 34.7277646746822,
+      "lng": 135.280421512149,
+      "category": "SAFE",
+      "name": "本山北町あすのこども園",
+      "address": "神戸市東灘区本山北町3丁目2-28",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区本山北町3丁目2-28",
+      "district": "東灘区",
+      "sourceRow": 1588,
+      "sourceRows": [
+        1588
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c7174517b744996b",
+      "lat": 34.7242920872946,
+      "lng": 135.281785871175,
+      "category": "SAFE",
+      "name": "東神戸センタービル",
+      "address": "神戸市東灘区本山南町8丁目6-26",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区本山南町8丁目6-26",
+      "district": "東灘区",
+      "sourceRow": 1599,
+      "sourceRows": [
+        1599
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/973b9b9c75ff8567",
+      "lat": 34.7265235182349,
+      "lng": 135.276461767177,
+      "category": "SAFE",
+      "name": "JR　摂津本山駅",
+      "address": "神戸市東灘区岡本1丁目1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区岡本1丁目1-1",
+      "district": "東灘区",
+      "sourceRow": 1629,
+      "sourceRows": [
+        1629
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/714119db8dda3583",
+      "lat": 34.7235976506973,
+      "lng": 135.278426344255,
+      "category": "SAFE",
+      "name": "たかくら内科・循環器科",
+      "address": "神戸市東灘区本山南町９丁目8-37ナカタカンモノビル1階",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区本山南町９丁目8-37ナカタカンモノビル1階",
+      "district": "東灘区",
+      "sourceRow": 1670,
+      "sourceRows": [
+        1670
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/977fc728a740a23f",
+      "lat": 34.7229165131396,
+      "lng": 135.281757597257,
+      "category": "SAFE",
+      "name": "認定こども園　モーツァルトこども園",
+      "address": "神戸市東灘区本山南町8丁目3-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区本山南町8丁目3-3",
+      "district": "東灘区",
+      "sourceRow": 1710,
+      "sourceRows": [
+        1710
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9dd208c4483fc9f3",
+      "lat": 34.7232623003786,
+      "lng": 135.28160867462,
+      "category": "SAFE",
+      "name": "神戸市東部療育センター",
+      "address": "神戸市東灘区本山南町8丁目3番4号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区本山南町8丁目3番4号",
+      "district": "東灘区",
+      "sourceRow": 1734,
+      "sourceRows": [
+        1734
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3c051c3123a4d86a",
+      "lat": 34.7255445887585,
+      "lng": 135.277253690219,
+      "category": "SAFE",
+      "name": "エニタイムフィットネス摂津本山店",
+      "address": "神戸市東灘区田中町1丁目10番地17",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区田中町1丁目10番地17",
+      "district": "東灘区",
+      "sourceRow": 1746,
+      "sourceRows": [
+        1746
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

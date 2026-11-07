@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-shelter-saitama-5991-23280",
+  "lat": 35.950549,
+  "lng": 139.680251,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "埼玉県オープンデータポータル さいたま市 指定避難所",
+  "sourceUrl": "https://opendata.pref.saitama.lg.jp/resources/4757",
+  "sourceFileUrl": "https://opendata.pref.saitama.lg.jp/resource_download/4757",
+  "sourceUpdatedAt": "2026-04-01",
+  "retrievedAt": "2026-10-16T00:00:00.000Z",
+  "sourceFileSha256": "42d9e75eb4293706a921f7e111077954d3d03d018c3745d1fe0a305417b0c44a",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://www.digital.go.jp/resources/open_data/",
+  "data": [
+    {
+      "id": "municipality/saitama/saitama-shelter/436f37f2f1acb802",
+      "lat": 35.95277298,
+      "lng": 139.6835317,
+      "category": "SAFE",
+      "name": "西原小学校（指定避難所）",
+      "address": "埼玉県さいたま市岩槻区西原6-25",
+      "kind": "SHELTER",
+      "source": "https://opendata.pref.saitama.lg.jp/resources/4757",
+      "sourceLabel": "埼玉県オープンデータポータル さいたま市 指定避難所（開設状況・受入可否は未確認）",
+      "license": "PDL-1.0",
+      "sourceUpdatedAt": "2026-04-01",
+      "sourceRow": 239
+    },
+    {
+      "id": "municipality/saitama/saitama-shelter/3dd7d2106c2763bc",
+      "lat": 35.95516469,
+      "lng": 139.6814821,
+      "category": "SAFE",
+      "name": "西原中学校（指定避難所）",
+      "address": "埼玉県さいたま市岩槻区岩槻3750",
+      "kind": "SHELTER",
+      "source": "https://opendata.pref.saitama.lg.jp/resources/4757",
+      "sourceLabel": "埼玉県オープンデータポータル さいたま市 指定避難所（開設状況・受入可否は未確認）",
+      "license": "PDL-1.0",
+      "sourceUpdatedAt": "2026-04-01",
+      "sourceRow": 248
+    }
+  ]
+}

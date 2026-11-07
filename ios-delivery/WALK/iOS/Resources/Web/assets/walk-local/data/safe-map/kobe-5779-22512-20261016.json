@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5779-22512-20261016",
+  "lat": 34.6778056386235,
+  "lng": 135.0761823912125,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/bab025cd2a5034d8",
+      "lat": 34.678215963566,
+      "lng": 135.074679368076,
+      "category": "SAFE",
+      "name": "神戸総合運動公園グリーンアリーナ神戸",
+      "address": "神戸市須磨区緑台",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区緑台",
+      "district": "須磨区",
+      "sourceRow": 12,
+      "sourceRows": [
+        12
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0b075225b8e69ab7",
+      "lat": 34.677395313681,
+      "lng": 135.077685414349,
+      "category": "SAFE",
+      "name": "神戸総合運動公園　テニスコート",
+      "address": "神戸市須磨区緑台",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区緑台",
+      "district": "須磨区",
+      "sourceRow": 14,
+      "sourceRows": [
+        14
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

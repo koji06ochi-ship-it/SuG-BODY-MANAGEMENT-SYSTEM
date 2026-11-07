@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "otsu-5828-22652-20261016",
+  "lat": 34.97124231666667,
+  "lng": 135.91655443333332,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "大津市",
+  "source": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+  "sourceUrl": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/999caef4-7e90-4fd2-98eb-fd94368e9a2f/resource/3e5b513e-de51-4459-af70-6fda94e1bed3/download/od405902026022700200.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2025-03-12",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "7899826cf95c365a07c87b3ad05aa2aa7d4adeb440a2c57269c84f98c1d85ea8",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/otsu/aed/d4392e028b026ee9",
+      "lat": 34.97355639,
+      "lng": 135.9147322,
+      "category": "SAFE",
+      "name": "つくし保育園",
+      "address": "大津市瀬田一丁目2－19",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市瀬田一丁目2－19",
+      "district": "大津市",
+      "sourceRow": 386,
+      "sourceRows": [
+        386
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/ebb958c5194e2a3c",
+      "lat": 34.96814028,
+      "lng": 135.9169853,
+      "category": "SAFE",
+      "name": "瀬田南公民館",
+      "address": "大津市神領三丁目8番9号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市神領三丁目8番9号",
+      "district": "大津市",
+      "sourceRow": 393,
+      "sourceRows": [
+        393
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/a4f9fa5d3340dd1d",
+      "lat": 34.97203028,
+      "lng": 135.9179458,
+      "category": "SAFE",
+      "name": "大津市立瀬田南小学校",
+      "address": "大津市三大寺1番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市三大寺1番1号",
+      "district": "大津市",
+      "sourceRow": 395,
+      "sourceRows": [
+        395
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

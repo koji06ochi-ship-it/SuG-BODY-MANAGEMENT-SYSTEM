@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "id": "otsu-5844-22644-20261016",
+  "lat": 35.06629305714286,
+  "lng": 135.86711005714284,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "大津市",
+  "source": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+  "sourceUrl": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/999caef4-7e90-4fd2-98eb-fd94368e9a2f/resource/3e5b513e-de51-4459-af70-6fda94e1bed3/download/od405902026022700200.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2025-03-12",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "7899826cf95c365a07c87b3ad05aa2aa7d4adeb440a2c57269c84f98c1d85ea8",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/otsu/aed/47a7780b7965c3da",
+      "lat": 35.0666475,
+      "lng": 135.8674861,
+      "category": "SAFE",
+      "name": "延暦寺学園　比叡山高等学校",
+      "address": "大津市坂本四丁目3番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市坂本四丁目3番1号",
+      "district": "大津市",
+      "sourceRow": 105,
+      "sourceRows": [
+        105
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/8bf98ef8b7a68dfc",
+      "lat": 35.06542056,
+      "lng": 135.8652278,
+      "category": "SAFE",
+      "name": "延暦寺学園　比叡山高等学校",
+      "address": "大津市坂本四丁目3番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市坂本四丁目3番1号",
+      "district": "大津市",
+      "sourceRow": 106,
+      "sourceRows": [
+        106
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/c2ff5a16fe1f527c",
+      "lat": 35.06686556,
+      "lng": 135.8677128,
+      "category": "SAFE",
+      "name": "延暦寺学園　比叡山高等学校",
+      "address": "大津市坂本四丁目3番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市坂本四丁目3番1号",
+      "district": "大津市",
+      "sourceRow": 107,
+      "sourceRows": [
+        107
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/fb16a777ad41f811",
+      "lat": 35.067005,
+      "lng": 135.8676678,
+      "category": "SAFE",
+      "name": "延暦寺学園　比叡山高等学校",
+      "address": "大津市坂本四丁目3番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市坂本四丁目3番1号",
+      "district": "大津市",
+      "sourceRow": 108,
+      "sourceRows": [
+        108
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/fd4fff1ca756fe96",
+      "lat": 35.06681889,
+      "lng": 135.8670264,
+      "category": "SAFE",
+      "name": "延暦寺学園　比叡山高等学校",
+      "address": "大津市坂本四丁目3番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市坂本四丁目3番1号",
+      "district": "大津市",
+      "sourceRow": 109,
+      "sourceRows": [
+        109
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/db0d93619b871196",
+      "lat": 35.06664611,
+      "lng": 135.8681964,
+      "category": "SAFE",
+      "name": "延暦寺学園　比叡山高等学校",
+      "address": "大津市坂本四丁目3番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市坂本四丁目3番1号",
+      "district": "大津市",
+      "sourceRow": 111,
+      "sourceRows": [
+        111
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/f8264c756d63b6f6",
+      "lat": 35.06464778,
+      "lng": 135.8664531,
+      "category": "SAFE",
+      "name": "延暦寺学園　比叡山高等学校",
+      "address": "大津市坂本四丁目3番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市坂本四丁目3番1号",
+      "district": "大津市",
+      "sourceRow": 112,
+      "sourceRows": [
+        112
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5779-22508-20261016",
+  "lat": 34.676889908390535,
+  "lng": 135.052243385355,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/1e26550fdf52d9ed",
+      "lat": 34.6742291302832,
+      "lng": 135.052571461249,
+      "category": "SAFE",
+      "name": "みどりの丘",
+      "address": "神戸市垂水区小束台868-1130",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区小束台868-1130",
+      "district": "垂水区",
+      "sourceRow": 430,
+      "sourceRows": [
+        430
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/971417dcba185915",
+      "lat": 34.6782202974442,
+      "lng": 135.052079347408,
+      "category": "SAFE",
+      "name": "兵庫県立大学　保健室",
+      "address": "神戸市西区学園西町8丁目2番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区学園西町8丁目2番1号",
+      "district": "西区",
+      "sourceRow": 501,
+      "sourceRows": [
+        501
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4f27f5d70c7eeafc",
+      "lat": 34.6782202974442,
+      "lng": 135.052079347408,
+      "category": "SAFE",
+      "name": "兵庫県立大学　体育館",
+      "address": "神戸市西区学園西町8丁目2番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区学園西町8丁目2番1号",
+      "district": "西区",
+      "sourceRow": 502,
+      "sourceRows": [
+        502
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

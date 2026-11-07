@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5787-22525-20261016",
+  "lat": 34.725302564467896,
+  "lng": 135.153248615808,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/9b40ecc355145783",
+      "lat": 34.7279887258659,
+      "lng": 135.154690676615,
+      "category": "SAFE",
+      "name": "神戸親和女子大学",
+      "address": "神戸市北区鈴蘭台北町7丁目13番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鈴蘭台北町7丁目13番1号",
+      "district": "北区",
+      "sourceRow": 2269,
+      "sourceRows": [
+        2269
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b05a2c28fb97174b",
+      "lat": 34.7226164030699,
+      "lng": 135.151806555001,
+      "category": "SAFE",
+      "name": "小部東地域福祉センター",
+      "address": "神戸市北区鈴蘭台東町6－2－6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鈴蘭台東町6－2－6",
+      "district": "北区",
+      "sourceRow": 2362,
+      "sourceRows": [
+        2362
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

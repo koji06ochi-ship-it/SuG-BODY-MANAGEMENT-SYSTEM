@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5791-22525-20261016",
+  "lat": 34.7494730841413,
+  "lng": 135.15350108002298,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/4fc1b2fd51cce042",
+      "lat": 34.7514815578315,
+      "lng": 135.155334816385,
+      "category": "SAFE",
+      "name": "シルバーステイあじさい",
+      "address": "神戸市北区緑町8丁目12番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区緑町8丁目12番1号",
+      "district": "北区",
+      "sourceRow": 2257,
+      "sourceRows": [
+        2257
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/19aefd32bab7166f",
+      "lat": 34.7474646104511,
+      "lng": 135.151667343661,
+      "category": "SAFE",
+      "name": "松岡産婦人科クリニック",
+      "address": "神戸市北区緑町1丁目6-18",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区緑町1丁目6-18",
+      "district": "北区",
+      "sourceRow": 2570,
+      "sourceRows": [
+        2570
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

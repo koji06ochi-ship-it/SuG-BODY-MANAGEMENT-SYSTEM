@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5801-22737",
+  "lat": 34.81092866666667,
+  "lng": 136.426255,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.81034,
+      "lng": 136.426116,
+      "category": "SAFE",
+      "name": "椋本幼稚園",
+      "address": "津市芸濃町椋本5132",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "芸濃町椋本5132",
+      "district": "芸濃",
+      "sourceRow": 175,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/4cd9fbdbb94ea701",
+      "sourceRows": [
+        175
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.810718,
+      "lng": 136.427691,
+      "category": "SAFE",
+      "name": "芸濃小学校",
+      "address": "津市芸濃町椋本5047",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "芸濃町椋本5047",
+      "district": "芸濃",
+      "sourceRow": 177,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/91b3918b850321e1",
+      "sourceRows": [
+        177
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.811728,
+      "lng": 136.424958,
+      "category": "SAFE",
+      "name": "芸濃中学校",
+      "address": "津市芸濃町椋本5147",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "芸濃町椋本5147",
+      "district": "芸濃",
+      "sourceRow": 179,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/a4b7cfb1b2c041f7",
+      "sourceRows": [
+        179
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

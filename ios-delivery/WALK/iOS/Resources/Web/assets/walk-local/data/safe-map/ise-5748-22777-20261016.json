@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5748-22777-20261016",
+  "lat": 34.4910344331044,
+  "lng": 136.663872586196,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/1ccc81e687730d62",
+      "lat": 34.4909098662088,
+      "lng": 136.663873172392,
+      "category": "SAFE",
+      "name": "伊勢市立城田小学校",
+      "address": "伊勢市上地町1494",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市上地町1494",
+      "sourceRow": 49,
+      "sourceRows": [
+        49
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/a9e30a4a9b27c28b",
+      "lat": 34.491159,
+      "lng": 136.663872,
+      "category": "SAFE",
+      "name": "伊勢市立城田小学校　体育館",
+      "address": "伊勢市上地町1494",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市上地町1494",
+      "sourceRow": 50,
+      "sourceRows": [
+        50
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

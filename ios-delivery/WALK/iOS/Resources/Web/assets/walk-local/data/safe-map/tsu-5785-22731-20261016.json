@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5785-22731",
+  "lat": 34.714908,
+  "lng": 136.390221,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.714908,
+      "lng": 136.390221,
+      "category": "SAFE",
+      "name": "久居消防署美里分署",
+      "address": "津市美里町足坂901-2",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "美里町足坂901-2",
+      "district": "美里",
+      "sourceRow": 188,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/fa4149a85d1a72e6",
+      "sourceRows": [
+        188
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

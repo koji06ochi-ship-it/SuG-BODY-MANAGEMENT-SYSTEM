@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5747-22784-20261016",
+  "lat": 34.487625067717644,
+  "lng": 136.7088873462585,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/96f615a350546cf1",
+      "lat": 34.4873369104296,
+      "lng": 136.709801388287,
+      "category": "SAFE",
+      "name": "伊勢市役所本庁舎",
+      "address": "伊勢市岩渕1-7-29",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市岩渕1-7-29",
+      "sourceRow": 1,
+      "sourceRows": [
+        1
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/63a55b2b2cab5ed6",
+      "lat": 34.4879132250057,
+      "lng": 136.70797330423,
+      "category": "SAFE",
+      "name": "いせ市民活動センター南館",
+      "address": "伊勢市岩渕1-2-29",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市岩渕1-2-29",
+      "sourceRow": 81,
+      "sourceRows": [
+        81
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

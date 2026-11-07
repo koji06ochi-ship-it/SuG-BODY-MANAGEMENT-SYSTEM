@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5781-22527-20261016",
+  "lat": 34.68910794864962,
+  "lng": 135.1642749173844,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/70b4403ca50c2f1f",
+      "lat": 34.6876726401979,
+      "lng": 135.162729443365,
+      "category": "SAFE",
+      "name": "湊山地域福祉センター",
+      "address": "神戸市兵庫区大同町2丁目2-8",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区大同町2丁目2-8",
+      "district": "兵庫区",
+      "sourceRow": 2080,
+      "sourceRows": [
+        2080
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a4da5f6e2bf85b2e",
+      "lat": 34.68941688766,
+      "lng": 135.165703198952,
+      "category": "SAFE",
+      "name": "神戸市立　雪御所児童館",
+      "address": "神戸市兵庫区雪御所町1－8",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区雪御所町1－8",
+      "district": "兵庫区",
+      "sourceRow": 2096,
+      "sourceRows": [
+        2096
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bf74e1ffdbebe5ad",
+      "lat": 34.6878445773031,
+      "lng": 135.162913523151,
+      "category": "SAFE",
+      "name": "大同保育園",
+      "address": "神戸市兵庫区大同町2丁目2-16",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区大同町2丁目2-16",
+      "district": "兵庫区",
+      "sourceRow": 2097,
+      "sourceRows": [
+        2097
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c900d15a396300d3",
+      "lat": 34.69086417966,
+      "lng": 135.162211790191,
+      "category": "SAFE",
+      "name": "石井幼稚園",
+      "address": "神戸市兵庫区都由乃町1丁目1-11",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区都由乃町1丁目1-11",
+      "district": "兵庫区",
+      "sourceRow": 2137,
+      "sourceRows": [
+        2137
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4396cd242df044e3",
+      "lat": 34.6897414584271,
+      "lng": 135.167816631263,
+      "category": "SAFE",
+      "name": "かなたクリニック",
+      "address": "神戸市兵庫区下祇園町29-7　キャッスルハイツ平野1階A号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区下祇園町29-7　キャッスルハイツ平野1階A号",
+      "district": "兵庫区",
+      "sourceRow": 2158,
+      "sourceRows": [
+        2158
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

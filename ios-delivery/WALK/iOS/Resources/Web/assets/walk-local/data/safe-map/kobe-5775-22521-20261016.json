@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5775-22521-20261016",
+  "lat": 34.65274122734433,
+  "lng": 135.12891487656282,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/1eb7d2c307d64eeb",
+      "lat": 34.6507474352718,
+      "lng": 135.128997444756,
+      "category": "SAFE",
+      "name": "須磨体育館",
+      "address": "神戸市須磨区中島町1丁目2-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区中島町1丁目2-2",
+      "district": "須磨区",
+      "sourceRow": 20,
+      "sourceRows": [
+        20
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8b06a185cd8c27f4",
+      "lat": 34.6508902525012,
+      "lng": 135.129310885974,
+      "category": "SAFE",
+      "name": "須磨区文化センター",
+      "address": "神戸市須磨区中島町1丁目2番3号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区中島町1丁目2番3号",
+      "district": "須磨区",
+      "sourceRow": 23,
+      "sourceRows": [
+        23
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3faedffee692b57f",
+      "lat": 34.6508902525012,
+      "lng": 135.129310885974,
+      "category": "SAFE",
+      "name": "神戸市立　須磨図書館",
+      "address": "神戸市須磨区中島町1－2－3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区中島町1－2－3",
+      "district": "須磨区",
+      "sourceRow": 31,
+      "sourceRows": [
+        31
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b819810e01020463",
+      "lat": 34.6551405947023,
+      "lng": 135.12755405846,
+      "category": "SAFE",
+      "name": "山陽　東須磨駅",
+      "address": "神戸市須磨区若木町1丁目1－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区若木町1丁目1－1",
+      "district": "須磨区",
+      "sourceRow": 58,
+      "sourceRows": [
+        58
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/90afebe0116cffb7",
+      "lat": 34.6547545767748,
+      "lng": 135.127708356827,
+      "category": "SAFE",
+      "name": "神戸市立　東須磨小学校",
+      "address": "神戸市須磨区堀池町1丁目2－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区堀池町1丁目2－1",
+      "district": "須磨区",
+      "sourceRow": 68,
+      "sourceRows": [
+        68
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7b6f1f7741b28179",
+      "lat": 34.6523714764975,
+      "lng": 135.129302967548,
+      "category": "SAFE",
+      "name": "須磨みどり幼稚園",
+      "address": "神戸市須磨区中島町2丁目5-15",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区中島町2丁目5-15",
+      "district": "須磨区",
+      "sourceRow": 178,
+      "sourceRows": [
+        178
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/efffa006dfb0c789",
+      "lat": 34.6533752863744,
+      "lng": 135.131209882545,
+      "category": "SAFE",
+      "name": "兵庫県警　須磨警察署",
+      "address": "神戸市須磨区大池町5丁目1-30",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区大池町5丁目1-30",
+      "district": "須磨区",
+      "sourceRow": 197,
+      "sourceRows": [
+        197
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d229ff5743c69aa8",
+      "lat": 34.6556109189746,
+      "lng": 135.127528521007,
+      "category": "SAFE",
+      "name": "若木こども園（社会福祉法人 誠心会）",
+      "address": "神戸市須磨区若木町1-2-29",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区若木町1-2-29",
+      "district": "須磨区",
+      "sourceRow": 199,
+      "sourceRows": [
+        199
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f8441864efb4bc0c",
+      "lat": 34.6508902525012,
+      "lng": 135.129310885974,
+      "category": "SAFE",
+      "name": "公益財団法人神戸市民文化振興財団須磨区文化センター",
+      "address": "神戸市須磨区中島町1丁目2番地3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区中島町1丁目2番地3",
+      "district": "須磨区",
+      "sourceRow": 262,
+      "sourceRows": [
+        262
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

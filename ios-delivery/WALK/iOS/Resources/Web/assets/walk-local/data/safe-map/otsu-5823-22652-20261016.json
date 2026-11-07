@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "otsu-5823-22652-20261016",
+  "lat": 34.9402687475,
+  "lng": 135.917243125,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "大津市",
+  "source": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+  "sourceUrl": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/999caef4-7e90-4fd2-98eb-fd94368e9a2f/resource/3e5b513e-de51-4459-af70-6fda94e1bed3/download/od405902026022700200.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2025-03-12",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "7899826cf95c365a07c87b3ad05aa2aa7d4adeb440a2c57269c84f98c1d85ea8",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/otsu/aed/faa879a1519eaa58",
+      "lat": 34.93934944,
+      "lng": 135.9164039,
+      "category": "SAFE",
+      "name": "グループホームマザーレイク",
+      "address": "大津市黒津一丁目6番18号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市黒津一丁目6番18号",
+      "district": "大津市",
+      "sourceRow": 428,
+      "sourceRows": [
+        428
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/7d394fc751f13d95",
+      "lat": 34.93885833,
+      "lng": 135.9175758,
+      "category": "SAFE",
+      "name": "くろづ外科医院",
+      "address": "大津市黒津二丁目15番22号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市黒津二丁目15番22号",
+      "district": "大津市",
+      "sourceRow": 429,
+      "sourceRows": [
+        429
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/f3095942d03cd14b",
+      "lat": 34.93907944,
+      "lng": 135.9175903,
+      "category": "SAFE",
+      "name": "くろづ外科医院デイケア",
+      "address": "大津市黒津二丁目15番25号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市黒津二丁目15番25号",
+      "district": "大津市",
+      "sourceRow": 430,
+      "sourceRows": [
+        430
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/c609e5fadbf88c8d",
+      "lat": 34.94378778,
+      "lng": 135.9174025,
+      "category": "SAFE",
+      "name": "田上市民体育館",
+      "address": "大津市稲津一丁目10番20号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市稲津一丁目10番20号",
+      "district": "大津市",
+      "sourceRow": 439,
+      "sourceRows": [
+        439
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

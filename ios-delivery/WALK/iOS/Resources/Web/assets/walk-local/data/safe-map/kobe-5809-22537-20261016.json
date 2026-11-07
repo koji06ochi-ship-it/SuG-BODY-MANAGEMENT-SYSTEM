@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5809-22537-20261016",
+  "lat": 34.85595800455395,
+  "lng": 135.22361857351524,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/20220b68fd8bde0c",
+      "lat": 34.8574799805233,
+      "lng": 135.225353509099,
+      "category": "SAFE",
+      "name": "いつくしみこども園",
+      "address": "神戸市北区道場町日下部1616",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区道場町日下部1616",
+      "district": "北区",
+      "sourceRow": 2515,
+      "sourceRows": [
+        2515
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2159a6924f6ebcb3",
+      "lat": 34.8569106066123,
+      "lng": 135.223412425508,
+      "category": "SAFE",
+      "name": "小規模保育園　ほしぞら",
+      "address": "神戸市北区道場町日下部1091-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区道場町日下部1091-1",
+      "district": "北区",
+      "sourceRow": 2519,
+      "sourceRows": [
+        2519
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/778dbfba07a04c7f",
+      "lat": 34.854949202054,
+      "lng": 135.222026355094,
+      "category": "SAFE",
+      "name": "医療法人社団　広徳会　細川医院",
+      "address": "神戸市北区道場町日下部1844",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区道場町日下部1844",
+      "district": "北区",
+      "sourceRow": 2562,
+      "sourceRows": [
+        2562
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4802f8c23c3d69ba",
+      "lat": 34.8544922290262,
+      "lng": 135.22368200436,
+      "category": "SAFE",
+      "name": "小規模多機能型居宅介護　こころ",
+      "address": "神戸市北区道場町日下部1853番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区道場町日下部1853番地",
+      "district": "北区",
+      "sourceRow": 2582,
+      "sourceRows": [
+        2582
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

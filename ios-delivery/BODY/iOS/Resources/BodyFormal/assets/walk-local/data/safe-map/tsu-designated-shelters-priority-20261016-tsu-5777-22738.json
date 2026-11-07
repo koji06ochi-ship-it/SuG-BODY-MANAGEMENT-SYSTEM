@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "safe-tsu-designated-shelters-tsu-5777-22738",
+  "lat": 34.662626,
+  "lng": 136.432241,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "三重県・津市共同利用 指定避難所データ",
+  "sourceUrl": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+  "sourceUpdatedAt": "2024-03-12",
+  "retrievedAt": "2026-10-16T00:00:00.000Z",
+  "sourceFileSha256": "8d45bec68a7f72c0c0f0cc45eccbeac81b0d921573ba31453ea6af68ce291325",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+  "data": [
+    {
+      "id": "municipality/tsu/tsu-shelter/fc8d1432a33360a3",
+      "lat": 34.65579207,
+      "lng": 136.4343648,
+      "category": "SAFE",
+      "name": "一志高岡公民館（指定避難所）",
+      "address": "三重県津市一志町田尻605-2",
+      "kind": "SHELTER",
+      "source": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+      "sourceLabel": "三重県・津市共同利用 指定避難所データ（開設状態・受入可否は未確認）",
+      "license": "CC-BY-4.0",
+      "sourceUpdatedAt": "2024-03-12",
+      "sourceRow": 55
+    },
+    {
+      "id": "municipality/tsu/tsu-shelter/5c0fee6a12a4fd69",
+      "lat": 34.6585597,
+      "lng": 136.4244222,
+      "category": "SAFE",
+      "name": "一志体育館（指定避難所）",
+      "address": "三重県津市一志町高野160-728",
+      "kind": "SHELTER",
+      "source": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+      "sourceLabel": "三重県・津市共同利用 指定避難所データ（開設状態・受入可否は未確認）",
+      "license": "CC-BY-4.0",
+      "sourceUpdatedAt": "2024-03-12",
+      "sourceRow": 127
+    },
+    {
+      "id": "municipality/tsu/tsu-shelter/660a4abb3dbff40d",
+      "lat": 34.65596575,
+      "lng": 136.4269445,
+      "category": "SAFE",
+      "name": "一志西小学校（指定避難所）",
+      "address": "三重県津市一志町田尻353-1",
+      "kind": "SHELTER",
+      "source": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+      "sourceLabel": "三重県・津市共同利用 指定避難所データ（開設状態・受入可否は未確認）",
+      "license": "CC-BY-4.0",
+      "sourceUpdatedAt": "2024-03-12",
+      "sourceRow": 130
+    }
+  ]
+}

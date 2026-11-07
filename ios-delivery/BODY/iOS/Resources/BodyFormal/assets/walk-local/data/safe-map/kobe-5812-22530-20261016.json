@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5812-22530-20261016",
+  "lat": 34.87523391315675,
+  "lng": 135.18052818157,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/31cf37d89fd03e46",
+      "lat": 34.8761403187663,
+      "lng": 135.180895685894,
+      "category": "SAFE",
+      "name": "大塚倉庫株式会社　西日本ロジスティクスセンター",
+      "address": "神戸市北区赤松台1丁目2-63",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区赤松台1丁目2-63",
+      "district": "北区",
+      "sourceRow": 2422,
+      "sourceRows": [
+        2422
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/51d0190e4c76e9e9",
+      "lat": 34.8743275075472,
+      "lng": 135.180160677246,
+      "category": "SAFE",
+      "name": "やすらぎの里　神戸赤松台",
+      "address": "神戸市北区赤松台1丁目1-77",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区赤松台1丁目1-77",
+      "district": "北区",
+      "sourceRow": 2423,
+      "sourceRows": [
+        2423
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

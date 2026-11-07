@@ -1,0 +1,184 @@
+{
+  "checkedAt": "2026-10-26T14:35:24.334Z",
+  "scope": "Square Sandbox monthly subscription lifecycle",
+  "environment": "sandbox",
+  "productionConnected": false,
+  "status": "stopped",
+  "catalog": {
+    "verified": true,
+    "itemIdMasked": "***GN6O",
+    "planVariationIdMasked": "***KBN2",
+    "amount": 1480,
+    "currency": "JPY",
+    "cadence": "MONTHLY",
+    "modified": false
+  },
+  "customer": {
+    "idMasked": "***WMHM",
+    "created": false,
+    "fictitious": true,
+    "referenceMatched": true,
+    "piiUsed": false
+  },
+  "card": {
+    "idMasked": "***IoAg",
+    "created": false,
+    "sandboxTestValue": true,
+    "enabled": true,
+    "realCardUsed": false
+  },
+  "subscription": {
+    "idMasked": "***a66e",
+    "created": false,
+    "status": "DEACTIVATED",
+    "planVariationIdMasked": "***KBN2",
+    "duplicateFree": true,
+    "paidUntil": null,
+    "invoiceCount": 0,
+    "events": [
+      {
+        "type": "DEACTIVATE_SUBSCRIPTION",
+        "effectiveDate": "2026-10-26",
+        "infoCode": ""
+      }
+    ]
+  },
+  "invoice": null,
+  "payment": null,
+  "cancellation": null,
+  "refunds": [],
+  "webhooks": {
+    "actualEndpointCreated": false,
+    "actualReceived": false,
+    "subscriptionsFound": null,
+    "requiredEventsCovered": false,
+    "checkedThisRun": false
+  },
+  "entitlement": null,
+  "apiOperations": [
+    {
+      "method": "GET",
+      "endpoint": "/v2/merchants",
+      "httpStatus": 200
+    },
+    {
+      "method": "GET",
+      "endpoint": "/v2/catalog/list",
+      "httpStatus": 200
+    },
+    {
+      "method": "POST",
+      "endpoint": "/v2/customers/search",
+      "httpStatus": 200
+    },
+    {
+      "method": "GET",
+      "endpoint": "/v2/cards",
+      "httpStatus": 200
+    },
+    {
+      "method": "POST",
+      "endpoint": "/v2/subscriptions/search",
+      "httpStatus": 200
+    },
+    {
+      "method": "GET",
+      "endpoint": "/v2/subscriptions/{subscription_id}",
+      "httpStatus": 200
+    },
+    {
+      "method": "GET",
+      "endpoint": "/v2/subscriptions/{subscription_id}",
+      "httpStatus": 200
+    },
+    {
+      "method": "GET",
+      "endpoint": "/v2/subscriptions/{subscription_id}",
+      "httpStatus": 200
+    },
+    {
+      "method": "GET",
+      "endpoint": "/v2/subscriptions/{subscription_id}",
+      "httpStatus": 200
+    },
+    {
+      "method": "GET",
+      "endpoint": "/v2/subscriptions/{subscription_id}",
+      "httpStatus": 200
+    },
+    {
+      "method": "GET",
+      "endpoint": "/v2/subscriptions/{subscription_id}",
+      "httpStatus": 200
+    },
+    {
+      "method": "GET",
+      "endpoint": "/v2/subscriptions/{subscription_id}",
+      "httpStatus": 200
+    },
+    {
+      "method": "GET",
+      "endpoint": "/v2/subscriptions/{subscription_id}",
+      "httpStatus": 200
+    },
+    {
+      "method": "GET",
+      "endpoint": "/v2/subscriptions/{subscription_id}",
+      "httpStatus": 200
+    },
+    {
+      "method": "GET",
+      "endpoint": "/v2/subscriptions/{subscription_id}",
+      "httpStatus": 200
+    },
+    {
+      "method": "GET",
+      "endpoint": "/v2/subscriptions/{subscription_id}",
+      "httpStatus": 200
+    },
+    {
+      "method": "GET",
+      "endpoint": "/v2/subscriptions/{subscription_id}",
+      "httpStatus": 200
+    },
+    {
+      "method": "GET",
+      "endpoint": "/v2/subscriptions/{subscription_id}/events",
+      "httpStatus": 200
+    }
+  ],
+  "mutations": {
+    "customer": 0,
+    "card": 0,
+    "subscription": 0,
+    "cancellation": 0,
+    "refund": 0,
+    "webhook": 0,
+    "database": 0,
+    "production": 0
+  },
+  "errorCode": "SANDBOX_SUBSCRIPTION_DEACTIVATED_WITHOUT_INITIAL_INVOICE",
+  "creationAttempt": {
+    "checkedAt": "2026-10-26T14:33:14.808Z",
+    "customerCreated": true,
+    "customerIdMasked": "***WMHM",
+    "cardCreated": true,
+    "cardIdMasked": "***IoAg",
+    "subscriptionCreated": true,
+    "subscriptionIdMasked": "***a66e",
+    "createHttpStatus": 200,
+    "invoiceCreated": false,
+    "paymentCreated": false,
+    "stoppedReason": "SANDBOX_INITIAL_BILLING_NOT_COMPLETED"
+  },
+  "aggregateMutations": {
+    "customer": 1,
+    "card": 1,
+    "subscription": 1,
+    "cancellation": 0,
+    "refund": 0,
+    "webhook": 0,
+    "database": 0,
+    "production": 0
+  }
+}

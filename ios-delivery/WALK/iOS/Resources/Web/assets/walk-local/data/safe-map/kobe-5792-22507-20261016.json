@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5792-22507-20261016",
+  "lat": 34.7573675149157,
+  "lng": 135.04334610350267,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/4783b03d37056061",
+      "lat": 34.7573245160937,
+      "lng": 135.044579583344,
+      "category": "SAFE",
+      "name": "神戸市立　押部谷中学校",
+      "address": "神戸市西区押部谷町押部字吉谷722",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区押部谷町押部字吉谷722",
+      "district": "西区",
+      "sourceRow": 510,
+      "sourceRows": [
+        510
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/cdf4d2f63ea2fa2b",
+      "lat": 34.7573890143267,
+      "lng": 135.042729363582,
+      "category": "SAFE",
+      "name": "神戸市立　押部谷保育所",
+      "address": "神戸市西区美穂が丘1丁目1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区美穂が丘1丁目1",
+      "district": "西区",
+      "sourceRow": 653,
+      "sourceRows": [
+        653
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a46b116c798e889a",
+      "lat": 34.7573890143267,
+      "lng": 135.042729363582,
+      "category": "SAFE",
+      "name": "神戸市立　押部谷児童館",
+      "address": "神戸市西区美穂が丘1丁目1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区美穂が丘1丁目1",
+      "district": "西区",
+      "sourceRow": 654,
+      "sourceRows": [
+        654
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

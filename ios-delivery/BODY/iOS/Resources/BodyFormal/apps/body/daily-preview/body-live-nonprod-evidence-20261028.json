@@ -1,0 +1,176 @@
+{
+  "recordedAt": "2026-10-28T17:51:48.1003038+09:00",
+  "scope": "approved non-production live connection validation and pre-connection replay implementation",
+  "supabase": {
+    "projectRef": "nnqzxcgkqjnmtzcvorha",
+    "toolRegistry": "Supabase tools are listed, including apply_migration, execute_sql, list_projects and list_tables",
+    "connectorDispatch": "unavailable: calls returned Unknown tool; no repeated get_project call",
+    "dashboard": "current user reports logged in with an empty organization list; the IAB handoff tab remains at sign-in and was not used to infer ownership",
+    "projectNameConfirmed": false,
+    "purposeConfirmedNonProduction": false,
+    "planConfirmed": false,
+    "sqlApplied": false,
+    "rlsRpcLiveTested": false,
+    "abAccountsCreated": false,
+    "provenance": {
+      "source": "public GitHub repository and received handoff manifest",
+      "repository": "koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM",
+      "earliestConfirmedFile": "auth-check.html",
+      "earliestConfirmedCommit": "4474965b2dec5129ee8cfe95a1d9d84fe0be8eb0",
+      "commitDateUtc": "2026-08-17T00:52:30Z",
+      "receivedFileSha256": "1DED4E3059B05707626EECC270EF1B4D0246F9532EE7640D89DAF025EA64C81F",
+      "manifestHashMatched": true,
+      "publicAuthHealth": "HTTP 200, GoTrue v2.197.0 on 2026-10-28",
+      "projectOwnerConfirmed": false,
+      "organizationConfirmed": false,
+      "managementAccessConfirmed": false,
+      "localLinkMetadataFound": false,
+      "conclusion": "Project endpoint is active, but project ref and publishable client configuration do not prove dashboard ownership or membership."
+    },
+    "runtimeEligibilityCheck": {
+      "checkedAt": "2026-10-28T19:19:46.1974457+09:00",
+      "eligibleForLiveSql": false,
+      "stopReason": "Could not prove an existing non-production project, production separation, or zero additional cost.",
+      "connectorRegistryVisible": true,
+      "listProjectsResult": "Unknown tool",
+      "listOrganizationsResult": "Unknown tool",
+      "connectorResultInterpretation": "Not treated as authentication failure, empty list, or missing project.",
+      "cliInstalled": false,
+      "managementEnvironmentVariablesPresent": false,
+      "credentialFilesFound": false,
+      "localProjectLinkFound": false,
+      "githubLoggedInChromeConnectedToCodex": false,
+      "knownProjectRef": "nnqzxcgkqjnmtzcvorha",
+      "knownProjectClassification": "active public endpoint; environment purpose and plan unconfirmed",
+      "publicBodyReferencesKnownProject": true,
+      "projectNameConfirmed": false,
+      "organizationConfirmed": false,
+      "planConfirmed": false,
+      "productionSeparationConfirmed": false,
+      "zeroAdditionalCostConfirmed": false,
+      "preflightExecuted": false,
+      "migrationApplied": false,
+      "rlsRpcLiveTested": false,
+      "sqlCandidates": [
+        {
+          "file": "source/supabase/body_sales_entitlements_proposed.sql",
+          "sha256": "A095521426392A50165228C096076E84C5C799B16B36FF723EB93876820E33C4"
+        },
+        {
+          "file": "source/supabase/body_sales_nonprod_preflight.sql",
+          "sha256": "6A7E7ABAA24E22CF9C6E5F23179EB97B1DFD5DE69C1E7D9123C9C920D0E920AE"
+        }
+      ]
+    }
+  },
+  "square": {
+    "environment": "sandbox intended; not yet authenticated in Developer Dashboard",
+    "dashboard": "PC-visible Developer sign-in page open for the user",
+    "eventsApi": "code prepared only; enablement and live search not executed",
+    "secureTokenAvailable": false,
+    "apiCalls": 0,
+    "purchases": 0,
+    "refunds": 0,
+    "cancellations": 0,
+    "webhookRegistrations": 0
+  },
+  "replayImplementation": {
+    "officialLimits": {
+      "webhookAutomaticRetryHours": 24,
+      "eventsApiMaximumHistoryDays": 28,
+      "eventsApiMaximumPageSize": 100,
+      "eventsApiRequiresApplicationPersonalAccessToken": true,
+      "eventsMustBeEnabledBeforeTheyCanBeSearched": true
+    },
+    "defaultPollingLookbackHours": 72,
+    "configuredMaximumLookbackHours": 648,
+    "sandboxOnlyGuard": true,
+    "disabledUntilConfigured": true,
+    "merchantScoped": true,
+    "stableOriginalQueryAcrossCursors": true,
+    "persistentCursorCheckpoint": true,
+    "partialFailureResume": true,
+    "eventIdAtomicDeduplication": true,
+    "orderReversalRecovery": true,
+    "rawEventPayloadStored": false,
+    "localTests": "10/10 PASS",
+    "liveEventsApiTested": false
+  },
+  "vercel": {
+    "project": "sug-body-management-system",
+    "projectId": "prj_D8T25Tm7ZeteyC6AgW9EdkwncKow",
+    "existingDeploymentTarget": "production",
+    "previewDeployed": false,
+    "productionChanged": false,
+    "planConfirmed": false,
+    "billingCheck": "costs_not_found is not treated as free or paid confirmation"
+  },
+  "local": {
+    "checkpoint": "source/apps/body/daily-preview/checkpoints/body-events-replay-before-20261028-174425",
+    "checkpointFiles": 9,
+    "checkpointHashVerificationAtCreation": "9/9 PASS",
+    "bodyEventsReplay": "10/10 PASS",
+    "bodyPurchaseFlowRegression": "19/19 PASS",
+    "squareMonthlyRegression": "16/16 PASS",
+    "nodeSyntax": "PASS",
+    "sqlExecution": "not run: no local Postgres and non-production project identity/plan not yet confirmed",
+    "files": [
+      {
+        "file": "source/api/body-square-client.cjs",
+        "sha256": "1A252A9EBE7880FC1BE42C1303C95E047C4C0D73DD92C53C49A979B56FCDC3D8",
+        "bytes": 7303
+      },
+      {
+        "file": "source/api/body-square-webhook-service.cjs",
+        "sha256": "8589C1F640B741EE280D18A26A104900D46538341C3E4793174349F733ACD7F5",
+        "bytes": 6633
+      },
+      {
+        "file": "source/api/body-supabase-repository.cjs",
+        "sha256": "55313F96E4B8AE61D483572E735B8F86C2B67583618F97AD872D771FB5B6EB3E",
+        "bytes": 12978
+      },
+      {
+        "file": "source/api/body-square-events-replay.cjs",
+        "sha256": "EF9DC4193F7905CAF9D9C9DF3D05D4C543A5D7CB81E15820E8A740A2B4F45FCC",
+        "bytes": 6705
+      },
+      {
+        "file": "source/api/body-square-events-replay.mjs",
+        "sha256": "F11B58FAF907A68AEB3F1FC803C68562EBD1594CBD0114DFBE4D725D4910DE48",
+        "bytes": 3128
+      },
+      {
+        "file": "source/supabase/body_sales_entitlements_proposed.sql",
+        "sha256": "A095521426392A50165228C096076E84C5C799B16B36FF723EB93876820E33C4",
+        "bytes": 35443
+      },
+      {
+        "file": "source/.env.body-sales.example",
+        "sha256": "2CCA19BEF342A11587C25AC016846D1432DE09886278E23A1BE6D8AC84A163F8",
+        "bytes": 982
+      },
+      {
+        "file": "source/apps/body/daily-preview/body-square-events-replay-test.cjs",
+        "sha256": "069C0251B1DB0505B61CB9C106F21398C9517C65D02140148CB43FBE642FBF8F",
+        "bytes": 11276
+      }
+    ],
+    "handoff": "CODEX-HANDOFF.md updated separately to avoid recursive hash"
+  },
+  "unrecoverableOrManualScope": [
+    "Events generated while Square Events API is disabled are not searchable for that disabled period",
+    "Events older than 28 days cannot be recovered through SearchEvents",
+    "The default 72-hour polling window needs an explicit up-to-648-hour replay when a longer outage is known",
+    "No scheduler or HTTPS preview is activated until non-production and no-additional-cost conditions are confirmed"
+  ],
+  "prohibitedActions": {
+    "productionDb": 0,
+    "productionSquare": 0,
+    "realCharge": 0,
+    "git": 0,
+    "productionPublish": 0,
+    "externalAi": 0,
+    "emailOrForm": 0
+  }
+}

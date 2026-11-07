@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "safe-tsu-designated-shelters-tsu-5786-22731",
+  "lat": 34.720937,
+  "lng": 136.38756600000002,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "三重県・津市共同利用 指定避難所データ",
+  "sourceUrl": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+  "sourceUpdatedAt": "2024-03-12",
+  "retrievedAt": "2026-10-16T00:00:00.000Z",
+  "sourceFileSha256": "8d45bec68a7f72c0c0f0cc45eccbeac81b0d921573ba31453ea6af68ce291325",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+  "data": [
+    {
+      "id": "municipality/tsu/tsu-shelter/e5f628eef177835f",
+      "lat": 34.72206395,
+      "lng": 136.3867355,
+      "category": "SAFE",
+      "name": "美里社会福祉センター（指定避難所）",
+      "address": "三重県津市美里町三郷46-3",
+      "kind": "SHELTER",
+      "source": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+      "sourceLabel": "三重県・津市共同利用 指定避難所データ（開設状態・受入可否は未確認）",
+      "license": "CC-BY-4.0",
+      "sourceUpdatedAt": "2024-03-12",
+      "sourceRow": 106
+    },
+    {
+      "id": "municipality/tsu/tsu-shelter/1efdc129e1a6f30c",
+      "lat": 34.71894682,
+      "lng": 136.3869176,
+      "category": "SAFE",
+      "name": "みさとの丘学園（指定避難所）",
+      "address": "三重県津市美里町三郷84",
+      "kind": "SHELTER",
+      "source": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+      "sourceLabel": "三重県・津市共同利用 指定避難所データ（開設状態・受入可否は未確認）",
+      "license": "CC-BY-4.0",
+      "sourceUpdatedAt": "2024-03-12",
+      "sourceRow": 107
+    },
+    {
+      "id": "municipality/tsu/tsu-shelter/86bb2205cab02ecd",
+      "lat": 34.720469,
+      "lng": 136.3917,
+      "category": "SAFE",
+      "name": "（旧）高宮小学校（指定避難所）",
+      "address": "三重県津市美里町足坂585",
+      "kind": "SHELTER",
+      "source": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+      "sourceLabel": "三重県・津市共同利用 指定避難所データ（開設状態・受入可否は未確認）",
+      "license": "CC-BY-4.0",
+      "sourceUpdatedAt": "2024-03-12",
+      "sourceRow": 108
+    }
+  ]
+}

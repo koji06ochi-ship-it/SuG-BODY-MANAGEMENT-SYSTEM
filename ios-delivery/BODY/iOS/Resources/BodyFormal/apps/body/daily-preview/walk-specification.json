@@ -1,0 +1,11 @@
+{
+  "distance": "meters in session, km in daily summary",
+  "steps": "untouched",
+  "retained": "walkSessions with replaced distance; no coordinates",
+  "maxAccuracyMeters": 40,
+  "maxSpeedMetersPerSecond": 3,
+  "maxGapSeconds": 60,
+  "secureContextRequired": true,
+  "map": "explicit user action opens external OpenStreetMap",
+  "backgroundTracking": false
+}

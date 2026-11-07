@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "id": "yokkaichi-5830-22761-20261016",
+  "lat": 34.985606507499995,
+  "lng": 136.56787695,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "四日市市",
+  "source": "四日市市内公共施設 AED設置箇所一覧",
+  "sourceUrl": "https://data.bodik.jp/dataset/242021_00127",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/422f8da8-0b3c-4d84-b8dd-d88d18e914ce/resource/2a5eee8b-c455-4c2e-8553-b0d3d36e5ef2/download/242021_aed.csv",
+  "sourceUpdatedAt": "2024-12-18",
+  "sourcePageUpdatedAt": "2025-01-24",
+  "retrievedAt": "2026-10-15T15:44:16.747Z",
+  "sourceFileSha256": "c0880c81977c7fc444213ee84ef31a7b2e9e34f12d31e892064cbabb7d5159cf",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/yokkaichi/aed/2a3b3359d544ce94",
+      "lat": 34.98464232,
+      "lng": 136.5684489,
+      "category": "SAFE",
+      "name": "神前小学校",
+      "address": "四日市市曽井町493番地の1",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市曽井町493番地の1",
+      "sourceRow": 20,
+      "sourceRows": [
+        20
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/e6f2022e2f9296fc",
+      "lat": 34.98594194,
+      "lng": 136.5678404,
+      "category": "SAFE",
+      "name": "神前こども園",
+      "address": "四日市市高角町2985-1",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市高角町2985-1",
+      "sourceRow": 130,
+      "sourceRows": [
+        130,
+        131
+      ],
+      "duplicateSourceEntries": 2
+    },
+    {
+      "id": "municipality/yokkaichi/aed/3574e608650c70f6",
+      "lat": 34.98589983,
+      "lng": 136.5673781,
+      "category": "SAFE",
+      "name": "神前地区市民センター",
+      "address": "四日市市高角町2977",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市高角町2977",
+      "sourceRow": 151,
+      "sourceRows": [
+        151
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5789-22548-20261016",
+  "lat": 34.73553733370672,
+  "lng": 135.28978869675973,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/b936e7a7a720a2f9",
+      "lat": 34.7354742321667,
+      "lng": 135.289395292635,
+      "category": "SAFE",
+      "name": "グランドビュー甲南（社会福祉法人　神戸福生会）",
+      "address": "神戸市東灘区森北町6丁目1-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区森北町6丁目1-3",
+      "district": "東灘区",
+      "sourceRow": 1595,
+      "sourceRows": [
+        1595
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/eae976cf50ed954f",
+      "lat": 34.7357467100581,
+      "lng": 135.289153518536,
+      "category": "SAFE",
+      "name": "ケアハウスこうべ甲南（社会福祉法人　神戸福生会）",
+      "address": "神戸市東灘区森北町6丁目1-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区森北町6丁目1-2",
+      "district": "東灘区",
+      "sourceRow": 1596,
+      "sourceRows": [
+        1596
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5c16d8f674c6841c",
+      "lat": 34.7358644402738,
+      "lng": 135.288843404289,
+      "category": "SAFE",
+      "name": "高齢者ケアセンター甲南（社会福祉法人　神戸福生会）",
+      "address": "神戸市東灘区森北町6丁目1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区森北町6丁目1-1",
+      "district": "東灘区",
+      "sourceRow": 1597,
+      "sourceRows": [
+        1597
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2ab1d2780e17a60e",
+      "lat": 34.7350639523283,
+      "lng": 135.291762571579,
+      "category": "SAFE",
+      "name": "甲南女子中高等学校",
+      "address": "神戸市東灘区森北町5丁目6-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区森北町5丁目6-1",
+      "district": "東灘区",
+      "sourceRow": 1598,
+      "sourceRows": [
+        1598
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

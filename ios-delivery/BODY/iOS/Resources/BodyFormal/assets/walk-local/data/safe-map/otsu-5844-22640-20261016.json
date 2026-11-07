@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "otsu-5844-22640-20261016",
+  "lat": 35.067093055,
+  "lng": 135.8449181,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "大津市",
+  "source": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+  "sourceUrl": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/999caef4-7e90-4fd2-98eb-fd94368e9a2f/resource/3e5b513e-de51-4459-af70-6fda94e1bed3/download/od405902026022700200.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2025-03-12",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "7899826cf95c365a07c87b3ad05aa2aa7d4adeb440a2c57269c84f98c1d85ea8",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/otsu/aed/a7365c0d91a5a127",
+      "lat": 35.06634583,
+      "lng": 135.8441181,
+      "category": "SAFE",
+      "name": "比叡山延暦寺",
+      "address": "大津市坂本本町4220番地",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市坂本本町4220番地",
+      "district": "大津市",
+      "sourceRow": 123,
+      "sourceRows": [
+        123
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/cbcf0b8f916e6f13",
+      "lat": 35.06784028,
+      "lng": 135.8457181,
+      "category": "SAFE",
+      "name": "比叡山延暦寺",
+      "address": "大津市坂本本町4220番地",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市坂本本町4220番地",
+      "district": "大津市",
+      "sourceRow": 126,
+      "sourceRows": [
+        126
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

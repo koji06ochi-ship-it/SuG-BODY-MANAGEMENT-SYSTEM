@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5777-22510-20261016",
+  "lat": 34.66588488705874,
+  "lng": 135.0623020168452,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/21367fa412569c09",
+      "lat": 34.6669057027597,
+      "lng": 135.061293893464,
+      "category": "SAFE",
+      "name": "神戸市立　小束山小学校",
+      "address": "神戸市垂水区小束山7丁目868番地の362",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区小束山7丁目868番地の362",
+      "district": "垂水区",
+      "sourceRow": 319,
+      "sourceRows": [
+        319
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/76adbebd3e16878e",
+      "lat": 34.6669057027597,
+      "lng": 135.061293893464,
+      "category": "SAFE",
+      "name": "神戸市立　小束山学童保育センター",
+      "address": "神戸市垂水区小束山7丁目868-362",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区小束山7丁目868-362",
+      "district": "垂水区",
+      "sourceRow": 351,
+      "sourceRows": [
+        351
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/eb7e66eadee0c208",
+      "lat": 34.6657424635145,
+      "lng": 135.062166063264,
+      "category": "SAFE",
+      "name": "神戸市立　小束山児童館",
+      "address": "神戸市垂水区小束山5丁目868-614",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区小束山5丁目868-614",
+      "district": "垂水区",
+      "sourceRow": 356,
+      "sourceRows": [
+        356
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/78637ee3879c0ac3",
+      "lat": 34.6649352831299,
+      "lng": 135.063378117017,
+      "category": "SAFE",
+      "name": "ウェルシア薬局　SP垂水小束山店",
+      "address": "神戸市垂水区小束山本町3丁目1-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区小束山本町3丁目1-2",
+      "district": "垂水区",
+      "sourceRow": 429,
+      "sourceRows": [
+        429
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bab12edac96cc80e",
+      "lat": 34.6649352831299,
+      "lng": 135.063378117017,
+      "category": "SAFE",
+      "name": "株式会社ダイエーグルメシティ小束山店",
+      "address": "神戸市垂水区小束山本町3丁目1-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区小束山本町3丁目1-2",
+      "district": "垂水区",
+      "sourceRow": 474,
+      "sourceRows": [
+        474
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

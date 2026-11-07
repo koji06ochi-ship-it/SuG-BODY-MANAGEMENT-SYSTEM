@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5751-22788-20261016",
+  "lat": 34.510933457234046,
+  "lng": 136.7330267669655,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/bb9d82d391dd9821",
+      "lat": 34.5111449144681,
+      "lng": 136.732552533931,
+      "category": "SAFE",
+      "name": "伊勢市立港中学校",
+      "address": "伊勢市竹ケ鼻町78-10",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市竹ケ鼻町78-10",
+      "sourceRow": 64,
+      "sourceRows": [
+        64
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/0652cfb13fd0675e",
+      "lat": 34.510722,
+      "lng": 136.733501,
+      "category": "SAFE",
+      "name": "伊勢市立港中学校　体育館",
+      "address": "伊勢市竹ケ鼻町78-10",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市竹ケ鼻町78-10",
+      "sourceRow": 65,
+      "sourceRows": [
+        65
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

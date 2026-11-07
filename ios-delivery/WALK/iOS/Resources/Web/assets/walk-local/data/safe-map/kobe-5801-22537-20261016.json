@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5801-22537-20261016",
+  "lat": 34.8090985027775,
+  "lng": 135.22472011753848,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/7f14c5f87eed8d58",
+      "lat": 34.8096771169504,
+      "lng": 135.226181763376,
+      "category": "SAFE",
+      "name": "神戸市立　有馬中学校",
+      "address": "神戸市北区有野台7-18",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有野台7-18",
+      "district": "北区",
+      "sourceRow": 2192,
+      "sourceRows": [
+        2192
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c582303ec1df0eda",
+      "lat": 34.8086269207931,
+      "lng": 135.224673792869,
+      "category": "SAFE",
+      "name": "神戸アドベンチスト病院",
+      "address": "神戸市北区有野台8丁目4-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有野台8丁目4-1",
+      "district": "北区",
+      "sourceRow": 2566,
+      "sourceRows": [
+        2566
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/80ef363f26b71300",
+      "lat": 34.8088869406002,
+      "lng": 135.224342590659,
+      "category": "SAFE",
+      "name": "神戸アドベンチスト病院三育センター",
+      "address": "神戸市北区有野台8丁目4-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有野台8丁目4-2",
+      "district": "北区",
+      "sourceRow": 2567,
+      "sourceRows": [
+        2567
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c188dda5f3248df4",
+      "lat": 34.8092030327663,
+      "lng": 135.22368232325,
+      "category": "SAFE",
+      "name": "神戸アドベンチスト病院パルーシア神戸",
+      "address": "神戸市北区有野台8丁目4-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有野台8丁目4-3",
+      "district": "北区",
+      "sourceRow": 2568,
+      "sourceRows": [
+        2568
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

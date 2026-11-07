@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "otsu-5840-22644-20261016",
+  "lat": 35.04328648,
+  "lng": 135.86747546666666,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "大津市",
+  "source": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+  "sourceUrl": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/999caef4-7e90-4fd2-98eb-fd94368e9a2f/resource/3e5b513e-de51-4459-af70-6fda94e1bed3/download/od405902026022700200.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2025-03-12",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "7899826cf95c365a07c87b3ad05aa2aa7d4adeb440a2c57269c84f98c1d85ea8",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/otsu/aed/0a42a0a5ba10be95",
+      "lat": 35.04415028,
+      "lng": 135.8656561,
+      "category": "SAFE",
+      "name": "滋賀銀行　唐崎支店",
+      "address": "大津市滋賀里四丁目9番31号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市滋賀里四丁目9番31号",
+      "district": "大津市",
+      "sourceRow": 138,
+      "sourceRows": [
+        138
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/a26110fc73be4030",
+      "lat": 35.04040194,
+      "lng": 135.8683328,
+      "category": "SAFE",
+      "name": "大津市立唐崎幼稚園",
+      "address": "大津市際川三丁目38番2号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市際川三丁目38番2号",
+      "district": "大津市",
+      "sourceRow": 144,
+      "sourceRows": [
+        144
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/5572589fa2c6b0cc",
+      "lat": 35.04530722,
+      "lng": 135.8684375,
+      "category": "SAFE",
+      "name": "唐崎公民館",
+      "address": "大津市唐崎二丁目10番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市唐崎二丁目10番1号",
+      "district": "大津市",
+      "sourceRow": 146,
+      "sourceRows": [
+        146
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

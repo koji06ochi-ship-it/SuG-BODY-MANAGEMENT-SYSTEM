@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5789-22523-20261016",
+  "lat": 34.738246748266384,
+  "lng": 135.14180693975678,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/37cb5ceab5911460",
+      "lat": 34.7379132606108,
+      "lng": 135.143793156257,
+      "category": "SAFE",
+      "name": "ＡＸＴＯＳ鈴蘭台店",
+      "address": "神戸市北区松宮台2丁目27－8",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区松宮台2丁目27－8",
+      "district": "北区",
+      "sourceRow": 2186,
+      "sourceRows": [
+        2186
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2bfd7ca8694a2781",
+      "lat": 34.7376702057852,
+      "lng": 135.138461936518,
+      "category": "SAFE",
+      "name": "神戸市立　泉台小学校",
+      "address": "神戸市北区泉台3丁目1番地の4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区泉台3丁目1番地の4",
+      "district": "北区",
+      "sourceRow": 2242,
+      "sourceRows": [
+        2242
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c7672dec040e1116",
+      "lat": 34.7389703501778,
+      "lng": 135.143460379627,
+      "category": "SAFE",
+      "name": "泉台幼稚園",
+      "address": "神戸市北区泉台2丁目2-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区泉台2丁目2-3",
+      "district": "北区",
+      "sourceRow": 2421,
+      "sourceRows": [
+        2421
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e74bcfc0608d5d60",
+      "lat": 34.7379132606108,
+      "lng": 135.143793156257,
+      "category": "SAFE",
+      "name": "スポーツクラブ　アクトス鈴蘭台店",
+      "address": "神戸市北区松宮台2丁目27－8",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区松宮台2丁目27－8",
+      "district": "北区",
+      "sourceRow": 2488,
+      "sourceRows": [
+        2488
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/62093e1f63b765ca",
+      "lat": 34.7387666641473,
+      "lng": 135.139526070125,
+      "category": "SAFE",
+      "name": "神戸市立　泉台児童館",
+      "address": "神戸市北区泉台3丁目39-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区泉台3丁目39-3",
+      "district": "北区",
+      "sourceRow": 2499,
+      "sourceRows": [
+        2499
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

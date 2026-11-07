@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5783-22531-20261016",
+  "lat": 34.69900066453771,
+  "lng": 135.18965351656078,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/b31c45208c59e144",
+      "lat": 34.6999318358578,
+      "lng": 135.19152508716,
+      "category": "SAFE",
+      "name": "KTC中央学院株式会社　神戸キャンパス",
+      "address": "神戸市中央区北野町2－6－5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区北野町2－6－5",
+      "district": "中央区",
+      "sourceRow": 1051,
+      "sourceRows": [
+        1051
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8545da0b8d6a74ee",
+      "lat": 34.6981816266234,
+      "lng": 135.187872514899,
+      "category": "SAFE",
+      "name": "神戸信用金庫　北野法人営業部",
+      "address": "神戸市中央区山本通2丁目8-12",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区山本通2丁目8-12",
+      "district": "中央区",
+      "sourceRow": 1113,
+      "sourceRows": [
+        1113
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4a261aeca933378d",
+      "lat": 34.6992724996303,
+      "lng": 135.189838550869,
+      "category": "SAFE",
+      "name": "北野坂保育園",
+      "address": "神戸市中央区北野町3丁目1-7",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区北野町3丁目1-7",
+      "district": "中央区",
+      "sourceRow": 1149,
+      "sourceRows": [
+        1149
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2202922c5ade7526",
+      "lat": 34.6994357339536,
+      "lng": 135.191158914977,
+      "category": "SAFE",
+      "name": "学校法人　光の丘幼稚園",
+      "address": "神戸市中央区山本通1-7-27",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区山本通1-7-27",
+      "district": "中央区",
+      "sourceRow": 1152,
+      "sourceRows": [
+        1152
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2f49bb6c826e50d0",
+      "lat": 34.6981816266234,
+      "lng": 135.187872514899,
+      "category": "SAFE",
+      "name": "神戸信用金庫　北野支店",
+      "address": "神戸市中央区山本通2丁目8番地12-1階",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区山本通2丁目8番地12-1階",
+      "district": "中央区",
+      "sourceRow": 1218,
+      "sourceRows": [
+        1218
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

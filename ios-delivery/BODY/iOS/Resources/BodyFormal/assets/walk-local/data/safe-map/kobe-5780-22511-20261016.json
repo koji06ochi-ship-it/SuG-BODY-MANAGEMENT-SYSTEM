@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5780-22511-20261016",
+  "lat": 34.68315542709078,
+  "lng": 135.06981503646116,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/6c4d45d7ea200e9a",
+      "lat": 34.6826907122576,
+      "lng": 135.071537836038,
+      "category": "SAFE",
+      "name": "宮野医療器株式会社",
+      "address": "神戸市須磨区弥栄台2-12-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区弥栄台2-12-1",
+      "district": "須磨区",
+      "sourceRow": 171,
+      "sourceRows": [
+        171
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/415cdc5f0aa8881a",
+      "lat": 34.6842993512854,
+      "lng": 135.071979537558,
+      "category": "SAFE",
+      "name": "住友ファーマ(株)　神戸物流センター",
+      "address": "神戸市須磨区弥栄台3丁目16番2号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区弥栄台3丁目16番2号",
+      "district": "須磨区",
+      "sourceRow": 233,
+      "sourceRows": [
+        233
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0c34be8a4fe562f1",
+      "lat": 34.6849808700562,
+      "lng": 135.07046558358,
+      "category": "SAFE",
+      "name": "京神倉庫株式会社　須磨支店",
+      "address": "神戸市須磨区弥栄台5丁目16番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区弥栄台5丁目16番",
+      "district": "須磨区",
+      "sourceRow": 238,
+      "sourceRows": [
+        238
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b2f96b5cd15a2348",
+      "lat": 34.682436876385,
+      "lng": 135.068371853091,
+      "category": "SAFE",
+      "name": "三井倉庫㈱関西Ｐ＆ＭセンターＡ棟",
+      "address": "神戸市須磨区弥栄台5丁目11-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区弥栄台5丁目11-1",
+      "district": "須磨区",
+      "sourceRow": 244,
+      "sourceRows": [
+        244
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/23713d6645343483",
+      "lat": 34.682733813862,
+      "lng": 135.066053006562,
+      "category": "SAFE",
+      "name": "兵庫県立　神戸高等技術専門学院",
+      "address": "神戸市西区学園東町5丁目2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区学園東町5丁目2",
+      "district": "西区",
+      "sourceRow": 592,
+      "sourceRows": [
+        592
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9c6e0d997a495110",
+      "lat": 34.6817909386985,
+      "lng": 135.070482401938,
+      "category": "SAFE",
+      "name": "第一環境株式会社　神戸垂水営業所",
+      "address": "神戸市西区学園東町6丁目2番地3ラ・メゾンクレール弐番館101号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区学園東町6丁目2番地3ラ・メゾンクレール弐番館101号",
+      "district": "西区",
+      "sourceRow": 800,
+      "sourceRows": [
+        800
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

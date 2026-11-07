@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5792-22506-20261016",
+  "lat": 34.75466652577655,
+  "lng": 135.0367751312765,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/faec6ac5367336cf",
+      "lat": 34.7548302384612,
+      "lng": 135.037253731329,
+      "category": "SAFE",
+      "name": "神戸市立　押部谷小学校",
+      "address": "神戸市西区押部谷町福住字四十代552-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区押部谷町福住字四十代552-3",
+      "district": "西区",
+      "sourceRow": 554,
+      "sourceRows": [
+        554
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e116371f2d557ae5",
+      "lat": 34.7545028130919,
+      "lng": 135.036296531224,
+      "category": "SAFE",
+      "name": "神戸市立　おしんべ幼稚園",
+      "address": "神戸市西区押部谷町西盛174",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区押部谷町西盛174",
+      "district": "西区",
+      "sourceRow": 711,
+      "sourceRows": [
+        711
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

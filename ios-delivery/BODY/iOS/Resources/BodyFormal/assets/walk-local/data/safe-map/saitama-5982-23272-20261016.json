@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5982-23272",
+  "lat": 35.893899360000006,
+  "lng": 139.63724493333333,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.894074,
+      "lng": 139.637043,
+      "category": "SAFE",
+      "name": "さいたま新都心駅東口自転車等駐車場",
+      "address": "さいたま市吉敷町4-269-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "吉敷町4-269-1",
+      "district": "大宮区",
+      "sourceRow": 138,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/22f31e8b0633471e",
+      "sourceRows": [
+        138
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.89417608,
+      "lng": 139.6371308,
+      "category": "SAFE",
+      "name": "さいたま新都心駅東口自転車等駐車場",
+      "address": "さいたま市吉敷町4-269-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "吉敷町4-269-1",
+      "district": "大宮区",
+      "sourceRow": 139,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/bb6cd917318952ee",
+      "sourceRows": [
+        139
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.893448,
+      "lng": 139.637561,
+      "category": "SAFE",
+      "name": "さいたま新都心バスターミナル",
+      "address": "さいたま市北袋町1-603-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "北袋町1-603-1",
+      "district": "大宮区",
+      "sourceRow": 142,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/27b8d69ad063a578",
+      "sourceRows": [
+        142
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

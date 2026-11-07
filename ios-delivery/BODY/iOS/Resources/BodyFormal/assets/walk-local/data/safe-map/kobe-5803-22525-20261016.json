@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5803-22525-20261016",
+  "lat": 34.82212068589507,
+  "lng": 135.15081195661824,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/b379ae2105cf817b",
+      "lat": 34.8224547667299,
+      "lng": 135.150197580783,
+      "category": "SAFE",
+      "name": "神戸市立　好徳小学校",
+      "address": "神戸市北区淡河町野瀬487番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区淡河町野瀬487番地",
+      "district": "北区",
+      "sourceRow": 2252,
+      "sourceRows": [
+        2252
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/08129d3d26d384fa",
+      "lat": 34.822078482845,
+      "lng": 135.151119645761,
+      "category": "SAFE",
+      "name": "上淡河地域福祉センター",
+      "address": "神戸市北区淡河町野瀬字新田459-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区淡河町野瀬字新田459-2",
+      "district": "北区",
+      "sourceRow": 2398,
+      "sourceRows": [
+        2398
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6fbbdbb9d253d093",
+      "lat": 34.8218064668284,
+      "lng": 135.151128615276,
+      "category": "SAFE",
+      "name": "神戸市好徳児童館",
+      "address": "神戸市北区淡河町野瀬字新田468-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区淡河町野瀬字新田468-2",
+      "district": "北区",
+      "sourceRow": 2494,
+      "sourceRows": [
+        2494
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b9214b194caceb41",
+      "lat": 34.822143027177,
+      "lng": 135.150801984653,
+      "category": "SAFE",
+      "name": "パンダこうとく保育園",
+      "address": "神戸市北区淡河町野瀬457-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区淡河町野瀬457-1",
+      "district": "北区",
+      "sourceRow": 2517,
+      "sourceRows": [
+        2517
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+Facility database: © OpenStreetMap contributors
+License: Open Database License (ODbL) 1.0
+https://opendatacommons.org/licenses/odbl/1-0/
+https://www.openstreetmap.org/copyright
+This derived database is offered under ODbL 1.0. JSON files contain the complete distributed subset in machine-readable form, source object URLs, retrieval dates and extraction queries. Individual object update times and availability are unknown. No completeness guarantee. Application code is separate from this database.

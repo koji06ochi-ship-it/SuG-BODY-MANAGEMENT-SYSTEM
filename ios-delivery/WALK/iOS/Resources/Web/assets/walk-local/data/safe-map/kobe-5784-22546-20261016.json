@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5784-22546-20261016",
+  "lat": 34.70579529049178,
+  "lng": 135.2795759491566,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/c306cf1fd9f65f50",
+      "lat": 34.7076567069258,
+      "lng": 135.280938422917,
+      "category": "SAFE",
+      "name": "兵庫県自動車整備振興会（社団法人）",
+      "address": "神戸市東灘区魚崎浜町33",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区魚崎浜町33",
+      "district": "東灘区",
+      "sourceRow": 1448,
+      "sourceRows": [
+        1448
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1f1bdbb1647611f7",
+      "lat": 34.7070018987462,
+      "lng": 135.281465032283,
+      "category": "SAFE",
+      "name": "国土交通省神戸運輸監理部兵庫陸運部",
+      "address": "神戸市東灘区魚崎浜町34-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区魚崎浜町34-2",
+      "district": "東灘区",
+      "sourceRow": 1459,
+      "sourceRows": [
+        1459
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f17993ee0aafa705",
+      "lat": 34.7041135811025,
+      "lng": 135.280457520457,
+      "category": "SAFE",
+      "name": "日清製粉㈱東灘工場",
+      "address": "神戸市東灘区魚崎浜町14",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区魚崎浜町14",
+      "district": "東灘区",
+      "sourceRow": 1496,
+      "sourceRows": [
+        1496
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1ff379a5a42e2ca2",
+      "lat": 34.7047407712779,
+      "lng": 135.277969583798,
+      "category": "SAFE",
+      "name": "白鶴酒造株式会社　灘魚崎工場",
+      "address": "神戸市東灘区魚崎浜町13番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区魚崎浜町13番地",
+      "district": "東灘区",
+      "sourceRow": 1514,
+      "sourceRows": [
+        1514
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9b919cf002ffb160",
+      "lat": 34.7054634944065,
+      "lng": 135.277049186328,
+      "category": "SAFE",
+      "name": "株式会社　神東",
+      "address": "神戸市東灘区魚崎浜町17-6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区魚崎浜町17-6",
+      "district": "東灘区",
+      "sourceRow": 1548,
+      "sourceRows": [
+        1548
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

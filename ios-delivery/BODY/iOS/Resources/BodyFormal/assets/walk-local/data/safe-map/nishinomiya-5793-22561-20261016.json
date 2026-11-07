@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5793-22561-20261016",
+  "lat": 34.7601449975,
+  "lng": 135.367904775,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/f2236abf4f6dc6cc",
+      "lat": 34.75822452,
+      "lng": 135.367726,
+      "category": "SAFE",
+      "name": "樋ノ口小学校",
+      "address": "兵庫県西宮市樋ノ口町２丁目３－３２",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市樋ノ口町２丁目３－３２",
+      "district": "西宮市",
+      "sourceRow": 16,
+      "sourceRows": [
+        16
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/9c3108cfed3ad362",
+      "lat": 34.76236689,
+      "lng": 135.3689504,
+      "category": "SAFE",
+      "name": "甲武中学校",
+      "address": "兵庫県西宮市樋ノ口町１丁目７－５５",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市樋ノ口町１丁目７－５５",
+      "district": "西宮市",
+      "sourceRow": 49,
+      "sourceRows": [
+        49
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/4e29f9280d82e7f9",
+      "lat": 34.76021748,
+      "lng": 135.3675338,
+      "category": "SAFE",
+      "name": "ジオ西宮北口樋ノ口町",
+      "address": "兵庫県西宮市樋ノ口町２丁目１－７",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市樋ノ口町２丁目１－７",
+      "district": "西宮市",
+      "sourceRow": 644,
+      "sourceRows": [
+        644
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/7ac644fd9ba0a487",
+      "lat": 34.7597711,
+      "lng": 135.3674089,
+      "category": "SAFE",
+      "name": "介護付有料老人ホーム　プレザングラン門戸厄神",
+      "address": "兵庫県西宮市樋ノ口町２丁目１-35",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市樋ノ口町２丁目１-35",
+      "district": "西宮市",
+      "sourceRow": 663,
+      "sourceRows": [
+        663
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

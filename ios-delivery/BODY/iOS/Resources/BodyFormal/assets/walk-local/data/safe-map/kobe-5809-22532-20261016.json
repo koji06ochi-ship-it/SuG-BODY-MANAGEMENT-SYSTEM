@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5809-22532-20261016",
+  "lat": 34.8585219673979,
+  "lng": 135.194210803272,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/bc0c3c68e7db81a4",
+      "lat": 34.8585219673979,
+      "lng": 135.194210803272,
+      "category": "SAFE",
+      "name": "イオン株式会社　神戸北ショッピングセンター",
+      "address": "神戸市北区上津台8－1－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区上津台8－1－1",
+      "district": "北区",
+      "sourceRow": 2256,
+      "sourceRows": [
+        2256
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9475033636e9b053",
+      "lat": 34.8585219673979,
+      "lng": 135.194210803272,
+      "category": "SAFE",
+      "name": "ウエルシア　イオン神戸北薬局",
+      "address": "神戸市北区上津台8－1－1　イオンモール神戸北２階",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区上津台8－1－1　イオンモール神戸北２階",
+      "district": "北区",
+      "sourceRow": 2434,
+      "sourceRows": [
+        2434
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

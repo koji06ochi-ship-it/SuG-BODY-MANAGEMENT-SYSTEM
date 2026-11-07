@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "otsu-5833-22648-20261016",
+  "lat": 35.00142302444445,
+  "lng": 135.8899472777778,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "大津市",
+  "source": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+  "sourceUrl": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/999caef4-7e90-4fd2-98eb-fd94368e9a2f/resource/3e5b513e-de51-4459-af70-6fda94e1bed3/download/od405902026022700200.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2025-03-12",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "7899826cf95c365a07c87b3ad05aa2aa7d4adeb440a2c57269c84f98c1d85ea8",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/otsu/aed/02bd5a7a59cc04d6",
+      "lat": 35.00184222,
+      "lng": 135.8898342,
+      "category": "SAFE",
+      "name": "ウカルちゃんアリーナ",
+      "address": "大津市におの浜四丁目2番12号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市におの浜四丁目2番12号",
+      "district": "大津市",
+      "sourceRow": 230,
+      "sourceRows": [
+        230
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/15c4a0e7e673fd81",
+      "lat": 35.00235333,
+      "lng": 135.8888414,
+      "category": "SAFE",
+      "name": "におの浜ふれあいスポーツセンタ",
+      "address": "大津市におの浜四丁目2番40号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市におの浜四丁目2番40号",
+      "district": "大津市",
+      "sourceRow": 233,
+      "sourceRows": [
+        233
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/2584a6fcfcd0b5b2",
+      "lat": 35.00159583,
+      "lng": 135.89194,
+      "category": "SAFE",
+      "name": "びわ湖大津プリンスホテル",
+      "address": "大津市におの浜四丁目7番7号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市におの浜四丁目7番7号",
+      "district": "大津市",
+      "sourceRow": 234,
+      "sourceRows": [
+        234
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/248aa2d93bc876aa",
+      "lat": 35.00166806,
+      "lng": 135.89199,
+      "category": "SAFE",
+      "name": "びわ湖大津プリンスホテル",
+      "address": "大津市におの浜四丁目7番7号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市におの浜四丁目7番7号",
+      "district": "大津市",
+      "sourceRow": 235,
+      "sourceRows": [
+        235
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/313ab278e1657fab",
+      "lat": 35.0016375,
+      "lng": 135.892155,
+      "category": "SAFE",
+      "name": "びわ湖大津プリンスホテル",
+      "address": "大津市におの浜四丁目7番7号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市におの浜四丁目7番7号",
+      "district": "大津市",
+      "sourceRow": 236,
+      "sourceRows": [
+        236
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/e6d21b074f66213f",
+      "lat": 34.99917639,
+      "lng": 135.8886569,
+      "category": "SAFE",
+      "name": "滋賀関電ビル（関電不動産株式会社）",
+      "address": "大津市におの浜四丁目1番51号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市におの浜四丁目1番51号",
+      "district": "大津市",
+      "sourceRow": 241,
+      "sourceRows": [
+        241
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/d31540da74eba9f8",
+      "lat": 35.00053778,
+      "lng": 135.8882164,
+      "category": "SAFE",
+      "name": "滋賀県人権センター",
+      "address": "大津市におの浜四丁目1番14号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市におの浜四丁目1番14号",
+      "district": "大津市",
+      "sourceRow": 243,
+      "sourceRows": [
+        243
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/30f6ea63f8b4380a",
+      "lat": 35.00222111,
+      "lng": 135.8893633,
+      "category": "SAFE",
+      "name": "滋賀県立武道館",
+      "address": "大津市におの浜四丁目2番15号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市におの浜四丁目2番15号",
+      "district": "大津市",
+      "sourceRow": 247,
+      "sourceRows": [
+        247
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/f1ecec80bb1c42cb",
+      "lat": 35.001775,
+      "lng": 135.8885283,
+      "category": "SAFE",
+      "name": "大津市立障害者福祉センター",
+      "address": "大津市におの浜四丁目2番33号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市におの浜四丁目2番33号",
+      "district": "大津市",
+      "sourceRow": 252,
+      "sourceRows": [
+        252
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

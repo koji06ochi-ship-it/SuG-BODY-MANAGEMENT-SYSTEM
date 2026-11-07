@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-10-26T14:10:30.921Z",
+  "scope": "Square Sandbox read-only API",
+  "apiStatus": "connected",
+  "developerApplication": {
+    "existence": "user_confirmed",
+    "sandboxCredentialsScreen": "user_confirmed",
+    "productionCredentialsScreen": "user_confirmed"
+  },
+  "environment": "sandbox",
+  "merchant": {
+    "found": true,
+    "count": 1,
+    "idMasked": "***4DBN",
+    "matchesConfiguredId": false,
+    "status": "ACTIVE",
+    "country": "JP",
+    "currency": "JPY"
+  },
+  "catalog": {
+    "itemCount": 0,
+    "bodyCandidateCount": 0,
+    "bodyCandidateNames": [],
+    "pages": 1,
+    "truncated": false
+  },
+  "webhooks": {
+    "count": 0,
+    "enabledCount": 0,
+    "configuredUrlMatchCount": 0,
+    "requiredEvents": {
+      "subscription.created": false,
+      "subscription.updated": false,
+      "invoice.payment_made": false,
+      "invoice.scheduled_charge_failed": false,
+      "invoice.canceled": false,
+      "invoice.refunded": false,
+      "payment.updated": false,
+      "refund.updated": false
+    }
+  },
+  "errors": {
+    "merchant": null,
+    "catalog": null,
+    "webhooks": null
+  },
+  "production": {
+    "connected": false,
+    "reason": "本番トークン未登録・本番API未実行"
+  },
+  "mutations": {
+    "productCreated": false,
+    "webhookRegistered": false,
+    "paymentExecuted": false,
+    "databaseChanged": false
+  }
+}

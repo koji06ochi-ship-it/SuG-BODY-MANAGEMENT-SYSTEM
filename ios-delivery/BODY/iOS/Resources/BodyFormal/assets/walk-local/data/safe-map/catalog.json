@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-14T05:30:31.567Z",
+  "coverage": "Three limited 600m samples only; not nationwide or citywide coverage",
+  "regions": [
+    {
+      "id": "tokyo",
+      "name": "東京駅周辺の一部",
+      "lat": 35.681,
+      "lng": 139.767,
+      "radius": 600,
+      "file": "tokyo-c65bdfddeb1d.json"
+    },
+    {
+      "id": "kyoto",
+      "name": "京都市役所周辺の一部",
+      "lat": 35.012,
+      "lng": 135.768,
+      "radius": 600,
+      "file": "kyoto-f934f56cc5f2.json"
+    },
+    {
+      "id": "osaka",
+      "name": "南森町周辺の一部",
+      "lat": 34.696,
+      "lng": 135.512,
+      "radius": 600,
+      "file": "osaka-218c21bc7eda.json"
+    }
+  ]
+}

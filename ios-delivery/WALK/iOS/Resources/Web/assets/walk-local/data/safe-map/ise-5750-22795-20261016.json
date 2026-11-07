@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5750-22795-20261016",
+  "lat": 34.50345957545865,
+  "lng": 136.77484533248798,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/2cc6dfa9811c9651",
+      "lat": 34.501622677775,
+      "lng": 136.774178965088,
+      "category": "SAFE",
+      "name": "三津コミュニティセンター",
+      "address": "伊勢市二見町三津301",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市二見町三津301",
+      "sourceRow": 12,
+      "sourceRows": [
+        12
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/cf489c0a6d52f3ea",
+      "lat": 34.5052964731423,
+      "lng": 136.775511699888,
+      "category": "SAFE",
+      "name": "伊勢市二見放課後児童ｸﾗﾌﾞ",
+      "address": "伊勢市二見町茶屋63-4",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市二見町茶屋63-4",
+      "sourceRow": 104,
+      "sourceRows": [
+        104
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

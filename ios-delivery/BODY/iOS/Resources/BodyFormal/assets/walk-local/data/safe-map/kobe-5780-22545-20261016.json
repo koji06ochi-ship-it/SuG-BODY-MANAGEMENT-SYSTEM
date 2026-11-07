@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5780-22545-20261016",
+  "lat": 34.68367044738052,
+  "lng": 135.272626232307,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/a294bbc0015b1f84",
+      "lat": 34.6839613603688,
+      "lng": 135.271398752041,
+      "category": "SAFE",
+      "name": "神戸市立　六甲アイランド高校",
+      "address": "神戸市東灘区向洋町中4-4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町中4-4",
+      "district": "東灘区",
+      "sourceRow": 1397,
+      "sourceRows": [
+        1397
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b2dddb880b402ebe",
+      "lat": 34.6807991867837,
+      "lng": 135.270361501893,
+      "category": "SAFE",
+      "name": "神戸国際大学",
+      "address": "神戸市東灘区向洋町中9丁目1-6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町中9丁目1-6",
+      "district": "東灘区",
+      "sourceRow": 1571,
+      "sourceRows": [
+        1571
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/91d9de2d30469a39",
+      "lat": 34.6843105710195,
+      "lng": 135.274050109238,
+      "category": "SAFE",
+      "name": "六甲ライナー　マリンパーク駅",
+      "address": "神戸市東灘区向洋町中4丁目",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町中4丁目",
+      "district": "東灘区",
+      "sourceRow": 1669,
+      "sourceRows": [
+        1669
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d97ff1a4ed738fbf",
+      "lat": 34.6849705477111,
+      "lng": 135.273270689125,
+      "category": "SAFE",
+      "name": "カネディアン・アカデミィ",
+      "address": "神戸市東灘区向洋町中4丁目1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町中4丁目1",
+      "district": "東灘区",
+      "sourceRow": 1687,
+      "sourceRows": [
+        1687
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/803d96aae1807f3e",
+      "lat": 34.6843105710195,
+      "lng": 135.274050109238,
+      "category": "SAFE",
+      "name": "兵庫県警　東灘警察署　六甲アイランド交番",
+      "address": "神戸市東灘区向洋町中4-22",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町中4-22",
+      "district": "東灘区",
+      "sourceRow": 1713,
+      "sourceRows": [
+        1713
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

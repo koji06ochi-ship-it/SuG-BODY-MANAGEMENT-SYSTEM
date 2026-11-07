@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5811-22538-20261016",
+  "lat": 34.86838121781708,
+  "lng": 135.23165209012882,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/9f839701347e1c7d",
+      "lat": 34.8694973998304,
+      "lng": 135.231263781937,
+      "category": "SAFE",
+      "name": "神戸市立　農村環境改善センター",
+      "address": "神戸市北区道場町塩田1454-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区道場町塩田1454-2",
+      "district": "北区",
+      "sourceRow": 2290,
+      "sourceRows": [
+        2290
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d2ff5dbbc8f10bc3",
+      "lat": 34.8680838910755,
+      "lng": 135.232494628012,
+      "category": "SAFE",
+      "name": "兵庫六甲農業協同組合　道場支店",
+      "address": "神戸市北区道場町塩田18-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区道場町塩田18-2",
+      "district": "北区",
+      "sourceRow": 2301,
+      "sourceRows": [
+        2301
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a46db9d0dda19ca9",
+      "lat": 34.8700699864098,
+      "lng": 135.232648761422,
+      "category": "SAFE",
+      "name": "神戸市立　道場幼稚園",
+      "address": "神戸市北区道場町塩田1460",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区道場町塩田1460",
+      "district": "北区",
+      "sourceRow": 2349,
+      "sourceRows": [
+        2349
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/de6bc0480e597b33",
+      "lat": 34.8673373854809,
+      "lng": 135.230827096993,
+      "category": "SAFE",
+      "name": "道場地域福祉センター",
+      "address": "神戸市北区道場町塩田字西河原1439-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区道場町塩田字西河原1439-3",
+      "district": "北区",
+      "sourceRow": 2397,
+      "sourceRows": [
+        2397
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/55a7aad69dcfe16b",
+      "lat": 34.8669174262888,
+      "lng": 135.23102618228,
+      "category": "SAFE",
+      "name": "神戸市北区北神支所道場連絡所",
+      "address": "神戸市北区道場町塩田1418",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区道場町塩田1418",
+      "district": "北区",
+      "sourceRow": 2445,
+      "sourceRows": [
+        2445
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

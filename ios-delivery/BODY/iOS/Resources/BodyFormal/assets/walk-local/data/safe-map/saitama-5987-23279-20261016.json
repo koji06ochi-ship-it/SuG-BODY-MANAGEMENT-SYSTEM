@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5987-23279",
+  "lat": 35.926257899999996,
+  "lng": 139.67653439999998,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.9266013,
+      "lng": 139.6754239,
+      "category": "SAFE",
+      "name": "七里保育園",
+      "address": "さいたま市大谷1985",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大谷1985",
+      "district": "見沼区",
+      "sourceRow": 205,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/3f5ed189d5784feb",
+      "sourceRows": [
+        205
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.9259145,
+      "lng": 139.6776449,
+      "category": "SAFE",
+      "name": "東宮下放課後児童クラブ",
+      "address": "さいたま市東宮下215-1 東宮下小学校内",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "東宮下215-1 東宮下小学校内",
+      "district": "見沼区",
+      "sourceRow": 241,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/94784906f260eb17",
+      "sourceRows": [
+        241
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

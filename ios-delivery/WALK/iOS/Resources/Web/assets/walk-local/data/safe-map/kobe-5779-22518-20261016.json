@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5779-22518-20261016",
+  "lat": 34.67599897502973,
+  "lng": 135.11051126290235,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/c528accb3e912c2c",
+      "lat": 34.6742170963738,
+      "lng": 135.109774405753,
+      "category": "SAFE",
+      "name": "神戸市営地下鉄　妙法寺駅",
+      "address": "神戸市須磨区横尾1丁目",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区横尾1丁目",
+      "district": "須磨区",
+      "sourceRow": 26,
+      "sourceRows": [
+        26
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4dbf289adbb97d8f",
+      "lat": 34.6745023920897,
+      "lng": 135.10994005968,
+      "category": "SAFE",
+      "name": "㈱こうべ未来都市機構　リファーレ横尾",
+      "address": "神戸市須磨区横尾1丁目5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区横尾1丁目5",
+      "district": "須磨区",
+      "sourceRow": 54,
+      "sourceRows": [
+        54
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/06ce6dbc9698cae8",
+      "lat": 34.6745023920897,
+      "lng": 135.10994005968,
+      "category": "SAFE",
+      "name": "みなと銀行　横尾支店",
+      "address": "神戸市須磨区横尾1－5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区横尾1－5",
+      "district": "須磨区",
+      "sourceRow": 93,
+      "sourceRows": [
+        93
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5ce570720b1b16a3",
+      "lat": 34.6745023920897,
+      "lng": 135.10994005968,
+      "category": "SAFE",
+      "name": "コープこうべ　コープ横尾",
+      "address": "神戸市須磨区横尾1丁目5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区横尾1丁目5",
+      "district": "須磨区",
+      "sourceRow": 165,
+      "sourceRows": [
+        165
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6f0479ee2c7f7292",
+      "lat": 34.6784584976421,
+      "lng": 135.109708847219,
+      "category": "SAFE",
+      "name": "ルネ須磨管理組合",
+      "address": "神戸市須磨区妙法寺蓮池366-10",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区妙法寺蓮池366-10",
+      "district": "須磨区",
+      "sourceRow": 173,
+      "sourceRows": [
+        173
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/56c34f917d9c1501",
+      "lat": 34.6798110798934,
+      "lng": 135.113764145402,
+      "category": "SAFE",
+      "name": "妙法寺すみれホーム",
+      "address": "神戸市須磨区妙法寺字萬上畑742-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区妙法寺字萬上畑742-2",
+      "district": "須磨区",
+      "sourceRow": 217,
+      "sourceRows": [
+        217
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

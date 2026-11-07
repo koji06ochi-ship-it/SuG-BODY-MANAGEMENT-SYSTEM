@@ -1,0 +1,12 @@
+{
+  "assertionsPassed": 8,
+  "networkInferenceRequests": 0,
+  "browserVerified": false,
+  "productionModified": false,
+  "envMetadata": {
+    "project": "sug-body-management-system",
+    "envCount": 0,
+    "hiddenProductionEnvCount": 0
+  },
+  "initialTestFailure": "relative require path; corrected"
+}

@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5978-23271",
+  "lat": 35.87139398666667,
+  "lng": 139.63012313333334,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.869141,
+      "lng": 139.630314,
+      "category": "SAFE",
+      "name": "南与野第１自転車駐車場",
+      "address": "さいたま市鈴谷2-1221",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "鈴谷2-1221",
+      "district": "中央区",
+      "sourceRow": 307,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/d63a2966c831af1f",
+      "sourceRows": [
+        307
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.8710612,
+      "lng": 139.6311672,
+      "category": "SAFE",
+      "name": "鈴谷小放課後子ども居場所事業専用室",
+      "address": "さいたま市鈴谷5-1-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "鈴谷5-1-1",
+      "district": "中央区",
+      "sourceRow": 308,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/fff4c61688e24ba1",
+      "sourceRows": [
+        308
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.87397976,
+      "lng": 139.6288882,
+      "category": "SAFE",
+      "name": "鈴谷保育園",
+      "address": "さいたま市鈴谷7-3-31",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "鈴谷7-3-31",
+      "district": "中央区",
+      "sourceRow": 309,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/5e7c124a0fa9e5ba",
+      "sourceRows": [
+        309
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

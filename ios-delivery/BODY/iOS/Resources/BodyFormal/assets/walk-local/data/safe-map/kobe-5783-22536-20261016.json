@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5783-22536-20261016",
+  "lat": 34.70122757668806,
+  "lng": 135.21897607532932,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/85c1147546b707b3",
+      "lat": 34.7004460746583,
+      "lng": 135.216776208927,
+      "category": "SAFE",
+      "name": "神戸市立　渚中学校",
+      "address": "神戸市中央区脇浜海岸通2-1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区脇浜海岸通2-1-1",
+      "district": "中央区",
+      "sourceRow": 963,
+      "sourceRows": [
+        963
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/fadfabb750931f2b",
+      "lat": 34.7019204588857,
+      "lng": 135.216642255812,
+      "category": "SAFE",
+      "name": "三輪運輸工業株式会社",
+      "address": "神戸市中央区脇浜町2-1-16",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区脇浜町2-1-16",
+      "district": "中央区",
+      "sourceRow": 1011,
+      "sourceRows": [
+        1011
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bd13d0335d0a957a",
+      "lat": 34.6990072678544,
+      "lng": 135.216671790594,
+      "category": "SAFE",
+      "name": "株式会社国際健康開発センタービル",
+      "address": "神戸市中央区脇浜海岸通1丁目5番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区脇浜海岸通1丁目5番1号",
+      "district": "中央区",
+      "sourceRow": 1058,
+      "sourceRows": [
+        1058
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5074dbc0193640e3",
+      "lat": 34.6992474301824,
+      "lng": 135.218175757731,
+      "category": "SAFE",
+      "name": "兵庫県立美術館",
+      "address": "神戸市中央区脇浜海岸通1丁目1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区脇浜海岸通1丁目1-1",
+      "district": "中央区",
+      "sourceRow": 1158,
+      "sourceRows": [
+        1158
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d7ea40c0270b1883",
+      "lat": 34.7020022657819,
+      "lng": 135.22066893823,
+      "category": "SAFE",
+      "name": "なぎさ地域福祉センター",
+      "address": "神戸市灘区摩耶海岸通2-3-4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区摩耶海岸通2-3-4",
+      "district": "灘区",
+      "sourceRow": 1872,
+      "sourceRows": [
+        1872
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ec99b1d39070c8ad",
+      "lat": 34.6995566032507,
+      "lng": 135.221094260465,
+      "category": "SAFE",
+      "name": "エレガーノ摩耶",
+      "address": "神戸市灘区摩耶海岸通1－3－10",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区摩耶海岸通1－3－10",
+      "district": "灘区",
+      "sourceRow": 1963,
+      "sourceRows": [
+        1963
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f14fdbc5f8ed3946",
+      "lat": 34.7031993781952,
+      "lng": 135.217856147507,
+      "category": "SAFE",
+      "name": "シマブンオフィスタワーＢＢ ＰＬＡＺＡ",
+      "address": "神戸市灘区岩屋中町4丁目2-7",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区岩屋中町4丁目2-7",
+      "district": "灘区",
+      "sourceRow": 1977,
+      "sourceRows": [
+        1977
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a6065055ada319b3",
+      "lat": 34.7035061312289,
+      "lng": 135.221377924595,
+      "category": "SAFE",
+      "name": "株式会社　ケーエスケー 神戸支店",
+      "address": "神戸市灘区岩屋中町2-2-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区岩屋中町2-2-1",
+      "district": "灘区",
+      "sourceRow": 1990,
+      "sourceRows": [
+        1990
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e774fa976a640353",
+      "lat": 34.7013072790897,
+      "lng": 135.220448066651,
+      "category": "SAFE",
+      "name": "特別養護老人ホーム　ハピータウンKOBE",
+      "address": "神戸市灘区摩耶海岸通2丁目3-9",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区摩耶海岸通2丁目3-9",
+      "district": "灘区",
+      "sourceRow": 1994,
+      "sourceRows": [
+        1994
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5f3c64aa5a4fae0c",
+      "lat": 34.7020828777534,
+      "lng": 135.220049402781,
+      "category": "SAFE",
+      "name": "グルメシティ摩耶海岸通店",
+      "address": "神戸市灘区摩耶海岸通2-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区摩耶海岸通2-3",
+      "district": "灘区",
+      "sourceRow": 2004,
+      "sourceRows": [
+        2004
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

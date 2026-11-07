@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5783-22535-20261016",
+  "lat": 34.700226133589986,
+  "lng": 135.21362609296332,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/4c20931919abdca9",
+      "lat": 34.6984548384502,
+      "lng": 135.215303960346,
+      "category": "SAFE",
+      "name": "（独）国際協力機構兵庫国際センター",
+      "address": "神戸市中央区脇浜海岸通1－5－2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区脇浜海岸通1－5－2",
+      "district": "中央区",
+      "sourceRow": 824,
+      "sourceRows": [
+        824
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/607f3f042ca09d69",
+      "lat": 34.7000445749419,
+      "lng": 135.211453544144,
+      "category": "SAFE",
+      "name": "神戸市環境局中央事業所",
+      "address": "神戸市中央区脇浜町3－2－30",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区脇浜町3－2－30",
+      "district": "中央区",
+      "sourceRow": 905,
+      "sourceRows": [
+        905
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/aef66bde440a59fe",
+      "lat": 34.7013305581907,
+      "lng": 135.212157458707,
+      "category": "SAFE",
+      "name": "神鋼不動産　株式会社",
+      "address": "神戸市中央区脇浜町2丁目8-20",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区脇浜町2丁目8-20",
+      "district": "中央区",
+      "sourceRow": 1092,
+      "sourceRows": [
+        1092
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ec77c19bd5b52c20",
+      "lat": 34.7008391765403,
+      "lng": 135.213725367043,
+      "category": "SAFE",
+      "name": "ミクちゃんガイア春日野道店",
+      "address": "神戸市中央区脇浜町2-5-13",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区脇浜町2-5-13",
+      "district": "中央区",
+      "sourceRow": 1146,
+      "sourceRows": [
+        1146
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/89e0532523e013ca",
+      "lat": 34.7008391765403,
+      "lng": 135.213725367043,
+      "category": "SAFE",
+      "name": "みのり認定こども園",
+      "address": "神戸市中央区脇浜町2-5-13",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区脇浜町2-5-13",
+      "district": "中央区",
+      "sourceRow": 1147,
+      "sourceRows": [
+        1147
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/de1ba9255bcdf1d4",
+      "lat": 34.6998484768765,
+      "lng": 135.215390860497,
+      "category": "SAFE",
+      "name": "海岸通デンタルクリニック",
+      "address": "神戸市中央区脇浜海岸通2丁目2番地3ケーズ302号室",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区脇浜海岸通2丁目2番地3ケーズ302号室",
+      "district": "中央区",
+      "sourceRow": 1195,
+      "sourceRows": [
+        1195
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

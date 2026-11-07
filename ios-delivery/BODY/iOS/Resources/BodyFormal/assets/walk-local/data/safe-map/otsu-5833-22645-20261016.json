@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "otsu-5833-22645-20261016",
+  "lat": 34.999704888,
+  "lng": 135.87273078,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "大津市",
+  "source": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+  "sourceUrl": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/999caef4-7e90-4fd2-98eb-fd94368e9a2f/resource/3e5b513e-de51-4459-af70-6fda94e1bed3/download/od405902026022700200.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2025-03-12",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "7899826cf95c365a07c87b3ad05aa2aa7d4adeb440a2c57269c84f98c1d85ea8",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/otsu/aed/882c4fc992056426",
+      "lat": 34.99876222,
+      "lng": 135.8718808,
+      "category": "SAFE",
+      "name": "公益社　滋賀ブライトホール",
+      "address": "大津市朝日が丘一丁目12番5号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市朝日が丘一丁目12番5号",
+      "district": "大津市",
+      "sourceRow": 198,
+      "sourceRows": [
+        198
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/0f0a33c2b61bcc64",
+      "lat": 34.99839833,
+      "lng": 135.8731486,
+      "category": "SAFE",
+      "name": "大津市立朝日が丘保育園",
+      "address": "大津市朝日が丘一丁目23番33号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市朝日が丘一丁目23番33号",
+      "district": "大津市",
+      "sourceRow": 208,
+      "sourceRows": [
+        208
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/ce2b202d873f3731",
+      "lat": 35.00056389,
+      "lng": 135.8718064,
+      "category": "SAFE",
+      "name": "滋賀県庁",
+      "address": "大津市京町四丁目1番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市京町四丁目1番1号",
+      "district": "大津市",
+      "sourceRow": 217,
+      "sourceRows": [
+        217
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/bb09e62bcf79b927",
+      "lat": 35.00058111,
+      "lng": 135.8713414,
+      "category": "SAFE",
+      "name": "滋賀県庁",
+      "address": "大津市京町四丁目1番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市京町四丁目1番1号",
+      "district": "大津市",
+      "sourceRow": 218,
+      "sourceRows": [
+        218
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/46d2aa29c2b4f0de",
+      "lat": 35.00021889,
+      "lng": 135.8754767,
+      "category": "SAFE",
+      "name": "滋賀県農業教育情報センター",
+      "address": "大津市松本一丁目2番20号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市松本一丁目2番20号",
+      "district": "大津市",
+      "sourceRow": 244,
+      "sourceRows": [
+        244
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

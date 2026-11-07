@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5775-22537-20261016",
+  "lat": 34.654540823167224,
+  "lng": 135.22463294341074,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/85db95f73772e139",
+      "lat": 34.6550518709579,
+      "lng": 135.224235811901,
+      "category": "SAFE",
+      "name": "ﾆﾁｲ学館神戸ﾎﾟｰﾄｱｲﾗﾝﾄﾞｾﾝﾀｰ",
+      "address": "神戸市中央区港島南町7-1-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島南町7-1-5",
+      "district": "中央区",
+      "sourceRow": 847,
+      "sourceRows": [
+        847
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/fa1c6cfc1fc0ea7d",
+      "lat": 34.6542686885763,
+      "lng": 135.222738773215,
+      "category": "SAFE",
+      "name": "㈱どうぶつ王国",
+      "address": "神戸市中央区港島南町7-1-9",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島南町7-1-9",
+      "district": "中央区",
+      "sourceRow": 946,
+      "sourceRows": [
+        946
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7f7c482b545877ae",
+      "lat": 34.65530996982,
+      "lng": 135.226630012264,
+      "category": "SAFE",
+      "name": "良品計画　神戸センター",
+      "address": "神戸市中央区港島9-2-6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島9-2-6",
+      "district": "中央区",
+      "sourceRow": 961,
+      "sourceRows": [
+        961
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c26c4d5f025972d9",
+      "lat": 34.6535327633147,
+      "lng": 135.224927176263,
+      "category": "SAFE",
+      "name": "神戸天然物化学株式会社　本社・神戸研究所",
+      "address": "神戸市中央区港島南町7-1-19",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島南町7-1-19",
+      "district": "中央区",
+      "sourceRow": 979,
+      "sourceRows": [
+        979
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

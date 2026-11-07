@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5778-22514-20261016",
+  "lat": 34.6730857473658,
+  "lng": 135.0855891097605,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/179de971e0849b03",
+      "lat": 34.6728691491676,
+      "lng": 135.085033371686,
+      "category": "SAFE",
+      "name": "菅の台地域福祉センター",
+      "address": "神戸市須磨区菅の台4丁目5番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区菅の台4丁目5番",
+      "district": "須磨区",
+      "sourceRow": 102,
+      "sourceRows": [
+        102
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e531b876400a9858",
+      "lat": 34.6728691491676,
+      "lng": 135.085033371686,
+      "category": "SAFE",
+      "name": "神戸市立　菅の台児童館",
+      "address": "神戸市須磨区菅の台4丁目5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区菅の台4丁目5",
+      "district": "須磨区",
+      "sourceRow": 142,
+      "sourceRows": [
+        142
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5bc96a0398257c72",
+      "lat": 34.6733023877804,
+      "lng": 135.085991307246,
+      "category": "SAFE",
+      "name": "コープこうべ　コープ名谷",
+      "address": "神戸市須磨区菅の台3丁目14",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区菅の台3丁目14",
+      "district": "須磨区",
+      "sourceRow": 167,
+      "sourceRows": [
+        167
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1d8b8f22f5d385ed",
+      "lat": 34.6733023033476,
+      "lng": 135.086298388424,
+      "category": "SAFE",
+      "name": "ジークレフ神戸名谷WEST管理組合",
+      "address": "神戸市須磨区菅の台3丁目14番地1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区菅の台3丁目14番地1",
+      "district": "須磨区",
+      "sourceRow": 253,
+      "sourceRows": [
+        253
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

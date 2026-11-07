@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5991-23284",
+  "lat": 35.95093661333333,
+  "lng": 139.70901775000002,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.95098424,
+      "lng": 139.709099,
+      "category": "SAFE",
+      "name": "市民会館いわつき",
+      "address": "さいたま市太田3-1-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "太田3-1-1",
+      "district": "岩槻区",
+      "sourceRow": 567,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/22b4cb039a844c59",
+      "sourceRows": [
+        567,
+        568,
+        569,
+        570
+      ],
+      "duplicateSourceEntries": 4
+    },
+    {
+      "lat": 35.9505137,
+      "lng": 139.7099156,
+      "category": "SAFE",
+      "name": "岩槻城址公園",
+      "address": "さいたま市太田3-4",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "太田3-4",
+      "district": "岩槻区",
+      "sourceRow": 573,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/63b8f593b1bfbf93",
+      "sourceRows": [
+        573
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.95116902,
+      "lng": 139.7077949,
+      "category": "SAFE",
+      "name": "岩槻城址公園",
+      "address": "さいたま市太田3-4",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "太田3-4",
+      "district": "岩槻区",
+      "sourceRow": 574,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/55de62834451d6a9",
+      "sourceRows": [
+        574
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

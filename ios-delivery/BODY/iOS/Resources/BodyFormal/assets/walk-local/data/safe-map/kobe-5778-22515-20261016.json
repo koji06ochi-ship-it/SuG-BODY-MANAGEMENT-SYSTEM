@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5778-22515-20261016",
+  "lat": 34.670195401278306,
+  "lng": 135.09402210168898,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/367efb7f7998116b",
+      "lat": 34.6687998291179,
+      "lng": 135.094653434207,
+      "category": "SAFE",
+      "name": "神戸市立　多井畑小学校",
+      "address": "神戸市須磨区友が丘3丁目106番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区友が丘3丁目106番地",
+      "district": "須磨区",
+      "sourceRow": 67,
+      "sourceRows": [
+        67
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b065c24f15b69915",
+      "lat": 34.6722517023269,
+      "lng": 135.094218901006,
+      "category": "SAFE",
+      "name": "名谷テニスガーデン",
+      "address": "神戸市須磨区友が丘９丁目",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区友が丘９丁目",
+      "district": "須磨区",
+      "sourceRow": 192,
+      "sourceRows": [
+        192
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/cd11979a2862be3c",
+      "lat": 34.6714017343734,
+      "lng": 135.09268042461,
+      "category": "SAFE",
+      "name": "兵庫県立　北須磨高等学校",
+      "address": "神戸市須磨区友が丘9丁目23番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区友が丘9丁目23番",
+      "district": "須磨区",
+      "sourceRow": 207,
+      "sourceRows": [
+        207
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7a53baa71d35e43b",
+      "lat": 34.668328339295,
+      "lng": 135.094535646933,
+      "category": "SAFE",
+      "name": "幼保連携型認定こども園　北須磨保育センター",
+      "address": "神戸市須磨区友が丘3丁目107番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区友が丘3丁目107番地",
+      "district": "須磨区",
+      "sourceRow": 212,
+      "sourceRows": [
+        212
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5776-22508-20261016",
+  "lat": 34.658736645471855,
+  "lng": 135.05197734730933,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/fc503f5ca888d794",
+      "lat": 34.6574974158256,
+      "lng": 135.050793033416,
+      "category": "SAFE",
+      "name": "神戸市立　本多聞保育所",
+      "address": "神戸市垂水区本多聞4丁目1-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区本多聞4丁目1-2",
+      "district": "垂水区",
+      "sourceRow": 342,
+      "sourceRows": [
+        342
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1d89113e96c9220b",
+      "lat": 34.6574974158256,
+      "lng": 135.050793033416,
+      "category": "SAFE",
+      "name": "神戸市立　本多聞児童館",
+      "address": "神戸市垂水区本多聞4丁目1-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区本多聞4丁目1-2",
+      "district": "垂水区",
+      "sourceRow": 350,
+      "sourceRows": [
+        350
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3d628db4de3e91fa",
+      "lat": 34.6594831940448,
+      "lng": 135.053563746353,
+      "category": "SAFE",
+      "name": "多聞東地域福祉センター",
+      "address": "神戸市垂水区学が丘4丁目3-7",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区学が丘4丁目3-7",
+      "district": "垂水区",
+      "sourceRow": 382,
+      "sourceRows": [
+        382
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/107b2d1e2545589b",
+      "lat": 34.6574974158256,
+      "lng": 135.050793033416,
+      "category": "SAFE",
+      "name": "本多聞地域福祉センター",
+      "address": "神戸市垂水区本多聞4-1-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区本多聞4-1-2",
+      "district": "垂水区",
+      "sourceRow": 392,
+      "sourceRows": [
+        392
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6dbe10aa147c641d",
+      "lat": 34.6608927541408,
+      "lng": 135.053291877749,
+      "category": "SAFE",
+      "name": "兵庫県警　垂水警察署",
+      "address": "神戸市垂水区本多聞3丁目12-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区本多聞3丁目12-1",
+      "district": "垂水区",
+      "sourceRow": 407,
+      "sourceRows": [
+        407
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4fbfd3e9776c90d0",
+      "lat": 34.6595516771687,
+      "lng": 135.052629359506,
+      "category": "SAFE",
+      "name": "ドマーニ神戸",
+      "address": "神戸市垂水区本多聞3丁目1番地37",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区本多聞3丁目1番地37",
+      "district": "垂水区",
+      "sourceRow": 483,
+      "sourceRows": [
+        483
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

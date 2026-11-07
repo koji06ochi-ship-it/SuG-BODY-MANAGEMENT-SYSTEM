@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5780-22500-20261016",
+  "lat": 34.681585661765396,
+  "lng": 135.004273441925,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/8d590af58ad88939",
+      "lat": 34.6822409198778,
+      "lng": 135.004422554461,
+      "category": "SAFE",
+      "name": "とこはの家",
+      "address": "神戸市西区玉津町水谷字セリ合４００－７",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区玉津町水谷字セリ合４００－７",
+      "district": "西区",
+      "sourceRow": 775,
+      "sourceRows": [
+        775
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/02055b0d591072e9",
+      "lat": 34.680930403653,
+      "lng": 135.004124329389,
+      "category": "SAFE",
+      "name": "ダイワ運輸株式会社　本社",
+      "address": "神戸市西区玉津町水谷410",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区玉津町水谷410",
+      "district": "西区",
+      "sourceRow": 790,
+      "sourceRows": [
+        790
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

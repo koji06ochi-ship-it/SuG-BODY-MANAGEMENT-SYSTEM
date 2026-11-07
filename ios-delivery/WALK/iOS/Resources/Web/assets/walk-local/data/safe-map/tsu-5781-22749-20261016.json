@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5781-22749",
+  "lat": 34.689145499999995,
+  "lng": 136.49532,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.689522,
+      "lng": 136.496098,
+      "category": "SAFE",
+      "name": "南が丘小学校",
+      "address": "津市垂水2538-1",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "垂水2538-1",
+      "district": "津",
+      "sourceRow": 97,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/0990a2f00ea68b76",
+      "sourceRows": [
+        97
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.688769,
+      "lng": 136.494542,
+      "category": "SAFE",
+      "name": "南が丘中学校",
+      "address": "津市垂水2622-1",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "垂水2622-1",
+      "district": "津",
+      "sourceRow": 108,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/04be44734ad61f1b",
+      "sourceRows": [
+        108
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

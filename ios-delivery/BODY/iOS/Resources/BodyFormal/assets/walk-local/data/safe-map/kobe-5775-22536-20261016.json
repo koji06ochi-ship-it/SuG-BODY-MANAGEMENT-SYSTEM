@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5775-22536-20261016",
+  "lat": 34.653394938531335,
+  "lng": 135.2176058134796,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/54fc52fff03a0cab",
+      "lat": 34.6540709339691,
+      "lng": 135.218136249082,
+      "category": "SAFE",
+      "name": "㈱カナエ神戸工場",
+      "address": "神戸市中央区港島南町5-2-7",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島南町5-2-7",
+      "district": "中央区",
+      "sourceRow": 861,
+      "sourceRows": [
+        861
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b7c09ba79a23c9a5",
+      "lat": 34.6556569074119,
+      "lng": 135.217609650077,
+      "category": "SAFE",
+      "name": "株式会社オフテクス",
+      "address": "神戸市中央区港島南町5丁目2-4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島南町5丁目2-4",
+      "district": "中央区",
+      "sourceRow": 930,
+      "sourceRows": [
+        930
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/fc4e7bdbaa6ad139",
+      "lat": 34.6526317199706,
+      "lng": 135.217149362932,
+      "category": "SAFE",
+      "name": "神戸新交通株式会社　京コンピュータ前駅",
+      "address": "神戸市中央区港島南町7丁目",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島南町7丁目",
+      "district": "中央区",
+      "sourceRow": 968,
+      "sourceRows": [
+        968
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ee636c506c2a6bf7",
+      "lat": 34.6536259254914,
+      "lng": 135.216059522622,
+      "category": "SAFE",
+      "name": "ユミコア日本触媒株式会社神戸事業所",
+      "address": "神戸市中央区港島南町4丁目2-16",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島南町4丁目2-16",
+      "district": "中央区",
+      "sourceRow": 972,
+      "sourceRows": [
+        972
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bb8f8ad41d58b93c",
+      "lat": 34.6509892058137,
+      "lng": 135.219074282685,
+      "category": "SAFE",
+      "name": "日晶電機（株）神戸営業所",
+      "address": "神戸市中央区港島南町7-2-16",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島南町7-2-16",
+      "district": "中央区",
+      "sourceRow": 977,
+      "sourceRows": [
+        977
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

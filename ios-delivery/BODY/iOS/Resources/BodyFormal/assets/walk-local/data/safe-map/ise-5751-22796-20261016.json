@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5751-22796-20261016",
+  "lat": 34.5061945574893,
+  "lng": 136.77843908314534,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/da35b0176b5a045a",
+      "lat": 34.5060851175979,
+      "lng": 136.779421396959,
+      "category": "SAFE",
+      "name": "伊勢市二見総合支所",
+      "address": "伊勢市二見町茶屋420-1",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市二見町茶屋420-1",
+      "sourceRow": 2,
+      "sourceRows": [
+        2
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/9ff9dfe0cf5d87aa",
+      "lat": 34.5062105308873,
+      "lng": 136.778575320777,
+      "category": "SAFE",
+      "name": "二見老人福祉センター",
+      "address": "伊勢市二見町茶屋348",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市二見町茶屋348",
+      "sourceRow": 105,
+      "sourceRows": [
+        105
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/019c286fb0962149",
+      "lat": 34.5062880239827,
+      "lng": 136.7773205317,
+      "category": "SAFE",
+      "name": "二見生涯学習センター",
+      "address": "伊勢市二見町茶屋111-1",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市二見町茶屋111-1",
+      "sourceRow": 165,
+      "sourceRows": [
+        165
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5775-22526-20261016",
+  "lat": 34.6541519043938,
+  "lng": 135.1583322168425,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/c2b3388b6cfaec23",
+      "lat": 34.654117525051,
+      "lng": 135.156705951679,
+      "category": "SAFE",
+      "name": "神戸市営地下鉄　苅藻駅（海岸線）",
+      "address": "神戸市長田区浜添通5丁目",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区浜添通5丁目",
+      "district": "長田区",
+      "sourceRow": 1253,
+      "sourceRows": [
+        1253
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1f98b638313f815f",
+      "lat": 34.6557554561334,
+      "lng": 135.156460013361,
+      "category": "SAFE",
+      "name": "三ツ星ベルト（株）神戸事業所",
+      "address": "神戸市長田区浜添通4丁目1－21",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区浜添通4丁目1－21",
+      "district": "長田区",
+      "sourceRow": 1255,
+      "sourceRows": [
+        1255
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6fe75c4e527d7e9f",
+      "lat": 34.6514053282866,
+      "lng": 135.156543659674,
+      "category": "SAFE",
+      "name": "ミヨシ油脂（株）神戸工場",
+      "address": "神戸市長田区苅藻通7-1-48",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区苅藻通7-1-48",
+      "district": "長田区",
+      "sourceRow": 1257,
+      "sourceRows": [
+        1257
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a514d347b8a2f814",
+      "lat": 34.6537107657155,
+      "lng": 135.15818549572,
+      "category": "SAFE",
+      "name": "株式会社　イノウエ",
+      "address": "神戸市長田区東尻池町9丁目1-20",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区東尻池町9丁目1-20",
+      "district": "長田区",
+      "sourceRow": 1340,
+      "sourceRows": [
+        1340
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3867116210a6ee2b",
+      "lat": 34.6556811893402,
+      "lng": 135.157137702188,
+      "category": "SAFE",
+      "name": "特別養護老人ホーム　故郷の家・神戸",
+      "address": "神戸市長田区東池尻町7-4-21",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区東池尻町7-4-21",
+      "district": "長田区",
+      "sourceRow": 1350,
+      "sourceRows": [
+        1350
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7548e5878496687d",
+      "lat": 34.6554959432147,
+      "lng": 135.159061764239,
+      "category": "SAFE",
+      "name": "ウェルシア　イオン長田南SC店",
+      "address": "神戸市長田区東尻池新町1番20号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区東尻池新町1番20号",
+      "district": "長田区",
+      "sourceRow": 1357,
+      "sourceRows": [
+        1357
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5e64f6de162301af",
+      "lat": 34.6521209220132,
+      "lng": 135.161055825019,
+      "category": "SAFE",
+      "name": "NXトランスポート㈱神戸支店",
+      "address": "神戸市兵庫区高松町2－32",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区高松町2－32",
+      "district": "兵庫区",
+      "sourceRow": 2112,
+      "sourceRows": [
+        2112
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/679710aa71939215",
+      "lat": 34.6549281053958,
+      "lng": 135.16150732286,
+      "category": "SAFE",
+      "name": "不二製油株式会社神戸工場",
+      "address": "神戸市兵庫区浜中町2丁目18-24",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区浜中町2丁目18-24",
+      "district": "兵庫区",
+      "sourceRow": 2115,
+      "sourceRows": [
+        2115
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

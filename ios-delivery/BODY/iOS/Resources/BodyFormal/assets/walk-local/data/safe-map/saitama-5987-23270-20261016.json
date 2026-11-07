@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5987-23270",
+  "lat": 35.92711909333334,
+  "lng": 139.62307943333334,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.927705,
+      "lng": 139.624087,
+      "category": "SAFE",
+      "name": "高齢者生きがい活動センター",
+      "address": "さいたま市植竹町1-593-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "植竹町1-593-1",
+      "district": "北区",
+      "sourceRow": 56,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/1a86964197c0bd80",
+      "sourceRows": [
+        56
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.927847,
+      "lng": 139.624615,
+      "category": "SAFE",
+      "name": "植竹第二放課後児童クラブ（東大成・植竹小もりのこクラブ）",
+      "address": "さいたま市植竹町1-593-2",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "植竹町1-593-2",
+      "district": "北区",
+      "sourceRow": 57,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/5e8d35773921ba14",
+      "sourceRows": [
+        57
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.92580528,
+      "lng": 139.6205363,
+      "category": "SAFE",
+      "name": "東大成保育園",
+      "address": "さいたま市東大成町2-103",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "東大成町2-103",
+      "district": "北区",
+      "sourceRow": 85,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/da00d27eb23c4d59",
+      "sourceRows": [
+        85
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

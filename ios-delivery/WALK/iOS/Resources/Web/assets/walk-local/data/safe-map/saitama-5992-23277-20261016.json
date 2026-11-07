@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5992-23277",
+  "lat": 35.9557104,
+  "lng": 139.66796340000002,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.9556838,
+      "lng": 139.6679948,
+      "category": "SAFE",
+      "name": "春野保育園",
+      "address": "さいたま市春野1-7-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "春野1-7-1",
+      "district": "見沼区",
+      "sourceRow": 224,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/7464d9312ce9ffa2",
+      "sourceRows": [
+        224
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.955737,
+      "lng": 139.667932,
+      "category": "SAFE",
+      "name": "春野老人憩いの家",
+      "address": "さいたま市春野1-7-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "春野1-7-1",
+      "district": "見沼区",
+      "sourceRow": 225,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/de3c0ea49f48d65c",
+      "sourceRows": [
+        225
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

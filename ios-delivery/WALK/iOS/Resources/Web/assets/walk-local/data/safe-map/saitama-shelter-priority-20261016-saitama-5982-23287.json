@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-shelter-saitama-5982-23287",
+  "lat": 35.89497,
+  "lng": 139.72739,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "埼玉県オープンデータポータル さいたま市 指定避難所",
+  "sourceUrl": "https://opendata.pref.saitama.lg.jp/resources/4757",
+  "sourceFileUrl": "https://opendata.pref.saitama.lg.jp/resource_download/4757",
+  "sourceUpdatedAt": "2026-04-01",
+  "retrievedAt": "2026-10-16T00:00:00.000Z",
+  "sourceFileSha256": "42d9e75eb4293706a921f7e111077954d3d03d018c3745d1fe0a305417b0c44a",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://www.digital.go.jp/resources/open_data/",
+  "data": [
+    {
+      "id": "municipality/saitama/saitama-shelter/fbe8baa8cdaf897c",
+      "lat": 35.89062766,
+      "lng": 139.7349791,
+      "category": "SAFE",
+      "name": "美園小学校（指定避難所）",
+      "address": "埼玉県さいたま市緑区美園5-33",
+      "kind": "SHELTER",
+      "source": "https://opendata.pref.saitama.lg.jp/resources/4757",
+      "sourceLabel": "埼玉県オープンデータポータル さいたま市 指定避難所（開設状況・受入可否は未確認）",
+      "license": "PDL-1.0",
+      "sourceUpdatedAt": "2026-04-01",
+      "sourceRow": 210
+    },
+    {
+      "id": "municipality/saitama/saitama-shelter/6fb71ca78c717a48",
+      "lat": 35.901191,
+      "lng": 139.723027,
+      "category": "SAFE",
+      "name": "美園北小学校（指定避難所）",
+      "address": "埼玉県さいたま市緑区美園2-12-11",
+      "kind": "SHELTER",
+      "source": "https://opendata.pref.saitama.lg.jp/resources/4757",
+      "sourceLabel": "埼玉県オープンデータポータル さいたま市 指定避難所（開設状況・受入可否は未確認）",
+      "license": "PDL-1.0",
+      "sourceUpdatedAt": "2026-04-01",
+      "sourceRow": 211
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5978-23280",
+  "lat": 35.871237592222215,
+  "lng": 139.68472294444445,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.86890337,
+      "lng": 139.6821541,
+      "category": "SAFE",
+      "name": "中尾小学校放課後子ども居場所事業",
+      "address": "さいたま市中尾40-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "中尾40-1",
+      "district": "緑区",
+      "sourceRow": 525,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/c008e535df410d14",
+      "sourceRows": [
+        525
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.87119814,
+      "lng": 139.6843066,
+      "category": "SAFE",
+      "name": "緑区役所",
+      "address": "さいたま市中尾975-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "中尾975-1",
+      "district": "緑区",
+      "sourceRow": 526,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/fb5bce59dc1fb432",
+      "sourceRows": [
+        526,
+        527,
+        528,
+        529
+      ],
+      "duplicateSourceEntries": 4
+    },
+    {
+      "lat": 35.8718606,
+      "lng": 139.6857815,
+      "category": "SAFE",
+      "name": "プラザイースト",
+      "address": "さいたま市中尾1440-8",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "中尾1440-8",
+      "district": "緑区",
+      "sourceRow": 532,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/0ca2ee68b01c8224",
+      "sourceRows": [
+        532,
+        533,
+        534,
+        535
+      ],
+      "duplicateSourceEntries": 4
+    }
+  ]
+}

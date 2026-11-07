@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5784-22519-20261016",
+  "lat": 34.70734452285963,
+  "lng": 135.116714156766,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/3f91f4f6758ef1b4",
+      "lat": 34.7083524055083,
+      "lng": 135.115124277606,
+      "category": "SAFE",
+      "name": "温泉健康センター",
+      "address": "神戸市北区山田町下谷上字中一里山14番地の1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町下谷上字中一里山14番地の1",
+      "district": "北区",
+      "sourceRow": 2179,
+      "sourceRows": [
+        2179
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bdc75d5cbec7ba7a",
+      "lat": 34.7076151998433,
+      "lng": 135.115484725298,
+      "category": "SAFE",
+      "name": "しあわせの村　本館宿泊受付",
+      "address": "神戸市北区山田町下谷上字中一里山14-1しあわせの村内",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町下谷上字中一里山14-1しあわせの村内",
+      "district": "北区",
+      "sourceRow": 2276,
+      "sourceRows": [
+        2276
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5b0d89f88affb6f1",
+      "lat": 34.7048607847292,
+      "lng": 135.114852278412,
+      "category": "SAFE",
+      "name": "保養センターひよどり",
+      "address": "神戸市北区山田町下谷上字中一里山14-3しあわせの村内",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町下谷上字中一里山14-3しあわせの村内",
+      "district": "北区",
+      "sourceRow": 2278,
+      "sourceRows": [
+        2278
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0b5569c38c6aa86b",
+      "lat": 34.7089058221003,
+      "lng": 135.119929121749,
+      "category": "SAFE",
+      "name": "特別養護老人ホーム　ひよどりホーム",
+      "address": "神戸市北区ひよどり北町３－２",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区ひよどり北町３－２",
+      "district": "北区",
+      "sourceRow": 2577,
+      "sourceRows": [
+        2577
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/85326ccf42aaec7f",
+      "lat": 34.7054271028764,
+      "lng": 135.114965415782,
+      "category": "SAFE",
+      "name": "神戸在宅医療・介護推進財団介護老人保健施設　リハ・神戸",
+      "address": "神戸市北区しあわせの村１番19号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区しあわせの村１番19号",
+      "district": "北区",
+      "sourceRow": 2578,
+      "sourceRows": [
+        2578
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/674f68f8638082f8",
+      "lat": 34.7089058221003,
+      "lng": 135.119929121749,
+      "category": "SAFE",
+      "name": "介護型ケアハウス　ソラーレ",
+      "address": "神戸市北区ひよどり北町3丁目2番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区ひよどり北町3丁目2番地",
+      "district": "北区",
+      "sourceRow": 2581,
+      "sourceRows": [
+        2581
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

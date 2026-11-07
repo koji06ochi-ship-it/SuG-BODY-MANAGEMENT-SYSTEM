@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "yokkaichi-5828-22769-20261016",
+  "lat": 34.970754142,
+  "lng": 136.61818668,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "四日市市",
+  "source": "四日市市内公共施設 AED設置箇所一覧",
+  "sourceUrl": "https://data.bodik.jp/dataset/242021_00127",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/422f8da8-0b3c-4d84-b8dd-d88d18e914ce/resource/2a5eee8b-c455-4c2e-8553-b0d3d36e5ef2/download/242021_aed.csv",
+  "sourceUpdatedAt": "2024-12-18",
+  "sourcePageUpdatedAt": "2025-01-24",
+  "retrievedAt": "2026-10-15T15:44:16.747Z",
+  "sourceFileSha256": "c0880c81977c7fc444213ee84ef31a7b2e9e34f12d31e892064cbabb7d5159cf",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/yokkaichi/aed/5a9ab3438736dd19",
+      "lat": 34.97250157,
+      "lng": 136.6187526,
+      "category": "SAFE",
+      "name": "中部中学校",
+      "address": "四日市市西浦２丁目5-36",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市西浦２丁目5-36",
+      "sourceRow": 81,
+      "sourceRows": [
+        81,
+        82
+      ],
+      "duplicateSourceEntries": 2
+    },
+    {
+      "id": "municipality/yokkaichi/aed/fac2ecc93d790529",
+      "lat": 34.96974583,
+      "lng": 136.61768,
+      "category": "SAFE",
+      "name": "中部地区市民センター",
+      "address": "四日市市西浦一丁目8-3",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市西浦一丁目8-3",
+      "sourceRow": 158,
+      "sourceRows": [
+        158
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/62812a96caacac36",
+      "lat": 34.97069193,
+      "lng": 136.6199259,
+      "category": "SAFE",
+      "name": "中消防署",
+      "address": "四日市市西新地14‐4",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市西新地14‐4",
+      "sourceRow": 217,
+      "sourceRows": [
+        217
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/ce89b60aeba8bfa6",
+      "lat": 34.96832981,
+      "lng": 136.6158223,
+      "category": "SAFE",
+      "name": "じばさん三重",
+      "address": "四日市市安島1丁目3－18",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市安島1丁目3－18",
+      "sourceRow": 248,
+      "sourceRows": [
+        248
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

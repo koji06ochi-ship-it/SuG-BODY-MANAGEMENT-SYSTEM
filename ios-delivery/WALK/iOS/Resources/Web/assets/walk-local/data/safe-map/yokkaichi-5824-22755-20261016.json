@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "yokkaichi-5824-22755-20261016",
+  "lat": 34.94689711666666,
+  "lng": 136.53378233333333,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "四日市市",
+  "source": "四日市市内公共施設 AED設置箇所一覧",
+  "sourceUrl": "https://data.bodik.jp/dataset/242021_00127",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/422f8da8-0b3c-4d84-b8dd-d88d18e914ce/resource/2a5eee8b-c455-4c2e-8553-b0d3d36e5ef2/download/242021_aed.csv",
+  "sourceUpdatedAt": "2024-12-18",
+  "sourcePageUpdatedAt": "2025-01-24",
+  "retrievedAt": "2026-10-15T15:44:16.747Z",
+  "sourceFileSha256": "c0880c81977c7fc444213ee84ef31a7b2e9e34f12d31e892064cbabb7d5159cf",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/yokkaichi/aed/203b39566e2860c2",
+      "lat": 34.94730256,
+      "lng": 136.533313,
+      "category": "SAFE",
+      "name": "小山田小学校",
+      "address": "四日市市山田町1373-1",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市山田町1373-1",
+      "sourceRow": 12,
+      "sourceRows": [
+        12
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/0428225a1bf2f128",
+      "lat": 34.9473048,
+      "lng": 136.5333157,
+      "category": "SAFE",
+      "name": "小山田小学校",
+      "address": "四日市市山田町1373-1",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市山田町1373-1",
+      "sourceRow": 13,
+      "sourceRows": [
+        13
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/ff8861501f9ff04f",
+      "lat": 34.94608399,
+      "lng": 136.5347183,
+      "category": "SAFE",
+      "name": "小山田地区市民センター",
+      "address": "四日市市山田町1373-3",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市山田町1373-3",
+      "sourceRow": 147,
+      "sourceRows": [
+        147
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

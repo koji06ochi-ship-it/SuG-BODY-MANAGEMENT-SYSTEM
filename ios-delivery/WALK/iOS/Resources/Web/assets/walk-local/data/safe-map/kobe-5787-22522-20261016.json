@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5787-22522-20261016",
+  "lat": 34.7250499244376,
+  "lng": 135.1352062712829,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/68322c002299ceac",
+      "lat": 34.7220905121043,
+      "lng": 135.133632248187,
+      "category": "SAFE",
+      "name": "神戸市立　南五葉小学校",
+      "address": "神戸市北区南五葉3丁目1番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区南五葉3丁目1番1号",
+      "district": "北区",
+      "sourceRow": 2245,
+      "sourceRows": [
+        2245
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7f06d1a09e7f97a1",
+      "lat": 34.7255708972321,
+      "lng": 135.134709249106,
+      "category": "SAFE",
+      "name": "みなと銀行　西鈴蘭台支店",
+      "address": "神戸市北区北五葉1-1-17",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区北五葉1-1-17",
+      "district": "北区",
+      "sourceRow": 2284,
+      "sourceRows": [
+        2284
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e8a7afd16b50c327",
+      "lat": 34.7257927907005,
+      "lng": 135.134356907144,
+      "category": "SAFE",
+      "name": "神戸電鉄㈱　西鈴蘭台駅",
+      "address": "神戸市北区北五葉1-1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区北五葉1-1-1",
+      "district": "北区",
+      "sourceRow": 2286,
+      "sourceRows": [
+        2286
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b2bdb5326bcfe56a",
+      "lat": 34.7253849315577,
+      "lng": 135.133048548963,
+      "category": "SAFE",
+      "name": "神戸信用金庫　西鈴蘭台支店",
+      "address": "神戸市北区南五葉2-1-35",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区南五葉2-1-35",
+      "district": "北区",
+      "sourceRow": 2291,
+      "sourceRows": [
+        2291
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5e3cb44a0a99e3e9",
+      "lat": 34.7250329760966,
+      "lng": 135.134975430662,
+      "category": "SAFE",
+      "name": "兵庫六甲農業協同組合　西鈴蘭台出張所",
+      "address": "神戸市北区南五葉1-2-6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区南五葉1-2-6",
+      "district": "北区",
+      "sourceRow": 2303,
+      "sourceRows": [
+        2303
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/10c914596180b317",
+      "lat": 34.7276114181727,
+      "lng": 135.134556215789,
+      "category": "SAFE",
+      "name": "神戸市立　北五葉児童館",
+      "address": "神戸市北区北五葉1－7－24",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区北五葉1－7－24",
+      "district": "北区",
+      "sourceRow": 2332,
+      "sourceRows": [
+        2332
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e4fbb3a095209b41",
+      "lat": 34.7229831945577,
+      "lng": 135.13668865632,
+      "category": "SAFE",
+      "name": "南五葉地域福祉センター",
+      "address": "神戸市北区南五葉5丁目1－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区南五葉5丁目1－1",
+      "district": "北区",
+      "sourceRow": 2358,
+      "sourceRows": [
+        2358
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f7332e276297b01c",
+      "lat": 34.7231868698786,
+      "lng": 135.137629342949,
+      "category": "SAFE",
+      "name": "神戸市立　鈴蘭台南町保育所",
+      "address": "神戸市北区鈴蘭台南町4丁目2番28号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鈴蘭台南町4丁目2番28号",
+      "district": "北区",
+      "sourceRow": 2396,
+      "sourceRows": [
+        2396
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4032b5284ef80b70",
+      "lat": 34.723220235614,
+      "lng": 135.134305248246,
+      "category": "SAFE",
+      "name": "コープこうべ　コープ西鈴蘭台",
+      "address": "神戸市北区南五葉1丁目1-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区南五葉1丁目1-3",
+      "district": "北区",
+      "sourceRow": 2404,
+      "sourceRows": [
+        2404
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/41b33a87a802f226",
+      "lat": 34.7257927907005,
+      "lng": 135.134356907144,
+      "category": "SAFE",
+      "name": "西すずらん台歯科クリニック",
+      "address": "神戸市北区北五葉1丁目1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区北五葉1丁目1-1",
+      "district": "北区",
+      "sourceRow": 2493,
+      "sourceRows": [
+        2493
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5acdb283d694ae74",
+      "lat": 34.7278548957214,
+      "lng": 135.136893068094,
+      "category": "SAFE",
+      "name": "小規模保育園　すずきた",
+      "address": "神戸市北区北五葉1丁目13-1　レ･アール1階",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区北五葉1丁目13-1　レ･アール1階",
+      "district": "北区",
+      "sourceRow": 2498,
+      "sourceRows": [
+        2498
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9c4bfd403eb79ace",
+      "lat": 34.7260775809151,
+      "lng": 135.137323432791,
+      "category": "SAFE",
+      "name": "顕修会クリニック",
+      "address": "神戸市北区鈴蘭台西町2-22-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鈴蘭台西町2-22-3",
+      "district": "北区",
+      "sourceRow": 2571,
+      "sourceRows": [
+        2571
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

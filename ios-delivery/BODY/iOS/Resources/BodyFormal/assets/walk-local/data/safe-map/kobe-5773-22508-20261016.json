@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5773-22508-20261016",
+  "lat": 34.64183616332495,
+  "lng": 135.05003981674798,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/1d34e40f99e798c3",
+      "lat": 34.6408371385552,
+      "lng": 135.051768612604,
+      "category": "SAFE",
+      "name": "神戸市立　垂水中学校",
+      "address": "神戸市垂水区上高丸1-4-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区上高丸1-4-1",
+      "district": "垂水区",
+      "sourceRow": 280,
+      "sourceRows": [
+        280
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7e32a27612dd59a5",
+      "lat": 34.6410910119064,
+      "lng": 135.051791621325,
+      "category": "SAFE",
+      "name": "神戸市立　千代ヶ丘小学校",
+      "address": "神戸市垂水区上高丸1丁目4番2号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区上高丸1丁目4番2号",
+      "district": "垂水区",
+      "sourceRow": 310,
+      "sourceRows": [
+        310
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d9724c13086cfe5b",
+      "lat": 34.6437918237091,
+      "lng": 135.048169772678,
+      "category": "SAFE",
+      "name": "兵庫県立　神戸商業高等学校",
+      "address": "神戸市垂水区星陵台4丁目3-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区星陵台4丁目3-1",
+      "district": "垂水区",
+      "sourceRow": 327,
+      "sourceRows": [
+        327
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7a04c093fe7ee7fb",
+      "lat": 34.6416246791291,
+      "lng": 135.048429260385,
+      "category": "SAFE",
+      "name": "ウエルシア神戸星が丘店",
+      "address": "神戸市垂水区星が丘3-4-9",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区星が丘3-4-9",
+      "district": "垂水区",
+      "sourceRow": 455,
+      "sourceRows": [
+        455
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

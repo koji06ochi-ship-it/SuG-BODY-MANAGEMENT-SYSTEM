@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5784-22539-20261016",
+  "lat": 34.70717542204937,
+  "lng": 135.23821116637797,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/5e5aa801aa5be4bf",
+      "lat": 34.7066321289001,
+      "lng": 135.239399221661,
+      "category": "SAFE",
+      "name": "㈱神戸製鋼所　灘浜ガーデンバーデン",
+      "address": "神戸市灘区新在家南町2丁目25－6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区新在家南町2丁目25－6",
+      "district": "灘区",
+      "sourceRow": 1760,
+      "sourceRows": [
+        1760
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e89aae87ba004638",
+      "lat": 34.7056552140167,
+      "lng": 135.236696564711,
+      "category": "SAFE",
+      "name": "新在家地域福祉センター",
+      "address": "神戸市灘区新在家南町3丁目2-25",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区新在家南町3丁目2-25",
+      "district": "灘区",
+      "sourceRow": 1892,
+      "sourceRows": [
+        1892
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1ab727d3f890a195",
+      "lat": 34.7092389232313,
+      "lng": 135.238537712762,
+      "category": "SAFE",
+      "name": "エニタイムフィットネス新在家駅前店",
+      "address": "神戸市灘区大石東町1丁目37番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区大石東町1丁目37番地",
+      "district": "灘区",
+      "sourceRow": 2008,
+      "sourceRows": [
+        2008
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

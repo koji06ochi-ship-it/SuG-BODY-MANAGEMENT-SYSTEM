@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5788-22548-20261016",
+  "lat": 34.730219157210165,
+  "lng": 135.2911534808758,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/b7dc9fd91f7887a4",
+      "lat": 34.7292931123476,
+      "lng": 135.290195409877,
+      "category": "SAFE",
+      "name": "神戸市立　本山東児童館",
+      "address": "神戸市東灘区森南町2丁目8-25",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区森南町2丁目8-25",
+      "district": "東灘区",
+      "sourceRow": 1484,
+      "sourceRows": [
+        1484
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/fbb2ef836cc84ac9",
+      "lat": 34.7292931123476,
+      "lng": 135.290195409877,
+      "category": "SAFE",
+      "name": "本山東地域福祉センター",
+      "address": "神戸市東灘区森南町2丁目8-28",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区森南町2丁目8-28",
+      "district": "東灘区",
+      "sourceRow": 1506,
+      "sourceRows": [
+        1506
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/21121f34c352069d",
+      "lat": 34.7310764226213,
+      "lng": 135.291331527134,
+      "category": "SAFE",
+      "name": "コープこうべ　コープミニ甲南山手",
+      "address": "神戸市東灘区森北町1丁目6番7号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区森北町1丁目6番7号",
+      "district": "東灘区",
+      "sourceRow": 1527,
+      "sourceRows": [
+        1527
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/978df2c46adf886c",
+      "lat": 34.7305409050153,
+      "lng": 135.292074292147,
+      "category": "SAFE",
+      "name": "JR　甲南山手駅",
+      "address": "神戸市東灘区森北町1丁目1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区森北町1丁目1",
+      "district": "東灘区",
+      "sourceRow": 1630,
+      "sourceRows": [
+        1630
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ad46dc9c130bb03b",
+      "lat": 34.7300349683079,
+      "lng": 135.291792719086,
+      "category": "SAFE",
+      "name": "原元クリニック",
+      "address": "神戸市東灘区森南町1丁目13-13",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区森南町1丁目13-13",
+      "district": "東灘区",
+      "sourceRow": 1701,
+      "sourceRows": [
+        1701
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d01a9c7801724ba1",
+      "lat": 34.7310764226213,
+      "lng": 135.291331527134,
+      "category": "SAFE",
+      "name": "FURDI　甲南山手駅前",
+      "address": "神戸市東灘区森北町1丁目6番地7サンプレイス１階",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区森北町1丁目6番地7サンプレイス１階",
+      "district": "東灘区",
+      "sourceRow": 1747,
+      "sourceRows": [
+        1747
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

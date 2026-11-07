@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5776-22505-20261016",
+  "lat": 34.659461522530464,
+  "lng": 135.03354347526937,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/015452927b713f9b",
+      "lat": 34.6609019598629,
+      "lng": 135.033287759956,
+      "category": "SAFE",
+      "name": "神戸市立　神陵台中学校",
+      "address": "神戸市垂水区神陵台3-1-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区神陵台3-1-2",
+      "district": "垂水区",
+      "sourceRow": 277,
+      "sourceRows": [
+        277
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/dca36c925eeb2fa8",
+      "lat": 34.6602720559011,
+      "lng": 135.033767110096,
+      "category": "SAFE",
+      "name": "神戸市立　神陵台小学校",
+      "address": "神戸市垂水区神陵台3丁目1番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区神陵台3丁目1番",
+      "district": "垂水区",
+      "sourceRow": 321,
+      "sourceRows": [
+        321
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/29e3d712b01d984f",
+      "lat": 34.6616416811469,
+      "lng": 135.035306846467,
+      "category": "SAFE",
+      "name": "コープこうべ　コープ神陵台",
+      "address": "神戸市垂水区神陵台3丁目3番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区神陵台3丁目3番",
+      "district": "垂水区",
+      "sourceRow": 367,
+      "sourceRows": [
+        367
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5f912c86a08b70af",
+      "lat": 34.6573491656906,
+      "lng": 135.032659130666,
+      "category": "SAFE",
+      "name": "神戸市立　神陵台児童館",
+      "address": "神戸市垂水区南多聞台1丁目9番Ｃ-101",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区南多聞台1丁目9番Ｃ-101",
+      "district": "垂水区",
+      "sourceRow": 378,
+      "sourceRows": [
+        378
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2cdc1cfccec9b874",
+      "lat": 34.6571427500508,
+      "lng": 135.032696529162,
+      "category": "SAFE",
+      "name": "神陵台地域福祉センター",
+      "address": "神戸市垂水区南多聞台1-8-8",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区南多聞台1-8-8",
+      "district": "垂水区",
+      "sourceRow": 389,
+      "sourceRows": [
+        389
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

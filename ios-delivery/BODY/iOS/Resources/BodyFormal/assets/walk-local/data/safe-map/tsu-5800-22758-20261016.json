@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5800-22758",
+  "lat": 34.8050315,
+  "lng": 136.548909,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.804895,
+      "lng": 136.549257,
+      "category": "SAFE",
+      "name": "千里ヶ丘幼稚園",
+      "address": "津市河芸町千里ヶ丘13",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "河芸町千里ヶ丘13",
+      "district": "河芸",
+      "sourceRow": 162,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/ea34e1d98b263739",
+      "sourceRows": [
+        162
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.805168,
+      "lng": 136.548561,
+      "category": "SAFE",
+      "name": "千里ヶ丘小学校",
+      "address": "津市河芸町千里ヶ丘13",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "河芸町千里ヶ丘13",
+      "district": "河芸",
+      "sourceRow": 165,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/dcbbf4cb4a6c14ca",
+      "sourceRows": [
+        165
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

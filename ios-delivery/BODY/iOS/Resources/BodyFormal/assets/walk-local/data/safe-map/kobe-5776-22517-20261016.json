@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5776-22517-20261016",
+  "lat": 34.6567930766491,
+  "lng": 135.10412840532118,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/4f7b85a38978f5cd",
+      "lat": 34.6564388657769,
+      "lng": 135.104102843626,
+      "category": "SAFE",
+      "name": "神戸市立　高倉台小学校",
+      "address": "神戸市須磨区高倉台4丁目1－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区高倉台4丁目1－1",
+      "district": "須磨区",
+      "sourceRow": 66,
+      "sourceRows": [
+        66
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/39ed726f0435cf04",
+      "lat": 34.6564544371537,
+      "lng": 135.102457876076,
+      "category": "SAFE",
+      "name": "神戸YMCAちとせ幼稚園",
+      "address": "神戸市須磨区高倉台4丁目12",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区高倉台4丁目12",
+      "district": "須磨区",
+      "sourceRow": 80,
+      "sourceRows": [
+        80
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/540fe0c53b9c3d37",
+      "lat": 34.65689679164,
+      "lng": 135.103863454626,
+      "category": "SAFE",
+      "name": "神戸市開発管理事業団　高倉会館",
+      "address": "神戸市須磨区高倉台4丁目2－4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区高倉台4丁目2－4",
+      "district": "須磨区",
+      "sourceRow": 111,
+      "sourceRows": [
+        111
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0c4ff1638bb07790",
+      "lat": 34.6569661758994,
+      "lng": 135.105213617138,
+      "category": "SAFE",
+      "name": "神戸市立　高倉台保育所",
+      "address": "神戸市須磨区高倉台4丁目1番3号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区高倉台4丁目1番3号",
+      "district": "須磨区",
+      "sourceRow": 122,
+      "sourceRows": [
+        122
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b0f829515b9819ca",
+      "lat": 34.6571168496545,
+      "lng": 135.105368733601,
+      "category": "SAFE",
+      "name": "高倉台地域福祉センター",
+      "address": "神戸市須磨区高倉台4丁目1-4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区高倉台4丁目1-4",
+      "district": "須磨区",
+      "sourceRow": 161,
+      "sourceRows": [
+        161
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b0ac8446f631a813",
+      "lat": 34.6568853397701,
+      "lng": 135.10376390686,
+      "category": "SAFE",
+      "name": "神戸女子大学付属高倉台幼稚園",
+      "address": "神戸市須磨区高倉台4丁目2番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区高倉台4丁目2番",
+      "district": "須磨区",
+      "sourceRow": 182,
+      "sourceRows": [
+        182
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

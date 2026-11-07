@@ -1,0 +1,81 @@
+{
+  "schema": "sug-body-daily-candidate-v2",
+  "test": true,
+  "exportedAt": "2026-10-26T05:27:28.624Z",
+  "data": {
+    "profile": {
+      "name": "開発テスト",
+      "height": "170",
+      "weight": "65",
+      "bodyfat": "",
+      "target": "",
+      "goal": "体力をつけたい"
+    },
+    "days": {
+      "2026-10-26": {
+        "steps": "4321",
+        "distance": "3.12",
+        "sleep": "7.5",
+        "fatigue": "いつも通り",
+        "stress": "少ない",
+        "pain": "なし",
+        "source": "manual",
+        "updatedAt": "2026-10-26T05:19:06.219Z"
+      }
+    },
+    "foods": [
+      {
+        "dish": "開発テスト用の食事",
+        "portion": "確認用1食",
+        "kcal": "520",
+        "protein": "30",
+        "fat": "",
+        "carbs": "",
+        "id": "49b0a75e7369a3d046a4616e3ec5768d",
+        "source": "manual",
+        "at": "2026-10-26T05:19:30.881Z",
+        "day": "2026-10-26"
+      }
+    ],
+    "cares": [
+      {
+        "observation": "架空テスト：入力保持確認",
+        "hypothesis": "",
+        "action": "",
+        "change": "",
+        "part": "肩",
+        "id": "9b812dac8fb456a3ad86956e96450bbc",
+        "at": "2026-10-26T05:19:56.241Z",
+        "day": "2026-10-26"
+      }
+    ],
+    "weights": [
+      {
+        "day": "2026-10-26",
+        "weight": "65",
+        "bodyfat": "",
+        "at": "2026-10-26T05:27:27.594Z",
+        "id": "5f9c5e0819f67099f5c3899c9b2d60e3"
+      }
+    ],
+    "foodEdits": [
+      {
+        "id": "2517b71e4c504470057d626720f70bea",
+        "foodId": "49b0a75e7369a3d046a4616e3ec5768d",
+        "at": "2026-10-26T05:27:19.211Z",
+        "before": {
+          "dish": "開発テスト用の食事",
+          "portion": "確認用1食",
+          "kcal": "500",
+          "protein": "",
+          "fat": "",
+          "carbs": "",
+          "id": "49b0a75e7369a3d046a4616e3ec5768d",
+          "source": "manual",
+          "at": "2026-10-26T05:19:30.881Z",
+          "day": "2026-10-26"
+        }
+      }
+    ]
+  }
+}

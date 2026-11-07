@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5781-22500-20261016",
+  "lat": 34.6889151846994,
+  "lng": 135.00177088962704,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/a816125d106341d8",
+      "lat": 34.6889151846994,
+      "lng": 135.001770889627,
+      "category": "SAFE",
+      "name": "川崎重工業株式会社 精密機械カンパニー総合事務所1号館",
+      "address": "神戸市西区櫨谷町松本234番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区櫨谷町松本234番地",
+      "district": "西区",
+      "sourceRow": 674,
+      "sourceRows": [
+        674
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/fbdd9097de4f01d3",
+      "lat": 34.6889151846994,
+      "lng": 135.001770889627,
+      "category": "SAFE",
+      "name": "川崎重工業株式会社 精密機械カンパニー総合事務所2号館",
+      "address": "神戸市西区櫨谷町松本234番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区櫨谷町松本234番地",
+      "district": "西区",
+      "sourceRow": 675,
+      "sourceRows": [
+        675
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5a6cf81a10db2ff1",
+      "lat": 34.6889151846994,
+      "lng": 135.001770889627,
+      "category": "SAFE",
+      "name": "川崎重工業株式会社 精密機械カンパニー開発第2工場",
+      "address": "神戸市西区櫨谷町松本234番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区櫨谷町松本234番地",
+      "district": "西区",
+      "sourceRow": 676,
+      "sourceRows": [
+        676
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bd8a339c3acfef42",
+      "lat": 34.6889151846994,
+      "lng": 135.001770889627,
+      "category": "SAFE",
+      "name": "川崎重工業株式会社 精密機械カンパニーサービス工場",
+      "address": "神戸市西区櫨谷町松本234番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区櫨谷町松本234番地",
+      "district": "西区",
+      "sourceRow": 677,
+      "sourceRows": [
+        677
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/205fadc1b2297da5",
+      "lat": 34.6889151846994,
+      "lng": 135.001770889627,
+      "category": "SAFE",
+      "name": "川崎重工業株式会社 精密機械カンパニー装置工場",
+      "address": "神戸市西区櫨谷町松本234番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区櫨谷町松本234番地",
+      "district": "西区",
+      "sourceRow": 678,
+      "sourceRows": [
+        678
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/95a5eab4915fce17",
+      "lat": 34.6889151846994,
+      "lng": 135.001770889627,
+      "category": "SAFE",
+      "name": "川崎重工業株式会社 精密機械カンパニー機器第1工場",
+      "address": "神戸市西区櫨谷町松本234番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区櫨谷町松本234番地",
+      "district": "西区",
+      "sourceRow": 679,
+      "sourceRows": [
+        679
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6760b1a90fb579f7",
+      "lat": 34.6889151846994,
+      "lng": 135.001770889627,
+      "category": "SAFE",
+      "name": "川崎重工業株式会社 精密機械カンパニー機器第2工場",
+      "address": "神戸市西区櫨谷町松本234番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区櫨谷町松本234番地",
+      "district": "西区",
+      "sourceRow": 680,
+      "sourceRows": [
+        680
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bafd65f179ee0a8a",
+      "lat": 34.6889151846994,
+      "lng": 135.001770889627,
+      "category": "SAFE",
+      "name": "川崎重工業株式会社 精密機械カンパニー機器第3工場",
+      "address": "神戸市西区櫨谷町松本234番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区櫨谷町松本234番地",
+      "district": "西区",
+      "sourceRow": 681,
+      "sourceRows": [
+        681
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bd34a598f69ca7cf",
+      "lat": 34.6889151846994,
+      "lng": 135.001770889627,
+      "category": "SAFE",
+      "name": "川崎重工業株式会社 精密機械カンパニー機器第4工場",
+      "address": "神戸市西区櫨谷町松本234番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区櫨谷町松本234番地",
+      "district": "西区",
+      "sourceRow": 682,
+      "sourceRows": [
+        682
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/af149078b927f2e9",
+      "lat": 34.6889151846994,
+      "lng": 135.001770889627,
+      "category": "SAFE",
+      "name": "川崎重工業株式会社 精密機械カンパニーｺｱﾊﾟｰﾂ工場1階",
+      "address": "神戸市西区櫨谷町松本234番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区櫨谷町松本234番地",
+      "district": "西区",
+      "sourceRow": 683,
+      "sourceRows": [
+        683
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bc73400692d22485",
+      "lat": 34.6889151846994,
+      "lng": 135.001770889627,
+      "category": "SAFE",
+      "name": "川崎重工業株式会社 精密機械カンパニーｺｱﾊﾟｰﾂ工場2階",
+      "address": "神戸市西区櫨谷町松本234番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区櫨谷町松本234番地",
+      "district": "西区",
+      "sourceRow": 684,
+      "sourceRows": [
+        684
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

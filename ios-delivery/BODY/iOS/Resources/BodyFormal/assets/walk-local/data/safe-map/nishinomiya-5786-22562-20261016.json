@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5786-22562-20261016",
+  "lat": 34.717880918,
+  "lng": 135.3755889,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/f842abdf9b8fe95c",
+      "lat": 34.7174589,
+      "lng": 135.3744651,
+      "category": "SAFE",
+      "name": "武庫川女子大学中央キャンパス",
+      "address": "兵庫県西宮市池開町６－４６",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市池開町６－４６",
+      "district": "西宮市",
+      "sourceRow": 460,
+      "sourceRows": [
+        460
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/1f0bd13fdfba75be",
+      "lat": 34.71669767,
+      "lng": 135.3779881,
+      "category": "SAFE",
+      "name": "武庫川すずかけ作業所",
+      "address": "兵庫県西宮市武庫川町４－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市武庫川町４－１",
+      "district": "西宮市",
+      "sourceRow": 476,
+      "sourceRows": [
+        476
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/70b7c935749b4bed",
+      "lat": 34.71947765,
+      "lng": 135.3758676,
+      "category": "SAFE",
+      "name": "児童養護施設三光塾",
+      "address": "兵庫県西宮市小松西町２丁目６－３０",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市小松西町２丁目６－３０",
+      "district": "西宮市",
+      "sourceRow": 494,
+      "sourceRows": [
+        494
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/ef491bf0ffe44462",
+      "lat": 34.71895548,
+      "lng": 135.3733639,
+      "category": "SAFE",
+      "name": "武庫川女子大学　看護科学館",
+      "address": "兵庫県西宮市鳴尾町１丁目３－３６",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市鳴尾町１丁目３－３６",
+      "district": "西宮市",
+      "sourceRow": 504,
+      "sourceRows": [
+        504
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/a76a987a3fcc7ef4",
+      "lat": 34.71681489,
+      "lng": 135.3762598,
+      "category": "SAFE",
+      "name": "武庫川女子大学付属幼稚園",
+      "address": "兵庫県西宮市池開町１０－３",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市池開町１０－３",
+      "district": "西宮市",
+      "sourceRow": 514,
+      "sourceRows": [
+        514
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

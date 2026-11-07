@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5802-22535-20261016",
+  "lat": 34.8138988304585,
+  "lng": 135.21539413478752,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/7ba9d243e56e899d",
+      "lat": 34.8138413304542,
+      "lng": 135.215334651688,
+      "category": "SAFE",
+      "name": "藤原台地域福祉センター",
+      "address": "神戸市北区藤原台中町7-14-16",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区藤原台中町7-14-16",
+      "district": "北区",
+      "sourceRow": 2395,
+      "sourceRows": [
+        2395
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/52f55982248b3815",
+      "lat": 34.8139563304628,
+      "lng": 135.215453617887,
+      "category": "SAFE",
+      "name": "神戸市立　藤原台幼稚園",
+      "address": "神戸市北区藤原台中町7丁目14-15",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区藤原台中町7丁目14-15",
+      "district": "北区",
+      "sourceRow": 2464,
+      "sourceRows": [
+        2464
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

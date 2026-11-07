@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5785-22513-20261016",
+  "lat": 34.7156046502195,
+  "lng": 135.082682858584,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/2269d08dc353fab4",
+      "lat": 34.7156046502195,
+      "lng": 135.082682858584,
+      "category": "SAFE",
+      "name": "神戸市環境局布施畑環境センター（破砕施設）",
+      "address": "神戸市西区伊川谷町布施畑1172-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区伊川谷町布施畑1172-2",
+      "district": "西区",
+      "sourceRow": 622,
+      "sourceRows": [
+        622
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c0f1be9005a2f9cd",
+      "lat": 34.7156046502195,
+      "lng": 135.082682858584,
+      "category": "SAFE",
+      "name": "神戸市環境局布施畑環境センター(台場)",
+      "address": "神戸市西区伊川谷町布施畑1172番地2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区伊川谷町布施畑1172番地2",
+      "district": "西区",
+      "sourceRow": 802,
+      "sourceRows": [
+        802
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

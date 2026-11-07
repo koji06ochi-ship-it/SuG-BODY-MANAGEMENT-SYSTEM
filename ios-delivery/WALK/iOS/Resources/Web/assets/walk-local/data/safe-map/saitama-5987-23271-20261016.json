@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5987-23271",
+  "lat": 35.92651315,
+  "lng": 139.6299891,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.9256293,
+      "lng": 139.6318302,
+      "category": "SAFE",
+      "name": "漫画会館",
+      "address": "さいたま市盆栽町150",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "盆栽町150",
+      "district": "北区",
+      "sourceRow": 93,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/7db6f35979b60183",
+      "sourceRows": [
+        93
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.927397,
+      "lng": 139.628148,
+      "category": "SAFE",
+      "name": "植竹児童センター",
+      "address": "さいたま市盆栽町430",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "盆栽町430",
+      "district": "北区",
+      "sourceRow": 96,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/0c9de08396ba76b4",
+      "sourceRows": [
+        96
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

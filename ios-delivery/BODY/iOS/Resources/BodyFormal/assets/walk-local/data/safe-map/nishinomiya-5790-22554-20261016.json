@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5790-22554-20261016",
+  "lat": 34.742144806666666,
+  "lng": 135.32699081666667,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/89f0e9292e86aed6",
+      "lat": 34.74024915,
+      "lng": 135.3281381,
+      "category": "SAFE",
+      "name": "夙川公民館",
+      "address": "兵庫県西宮市羽衣町１－３９",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市羽衣町１－３９",
+      "district": "西宮市",
+      "sourceRow": 204,
+      "sourceRows": [
+        204
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/01cb858ff4d53cd1",
+      "lat": 34.7413742,
+      "lng": 135.3272208,
+      "category": "SAFE",
+      "name": "夙川市民サービスセンター",
+      "address": "兵庫県西宮市羽衣町７－３０－１２４",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市羽衣町７－３０－１２４",
+      "district": "西宮市",
+      "sourceRow": 238,
+      "sourceRows": [
+        238
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/d36454038c7b0be9",
+      "lat": 34.74106243,
+      "lng": 135.3263461,
+      "category": "SAFE",
+      "name": "三菱ＵＦＪ銀行夙川支店",
+      "address": "兵庫県西宮市羽衣町５－３４",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市羽衣町５－３４",
+      "district": "西宮市",
+      "sourceRow": 343,
+      "sourceRows": [
+        343
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/680187269bb64ed5",
+      "lat": 34.74243492,
+      "lng": 135.3280328,
+      "category": "SAFE",
+      "name": "阪急夙川駅",
+      "address": "兵庫県西宮市相生町２－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市相生町２－１",
+      "district": "西宮市",
+      "sourceRow": 396,
+      "sourceRows": [
+        396
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/f2f95ae5754633fa",
+      "lat": 34.7427519,
+      "lng": 135.3275145,
+      "category": "SAFE",
+      "name": "株式会社　三井住友銀行夙川支店",
+      "address": "兵庫県西宮市相生町７－５",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市相生町７－５",
+      "district": "西宮市",
+      "sourceRow": 402,
+      "sourceRows": [
+        402
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/5968bb1d5957c601",
+      "lat": 34.74499624,
+      "lng": 135.3246926,
+      "category": "SAFE",
+      "name": "グランダ夙川",
+      "address": "兵庫県西宮市雲井町８－２６",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市雲井町８－２６",
+      "district": "西宮市",
+      "sourceRow": 409,
+      "sourceRows": [
+        409
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

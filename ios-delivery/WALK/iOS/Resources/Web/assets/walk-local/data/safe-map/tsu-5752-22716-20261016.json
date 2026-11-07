@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5752-22716",
+  "lat": 34.516047,
+  "lng": 136.2998135,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.516647,
+      "lng": 136.300066,
+      "category": "SAFE",
+      "name": "多気地域住民センター",
+      "address": "津市美杉町上多気1031",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "美杉町上多気1031",
+      "district": "美杉",
+      "sourceRow": 276,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/9b60a43b19c0b479",
+      "sourceRows": [
+        276
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.515447,
+      "lng": 136.299561,
+      "category": "SAFE",
+      "name": "美杉ふるさと資料館",
+      "address": "津市美杉町上多気1010",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "美杉町上多気1010",
+      "district": "美杉",
+      "sourceRow": 285,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/b49017138b070f31",
+      "sourceRows": [
+        285
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

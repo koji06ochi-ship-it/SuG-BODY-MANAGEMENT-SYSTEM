@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "nara-toilet-nara-park-8665-33962-20261016",
+  "lat": 34.66251014477615,
+  "lng": 135.84959253225867,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "奈良市",
+  "source": "奈良市 公共施設オープンデータ（トイレ設備記載）",
+  "sourceUrl": "https://www.city.nara.lg.jp/soshiki/6/9554.html",
+  "sourceFileUrl": "https://www.city.nara.lg.jp/uploaded/attachment/200211.csv",
+  "sourceUpdatedAt": "2025-09-01",
+  "retrievedAt": "2026-10-16T00:00:00.000Z",
+  "sourceFileSha256": "5dc12c3fc149c5d0b129b76a728f0da708240814317307342ec5097d62a58678",
+  "license": "CC-BY-2.1-JP",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.1/jp/",
+  "data": [
+    {
+      "id": "municipality/nara/nara-city-toilet/a60be38f9c6d66e7",
+      "lat": 34.66064,
+      "lng": 135.85807,
+      "category": "PUBLIC",
+      "name": "奈良市斎苑旅立ちの杜（多目的トイレ）",
+      "address": "奈良県奈良市横井町924-11",
+      "kind": "TOILET",
+      "source": "https://www.city.nara.lg.jp/soshiki/6/9554.html",
+      "sourceLabel": "奈良市 公共施設オープンデータ（多目的トイレ有りの記載。利用可否・開館状況は要確認）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-09-01",
+      "sourceRow": 5
+    }
+  ]
+}

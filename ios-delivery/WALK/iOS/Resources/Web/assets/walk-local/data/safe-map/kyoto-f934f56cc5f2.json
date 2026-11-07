@@ -1,0 +1,730 @@
+{
+  "schemaVersion": 1,
+  "id": "kyoto",
+  "name": "京都市役所周辺の一部",
+  "lat": 35.012,
+  "lng": 135.768,
+  "radius": 600,
+  "partial": true,
+  "limit": 80,
+  "retrievedAt": "2026-10-14T05:29:38.200Z",
+  "osmTimestamp": "2026-10-14T05:27:41Z",
+  "source": "OpenStreetMap contributors",
+  "sourceUrl": "https://www.openstreetmap.org/copyright",
+  "license": "ODbL-1.0",
+  "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "query": "[out:json][timeout:15][maxsize:16777216];(nwr[amenity~\"^(police|fire_station|hospital|toilets|townhall|community_centre)$\"](around:600,35.012,135.768);nwr[emergency=defibrillator](around:600,35.012,135.768);nwr[leisure=park](around:600,35.012,135.768);nwr[railway~\"^(station|halt)$\"](around:600,35.012,135.768);nwr[highway=bus_stop](around:600,35.012,135.768););out center 80;",
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "data": [
+    {
+      "id": "node/1422958636",
+      "lat": 35.009673,
+      "lng": 135.773376,
+      "category": "PUBLIC",
+      "name": "だん王児童館",
+      "address": "",
+      "kind": "community_centre",
+      "source": "https://www.openstreetmap.org/node/1422958636"
+    },
+    {
+      "id": "node/1422959177",
+      "lat": 35.013075,
+      "lng": 135.770126,
+      "category": "SAFE",
+      "name": "中立売警察署木屋町二条交番",
+      "address": "",
+      "kind": "police",
+      "source": "https://www.openstreetmap.org/node/1422959177"
+    },
+    {
+      "id": "node/1422961187",
+      "lat": 35.011641,
+      "lng": 135.76819,
+      "category": "PUBLIC",
+      "name": "京都市役所",
+      "address": "",
+      "kind": "townhall",
+      "source": "https://www.openstreetmap.org/node/1422961187"
+    },
+    {
+      "id": "node/1422961234",
+      "lat": 35.012419,
+      "lng": 135.768384,
+      "category": "SAFE",
+      "name": "京都市消防局",
+      "address": "",
+      "kind": "fire_station",
+      "source": "https://www.openstreetmap.org/node/1422961234"
+    },
+    {
+      "id": "node/1422961243",
+      "lat": 35.01203,
+      "lng": 135.767579,
+      "category": "SAFE",
+      "name": "京都市消防局中京消防署寺町消防出張所",
+      "address": "",
+      "kind": "fire_station",
+      "source": "https://www.openstreetmap.org/node/1422961243"
+    },
+    {
+      "id": "node/1854284608",
+      "lat": 35.009063,
+      "lng": 135.7729644,
+      "category": "MOVE",
+      "name": "三条京阪前",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/1854284608"
+    },
+    {
+      "id": "node/1854284678",
+      "lat": 35.0081074,
+      "lng": 135.7691225,
+      "category": "MOVE",
+      "name": "河原町三条",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/1854284678"
+    },
+    {
+      "id": "node/2093245885",
+      "lat": 35.0081506,
+      "lng": 135.7726049,
+      "category": "MOVE",
+      "name": "三条京阪",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/2093245885"
+    },
+    {
+      "id": "node/2382151218",
+      "lat": 35.0085379,
+      "lng": 135.7721854,
+      "category": "MOVE",
+      "name": "三条京阪前",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/2382151218"
+    },
+    {
+      "id": "node/2382181168",
+      "lat": 35.0085953,
+      "lng": 135.7724635,
+      "category": "MOVE",
+      "name": "三条京阪前",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/2382181168"
+    },
+    {
+      "id": "node/2503730835",
+      "lat": 35.0097023,
+      "lng": 135.7688779,
+      "category": "MOVE",
+      "name": "河原町三条",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/2503730835"
+    },
+    {
+      "id": "node/2503730838",
+      "lat": 35.0125769,
+      "lng": 135.7688755,
+      "category": "MOVE",
+      "name": "京都市役所前",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/2503730838"
+    },
+    {
+      "id": "node/2503730839",
+      "lat": 35.0126568,
+      "lng": 135.7690689,
+      "category": "MOVE",
+      "name": "京都市役所前",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/2503730839"
+    },
+    {
+      "id": "node/2998138653",
+      "lat": 35.0092196,
+      "lng": 135.7729209,
+      "category": "MOVE",
+      "name": "三条京阪前",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/2998138653"
+    },
+    {
+      "id": "node/2998138654",
+      "lat": 35.0110809,
+      "lng": 135.7699496,
+      "category": "MOVE",
+      "name": "京都市役所前",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/2998138654"
+    },
+    {
+      "id": "node/2998138663",
+      "lat": 35.0080315,
+      "lng": 135.7689485,
+      "category": "MOVE",
+      "name": "河原町三条",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/2998138663"
+    },
+    {
+      "id": "node/3259662262",
+      "lat": 35.0107607,
+      "lng": 135.7680003,
+      "category": "MOVE",
+      "name": "京都市役所前",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/3259662262"
+    },
+    {
+      "id": "node/4641009639",
+      "lat": 35.0100469,
+      "lng": 135.7686341,
+      "category": "PUBLIC",
+      "name": "名称未登録",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/node/4641009639"
+    },
+    {
+      "id": "node/4698816195",
+      "lat": 35.0081868,
+      "lng": 135.7726621,
+      "category": "MOVE",
+      "name": "三条京阪",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/4698816195"
+    },
+    {
+      "id": "node/4718270417",
+      "lat": 35.0126181,
+      "lng": 135.7615624,
+      "category": "MEDICAL",
+      "name": "足立病院 小児科",
+      "address": "",
+      "kind": "hospital",
+      "source": "https://www.openstreetmap.org/node/4718270417"
+    },
+    {
+      "id": "node/4877105924",
+      "lat": 35.0098865,
+      "lng": 135.7688824,
+      "category": "MOVE",
+      "name": "河原町三条",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/4877105924"
+    },
+    {
+      "id": "node/4877105925",
+      "lat": 35.0168235,
+      "lng": 135.7688499,
+      "category": "MOVE",
+      "name": "河原町丸太町",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/4877105925"
+    },
+    {
+      "id": "node/4893246688",
+      "lat": 35.009836,
+      "lng": 135.7690461,
+      "category": "MOVE",
+      "name": "河原町三条",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/4893246688"
+    },
+    {
+      "id": "node/4893246690",
+      "lat": 35.0100238,
+      "lng": 135.7688765,
+      "category": "MOVE",
+      "name": "河原町三条",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/4893246690"
+    },
+    {
+      "id": "node/4893246691",
+      "lat": 35.009476,
+      "lng": 135.7690557,
+      "category": "MOVE",
+      "name": "河原町三条",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/4893246691"
+    },
+    {
+      "id": "node/4893246692",
+      "lat": 35.0078992,
+      "lng": 135.7691405,
+      "category": "MOVE",
+      "name": "河原町三条",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/4893246692"
+    },
+    {
+      "id": "node/4893246693",
+      "lat": 35.0078812,
+      "lng": 135.7689645,
+      "category": "MOVE",
+      "name": "河原町三条",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/4893246693"
+    },
+    {
+      "id": "node/5292649578",
+      "lat": 35.0170425,
+      "lng": 135.7674645,
+      "category": "PUBLIC",
+      "name": "名称未登録",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/node/5292649578"
+    },
+    {
+      "id": "node/6139859848",
+      "lat": 35.0087161,
+      "lng": 135.7707587,
+      "category": "PUBLIC",
+      "name": "名称未登録",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/node/6139859848"
+    },
+    {
+      "id": "node/6883622226",
+      "lat": 35.0090195,
+      "lng": 135.7723334,
+      "category": "MOVE",
+      "name": "三条",
+      "address": "",
+      "kind": "station",
+      "source": "https://www.openstreetmap.org/node/6883622226"
+    },
+    {
+      "id": "node/7783352311",
+      "lat": 35.0108986,
+      "lng": 135.7688702,
+      "category": "MOVE",
+      "name": "京都市役所前",
+      "address": "",
+      "kind": "station",
+      "source": "https://www.openstreetmap.org/node/7783352311"
+    },
+    {
+      "id": "node/8595403775",
+      "lat": 35.0101689,
+      "lng": 135.7688697,
+      "category": "MOVE",
+      "name": "河原町三条",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/8595403775"
+    },
+    {
+      "id": "node/8595403776",
+      "lat": 35.0098308,
+      "lng": 135.7690462,
+      "category": "MOVE",
+      "name": "河原町御池",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/8595403776"
+    },
+    {
+      "id": "node/8910733931",
+      "lat": 35.0090765,
+      "lng": 135.773126,
+      "category": "MOVE",
+      "name": "三条京阪",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/8910733931"
+    },
+    {
+      "id": "node/8910733932",
+      "lat": 35.0090514,
+      "lng": 135.7727953,
+      "category": "MOVE",
+      "name": "三条京阪前",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/8910733932"
+    },
+    {
+      "id": "node/8910733933",
+      "lat": 35.0097097,
+      "lng": 135.7722051,
+      "category": "MOVE",
+      "name": "三条京阪前",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/8910733933"
+    },
+    {
+      "id": "node/8950339310",
+      "lat": 35.0109254,
+      "lng": 135.7633556,
+      "category": "MOVE",
+      "name": "堺町御池",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/8950339310"
+    },
+    {
+      "id": "node/8950339311",
+      "lat": 35.0106823,
+      "lng": 135.7634204,
+      "category": "MOVE",
+      "name": "堺町御池",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/8950339311"
+    },
+    {
+      "id": "node/8950339312",
+      "lat": 35.0109463,
+      "lng": 135.766264,
+      "category": "MOVE",
+      "name": "京都市役所前",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/8950339312"
+    },
+    {
+      "id": "node/8950339313",
+      "lat": 35.0109552,
+      "lng": 135.7668786,
+      "category": "MOVE",
+      "name": "京都市役所前",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/8950339313"
+    },
+    {
+      "id": "node/9012904139",
+      "lat": 35.0135623,
+      "lng": 135.7731665,
+      "category": "MOVE",
+      "name": "川端二条",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9012904139"
+    },
+    {
+      "id": "node/9012904140",
+      "lat": 35.0134546,
+      "lng": 135.7731504,
+      "category": "MOVE",
+      "name": "川端二条",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9012904140"
+    },
+    {
+      "id": "node/9191972583",
+      "lat": 35.0082365,
+      "lng": 135.7724727,
+      "category": "MOVE",
+      "name": "三条京阪",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9191972583"
+    },
+    {
+      "id": "node/9395727024",
+      "lat": 35.0087668,
+      "lng": 135.7724629,
+      "category": "MOVE",
+      "name": "三条京阪前",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9395727024"
+    },
+    {
+      "id": "node/9395727025",
+      "lat": 35.0084108,
+      "lng": 135.772471,
+      "category": "MOVE",
+      "name": "三条京阪",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9395727025"
+    },
+    {
+      "id": "node/9412217738",
+      "lat": 35.0134878,
+      "lng": 135.7723013,
+      "category": "MOVE",
+      "name": "川端二条",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9412217738"
+    },
+    {
+      "id": "node/9412217739",
+      "lat": 35.012203,
+      "lng": 135.772466,
+      "category": "MOVE",
+      "name": "川端二条",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9412217739"
+    },
+    {
+      "id": "node/10972423609",
+      "lat": 35.0145833,
+      "lng": 135.7700837,
+      "category": "PUBLIC",
+      "name": "銅駝会館",
+      "address": "",
+      "kind": "community_centre",
+      "source": "https://www.openstreetmap.org/node/10972423609"
+    },
+    {
+      "id": "node/11810261523",
+      "lat": 35.0107716,
+      "lng": 135.7681918,
+      "category": "MOVE",
+      "name": "河原町御池",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/11810261523"
+    },
+    {
+      "id": "node/11810261524",
+      "lat": 35.0122752,
+      "lng": 135.7688787,
+      "category": "MOVE",
+      "name": "河原町御池",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/11810261524"
+    },
+    {
+      "id": "node/12404341392",
+      "lat": 35.0069892,
+      "lng": 135.7693881,
+      "category": "PUBLIC",
+      "name": "名称未登録",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/node/12404341392"
+    },
+    {
+      "id": "node/12768022325",
+      "lat": 35.0095678,
+      "lng": 135.7673666,
+      "category": "PUBLIC",
+      "name": "京都市 寺町姉小路東公衆便所",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/node/12768022325"
+    },
+    {
+      "id": "node/13825885546",
+      "lat": 35.0077445,
+      "lng": 135.768768,
+      "category": "PUBLIC",
+      "name": "名称未登録",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/node/13825885546"
+    },
+    {
+      "id": "node/14058779725",
+      "lat": 35.009905,
+      "lng": 135.7722135,
+      "category": "MOVE",
+      "name": "京都三条京阪前",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/14058779725"
+    },
+    {
+      "id": "node/14195921684",
+      "lat": 35.0116906,
+      "lng": 135.7690852,
+      "category": "MOVE",
+      "name": "京都市役所前",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/14195921684"
+    },
+    {
+      "id": "way/205863060",
+      "lat": 35.0116877,
+      "lng": 135.7673828,
+      "category": "PUBLIC",
+      "name": "京都市役所西庁舎",
+      "address": "",
+      "kind": "townhall",
+      "source": "https://www.openstreetmap.org/way/205863060"
+    },
+    {
+      "id": "way/440395223",
+      "lat": 35.014088,
+      "lng": 135.7641946,
+      "category": "PUBLIC",
+      "name": "富小路殿公園",
+      "address": "",
+      "kind": "park",
+      "source": "https://www.openstreetmap.org/way/440395223"
+    },
+    {
+      "id": "way/440395225",
+      "lat": 35.0141588,
+      "lng": 135.7643605,
+      "category": "PUBLIC",
+      "name": "名称未登録",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/way/440395225"
+    },
+    {
+      "id": "way/476102358",
+      "lat": 35.0112453,
+      "lng": 135.7659653,
+      "category": "MEDICAL",
+      "name": "林整形外科",
+      "address": "",
+      "kind": "hospital",
+      "source": "https://www.openstreetmap.org/way/476102358"
+    },
+    {
+      "id": "way/547209766",
+      "lat": 35.0072904,
+      "lng": 135.7672395,
+      "category": "PUBLIC",
+      "name": "新京極六角公園",
+      "address": "",
+      "kind": "park",
+      "source": "https://www.openstreetmap.org/way/547209766"
+    },
+    {
+      "id": "way/549174076",
+      "lat": 35.0072307,
+      "lng": 135.7654789,
+      "category": "PUBLIC",
+      "name": "生祥児童公園",
+      "address": "",
+      "kind": "park",
+      "source": "https://www.openstreetmap.org/way/549174076"
+    },
+    {
+      "id": "way/549174082",
+      "lat": 35.007176,
+      "lng": 135.765378,
+      "category": "PUBLIC",
+      "name": "名称未登録",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/way/549174082"
+    },
+    {
+      "id": "way/556679105",
+      "lat": 35.0159306,
+      "lng": 135.7721213,
+      "category": "PUBLIC",
+      "name": "川端公園",
+      "address": "",
+      "kind": "park",
+      "source": "https://www.openstreetmap.org/way/556679105"
+    },
+    {
+      "id": "way/558944979",
+      "lat": 35.0188152,
+      "lng": 135.7714602,
+      "category": "PUBLIC",
+      "name": "鴨川公園",
+      "address": "",
+      "kind": "park",
+      "source": "https://www.openstreetmap.org/way/558944979"
+    },
+    {
+      "id": "way/572104312",
+      "lat": 35.0143791,
+      "lng": 135.7700019,
+      "category": "PUBLIC",
+      "name": "銅駝公園",
+      "address": "",
+      "kind": "park",
+      "source": "https://www.openstreetmap.org/way/572104312"
+    },
+    {
+      "id": "way/598284777",
+      "lat": 35.0160914,
+      "lng": 135.7675069,
+      "category": "PUBLIC",
+      "name": "名称未登録",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/way/598284777"
+    },
+    {
+      "id": "way/862871838",
+      "lat": 35.0071972,
+      "lng": 135.7677653,
+      "category": "PUBLIC",
+      "name": "名称未登録",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/way/862871838"
+    },
+    {
+      "id": "way/879768749",
+      "lat": 35.0125438,
+      "lng": 135.7678213,
+      "category": "PUBLIC",
+      "name": "京都市役所分庁舎",
+      "address": "京都府 京都市 中京区",
+      "kind": "townhall",
+      "source": "https://www.openstreetmap.org/way/879768749"
+    },
+    {
+      "id": "relation/11966281",
+      "lat": 35.012446,
+      "lng": 135.7683766,
+      "category": "SAFE",
+      "name": "京都市消防局本部庁舎",
+      "address": "京都府 京都市 中京区 2",
+      "kind": "fire_station",
+      "source": "https://www.openstreetmap.org/relation/11966281"
+    },
+    {
+      "id": "relation/11966283",
+      "lat": 35.0116867,
+      "lng": 135.7681207,
+      "category": "PUBLIC",
+      "name": "京都市役所本庁舎",
+      "address": "京都府 京都市 中京区",
+      "kind": "townhall",
+      "source": "https://www.openstreetmap.org/relation/11966283"
+    },
+    {
+      "id": "relation/11966284",
+      "lat": 35.0121198,
+      "lng": 135.7680587,
+      "category": "PUBLIC",
+      "name": "京都市役所",
+      "address": "京都府 京都市 中京区",
+      "kind": "townhall",
+      "source": "https://www.openstreetmap.org/relation/11966284"
+    }
+  ]
+}

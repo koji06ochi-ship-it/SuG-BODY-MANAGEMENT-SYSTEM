@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5786-22500-20261016",
+  "lat": 34.718116327991396,
+  "lng": 135.005606414001,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/ee6ee520d8770d92",
+      "lat": 34.7197639667788,
+      "lng": 135.005922083976,
+      "category": "SAFE",
+      "name": "神戸市立　美賀多台小学校",
+      "address": "神戸市西区美賀多台6丁目1番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区美賀多台6丁目1番地",
+      "district": "西区",
+      "sourceRow": 562,
+      "sourceRows": [
+        562
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/cefbb90f50f1fbd1",
+      "lat": 34.7171713814432,
+      "lng": 135.005245745807,
+      "category": "SAFE",
+      "name": "神戸市立　美賀多台児童館",
+      "address": "神戸市西区美賀多台3丁目13番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区美賀多台3丁目13番",
+      "district": "西区",
+      "sourceRow": 688,
+      "sourceRows": [
+        688
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/49f79a398cfdd169",
+      "lat": 34.7174136357522,
+      "lng": 135.00565141222,
+      "category": "SAFE",
+      "name": "美賀多台地域福祉センター",
+      "address": "神戸市西区美賀多台3-13-4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区美賀多台3-13-4",
+      "district": "西区",
+      "sourceRow": 725,
+      "sourceRows": [
+        725
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5777-22527-20261016",
+  "lat": 34.66553519403892,
+  "lng": 135.1655376011025,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/536581180fc7f802",
+      "lat": 34.665138055493,
+      "lng": 135.166099007224,
+      "category": "SAFE",
+      "name": "神戸市立　明親小学校",
+      "address": "神戸市兵庫区須佐野通4丁目1-19",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区須佐野通4丁目1-19",
+      "district": "兵庫区",
+      "sourceRow": 2059,
+      "sourceRows": [
+        2059
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7e01c098364b69ad",
+      "lat": 34.6644189189752,
+      "lng": 135.166185492335,
+      "category": "SAFE",
+      "name": "神戸市立　松原児童館",
+      "address": "神戸市兵庫区松原通4丁目2－27",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区松原通4丁目2－27",
+      "district": "兵庫区",
+      "sourceRow": 2083,
+      "sourceRows": [
+        2083
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8ee7ea5e84054776",
+      "lat": 34.6648083535207,
+      "lng": 135.166344077073,
+      "category": "SAFE",
+      "name": "明親地域福祉センター",
+      "address": "神戸市兵庫区須佐野通4－1－42",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区須佐野通4－1－42",
+      "district": "兵庫区",
+      "sourceRow": 2091,
+      "sourceRows": [
+        2091
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/30ba19def514903d",
+      "lat": 34.6672134586347,
+      "lng": 135.164205768824,
+      "category": "SAFE",
+      "name": "コープこうべ　コープ兵庫",
+      "address": "神戸市兵庫区駅南通5丁目1－2－100",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区駅南通5丁目1－2－100",
+      "district": "兵庫区",
+      "sourceRow": 2095,
+      "sourceRows": [
+        2095
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/de31a61afcab46f4",
+      "lat": 34.6672134586347,
+      "lng": 135.164205768824,
+      "category": "SAFE",
+      "name": "健康ライフプラザ",
+      "address": "神戸市兵庫区駅南通5丁目1－2－300",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区駅南通5丁目1－2－300",
+      "district": "兵庫区",
+      "sourceRow": 2098,
+      "sourceRows": [
+        2098
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bd4f413790aebaea",
+      "lat": 34.6644189189752,
+      "lng": 135.166185492335,
+      "category": "SAFE",
+      "name": "神戸市立　松原保育所",
+      "address": "神戸市兵庫区松原通4丁目2－27",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区松原通4丁目2－27",
+      "district": "兵庫区",
+      "sourceRow": 2117,
+      "sourceRows": [
+        2117
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

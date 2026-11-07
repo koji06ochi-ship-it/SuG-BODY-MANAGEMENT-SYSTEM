@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5786-22503-20261016",
+  "lat": 34.71935355720205,
+  "lng": 135.01998223313902,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/e6f8e8743a6e4db3",
+      "lat": 34.7183823226283,
+      "lng": 135.019512400053,
+      "category": "SAFE",
+      "name": "西神イトマンスイミングスクール西神校",
+      "address": "神戸市西区糀台5丁目2-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区糀台5丁目2-1",
+      "district": "西区",
+      "sourceRow": 489,
+      "sourceRows": [
+        489
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3ea8124ab0bf8170",
+      "lat": 34.7184027781271,
+      "lng": 135.018781076882,
+      "category": "SAFE",
+      "name": "西区文化センター",
+      "address": "神戸市西区糀台5丁目6番地の1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区糀台5丁目6番地の1",
+      "district": "西区",
+      "sourceRow": 494,
+      "sourceRows": [
+        494
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a389f8afae8b3fb5",
+      "lat": 34.7194127895325,
+      "lng": 135.020007002432,
+      "category": "SAFE",
+      "name": "株式会社こうべ未来都市機構　プレンティ事業部",
+      "address": "神戸市西区糀台5丁目2-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区糀台5丁目2-3",
+      "district": "西区",
+      "sourceRow": 499,
+      "sourceRows": [
+        499
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/01ef49c8fe69bbbc",
+      "lat": 34.7184027781271,
+      "lng": 135.018781076882,
+      "category": "SAFE",
+      "name": "神戸市立　西図書館",
+      "address": "神戸市西区糀台5丁目6-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区糀台5丁目6-1",
+      "district": "西区",
+      "sourceRow": 500,
+      "sourceRows": [
+        500
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ce5a412681839b0b",
+      "lat": 34.7197596378337,
+      "lng": 135.023510638137,
+      "category": "SAFE",
+      "name": "神戸市立　糀台小学校",
+      "address": "神戸市西区糀台3-32-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区糀台3-32-1",
+      "district": "西区",
+      "sourceRow": 519,
+      "sourceRows": [
+        519
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4d4113e8b7dee2d5",
+      "lat": 34.7184027781271,
+      "lng": 135.018781076882,
+      "category": "SAFE",
+      "name": "神戸信用金庫　西神ニュータウン支店",
+      "address": "神戸市西区糀台5丁目6-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区糀台5丁目6-1",
+      "district": "西区",
+      "sourceRow": 565,
+      "sourceRows": [
+        565
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/908735a97ff092ad",
+      "lat": 34.7202980706242,
+      "lng": 135.018199344455,
+      "category": "SAFE",
+      "name": "西神オリエンタルホテル",
+      "address": "神戸市西区糀台5丁目6番3号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区糀台5丁目6番3号",
+      "district": "西区",
+      "sourceRow": 692,
+      "sourceRows": [
+        692
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/552fbc48b0542d94",
+      "lat": 34.7188632138981,
+      "lng": 135.023862221134,
+      "category": "SAFE",
+      "name": "糀台地域福祉センター",
+      "address": "神戸市西区糀台3-32-6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区糀台3-32-6",
+      "district": "西区",
+      "sourceRow": 722,
+      "sourceRows": [
+        722
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/353f8c577dbda763",
+      "lat": 34.7200779391226,
+      "lng": 135.019286952464,
+      "category": "SAFE",
+      "name": "ダイエー西神中央店",
+      "address": "神戸市西区糀台5-3-4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区糀台5-3-4",
+      "district": "西区",
+      "sourceRow": 783,
+      "sourceRows": [
+        783
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/35a4cb5ac60fe697",
+      "lat": 34.7200779391226,
+      "lng": 135.019286952464,
+      "category": "SAFE",
+      "name": "神戸市立西神中央駅前東自転車駐車場",
+      "address": "神戸市西区糀台5丁目3-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区糀台5丁目3-3",
+      "district": "西区",
+      "sourceRow": 786,
+      "sourceRows": [
+        786
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4a05c432f3e090af",
+      "lat": 34.7208088820793,
+      "lng": 135.019795822744,
+      "category": "SAFE",
+      "name": "神戸市西区役所",
+      "address": "神戸市西区糀台5丁目4番地1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区糀台5丁目4番地1",
+      "district": "西区",
+      "sourceRow": 799,
+      "sourceRows": [
+        799
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

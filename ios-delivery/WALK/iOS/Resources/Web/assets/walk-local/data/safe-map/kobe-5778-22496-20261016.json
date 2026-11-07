@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5778-22496-20261016",
+  "lat": 34.67058835945575,
+  "lng": 134.9789794322223,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/d1300b6fe81c168b",
+      "lat": 34.673529336455,
+      "lng": 134.981382207881,
+      "category": "SAFE",
+      "name": "神戸信用金庫 玉津支店",
+      "address": "神戸市西区王塚台7-85",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区王塚台7-85",
+      "district": "西区",
+      "sourceRow": 585,
+      "sourceRows": [
+        585
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/edda1128041aa698",
+      "lat": 34.6696848097854,
+      "lng": 134.978607430232,
+      "category": "SAFE",
+      "name": "国立障害者リハビリテーションセンター自立支援局神戸視力障害センター",
+      "address": "神戸市西区曙町1070",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区曙町1070",
+      "district": "西区",
+      "sourceRow": 611,
+      "sourceRows": [
+        611
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/10629075c6a6ec89",
+      "lat": 34.6720215650662,
+      "lng": 134.976496323392,
+      "category": "SAFE",
+      "name": "総合リハビリテーションセンター　県立障害者スポーツ交流館",
+      "address": "神戸市西区曙町1070",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区曙町1070",
+      "district": "西区",
+      "sourceRow": 615,
+      "sourceRows": [
+        615
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4a32fb2a8e2f0d1f",
+      "lat": 34.6708631968136,
+      "lng": 134.978533149498,
+      "category": "SAFE",
+      "name": "総合リハビリテーションセンター　自立生活訓練センター",
+      "address": "神戸市西区曙町1070",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区曙町1070",
+      "district": "西区",
+      "sourceRow": 616,
+      "sourceRows": [
+        616
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e16a5b31d2e506ff",
+      "lat": 34.6706209084081,
+      "lng": 134.976370015996,
+      "category": "SAFE",
+      "name": "兵庫県立リハビリテーション中央病院",
+      "address": "神戸市西区曙町1070",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区曙町1070",
+      "district": "西区",
+      "sourceRow": 617,
+      "sourceRows": [
+        617
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c44297ce3bc4f95e",
+      "lat": 34.6704538534997,
+      "lng": 134.977516321491,
+      "category": "SAFE",
+      "name": "総合リハビリテーションセンター　あけぼのの家",
+      "address": "神戸市西区曙町1070",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区曙町1070",
+      "district": "西区",
+      "sourceRow": 619,
+      "sourceRows": [
+        619
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/43e90ce8d4ce309f",
+      "lat": 34.6706244871218,
+      "lng": 134.977950698766,
+      "category": "SAFE",
+      "name": "兵庫県立障害者高等技術専門学院",
+      "address": "神戸市西区曙町1070",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区曙町1070",
+      "district": "西区",
+      "sourceRow": 762,
+      "sourceRows": [
+        762
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5f355f8f05da393a",
+      "lat": 34.6702458494499,
+      "lng": 134.981293363153,
+      "category": "SAFE",
+      "name": "西脇耳鼻咽喉科医院",
+      "address": "神戸市西区持子2丁目12",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区持子2丁目12",
+      "district": "西区",
+      "sourceRow": 776,
+      "sourceRows": [
+        776
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/01ac6b433ce46918",
+      "lat": 34.66868712712,
+      "lng": 134.980704514235,
+      "category": "SAFE",
+      "name": "ネッツトヨタ株式会社　明石店",
+      "address": "神戸市西区持子2丁目105",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区持子2丁目105",
+      "district": "西区",
+      "sourceRow": 779,
+      "sourceRows": [
+        779
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/eaecec4eb4bc06bd",
+      "lat": 34.6691524608378,
+      "lng": 134.980940297579,
+      "category": "SAFE",
+      "name": "KobeBMW　明石サービスセンター",
+      "address": "神戸市西区持子2丁目98",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区持子2丁目98",
+      "district": "西区",
+      "sourceRow": 781,
+      "sourceRows": [
+        781
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

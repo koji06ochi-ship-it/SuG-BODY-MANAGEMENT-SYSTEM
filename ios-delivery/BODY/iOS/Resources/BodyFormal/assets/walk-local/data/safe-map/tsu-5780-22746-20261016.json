@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5780-22746",
+  "lat": 34.684186,
+  "lng": 136.4780765,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.684153,
+      "lng": 136.478775,
+      "category": "SAFE",
+      "name": "久居北口市民館",
+      "address": "津市久居北口町2709-6",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "久居北口町2709-6",
+      "district": "久居",
+      "sourceRow": 114,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/a9236e6f8d2abf46",
+      "sourceRows": [
+        114
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.684219,
+      "lng": 136.477378,
+      "category": "SAFE",
+      "name": "久居児童センター",
+      "address": "津市久居北口町862-5",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "久居北口町862-5",
+      "district": "久居",
+      "sourceRow": 117,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/0419e9000c4cee55",
+      "sourceRows": [
+        117
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

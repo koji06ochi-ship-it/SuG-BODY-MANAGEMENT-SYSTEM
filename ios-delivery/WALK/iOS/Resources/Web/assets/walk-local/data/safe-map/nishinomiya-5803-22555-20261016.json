@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5803-22555-20261016",
+  "lat": 34.81857995,
+  "lng": 135.33085060000002,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/1890e92b4c30d8bb",
+      "lat": 34.81824829,
+      "lng": 135.330535,
+      "category": "SAFE",
+      "name": "生瀬小学校",
+      "address": "兵庫県西宮市生瀬町２丁目２６－２４",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市生瀬町２丁目２６－２４",
+      "district": "西宮市",
+      "sourceRow": 41,
+      "sourceRows": [
+        41
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/2d42c889d1adf413",
+      "lat": 34.81824829,
+      "lng": 135.330535,
+      "category": "SAFE",
+      "name": "生瀬幼稚園",
+      "address": "兵庫県西宮市生瀬町２丁目２６－２４",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市生瀬町２丁目２６－２４",
+      "district": "西宮市",
+      "sourceRow": 66,
+      "sourceRows": [
+        66
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/da3a305dc8a726f8",
+      "lat": 34.81841392,
+      "lng": 135.3303671,
+      "category": "SAFE",
+      "name": "生瀬市民館",
+      "address": "兵庫県西宮市生瀬町２丁目２０－２２",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市生瀬町２丁目２０－２２",
+      "district": "西宮市",
+      "sourceRow": 257,
+      "sourceRows": [
+        257
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/bd1afc7537dae858",
+      "lat": 34.81841209,
+      "lng": 135.3319291,
+      "category": "SAFE",
+      "name": "セルヴィオ　５番館",
+      "address": "兵庫県西宮市生瀬武庫川町１－５",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市生瀬武庫川町１－５",
+      "district": "西宮市",
+      "sourceRow": 726,
+      "sourceRows": [
+        726
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/326d3956911dc8e4",
+      "lat": 34.81957716,
+      "lng": 135.3308868,
+      "category": "SAFE",
+      "name": "浄土真宗親鸞会　関西西宮会館",
+      "address": "兵庫県西宮市生瀬町１丁目２０－１０",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市生瀬町１丁目２０－１０",
+      "district": "西宮市",
+      "sourceRow": 734,
+      "sourceRows": [
+        734
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

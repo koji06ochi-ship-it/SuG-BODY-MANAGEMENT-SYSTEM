@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5978-23276",
+  "lat": 35.87101565888889,
+  "lng": 139.65959553333334,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.8721095,
+      "lng": 139.6602933,
+      "category": "SAFE",
+      "name": "駒場保育園",
+      "address": "さいたま市駒場1-27-7",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "駒場1-27-7",
+      "district": "浦和区",
+      "sourceRow": 391,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/4ff5f44a53b02ada",
+      "sourceRows": [
+        391
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.87208155,
+      "lng": 139.6599193,
+      "category": "SAFE",
+      "name": "さくら草学園",
+      "address": "さいたま市駒場1-28-10",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "駒場1-28-10",
+      "district": "浦和区",
+      "sourceRow": 392,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/309e77bcf7dc01a6",
+      "sourceRows": [
+        392
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.87262541,
+      "lng": 139.6619239,
+      "category": "SAFE",
+      "name": "浦和駒場体育館",
+      "address": "さいたま市駒場2-5-6",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "駒場2-5-6",
+      "district": "浦和区",
+      "sourceRow": 399,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/1c839b695d7c2afb",
+      "sourceRows": [
+        399,
+        400,
+        401
+      ],
+      "duplicateSourceEntries": 3
+    },
+    {
+      "lat": 35.86926597,
+      "lng": 139.6579869,
+      "category": "SAFE",
+      "name": "浦和総合運動場",
+      "address": "さいたま市元町1-29-10",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "元町1-29-10",
+      "district": "浦和区",
+      "sourceRow": 454,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/4ebdcfa1a1fddca5",
+      "sourceRows": [
+        454,
+        455,
+        456
+      ],
+      "duplicateSourceEntries": 3
+    },
+    {
+      "lat": 35.86927574,
+      "lng": 139.6564148,
+      "category": "SAFE",
+      "name": "浦和総合運動場",
+      "address": "さいたま市元町1-29-10",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "元町1-29-10",
+      "district": "浦和区",
+      "sourceRow": 457,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/7c48e08c3370cdd0",
+      "sourceRows": [
+        457
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

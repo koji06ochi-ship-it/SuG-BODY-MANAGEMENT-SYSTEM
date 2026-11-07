@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5786-22523-20261016",
+  "lat": 34.7205353494912,
+  "lng": 135.14056268274268,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/8f17cd23573e8c34",
+      "lat": 34.7184585150686,
+      "lng": 135.13953346,
+      "category": "SAFE",
+      "name": "神戸市立　君影保育所",
+      "address": "神戸市北区君影町5丁目1番17号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区君影町5丁目1番17号",
+      "district": "北区",
+      "sourceRow": 2326,
+      "sourceRows": [
+        2326
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/38152aad26d5c655",
+      "lat": 34.7212085826229,
+      "lng": 135.141741723287,
+      "category": "SAFE",
+      "name": "井尻歯科クリニック",
+      "address": "神戸市北区鈴蘭台南町5丁目3-23浜岡南町ビル101号室",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鈴蘭台南町5丁目3-23浜岡南町ビル101号室",
+      "district": "北区",
+      "sourceRow": 2529,
+      "sourceRows": [
+        2529
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/64eff063d90ab864",
+      "lat": 34.7219389507821,
+      "lng": 135.140412864941,
+      "category": "SAFE",
+      "name": "まつだクリニック",
+      "address": "神戸市北区鈴蘭台南町5丁目2-22",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鈴蘭台南町5丁目2-22",
+      "district": "北区",
+      "sourceRow": 2564,
+      "sourceRows": [
+        2564
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

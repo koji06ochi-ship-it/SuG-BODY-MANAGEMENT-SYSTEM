@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5787-22539-20261016",
+  "lat": 34.725347170460395,
+  "lng": 135.2366222301199,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/49ed76d1cdfc284b",
+      "lat": 34.7264009820032,
+      "lng": 135.235416808262,
+      "category": "SAFE",
+      "name": "神戸大学　保健管理センター",
+      "address": "神戸市灘区六甲台町1番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区六甲台町1番1号",
+      "district": "灘区",
+      "sourceRow": 1761,
+      "sourceRows": [
+        1761
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/583b9ae760b5c87b",
+      "lat": 34.7249886804736,
+      "lng": 135.235265201071,
+      "category": "SAFE",
+      "name": "神戸大学  理学部　B棟",
+      "address": "神戸市灘区六甲台町1番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区六甲台町1番1号",
+      "district": "灘区",
+      "sourceRow": 1792,
+      "sourceRows": [
+        1792
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ab10ef587e7e2148",
+      "lat": 34.726802491205,
+      "lng": 135.237223461766,
+      "category": "SAFE",
+      "name": "神戸大学　工学部（工学研究棟 門衛所）",
+      "address": "神戸市灘区六甲台町1番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区六甲台町1番1号",
+      "district": "灘区",
+      "sourceRow": 1793,
+      "sourceRows": [
+        1793
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6641fb3875126419",
+      "lat": 34.7275756841923,
+      "lng": 135.238293569759,
+      "category": "SAFE",
+      "name": "神戸大学　都市安全研究センター",
+      "address": "神戸市灘区六甲台町1番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区六甲台町1番1号",
+      "district": "灘区",
+      "sourceRow": 1794,
+      "sourceRows": [
+        1794
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8123cda24c1c91a6",
+      "lat": 34.7233422787706,
+      "lng": 135.239139403909,
+      "category": "SAFE",
+      "name": "神戸市立　高羽小学校",
+      "address": "神戸市灘区高羽町3丁目11番11号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区高羽町3丁目11番11号",
+      "district": "灘区",
+      "sourceRow": 1796,
+      "sourceRows": [
+        1796
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/89a5cd5907f4e91f",
+      "lat": 34.7244772216465,
+      "lng": 135.235887970727,
+      "category": "SAFE",
+      "name": "神戸大学　百年記念館",
+      "address": "神戸市灘区六甲台町1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区六甲台町1-1",
+      "district": "灘区",
+      "sourceRow": 1943,
+      "sourceRows": [
+        1943
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7812cc8bf22f39a8",
+      "lat": 34.724641755811,
+      "lng": 135.234296641549,
+      "category": "SAFE",
+      "name": "神戸大学　人文学研究科棟A棟",
+      "address": "神戸市灘区六甲台町1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区六甲台町1-1",
+      "district": "灘区",
+      "sourceRow": 1944,
+      "sourceRows": [
+        1944
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d7f9f7753e954b76",
+      "lat": 34.7260760000093,
+      "lng": 135.234179227089,
+      "category": "SAFE",
+      "name": "神戸大学　自然科学総合研究棟1号館",
+      "address": "神戸市灘区六甲台町1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区六甲台町1-1",
+      "district": "灘区",
+      "sourceRow": 1948,
+      "sourceRows": [
+        1948
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/cc0714e85bd1ae65",
+      "lat": 34.723819440032,
+      "lng": 135.239897786947,
+      "category": "SAFE",
+      "name": "コープこうべ　コープミニ高羽",
+      "address": "神戸市灘区高羽町3丁目14番10号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区高羽町3丁目14番10号",
+      "district": "灘区",
+      "sourceRow": 1971,
+      "sourceRows": [
+        1971
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

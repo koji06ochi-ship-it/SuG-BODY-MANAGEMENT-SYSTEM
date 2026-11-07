@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5797-22527-20261016",
+  "lat": 34.7840336400668,
+  "lng": 135.162534748262,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/67582e28703ea14a",
+      "lat": 34.7840336400668,
+      "lng": 135.162534748262,
+      "category": "SAFE",
+      "name": "兵庫カンツリー倶楽部",
+      "address": "神戸市北区山田町原野鹿見山",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町原野鹿見山",
+      "district": "北区",
+      "sourceRow": 2226,
+      "sourceRows": [
+        2226
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5804-22550-20261016",
+  "lat": 34.82823141,
+  "lng": 135.30329475,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/732f94d3911959b5",
+      "lat": 34.82920594,
+      "lng": 135.300738,
+      "category": "SAFE",
+      "name": "兵庫六甲農業協同組合名塩支店",
+      "address": "兵庫県西宮市名塩１丁目２５－１０",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市名塩１丁目２５－１０",
+      "district": "西宮市",
+      "sourceRow": 703,
+      "sourceRows": [
+        703
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/1fc0acf1fbdc684f",
+      "lat": 34.82725688,
+      "lng": 135.3058515,
+      "category": "SAFE",
+      "name": "ファミリー葬　西宮名塩",
+      "address": "兵庫県西宮市塩瀬町名塩2204番地",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市塩瀬町名塩2204番地",
+      "district": "西宮市",
+      "sourceRow": 730,
+      "sourceRows": [
+        730
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

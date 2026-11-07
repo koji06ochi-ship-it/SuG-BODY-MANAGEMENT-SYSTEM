@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5773-22724",
+  "lat": 34.642767,
+  "lng": 136.348167,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.642986,
+      "lng": 136.348459,
+      "category": "SAFE",
+      "name": "川口公民館",
+      "address": "津市白山町川口1968",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "白山町川口1968",
+      "district": "白山",
+      "sourceRow": 258,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/66e4e64db0e3fd60",
+      "sourceRows": [
+        258
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.642548,
+      "lng": 136.347875,
+      "category": "SAFE",
+      "name": "川口小学校",
+      "address": "津市白山町川口1991",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "白山町川口1991",
+      "district": "白山",
+      "sourceRow": 263,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/be9c608c20428bb5",
+      "sourceRows": [
+        263
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

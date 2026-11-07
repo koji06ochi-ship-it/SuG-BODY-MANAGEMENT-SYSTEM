@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "otsu-5828-22648-20261016",
+  "lat": 34.9721772925,
+  "lng": 135.89274805000002,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "大津市",
+  "source": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+  "sourceUrl": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/999caef4-7e90-4fd2-98eb-fd94368e9a2f/resource/3e5b513e-de51-4459-af70-6fda94e1bed3/download/od405902026022700200.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2025-03-12",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "7899826cf95c365a07c87b3ad05aa2aa7d4adeb440a2c57269c84f98c1d85ea8",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/otsu/aed/a55fc0d5bc99e258",
+      "lat": 34.97035278,
+      "lng": 135.8926519,
+      "category": "SAFE",
+      "name": "東レ株式会社　滋賀事業場",
+      "address": "大津市園山一丁目1番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市園山一丁目1番1号",
+      "district": "大津市",
+      "sourceRow": 284,
+      "sourceRows": [
+        284
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/829e9d68342852b0",
+      "lat": 34.97202833,
+      "lng": 135.8923586,
+      "category": "SAFE",
+      "name": "東レ株式会社　滋賀事業場",
+      "address": "大津市園山一丁目1番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市園山一丁目1番1号",
+      "district": "大津市",
+      "sourceRow": 285,
+      "sourceRows": [
+        285
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/f4839e1254a8a923",
+      "lat": 34.97284639,
+      "lng": 135.8939453,
+      "category": "SAFE",
+      "name": "東レ株式会社　滋賀事業場",
+      "address": "大津市園山一丁目1番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市園山一丁目1番1号",
+      "district": "大津市",
+      "sourceRow": 286,
+      "sourceRows": [
+        286
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/4ce53e6191caefcc",
+      "lat": 34.97348167,
+      "lng": 135.8920364,
+      "category": "SAFE",
+      "name": "東レ株式会社　滋賀事業所",
+      "address": "大津市園山二丁目8番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市園山二丁目8番1号",
+      "district": "大津市",
+      "sourceRow": 301,
+      "sourceRows": [
+        301
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

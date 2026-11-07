@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5790-22522-20261016",
+  "lat": 34.7451927148295,
+  "lng": 135.137045298718,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/17c6515eeda41acd",
+      "lat": 34.7451927148295,
+      "lng": 135.137045298718,
+      "category": "SAFE",
+      "name": "大原山公園テニスコート・駐車場",
+      "address": "神戸市北区大原2丁目31",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区大原2丁目31",
+      "district": "北区",
+      "sourceRow": 2408,
+      "sourceRows": [
+        2408
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

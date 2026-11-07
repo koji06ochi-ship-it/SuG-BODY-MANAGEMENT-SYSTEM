@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5777-22528-20261016",
+  "lat": 34.66501576018758,
+  "lng": 135.1701618533466,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/57759406f5388eea",
+      "lat": 34.6643271170341,
+      "lng": 135.169763608922,
+      "category": "SAFE",
+      "name": "神戸市立　須佐野中学校",
+      "address": "神戸市兵庫区松原通1-1-44",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区松原通1-1-44",
+      "district": "兵庫区",
+      "sourceRow": 2038,
+      "sourceRows": [
+        2038
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/edb36dca430b0088",
+      "lat": 34.6650633854191,
+      "lng": 135.169581928053,
+      "category": "SAFE",
+      "name": "㈱東販神戸営業所",
+      "address": "神戸市兵庫区須佐野通1-2-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区須佐野通1-2-3",
+      "district": "兵庫区",
+      "sourceRow": 2047,
+      "sourceRows": [
+        2047
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0fce271bd3722d67",
+      "lat": 34.6658018227631,
+      "lng": 135.16805386889,
+      "category": "SAFE",
+      "name": "神戸市立　小河保育所",
+      "address": "神戸市兵庫区小河通3丁目2-14",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区小河通3丁目2-14",
+      "district": "兵庫区",
+      "sourceRow": 2051,
+      "sourceRows": [
+        2051
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/280e70e7a7be62ff",
+      "lat": 34.6671703114359,
+      "lng": 135.169495820919,
+      "category": "SAFE",
+      "name": "関西電力　神戸電力所",
+      "address": "神戸市兵庫区入江通1丁目2－15",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区入江通1丁目2－15",
+      "district": "兵庫区",
+      "sourceRow": 2108,
+      "sourceRows": [
+        2108
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/272a2828001fd837",
+      "lat": 34.6627161642857,
+      "lng": 135.173914039949,
+      "category": "SAFE",
+      "name": "キャナルビスタ　アーバンコンフォート",
+      "address": "神戸市兵庫区出在家町2丁目6番30号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区出在家町2丁目6番30号",
+      "district": "兵庫区",
+      "sourceRow": 2110,
+      "sourceRows": [
+        2110
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

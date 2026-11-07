@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5785-22559-20261016",
+  "lat": 34.711548162,
+  "lng": 135.35756711999997,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/c72215ad43047632",
+      "lat": 34.71095955,
+      "lng": 135.3581514,
+      "category": "SAFE",
+      "name": "浜甲子園保育所",
+      "address": "兵庫県西宮市枝川町１７－４３",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市枝川町１７－４３",
+      "district": "西宮市",
+      "sourceRow": 90,
+      "sourceRows": [
+        90
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/f3fb7a89ea8dd9aa",
+      "lat": 34.71446367,
+      "lng": 135.358209,
+      "category": "SAFE",
+      "name": "南甲子園公民館",
+      "address": "兵庫県西宮市甲子園九番町１５－４０",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲子園九番町１５－４０",
+      "district": "西宮市",
+      "sourceRow": 198,
+      "sourceRows": [
+        198
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/e2a24345931ce35b",
+      "lat": 34.71086472,
+      "lng": 135.3567129,
+      "category": "SAFE",
+      "name": "浜甲子園センター",
+      "address": "兵庫県西宮市枝川町１９－１０",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市枝川町１９－１０",
+      "district": "西宮市",
+      "sourceRow": 267,
+      "sourceRows": [
+        267
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/eed61ca0a8a08932",
+      "lat": 34.71075323,
+      "lng": 135.3564294,
+      "category": "SAFE",
+      "name": "甲子園浜自然環境センター",
+      "address": "兵庫県西宮市枝川町１９－１０",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市枝川町１９－１０",
+      "district": "西宮市",
+      "sourceRow": 273,
+      "sourceRows": [
+        273
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/ad93c6713a807883",
+      "lat": 34.71069964,
+      "lng": 135.3583329,
+      "category": "SAFE",
+      "name": "シルバーコースト甲子園",
+      "address": "兵庫県西宮市枝川町１７－４０",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市枝川町１７－４０",
+      "district": "西宮市",
+      "sourceRow": 442,
+      "sourceRows": [
+        442
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

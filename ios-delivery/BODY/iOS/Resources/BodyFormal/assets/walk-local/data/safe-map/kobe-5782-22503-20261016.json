@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5782-22503-20261016",
+  "lat": 34.69271629577642,
+  "lng": 135.02222089189476,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/16fb42acac34f993",
+      "lat": 34.6934027069102,
+      "lng": 135.022532181916,
+      "category": "SAFE",
+      "name": "神戸市立　井吹西小学校",
+      "address": "神戸市西区井吹台西町4丁目3番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区井吹台西町4丁目3番地",
+      "district": "西区",
+      "sourceRow": 506,
+      "sourceRows": [
+        506
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ed0a95da26336307",
+      "lat": 34.6928948055201,
+      "lng": 135.021714464261,
+      "category": "SAFE",
+      "name": "西神戸ＹＭＣＡ幼稚園",
+      "address": "神戸市西区井吹台西町4丁目5番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区井吹台西町4丁目5番",
+      "district": "西区",
+      "sourceRow": 543,
+      "sourceRows": [
+        543
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bafb9eda47df0c5c",
+      "lat": 34.6922838353377,
+      "lng": 135.022318460701,
+      "category": "SAFE",
+      "name": "神戸市立　井吹西児童館",
+      "address": "神戸市西区井吹台西町4丁目4番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区井吹台西町4丁目4番地",
+      "district": "西区",
+      "sourceRow": 657,
+      "sourceRows": [
+        657
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/73b0c482e89df244",
+      "lat": 34.6922838353377,
+      "lng": 135.022318460701,
+      "category": "SAFE",
+      "name": "井吹西地域福祉センター",
+      "address": "神戸市西区井吹台西町4丁目4番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区井吹台西町4丁目4番地",
+      "district": "西区",
+      "sourceRow": 710,
+      "sourceRows": [
+        710
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

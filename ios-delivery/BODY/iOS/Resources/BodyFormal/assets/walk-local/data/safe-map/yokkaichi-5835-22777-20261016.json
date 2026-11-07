@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "id": "yokkaichi-5835-22777-20261016",
+  "lat": 35.01220165666667,
+  "lng": 136.66437726666666,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "四日市市",
+  "source": "四日市市内公共施設 AED設置箇所一覧",
+  "sourceUrl": "https://data.bodik.jp/dataset/242021_00127",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/422f8da8-0b3c-4d84-b8dd-d88d18e914ce/resource/2a5eee8b-c455-4c2e-8553-b0d3d36e5ef2/download/242021_aed.csv",
+  "sourceUpdatedAt": "2024-12-18",
+  "sourcePageUpdatedAt": "2025-01-24",
+  "retrievedAt": "2026-10-15T15:44:16.747Z",
+  "sourceFileSha256": "c0880c81977c7fc444213ee84ef31a7b2e9e34f12d31e892064cbabb7d5159cf",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/yokkaichi/aed/8410540f6f90ef73",
+      "lat": 35.01130414,
+      "lng": 136.6623992,
+      "category": "SAFE",
+      "name": "富洲原小学校",
+      "address": "四日市市富州原町31番14号",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市富州原町31番14号",
+      "sourceRow": 43,
+      "sourceRows": [
+        43
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/4390d16ffd5d4339",
+      "lat": 35.01447222,
+      "lng": 136.6677034,
+      "category": "SAFE",
+      "name": "富洲原中学校",
+      "address": "四日市市天カ須賀5丁目3-10",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市天カ須賀5丁目3-10",
+      "sourceRow": 85,
+      "sourceRows": [
+        85,
+        86
+      ],
+      "duplicateSourceEntries": 2
+    },
+    {
+      "id": "municipality/yokkaichi/aed/a258673929f5e32d",
+      "lat": 35.01179653,
+      "lng": 136.6623233,
+      "category": "SAFE",
+      "name": "富洲原こども園",
+      "address": "四日市市富州原町31-35",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市富州原町31-35",
+      "sourceRow": 140,
+      "sourceRows": [
+        140
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/c86631edd39c2a1c",
+      "lat": 35.01077162,
+      "lng": 136.6630955,
+      "category": "SAFE",
+      "name": "富洲原地区市民センター",
+      "address": "四日市市富州原町31-46",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市富州原町31-46",
+      "sourceRow": 160,
+      "sourceRows": [
+        160
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/c1ce55142f0552da",
+      "lat": 35.01039321,
+      "lng": 136.6630388,
+      "category": "SAFE",
+      "name": "北部児童館",
+      "address": "四日市市富州原町31‐50",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市富州原町31‐50",
+      "sourceRow": 233,
+      "sourceRows": [
+        233
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

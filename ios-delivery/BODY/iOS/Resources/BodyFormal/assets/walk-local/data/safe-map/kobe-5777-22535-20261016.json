@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5777-22535-20261016",
+  "lat": 34.665295567540966,
+  "lng": 135.21232238328264,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/34863af30cd528eb",
+      "lat": 34.666214484328,
+      "lng": 135.212948158498,
+      "category": "SAFE",
+      "name": "神戸国際会議場（財団法人　神戸国際観光ｺﾝﾍﾞﾝｼｮﾝ協会）",
+      "address": "神戸市中央区港島中町6-9-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島中町6-9-1",
+      "district": "中央区",
+      "sourceRow": 811,
+      "sourceRows": [
+        811
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/eaf8a755ddf876e0",
+      "lat": 34.6639484273899,
+      "lng": 135.212084754142,
+      "category": "SAFE",
+      "name": "神戸国際展示場（財団法人　神戸国際観光ｺﾝﾍﾞﾝｼｮﾝ協会）",
+      "address": "神戸市中央区港島中町6-11-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島中町6-11-1",
+      "district": "中央区",
+      "sourceRow": 812,
+      "sourceRows": [
+        812
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ea7374f807e919ae",
+      "lat": 34.6639849298343,
+      "lng": 135.210189288962,
+      "category": "SAFE",
+      "name": "神戸ﾎﾟｰﾄｱｲﾗﾝﾄﾞﾎｰﾙ（財団法人　神戸国際観光ｺﾝﾍﾞﾝｼｮﾝ協会）",
+      "address": "神戸市中央区港島中町6-12-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島中町6-12-2",
+      "district": "中央区",
+      "sourceRow": 813,
+      "sourceRows": [
+        813
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4cc42c788186a7c1",
+      "lat": 34.6650118930482,
+      "lng": 135.214141504974,
+      "category": "SAFE",
+      "name": "神戸ポートピアホテル",
+      "address": "神戸市中央区港島中町6-10-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島中町6-10-1",
+      "district": "中央区",
+      "sourceRow": 816,
+      "sourceRows": [
+        816
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c9b9f87ab2af49ee",
+      "lat": 34.663083092746,
+      "lng": 135.210757319128,
+      "category": "SAFE",
+      "name": "神戸市立　ﾎﾟｰﾄｱｲﾗﾝﾄﾞｽﾎﾟｰﾂｾﾝﾀｰ",
+      "address": "神戸市中央区港島中町6-12-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島中町6-12-1",
+      "district": "中央区",
+      "sourceRow": 823,
+      "sourceRows": [
+        823
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6605f1cbbfd89d7f",
+      "lat": 34.6672319016047,
+      "lng": 135.212198327805,
+      "category": "SAFE",
+      "name": "神戸商工会議所",
+      "address": "神戸市中央区港島中町6-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島中町6-1",
+      "district": "中央区",
+      "sourceRow": 838,
+      "sourceRows": [
+        838
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c7308ca78cc877d0",
+      "lat": 34.666214484328,
+      "lng": 135.212948158498,
+      "category": "SAFE",
+      "name": "神戸ポートアイランド市民広場地下駐車場",
+      "address": "神戸市中央区港島中町6-9-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島中町6-9-2",
+      "district": "中央区",
+      "sourceRow": 932,
+      "sourceRows": [
+        932
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f7a7331fc6caa337",
+      "lat": 34.6666753270486,
+      "lng": 135.213311554254,
+      "category": "SAFE",
+      "name": "株式会社　ワールド",
+      "address": "神戸市中央区港島中町6丁目8-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島中町6丁目8-1",
+      "district": "中央区",
+      "sourceRow": 940,
+      "sourceRows": [
+        940
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

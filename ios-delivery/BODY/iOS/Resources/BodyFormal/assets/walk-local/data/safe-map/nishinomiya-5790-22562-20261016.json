@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5790-22562-20261016",
+  "lat": 34.742385526,
+  "lng": 135.37460693999998,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/c118ec505f7e5f7d",
+      "lat": 34.74408485,
+      "lng": 135.3736112,
+      "category": "SAFE",
+      "name": "北甲子園口市民館",
+      "address": "兵庫県西宮市松並町５－１２",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市松並町５－１２",
+      "district": "西宮市",
+      "sourceRow": 248,
+      "sourceRows": [
+        248
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/a83a0bc0e1a42ecf",
+      "lat": 34.74515203,
+      "lng": 135.3745584,
+      "category": "SAFE",
+      "name": "日本基督教団甲子園教会",
+      "address": "兵庫県西宮市松並町９－４",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市松並町９－４",
+      "district": "西宮市",
+      "sourceRow": 606,
+      "sourceRows": [
+        606
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/f550e0338bb5811a",
+      "lat": 34.74049901,
+      "lng": 135.3768116,
+      "category": "SAFE",
+      "name": "岩城歯科医院",
+      "address": "兵庫県西宮市甲子園口北町１４－１３",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲子園口北町１４－１３",
+      "district": "西宮市",
+      "sourceRow": 616,
+      "sourceRows": [
+        616
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/dd8a32cbaca5f72d",
+      "lat": 34.7421377,
+      "lng": 135.3732829,
+      "category": "SAFE",
+      "name": "しげやまクリニック",
+      "address": "兵庫県西宮市二見町１３－２１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市二見町１３－２１",
+      "district": "西宮市",
+      "sourceRow": 630,
+      "sourceRows": [
+        630
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/c493c55a7cf4c6dc",
+      "lat": 34.74005404,
+      "lng": 135.3747706,
+      "category": "SAFE",
+      "name": "ソラスト甲子園口　小規模多機能",
+      "address": "兵庫県西宮市甲子園口北町１－１４",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲子園口北町１－１４",
+      "district": "西宮市",
+      "sourceRow": 657,
+      "sourceRows": [
+        657
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

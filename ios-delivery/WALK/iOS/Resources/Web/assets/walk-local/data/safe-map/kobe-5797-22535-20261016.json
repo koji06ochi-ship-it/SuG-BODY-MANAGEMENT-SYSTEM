@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5797-22535-20261016",
+  "lat": 34.78582607856245,
+  "lng": 135.211086755974,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/dcf8457cd1af383e",
+      "lat": 34.7848963887759,
+      "lng": 135.211648633392,
+      "category": "SAFE",
+      "name": "神戸市立　唐櫃中学校",
+      "address": "神戸市北区唐櫃台4-36-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区唐櫃台4-36-1",
+      "district": "北区",
+      "sourceRow": 2200,
+      "sourceRows": [
+        2200
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c6b3b7edc4da07d6",
+      "lat": 34.786755768349,
+      "lng": 135.210524878556,
+      "category": "SAFE",
+      "name": "介護老人保健施設　カトレア六甲",
+      "address": "神戸市北区唐櫃台4-39-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区唐櫃台4-39-1",
+      "district": "北区",
+      "sourceRow": 2507,
+      "sourceRows": [
+        2507
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

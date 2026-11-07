@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5794-22521-20261016",
+  "lat": 34.766039625231656,
+  "lng": 135.13113562255327,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/079b318192019000",
+      "lat": 34.7655319536176,
+      "lng": 135.131580044245,
+      "category": "SAFE",
+      "name": "神戸市立　山田小学校",
+      "address": "神戸市北区山田町中字長尾サ1番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町中字長尾サ1番地",
+      "district": "北区",
+      "sourceRow": 2240,
+      "sourceRows": [
+        2240
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/448c044405580641",
+      "lat": 34.7653253065097,
+      "lng": 135.130304216949,
+      "category": "SAFE",
+      "name": "兵庫六甲農業協同組合　山田支店",
+      "address": "神戸市北区山田町中字長尾サ28-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町中字長尾サ28-2",
+      "district": "北区",
+      "sourceRow": 2306,
+      "sourceRows": [
+        2306
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7fa1fb2ed85a8904",
+      "lat": 34.7659535251395,
+      "lng": 135.131749965201,
+      "category": "SAFE",
+      "name": "神戸市立　山田幼稚園",
+      "address": "神戸市北区山田町中長尾サ18",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町中長尾サ18",
+      "district": "北区",
+      "sourceRow": 2353,
+      "sourceRows": [
+        2353
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5dca17e65711d8dd",
+      "lat": 34.7673477156598,
+      "lng": 135.130908263818,
+      "category": "SAFE",
+      "name": "山田地域福祉センター",
+      "address": "神戸市北区山田町福地字ガケノ上18-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町福地字ガケノ上18-3",
+      "district": "北区",
+      "sourceRow": 2386,
+      "sourceRows": [
+        2386
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

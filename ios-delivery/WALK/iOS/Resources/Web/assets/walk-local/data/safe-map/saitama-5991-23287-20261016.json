@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5991-23287",
+  "lat": 35.95185371,
+  "lng": 139.7276531,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.95185371,
+      "lng": 139.7276531,
+      "category": "SAFE",
+      "name": "川通公園",
+      "address": "さいたま市長宮825-5",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "長宮825-5",
+      "district": "岩槻区",
+      "sourceRow": 591,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/5a0a38599ee97d1f",
+      "sourceRows": [
+        591
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

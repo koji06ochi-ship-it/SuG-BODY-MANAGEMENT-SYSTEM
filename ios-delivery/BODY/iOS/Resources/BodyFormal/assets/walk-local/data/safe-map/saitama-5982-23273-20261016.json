@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5982-23273",
+  "lat": 35.89434119,
+  "lng": 139.64012574999998,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.893375,
+      "lng": 139.638859,
+      "category": "SAFE",
+      "name": "さいたま新都心公園",
+      "address": "さいたま市北袋町1-190-24",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "北袋町1-190-24",
+      "district": "大宮区",
+      "sourceRow": 140,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/6629bc553e8e736f",
+      "sourceRows": [
+        140
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.89530738,
+      "lng": 139.6413925,
+      "category": "SAFE",
+      "name": "大宮南第二放課後児童クラブ（大宮南そらいろキッズ）",
+      "address": "さいたま市北袋町1-190-13  2階",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "北袋町1-190-13  2階",
+      "district": "大宮区",
+      "sourceRow": 141,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/d5c5e3f02ee29e54",
+      "sourceRows": [
+        141
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

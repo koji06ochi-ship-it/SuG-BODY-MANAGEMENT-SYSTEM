@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "id": "otsu-5834-22644-20261016",
+  "lat": 35.007383332857145,
+  "lng": 135.8668313,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "大津市",
+  "source": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+  "sourceUrl": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/999caef4-7e90-4fd2-98eb-fd94368e9a2f/resource/3e5b513e-de51-4459-af70-6fda94e1bed3/download/od405902026022700200.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2025-03-12",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "7899826cf95c365a07c87b3ad05aa2aa7d4adeb440a2c57269c84f98c1d85ea8",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/otsu/aed/b9401ba20433035b",
+      "lat": 35.00729639,
+      "lng": 135.8655539,
+      "category": "SAFE",
+      "name": "大津フコク生命ビル",
+      "address": "大津市浜大津二丁目1番36号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市浜大津二丁目1番36号",
+      "district": "大津市",
+      "sourceRow": 181,
+      "sourceRows": [
+        181
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/c8f2c978d82794d2",
+      "lat": 35.00886306,
+      "lng": 135.8656683,
+      "category": "SAFE",
+      "name": "大津保健所",
+      "address": "大津市浜大津四丁目1番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市浜大津四丁目1番1号",
+      "district": "大津市",
+      "sourceRow": 188,
+      "sourceRows": [
+        188
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/75c26a5c334c95df",
+      "lat": 35.00496,
+      "lng": 135.8648511,
+      "category": "SAFE",
+      "name": "東横イン京都琵琶湖大津",
+      "address": "大津市長等二丁目1番28号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市長等二丁目1番28号",
+      "district": "大津市",
+      "sourceRow": 190,
+      "sourceRows": [
+        190
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/9164c105a154b130",
+      "lat": 35.00730222,
+      "lng": 135.8672553,
+      "category": "SAFE",
+      "name": "NTT西日本　滋賀支店",
+      "address": "大津市浜大津一丁目1番26号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市浜大津一丁目1番26号",
+      "district": "大津市",
+      "sourceRow": 211,
+      "sourceRows": [
+        211
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/3f99418a37282c42",
+      "lat": 35.0081175,
+      "lng": 135.8667736,
+      "category": "SAFE",
+      "name": "京阪・びわ湖浜大津駅",
+      "address": "大津市浜大津一丁目3番8号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市浜大津一丁目3番8号",
+      "district": "大津市",
+      "sourceRow": 213,
+      "sourceRows": [
+        213
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/72dfd3fe735fef1b",
+      "lat": 35.00591833,
+      "lng": 135.8688633,
+      "category": "SAFE",
+      "name": "滋賀銀行　本店",
+      "address": "大津市浜町1番38号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市浜町1番38号",
+      "district": "大津市",
+      "sourceRow": 215,
+      "sourceRows": [
+        215
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/f92be50da4886378",
+      "lat": 35.00922583,
+      "lng": 135.8688536,
+      "category": "SAFE",
+      "name": "琵琶湖汽船株式会社",
+      "address": "大津市浜大津五丁目1番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市浜大津五丁目1番1号",
+      "district": "大津市",
+      "sourceRow": 224,
+      "sourceRows": [
+        224
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

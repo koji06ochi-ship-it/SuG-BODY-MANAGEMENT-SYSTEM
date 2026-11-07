@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "otsu-5829-22662-20261016",
+  "lat": 34.976018333333336,
+  "lng": 135.97551753333335,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "大津市",
+  "source": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+  "sourceUrl": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/999caef4-7e90-4fd2-98eb-fd94368e9a2f/resource/3e5b513e-de51-4459-af70-6fda94e1bed3/download/od405902026022700200.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2025-03-12",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "7899826cf95c365a07c87b3ad05aa2aa7d4adeb440a2c57269c84f98c1d85ea8",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/otsu/aed/c08a25c154d19d88",
+      "lat": 34.97425361,
+      "lng": 135.9723206,
+      "category": "SAFE",
+      "name": "青山公民館",
+      "address": "大津市青山五丁目13－36",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市青山五丁目13－36",
+      "district": "大津市",
+      "sourceRow": 449,
+      "sourceRows": [
+        449
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/d1c3c1afcb3e967a",
+      "lat": 34.9774575,
+      "lng": 135.9771514,
+      "category": "SAFE",
+      "name": "大津市立青山小学校",
+      "address": "大津市青山三丁目16番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市青山三丁目16番1号",
+      "district": "大津市",
+      "sourceRow": 450,
+      "sourceRows": [
+        450
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/e47d1244eb764fb6",
+      "lat": 34.97634389,
+      "lng": 135.9770806,
+      "category": "SAFE",
+      "name": "大津市立青山幼稚園",
+      "address": "大津市青山三丁目16－2",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市青山三丁目16－2",
+      "district": "大津市",
+      "sourceRow": 452,
+      "sourceRows": [
+        452
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

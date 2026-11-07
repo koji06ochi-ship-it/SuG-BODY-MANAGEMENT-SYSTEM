@@ -1,0 +1,11 @@
+{
+  "app": "eVo",
+  "scheme": "SuGeVo",
+  "bundleIdentifier": "jp.sugosaka.evolink",
+  "registrationEvidence": "Existing staged source README says registered by user",
+  "currentAppleStateVerified": false,
+  "signingTeamConfigured": false,
+  "buildExecuted": false,
+  "installedOnIPhone": false,
+  "privacyReviewComplete": false
+}

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5782-22520-20261016",
+  "lat": 34.69716432140533,
+  "lng": 135.122214429999,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/b57e4d7e685ba2c8",
+      "lat": 34.6956468378031,
+      "lng": 135.120841541875,
+      "category": "SAFE",
+      "name": "神戸市立　鵯台中学校",
+      "address": "神戸市北区ひよどり台1-15-31",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区ひよどり台1-15-31",
+      "district": "北区",
+      "sourceRow": 2210,
+      "sourceRows": [
+        2210
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/09347d91aeb419d2",
+      "lat": 34.6979300722379,
+      "lng": 135.124892776806,
+      "category": "SAFE",
+      "name": "神戸市立　ひよどり台小学校",
+      "address": "神戸市北区ひよどり台3丁目3番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区ひよどり台3丁目3番",
+      "district": "北区",
+      "sourceRow": 2248,
+      "sourceRows": [
+        2248
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/dfc16e208c0d7689",
+      "lat": 34.697916054175,
+      "lng": 135.120908971316,
+      "category": "SAFE",
+      "name": "神戸市立　ひよどり台児童館",
+      "address": "神戸市北区ひよどり台2丁目1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区ひよどり台2丁目1-1",
+      "district": "北区",
+      "sourceRow": 2339,
+      "sourceRows": [
+        2339
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

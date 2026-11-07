@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5795-22523-20261016",
+  "lat": 34.7726698194629,
+  "lng": 135.14322907431,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/d3031cfd24e32886",
+      "lat": 34.7726698194629,
+      "lng": 135.14322907431,
+      "category": "SAFE",
+      "name": "みのたにグリーンスポーツホテル",
+      "address": "神戸市北区山田町原野1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町原野1-1",
+      "district": "北区",
+      "sourceRow": 2416,
+      "sourceRows": [
+        2416
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

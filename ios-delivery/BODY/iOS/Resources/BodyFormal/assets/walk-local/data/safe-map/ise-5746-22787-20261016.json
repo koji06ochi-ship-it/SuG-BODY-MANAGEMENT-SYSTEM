@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5746-22787-20261016",
+  "lat": 34.48163328705497,
+  "lng": 136.72362749894367,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/c32f2dfd7390948c",
+      "lat": 34.4815207629076,
+      "lng": 136.723621955798,
+      "category": "SAFE",
+      "name": "伊勢市立修道小学校",
+      "address": "伊勢市久世戸町5-1",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市久世戸町5-1",
+      "sourceRow": 19,
+      "sourceRows": [
+        19
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/3479a74d3fd2078c",
+      "lat": 34.481981,
+      "lng": 136.723468,
+      "category": "SAFE",
+      "name": "伊勢市立修道小学校　体育館",
+      "address": "伊勢市久世戸町5-1",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市久世戸町5-1",
+      "sourceRow": 20,
+      "sourceRows": [
+        20
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/72f0d5a4347f7774",
+      "lat": 34.4813980982573,
+      "lng": 136.723792541033,
+      "category": "SAFE",
+      "name": "杉の子学童ｸﾗﾌﾞ（支援の単位１）",
+      "address": "伊勢市久世戸町5-1 修道小学校内",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市久世戸町5-1 修道小学校内",
+      "sourceRow": 90,
+      "sourceRows": [
+        90
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

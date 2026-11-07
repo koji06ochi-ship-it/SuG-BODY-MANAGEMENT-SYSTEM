@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5774-22521-20261016",
+  "lat": 34.646313916720196,
+  "lng": 135.1278003568572,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/db0216c4afa28df7",
+      "lat": 34.6481921212569,
+      "lng": 135.126760762835,
+      "category": "SAFE",
+      "name": "特別養護老人ホーム・あいハート須磨",
+      "address": "神戸市須磨区松風町4丁目2－26",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区松風町4丁目2－26",
+      "district": "須磨区",
+      "sourceRow": 19,
+      "sourceRows": [
+        19
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0a2977800d411042",
+      "lat": 34.6472251828924,
+      "lng": 135.129566421437,
+      "category": "SAFE",
+      "name": "エリーネス須磨　「介護の家」",
+      "address": "神戸市須磨区磯馴町3丁目1番27号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区磯馴町3丁目1番27号",
+      "district": "須磨区",
+      "sourceRow": 28,
+      "sourceRows": [
+        28
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0357e24d0e36c6d2",
+      "lat": 34.6463503278189,
+      "lng": 135.131512120769,
+      "category": "SAFE",
+      "name": "神戸市立　若宮小学校",
+      "address": "神戸市須磨区若宮町2丁目1－21",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区若宮町2丁目1－21",
+      "district": "須磨区",
+      "sourceRow": 63,
+      "sourceRows": [
+        63
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/24fb9c92ce6fc87c",
+      "lat": 34.6495482356229,
+      "lng": 135.126949567492,
+      "category": "SAFE",
+      "name": "キャンディタフト月見山",
+      "address": "神戸市須磨区稲葉町3丁目2－23",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区稲葉町3丁目2－23",
+      "district": "須磨区",
+      "sourceRow": 98,
+      "sourceRows": [
+        98
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a0d8a5a1477ef361",
+      "lat": 34.6471962062252,
+      "lng": 135.126591583574,
+      "category": "SAFE",
+      "name": "JR　須磨海浜公園駅",
+      "address": "神戸市須磨区松風町5丁目2－43",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区松風町5丁目2－43",
+      "district": "須磨区",
+      "sourceRow": 117,
+      "sourceRows": [
+        117
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b551bdfef216987f",
+      "lat": 34.6469948390848,
+      "lng": 135.12677617329,
+      "category": "SAFE",
+      "name": "南須磨地域福祉センター",
+      "address": "神戸市須磨区松風町5丁目2－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区松風町5丁目2－1",
+      "district": "須磨区",
+      "sourceRow": 164,
+      "sourceRows": [
+        164
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ba81e82b0422fd8d",
+      "lat": 34.6452996160732,
+      "lng": 135.127861217759,
+      "category": "SAFE",
+      "name": "須磨税務署",
+      "address": "神戸市須磨区衣掛町5丁目2-18",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区衣掛町5丁目2-18",
+      "district": "須磨区",
+      "sourceRow": 225,
+      "sourceRows": [
+        225
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3e4232e59401b3b8",
+      "lat": 34.6440972823032,
+      "lng": 135.1260585656,
+      "category": "SAFE",
+      "name": "神戸須磨シーワールド　アクアライブ棟",
+      "address": "神戸市須磨区若宮町1丁目3番地5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区若宮町1丁目3番地5",
+      "district": "須磨区",
+      "sourceRow": 263,
+      "sourceRows": [
+        263
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/edb6ca55e9756def",
+      "lat": 34.6441573674691,
+      "lng": 135.128735984579,
+      "category": "SAFE",
+      "name": "神戸須磨シーワールド　オルカ棟",
+      "address": "神戸市須磨区若宮町1丁目3番地5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区若宮町1丁目3番地5",
+      "district": "須磨区",
+      "sourceRow": 264,
+      "sourceRows": [
+        264
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/320ece382d87c3ed",
+      "lat": 34.6440779884553,
+      "lng": 135.127191171237,
+      "category": "SAFE",
+      "name": "神戸須磨シーワールド　イルカ棟",
+      "address": "神戸市須磨区若宮町1丁目3番地5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区若宮町1丁目3番地5",
+      "district": "須磨区",
+      "sourceRow": 265,
+      "sourceRows": [
+        265
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

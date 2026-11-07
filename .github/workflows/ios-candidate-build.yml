@@ -1,0 +1,29 @@
+name: SUG isolated unsigned iOS build
+on:
+  push:
+    branches: [sug/ios-candidate-20261107]
+    paths:
+      - '.github/workflows/ios-candidate-build.yml'
+      - 'ios-delivery/**'
+permissions:
+  contents: read
+concurrency:
+  group: sug-ios-isolated-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  build:
+    if: ${{ github.event.repository.private == false && github.event.head_commit.message == 'SUG_IOS_UNSIGNED_BUILD_20261107_APPROVED_ONCE' }}
+    runs-on: macos-26
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        app: [BODY, eVo, WALK]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Validate and build both SDKs without signing
+        shell: bash
+        run: bash ios-delivery/ci/build-ios.sh '${{ matrix.app }}'

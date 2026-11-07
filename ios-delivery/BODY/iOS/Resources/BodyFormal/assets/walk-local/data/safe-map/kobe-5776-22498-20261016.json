@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5776-22498-20261016",
+  "lat": 34.66053038713555,
+  "lng": 134.99056094574723,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/07c03793cbc9519e",
+      "lat": 34.6602194095505,
+      "lng": 134.990837602098,
+      "category": "SAFE",
+      "name": "神戸市立教育委員会事務局　玉津南公民館",
+      "address": "神戸市西区玉津町上池314番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区玉津町上池314番地",
+      "district": "西区",
+      "sourceRow": 631,
+      "sourceRows": [
+        631
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/fdc893a2674ab0dd",
+      "lat": 34.6608801689152,
+      "lng": 134.991019930027,
+      "category": "SAFE",
+      "name": "神戸市立　玉津保育所",
+      "address": "神戸市西区玉津町新方211-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区玉津町新方211-3",
+      "district": "西区",
+      "sourceRow": 650,
+      "sourceRows": [
+        650
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/53dc0a9dff403ba0",
+      "lat": 34.6599211416828,
+      "lng": 134.990595705365,
+      "category": "SAFE",
+      "name": "神戸市立　玉津児童館",
+      "address": "神戸市西区玉津町上池315-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区玉津町上池315-1",
+      "district": "西区",
+      "sourceRow": 659,
+      "sourceRows": [
+        659
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/538c40df36648722",
+      "lat": 34.6611008283937,
+      "lng": 134.989790545499,
+      "category": "SAFE",
+      "name": "神戸市立　玉津第二幼稚園",
+      "address": "神戸市西区玉津町新方字南方452-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区玉津町新方字南方452-3",
+      "district": "西区",
+      "sourceRow": 721,
+      "sourceRows": [
+        721
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

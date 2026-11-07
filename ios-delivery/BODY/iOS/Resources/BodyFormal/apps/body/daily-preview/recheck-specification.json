@@ -1,0 +1,16 @@
+{
+  "schema": "exerciseRechecks optional array in v2 export",
+  "relation": [
+    "workoutId",
+    "careId",
+    "snapshot"
+  ],
+  "validity": "same local day and identical workout snapshot",
+  "result": [
+    "痛みなし・動作を確認",
+    "痛みあり・悪化",
+    "判断できない"
+  ],
+  "draftAfterReview": "one set with unfilled weight; no automatic return to prior load",
+  "followup": "existing journal correction with audit"
+}

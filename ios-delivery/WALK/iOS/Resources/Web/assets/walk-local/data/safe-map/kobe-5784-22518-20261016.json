@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5784-22518-20261016",
+  "lat": 34.706763291665396,
+  "lng": 135.11282484534266,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/6ab73598f4f9b670",
+      "lat": 34.7063913292563,
+      "lng": 135.113294019387,
+      "category": "SAFE",
+      "name": "たんぽぽの家",
+      "address": "神戸市北区山田町下谷上字中一里山14-2しあわせの村内",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町下谷上字中一里山14-2しあわせの村内",
+      "district": "北区",
+      "sourceRow": 2277,
+      "sourceRows": [
+        2277
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6b159cc27100a253",
+      "lat": 34.7091387471865,
+      "lng": 135.112061823523,
+      "category": "SAFE",
+      "name": "野外活動センターあおぞら",
+      "address": "神戸市北区山田町下谷上字中一里山14-4しあわせの村内",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町下谷上字中一里山14-4しあわせの村内",
+      "district": "北区",
+      "sourceRow": 2279,
+      "sourceRows": [
+        2279
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/78a0c9687928da95",
+      "lat": 34.7047597985534,
+      "lng": 135.113118693118,
+      "category": "SAFE",
+      "name": "神港園しあわせの家",
+      "address": "神戸市北区山田町下谷上字中一里山14－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町下谷上字中一里山14－1",
+      "district": "北区",
+      "sourceRow": 2335,
+      "sourceRows": [
+        2335
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

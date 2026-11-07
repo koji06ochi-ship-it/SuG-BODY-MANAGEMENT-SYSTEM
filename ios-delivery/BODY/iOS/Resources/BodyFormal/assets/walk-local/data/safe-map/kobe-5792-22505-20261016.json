@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5792-22505-20261016",
+  "lat": 34.753805599305,
+  "lng": 135.03335740781867,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/fe2f42c4a5f467a4",
+      "lat": 34.753948203844,
+      "lng": 135.032919467738,
+      "category": "SAFE",
+      "name": "兵庫六甲農業共同組合　押部支店",
+      "address": "神戸市西区押部谷町西盛323-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区押部谷町西盛323-2",
+      "district": "西区",
+      "sourceRow": 589,
+      "sourceRows": [
+        589
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8b3a75722bed5b66",
+      "lat": 34.7537342970355,
+      "lng": 135.033576377859,
+      "category": "SAFE",
+      "name": "押部谷地域福祉センター",
+      "address": "神戸市西区押部谷町西盛313",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区押部谷町西盛313",
+      "district": "西区",
+      "sourceRow": 701,
+      "sourceRows": [
+        701
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/56d0f81c1d2811dd",
+      "lat": 34.7537342970355,
+      "lng": 135.033576377859,
+      "category": "SAFE",
+      "name": "神戸市西区役所押部谷出張所",
+      "address": "神戸市西区押部谷町西盛３１３",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区押部谷町西盛３１３",
+      "district": "西区",
+      "sourceRow": 792,
+      "sourceRows": [
+        792
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

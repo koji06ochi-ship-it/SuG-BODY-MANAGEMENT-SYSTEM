@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5748-22784-20261016",
+  "lat": 34.49167354064357,
+  "lng": 136.7067298480312,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/1c9af98196dde0d2",
+      "lat": 34.4922028618286,
+      "lng": 136.705353963643,
+      "category": "SAFE",
+      "name": "伊勢市立厚生小学校",
+      "address": "伊勢市一志町1-4",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市一志町1-4",
+      "sourceRow": 29,
+      "sourceRows": [
+        29
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/bd2b271d5157d192",
+      "lat": 34.491946,
+      "lng": 136.705682,
+      "category": "SAFE",
+      "name": "伊勢市立厚生小学校　体育館",
+      "address": "伊勢市一志町1-4",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市一志町1-4",
+      "sourceRow": 30,
+      "sourceRows": [
+        30
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/f56d3bea7d4b601a",
+      "lat": 34.4902291373111,
+      "lng": 136.704859419978,
+      "category": "SAFE",
+      "name": "藍ちゃんの家　厚生学童部第１",
+      "address": "伊勢市宮後1-10-21",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市宮後1-10-21",
+      "sourceRow": 99,
+      "sourceRows": [
+        99
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/ebe49943d6d7b478",
+      "lat": 34.4919186979669,
+      "lng": 136.708315014839,
+      "category": "SAFE",
+      "name": "伊勢市健康福祉ステーション６階",
+      "address": "伊勢市宮後１丁目１番３５号　MiraISE（ミライセ）内",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市宮後１丁目１番３５号　MiraISE（ミライセ）内",
+      "sourceRow": 155,
+      "sourceRows": [
+        155
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/e9401900994c1c08",
+      "lat": 34.4919363835086,
+      "lng": 136.707998514175,
+      "category": "SAFE",
+      "name": "伊勢市健康福祉ステーション７階",
+      "address": "伊勢市宮後１丁目１番３５号　MiraISE（ミライセ）内",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市宮後１丁目１番３５号　MiraISE（ミライセ）内",
+      "sourceRow": 156,
+      "sourceRows": [
+        156
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/031de2b362ad3927",
+      "lat": 34.4918081632462,
+      "lng": 136.708170175552,
+      "category": "SAFE",
+      "name": "伊勢市健康福祉ステーション５階",
+      "address": "伊勢市宮後１丁目１番３５号　MiraISE（ミライセ）内",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市宮後１丁目１番３５号　MiraISE（ミライセ）内",
+      "sourceRow": 157,
+      "sourceRows": [
+        157
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

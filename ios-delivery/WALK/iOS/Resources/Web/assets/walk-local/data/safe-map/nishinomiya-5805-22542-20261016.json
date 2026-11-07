@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5805-22542-20261016",
+  "lat": 34.8318509,
+  "lng": 135.2548643,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/fac11763bd67378f",
+      "lat": 34.83030169,
+      "lng": 135.2552736,
+      "category": "SAFE",
+      "name": "北部水道事業所",
+      "address": "兵庫県西宮市山口町下山口字丸山１５８５番地の４２",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市山口町下山口字丸山１５８５番地の４２",
+      "district": "西宮市",
+      "sourceRow": 286,
+      "sourceRows": [
+        286
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/104416de89b7bc99",
+      "lat": 34.83271824,
+      "lng": 135.2540405,
+      "category": "SAFE",
+      "name": "医療法人　内海慈仁会　有馬病院",
+      "address": "兵庫県西宮市山口町下山口１６３７－５",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市山口町下山口１６３７－５",
+      "district": "西宮市",
+      "sourceRow": 749,
+      "sourceRows": [
+        749
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/60363b7caa75738b",
+      "lat": 34.83253277,
+      "lng": 135.2552788,
+      "category": "SAFE",
+      "name": "社会福祉法人慈仁会　特別養護老人ホーム山口苑",
+      "address": "兵庫県西宮市山口町下山口１２０３－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市山口町下山口１２０３－１",
+      "district": "西宮市",
+      "sourceRow": 767,
+      "sourceRows": [
+        767
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

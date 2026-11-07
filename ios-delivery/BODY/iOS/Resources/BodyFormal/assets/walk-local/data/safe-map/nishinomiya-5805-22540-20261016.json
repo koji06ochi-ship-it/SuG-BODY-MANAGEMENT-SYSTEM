@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5805-22540-20261016",
+  "lat": 34.83170222333333,
+  "lng": 135.24258369999998,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/805213386a9b0531",
+      "lat": 34.83405503,
+      "lng": 135.2450425,
+      "category": "SAFE",
+      "name": "北六甲台小学校",
+      "address": "兵庫県西宮市北六甲台５丁目４－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市北六甲台５丁目４－１",
+      "district": "西宮市",
+      "sourceRow": 38,
+      "sourceRows": [
+        38
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/6cac3d1736bfde3d",
+      "lat": 34.83030046,
+      "lng": 135.2411597,
+      "category": "SAFE",
+      "name": "ちびっこ天国",
+      "address": "兵庫県西宮市山口町下山口５丁目３－４",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市山口町下山口５丁目３－４",
+      "district": "西宮市",
+      "sourceRow": 123,
+      "sourceRows": [
+        123
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/79afaa81b20e4e3a",
+      "lat": 34.83075118,
+      "lng": 135.2415489,
+      "category": "SAFE",
+      "name": "下山口会館",
+      "address": "兵庫県西宮市山口町下山口５丁目５－１８",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市山口町下山口５丁目５－１８",
+      "district": "西宮市",
+      "sourceRow": 752,
+      "sourceRows": [
+        752
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

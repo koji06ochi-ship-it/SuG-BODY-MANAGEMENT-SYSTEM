@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5781-22512-20261016",
+  "lat": 34.68766354996055,
+  "lng": 135.0755251412192,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/3bc3c67d0b8c7afd",
+      "lat": 34.6880690021616,
+      "lng": 135.075233403192,
+      "category": "SAFE",
+      "name": "コープこうべ　共同購入センター須磨",
+      "address": "神戸市須磨区弥栄台3丁目11番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区弥栄台3丁目11番",
+      "district": "須磨区",
+      "sourceRow": 189,
+      "sourceRows": [
+        189
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8806306154cf6216",
+      "lat": 34.6872379090128,
+      "lng": 135.077709465397,
+      "category": "SAFE",
+      "name": "大丸松阪屋百貨店　西神戸物流センター",
+      "address": "神戸市須磨区弥栄台1丁目10-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区弥栄台1丁目10-2",
+      "district": "須磨区",
+      "sourceRow": 230,
+      "sourceRows": [
+        230
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/40611470d641a8a1",
+      "lat": 34.6869145056745,
+      "lng": 135.07458004038,
+      "category": "SAFE",
+      "name": "京神倉庫株式会社　西神支店",
+      "address": "神戸市須磨区弥栄台3丁目6番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区弥栄台3丁目6番",
+      "district": "須磨区",
+      "sourceRow": 237,
+      "sourceRows": [
+        237
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/92eae0c5b4dbd5de",
+      "lat": 34.6861449621869,
+      "lng": 135.075194322244,
+      "category": "SAFE",
+      "name": "京神倉庫株式会社　流通加工支店",
+      "address": "神戸市須磨区弥栄台3丁目4番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区弥栄台3丁目4番1号",
+      "district": "須磨区",
+      "sourceRow": 239,
+      "sourceRows": [
+        239
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/35765e485104be26",
+      "lat": 34.6879989911905,
+      "lng": 135.073772226727,
+      "category": "SAFE",
+      "name": "オリックス・レンテック株式会社　神戸技術センター",
+      "address": "神戸市須磨区弥栄台3丁目19番6号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区弥栄台3丁目19番6号",
+      "district": "須磨区",
+      "sourceRow": 241,
+      "sourceRows": [
+        241
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ff207d707a7d68fb",
+      "lat": 34.6875531553251,
+      "lng": 135.073462872059,
+      "category": "SAFE",
+      "name": "神戸酒類販売株式会社",
+      "address": "神戸市須磨区弥栄台3丁目19番7号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区弥栄台3丁目19番7号",
+      "district": "須磨区",
+      "sourceRow": 242,
+      "sourceRows": [
+        242
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0f8dfddda46a310b",
+      "lat": 34.6894317370155,
+      "lng": 135.074904982404,
+      "category": "SAFE",
+      "name": "三井倉庫㈱関西Ｐ＆ＭセンターＢ棟",
+      "address": "神戸市須磨区弥栄台1丁目16-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区弥栄台1丁目16-1",
+      "district": "須磨区",
+      "sourceRow": 245,
+      "sourceRows": [
+        245
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/665c99f2ff497aa2",
+      "lat": 34.6877068157866,
+      "lng": 135.077086671876,
+      "category": "SAFE",
+      "name": "株式会社サンブリッジ",
+      "address": "神戸市須磨区弥栄台１丁目10－3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区弥栄台１丁目10－3",
+      "district": "須磨区",
+      "sourceRow": 247,
+      "sourceRows": [
+        247
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f846481804e2fcf9",
+      "lat": 34.6879148712914,
+      "lng": 135.077782286694,
+      "category": "SAFE",
+      "name": "スターゼン販売株式会社",
+      "address": "神戸市須磨区弥栄台1丁目10-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区弥栄台1丁目10-5",
+      "district": "須磨区",
+      "sourceRow": 250,
+      "sourceRows": [
+        250
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

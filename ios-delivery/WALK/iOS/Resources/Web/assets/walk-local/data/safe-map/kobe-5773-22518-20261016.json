@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5773-22518-20261016",
+  "lat": 34.64301654190925,
+  "lng": 135.11340019952848,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/762e28f3db9a0fd6",
+      "lat": 34.6436272840605,
+      "lng": 135.113986482808,
+      "category": "SAFE",
+      "name": "神戸信用金庫　須磨支店",
+      "address": "神戸市須磨区須磨浦通4丁目7－6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区須磨浦通4丁目7－6",
+      "district": "須磨区",
+      "sourceRow": 56,
+      "sourceRows": [
+        56
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/11c6bc189525b183",
+      "lat": 34.6434947781605,
+      "lng": 135.113082626895,
+      "category": "SAFE",
+      "name": "山陽　須磨駅",
+      "address": "神戸市須磨区須磨浦通5丁目7－2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区須磨浦通5丁目7－2",
+      "district": "須磨区",
+      "sourceRow": 57,
+      "sourceRows": [
+        57
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8f9f6b083fed126c",
+      "lat": 34.6423132018197,
+      "lng": 135.112892793996,
+      "category": "SAFE",
+      "name": "JR　須磨駅",
+      "address": "神戸市須磨区須磨浦通4丁目2－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区須磨浦通4丁目2－1",
+      "district": "須磨区",
+      "sourceRow": 139,
+      "sourceRows": [
+        139
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2b0ed2dfb9a46fa0",
+      "lat": 34.6426309035963,
+      "lng": 135.113638894415,
+      "category": "SAFE",
+      "name": "兵庫県警　須磨警察署　須磨駅前交番",
+      "address": "神戸市須磨区須磨浦通4丁目2-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区須磨浦通4丁目2-2",
+      "district": "須磨区",
+      "sourceRow": 198,
+      "sourceRows": [
+        198
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

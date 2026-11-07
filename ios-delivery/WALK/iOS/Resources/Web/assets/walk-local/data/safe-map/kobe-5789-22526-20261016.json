@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5789-22526-20261016",
+  "lat": 34.73726161458265,
+  "lng": 135.1600964123165,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/2dce4487cca6c03d",
+      "lat": 34.7384069042087,
+      "lng": 135.159980009249,
+      "category": "SAFE",
+      "name": "神戸市立　桜の宮中学校",
+      "address": "神戸市北区大脇台6-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区大脇台6-1",
+      "district": "北区",
+      "sourceRow": 2204,
+      "sourceRows": [
+        2204
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5d6a579768ca812c",
+      "lat": 34.7366763714724,
+      "lng": 135.158956984287,
+      "category": "SAFE",
+      "name": "株式会社　北神社　花浄院",
+      "address": "神戸市北区山田町小部6番3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町小部6番3",
+      "district": "北区",
+      "sourceRow": 2410,
+      "sourceRows": [
+        2410
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/87db032fbe79a83f",
+      "lat": 34.7373693871811,
+      "lng": 135.160540978754,
+      "category": "SAFE",
+      "name": "株式会社　ハッピーエイジ",
+      "address": "神戸市北区大脇台2-34",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区大脇台2-34",
+      "district": "北区",
+      "sourceRow": 2563,
+      "sourceRows": [
+        2563
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/067ac8ae16656837",
+      "lat": 34.7365937954684,
+      "lng": 135.160907676976,
+      "category": "SAFE",
+      "name": "特別養護老人ホーム　恵風園",
+      "address": "神戸市北区山田町小部字惣六畑山8番地の88",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町小部字惣六畑山8番地の88",
+      "district": "北区",
+      "sourceRow": 2572,
+      "sourceRows": [
+        2572
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

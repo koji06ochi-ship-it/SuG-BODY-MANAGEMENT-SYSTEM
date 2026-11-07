@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5749-22785-20261016",
+  "lat": 34.49729808577023,
+  "lng": 136.712838718187,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/81c00d5a4c15641f",
+      "lat": 34.497346,
+      "lng": 136.715436,
+      "category": "SAFE",
+      "name": "伊勢市立有緝小学校　体育館",
+      "address": "伊勢市船江2-2-5",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市船江2-2-5",
+      "sourceRow": 22,
+      "sourceRows": [
+        22
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/3faf7fc3a76d062f",
+      "lat": 34.4973717245683,
+      "lng": 136.711173930007,
+      "category": "SAFE",
+      "name": "放課後児童ｸﾗﾌﾞ 銀のｽﾌﾟｰﾝ",
+      "address": "伊勢市河崎1-14-21",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市河崎1-14-21",
+      "sourceRow": 102,
+      "sourceRows": [
+        102
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/1fae080a3dbc1bd2",
+      "lat": 34.4971765327424,
+      "lng": 136.711906224554,
+      "category": "SAFE",
+      "name": "放課後児童ｸﾗﾌﾞ 第２銀のｽﾌﾟｰﾝ",
+      "address": "伊勢市河崎1-11-18",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市河崎1-11-18",
+      "sourceRow": 103,
+      "sourceRows": [
+        103
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

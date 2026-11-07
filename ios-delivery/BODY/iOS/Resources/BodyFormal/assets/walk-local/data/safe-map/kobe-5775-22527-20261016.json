@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5775-22527-20261016",
+  "lat": 34.65447055598096,
+  "lng": 135.1647831590742,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/2ff7cc4d81802eb3",
+      "lat": 34.6502281056855,
+      "lng": 135.162405425942,
+      "category": "SAFE",
+      "name": "㈱築港カルモ倉庫",
+      "address": "神戸市長田区苅藻島町1-1-12",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区苅藻島町1-1-12",
+      "district": "長田区",
+      "sourceRow": 1336,
+      "sourceRows": [
+        1336
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b2151a81fd6230ef",
+      "lat": 34.6559252469877,
+      "lng": 135.164494702784,
+      "category": "SAFE",
+      "name": "神戸市営地下鉄　御崎公園駅",
+      "address": "神戸市兵庫区浜中町1丁目",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区浜中町1丁目",
+      "district": "兵庫区",
+      "sourceRow": 2033,
+      "sourceRows": [
+        2033
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2b3078dca61a5c0c",
+      "lat": 34.6551204531774,
+      "lng": 135.165160602574,
+      "category": "SAFE",
+      "name": "神戸信用金庫　御崎支店",
+      "address": "神戸市兵庫区浜中町1丁目6－2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区浜中町1丁目6－2",
+      "district": "兵庫区",
+      "sourceRow": 2070,
+      "sourceRows": [
+        2070
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1a3604ca31d5e3a0",
+      "lat": 34.6551494932613,
+      "lng": 135.166093711963,
+      "category": "SAFE",
+      "name": "コープこうべ　コープミニ御崎店",
+      "address": "神戸市兵庫区浜中町1丁目1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区浜中町1丁目1-1",
+      "district": "兵庫区",
+      "sourceRow": 2124,
+      "sourceRows": [
+        2124
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0c6e4343175946c0",
+      "lat": 34.6559294807929,
+      "lng": 135.165761352108,
+      "category": "SAFE",
+      "name": "特別養護老人ホーム　花みさきⅠ",
+      "address": "神戸市兵庫区浜中町1丁目16-18",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区浜中町1丁目16-18",
+      "district": "兵庫区",
+      "sourceRow": 2154,
+      "sourceRows": [
+        2154
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

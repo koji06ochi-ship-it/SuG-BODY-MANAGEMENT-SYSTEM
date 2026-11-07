@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5745-22786-20261016",
+  "lat": 34.4733089984106,
+  "lng": 136.717389839795,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/ca4c429158c3a02e",
+      "lat": 34.4733089984106,
+      "lng": 136.717389839795,
+      "category": "SAFE",
+      "name": "放課後児童ｸﾗﾌﾞﾘﾝﾄﾞﾊﾞｰｸﾞ修道",
+      "address": "伊勢市桜木町55番地1　旧さくらぎ保育所",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市桜木町55番地1　旧さくらぎ保育所",
+      "sourceRow": 115,
+      "sourceRows": [
+        115
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

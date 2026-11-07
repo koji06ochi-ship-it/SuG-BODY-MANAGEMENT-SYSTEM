@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5979-23273",
+  "lat": 35.877637087500005,
+  "lng": 139.64148582500002,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.874104,
+      "lng": 139.643437,
+      "category": "SAFE",
+      "name": "北浦和自転車駐車場",
+      "address": "さいたま市北浦和5-2-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "北浦和5-2-1",
+      "district": "浦和区",
+      "sourceRow": 390,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/66402f7820833f1a",
+      "sourceRows": [
+        390
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.8797377,
+      "lng": 139.6420802,
+      "category": "SAFE",
+      "name": "針ケ谷保育園",
+      "address": "さいたま市針ヶ谷1-4-3",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "針ヶ谷1-4-3",
+      "district": "浦和区",
+      "sourceRow": 437,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/cf21ef89adb46a43",
+      "sourceRows": [
+        437
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.8775811,
+      "lng": 139.6408305,
+      "category": "SAFE",
+      "name": "常盤北保育園",
+      "address": "さいたま市針ヶ谷4-1-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "針ヶ谷4-1-1",
+      "district": "浦和区",
+      "sourceRow": 438,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/46660a8ba1b5626f",
+      "sourceRows": [
+        438
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.87912555,
+      "lng": 139.6395956,
+      "category": "SAFE",
+      "name": "常盤北放課後児童クラブ（常盤北児童クラブ）",
+      "address": "さいたま市針ヶ谷4-2-12　常盤北小学校内",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "針ヶ谷4-2-12　常盤北小学校内",
+      "district": "浦和区",
+      "sourceRow": 439,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/1a21385cc06c384c",
+      "sourceRows": [
+        439
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

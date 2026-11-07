@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "safe-tsu-designated-shelters-tsu-5794-22756",
+  "lat": 34.765642,
+  "lng": 136.536115,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "三重県・津市共同利用 指定避難所データ",
+  "sourceUrl": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+  "sourceUpdatedAt": "2024-03-12",
+  "retrievedAt": "2026-10-16T00:00:00.000Z",
+  "sourceFileSha256": "8d45bec68a7f72c0c0f0cc45eccbeac81b0d921573ba31453ea6af68ce291325",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+  "data": [
+    {
+      "id": "municipality/tsu/tsu-shelter/52eedcb1cf2c8a2c",
+      "lat": 34.76066475,
+      "lng": 136.5282668,
+      "category": "SAFE",
+      "name": "白塚小学校（指定避難所）",
+      "address": "三重県津市白塚町4463",
+      "kind": "SHELTER",
+      "source": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+      "sourceLabel": "三重県・津市共同利用 指定避難所データ（開設状態・受入可否は未確認）",
+      "license": "CC-BY-4.0",
+      "sourceUpdatedAt": "2024-03-12",
+      "sourceRow": 8
+    },
+    {
+      "id": "municipality/tsu/tsu-shelter/b88aff817dc04ec8",
+      "lat": 34.77245305,
+      "lng": 136.5416092,
+      "category": "SAFE",
+      "name": "志登茂川浄化センター（指定避難所）",
+      "address": "三重県津市白塚町1592",
+      "kind": "SHELTER",
+      "source": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+      "sourceLabel": "三重県・津市共同利用 指定避難所データ（開設状態・受入可否は未確認）",
+      "license": "CC-BY-4.0",
+      "sourceUpdatedAt": "2024-03-12",
+      "sourceRow": 9
+    }
+  ]
+}

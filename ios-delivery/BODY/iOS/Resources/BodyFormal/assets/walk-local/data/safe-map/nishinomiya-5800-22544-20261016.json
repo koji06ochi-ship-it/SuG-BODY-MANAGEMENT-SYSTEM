@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5800-22544-20261016",
+  "lat": 34.80231567,
+  "lng": 135.2661483,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/f7bda23befede40a",
+      "lat": 34.80231567,
+      "lng": 135.2661483,
+      "category": "SAFE",
+      "name": "白水峡公園墓地",
+      "address": "兵庫県西宮市山口町中野",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市山口町中野",
+      "district": "西宮市",
+      "sourceRow": 163,
+      "sourceRows": [
+        163
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5788-22522-20261016",
+  "lat": 34.73024137610753,
+  "lng": 135.135763712992,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/4760b5a901ee069f",
+      "lat": 34.7295079598204,
+      "lng": 135.13255186176,
+      "category": "SAFE",
+      "name": "神戸市立　鈴蘭台中学校",
+      "address": "神戸市北区北五葉2-10-32",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区北五葉2-10-32",
+      "district": "北区",
+      "sourceRow": 2206,
+      "sourceRows": [
+        2206
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/59651ec9628a7272",
+      "lat": 34.730547518001,
+      "lng": 135.136467888575,
+      "category": "SAFE",
+      "name": "神戸市立　北五葉小学校",
+      "address": "神戸市北区北五葉3丁目7番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区北五葉3丁目7番1号",
+      "district": "北区",
+      "sourceRow": 2244,
+      "sourceRows": [
+        2244
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a4852084727ff692",
+      "lat": 34.730547518001,
+      "lng": 135.136467888575,
+      "category": "SAFE",
+      "name": "北五葉地域福祉センター",
+      "address": "神戸市北区北五葉3丁目7番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区北五葉3丁目7番1号",
+      "district": "北区",
+      "sourceRow": 2378,
+      "sourceRows": [
+        2378
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0f31127fd0fbb6ac",
+      "lat": 34.7303625086077,
+      "lng": 135.137567213058,
+      "category": "SAFE",
+      "name": "五葉幼稚園",
+      "address": "神戸市北区北五葉3丁目7-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区北五葉3丁目7-2",
+      "district": "北区",
+      "sourceRow": 2549,
+      "sourceRows": [
+        2549
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5792-22503-20261016",
+  "lat": 34.757625658894,
+  "lng": 135.019192898525,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/131567e4c6066d25",
+      "lat": 34.757625658894,
+      "lng": 135.019192898525,
+      "category": "SAFE",
+      "name": "神港園シルビアホーム（社会福祉法人）",
+      "address": "神戸市西区神出町東1188-345",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区神出町東1188-345",
+      "district": "西区",
+      "sourceRow": 669,
+      "sourceRows": [
+        669
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f472164af5cdd50f",
+      "lat": 34.757625658894,
+      "lng": 135.019192898525,
+      "category": "SAFE",
+      "name": "養護老人ホーム神港園（社会福祉法人）",
+      "address": "神戸市西区神出町東1188-345",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区神出町東1188-345",
+      "district": "西区",
+      "sourceRow": 670,
+      "sourceRows": [
+        670
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

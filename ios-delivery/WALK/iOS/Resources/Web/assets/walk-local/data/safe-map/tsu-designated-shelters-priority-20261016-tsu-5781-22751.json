@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "safe-tsu-designated-shelters-tsu-5781-22751",
+  "lat": 34.689767,
+  "lng": 136.511987,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "三重県・津市共同利用 指定避難所データ",
+  "sourceUrl": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+  "sourceUpdatedAt": "2024-03-12",
+  "retrievedAt": "2026-10-16T00:00:00.000Z",
+  "sourceFileSha256": "8d45bec68a7f72c0c0f0cc45eccbeac81b0d921573ba31453ea6af68ce291325",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+  "data": [
+    {
+      "id": "municipality/tsu/tsu-shelter/86ce6ab37c94f33b",
+      "lat": 34.69407491,
+      "lng": 136.5176993,
+      "category": "SAFE",
+      "name": "三重県立聾学校（指定避難所）",
+      "address": "三重県津市藤方2304-2",
+      "kind": "SHELTER",
+      "source": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+      "sourceLabel": "三重県・津市共同利用 指定避難所データ（開設状態・受入可否は未確認）",
+      "license": "CC-BY-4.0",
+      "sourceUpdatedAt": "2024-03-12",
+      "sourceRow": 15
+    },
+    {
+      "id": "municipality/tsu/tsu-shelter/d15ee92e61d74828",
+      "lat": 34.68979115,
+      "lng": 136.5120419,
+      "category": "SAFE",
+      "name": "藤水小学校（指定避難所）",
+      "address": "三重県津市藤方1627",
+      "kind": "SHELTER",
+      "source": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+      "sourceLabel": "三重県・津市共同利用 指定避難所データ（開設状態・受入可否は未確認）",
+      "license": "CC-BY-4.0",
+      "sourceUpdatedAt": "2024-03-12",
+      "sourceRow": 25
+    },
+    {
+      "id": "municipality/tsu/tsu-shelter/a697ff88d0116680",
+      "lat": 34.68548799,
+      "lng": 136.5100494,
+      "category": "SAFE",
+      "name": "藤水出張所（指定避難所）",
+      "address": "三重県津市藤方1491-2",
+      "kind": "SHELTER",
+      "source": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+      "sourceLabel": "三重県・津市共同利用 指定避難所データ（開設状態・受入可否は未確認）",
+      "license": "CC-BY-4.0",
+      "sourceUpdatedAt": "2024-03-12",
+      "sourceRow": 26
+    }
+  ]
+}

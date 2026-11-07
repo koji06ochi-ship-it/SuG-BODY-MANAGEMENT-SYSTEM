@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5786-22559-20261016",
+  "lat": 34.719445451666665,
+  "lng": 135.35689649999998,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/232cc311a46712ff",
+      "lat": 34.7176314,
+      "lng": 135.3541024,
+      "category": "SAFE",
+      "name": "保育ルームバンビ",
+      "address": "兵庫県西宮市南甲子園２丁目２１－８－１１６",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市南甲子園２丁目２１－８－１１６",
+      "district": "西宮市",
+      "sourceRow": 109,
+      "sourceRows": [
+        109
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/14bf058f33cc58e8",
+      "lat": 34.72180467,
+      "lng": 135.35577,
+      "category": "SAFE",
+      "name": "網引市民館",
+      "address": "兵庫県西宮市甲子園網引町７－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲子園網引町７－１",
+      "district": "西宮市",
+      "sourceRow": 242,
+      "sourceRows": [
+        242
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/1d685c0c0caa9a50",
+      "lat": 34.72180954,
+      "lng": 135.3584843,
+      "category": "SAFE",
+      "name": "甲子園テニスクラブ",
+      "address": "兵庫県西宮市甲子園洲鳥町５－５０",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲子園洲鳥町５－５０",
+      "district": "西宮市",
+      "sourceRow": 463,
+      "sourceRows": [
+        463
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/bc892aa1e1389a18",
+      "lat": 34.71865453,
+      "lng": 135.3594947,
+      "category": "SAFE",
+      "name": "甲子園警察署中津交番",
+      "address": "兵庫県西宮市甲子園町２７－１１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲子園町２７－１１",
+      "district": "西宮市",
+      "sourceRow": 480,
+      "sourceRows": [
+        480
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/a118cec98e139b75",
+      "lat": 34.71708826,
+      "lng": 135.3587203,
+      "category": "SAFE",
+      "name": "グリーンラグーナ甲子園",
+      "address": "兵庫県西宮市南甲子園１丁目９－５",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市南甲子園１丁目９－５",
+      "district": "西宮市",
+      "sourceRow": 503,
+      "sourceRows": [
+        503
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/d3eeba5f9f60b0c1",
+      "lat": 34.71968431,
+      "lng": 135.3548073,
+      "category": "SAFE",
+      "name": "松崎医院",
+      "address": "兵庫県西宮市南甲子園２丁目８－１５",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市南甲子園２丁目８－１５",
+      "district": "西宮市",
+      "sourceRow": 506,
+      "sourceRows": [
+        506
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

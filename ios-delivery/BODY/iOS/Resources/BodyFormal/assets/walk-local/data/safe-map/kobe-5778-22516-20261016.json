@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5778-22516-20261016",
+  "lat": 34.67085244680659,
+  "lng": 135.0986951486405,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/209dd71a8d48863d",
+      "lat": 34.6694656450835,
+      "lng": 135.097091771974,
+      "category": "SAFE",
+      "name": "北須磨団地自治会（北須磨団地自治会館）",
+      "address": "神戸市須磨区友が丘7丁目275",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区友が丘7丁目275",
+      "district": "須磨区",
+      "sourceRow": 9,
+      "sourceRows": [
+        9
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ca76d3fe23a868b4",
+      "lat": 34.671525220611,
+      "lng": 135.100543744713,
+      "category": "SAFE",
+      "name": "エリーネス須磨",
+      "address": "神戸市須磨区友が丘7丁目1番地21",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区友が丘7丁目1番地21",
+      "district": "須磨区",
+      "sourceRow": 29,
+      "sourceRows": [
+        29
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/01ff74f7b0573d5e",
+      "lat": 34.6719152797879,
+      "lng": 135.098908806867,
+      "category": "SAFE",
+      "name": "神戸大学医学部保健学科",
+      "address": "神戸市須磨区友が丘7丁目10-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区友が丘7丁目10-2",
+      "district": "須磨区",
+      "sourceRow": 36,
+      "sourceRows": [
+        36
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1d75c28ce5f2fc1e",
+      "lat": 34.673138684016,
+      "lng": 135.09954531002,
+      "category": "SAFE",
+      "name": "神戸市立　友が丘中学校",
+      "address": "神戸市須磨区友が丘7-283-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区友が丘7-283-1",
+      "district": "須磨区",
+      "sourceRow": 45,
+      "sourceRows": [
+        45
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c1865ce8cfb15267",
+      "lat": 34.6694896658171,
+      "lng": 135.096902466701,
+      "category": "SAFE",
+      "name": "神戸市立　北須磨児童館",
+      "address": "神戸市須磨区友が丘7丁目275-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区友が丘7丁目275-1",
+      "district": "須磨区",
+      "sourceRow": 141,
+      "sourceRows": [
+        141
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ff8c20f454c21238",
+      "lat": 34.6727516999614,
+      "lng": 135.098015319994,
+      "category": "SAFE",
+      "name": "友が丘防災防犯センター",
+      "address": "神戸市須磨区友が丘7丁目",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区友が丘7丁目",
+      "district": "須磨区",
+      "sourceRow": 152,
+      "sourceRows": [
+        152
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f6a7f110fb173129",
+      "lat": 34.6692088244351,
+      "lng": 135.097153685864,
+      "category": "SAFE",
+      "name": "コープこうべ　コープミニ北須磨",
+      "address": "神戸市須磨区友が丘7丁目275-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区友が丘7丁目275-2",
+      "district": "須磨区",
+      "sourceRow": 191,
+      "sourceRows": [
+        191
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2bab87aeb0b425e3",
+      "lat": 34.671525220611,
+      "lng": 135.100543744713,
+      "category": "SAFE",
+      "name": "神戸総合医療専門学校",
+      "address": "神戸市須磨区友が丘7丁目1-21",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区友が丘7丁目1-21",
+      "district": "須磨区",
+      "sourceRow": 205,
+      "sourceRows": [
+        205
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4b74718b4beecb2e",
+      "lat": 34.6702954033078,
+      "lng": 135.101092949695,
+      "category": "SAFE",
+      "name": "介護老人保健施設　いきいきの郷",
+      "address": "神戸市須磨区友が丘7-1-25",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区友が丘7-1-25",
+      "district": "須磨区",
+      "sourceRow": 219,
+      "sourceRows": [
+        219
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4090f2d2f8702e58",
+      "lat": 34.6692088244351,
+      "lng": 135.097153685864,
+      "category": "SAFE",
+      "name": "生活協同組合コープこうべ　コープ北須磨",
+      "address": "神戸市須磨区友が丘7丁目275番地2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区友が丘7丁目275番地2",
+      "district": "須磨区",
+      "sourceRow": 261,
+      "sourceRows": [
+        261
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

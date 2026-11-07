@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5983-23267",
+  "lat": 35.902148245,
+  "lng": 139.604237675,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.90295028,
+      "lng": 139.6051864,
+      "category": "SAFE",
+      "name": "三橋第二放課後児童クラブ",
+      "address": "さいたま市三橋2-20",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "三橋2-20",
+      "district": "大宮区",
+      "sourceRow": 193,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/152e768b2a0add3d",
+      "sourceRows": [
+        193
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.902892,
+      "lng": 139.603953,
+      "category": "SAFE",
+      "name": "三橋老人憩いの家",
+      "address": "さいたま市三橋2-59",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "三橋2-59",
+      "district": "大宮区",
+      "sourceRow": 194,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/f68cff6ea9f9e227",
+      "sourceRows": [
+        194
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.90052,
+      "lng": 139.60212,
+      "category": "SAFE",
+      "name": "三橋老人憩いの家分館",
+      "address": "さいたま市三橋2-259-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "三橋2-259-1",
+      "district": "大宮区",
+      "sourceRow": 195,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/b5620738f3b08c9b",
+      "sourceRows": [
+        195
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.9022307,
+      "lng": 139.6056913,
+      "category": "SAFE",
+      "name": "三橋保育園",
+      "address": "さいたま市三橋2-929",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "三橋2-929",
+      "district": "大宮区",
+      "sourceRow": 196,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/90bb75fe757f655d",
+      "sourceRows": [
+        196
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

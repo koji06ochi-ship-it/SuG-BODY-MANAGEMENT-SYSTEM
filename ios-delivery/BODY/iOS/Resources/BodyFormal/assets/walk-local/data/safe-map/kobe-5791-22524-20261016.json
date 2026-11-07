@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5791-22524-20261016",
+  "lat": 34.74916405938937,
+  "lng": 135.146818405732,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/59ab5cfa7f9118ba",
+      "lat": 34.7470731778342,
+      "lng": 135.144638276912,
+      "category": "SAFE",
+      "name": "神戸市立　桂木小学校",
+      "address": "神戸市北区桂木1丁目2-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区桂木1丁目2-5",
+      "district": "北区",
+      "sourceRow": 2236,
+      "sourceRows": [
+        2236
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/cb1e4d575cc13401",
+      "lat": 34.7502743107436,
+      "lng": 135.148123066841,
+      "category": "SAFE",
+      "name": "甲緑地域福祉センター",
+      "address": "神戸市北区緑町2－7－28",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区緑町2－7－28",
+      "district": "北区",
+      "sourceRow": 2361,
+      "sourceRows": [
+        2361
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7d78ae4b85d4dd06",
+      "lat": 34.7485098264071,
+      "lng": 135.145813982138,
+      "category": "SAFE",
+      "name": "神戸市立　桂木児童館",
+      "address": "神戸市北区桂木1丁目2-4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区桂木1丁目2-4",
+      "district": "北区",
+      "sourceRow": 2400,
+      "sourceRows": [
+        2400
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7dbd5668b76623c7",
+      "lat": 34.7507989225726,
+      "lng": 135.148698297037,
+      "category": "SAFE",
+      "name": "山のまち（幼保連携型認定こども園）",
+      "address": "神戸市北区緑町2丁目7-19",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区緑町2丁目7-19",
+      "district": "北区",
+      "sourceRow": 2475,
+      "sourceRows": [
+        2475
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

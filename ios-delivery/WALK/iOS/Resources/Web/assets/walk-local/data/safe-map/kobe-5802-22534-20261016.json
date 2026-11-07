@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5802-22534-20261016",
+  "lat": 34.812601827749,
+  "lng": 135.20746923023665,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/dec1d3589d0bf982",
+      "lat": 34.8130486162236,
+      "lng": 135.207834282319,
+      "category": "SAFE",
+      "name": "神戸市立　藤原台小学校",
+      "address": "神戸市北区藤原台南町1丁目13-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区藤原台南町1丁目13-1",
+      "district": "北区",
+      "sourceRow": 2230,
+      "sourceRows": [
+        2230
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4cb7659174d8415d",
+      "lat": 34.8124449134218,
+      "lng": 135.209350045245,
+      "category": "SAFE",
+      "name": "ありの藤原幼稚園",
+      "address": "神戸市北区藤原台南町1丁目11",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区藤原台南町1丁目11",
+      "district": "北区",
+      "sourceRow": 2479,
+      "sourceRows": [
+        2479
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5e353e5dafa77564",
+      "lat": 34.8123119536016,
+      "lng": 135.205223363146,
+      "category": "SAFE",
+      "name": "おおにし内科医院",
+      "address": "神戸市北区藤原台南町４－１０－８",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区藤原台南町４－１０－８",
+      "district": "北区",
+      "sourceRow": 2556,
+      "sourceRows": [
+        2556
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5778-22497-20261016",
+  "lat": 34.671069630413655,
+  "lng": 134.9839076658105,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/6a0679a5c4111a6a",
+      "lat": 34.673470192204,
+      "lng": 134.985587179768,
+      "category": "SAFE",
+      "name": "JA兵庫六甲　玉津支店",
+      "address": "神戸市西区玉津町今津109番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区玉津町今津109番",
+      "district": "西区",
+      "sourceRow": 531,
+      "sourceRows": [
+        531
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/711d933ac0ee3837",
+      "lat": 34.6686690686233,
+      "lng": 134.982228151853,
+      "category": "SAFE",
+      "name": "神戸トヨペット株式会社　明石店",
+      "address": "神戸市西区持子2丁目137",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区持子2丁目137",
+      "district": "西区",
+      "sourceRow": 773,
+      "sourceRows": [
+        773
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

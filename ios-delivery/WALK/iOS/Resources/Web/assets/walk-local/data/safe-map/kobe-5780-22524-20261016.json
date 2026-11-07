@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5780-22524-20261016",
+  "lat": 34.6804848488261,
+  "lng": 135.147502117191,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/77a954294c313dfa",
+      "lat": 34.6802874061385,
+      "lng": 135.148760540439,
+      "category": "SAFE",
+      "name": "神戸市立　房王寺保育所",
+      "address": "神戸市長田区房王寺町5丁目1-5-100",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区房王寺町5丁目1-5-100",
+      "district": "長田区",
+      "sourceRow": 1291,
+      "sourceRows": [
+        1291
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a6faee8ba880256f",
+      "lat": 34.6806822915137,
+      "lng": 135.146243693943,
+      "category": "SAFE",
+      "name": "名倉幼稚園（学校法人　天神学園）",
+      "address": "神戸市長田区長田天神町1丁目17-13",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区長田天神町1丁目17-13",
+      "district": "長田区",
+      "sourceRow": 1328,
+      "sourceRows": [
+        1328
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

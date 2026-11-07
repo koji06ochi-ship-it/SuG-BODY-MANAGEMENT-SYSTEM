@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5786-22491-20261016",
+  "lat": 34.7194850809752,
+  "lng": 134.9473763776533,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/d00603ea61571788",
+      "lat": 34.7171926979196,
+      "lng": 134.946589590816,
+      "category": "SAFE",
+      "name": "特別養護老人ホーム　岩岡の郷",
+      "address": "神戸市西区岩岡町岩岡656番地の2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区岩岡町岩岡656番地の2",
+      "district": "西区",
+      "sourceRow": 535,
+      "sourceRows": [
+        535
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/312a8affe8b59988",
+      "lat": 34.720631272503,
+      "lng": 134.947769771072,
+      "category": "SAFE",
+      "name": "岩岡第一地域福祉センター",
+      "address": "神戸市西区岩岡町岩岡922番地の1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区岩岡町岩岡922番地の1",
+      "district": "西区",
+      "sourceRow": 696,
+      "sourceRows": [
+        696
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f09ed428fe22169a",
+      "lat": 34.720631272503,
+      "lng": 134.947769771072,
+      "category": "SAFE",
+      "name": "神戸市西区役所岩岡出張所",
+      "address": "神戸市西区岩岡町岩岡９２２－１",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区岩岡町岩岡９２２－１",
+      "district": "西区",
+      "sourceRow": 793,
+      "sourceRows": [
+        793
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

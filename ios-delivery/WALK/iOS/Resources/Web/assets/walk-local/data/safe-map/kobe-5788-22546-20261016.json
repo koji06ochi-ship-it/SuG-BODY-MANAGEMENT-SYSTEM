@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5788-22546-20261016",
+  "lat": 34.72869111884931,
+  "lng": 135.27783814349638,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/47ce4286cc3dc839",
+      "lat": 34.7289199328491,
+      "lng": 135.278885512128,
+      "category": "SAFE",
+      "name": "神戸市立　本山第一小学校",
+      "address": "神戸市東灘区本山北町3丁目10-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区本山北町3丁目10-1",
+      "district": "東灘区",
+      "sourceRow": 1411,
+      "sourceRows": [
+        1411
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/936366383a7b797d",
+      "lat": 34.7285849481178,
+      "lng": 135.281043524842,
+      "category": "SAFE",
+      "name": "口分田玄瑞診療所",
+      "address": "神戸市東灘区本山北町2丁目6-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区本山北町2丁目6-5",
+      "district": "東灘区",
+      "sourceRow": 1419,
+      "sourceRows": [
+        1419
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b5f55c147bc81e25",
+      "lat": 34.7287126938628,
+      "lng": 135.276314286808,
+      "category": "SAFE",
+      "name": "中島クリニック",
+      "address": "神戸市東灘区岡本1丁目13-7-202",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区岡本1丁目13-7-202",
+      "district": "東灘区",
+      "sourceRow": 1426,
+      "sourceRows": [
+        1426
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8916d63c6952a3b8",
+      "lat": 34.7281518827459,
+      "lng": 135.276872230439,
+      "category": "SAFE",
+      "name": "本山地域福祉センター",
+      "address": "神戸市東灘区岡本1丁目7－3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区岡本1丁目7－3",
+      "district": "東灘区",
+      "sourceRow": 1466,
+      "sourceRows": [
+        1466
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e57ff2bc42d47fd0",
+      "lat": 34.7281518163608,
+      "lng": 135.276635098076,
+      "category": "SAFE",
+      "name": "神戸市立　本山保育所",
+      "address": "神戸市東灘区岡本1丁目7－6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区岡本1丁目7－6",
+      "district": "東灘区",
+      "sourceRow": 1481,
+      "sourceRows": [
+        1481
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/fb109ed75d388c0b",
+      "lat": 34.7290840923707,
+      "lng": 135.276266685232,
+      "category": "SAFE",
+      "name": "阪急　岡本駅",
+      "address": "神戸市東灘区岡本5丁目1番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区岡本5丁目1番1号",
+      "district": "東灘区",
+      "sourceRow": 1513,
+      "sourceRows": [
+        1513
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0115ec2cc14fa1af",
+      "lat": 34.728530772948,
+      "lng": 135.279491344739,
+      "category": "SAFE",
+      "name": "神戸市立　本山児童館",
+      "address": "神戸市東灘区本山北町3丁目10番2号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区本山北町3丁目10番2号",
+      "district": "東灘区",
+      "sourceRow": 1544,
+      "sourceRows": [
+        1544
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/cd08bbc436a56d41",
+      "lat": 34.7293928115394,
+      "lng": 135.277196465707,
+      "category": "SAFE",
+      "name": "本山幼稚園",
+      "address": "神戸市東灘区本山北町6丁目4-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区本山北町6丁目4-1",
+      "district": "東灘区",
+      "sourceRow": 1644,
+      "sourceRows": [
+        1644
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

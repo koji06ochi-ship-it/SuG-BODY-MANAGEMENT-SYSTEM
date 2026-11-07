@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5787-22544-20261016",
+  "lat": 34.723990519042786,
+  "lng": 135.2665196431179,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/be570973703b1cff",
+      "lat": 34.7253389380611,
+      "lng": 135.269600865312,
+      "category": "SAFE",
+      "name": "神戸市立　本山第二小学校",
+      "address": "神戸市東灘区西岡本1-3-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区西岡本1-3-1",
+      "district": "東灘区",
+      "sourceRow": 1390,
+      "sourceRows": [
+        1390
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/fb93632c29ef3b8b",
+      "lat": 34.7259679422386,
+      "lng": 135.269874625859,
+      "category": "SAFE",
+      "name": "堀本医院",
+      "address": "神戸市東灘区岡本4丁目4-23",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区岡本4丁目4-23",
+      "district": "東灘区",
+      "sourceRow": 1423,
+      "sourceRows": [
+        1423
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/fd1773485350d492",
+      "lat": 34.7227908244974,
+      "lng": 135.269984823362,
+      "category": "SAFE",
+      "name": "神戸市立　田中保育所",
+      "address": "神戸市東灘区田中町4丁目11－22",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区田中町4丁目11－22",
+      "district": "東灘区",
+      "sourceRow": 1473,
+      "sourceRows": [
+        1473
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5293c4084982089a",
+      "lat": 34.7267128535797,
+      "lng": 135.264539338659,
+      "category": "SAFE",
+      "name": "本山西地域福祉センター",
+      "address": "神戸市東灘区西岡本4丁目8-12",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区西岡本4丁目8-12",
+      "district": "東灘区",
+      "sourceRow": 1554,
+      "sourceRows": [
+        1554
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/34a6fb622714fdf2",
+      "lat": 34.7241114176281,
+      "lng": 135.264757211471,
+      "category": "SAFE",
+      "name": "ロングステージＫＯＢＥ岡本（社会福祉法人　鶯園　特別養護老人ホーム）",
+      "address": "神戸市東灘区西岡本2丁目25-4-101",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区西岡本2丁目25-4-101",
+      "district": "東灘区",
+      "sourceRow": 1558,
+      "sourceRows": [
+        1558
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/44a199f8a147875c",
+      "lat": 34.722104203868,
+      "lng": 135.264138545156,
+      "category": "SAFE",
+      "name": "甲南小学校（学校法人甲南学園）",
+      "address": "神戸市東灘区住吉本町1丁目12-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区住吉本町1丁目12-1",
+      "district": "東灘区",
+      "sourceRow": 1574,
+      "sourceRows": [
+        1574
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/697c6e17f9b5fb0a",
+      "lat": 34.722104203868,
+      "lng": 135.264138545156,
+      "category": "SAFE",
+      "name": "甲南幼稚園（学校法人甲南学園）",
+      "address": "神戸市東灘区住吉本町1丁目12-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区住吉本町1丁目12-1",
+      "district": "東灘区",
+      "sourceRow": 1575,
+      "sourceRows": [
+        1575
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/49f0f49b213a08e6",
+      "lat": 34.7221595366565,
+      "lng": 135.265836199905,
+      "category": "SAFE",
+      "name": "オーキッドコート",
+      "address": "神戸市東灘区西岡本2丁目7-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区西岡本2丁目7-2",
+      "district": "東灘区",
+      "sourceRow": 1634,
+      "sourceRows": [
+        1634
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b7ace4769d37059d",
+      "lat": 34.7246247509877,
+      "lng": 135.265806633181,
+      "category": "SAFE",
+      "name": "にん歯科クリニック",
+      "address": "神戸市東灘区西岡本2丁目26-1-132",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区西岡本2丁目26-1-132",
+      "district": "東灘区",
+      "sourceRow": 1702,
+      "sourceRows": [
+        1702
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5778-22751",
+  "lat": 34.67168075,
+  "lng": 136.5094625,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.673002,
+      "lng": 136.509305,
+      "category": "SAFE",
+      "name": "南郊公民館",
+      "address": "津市高茶屋三丁目25-6",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "高茶屋三丁目25-6",
+      "district": "津",
+      "sourceRow": 49,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/60e710c64e046ef5",
+      "sourceRows": [
+        49
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.672707,
+      "lng": 136.510312,
+      "category": "SAFE",
+      "name": "高茶屋幼稚園",
+      "address": "津市高茶屋三丁目1-1",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "高茶屋三丁目1-1",
+      "district": "津",
+      "sourceRow": 71,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/1ac191142896e1d1",
+      "sourceRows": [
+        71
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.671668,
+      "lng": 136.509122,
+      "category": "SAFE",
+      "name": "高茶屋小学校",
+      "address": "津市高茶屋三丁目1-1",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "高茶屋三丁目1-1",
+      "district": "津",
+      "sourceRow": 82,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/0f5aa4e41c286d49",
+      "sourceRows": [
+        82
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.669346,
+      "lng": 136.509111,
+      "category": "SAFE",
+      "name": "南郊中学校",
+      "address": "津市高茶屋四丁目44-1",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "高茶屋四丁目44-1",
+      "district": "津",
+      "sourceRow": 102,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/ce8ba8cd826b5ba8",
+      "sourceRows": [
+        102
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

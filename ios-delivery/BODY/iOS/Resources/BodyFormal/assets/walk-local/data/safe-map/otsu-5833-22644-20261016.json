@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "id": "otsu-5833-22644-20261016",
+  "lat": 35.001132847499996,
+  "lng": 135.86679911666667,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "大津市",
+  "source": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+  "sourceUrl": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/999caef4-7e90-4fd2-98eb-fd94368e9a2f/resource/3e5b513e-de51-4459-af70-6fda94e1bed3/download/od405902026022700200.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2025-03-12",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "7899826cf95c365a07c87b3ad05aa2aa7d4adeb440a2c57269c84f98c1d85ea8",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/otsu/aed/e497a406ed43a34e",
+      "lat": 35.00178556,
+      "lng": 135.8641656,
+      "category": "SAFE",
+      "name": "レスペクテ",
+      "address": "大津市御幸町1番27号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市御幸町1番27号",
+      "district": "大津市",
+      "sourceRow": 195,
+      "sourceRows": [
+        195
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/07b4042158239c86",
+      "lat": 35.00178417,
+      "lng": 135.8641506,
+      "category": "SAFE",
+      "name": "レスペクテ",
+      "address": "大津市御幸町1番27号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市御幸町1番27号",
+      "district": "大津市",
+      "sourceRow": 196,
+      "sourceRows": [
+        196
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/da67d0b744c8b57c",
+      "lat": 35.00175778,
+      "lng": 135.8641822,
+      "category": "SAFE",
+      "name": "レスペクテ",
+      "address": "大津市御幸町1番27号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市御幸町1番27号",
+      "district": "大津市",
+      "sourceRow": 197,
+      "sourceRows": [
+        197
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/391c1ca562b49792",
+      "lat": 35.00075944,
+      "lng": 135.8674964,
+      "category": "SAFE",
+      "name": "滋賀銀行　大津駅前支店",
+      "address": "大津市末広町1番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市末広町1番1号",
+      "district": "大津市",
+      "sourceRow": 199,
+      "sourceRows": [
+        199
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/b1d1a0c03c0d1596",
+      "lat": 35.00273,
+      "lng": 135.8657022,
+      "category": "SAFE",
+      "name": "小規模保育所ぽっけ",
+      "address": "大津市御幸町5番17号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市御幸町5番17号",
+      "district": "大津市",
+      "sourceRow": 200,
+      "sourceRows": [
+        200
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/e1b5e43352b68b6c",
+      "lat": 35.00018528,
+      "lng": 135.8677936,
+      "category": "SAFE",
+      "name": "西日本旅客鉄道株式会社　大津駅",
+      "address": "大津市春日町1番3号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市春日町1番3号",
+      "district": "大津市",
+      "sourceRow": 201,
+      "sourceRows": [
+        201
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/1caee0500cd4f6b1",
+      "lat": 34.99869861,
+      "lng": 135.8682111,
+      "category": "SAFE",
+      "name": "大津市立逢坂小学校",
+      "address": "大津市音羽台6番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市音羽台6番1号",
+      "district": "大津市",
+      "sourceRow": 203,
+      "sourceRows": [
+        203
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/0491f6a7f04a9cf9",
+      "lat": 34.99876889,
+      "lng": 135.8666172,
+      "category": "SAFE",
+      "name": "大津市立逢坂幼稚園",
+      "address": "大津市音羽台6番2号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市音羽台6番2号",
+      "district": "大津市",
+      "sourceRow": 204,
+      "sourceRows": [
+        204
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/f878209f6b3d73ec",
+      "lat": 35.00115861,
+      "lng": 135.8683642,
+      "category": "SAFE",
+      "name": "逢坂公民館",
+      "address": "大津市京町三丁目1番3号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市京町三丁目1番3号",
+      "district": "大津市",
+      "sourceRow": 212,
+      "sourceRows": [
+        212
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/dbadb8a47cec64e0",
+      "lat": 35.00316694,
+      "lng": 135.8662,
+      "category": "SAFE",
+      "name": "京滋信用組合　滋賀支店",
+      "address": "大津市京町一丁目1番46号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市京町一丁目1番46号",
+      "district": "大津市",
+      "sourceRow": 214,
+      "sourceRows": [
+        214
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/0b75819d941b921a",
+      "lat": 35.00131889,
+      "lng": 135.8694794,
+      "category": "SAFE",
+      "name": "大津地方・家庭裁判所",
+      "address": "大津市京町三丁目1番2号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市京町三丁目1番2号",
+      "district": "大津市",
+      "sourceRow": 221,
+      "sourceRows": [
+        221
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/e1cf90ac77394768",
+      "lat": 35.00148,
+      "lng": 135.8692269,
+      "category": "SAFE",
+      "name": "大津地方・家庭裁判所",
+      "address": "大津市京町三丁目1番2号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市京町三丁目1番2号",
+      "district": "大津市",
+      "sourceRow": 222,
+      "sourceRows": [
+        222
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

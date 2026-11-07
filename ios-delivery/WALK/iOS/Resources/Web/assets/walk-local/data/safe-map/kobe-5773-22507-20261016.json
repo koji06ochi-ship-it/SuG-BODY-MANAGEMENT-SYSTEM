@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5773-22507-20261016",
+  "lat": 34.640451172089136,
+  "lng": 135.045706925189,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/97ffd7cb187bbcb0",
+      "lat": 34.6387490653931,
+      "lng": 135.046214977348,
+      "category": "SAFE",
+      "name": "神戸市立　星陵台児童館",
+      "address": "神戸市垂水区星陵台1丁目1番3号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区星陵台1丁目1番3号",
+      "district": "垂水区",
+      "sourceRow": 355,
+      "sourceRows": [
+        355
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c6258d77519a45d6",
+      "lat": 34.6429164037163,
+      "lng": 135.045743692886,
+      "category": "SAFE",
+      "name": "星陵台地域福祉センター",
+      "address": "神戸市垂水区星陵台7丁目5－3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区星陵台7丁目5－3",
+      "district": "垂水区",
+      "sourceRow": 383,
+      "sourceRows": [
+        383
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4bcd3d29a3dad390",
+      "lat": 34.6396971380015,
+      "lng": 135.046521566027,
+      "category": "SAFE",
+      "name": "ライフスポーツKTV垂水",
+      "address": "神戸市垂水区星陵台1丁目4-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区星陵台1丁目4-1",
+      "district": "垂水区",
+      "sourceRow": 422,
+      "sourceRows": [
+        422
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/78647517f535ac03",
+      "lat": 34.6384347086812,
+      "lng": 135.042740663265,
+      "category": "SAFE",
+      "name": "愛徳学園中・高等学校",
+      "address": "神戸市垂水区歌敷山3丁目6-49",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区歌敷山3丁目6-49",
+      "district": "垂水区",
+      "sourceRow": 425,
+      "sourceRows": [
+        425
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6470e47c4a5b4185",
+      "lat": 34.6432719537864,
+      "lng": 135.04684041359,
+      "category": "SAFE",
+      "name": "星陵台めぐみ幼稚園",
+      "address": "神戸市垂水区星陵台4-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区星陵台4-2",
+      "district": "垂水区",
+      "sourceRow": 453,
+      "sourceRows": [
+        453
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/67799dc2cfda3581",
+      "lat": 34.6396377629563,
+      "lng": 135.046180238018,
+      "category": "SAFE",
+      "name": "けん歯科クリニック",
+      "address": "神戸市垂水区星陵台1丁目4-8",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区星陵台1丁目4-8",
+      "district": "垂水区",
+      "sourceRow": 457,
+      "sourceRows": [
+        457
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

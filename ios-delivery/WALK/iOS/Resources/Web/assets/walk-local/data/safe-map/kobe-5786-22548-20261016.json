@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5786-22548-20261016",
+  "lat": 34.72046601533635,
+  "lng": 135.290135939237,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/dfb8157456756b47",
+      "lat": 34.7191102735087,
+      "lng": 135.289365109256,
+      "category": "SAFE",
+      "name": "神戸大学　保健管理センター深江分室",
+      "address": "神戸市東灘区深江南町5-1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区深江南町5-1-1",
+      "district": "東灘区",
+      "sourceRow": 1372,
+      "sourceRows": [
+        1372
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bd282638b05ac965",
+      "lat": 34.7210180535245,
+      "lng": 135.288630458475,
+      "category": "SAFE",
+      "name": "神戸市立　本庄小学校",
+      "address": "神戸市東灘区青木4丁目4-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区青木4丁目4-1",
+      "district": "東灘区",
+      "sourceRow": 1408,
+      "sourceRows": [
+        1408
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/cdc9f24c51f971a0",
+      "lat": 34.720214788766,
+      "lng": 135.289009196897,
+      "category": "SAFE",
+      "name": "神戸市立　東灘本庄保育所",
+      "address": "神戸市東灘区青木4丁目1番32号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区青木4丁目1番32号",
+      "district": "東灘区",
+      "sourceRow": 1483,
+      "sourceRows": [
+        1483
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/577a6c34f17a0d5b",
+      "lat": 34.7213780840893,
+      "lng": 135.289969392727,
+      "category": "SAFE",
+      "name": "神戸地方法務局東神戸出張所",
+      "address": "神戸市東灘区深江本町4丁目4-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区深江本町4丁目4-1",
+      "district": "東灘区",
+      "sourceRow": 1577,
+      "sourceRows": [
+        1577
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e88fb660ebe539ed",
+      "lat": 34.7198637943913,
+      "lng": 135.293092637539,
+      "category": "SAFE",
+      "name": "JEIS神戸",
+      "address": "神戸市東灘区深江南町4-6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区深江南町4-6",
+      "district": "東灘区",
+      "sourceRow": 1715,
+      "sourceRows": [
+        1715
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7db6f4ab33edf116",
+      "lat": 34.7212110977383,
+      "lng": 135.290748840528,
+      "category": "SAFE",
+      "name": "認定こども園　ふかえ虹こども園",
+      "address": "神戸市東灘区深江本町4丁目1-12",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区深江本町4丁目1-12",
+      "district": "東灘区",
+      "sourceRow": 1721,
+      "sourceRows": [
+        1721
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

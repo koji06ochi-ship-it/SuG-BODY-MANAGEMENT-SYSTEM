@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5788-22562-20261016",
+  "lat": 34.7315369325,
+  "lng": 135.37585435,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/5399b1b92137aedd",
+      "lat": 34.73255956,
+      "lng": 135.3779724,
+      "category": "SAFE",
+      "name": "鳴尾北保育所",
+      "address": "兵庫県西宮市戸崎町１－７０",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市戸崎町１－７０",
+      "district": "西宮市",
+      "sourceRow": 100,
+      "sourceRows": [
+        100
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/5d0ff6c34b84b4f2",
+      "lat": 34.73304942,
+      "lng": 135.3760517,
+      "category": "SAFE",
+      "name": "西宮セリジェ保育園",
+      "address": "兵庫県西宮市戸崎町４－１２",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市戸崎町４－１２",
+      "district": "西宮市",
+      "sourceRow": 336,
+      "sourceRows": [
+        336
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/9a6dd01e23578a8b",
+      "lat": 34.73239663,
+      "lng": 135.373883,
+      "category": "SAFE",
+      "name": "関小児科病院",
+      "address": "兵庫県西宮市甲子園二番町２－２１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲子園二番町２－２１",
+      "district": "西宮市",
+      "sourceRow": 481,
+      "sourceRows": [
+        481
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/2e3e6a4ec01b57eb",
+      "lat": 34.72814212,
+      "lng": 135.3755103,
+      "category": "SAFE",
+      "name": "むとう耳鼻咽喉科クリニック",
+      "address": "兵庫県西宮市若草町１丁目８－１０",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市若草町１丁目８－１０",
+      "district": "西宮市",
+      "sourceRow": 487,
+      "sourceRows": [
+        487
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

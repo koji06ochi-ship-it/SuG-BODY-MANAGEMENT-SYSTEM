@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5774-22512-20261016",
+  "lat": 34.6462340738893,
+  "lng": 135.07615720768,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/7a0cc9adc82c6aa9",
+      "lat": 34.6462340738893,
+      "lng": 135.07615720768,
+      "category": "SAFE",
+      "name": "コナミスポーツクラブ　ジェームス山店",
+      "address": "神戸市垂水区青山台7－7－1イオンジェームス山店4Ｆ",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区青山台7－7－1イオンジェームス山店4Ｆ",
+      "district": "垂水区",
+      "sourceRow": 269,
+      "sourceRows": [
+        269
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/396173d1d15e36c6",
+      "lat": 34.6462340738893,
+      "lng": 135.07615720768,
+      "category": "SAFE",
+      "name": "イオンジェームス山店",
+      "address": "神戸市垂水区青山台7丁目7-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区青山台7丁目7-1",
+      "district": "垂水区",
+      "sourceRow": 410,
+      "sourceRows": [
+        410
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

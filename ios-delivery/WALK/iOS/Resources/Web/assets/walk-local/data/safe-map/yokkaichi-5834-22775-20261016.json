@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "yokkaichi-5834-22775-20261016",
+  "lat": 35.005623022,
+  "lng": 136.65206926000002,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "四日市市",
+  "source": "四日市市内公共施設 AED設置箇所一覧",
+  "sourceUrl": "https://data.bodik.jp/dataset/242021_00127",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/422f8da8-0b3c-4d84-b8dd-d88d18e914ce/resource/2a5eee8b-c455-4c2e-8553-b0d3d36e5ef2/download/242021_aed.csv",
+  "sourceUpdatedAt": "2024-12-18",
+  "sourcePageUpdatedAt": "2025-01-24",
+  "retrievedAt": "2026-10-15T15:44:16.747Z",
+  "sourceFileSha256": "c0880c81977c7fc444213ee84ef31a7b2e9e34f12d31e892064cbabb7d5159cf",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/yokkaichi/aed/e8e8253ead4cff79",
+      "lat": 35.00548399,
+      "lng": 136.6500011,
+      "category": "SAFE",
+      "name": "富田小学校",
+      "address": "四日市市富田1丁目24-49",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市富田1丁目24-49",
+      "sourceRow": 44,
+      "sourceRows": [
+        44,
+        45
+      ],
+      "duplicateSourceEntries": 2
+    },
+    {
+      "id": "municipality/yokkaichi/aed/ded58886abcf8828",
+      "lat": 35.00678406,
+      "lng": 136.6548671,
+      "category": "SAFE",
+      "name": "富田こども園",
+      "address": "四日市市富田2丁目12-9",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市富田2丁目12-9",
+      "sourceRow": 141,
+      "sourceRows": [
+        141
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/61479e9bbaa9979e",
+      "lat": 35.00515128,
+      "lng": 136.6506098,
+      "category": "SAFE",
+      "name": "富田地区市民センター",
+      "address": "四日市市富田一丁目24-47",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市富田一丁目24-47",
+      "sourceRow": 161,
+      "sourceRows": [
+        161
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/013356d1084a7e6f",
+      "lat": 35.00521179,
+      "lng": 136.6548672,
+      "category": "SAFE",
+      "name": "北消防署",
+      "address": "四日市市富田二丁目4番15号",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市富田二丁目4番15号",
+      "sourceRow": 214,
+      "sourceRows": [
+        214
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

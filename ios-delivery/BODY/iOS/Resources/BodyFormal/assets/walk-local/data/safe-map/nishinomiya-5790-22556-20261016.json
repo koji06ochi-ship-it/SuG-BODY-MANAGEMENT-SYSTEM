@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5790-22556-20261016",
+  "lat": 34.7424143975,
+  "lng": 135.3399925375,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/54c4ceb820013ead",
+      "lat": 34.74128215,
+      "lng": 135.3398891,
+      "category": "SAFE",
+      "name": "兵庫六甲農業協同組合西宮支店",
+      "address": "兵庫県西宮市江上町８－２１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市江上町８－２１",
+      "district": "西宮市",
+      "sourceRow": 297,
+      "sourceRows": [
+        297
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/0763125764633a5d",
+      "lat": 34.74164176,
+      "lng": 135.3411881,
+      "category": "SAFE",
+      "name": "株式会社公益社　西宮山手会館",
+      "address": "兵庫県西宮市城ケ堀町１－４０",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市城ケ堀町１－４０",
+      "district": "西宮市",
+      "sourceRow": 302,
+      "sourceRows": [
+        302
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/d94f61b31fbbd63c",
+      "lat": 34.7431784,
+      "lng": 135.3392424,
+      "category": "SAFE",
+      "name": "尼崎信用金庫西宮支店",
+      "address": "兵庫県西宮市城ケ堀町７－１５",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市城ケ堀町７－１５",
+      "district": "西宮市",
+      "sourceRow": 303,
+      "sourceRows": [
+        303
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/249b8e4aa2371b8b",
+      "lat": 34.74207253,
+      "lng": 135.3397372,
+      "category": "SAFE",
+      "name": "住友林業株式会社住宅・建築事業本部神戸支店阪神営業所",
+      "address": "兵庫県西宮市城ヶ堀町３－７",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市城ヶ堀町３－７",
+      "district": "西宮市",
+      "sourceRow": 365,
+      "sourceRows": [
+        365
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/a50b26ebf3d4af37",
+      "lat": 34.74205062,
+      "lng": 135.3412197,
+      "category": "SAFE",
+      "name": "西宮市社会福祉事業団　安井地域包括支援センター",
+      "address": "兵庫県西宮市城ヶ堀町１－39",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市城ヶ堀町１－39",
+      "district": "西宮市",
+      "sourceRow": 371,
+      "sourceRows": [
+        371
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/32058ee12f2555f5",
+      "lat": 34.74273406,
+      "lng": 135.3371189,
+      "category": "SAFE",
+      "name": "いわはし眼科クリニック",
+      "address": "兵庫県西宮市末広町２-15",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市末広町２-15",
+      "district": "西宮市",
+      "sourceRow": 375,
+      "sourceRows": [
+        375
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/7ac692150f2e2d59",
+      "lat": 34.74114214,
+      "lng": 135.3415701,
+      "category": "SAFE",
+      "name": "西宮税務署",
+      "address": "兵庫県西宮市江上町３－３５",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市江上町３－３５",
+      "district": "西宮市",
+      "sourceRow": 381,
+      "sourceRows": [
+        381
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/537bda7aa695376e",
+      "lat": 34.74521352,
+      "lng": 135.3399748,
+      "category": "SAFE",
+      "name": "川崎医院",
+      "address": "兵庫県西宮市越水町７－３",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市越水町７－３",
+      "district": "西宮市",
+      "sourceRow": 392,
+      "sourceRows": [
+        392
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5778-22502-20261016",
+  "lat": 34.67236952428505,
+  "lng": 135.0129382041855,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/5ec54cbde0f0167d",
+      "lat": 34.6719330223163,
+      "lng": 135.012389843425,
+      "category": "SAFE",
+      "name": "神戸市立　伊川谷小学校",
+      "address": "神戸市西区北別府3-3-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区北別府3-3-1",
+      "district": "西区",
+      "sourceRow": 503,
+      "sourceRows": [
+        503
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ae19caed714a7dda",
+      "lat": 34.6728060262538,
+      "lng": 135.013486564946,
+      "category": "SAFE",
+      "name": "神戸市立　伊川谷児童館",
+      "address": "神戸市西区北別府3-6-9",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区北別府3-6-9",
+      "district": "西区",
+      "sourceRow": 685,
+      "sourceRows": [
+        685
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

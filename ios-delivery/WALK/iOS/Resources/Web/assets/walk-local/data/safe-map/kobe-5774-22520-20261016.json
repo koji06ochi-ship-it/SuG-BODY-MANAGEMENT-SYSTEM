@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5774-22520-20261016",
+  "lat": 34.6465338125355,
+  "lng": 135.1226492479277,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/192e27320465197d",
+      "lat": 34.6465309648424,
+      "lng": 135.120512514784,
+      "category": "SAFE",
+      "name": "神戸市立　西須磨小学校",
+      "address": "神戸市須磨区行幸町3丁目4－18",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区行幸町3丁目4－18",
+      "district": "須磨区",
+      "sourceRow": 64,
+      "sourceRows": [
+        64
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ffd45d99ebaacc83",
+      "lat": 34.6447432750505,
+      "lng": 135.125190685222,
+      "category": "SAFE",
+      "name": "中嶋石油株式会社セルフ須磨S.S",
+      "address": "神戸市須磨区行幸町1丁目1－6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区行幸町1丁目1－6",
+      "district": "須磨区",
+      "sourceRow": 83,
+      "sourceRows": [
+        83
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/156f05edfcff1947",
+      "lat": 34.6491620074557,
+      "lng": 135.122304234299,
+      "category": "SAFE",
+      "name": "三井住友銀行　須磨支店",
+      "address": "神戸市須磨区月見山本町2-4-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区月見山本町2-4-2",
+      "district": "須磨区",
+      "sourceRow": 84,
+      "sourceRows": [
+        84
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ef278d71db08a0c6",
+      "lat": 34.6483572195935,
+      "lng": 135.122329248523,
+      "category": "SAFE",
+      "name": "コープこうべ　コープ須磨",
+      "address": "神戸市須磨区月見山本町1丁目9－28",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区月見山本町1丁目9－28",
+      "district": "須磨区",
+      "sourceRow": 166,
+      "sourceRows": [
+        166
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ee23fa9b50028af4",
+      "lat": 34.6461770088634,
+      "lng": 135.121625145572,
+      "category": "SAFE",
+      "name": "兵庫大学付属須磨幼稚園",
+      "address": "神戸市須磨区行幸町2丁目6-19",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区行幸町2丁目6-19",
+      "district": "須磨区",
+      "sourceRow": 174,
+      "sourceRows": [
+        174
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d1f8dd391ba11e23",
+      "lat": 34.646033855141,
+      "lng": 135.122497195243,
+      "category": "SAFE",
+      "name": "兵庫大学付属須磨ノ浦高等学校",
+      "address": "神戸市須磨区行幸町2丁目7-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区行幸町2丁目7-3",
+      "district": "須磨区",
+      "sourceRow": 202,
+      "sourceRows": [
+        202
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/641aed245b44278d",
+      "lat": 34.644732356802,
+      "lng": 135.124085711851,
+      "category": "SAFE",
+      "name": "幼保連携型認定こども園　村雨こども園",
+      "address": "神戸市須磨区行幸町1丁目2-26",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区行幸町1丁目2-26",
+      "district": "須磨区",
+      "sourceRow": 213,
+      "sourceRows": [
+        213
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

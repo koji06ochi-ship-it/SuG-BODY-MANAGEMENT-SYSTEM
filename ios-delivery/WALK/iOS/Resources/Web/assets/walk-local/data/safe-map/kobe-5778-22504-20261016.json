@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5778-22504-20261016",
+  "lat": 34.671775400262746,
+  "lng": 135.02435269413002,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/b4511cb42a28aeee",
+      "lat": 34.6719903155967,
+      "lng": 135.024027002668,
+      "category": "SAFE",
+      "name": "イトマンスイミングスクール西神戸校",
+      "address": "神戸市西区池上3丁目3-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区池上3丁目3-3",
+      "district": "西区",
+      "sourceRow": 490,
+      "sourceRows": [
+        490
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9e2e75e9f9f38026",
+      "lat": 34.6716250083598,
+      "lng": 135.025042642101,
+      "category": "SAFE",
+      "name": "みなと銀行　伊川谷支店",
+      "address": "神戸市西区池上2丁目22－6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区池上2丁目22－6",
+      "district": "西区",
+      "sourceRow": 582,
+      "sourceRows": [
+        582
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1eefe597ddb9f754",
+      "lat": 34.6719903155967,
+      "lng": 135.024027002668,
+      "category": "SAFE",
+      "name": "兵庫六甲農業共同組合　池上支店",
+      "address": "神戸市西区池上3丁目3-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区池上3丁目3-2",
+      "district": "西区",
+      "sourceRow": 588,
+      "sourceRows": [
+        588
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f55729dcba99177a",
+      "lat": 34.6714959614978,
+      "lng": 135.024314129083,
+      "category": "SAFE",
+      "name": "コープこうべ　コープデイズ神戸西",
+      "address": "神戸市西区池上3丁目3-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区池上3丁目3-1",
+      "district": "西区",
+      "sourceRow": 733,
+      "sourceRows": [
+        733
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

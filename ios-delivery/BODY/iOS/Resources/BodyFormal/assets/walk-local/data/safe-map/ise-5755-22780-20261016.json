@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5755-22780-20261016",
+  "lat": 34.534782,
+  "lng": 136.684358,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/d2395a6bfc53de72",
+      "lat": 34.534793,
+      "lng": 136.684704,
+      "category": "SAFE",
+      "name": "伊勢市立桜浜中学校",
+      "address": "伊勢市植山町461",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市植山町461",
+      "sourceRow": 66,
+      "sourceRows": [
+        66
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/86672082b4a4c337",
+      "lat": 34.534771,
+      "lng": 136.684012,
+      "category": "SAFE",
+      "name": "伊勢市立桜浜中学校　体育館",
+      "address": "伊勢市植山町461番地",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市植山町461番地",
+      "sourceRow": 67,
+      "sourceRows": [
+        67
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5808-22535-20261016",
+  "lat": 34.85122110934593,
+  "lng": 135.21411174196325,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/6bd2367675ae278a",
+      "lat": 34.8501428186343,
+      "lng": 135.213250106783,
+      "category": "SAFE",
+      "name": "特別養護老人ホーム　八多の里",
+      "address": "神戸市北区八多町中681番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区八多町中681番",
+      "district": "北区",
+      "sourceRow": 2424,
+      "sourceRows": [
+        2424
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/726964c6a8cc1a72",
+      "lat": 34.8502287569819,
+      "lng": 135.214013479609,
+      "category": "SAFE",
+      "name": "小規模特別養護老人ホーム　ほわいえ",
+      "address": "神戸市北区八多町中1306番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区八多町中1306番",
+      "district": "北区",
+      "sourceRow": 2425,
+      "sourceRows": [
+        2425
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c80dd42c1f81fbc9",
+      "lat": 34.8521150889501,
+      "lng": 135.214201258071,
+      "category": "SAFE",
+      "name": "星の社こども園",
+      "address": "神戸市北区鹿の子台南町1丁目2-15",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鹿の子台南町1丁目2-15",
+      "district": "北区",
+      "sourceRow": 2551,
+      "sourceRows": [
+        2551
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/efff4b09afeae085",
+      "lat": 34.8523977728174,
+      "lng": 135.21498212339,
+      "category": "SAFE",
+      "name": "小規模保育園ステラ",
+      "address": "神戸市北区鹿の子台南町１丁目３-３",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鹿の子台南町１丁目３-３",
+      "district": "北区",
+      "sourceRow": 2579,
+      "sourceRows": [
+        2579
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

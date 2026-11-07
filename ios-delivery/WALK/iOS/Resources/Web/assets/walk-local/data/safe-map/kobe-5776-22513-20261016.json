@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5776-22513-20261016",
+  "lat": 34.65769814091978,
+  "lng": 135.0806916889896,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/9c18922b6e1fd606",
+      "lat": 34.6580872438162,
+      "lng": 135.080229428814,
+      "category": "SAFE",
+      "name": "神戸市立　桃山台中学校",
+      "address": "神戸市垂水区桃山台4-8",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区桃山台4-8",
+      "district": "垂水区",
+      "sourceRow": 285,
+      "sourceRows": [
+        285
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5c1687e5ec68077e",
+      "lat": 34.6561196695878,
+      "lng": 135.082992290415,
+      "category": "SAFE",
+      "name": "神戸市立　下畑台小学校",
+      "address": "神戸市垂水区桃山台3丁目20番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区桃山台3丁目20番地",
+      "district": "垂水区",
+      "sourceRow": 301,
+      "sourceRows": [
+        301
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/77ca1c7328451f95",
+      "lat": 34.6574706171019,
+      "lng": 135.078470238078,
+      "category": "SAFE",
+      "name": "神戸市立　つつじが丘小学校",
+      "address": "神戸市垂水区つつじヶ丘3丁目1385番地の79",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区つつじヶ丘3丁目1385番地の79",
+      "district": "垂水区",
+      "sourceRow": 302,
+      "sourceRows": [
+        302
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e65cd09798b16e59",
+      "lat": 34.6563802539256,
+      "lng": 135.08112018929,
+      "category": "SAFE",
+      "name": "神戸市立　桃山台児童館",
+      "address": "神戸市垂水区桃山台3丁目25番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区桃山台3丁目25番地",
+      "district": "垂水区",
+      "sourceRow": 369,
+      "sourceRows": [
+        369
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/92908f4a6ac4f004",
+      "lat": 34.6563802539256,
+      "lng": 135.08112018929,
+      "category": "SAFE",
+      "name": "桃山台地域福祉センター",
+      "address": "神戸市垂水区桃山台3丁目25番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区桃山台3丁目25番",
+      "district": "垂水区",
+      "sourceRow": 385,
+      "sourceRows": [
+        385
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/28363feae3367faf",
+      "lat": 34.6572249806076,
+      "lng": 135.081136005962,
+      "category": "SAFE",
+      "name": "コープこうべ　コープ桃山台店",
+      "address": "神戸市垂水区桃山台3丁目23-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区桃山台3丁目23-3",
+      "district": "垂水区",
+      "sourceRow": 399,
+      "sourceRows": [
+        399
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4f0a241ce73087e6",
+      "lat": 34.6618949509262,
+      "lng": 135.079427155296,
+      "category": "SAFE",
+      "name": "グループホーム　ハッピージョイ",
+      "address": "神戸市垂水区桃山台7丁目5－10",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区桃山台7丁目5－10",
+      "district": "垂水区",
+      "sourceRow": 401,
+      "sourceRows": [
+        401
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0962a281c81d2770",
+      "lat": 34.6570289365071,
+      "lng": 135.081503085966,
+      "category": "SAFE",
+      "name": "桃の木幼稚園",
+      "address": "神戸市垂水区桃山台3丁目23-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区桃山台3丁目23-2",
+      "district": "垂水区",
+      "sourceRow": 423,
+      "sourceRows": [
+        423
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/16a44f7668d2cc05",
+      "lat": 34.656191905402,
+      "lng": 135.080089754827,
+      "category": "SAFE",
+      "name": "元村歯科医院",
+      "address": "神戸市垂水区桃山台3丁目11-10",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区桃山台3丁目11-10",
+      "district": "垂水区",
+      "sourceRow": 427,
+      "sourceRows": [
+        427
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/97635ac9af0c2b28",
+      "lat": 34.6602025973978,
+      "lng": 135.080828551958,
+      "category": "SAFE",
+      "name": "大山歯科クリニック",
+      "address": "神戸市垂水区桃山台6丁目1499-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区桃山台6丁目1499-2",
+      "district": "垂水区",
+      "sourceRow": 464,
+      "sourceRows": [
+        464
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

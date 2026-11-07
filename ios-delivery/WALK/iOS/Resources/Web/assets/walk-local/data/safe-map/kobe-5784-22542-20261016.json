@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5784-22542-20261016",
+  "lat": 34.70809087081377,
+  "lng": 135.2555176778683,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/7d4095e4b926ca72",
+      "lat": 34.7080784410399,
+      "lng": 135.257850750491,
+      "category": "SAFE",
+      "name": "日通商事株式会社　神戸LSセンター",
+      "address": "神戸市東灘区御影本町3－1－4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影本町3－1－4",
+      "district": "東灘区",
+      "sourceRow": 1518,
+      "sourceRows": [
+        1518
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b6207cb7a78d8bfc",
+      "lat": 34.7068233218642,
+      "lng": 135.254987296298,
+      "category": "SAFE",
+      "name": "コープこうべ　協同購入センター六甲",
+      "address": "神戸市東灘区御影浜町3番2号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影浜町3番2号",
+      "district": "東灘区",
+      "sourceRow": 1530,
+      "sourceRows": [
+        1530
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/506499192e7f4550",
+      "lat": 34.7093708495372,
+      "lng": 135.253714986816,
+      "category": "SAFE",
+      "name": "アネシス御影",
+      "address": "神戸市東灘区御影石町1-1-32",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影石町1-1-32",
+      "district": "東灘区",
+      "sourceRow": 1679,
+      "sourceRows": [
+        1679
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

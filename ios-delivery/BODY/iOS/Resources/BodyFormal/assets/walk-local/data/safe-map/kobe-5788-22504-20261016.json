@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5788-22504-20261016",
+  "lat": 34.733270481909265,
+  "lng": 135.02736067279918,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/293c299e4339fac3",
+      "lat": 34.7331571816106,
+      "lng": 135.027956242425,
+      "category": "SAFE",
+      "name": "神戸製綱所 技術開発本部　１号館",
+      "address": "神戸市西区高塚台1丁目5-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区高塚台1丁目5-5",
+      "district": "西区",
+      "sourceRow": 571,
+      "sourceRows": [
+        571
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/db59ec85566899a7",
+      "lat": 34.7331571816106,
+      "lng": 135.027956242425,
+      "category": "SAFE",
+      "name": "神戸製綱所 技術開発本部　４号館",
+      "address": "神戸市西区高塚台1丁目5-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区高塚台1丁目5-5",
+      "district": "西区",
+      "sourceRow": 572,
+      "sourceRows": [
+        572
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8d51f46c4bbbfc5a",
+      "lat": 34.7331571816106,
+      "lng": 135.027956242425,
+      "category": "SAFE",
+      "name": "神戸製綱所 技術開発本部　南門警備室",
+      "address": "神戸市西区高塚台1丁目5-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区高塚台1丁目5-5",
+      "district": "西区",
+      "sourceRow": 573,
+      "sourceRows": [
+        573
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9b2601b2b247be6c",
+      "lat": 34.7331571816106,
+      "lng": 135.027956242425,
+      "category": "SAFE",
+      "name": "神戸製綱所 技術開発本部　第６実験棟",
+      "address": "神戸市西区高塚台1丁目5-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区高塚台1丁目5-5",
+      "district": "西区",
+      "sourceRow": 574,
+      "sourceRows": [
+        574
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2724cbe802e5999d",
+      "lat": 34.7331571816106,
+      "lng": 135.027956242425,
+      "category": "SAFE",
+      "name": "神戸製綱所 技術開発本部　第４実験棟",
+      "address": "神戸市西区高塚台1丁目5-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区高塚台1丁目5-5",
+      "district": "西区",
+      "sourceRow": 575,
+      "sourceRows": [
+        575
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d2abbbea0655bd7b",
+      "lat": 34.7338369834026,
+      "lng": 135.02438282467,
+      "category": "SAFE",
+      "name": "株式会社カネカフード",
+      "address": "神戸市西区高塚台2-11-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区高塚台2-11-1",
+      "district": "西区",
+      "sourceRow": 673,
+      "sourceRows": [
+        673
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

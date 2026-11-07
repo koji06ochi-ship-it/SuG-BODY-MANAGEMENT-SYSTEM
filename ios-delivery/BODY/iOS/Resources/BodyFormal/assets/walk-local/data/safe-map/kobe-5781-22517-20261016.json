@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5781-22517-20261016",
+  "lat": 34.689468110287066,
+  "lng": 135.1026898599783,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/5ecda87f7a59b055",
+      "lat": 34.6864573700344,
+      "lng": 135.102685894927,
+      "category": "SAFE",
+      "name": "東落合地域福祉センター",
+      "address": "神戸市須磨区東落合3丁目33－12",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区東落合3丁目33－12",
+      "district": "須磨区",
+      "sourceRow": 148,
+      "sourceRows": [
+        148
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/99f54fca0941c41b",
+      "lat": 34.6909734804134,
+      "lng": 135.102691842504,
+      "category": "SAFE",
+      "name": "あじさい保育園（社会福祉法人　あじさい会）",
+      "address": "神戸市須磨区白川台4丁目20-20",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区白川台4丁目20-20",
+      "district": "須磨区",
+      "sourceRow": 211,
+      "sourceRows": [
+        211
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8e173199c48bc38f",
+      "lat": 34.6909734804134,
+      "lng": 135.102691842504,
+      "category": "SAFE",
+      "name": "社会福祉あじさい会　あじさいこども園",
+      "address": "神戸市須磨区白川台4丁目20番地20",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区白川台4丁目20番地20",
+      "district": "須磨区",
+      "sourceRow": 259,
+      "sourceRows": [
+        259
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

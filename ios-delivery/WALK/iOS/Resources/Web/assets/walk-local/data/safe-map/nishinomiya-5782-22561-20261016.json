@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5782-22561-20261016",
+  "lat": 34.6956027,
+  "lng": 135.37118187,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/234dca977eaf2202",
+      "lat": 34.69515219,
+      "lng": 135.3711544,
+      "category": "SAFE",
+      "name": "株式会社　マリン技研サービス",
+      "address": "兵庫県西宮市鳴尾浜１丁目６－２",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市鳴尾浜１丁目６－２",
+      "district": "西宮市",
+      "sourceRow": 469,
+      "sourceRows": [
+        469
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/b2ac06cf4eb96855",
+      "lat": 34.69605321,
+      "lng": 135.37120934,
+      "category": "SAFE",
+      "name": "株式会社ティーケーシン",
+      "address": "兵庫県西宮市鳴尾浜１丁目６－３０",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市鳴尾浜１丁目６－３０",
+      "district": "西宮市",
+      "sourceRow": 520,
+      "sourceRows": [
+        520
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

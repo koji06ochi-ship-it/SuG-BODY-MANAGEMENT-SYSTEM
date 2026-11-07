@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5775-22523-20261016",
+  "lat": 34.653810131285034,
+  "lng": 135.14140273606301,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/90ae40b762a8529c",
+      "lat": 34.6551057626887,
+      "lng": 135.143559478485,
+      "category": "SAFE",
+      "name": "神戸市立　駒ｹ林中学校",
+      "address": "神戸市長田区若松町7-1-23",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区若松町7-1-23",
+      "district": "長田区",
+      "sourceRow": 1238,
+      "sourceRows": [
+        1238
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ca0ee8ab96c7600c",
+      "lat": 34.6541924161149,
+      "lng": 135.141967548189,
+      "category": "SAFE",
+      "name": "若松地域福祉センター",
+      "address": "神戸市長田区若松町8丁目2-13",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区若松町8丁目2-13",
+      "district": "長田区",
+      "sourceRow": 1314,
+      "sourceRows": [
+        1314
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0649bec654f3506a",
+      "lat": 34.6521322150515,
+      "lng": 135.138681181515,
+      "category": "SAFE",
+      "name": "野田北ふれあいセンター",
+      "address": "神戸市長田区海運町3丁目6-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区海運町3丁目6-2",
+      "district": "長田区",
+      "sourceRow": 1355,
+      "sourceRows": [
+        1355
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

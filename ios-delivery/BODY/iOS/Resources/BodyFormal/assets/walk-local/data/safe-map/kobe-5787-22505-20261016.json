@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5787-22505-20261016",
+  "lat": 34.72410418729615,
+  "lng": 135.03199853892352,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/78b38b609b868dd8",
+      "lat": 34.7227625015982,
+      "lng": 135.032208291662,
+      "category": "SAFE",
+      "name": "神戸市立　狩場台小学校",
+      "address": "神戸市西区狩場台3丁目6番地の1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区狩場台3丁目6番地の1",
+      "district": "西区",
+      "sourceRow": 550,
+      "sourceRows": [
+        550
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3a3aa1a80cc79667",
+      "lat": 34.722946895503,
+      "lng": 135.031548425544,
+      "category": "SAFE",
+      "name": "神戸市立　狩場台児童館",
+      "address": "神戸市西区狩場台3丁目6-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区狩場台3丁目6-2",
+      "district": "西区",
+      "sourceRow": 658,
+      "sourceRows": [
+        658
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c405e8d5f9a4497d",
+      "lat": 34.722946895503,
+      "lng": 135.031548425544,
+      "category": "SAFE",
+      "name": "狩場台地域福祉センター",
+      "address": "神戸市西区狩場台3丁目6番地の2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区狩場台3丁目6番地の2",
+      "district": "西区",
+      "sourceRow": 702,
+      "sourceRows": [
+        702
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9b6364629b15ec13",
+      "lat": 34.7277604565804,
+      "lng": 135.032689012944,
+      "category": "SAFE",
+      "name": "さとうクリニック",
+      "address": "神戸市西区櫨谷町福谷882番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区櫨谷町福谷882番",
+      "district": "西区",
+      "sourceRow": 753,
+      "sourceRows": [
+        753
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

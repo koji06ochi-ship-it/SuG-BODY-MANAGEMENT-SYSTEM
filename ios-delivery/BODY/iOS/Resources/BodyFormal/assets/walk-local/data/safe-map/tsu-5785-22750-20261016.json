@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5785-22750",
+  "lat": 34.7104765,
+  "lng": 136.501107,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.710856,
+      "lng": 136.501132,
+      "category": "SAFE",
+      "name": "修成幼稚園",
+      "address": "津市修成町12-1",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "修成町12-1",
+      "district": "津",
+      "sourceRow": 66,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/9625b7d3d66eda70",
+      "sourceRows": [
+        66
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.710097,
+      "lng": 136.501082,
+      "category": "SAFE",
+      "name": "修成小学校",
+      "address": "津市修成町9-1",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "修成町9-1",
+      "district": "津",
+      "sourceRow": 75,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/eef63f272ea2ac5a",
+      "sourceRows": [
+        75
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

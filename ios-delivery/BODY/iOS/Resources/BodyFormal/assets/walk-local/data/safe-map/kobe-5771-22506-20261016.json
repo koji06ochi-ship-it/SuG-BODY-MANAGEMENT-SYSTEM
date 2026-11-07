@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5771-22506-20261016",
+  "lat": 34.62982917343867,
+  "lng": 135.03954531670567,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/06cf0ab0cca6ead6",
+      "lat": 34.6283792260439,
+      "lng": 135.039640497867,
+      "category": "SAFE",
+      "name": "アジュール舞子",
+      "address": "神戸市垂水区海岸通11",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区海岸通11",
+      "district": "垂水区",
+      "sourceRow": 268,
+      "sourceRows": [
+        268
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d16bbe1c42a36ba5",
+      "lat": 34.630684803154,
+      "lng": 135.038910296156,
+      "category": "SAFE",
+      "name": "シーサイドホテル舞子ビラ神戸",
+      "address": "神戸市垂水区東舞子町18-11",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区東舞子町18-11",
+      "district": "垂水区",
+      "sourceRow": 270,
+      "sourceRows": [
+        270
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5e6889cb1c2bb3d7",
+      "lat": 34.6304234911181,
+      "lng": 135.040085156094,
+      "category": "SAFE",
+      "name": "サン舞子神港園",
+      "address": "神戸市垂水区五色山７丁目１２",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区五色山７丁目１２",
+      "district": "垂水区",
+      "sourceRow": 353,
+      "sourceRows": [
+        353
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

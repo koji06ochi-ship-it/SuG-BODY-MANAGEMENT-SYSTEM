@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5784-22497-20261016",
+  "lat": 34.70735485264082,
+  "lng": 134.982975974086,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/1732e2670a629ab3",
+      "lat": 34.7062139371306,
+      "lng": 134.982026110145,
+      "category": "SAFE",
+      "name": "神戸市立　平野小学校",
+      "address": "神戸市西区平野町宮前301番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区平野町宮前301番地",
+      "district": "西区",
+      "sourceRow": 563,
+      "sourceRows": [
+        563
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/cda95650c4747876",
+      "lat": 34.7041637321861,
+      "lng": 134.98244524968,
+      "category": "SAFE",
+      "name": "兵庫六甲農業共同組合　平野支店",
+      "address": "神戸市西区平野町下村325",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区平野町下村325",
+      "district": "西区",
+      "sourceRow": 591,
+      "sourceRows": [
+        591
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/68363e24bae929a8",
+      "lat": 34.708341957826,
+      "lng": 134.983437445107,
+      "category": "SAFE",
+      "name": "神戸市立　平野児童館",
+      "address": "神戸市西区平野町宮前233",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区平野町宮前233",
+      "district": "西区",
+      "sourceRow": 666,
+      "sourceRows": [
+        666
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/fc423750b123f638",
+      "lat": 34.7090273180307,
+      "lng": 134.983485532749,
+      "category": "SAFE",
+      "name": "平野地域福祉センター",
+      "address": "神戸市西区平野町宮前148",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区平野町宮前148",
+      "district": "西区",
+      "sourceRow": 727,
+      "sourceRows": [
+        727
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f7a128193f1b4752",
+      "lat": 34.7090273180307,
+      "lng": 134.983485532749,
+      "category": "SAFE",
+      "name": "神戸市西区役所平野出張所",
+      "address": "神戸市西区平野町宮前148",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区平野町宮前148",
+      "district": "西区",
+      "sourceRow": 796,
+      "sourceRows": [
+        796
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

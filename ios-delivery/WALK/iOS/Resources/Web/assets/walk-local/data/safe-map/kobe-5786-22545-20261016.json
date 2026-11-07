@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5786-22545-20261016",
+  "lat": 34.71989539293998,
+  "lng": 135.27358717512132,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/00f8cbc2be9c7638",
+      "lat": 34.7219533279943,
+      "lng": 135.272863985336,
+      "category": "SAFE",
+      "name": "三井住友銀行　甲南支店",
+      "address": "神戸市東灘区甲南町3-9-24",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区甲南町3-9-24",
+      "district": "東灘区",
+      "sourceRow": 1431,
+      "sourceRows": [
+        1431
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/fb77be69a1f21ab6",
+      "lat": 34.7207333167105,
+      "lng": 135.274230374032,
+      "category": "SAFE",
+      "name": "コープこうべ　コープ甲南",
+      "address": "神戸市東灘区甲南町3丁目1番18号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区甲南町3丁目1番18号",
+      "district": "東灘区",
+      "sourceRow": 1510,
+      "sourceRows": [
+        1510
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8d4737cd0a98cd70",
+      "lat": 34.7195755675995,
+      "lng": 135.274088808297,
+      "category": "SAFE",
+      "name": "ろっこう医療生活協同組合うはらハウス",
+      "address": "神戸市東灘区魚崎北町6丁目9-18",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区魚崎北町6丁目9-18",
+      "district": "東灘区",
+      "sourceRow": 1604,
+      "sourceRows": [
+        1604
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2fc691142b49b626",
+      "lat": 34.7181959002495,
+      "lng": 135.274573845166,
+      "category": "SAFE",
+      "name": "甲南すこやかこども園",
+      "address": "神戸市東灘区魚崎北町2丁目10番10号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区魚崎北町2丁目10番10号",
+      "district": "東灘区",
+      "sourceRow": 1610,
+      "sourceRows": [
+        1610
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0a307490fca18f58",
+      "lat": 34.7178344460359,
+      "lng": 135.273583411409,
+      "category": "SAFE",
+      "name": "横尾会館",
+      "address": "神戸市東灘区魚崎北町2丁目7-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区魚崎北町2丁目7-1",
+      "district": "東灘区",
+      "sourceRow": 1678,
+      "sourceRows": [
+        1678
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/63e46fb7e9087867",
+      "lat": 34.7210797990502,
+      "lng": 135.272182626488,
+      "category": "SAFE",
+      "name": "西川クリニック",
+      "address": "神戸市東灘区甲南町4丁目9-20",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区甲南町4丁目9-20",
+      "district": "東灘区",
+      "sourceRow": 1697,
+      "sourceRows": [
+        1697
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

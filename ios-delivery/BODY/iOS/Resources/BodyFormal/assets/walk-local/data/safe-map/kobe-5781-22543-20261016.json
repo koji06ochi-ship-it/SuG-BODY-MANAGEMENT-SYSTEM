@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5781-22543-20261016",
+  "lat": 34.689862026987875,
+  "lng": 135.26114602145947,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/c41eed144940e965",
+      "lat": 34.6913489474822,
+      "lng": 135.261405918508,
+      "category": "SAFE",
+      "name": "㈱ドンク　六甲アイランド工場",
+      "address": "神戸市東灘区向洋町西5丁目4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町西5丁目4",
+      "district": "東灘区",
+      "sourceRow": 1406,
+      "sourceRows": [
+        1406
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/27fc16d02f85dc38",
+      "lat": 34.6919436231699,
+      "lng": 135.261347572873,
+      "category": "SAFE",
+      "name": "モロゾフ株式会社",
+      "address": "神戸市東灘区向洋町西5丁目3番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町西5丁目3番地",
+      "district": "東灘区",
+      "sourceRow": 1446,
+      "sourceRows": [
+        1446
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0004fd6d6824aff5",
+      "lat": 34.6890278557836,
+      "lng": 135.2598469326,
+      "category": "SAFE",
+      "name": "ＹＫＫ六甲株式会社",
+      "address": "神戸市東灘区向洋町西4丁目2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町西4丁目2",
+      "district": "東灘区",
+      "sourceRow": 1464,
+      "sourceRows": [
+        1464
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/fd24cab641010db5",
+      "lat": 34.6881913831985,
+      "lng": 135.263895401995,
+      "category": "SAFE",
+      "name": "向洋地域福祉センター",
+      "address": "神戸市東灘区向洋町中6丁目3－2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町中6丁目3－2",
+      "district": "東灘区",
+      "sourceRow": 1467,
+      "sourceRows": [
+        1467
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0c607bea2d2b8472",
+      "lat": 34.6881913831985,
+      "lng": 135.263895401995,
+      "category": "SAFE",
+      "name": "神戸市立　向洋児童館",
+      "address": "神戸市東灘区向洋町中6丁目3-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町中6丁目3-2",
+      "district": "東灘区",
+      "sourceRow": 1478,
+      "sourceRows": [
+        1478
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b823c25238aec621",
+      "lat": 34.691153142384,
+      "lng": 135.259344810398,
+      "category": "SAFE",
+      "name": "株式会社ダイヘン六甲事務所",
+      "address": "神戸市東灘区向洋町西4丁目1番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町西4丁目1番",
+      "district": "東灘区",
+      "sourceRow": 1520,
+      "sourceRows": [
+        1520
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/436b1ebd08756755",
+      "lat": 34.6876501949996,
+      "lng": 135.259448001342,
+      "category": "SAFE",
+      "name": "フェデラルエクスプレスジャパン合同会社 神戸営業所",
+      "address": "神戸市東灘区向洋町西6丁目21",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町西6丁目21",
+      "district": "東灘区",
+      "sourceRow": 1707,
+      "sourceRows": [
+        1707
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/47cada1b566d658c",
+      "lat": 34.691153142384,
+      "lng": 135.259344810398,
+      "category": "SAFE",
+      "name": "電気安全環境研究所関西事業所",
+      "address": "神戸市東灘区向洋町西4丁目1番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町西4丁目1番",
+      "district": "東灘区",
+      "sourceRow": 1722,
+      "sourceRows": [
+        1722
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/66d208f1e959112b",
+      "lat": 34.6900985702906,
+      "lng": 135.261785343026,
+      "category": "SAFE",
+      "name": "マルカン酢株式会社",
+      "address": "神戸市東灘区向洋町西5丁目6番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町西5丁目6番地",
+      "district": "東灘区",
+      "sourceRow": 1754,
+      "sourceRows": [
+        1754
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5789-22542-20261016",
+  "lat": 34.73741005746945,
+  "lng": 135.25477892928626,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/8b33b5cfa27fb752",
+      "lat": 34.7383280437883,
+      "lng": 135.252301965957,
+      "category": "SAFE",
+      "name": "渦が森地域福祉センター",
+      "address": "神戸市東灘区渦森台1丁目2番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区渦森台1丁目2番1号",
+      "district": "東灘区",
+      "sourceRow": 1468,
+      "sourceRows": [
+        1468
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d072554b74496f3c",
+      "lat": 34.7343600027777,
+      "lng": 135.257676623306,
+      "category": "SAFE",
+      "name": "コープこうべ　コープミニ住吉台",
+      "address": "神戸市東灘区住吉台3番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区住吉台3番1号",
+      "district": "東灘区",
+      "sourceRow": 1526,
+      "sourceRows": [
+        1526
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ded146fb0be3bb7f",
+      "lat": 34.7383280437883,
+      "lng": 135.252301965957,
+      "category": "SAFE",
+      "name": "渦森台児童館",
+      "address": "神戸市東灘区渦森台1丁目2-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区渦森台1丁目2-1",
+      "district": "東灘区",
+      "sourceRow": 1553,
+      "sourceRows": [
+        1553
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8c97525f9c4ea031",
+      "lat": 34.7386241395235,
+      "lng": 135.256835161925,
+      "category": "SAFE",
+      "name": "同朋住吉台こども園",
+      "address": "神戸市東灘区住吉台25番7",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区住吉台25番7",
+      "district": "東灘区",
+      "sourceRow": 1613,
+      "sourceRows": [
+        1613
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

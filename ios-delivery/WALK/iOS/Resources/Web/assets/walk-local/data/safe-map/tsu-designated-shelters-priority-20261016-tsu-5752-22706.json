@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "safe-tsu-designated-shelters-tsu-5752-22706",
+  "lat": 34.513596,
+  "lng": 136.238913,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "三重県・津市共同利用 指定避難所データ",
+  "sourceUrl": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+  "sourceUpdatedAt": "2024-03-12",
+  "retrievedAt": "2026-10-16T00:00:00.000Z",
+  "sourceFileSha256": "8d45bec68a7f72c0c0f0cc45eccbeac81b0d921573ba31453ea6af68ce291325",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+  "data": [
+    {
+      "id": "municipality/tsu/tsu-shelter/c0278e9e3be8116f",
+      "lat": 34.51354695,
+      "lng": 136.2383033,
+      "category": "SAFE",
+      "name": "美杉伊勢地体育館（指定避難所）",
+      "address": "三重県津市美杉町石名原1581-2",
+      "kind": "SHELTER",
+      "source": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+      "sourceLabel": "三重県・津市共同利用 指定避難所データ（開設状態・受入可否は未確認）",
+      "license": "CC-BY-4.0",
+      "sourceUpdatedAt": "2024-03-12",
+      "sourceRow": 94
+    },
+    {
+      "id": "municipality/tsu/tsu-shelter/3a7347254834ddc7",
+      "lat": 34.51377381,
+      "lng": 136.2378675,
+      "category": "SAFE",
+      "name": "伊勢地多目的集会所（指定避難所）",
+      "address": "三重県津市美杉町石名原1583",
+      "kind": "SHELTER",
+      "source": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+      "sourceLabel": "三重県・津市共同利用 指定避難所データ（開設状態・受入可否は未確認）",
+      "license": "CC-BY-4.0",
+      "sourceUpdatedAt": "2024-03-12",
+      "sourceRow": 95
+    },
+    {
+      "id": "municipality/tsu/tsu-shelter/17609e09b5a2d3d6",
+      "lat": 34.51355137,
+      "lng": 136.2388827,
+      "category": "SAFE",
+      "name": "伊勢地地域住民センター（指定避難所）",
+      "address": "三重県津市美杉町石名原1681",
+      "kind": "SHELTER",
+      "source": "https://data.bodik.jp/dataset/shiteihinanjyo/resource/7cbf9e40-0c14-413e-b0f0-0f1081482324/download/.csv",
+      "sourceLabel": "三重県・津市共同利用 指定避難所データ（開設状態・受入可否は未確認）",
+      "license": "CC-BY-4.0",
+      "sourceUpdatedAt": "2024-03-12",
+      "sourceRow": 96
+    }
+  ]
+}

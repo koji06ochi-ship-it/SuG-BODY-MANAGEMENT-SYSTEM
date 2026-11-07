@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5772-22508-20261016",
+  "lat": 34.63425480117803,
+  "lng": 135.05060107251475,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/208b96fc73eb35e0",
+      "lat": 34.6329875332708,
+      "lng": 135.051326506145,
+      "category": "SAFE",
+      "name": "神戸市立　垂水体育館",
+      "address": "神戸市垂水区旭ヶ丘2丁目1番22",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区旭ヶ丘2丁目1番22",
+      "district": "垂水区",
+      "sourceRow": 272,
+      "sourceRows": [
+        272
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3bf618d28c04f43a",
+      "lat": 34.6332731886392,
+      "lng": 135.05242766577,
+      "category": "SAFE",
+      "name": "フォレスト垂水",
+      "address": "神戸市垂水区旭ヶ丘1丁目9番60号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区旭ヶ丘1丁目9番60号",
+      "district": "垂水区",
+      "sourceRow": 273,
+      "sourceRows": [
+        273
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6dc8db69b5463105",
+      "lat": 34.637777961003,
+      "lng": 135.049745643393,
+      "category": "SAFE",
+      "name": "千代が丘地域福祉センター",
+      "address": "神戸市垂水区旭が丘3丁目12-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区旭が丘3丁目12-3",
+      "district": "垂水区",
+      "sourceRow": 362,
+      "sourceRows": [
+        362
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8dcc5affc153c156",
+      "lat": 34.6329805217991,
+      "lng": 135.048904474751,
+      "category": "SAFE",
+      "name": "幼保連携型認定こども園　かすみがおか 虹こども園",
+      "address": "神戸市垂水区霞ｹ丘1丁目6番地19",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区霞ｹ丘1丁目6番地19",
+      "district": "垂水区",
+      "sourceRow": 477,
+      "sourceRows": [
+        477
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

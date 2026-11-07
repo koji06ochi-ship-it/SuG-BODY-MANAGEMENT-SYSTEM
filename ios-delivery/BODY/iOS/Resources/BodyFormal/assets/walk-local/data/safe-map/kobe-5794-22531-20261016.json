@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5794-22531-20261016",
+  "lat": 34.76651851191097,
+  "lng": 135.18705010238898,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/8c95cc833c6ab887",
+      "lat": 34.765413396965,
+      "lng": 135.187236792098,
+      "category": "SAFE",
+      "name": "神戸市立　やまびこ幼稚園",
+      "address": "神戸市北区花山東町3番2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区花山東町3番2",
+      "district": "北区",
+      "sourceRow": 2354,
+      "sourceRows": [
+        2354
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5c792572418a27e0",
+      "lat": 34.7648298713596,
+      "lng": 135.187523020529,
+      "category": "SAFE",
+      "name": "花山地域福祉センター",
+      "address": "神戸市北区花山東町3-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区花山東町3-3",
+      "district": "北区",
+      "sourceRow": 2394,
+      "sourceRows": [
+        2394
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2ba394b67ef3b8fc",
+      "lat": 34.7693122674083,
+      "lng": 135.18639049454,
+      "category": "SAFE",
+      "name": "長谷歯科医院",
+      "address": "神戸市北区花山台2-38花山駅前ビル102号室",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区花山台2-38花山駅前ビル102号室",
+      "district": "北区",
+      "sourceRow": 2535,
+      "sourceRows": [
+        2535
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

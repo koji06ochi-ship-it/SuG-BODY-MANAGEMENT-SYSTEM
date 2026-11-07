@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5972-23278",
+  "lat": 35.8351979,
+  "lng": 139.673706,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.8351979,
+      "lng": 139.673706,
+      "category": "SAFE",
+      "name": "文蔵小学校放課後子ども居場所事業",
+      "address": "さいたま市文蔵5-16-29",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "文蔵5-16-29",
+      "district": "南区",
+      "sourceRow": 487,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/01f5c9d3b8c3a9f6",
+      "sourceRows": [
+        487
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

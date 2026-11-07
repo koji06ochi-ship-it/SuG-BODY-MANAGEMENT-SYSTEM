@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5777-22503-20261016",
+  "lat": 34.66407934830532,
+  "lng": 135.0189805600086,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/ba1724dff3edc8a7",
+      "lat": 34.6641419898133,
+      "lng": 135.018667931442,
+      "category": "SAFE",
+      "name": "神戸市立　有瀬小学校",
+      "address": "神戸市西区伊川谷町有瀬字金井場1137-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区伊川谷町有瀬字金井場1137-1",
+      "district": "西区",
+      "sourceRow": 547,
+      "sourceRows": [
+        547
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2ea069a77a113f64",
+      "lat": 34.6627493995515,
+      "lng": 135.018271837179,
+      "category": "SAFE",
+      "name": "神戸市立　有瀬学童保育コーナー",
+      "address": "神戸市西区伊川谷町有瀬696-12",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区伊川谷町有瀬696-12",
+      "district": "西区",
+      "sourceRow": 663,
+      "sourceRows": [
+        663
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2ffca0efb536d901",
+      "lat": 34.6653562387171,
+      "lng": 135.019003827157,
+      "category": "SAFE",
+      "name": "神戸市立　有瀬児童館",
+      "address": "神戸市西区伊川谷町有瀬1137-8",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区伊川谷町有瀬1137-8",
+      "district": "西区",
+      "sourceRow": 664,
+      "sourceRows": [
+        664
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/dcc902cd6b5250b3",
+      "lat": 34.6650339810654,
+      "lng": 135.019320186499,
+      "category": "SAFE",
+      "name": "有瀬地域福祉センター",
+      "address": "神戸市西区伊川谷町有瀬1137-30",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区伊川谷町有瀬1137-30",
+      "district": "西区",
+      "sourceRow": 716,
+      "sourceRows": [
+        716
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/952f89c64a19abb8",
+      "lat": 34.6631151323793,
+      "lng": 135.019639017766,
+      "category": "SAFE",
+      "name": "NSIパールブリッジスイミング",
+      "address": "神戸市西区伊川谷町有瀬690-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区伊川谷町有瀬690-1",
+      "district": "西区",
+      "sourceRow": 750,
+      "sourceRows": [
+        750
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

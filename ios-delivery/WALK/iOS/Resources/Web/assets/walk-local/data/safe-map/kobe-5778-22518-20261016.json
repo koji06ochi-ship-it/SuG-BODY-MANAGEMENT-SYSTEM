@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5778-22518-20261016",
+  "lat": 34.6723718540849,
+  "lng": 135.111809191693,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/209acec31942e3d4",
+      "lat": 34.6718727693237,
+      "lng": 135.113192113028,
+      "category": "SAFE",
+      "name": "神戸市立　横尾中学校",
+      "address": "神戸市須磨区横尾2-1-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区横尾2-1-2",
+      "district": "須磨区",
+      "sourceRow": 49,
+      "sourceRows": [
+        49
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/fb33780f0ecbf7d2",
+      "lat": 34.6704817600258,
+      "lng": 135.111582267822,
+      "category": "SAFE",
+      "name": "神戸市立　横尾小学校",
+      "address": "神戸市須磨区横尾5丁目3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区横尾5丁目3",
+      "district": "須磨区",
+      "sourceRow": 71,
+      "sourceRows": [
+        71
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a24cf00e9dbbd4c4",
+      "lat": 34.6717407275074,
+      "lng": 135.113100120435,
+      "category": "SAFE",
+      "name": "横尾地域福祉センター",
+      "address": "神戸市須磨区横尾2丁目1－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区横尾2丁目1－1",
+      "district": "須磨区",
+      "sourceRow": 104,
+      "sourceRows": [
+        104
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/078c0edc1a59a97d",
+      "lat": 34.6738822623713,
+      "lng": 135.111014045195,
+      "category": "SAFE",
+      "name": "神戸市立　横尾児童館",
+      "address": "神戸市須磨区横尾1丁目11－2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区横尾1丁目11－2",
+      "district": "須磨区",
+      "sourceRow": 131,
+      "sourceRows": [
+        131
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/24ba2a76d053a4d3",
+      "lat": 34.6738817511963,
+      "lng": 135.110157411985,
+      "category": "SAFE",
+      "name": "くすの木保育園",
+      "address": "神戸市須磨区横尾1-10",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区横尾1-10",
+      "district": "須磨区",
+      "sourceRow": 215,
+      "sourceRows": [
+        215
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

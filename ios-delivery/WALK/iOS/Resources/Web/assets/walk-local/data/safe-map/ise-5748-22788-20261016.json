@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5748-22788-20261016",
+  "lat": 34.49153447953915,
+  "lng": 136.73203991808998,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/9442f21599d8e4e4",
+      "lat": 34.490217,
+      "lng": 136.728504,
+      "category": "SAFE",
+      "name": "伊勢市立倉田山中学校　体育館",
+      "address": "伊勢市神田久志本町1645-2",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市神田久志本町1645-2",
+      "sourceRow": 59,
+      "sourceRows": [
+        59
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/4a2f079770024803",
+      "lat": 34.4930510516264,
+      "lng": 136.733415716644,
+      "category": "SAFE",
+      "name": "おおぞら児童園",
+      "address": "伊勢市黒瀬町562-103",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市黒瀬町562-103",
+      "sourceRow": 110,
+      "sourceRows": [
+        110
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/4c0b6995b2b84c9f",
+      "lat": 34.4896151240981,
+      "lng": 136.733865737915,
+      "category": "SAFE",
+      "name": "ダイムスタジアム伊勢（倉田山公園野球場）",
+      "address": "伊勢市楠部町159-1",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市楠部町159-1",
+      "sourceRow": 119,
+      "sourceRows": [
+        119
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/64d4f0708176482e",
+      "lat": 34.4932547424321,
+      "lng": 136.732374217801,
+      "category": "SAFE",
+      "name": "伊勢市生涯学習センター",
+      "address": "伊勢市黒瀬町562-12",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市黒瀬町562-12",
+      "sourceRow": 125,
+      "sourceRows": [
+        125
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

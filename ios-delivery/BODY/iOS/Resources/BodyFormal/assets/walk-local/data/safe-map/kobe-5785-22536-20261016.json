@@ -1,0 +1,325 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5785-22536-20261016",
+  "lat": 34.71262848024217,
+  "lng": 135.21949519251638,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/3a0bd967c119ac18",
+      "lat": 34.7158220817634,
+      "lng": 135.220536396466,
+      "category": "SAFE",
+      "name": "神戸市立　摩耶小学校",
+      "address": "神戸市灘区畑原通4丁目1番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区畑原通4丁目1番1号",
+      "district": "灘区",
+      "sourceRow": 1805,
+      "sourceRows": [
+        1805
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/149c7c3e5d139b5c",
+      "lat": 34.7131317539347,
+      "lng": 135.218425568288,
+      "category": "SAFE",
+      "name": "神戸市立　福住小学校",
+      "address": "神戸市灘区福住通7丁目1番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区福住通7丁目1番1号",
+      "district": "灘区",
+      "sourceRow": 1806,
+      "sourceRows": [
+        1806
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/99930d7d60088099",
+      "lat": 34.7138506685807,
+      "lng": 135.220119312596,
+      "category": "SAFE",
+      "name": "久保田歯科",
+      "address": "神戸市灘区福住通5-3-10",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区福住通5-3-10",
+      "district": "灘区",
+      "sourceRow": 1824,
+      "sourceRows": [
+        1824
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5aaa07e8dcc50eb4",
+      "lat": 34.7111648860309,
+      "lng": 135.220062833598,
+      "category": "SAFE",
+      "name": "灘診療所（ろっこう医療生活協同組合）",
+      "address": "神戸市灘区水道筋6-6-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区水道筋6-6-3",
+      "district": "灘区",
+      "sourceRow": 1834,
+      "sourceRows": [
+        1834
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/91459a556eede25e",
+      "lat": 34.7129479799956,
+      "lng": 135.220522481727,
+      "category": "SAFE",
+      "name": "門田外科医院",
+      "address": "神戸市灘区中原通6-3-15",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区中原通6-3-15",
+      "district": "灘区",
+      "sourceRow": 1850,
+      "sourceRows": [
+        1850
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/93b8c97f36b53fef",
+      "lat": 34.7106342227046,
+      "lng": 135.219148746329,
+      "category": "SAFE",
+      "name": "石黒歯科医院",
+      "address": "神戸市灘区王子町1-3-14-2Ｆ",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区王子町1-3-14-2Ｆ",
+      "district": "灘区",
+      "sourceRow": 1861,
+      "sourceRows": [
+        1861
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/fa25e1255489dcb1",
+      "lat": 34.7114080225598,
+      "lng": 135.218938475644,
+      "category": "SAFE",
+      "name": "王子地域福祉センター",
+      "address": "神戸市灘区中原通7-5-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区中原通7-5-1",
+      "district": "灘区",
+      "sourceRow": 1870,
+      "sourceRows": [
+        1870
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0fe8b6fb044b413f",
+      "lat": 34.7128194565412,
+      "lng": 135.221769681195,
+      "category": "SAFE",
+      "name": "神戸市立　倉石保育所",
+      "address": "神戸市灘区倉石通4丁目1-10",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区倉石通4丁目1-10",
+      "district": "灘区",
+      "sourceRow": 1878,
+      "sourceRows": [
+        1878
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4230e3038ea45db6",
+      "lat": 34.7112344599258,
+      "lng": 135.218499226978,
+      "category": "SAFE",
+      "name": "神戸市立　原田児童館",
+      "address": "神戸市灘区王子町2-3-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区王子町2-3-1",
+      "district": "灘区",
+      "sourceRow": 1883,
+      "sourceRows": [
+        1883
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a0bdd04448d0c7d3",
+      "lat": 34.715265598582,
+      "lng": 135.218316686311,
+      "category": "SAFE",
+      "name": "神戸市立　上野児童館",
+      "address": "神戸市灘区赤坂通6-1-18",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区赤坂通6-1-18",
+      "district": "灘区",
+      "sourceRow": 1884,
+      "sourceRows": [
+        1884
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/52ac425b0c296681",
+      "lat": 34.7150932633423,
+      "lng": 135.22163014493,
+      "category": "SAFE",
+      "name": "摩耶地域福祉センター",
+      "address": "神戸市灘区天城通3丁目3－7",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区天城通3丁目3－7",
+      "district": "灘区",
+      "sourceRow": 1894,
+      "sourceRows": [
+        1894
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/12a82155de26ed61",
+      "lat": 34.7125665243299,
+      "lng": 135.219605510982,
+      "category": "SAFE",
+      "name": "幼保連携型認定こども園　なかはらこども園",
+      "address": "神戸市灘区中原通6丁目4－5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区中原通6丁目4－5",
+      "district": "灘区",
+      "sourceRow": 1902,
+      "sourceRows": [
+        1902
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/75a641e1d601c710",
+      "lat": 34.7128194565412,
+      "lng": 135.221769681195,
+      "category": "SAFE",
+      "name": "稗田地域福祉センター",
+      "address": "神戸市灘区倉石通4-1-10",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区倉石通4-1-10",
+      "district": "灘区",
+      "sourceRow": 1911,
+      "sourceRows": [
+        1911
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/24f6ab330918b652",
+      "lat": 34.7109101503535,
+      "lng": 135.217231317816,
+      "category": "SAFE",
+      "name": "神戸市立　王子スポーツセンター　王子スタジアム",
+      "address": "神戸市灘区青谷町1-1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区青谷町1-1-1",
+      "district": "灘区",
+      "sourceRow": 1924,
+      "sourceRows": [
+        1924
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/44807110766aed53",
+      "lat": 34.7105907689155,
+      "lng": 135.218715513363,
+      "category": "SAFE",
+      "name": "阪急　王子公園駅",
+      "address": "神戸市灘区王子町1-4-20",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区王子町1-4-20",
+      "district": "灘区",
+      "sourceRow": 1936,
+      "sourceRows": [
+        1936
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9a2df8c017a8930a",
+      "lat": 34.7117963897737,
+      "lng": 135.216631502844,
+      "category": "SAFE",
+      "name": "神戸登山研修所",
+      "address": "神戸市灘区王子町2丁目2番地1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区王子町2丁目2番地1",
+      "district": "灘区",
+      "sourceRow": 2020,
+      "sourceRows": [
+        2020
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

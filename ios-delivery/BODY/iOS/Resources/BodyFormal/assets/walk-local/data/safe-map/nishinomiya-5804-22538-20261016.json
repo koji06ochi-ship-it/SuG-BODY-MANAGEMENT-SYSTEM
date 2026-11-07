@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5804-22538-20261016",
+  "lat": 34.826143402,
+  "lng": 135.23225924,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/f29d55b4d2f356d2",
+      "lat": 34.82496752,
+      "lng": 135.2337631,
+      "category": "SAFE",
+      "name": "ロジスティードコラボネクスト株式会社近畿営業所",
+      "address": "兵庫県西宮市山口町阪神流通センター１丁目５２",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市山口町阪神流通センター１丁目５２",
+      "district": "西宮市",
+      "sourceRow": 739,
+      "sourceRows": [
+        739
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/e55694a6d04db69e",
+      "lat": 34.82886547,
+      "lng": 135.2318579,
+      "category": "SAFE",
+      "name": "ヤマト運輸株式会社兵庫主管支店",
+      "address": "兵庫県西宮市山口町阪神流通センター３丁目５－４",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市山口町阪神流通センター３丁目５－４",
+      "district": "西宮市",
+      "sourceRow": 746,
+      "sourceRows": [
+        746
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/9432837b2d480bb2",
+      "lat": 34.824018,
+      "lng": 135.2322081,
+      "category": "SAFE",
+      "name": "㈱神明キッチン",
+      "address": "兵庫県西宮市山口町阪神流通センター１丁目３４",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市山口町阪神流通センター１丁目３４",
+      "district": "西宮市",
+      "sourceRow": 762,
+      "sourceRows": [
+        762
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/42299f58f3dece27",
+      "lat": 34.82456929,
+      "lng": 135.2321126,
+      "category": "SAFE",
+      "name": "株式会社ヒメプラ阪神支店",
+      "address": "兵庫県西宮市山口町阪神流通センター１丁目３３",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市山口町阪神流通センター１丁目３３",
+      "district": "西宮市",
+      "sourceRow": 763,
+      "sourceRows": [
+        763
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/36a961b1f3e0c86e",
+      "lat": 34.82829673,
+      "lng": 135.2313545,
+      "category": "SAFE",
+      "name": "株式会社流通サービス　西宮北物流営業所",
+      "address": "兵庫県西宮市山口町阪神流通センター２丁目２",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市山口町阪神流通センター２丁目２",
+      "district": "西宮市",
+      "sourceRow": 766,
+      "sourceRows": [
+        766
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

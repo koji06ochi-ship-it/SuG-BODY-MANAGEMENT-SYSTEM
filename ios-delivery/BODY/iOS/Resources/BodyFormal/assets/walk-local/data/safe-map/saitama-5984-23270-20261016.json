@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5984-23270",
+  "lat": 35.90692458875,
+  "lng": 139.6221935125,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.905954,
+      "lng": 139.62016,
+      "category": "SAFE",
+      "name": "大宮駅西口桜木町自転車駐車場",
+      "address": "さいたま市桜木町1-7-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "桜木町1-7-1",
+      "district": "大宮区",
+      "sourceRow": 143,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/690a585abef45118",
+      "sourceRows": [
+        143
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.90598277,
+      "lng": 139.6203532,
+      "category": "SAFE",
+      "name": "大宮駅西口桜木町自転車駐車場",
+      "address": "さいたま市桜木町1-7-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "桜木町1-7-1",
+      "district": "大宮区",
+      "sourceRow": 144,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/872fc86a98fb20ea",
+      "sourceRows": [
+        144
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.90651969,
+      "lng": 139.6203214,
+      "category": "SAFE",
+      "name": "さいたま市若者自立支援ルーム桜木",
+      "address": "さいたま市桜木町2-190",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "桜木町2-190",
+      "district": "大宮区",
+      "sourceRow": 154,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/6422ba63818b8770",
+      "sourceRows": [
+        154
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.90725025,
+      "lng": 139.6253905,
+      "category": "SAFE",
+      "name": "まるまるひがしにほん東日本連携センター",
+      "address": "さいたま市大門町1-6-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大門町1-6-1",
+      "district": "大宮区",
+      "sourceRow": 162,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/6a1b69a5b8cd5c01",
+      "sourceRows": [
+        162
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.905898,
+      "lng": 139.625038,
+      "category": "SAFE",
+      "name": "大宮駅東口錦町自転車駐車場",
+      "address": "さいたま市錦町478-6",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "錦町478-6",
+      "district": "大宮区",
+      "sourceRow": 185,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/399bd1d004fda129",
+      "sourceRows": [
+        185
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.90704,
+      "lng": 139.62255,
+      "category": "SAFE",
+      "name": "大宮駅支所",
+      "address": "さいたま市錦町630ﾙﾐﾈ2-1F",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "錦町630ﾙﾐﾈ2-1F",
+      "district": "大宮区",
+      "sourceRow": 186,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/2378854b14cc6019",
+      "sourceRows": [
+        186
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.908633,
+      "lng": 139.622094,
+      "category": "SAFE",
+      "name": "大栄橋錦町自転車駐車場",
+      "address": "さいたま市錦町682-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "錦町682-1",
+      "district": "大宮区",
+      "sourceRow": 187,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/e52baeb80fabe82e",
+      "sourceRows": [
+        187
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.908119,
+      "lng": 139.621641,
+      "category": "SAFE",
+      "name": "消費生活総合センター",
+      "address": "さいたま市錦町682-2 大宮情報文化センター6階",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "錦町682-2 大宮情報文化センター6階",
+      "district": "大宮区",
+      "sourceRow": 188,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/0b0adec0e6d9df37",
+      "sourceRows": [
+        188
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

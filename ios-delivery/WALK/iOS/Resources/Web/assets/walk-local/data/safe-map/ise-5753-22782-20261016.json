@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5753-22782-20261016",
+  "lat": 34.52027124070297,
+  "lng": 136.69425041821,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/bc09a35ec1f94ed7",
+      "lat": 34.5204416184565,
+      "lng": 136.694401324057,
+      "category": "SAFE",
+      "name": "伊勢市立豊浜西小学校",
+      "address": "伊勢市西豊浜町1779",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市西豊浜町1779",
+      "sourceRow": 43,
+      "sourceRows": [
+        43
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/49c8511d30f32fc4",
+      "lat": 34.519738,
+      "lng": 136.69441,
+      "category": "SAFE",
+      "name": "伊勢市立豊浜西小学校　体育館",
+      "address": "伊勢市西豊浜町1779",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市西豊浜町1779",
+      "sourceRow": 44,
+      "sourceRows": [
+        44
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/41d5cf052fc51914",
+      "lat": 34.5206341036524,
+      "lng": 136.693939930573,
+      "category": "SAFE",
+      "name": "とよはま学童ｸﾗﾌﾞ",
+      "address": "伊勢市西豊浜町1760　旧豊浜西幼稚園",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市西豊浜町1760　旧豊浜西幼稚園",
+      "sourceRow": 95,
+      "sourceRows": [
+        95
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

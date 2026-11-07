@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5978-23268",
+  "lat": 35.869472200000004,
+  "lng": 139.60879584999998,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.86956,
+      "lng": 139.608243,
+      "category": "SAFE",
+      "name": "大久保東児童センター",
+      "address": "さいたま市大久保領家131-6",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大久保領家131-6",
+      "district": "桜区",
+      "sourceRow": 331,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/80d65a563d3587bb",
+      "sourceRows": [
+        331
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.8693844,
+      "lng": 139.6093487,
+      "category": "SAFE",
+      "name": "上大久保保育園",
+      "address": "さいたま市上大久保940-3",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "上大久保940-3",
+      "district": "桜区",
+      "sourceRow": 334,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/1527994c5f454ca2",
+      "sourceRows": [
+        334
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

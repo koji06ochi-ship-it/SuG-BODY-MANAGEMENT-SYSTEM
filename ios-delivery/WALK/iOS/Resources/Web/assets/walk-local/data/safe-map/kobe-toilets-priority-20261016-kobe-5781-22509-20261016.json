@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-toilet-kobe-5781-22509-20261016",
+  "lat": 34.6868319541988,
+  "lng": 135.057376285977,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 こうべ・だれでもトイレ設置施設一覧",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/8150-7-2-0-4-6b25309fee96a05b04e12ffb933c34ec-a85e65c296b41803-14147bba3a42cc0c",
+  "sourceFileUrl": "https://www.city.kobe.lg.jp/documents/8150/daredemotoire_seibisisetsu202511.csv",
+  "sourceUpdatedAt": "2026-05-07",
+  "retrievedAt": "2026-10-16T00:00:00.000Z",
+  "sourceFileSha256": "bbc08e130ef592638f6f7af87b3be8ec75ebba548cf1c9d81407314407082a32",
+  "license": "CC-BY",
+  "licenseUrl": "https://data.city.kobe.lg.jp/policy/",
+  "data": [
+    {
+      "id": "municipality/kobe/kobe-toilet/a2ba6640cde99878",
+      "lat": 34.682826,
+      "lng": 135.057592,
+      "category": "PUBLIC",
+      "name": "キャンパススクエア本館（だれでもトイレ）",
+      "address": "兵庫県神戸市西区学園西町1-4",
+      "kind": "TOILET",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/8150-7-2-0-4-6b25309fee96a05b04e12ffb933c34ec-a85e65c296b41803-14147bba3a42cc0c",
+      "sourceLabel": "神戸市 こうべ・だれでもトイレ設置施設一覧（多機能・多目的トイレ。利用可否・施設開館状況は要確認）",
+      "license": "CC-BY",
+      "sourceUpdatedAt": "2026-05-07",
+      "sourceRow": 9
+    },
+    {
+      "id": "municipality/kobe/kobe-toilet/2887a524b8b700cd",
+      "lat": 34.681506,
+      "lng": 135.05737,
+      "category": "PUBLIC",
+      "name": "地下鉄西神・山手線 学園都市駅（だれでもトイレ）",
+      "address": "兵庫県神戸市西区学園西町1-13",
+      "kind": "TOILET",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/8150-7-2-0-4-6b25309fee96a05b04e12ffb933c34ec-a85e65c296b41803-14147bba3a42cc0c",
+      "sourceLabel": "神戸市 こうべ・だれでもトイレ設置施設一覧（多機能・多目的トイレ。利用可否・施設開館状況は要確認）",
+      "license": "CC-BY",
+      "sourceUpdatedAt": "2026-05-07",
+      "sourceRow": 53
+    },
+    {
+      "id": "municipality/kobe/kobe-toilet/0f3843934d587d17",
+      "lat": 34.68362,
+      "lng": 135.0581,
+      "category": "PUBLIC",
+      "name": "キャンパススクエア東館（だれでもトイレ）",
+      "address": "兵庫県神戸市西区学園西町1-5",
+      "kind": "TOILET",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/8150-7-2-0-4-6b25309fee96a05b04e12ffb933c34ec-a85e65c296b41803-14147bba3a42cc0c",
+      "sourceLabel": "神戸市 こうべ・だれでもトイレ設置施設一覧（多機能・多目的トイレ。利用可否・施設開館状況は要確認）",
+      "license": "CC-BY",
+      "sourceUpdatedAt": "2026-05-07",
+      "sourceRow": 134
+    }
+  ]
+}

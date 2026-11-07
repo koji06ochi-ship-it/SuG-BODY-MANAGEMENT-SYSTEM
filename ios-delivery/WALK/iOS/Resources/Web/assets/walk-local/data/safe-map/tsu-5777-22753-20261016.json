@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5777-22753",
+  "lat": 34.663914500000004,
+  "lng": 136.52185425,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.665425,
+      "lng": 136.521767,
+      "category": "SAFE",
+      "name": "雲出市民センター附帯施設",
+      "address": "津市雲出本郷町1389",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "雲出本郷町1389",
+      "district": "津",
+      "sourceRow": 7,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/3c357890980e977f",
+      "sourceRows": [
+        7
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.662956,
+      "lng": 136.523506,
+      "category": "SAFE",
+      "name": "雲出幼稚園",
+      "address": "津市雲出本郷町1165",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "雲出本郷町1165",
+      "district": "津",
+      "sourceRow": 72,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/40c41cde03e02eea",
+      "sourceRows": [
+        72
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.662578,
+      "lng": 136.523998,
+      "category": "SAFE",
+      "name": "雲出小学校",
+      "address": "津市雲出本郷町1164",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "雲出本郷町1164",
+      "district": "津",
+      "sourceRow": 87,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/04eced0780b12c7f",
+      "sourceRows": [
+        87
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.664699,
+      "lng": 136.518146,
+      "category": "SAFE",
+      "name": "久居消防署南分署",
+      "address": "津市雲出本郷町1631-10",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "雲出本郷町1631-10",
+      "district": "久居",
+      "sourceRow": 123,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/589683a9994609bc",
+      "sourceRows": [
+        123
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

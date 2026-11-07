@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5786-22537-20261016",
+  "lat": 34.718526499266034,
+  "lng": 135.22318505440884,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/f2f0747ba18d4fff",
+      "lat": 34.7193010372088,
+      "lng": 135.22289016858,
+      "category": "SAFE",
+      "name": "神戸市立　上野中学校",
+      "address": "神戸市灘区国玉通1-1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区国玉通1-1-1",
+      "district": "灘区",
+      "sourceRow": 1768,
+      "sourceRows": [
+        1768
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d8a5981088b57a8d",
+      "lat": 34.7199578674,
+      "lng": 135.222617320018,
+      "category": "SAFE",
+      "name": "かたの歯科医院",
+      "address": "神戸市灘区薬師通1－1－10",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区薬師通1－1－10",
+      "district": "灘区",
+      "sourceRow": 1819,
+      "sourceRows": [
+        1819
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/65da100185c58b82",
+      "lat": 34.7182716497851,
+      "lng": 135.224391130451,
+      "category": "SAFE",
+      "name": "川岸医院",
+      "address": "神戸市灘区赤坂通1-1-15",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区赤坂通1-1-15",
+      "district": "灘区",
+      "sourceRow": 1849,
+      "sourceRows": [
+        1849
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/87dd288ed2ce5f54",
+      "lat": 34.7164099037974,
+      "lng": 135.222965122822,
+      "category": "SAFE",
+      "name": "梶山小児科",
+      "address": "神戸市灘区畑原通3-1-17",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区畑原通3-1-17",
+      "district": "灘区",
+      "sourceRow": 1851,
+      "sourceRows": [
+        1851
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2a874bf92bb8f57f",
+      "lat": 34.718485111822,
+      "lng": 135.223568001496,
+      "category": "SAFE",
+      "name": "上野ハイツ",
+      "address": "神戸市灘区上野通1丁目2－35",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区上野通1丁目2－35",
+      "district": "灘区",
+      "sourceRow": 1968,
+      "sourceRows": [
+        1968
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/fa65e111c78a231b",
+      "lat": 34.7187334255829,
+      "lng": 135.222678583086,
+      "category": "SAFE",
+      "name": "コープこうべ　コープミニ摩耶",
+      "address": "神戸市灘区上野通2丁目4-10",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区上野通2丁目4-10",
+      "district": "灘区",
+      "sourceRow": 1972,
+      "sourceRows": [
+        1972
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

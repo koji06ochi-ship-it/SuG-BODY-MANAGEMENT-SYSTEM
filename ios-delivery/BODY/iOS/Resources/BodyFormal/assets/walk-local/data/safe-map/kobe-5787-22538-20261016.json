@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5787-22538-20261016",
+  "lat": 34.72499558523889,
+  "lng": 135.23011904752516,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/29f2eb008b95e105",
+      "lat": 34.7224400405997,
+      "lng": 135.228470703509,
+      "category": "SAFE",
+      "name": "篠原地域福祉センター",
+      "address": "神戸市灘区篠原北町2-2-37",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区篠原北町2-2-37",
+      "district": "灘区",
+      "sourceRow": 1873,
+      "sourceRows": [
+        1873
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/812e18e42d764f25",
+      "lat": 34.7224400405997,
+      "lng": 135.228470703509,
+      "category": "SAFE",
+      "name": "神戸市立　篠原児童館",
+      "address": "神戸市灘区篠原北町2丁目2-37",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区篠原北町2丁目2-37",
+      "district": "灘区",
+      "sourceRow": 1899,
+      "sourceRows": [
+        1899
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ac9ce5054a2f7a88",
+      "lat": 34.7267946912281,
+      "lng": 135.229596036088,
+      "category": "SAFE",
+      "name": "神戸松蔭女子学院大学（守衛室）",
+      "address": "神戸市灘区篠原伯母野山町1-2-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区篠原伯母野山町1-2-1",
+      "district": "灘区",
+      "sourceRow": 1915,
+      "sourceRows": [
+        1915
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/58c8c08515d42767",
+      "lat": 34.7276142936184,
+      "lng": 135.230642569033,
+      "category": "SAFE",
+      "name": "神戸松蔭女子学院大学（6号館）",
+      "address": "神戸市灘区篠原伯母野山町1-2-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区篠原伯母野山町1-2-1",
+      "district": "灘区",
+      "sourceRow": 1917,
+      "sourceRows": [
+        1917
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f1df69edf0d9f1fc",
+      "lat": 34.7254635725089,
+      "lng": 135.233633892162,
+      "category": "SAFE",
+      "name": "神戸大学　農学研究科A棟",
+      "address": "神戸市灘区六甲台町1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区六甲台町1-1",
+      "district": "灘区",
+      "sourceRow": 1947,
+      "sourceRows": [
+        1947
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0f500f495ede2571",
+      "lat": 34.7260556570562,
+      "lng": 135.231787992898,
+      "category": "SAFE",
+      "name": "サンクタス六甲VIEWS管理組合",
+      "address": "神戸市灘区大土平町1-4-11",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区大土平町1-4-11",
+      "district": "灘区",
+      "sourceRow": 1962,
+      "sourceRows": [
+        1962
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7bc5be09e51c15c7",
+      "lat": 34.7241608010612,
+      "lng": 135.228231435477,
+      "category": "SAFE",
+      "name": "微笑幼稚園（学校法人　染矢学園）",
+      "address": "神戸市灘区篠原北町3丁目6-7",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区篠原北町3丁目6-7",
+      "district": "灘区",
+      "sourceRow": 1987,
+      "sourceRows": [
+        1987
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

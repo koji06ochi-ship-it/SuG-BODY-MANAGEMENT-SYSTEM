@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "otsu-5826-22660-20261016",
+  "lat": 34.9567373625,
+  "lng": 135.963190225,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "大津市",
+  "source": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+  "sourceUrl": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/999caef4-7e90-4fd2-98eb-fd94368e9a2f/resource/3e5b513e-de51-4459-af70-6fda94e1bed3/download/od405902026022700200.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2025-03-12",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "7899826cf95c365a07c87b3ad05aa2aa7d4adeb440a2c57269c84f98c1d85ea8",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/otsu/aed/6fd625dd84cc4fe3",
+      "lat": 34.95737417,
+      "lng": 135.961825,
+      "category": "SAFE",
+      "name": "JAレーク滋賀上田上支店",
+      "address": "大津市平野一丁目17番4号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市平野一丁目17番4号",
+      "district": "大津市",
+      "sourceRow": 440,
+      "sourceRows": [
+        440
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/85ee2a67bf9ef23b",
+      "lat": 34.95626417,
+      "lng": 135.9647814,
+      "category": "SAFE",
+      "name": "上田上コミュニティセンター",
+      "address": "大津市牧一丁目1番24号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市牧一丁目1番24号",
+      "district": "大津市",
+      "sourceRow": 443,
+      "sourceRows": [
+        443
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/51fbe3d66e1ca063",
+      "lat": 34.95689639,
+      "lng": 135.9624978,
+      "category": "SAFE",
+      "name": "大津市立上田上小学校",
+      "address": "大津市平野一丁目18番5号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市平野一丁目18番5号",
+      "district": "大津市",
+      "sourceRow": 444,
+      "sourceRows": [
+        444
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/2b928a00d97c7adb",
+      "lat": 34.95641472,
+      "lng": 135.9636567,
+      "category": "SAFE",
+      "name": "大津市立上田上幼稚園",
+      "address": "大津市平野一丁目18－20",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市平野一丁目18－20",
+      "district": "大津市",
+      "sourceRow": 445,
+      "sourceRows": [
+        445
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

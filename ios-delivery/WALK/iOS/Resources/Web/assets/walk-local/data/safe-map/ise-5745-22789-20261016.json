@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5745-22789-20261016",
+  "lat": 34.475172983383274,
+  "lng": 136.73749704293277,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/34e00bc6ca3ac4d5",
+      "lat": 34.4753631650838,
+      "lng": 136.738148796794,
+      "category": "SAFE",
+      "name": "四郷地区コミュニティセンター",
+      "address": "伊勢市楠部町2484",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市楠部町2484",
+      "sourceRow": 10,
+      "sourceRows": [
+        10
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/4a2e1a00cfa28ec2",
+      "lat": 34.4753000587676,
+      "lng": 136.737686706442,
+      "category": "SAFE",
+      "name": "伊勢市立四郷小学校",
+      "address": "伊勢市楠部町2484",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市楠部町2484",
+      "sourceRow": 39,
+      "sourceRows": [
+        39
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/fec08cd2c767415d",
+      "lat": 34.475395,
+      "lng": 136.73702,
+      "category": "SAFE",
+      "name": "伊勢市立四郷小学校　体育館",
+      "address": "伊勢市楠部町2484",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市楠部町2484",
+      "sourceRow": 40,
+      "sourceRows": [
+        40
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/331143f9600b8319",
+      "lat": 34.4746337096817,
+      "lng": 136.737132668495,
+      "category": "SAFE",
+      "name": "放課後児童ｸﾗﾌﾞﾘﾝﾄﾞﾊﾞｰｸﾞ四郷",
+      "address": "伊勢市楠部町2484　旧四郷幼稚園",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市楠部町2484　旧四郷幼稚園",
+      "sourceRow": 97,
+      "sourceRows": [
+        97
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

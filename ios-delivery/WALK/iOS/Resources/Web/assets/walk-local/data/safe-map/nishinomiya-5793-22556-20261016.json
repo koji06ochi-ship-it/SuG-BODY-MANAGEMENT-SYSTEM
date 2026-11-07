@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5793-22556-20261016",
+  "lat": 34.759930265,
+  "lng": 135.33885355,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/d0f5d118bce28035",
+      "lat": 34.75932478,
+      "lng": 135.3410841,
+      "category": "SAFE",
+      "name": "上ケ原中学校",
+      "address": "兵庫県西宮市上ケ原九番町２－１０７",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市上ケ原九番町２－１０７",
+      "district": "西宮市",
+      "sourceRow": 46,
+      "sourceRows": [
+        46
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/b0c7e42146e45d48",
+      "lat": 34.75995408,
+      "lng": 135.3400686,
+      "category": "SAFE",
+      "name": "上ケ原病院",
+      "address": "兵庫県西宮市上ケ原十番町１－８５",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市上ケ原十番町１－８５",
+      "district": "西宮市",
+      "sourceRow": 668,
+      "sourceRows": [
+        668
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/5f84c187c870f8d0",
+      "lat": 34.76058759,
+      "lng": 135.3364975,
+      "category": "SAFE",
+      "name": "尼崎信用金庫新甲陽出張所",
+      "address": "兵庫県西宮市新甲陽町３－１３",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市新甲陽町３－１３",
+      "district": "西宮市",
+      "sourceRow": 672,
+      "sourceRows": [
+        672
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/bcd2c03b298fff6c",
+      "lat": 34.761135,
+      "lng": 135.3364762,
+      "category": "SAFE",
+      "name": "生活協同組合コープこうべ　コープ甲陽園",
+      "address": "兵庫県西宮市新甲陽町４－５",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市新甲陽町４－５",
+      "district": "西宮市",
+      "sourceRow": 679,
+      "sourceRows": [
+        679
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/02282744188eba90",
+      "lat": 34.75859061,
+      "lng": 135.3384165,
+      "category": "SAFE",
+      "name": "セントケア西宮デイサービス",
+      "address": "兵庫県西宮市五月ケ丘１２－８",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市五月ケ丘１２－８",
+      "district": "西宮市",
+      "sourceRow": 696,
+      "sourceRows": [
+        696
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/f861093f18c02ff6",
+      "lat": 34.75998953,
+      "lng": 135.3405784,
+      "category": "SAFE",
+      "name": "チャーム西宮上ヶ原",
+      "address": "兵庫県西宮市上ケ原九番町２－22",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市上ケ原九番町２－22",
+      "district": "西宮市",
+      "sourceRow": 700,
+      "sourceRows": [
+        700
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

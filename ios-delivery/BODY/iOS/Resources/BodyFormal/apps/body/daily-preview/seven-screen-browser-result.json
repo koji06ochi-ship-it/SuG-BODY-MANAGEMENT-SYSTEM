@@ -1,0 +1,25 @@
+{
+  "displayedScreens": [
+    "today",
+    "training",
+    "food",
+    "map",
+    "recovery",
+    "record",
+    "settings"
+  ],
+  "screenshots": 7,
+  "navigation": "six bottom navigation controls and settings clicked; each screen heading observed",
+  "interactionConfirmed": [
+    "5/3/1 button expands existing plan, TM input and saved-plan controls"
+  ],
+  "interactionUnconfirmed": [
+    "draft persistence interrupted by transport disconnect",
+    "save and reload in new 7-screen layout"
+  ],
+  "iPhoneVerified": false,
+  "complete": false,
+  "incident": "exec-server transport disconnected; execution environment temporarily unavailable then restored",
+  "oldTimeoutCause": "not established; new tab worked before environment disconnect",
+  "applicationCodeChangedThisTurn": false
+}

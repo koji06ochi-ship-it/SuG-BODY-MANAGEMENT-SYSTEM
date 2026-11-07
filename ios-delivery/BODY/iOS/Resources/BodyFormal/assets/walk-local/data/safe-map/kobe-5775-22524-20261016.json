@@ -1,0 +1,325 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5775-22524-20261016",
+  "lat": 34.653681620510476,
+  "lng": 135.14737369478144,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/85c3f3a2699e5dcc",
+      "lat": 34.6533304020354,
+      "lng": 135.146716533337,
+      "category": "SAFE",
+      "name": "新長田まちづくり㈱　アスタくにづか3番館",
+      "address": "神戸市長田区久保町6丁目1-1-401",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区久保町6丁目1-1-401",
+      "district": "長田区",
+      "sourceRow": 1230,
+      "sourceRows": [
+        1230
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8fe110408daa002e",
+      "lat": 34.6547562100181,
+      "lng": 135.144885539786,
+      "category": "SAFE",
+      "name": "新長田まちづくり㈱　アスタプラザウエスト",
+      "address": "神戸市長田区大橋町6丁目1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区大橋町6丁目1-1",
+      "district": "長田区",
+      "sourceRow": 1231,
+      "sourceRows": [
+        1231
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/315d2e81cdc24cb6",
+      "lat": 34.6536734250655,
+      "lng": 135.148504512997,
+      "category": "SAFE",
+      "name": "神戸信用金庫　西神戸支店",
+      "address": "神戸市長田区二葉町4丁目7－11",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区二葉町4丁目7－11",
+      "district": "長田区",
+      "sourceRow": 1236,
+      "sourceRows": [
+        1236
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7d36a903bf22b91d",
+      "lat": 34.654972533538,
+      "lng": 135.147857406067,
+      "category": "SAFE",
+      "name": "新長田眼科（医療法人社団）",
+      "address": "神戸市長田区腕塚町4丁目2番11号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区腕塚町4丁目2番11号",
+      "district": "長田区",
+      "sourceRow": 1237,
+      "sourceRows": [
+        1237
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4bfedd930845af50",
+      "lat": 34.652592396402,
+      "lng": 135.148060791479,
+      "category": "SAFE",
+      "name": "こうべ市歯科センター",
+      "address": "神戸市長田区二葉町5丁目1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区二葉町5丁目1-1",
+      "district": "長田区",
+      "sourceRow": 1246,
+      "sourceRows": [
+        1246
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/882e6656d94bc01b",
+      "lat": 34.6523509150045,
+      "lng": 135.149431791543,
+      "category": "SAFE",
+      "name": "神戸市営地下鉄　駒ケ林駅（海岸線）",
+      "address": "神戸市長田区庄田町4丁目",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区庄田町4丁目",
+      "district": "長田区",
+      "sourceRow": 1254,
+      "sourceRows": [
+        1254
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d4ed9592dc983518",
+      "lat": 34.6544260967058,
+      "lng": 135.148989347613,
+      "category": "SAFE",
+      "name": "真陽地域福祉センター",
+      "address": "神戸市長田区久保町3丁目9－6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区久保町3丁目9－6",
+      "district": "長田区",
+      "sourceRow": 1315,
+      "sourceRows": [
+        1315
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/668ccb57a8886fdd",
+      "lat": 34.6523139098636,
+      "lng": 135.147329635862,
+      "category": "SAFE",
+      "name": "二葉地域福祉センター",
+      "address": "神戸市長田区二葉町6丁目5-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区二葉町6丁目5-1",
+      "district": "長田区",
+      "sourceRow": 1319,
+      "sourceRows": [
+        1319
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ee8bbbc3b936fac6",
+      "lat": 34.6517551528439,
+      "lng": 135.146272004025,
+      "category": "SAFE",
+      "name": "神戸市立　地域人材支援センター（特定非営利活動法人　ふたば）",
+      "address": "神戸市長田区二葉町7－1－18",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区二葉町7－1－18",
+      "district": "長田区",
+      "sourceRow": 1320,
+      "sourceRows": [
+        1320
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bde457c7b8cd6ac4",
+      "lat": 34.6520950773018,
+      "lng": 135.146332530362,
+      "category": "SAFE",
+      "name": "神戸市立　ふたば保育所",
+      "address": "神戸市長田区二葉町7丁目1－30",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区二葉町7丁目1－30",
+      "district": "長田区",
+      "sourceRow": 1338,
+      "sourceRows": [
+        1338
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7d09309a0275581f",
+      "lat": 34.6557287045857,
+      "lng": 135.145166866755,
+      "category": "SAFE",
+      "name": "兵庫県赤十字血液センター",
+      "address": "神戸市長田区若松町5丁目2-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区若松町5丁目2-1",
+      "district": "長田区",
+      "sourceRow": 1343,
+      "sourceRows": [
+        1343
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/068bdebdc836f140",
+      "lat": 34.6558562658075,
+      "lng": 135.146314304651,
+      "category": "SAFE",
+      "name": "オギノ医院",
+      "address": "神戸市長田区大橋町4丁目4-9-205",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区大橋町4丁目4-9-205",
+      "district": "長田区",
+      "sourceRow": 1345,
+      "sourceRows": [
+        1345
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/640acd1374b632bc",
+      "lat": 34.6531192472944,
+      "lng": 135.148052344896,
+      "category": "SAFE",
+      "name": "新長田合同庁舎",
+      "address": "神戸市長田区二葉町5丁目1番地32",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区二葉町5丁目1番地32",
+      "district": "長田区",
+      "sourceRow": 1367,
+      "sourceRows": [
+        1367
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b365f204f9a4c79a",
+      "lat": 34.6546218923032,
+      "lng": 135.148866367419,
+      "category": "SAFE",
+      "name": "医療法人社団十善会　野瀬まごころ診療所",
+      "address": "神戸市長田区久保町3丁目9番地7",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区久保町3丁目9番地7",
+      "district": "長田区",
+      "sourceRow": 1369,
+      "sourceRows": [
+        1369
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/630a8d4358b7a010",
+      "lat": 34.6528398888736,
+      "lng": 135.148419142786,
+      "category": "SAFE",
+      "name": "医療法人社団十善会　野瀬病院",
+      "address": "神戸市長田区二葉町5丁目1番地36",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区二葉町5丁目1番地36",
+      "district": "長田区",
+      "sourceRow": 1370,
+      "sourceRows": [
+        1370
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/25e9067a23cf0990",
+      "lat": 34.6544738105246,
+      "lng": 135.146779996925,
+      "category": "SAFE",
+      "name": "兵庫県立総合衛生学院",
+      "address": "神戸市長田区腕塚町5-2-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "長田区腕塚町5-2-1",
+      "district": "長田区",
+      "sourceRow": 1371,
+      "sourceRows": [
+        1371
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

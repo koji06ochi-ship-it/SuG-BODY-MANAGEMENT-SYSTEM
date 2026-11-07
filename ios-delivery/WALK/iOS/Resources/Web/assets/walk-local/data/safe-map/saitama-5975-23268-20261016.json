@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5975-23268",
+  "lat": 35.85564632142857,
+  "lng": 139.6096252142857,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.85591355,
+      "lng": 139.6101943,
+      "category": "SAFE",
+      "name": "プラザウエスト",
+      "address": "さいたま市道場4-3-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "道場4-3-1",
+      "district": "桜区",
+      "sourceRow": 358,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/be0159f415305456",
+      "sourceRows": [
+        358,
+        359,
+        360
+      ],
+      "duplicateSourceEntries": 3
+    },
+    {
+      "lat": 35.8554459,
+      "lng": 139.6091984,
+      "category": "SAFE",
+      "name": "記念総合体育館",
+      "address": "さいたま市道場4-3-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "道場4-3-1",
+      "district": "桜区",
+      "sourceRow": 361,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/bcda26747b0e3c64",
+      "sourceRows": [
+        361,
+        362,
+        363,
+        365
+      ],
+      "duplicateSourceEntries": 4
+    }
+  ]
+}

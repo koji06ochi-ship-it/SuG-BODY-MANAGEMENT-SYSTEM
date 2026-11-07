@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5784-22499-20261016",
+  "lat": 34.70809225184907,
+  "lng": 134.9964439689266,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/1570ba5f96b4c2b7",
+      "lat": 34.7088178241236,
+      "lng": 134.995819334015,
+      "category": "SAFE",
+      "name": "神戸市立　春日台小学校",
+      "address": "神戸市西区春日台4-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区春日台4-1",
+      "district": "西区",
+      "sourceRow": 511,
+      "sourceRows": [
+        511
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/50231dcdd53f4aaf",
+      "lat": 34.7097005736608,
+      "lng": 134.998203115856,
+      "category": "SAFE",
+      "name": "神戸市立　平野中学校",
+      "address": "神戸市西区春日台2-20",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区春日台2-20",
+      "district": "西区",
+      "sourceRow": 527,
+      "sourceRows": [
+        527
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/75a7b63b4f4ff3d8",
+      "lat": 34.707362685741,
+      "lng": 134.995410177767,
+      "category": "SAFE",
+      "name": "神戸市立　春日台児童館",
+      "address": "神戸市西区春日台4丁目6-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区春日台4丁目6-2",
+      "district": "西区",
+      "sourceRow": 691,
+      "sourceRows": [
+        691
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0a5720466be1561a",
+      "lat": 34.7073105027687,
+      "lng": 134.995723817292,
+      "category": "SAFE",
+      "name": "春日台地域福祉センター",
+      "address": "神戸市西区春日台4丁目5番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区春日台4丁目5番地",
+      "district": "西区",
+      "sourceRow": 704,
+      "sourceRows": [
+        704
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8a43f18b568b71bb",
+      "lat": 34.7072696729512,
+      "lng": 134.997063399703,
+      "category": "SAFE",
+      "name": "コープこうべ　コープ西神",
+      "address": "神戸市西区春日台3丁目3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区春日台3丁目3",
+      "district": "西区",
+      "sourceRow": 732,
+      "sourceRows": [
+        732
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

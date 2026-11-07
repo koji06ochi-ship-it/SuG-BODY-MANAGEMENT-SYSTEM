@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5786-22544-20261016",
+  "lat": 34.71965164294466,
+  "lng": 135.26675363920455,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/64873c7cb968ddfd",
+      "lat": 34.7211523427235,
+      "lng": 135.267057594021,
+      "category": "SAFE",
+      "name": "コープこうべ　生活文化センター",
+      "address": "神戸市東灘区田中町5丁目3-20",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区田中町5丁目3-20",
+      "district": "東灘区",
+      "sourceRow": 1376,
+      "sourceRows": [
+        1376
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/75910a17015cfde6",
+      "lat": 34.7202794751693,
+      "lng": 135.265682321483,
+      "category": "SAFE",
+      "name": "神戸市　東灘区役所",
+      "address": "神戸市東灘区住吉東町5丁目2-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区住吉東町5丁目2-1",
+      "district": "東灘区",
+      "sourceRow": 1381,
+      "sourceRows": [
+        1381
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ec840ed2a8314a3e",
+      "lat": 34.7194602117446,
+      "lng": 135.266292538791,
+      "category": "SAFE",
+      "name": "神戸市立　東灘図書館",
+      "address": "神戸市東灘区住吉東町2丁目3-40",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区住吉東町2丁目3-40",
+      "district": "東灘区",
+      "sourceRow": 1382,
+      "sourceRows": [
+        1382
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/87260367a2cdede6",
+      "lat": 34.7171584257805,
+      "lng": 135.264462948308,
+      "category": "SAFE",
+      "name": "神戸市立　住吉小学校",
+      "address": "神戸市東灘区住吉東町4丁目1-31",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区住吉東町4丁目1-31",
+      "district": "東灘区",
+      "sourceRow": 1413,
+      "sourceRows": [
+        1413
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/caf316e12ecfa10b",
+      "lat": 34.7193315938305,
+      "lng": 135.26852441244,
+      "category": "SAFE",
+      "name": "灘中学校灘高等学校",
+      "address": "神戸市東灘区魚崎北町8丁目5-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区魚崎北町8丁目5-1",
+      "district": "東灘区",
+      "sourceRow": 1445,
+      "sourceRows": [
+        1445
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3e75b74df3fec2ab",
+      "lat": 34.721105618193,
+      "lng": 135.267972205938,
+      "category": "SAFE",
+      "name": "株式会社コープエイシス",
+      "address": "神戸市東灘区田中町5-2-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区田中町5-2-1",
+      "district": "東灘区",
+      "sourceRow": 1521,
+      "sourceRows": [
+        1521
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f00fde82e77992fe",
+      "lat": 34.7191249962065,
+      "lng": 135.264679099348,
+      "category": "SAFE",
+      "name": "株式会社　白洋舎　神戸工場",
+      "address": "神戸市東灘区住吉東町4丁目8-16",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区住吉東町4丁目8-16",
+      "district": "東灘区",
+      "sourceRow": 1625,
+      "sourceRows": [
+        1625
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ea993f0fd2a1184b",
+      "lat": 34.7213818991616,
+      "lng": 135.269085594858,
+      "category": "SAFE",
+      "name": "工藤循環器内科",
+      "address": "神戸市東灘区田中町5丁目1-5　ネオハイツ本山西",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区田中町5丁目1-5　ネオハイツ本山西",
+      "district": "東灘区",
+      "sourceRow": 1690,
+      "sourceRows": [
+        1690
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4fc0a09dcbd587c8",
+      "lat": 34.719058845441,
+      "lng": 135.266310180127,
+      "category": "SAFE",
+      "name": "住吉川ビューハイツ",
+      "address": "神戸市東灘区住吉東町2丁目4番20号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区住吉東町2丁目4番20号",
+      "district": "東灘区",
+      "sourceRow": 1729,
+      "sourceRows": [
+        1729
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/942f455191073dad",
+      "lat": 34.7167439025296,
+      "lng": 135.265681665222,
+      "category": "SAFE",
+      "name": "健康福祉センター恋野温泉うはらの湯",
+      "address": "神戸市東灘区住吉東町4-1-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区住吉東町4-1-3",
+      "district": "東灘区",
+      "sourceRow": 1733,
+      "sourceRows": [
+        1733
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/361d965567b3aa24",
+      "lat": 34.7213707616112,
+      "lng": 135.268541470714,
+      "category": "SAFE",
+      "name": "東灘スカイマンション　管理組合",
+      "address": "神戸市東灘区田中町5丁目1番12号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区田中町5丁目1番12号",
+      "district": "東灘区",
+      "sourceRow": 1736,
+      "sourceRows": [
+        1736
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

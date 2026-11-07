@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "yokkaichi-5828-22768-20261016",
+  "lat": 34.971388805000004,
+  "lng": 136.61266305,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "四日市市",
+  "source": "四日市市内公共施設 AED設置箇所一覧",
+  "sourceUrl": "https://data.bodik.jp/dataset/242021_00127",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/422f8da8-0b3c-4d84-b8dd-d88d18e914ce/resource/2a5eee8b-c455-4c2e-8553-b0d3d36e5ef2/download/242021_aed.csv",
+  "sourceUpdatedAt": "2024-12-18",
+  "sourcePageUpdatedAt": "2025-01-24",
+  "retrievedAt": "2026-10-15T15:44:16.747Z",
+  "sourceFileSha256": "c0880c81977c7fc444213ee84ef31a7b2e9e34f12d31e892064cbabb7d5159cf",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/yokkaichi/aed/eecef51492435ea8",
+      "lat": 34.97246804,
+      "lng": 136.6137696,
+      "category": "SAFE",
+      "name": "四日市市上下水道局",
+      "address": "四日市市堀木1丁目3－18",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市堀木1丁目3－18",
+      "sourceRow": 223,
+      "sourceRows": [
+        223
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/6dcb5d768f4984fe",
+      "lat": 34.97054283,
+      "lng": 136.6126284,
+      "category": "SAFE",
+      "name": "四日市市文化会館",
+      "address": "四日市市安島2丁目5-3",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市安島2丁目5-3",
+      "sourceRow": 274,
+      "sourceRows": [
+        274
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/46b9827ae81d0223",
+      "lat": 34.9705428,
+      "lng": 136.6126338,
+      "category": "SAFE",
+      "name": "四日市市文化会館",
+      "address": "四日市市安島2丁目5-3",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市安島2丁目5-3",
+      "sourceRow": 275,
+      "sourceRows": [
+        275
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/271e3162a6ede682",
+      "lat": 34.97200155,
+      "lng": 136.6116204,
+      "category": "SAFE",
+      "name": "四日市市立図書館",
+      "address": "四日市市久保田一丁目2-42",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市久保田一丁目2-42",
+      "sourceRow": 277,
+      "sourceRows": [
+        277
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5976-23282",
+  "lat": 35.85813252,
+  "lng": 139.6957739,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.858241,
+      "lng": 139.695927,
+      "category": "SAFE",
+      "name": "向放課後児童クラブ（向ひまわり第１）",
+      "address": "さいたま市大谷口5436-4",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大谷口5436-4",
+      "district": "南区",
+      "sourceRow": 462,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/d097331701c322cd",
+      "sourceRows": [
+        462
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.85802404,
+      "lng": 139.6956208,
+      "category": "SAFE",
+      "name": "向第二放課後児童クラブ（向ひまわり第３）",
+      "address": "さいたま市大谷口5437　向小学校内",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大谷口5437　向小学校内",
+      "district": "南区",
+      "sourceRow": 463,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/5451858529c6f616",
+      "sourceRows": [
+        463
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

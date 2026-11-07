@@ -1,0 +1,11 @@
+{
+  "app": "WALK",
+  "scheme": "SuGWALK",
+  "bundleIdentifier": "jp.sugosaka.walk",
+  "registrationEvidence": "UNCONFIRMED_PROPOSAL",
+  "currentAppleStateVerified": false,
+  "signingTeamConfigured": false,
+  "buildExecuted": false,
+  "installedOnIPhone": false,
+  "privacyReviewComplete": false
+}

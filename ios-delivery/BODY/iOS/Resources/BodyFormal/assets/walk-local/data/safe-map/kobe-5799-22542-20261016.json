@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5799-22542-20261016",
+  "lat": 34.796451622864446,
+  "lng": 135.25361139477482,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/f51231cf9185bd67",
+      "lat": 34.7969775492401,
+      "lng": 135.253128018878,
+      "category": "SAFE",
+      "name": "株式会社メープルホテル＆リゾート",
+      "address": "神戸市北区有馬町406-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有馬町406-3",
+      "district": "北区",
+      "sourceRow": 2295,
+      "sourceRows": [
+        2295
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/223f2333eb10e897",
+      "lat": 34.7963078742972,
+      "lng": 135.252295536377,
+      "category": "SAFE",
+      "name": "御幸荘花結び",
+      "address": "神戸市北区有馬町351番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有馬町351番地",
+      "district": "北区",
+      "sourceRow": 2316,
+      "sourceRows": [
+        2316
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/dd2f3d04e4473dd9",
+      "lat": 34.7965560320961,
+      "lng": 135.253668095961,
+      "category": "SAFE",
+      "name": "有馬温泉ソサエティ",
+      "address": "神戸市北区有馬町416",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有馬町416",
+      "district": "北区",
+      "sourceRow": 2373,
+      "sourceRows": [
+        2373
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7a322e600a91f1fb",
+      "lat": 34.7967086171365,
+      "lng": 135.254331973894,
+      "category": "SAFE",
+      "name": "ダイヤモンド有馬温泉ソサエティ",
+      "address": "神戸市北区有馬町423",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有馬町423",
+      "district": "北区",
+      "sourceRow": 2374,
+      "sourceRows": [
+        2374
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/308e0d04cb5956c1",
+      "lat": 34.7961341576185,
+      "lng": 135.254594421726,
+      "category": "SAFE",
+      "name": "有馬保養所　瑞宝園",
+      "address": "神戸市北区有馬町1751",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有馬町1751",
+      "district": "北区",
+      "sourceRow": 2375,
+      "sourceRows": [
+        2375
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b7fb8d441d47bfdc",
+      "lat": 34.7960255067983,
+      "lng": 135.253650321813,
+      "category": "SAFE",
+      "name": "ザ グランリゾート有馬",
+      "address": "神戸市北区有馬町1740-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有馬町1740-1",
+      "district": "北区",
+      "sourceRow": 2417,
+      "sourceRows": [
+        2417
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5780-22514-20261016",
+  "lat": 34.6827917357931,
+  "lng": 135.08725434198624,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/eb16f957bb4bf670",
+      "lat": 34.6819287127156,
+      "lng": 135.089399281318,
+      "category": "SAFE",
+      "name": "神戸市立　西落合小学校",
+      "address": "神戸市須磨区西落合7-1-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区西落合7-1-3",
+      "district": "須磨区",
+      "sourceRow": 46,
+      "sourceRows": [
+        46
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0b203b61fef95aa6",
+      "lat": 34.6817733856051,
+      "lng": 135.086320859649,
+      "category": "SAFE",
+      "name": "西落合地域福祉センター",
+      "address": "神戸市須磨区西落合5丁目13-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区西落合5丁目13-3",
+      "district": "須磨区",
+      "sourceRow": 154,
+      "sourceRows": [
+        154
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2e9c18caca4ff992",
+      "lat": 34.6843999592082,
+      "lng": 135.0842589993,
+      "category": "SAFE",
+      "name": "コスモス薬局",
+      "address": "神戸市須磨区神の谷2丁目9－5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区神の谷2丁目9－5",
+      "district": "須磨区",
+      "sourceRow": 155,
+      "sourceRows": [
+        155
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/31dbb547e262e80b",
+      "lat": 34.6830648856435,
+      "lng": 135.089038227678,
+      "category": "SAFE",
+      "name": "名谷公園",
+      "address": "神戸市須磨区西落合7丁目6番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区西落合7丁目6番",
+      "district": "須磨区",
+      "sourceRow": 223,
+      "sourceRows": [
+        223
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

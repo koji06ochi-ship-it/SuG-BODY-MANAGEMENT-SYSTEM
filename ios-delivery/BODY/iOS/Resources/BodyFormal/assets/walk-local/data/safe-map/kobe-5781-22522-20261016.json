@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5781-22522-20261016",
+  "lat": 34.68886606929598,
+  "lng": 135.13583075290285,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/c84f7f6d515dc942",
+      "lat": 34.6915403668864,
+      "lng": 135.134338097002,
+      "category": "SAFE",
+      "name": "神戸市立　雲雀丘中学校",
+      "address": "神戸市長田区雲雀ケ丘1-1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区雲雀ケ丘1-1-1",
+      "district": "長田区",
+      "sourceRow": 1241,
+      "sourceRows": [
+        1241
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/deb8000c55162448",
+      "lat": 34.689495022568,
+      "lng": 135.137742049227,
+      "category": "SAFE",
+      "name": "介護老人保健施設ヴィラ光陽",
+      "address": "神戸市長田区大日丘町2丁目7",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区大日丘町2丁目7",
+      "district": "長田区",
+      "sourceRow": 1249,
+      "sourceRows": [
+        1249
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/51f9a35bd25a1157",
+      "lat": 34.6863764679805,
+      "lng": 135.137675488632,
+      "category": "SAFE",
+      "name": "神戸市立　丸山ひばり小学校",
+      "address": "神戸市長田区西丸山町3丁目2－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区西丸山町3丁目2－1",
+      "district": "長田区",
+      "sourceRow": 1262,
+      "sourceRows": [
+        1262
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/981ef0a8af8fa8e0",
+      "lat": 34.6889219252187,
+      "lng": 135.135860295994,
+      "category": "SAFE",
+      "name": "神戸市立　大日丘児童館",
+      "address": "神戸市長田区大日丘町3丁目8-10",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区大日丘町3丁目8-10",
+      "district": "長田区",
+      "sourceRow": 1302,
+      "sourceRows": [
+        1302
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3ca39e91daa01f8a",
+      "lat": 34.6908501312569,
+      "lng": 135.134352282482,
+      "category": "SAFE",
+      "name": "街かどケアホームのどか",
+      "address": "神戸市長田区雲雀ヶ丘1丁目2-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区雲雀ヶ丘1丁目2-5",
+      "district": "長田区",
+      "sourceRow": 1304,
+      "sourceRows": [
+        1304
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/895234d34665cb33",
+      "lat": 34.6860125018654,
+      "lng": 135.13501630408,
+      "category": "SAFE",
+      "name": "適寿リハビリテーション病院",
+      "address": "神戸市長田区花山町2丁目11-32",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区花山町2丁目11-32",
+      "district": "長田区",
+      "sourceRow": 1360,
+      "sourceRows": [
+        1360
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

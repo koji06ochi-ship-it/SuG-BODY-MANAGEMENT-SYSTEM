@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5777-22536-20261016",
+  "lat": 34.66614508911751,
+  "lng": 135.21728252812701,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/6eb42900d9144646",
+      "lat": 34.6676558168641,
+      "lng": 135.216118576592,
+      "category": "SAFE",
+      "name": "ﾎﾃﾙﾊﾟｰﾙｼﾃｨ神戸",
+      "address": "神戸市中央区港島中町7-5-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島中町7-5-1",
+      "district": "中央区",
+      "sourceRow": 840,
+      "sourceRows": [
+        840
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8d5de0daafc29b56",
+      "lat": 34.6659941500783,
+      "lng": 135.218464480417,
+      "category": "SAFE",
+      "name": "神戸市立　バンドー神戸青少年科学館",
+      "address": "神戸市中央区港島中町7-7-6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島中町7-7-6",
+      "district": "中央区",
+      "sourceRow": 842,
+      "sourceRows": [
+        842
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/aa11d89335f59ed8",
+      "lat": 34.6642959193326,
+      "lng": 135.218655383528,
+      "category": "SAFE",
+      "name": "IKEA神戸",
+      "address": "神戸市中央区港島中町8-7-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島中町8-7-1",
+      "district": "中央区",
+      "sourceRow": 859,
+      "sourceRows": [
+        859
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/abedb548b14c584b",
+      "lat": 34.6651006422399,
+      "lng": 135.21623147821,
+      "category": "SAFE",
+      "name": "株式会社　ブライダルハート",
+      "address": "神戸市中央区港島中町6－6－3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島中町6－6－3",
+      "district": "中央区",
+      "sourceRow": 887,
+      "sourceRows": [
+        887
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b197f380329a7292",
+      "lat": 34.6676789170726,
+      "lng": 135.216942721888,
+      "category": "SAFE",
+      "name": "神戸新交通株式会社　中埠頭駅",
+      "address": "神戸市中央区港島中町7丁目",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島中町7丁目",
+      "district": "中央区",
+      "sourceRow": 966,
+      "sourceRows": [
+        966
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

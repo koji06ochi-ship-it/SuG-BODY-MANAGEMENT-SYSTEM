@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5783-22504-20261016",
+  "lat": 34.6987466977793,
+  "lng": 135.0293075469545,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/2beb46744c23a974",
+      "lat": 34.6983299063927,
+      "lng": 135.029369529822,
+      "category": "SAFE",
+      "name": "播州信用金庫　西神南支店",
+      "address": "神戸市西区井吹台西町1丁目1－3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区井吹台西町1丁目1－3",
+      "district": "西区",
+      "sourceRow": 566,
+      "sourceRows": [
+        566
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3184cff0f93746e4",
+      "lat": 34.6991634891659,
+      "lng": 135.029245564087,
+      "category": "SAFE",
+      "name": "(株)カインズホーム神戸西神南店",
+      "address": "神戸市西区井吹台西町1丁目1番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区井吹台西町1丁目1番地",
+      "district": "西区",
+      "sourceRow": 655,
+      "sourceRows": [
+        655
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

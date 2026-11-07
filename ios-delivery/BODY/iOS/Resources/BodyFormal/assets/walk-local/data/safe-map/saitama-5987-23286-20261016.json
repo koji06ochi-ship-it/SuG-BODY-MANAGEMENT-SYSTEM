@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5987-23286",
+  "lat": 35.927282633333334,
+  "lng": 139.71978503333332,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.927806,
+      "lng": 139.719758,
+      "category": "SAFE",
+      "name": "槻の木",
+      "address": "さいたま市黒谷1135-2",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "黒谷1135-2",
+      "district": "岩槻区",
+      "sourceRow": 579,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/38f08e8e8b481118",
+      "sourceRows": [
+        579
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.927842,
+      "lng": 139.718914,
+      "category": "SAFE",
+      "name": "第２やまぶき",
+      "address": "さいたま市黒谷1282-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "黒谷1282-1",
+      "district": "岩槻区",
+      "sourceRow": 580,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/39f67399674c835d",
+      "sourceRows": [
+        580
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.9261999,
+      "lng": 139.7206831,
+      "category": "SAFE",
+      "name": "和土放課後児童クラブ",
+      "address": "さいたま市黒谷1353",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "黒谷1353",
+      "district": "岩槻区",
+      "sourceRow": 581,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/df19763cd420d218",
+      "sourceRows": [
+        581
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

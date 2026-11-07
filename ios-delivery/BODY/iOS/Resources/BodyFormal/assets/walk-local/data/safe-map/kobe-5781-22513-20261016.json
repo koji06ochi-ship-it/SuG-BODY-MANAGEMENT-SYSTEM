@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5781-22513-20261016",
+  "lat": 34.68737767179555,
+  "lng": 135.0785801297435,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/acf819205432ea3d",
+      "lat": 34.6866661108912,
+      "lng": 135.078911166425,
+      "category": "SAFE",
+      "name": "日仏商事株式会社・神戸商品管理センター",
+      "address": "神戸市須磨区弥栄台１丁目4番5号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区弥栄台１丁目4番5号",
+      "district": "須磨区",
+      "sourceRow": 234,
+      "sourceRows": [
+        234
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/08f017ca01f68bb1",
+      "lat": 34.6880892326999,
+      "lng": 135.078249093062,
+      "category": "SAFE",
+      "name": "もりか運送神戸営業所",
+      "address": "神戸市須磨区弥栄台１丁目10－6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区弥栄台１丁目10－6",
+      "district": "須磨区",
+      "sourceRow": 248,
+      "sourceRows": [
+        248
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

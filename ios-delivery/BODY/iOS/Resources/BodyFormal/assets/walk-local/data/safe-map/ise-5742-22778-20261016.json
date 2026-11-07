@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5742-22778-20261016",
+  "lat": 34.45707090009,
+  "lng": 136.66896700859,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/d602795b2123c1f5",
+      "lat": 34.45707090009,
+      "lng": 136.66896700859,
+      "category": "SAFE",
+      "name": "伊勢市倉庫及び水防倉庫",
+      "address": "伊勢市佐八町1069-3",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市佐八町1069-3",
+      "sourceRow": 144,
+      "sourceRows": [
+        144
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

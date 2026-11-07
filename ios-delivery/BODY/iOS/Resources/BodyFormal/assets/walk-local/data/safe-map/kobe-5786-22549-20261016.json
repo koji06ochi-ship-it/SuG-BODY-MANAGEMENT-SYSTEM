@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5786-22549-20261016",
+  "lat": 34.721920391514864,
+  "lng": 135.29788877460166,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/a4162f2803f6f686",
+      "lat": 34.7218765870474,
+      "lng": 135.297884263864,
+      "category": "SAFE",
+      "name": "コープこうべ　コープミニ深江南",
+      "address": "神戸市東灘区深江南町2丁目12番8号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区深江南町2丁目12番8号",
+      "district": "東灘区",
+      "sourceRow": 1524,
+      "sourceRows": [
+        1524
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/545b8d6e4ae6579f",
+      "lat": 34.7219516821195,
+      "lng": 135.299684392885,
+      "category": "SAFE",
+      "name": "㈱ベネッセスタイルケア　メディカルホームグランダ深江南",
+      "address": "神戸市東灘区深江南町2丁目8-25",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区深江南町2丁目8-25",
+      "district": "東灘区",
+      "sourceRow": 1580,
+      "sourceRows": [
+        1580
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2903b70a9ca34594",
+      "lat": 34.7219329053777,
+      "lng": 135.296097667056,
+      "category": "SAFE",
+      "name": "深江南地域福祉センター",
+      "address": "神戸市東灘区深江南町3丁目4番24号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区深江南町3丁目4番24号",
+      "district": "東灘区",
+      "sourceRow": 1606,
+      "sourceRows": [
+        1606
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

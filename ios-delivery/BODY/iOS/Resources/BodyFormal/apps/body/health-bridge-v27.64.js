@@ -1,0 +1,38 @@
+(()=>{'use strict';const V='27.81',K='sug_native_health_v1';let lastAccepted='',lastTime=0,lastURL='',lastParsed=null;
+const num=(o,ks)=>{for(const k of ks){const v=o?.[k];if(v!==undefined&&v!==null&&String(v).trim()!==''){const n=Number(String(v).replace(/[,\s]/g,'').replace(/(?:歩|時間|h|hr|hrs|kg|bpm|ms|%|回\/分)$/i,''));if(Number.isFinite(n))return n}}return null};
+function loadRuntime(id,src){if(document.getElementById(id))return;const s=document.createElement('script');s.id=id;s.src=src;document.body.appendChild(s)}
+function ensureRuntimes(){loadRuntime('sugRecoveryBodyContextV2777','./recovery-body-context-v27.77.js?v=27.81');loadRuntime('sugNutritionRecoveryV2778','./nutrition-recovery-engine-v27.78.js?v=27.81');loadRuntime('sugFoodPhotoV2779','./food-photo-intake-v27.79.js?v=27.81');loadRuntime('sugNextMealV2780','./next-meal-guidance-v27.80.js?v=27.81');loadRuntime('sugMealTimingV2781','./meal-timing-v27.81.js?v=27.81')}
+function statusEl(){let el=document.getElementById('healthNativeStatus');if(el)return el;const grid=document.querySelector('.health');if(!grid)return null;el=document.createElement('div');el.id='healthNativeStatus';el.style.cssText='grid-column:1/-1;margin-top:2px;padding:9px 10px;border:1px solid #2c2c31;border-radius:11px;background:#0b0b0d;color:#777;font-size:10px;line-height:1.55';el.textContent='iPhone HealthKit：未受信';grid.appendChild(el);return el}
+function fmtTime(v){const d=new Date(v||'');if(Number.isNaN(d.getTime()))return '--';return `${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`}
+function status(p){const el=statusEl();if(!el)return;const has=v=>v!==undefined&&v!==null&&Number.isFinite(Number(v));const bits=[['歩数',has(p?.steps)||has(p?.stepCount)],['睡眠',has(p?.sleep)||has(p?.sleepHours)],['安静時心拍',has(p?.restingHeartRate)],['HRV',has(p?.hrv)||has(p?.hrvMs)],['体重',has(p?.weight)||has(p?.weightKg)]].map(([k,ok])=>`${k}${ok?'✓':'—'}`).join('｜');const src=p?.source==='healthkit_native'?'iPhone HealthKit':p?.source==='apple_health_shortcuts'?'Apple Health':'Health';el.textContent=`${src}同期 ${fmtTime(p?.syncedAt)}｜${bits}`;el.style.color='#d9b85f'}
+function parseIncoming(){try{const url=location.search+'|'+location.hash;if(url===lastURL&&lastParsed)return lastParsed;const q=new URLSearchParams(location.search||'');let o=null;const keys=['steps','stepCount','sleep','sleepHours','heart','heartRate','restingHeartRate','weight','weightKg','hrv','hrvMs','sleepEfficiency','readiness','hrvBaseline','rhrBaseline'];if(q.get('sug-health')==='1'||q.get('health')==='1'||keys.some(k=>q.has(k))){o={};q.forEach((v,k)=>o[k]=v)}let h=String(location.hash||'').replace(/^#/,'');if(!o&&/^sug-health(?:[?&=]|$)/.test(h)){if(h.startsWith('sug-health=')){try{o=JSON.parse(decodeURIComponent(h.slice(11)))}catch{}}else{o={};new URLSearchParams(h.replace(/^sug-health[?&]?/,'')).forEach((v,k)=>o[k]=v)}}if(!o)return null;let sleep=num(o,['sleepHours','sleep_hours','sleep']);if(sleep==null){const minutes=num(o,['sleepMinutes','sleep_minutes']),seconds=num(o,['sleepSeconds','sleep_seconds']);sleep=minutes!=null?minutes/60:seconds!=null?seconds/3600:null;}const p={source:'apple_health_shortcuts',steps:num(o,['steps','stepCount','step_count']),sleep,heartRate:num(o,['heart','heartRate','heart_rate','hr','latestHeartRate']),restingHeartRate:num(o,['restingHeartRate','resting_hr','rhr']),weight:num(o,['weight','weightKg','weight_kg']),hrv:num(o,['hrv','hrvMs','hrv_ms','sdnn']),sleepEfficiency:num(o,['sleepEfficiency','sleep_efficiency','efficiency']),readiness:num(o,['readiness','readinessScore']),hrvBaseline:num(o,['hrvBaseline','hrv_base','hrv28']),rhrBaseline:num(o,['rhrBaseline','restingHeartRateBaseline','rhr_base','rhr28']),syncedAt:o.syncedAt||o.timestamp||new Date().toISOString()};if([p.steps,p.sleep,p.heartRate,p.restingHeartRate,p.weight,p.hrv,p.sleepEfficiency,p.readiness,p.hrvBaseline,p.rhrBaseline].every(v=>v==null))return null;lastURL=url;lastParsed=p;return p}catch{return null}}
+function cached(){try{const p=window.__SUG_NATIVE_HEALTH__||JSON.parse(localStorage.getItem(K)||'null');return p&&['healthkit_native','apple_health_shortcuts'].includes(p.source)?p:null}catch{return null}}
+function setInput(id,v){if(v==null)return;const el=document.getElementById(id);if(!el)return;el.value=v;el.dispatchEvent(new Event('input',{bubbles:true}))}
+function autofill(p){setInput('hrvToday',p?.hrv??p?.hrvMs);setInput('hrvBase',p?.hrvBaseline??p?.hrvBase);setInput('sleepEff',p?.sleepEfficiency);setInput('rhrToday',p?.restingHeartRate);setInput('rhrBase',p?.rhrBaseline??p?.restingHeartRateBaseline);setInput('readiness',p?.readiness??p?.readinessScore)}
+function message(text){const el=statusEl();if(el){el.textContent=text;el.style.color='#d9b85f'}}
+// Missing values stay absent: legacy consumers may coerce null to zero.
+function normalize(input){
+ if(!input||typeof input!=='object'||Array.isArray(input))return null;
+ if(!['healthkit_native','apple_health_shortcuts'].includes(input.source))return null;
+ const p={...input};
+ const fields={steps:['steps','stepCount'],sleepHours:['sleepHours','sleep'],heartRate:['heartRate','latestHeartRate'],restingHeartRate:['restingHeartRate'],hrvMs:['hrvMs','hrv'],weightKg:['weightKg','weight'],sleepEfficiency:['sleepEfficiency'],readiness:['readiness','readinessScore'],hrvBaseline:['hrvBaseline','hrvBase'],rhrBaseline:['rhrBaseline','restingHeartRateBaseline'],recoveryScore:['recoveryScore'],stressScore:['stressScore']};
+ for(const [key,aliases] of Object.entries(fields)){const v=num(input,aliases);for(const alias of aliases)delete p[alias];if(v!=null&&v>=0&&!(key==='sleepHours'&&v>24))p[key]=v;}
+ for(const [key,alias] of [['sleepHours','sleep'],['hrvMs','hrv'],['weightKg','weight']])if(p[key]!=null)p[alias]=p[key];
+ return p;
+}
+function apply(input){
+ const p=normalize(input);if(!p){message('Appleヘルスケア：受信形式を確認してください');return false;}
+ if(p.authorizationStatus==='denied'||p.status==='denied'){message('Appleヘルスケア：利用できません。iPhoneのヘルスケア設定を確認してください');return false;}
+ const time=Date.parse(p.syncedAt),now=Date.now();
+ if(!Number.isFinite(time)||time>now+300000||now-time>36*3600000||time<lastTime){message('Appleヘルスケア：古いデータまたは日時不明。iPhoneで再同期してください');return false;}
+ if(!['steps','sleepHours','heartRate','restingHeartRate','hrvMs','weightKg'].some(k=>p[k]!=null)){message('Appleヘルスケア：データ未取得。記録と読み取り設定を確認してください');return false;}
+ const fingerprint=JSON.stringify(Object.keys(p).sort().map(k=>[k,p[k]]));
+ if(fingerprint===lastAccepted){status(p);return false;}
+ lastAccepted=fingerprint;lastTime=time;ensureRuntimes();window.__SUG_NATIVE_HEALTH__=p;
+ status(p);try{localStorage.setItem(K,JSON.stringify(p))}catch{message('端末への保存ができません。受信データはこの画面のみで利用します');}
+ window.dispatchEvent(new CustomEvent('sug:native-health',{detail:p}));
+ for(const receiver of new Set([window.SuGBody,window.SuGV27]))receiver?.receiveNative?.(p);
+ autofill(p);return true;
+}
+function boot(){ensureRuntimes();statusEl();const p=parseIncoming()||cached();if(p)apply(p)}
+boot();document.addEventListener('DOMContentLoaded',boot,{once:true});window.addEventListener('pageshow',boot);window.addEventListener('hashchange',boot);window.addEventListener('sug:native-health',e=>status(e.detail));setTimeout(boot,300);setTimeout(boot,1200);window.SuGBodyHealthBridgeV2781={version:V,current:()=>{const p=window.__SUG_NATIVE_HEALTH__;return lastAccepted&&Date.now()-Date.parse(p?.syncedAt)<=36*3600000?p:null},boot,apply,parseIncoming,autofill,ensureRuntimes};})();

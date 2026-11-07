@@ -1,0 +1,21 @@
+(()=>{'use strict';
+const KEY='sug_rewards_v1',COST_KEY='sug_reward_costs_v1',LIMIT_KEY='sug_reward_limits_v1';
+const BASE=[
+{id:'protein',name:'プロテイン',points:5000,costYen:null,defaultLimit:1,kind:'BODY',note:'継続記録の交換特典。実費設定後に交換可能。'},
+{id:'meal1000',name:'提携飲食店 1,000円OFF',points:7000,costYen:1000,defaultLimit:2,kind:'FOOD',note:'提携店・対象メニュー・利用条件を確認して発行。'},
+{id:'powergrip',name:'パワーグリップ',points:15000,costYen:null,defaultLimit:1,kind:'BODY',note:'中長期継続向け。商品原価設定後に交換可能。'},
+{id:'bracebelt',name:'腹圧ベルト',points:25000,costYen:null,defaultLimit:1,kind:'BODY',note:'長期継続向け。商品原価設定後に交換可能。'}
+];
+const read=(k,f)=>{try{return JSON.parse(localStorage.getItem(k)||'null')??f}catch{return f}};
+const write=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
+function state(){const s=read(KEY,{redemptions:[]});s.redemptions=Array.isArray(s.redemptions)?s.redemptions:[];return s}
+function costs(){const c=read(COST_KEY,{});return c&&typeof c==='object'&&!Array.isArray(c)?c:{}}
+function limits(){const c=read(LIMIT_KEY,{});return c&&typeof c==='object'&&!Array.isArray(c)?c:{}}
+function monthKey(){const api=window.SuGPointsV2716;return api?.monthKey?api.monthKey():new Date().toISOString().slice(0,7)}
+function redeemedCount(id,month=monthKey()){return state().redemptions.filter(r=>r.rewardId===id&&r.month===month&&r.status!=='CANCELLED').length}
+function catalog(){const c=costs(),l=limits();return BASE.map(x=>{const override=Number(c[x.id]);const cost=Number.isFinite(override)&&override>0?Math.round(override):x.costYen;const lim=Number(l[x.id]);const monthlyLimit=Number.isFinite(lim)&&lim>=0?Math.round(lim):x.defaultLimit;const redeemedThisMonth=redeemedCount(x.id);return{...x,costYen:cost,costReady:Number.isFinite(Number(cost))&&Number(cost)>0,monthlyLimit,redeemedThisMonth,remainingExchanges:Math.max(0,monthlyLimit-redeemedThisMonth)}})}
+function setCost(id,yen){if(!BASE.some(x=>x.id===id))return{ok:false,reason:'NOT_FOUND'};const n=Math.round(Number(yen)||0);if(n<=0)return{ok:false,reason:'INVALID_COST'};const c=costs();c[id]=n;write(COST_KEY,c);window.dispatchEvent(new CustomEvent('sug:rewards-change'));return{ok:true,costYen:n}}
+function setLimit(id,count){if(!BASE.some(x=>x.id===id))return{ok:false,reason:'NOT_FOUND'};const n=Math.round(Number(count));if(!Number.isFinite(n)||n<0||n>99)return{ok:false,reason:'INVALID_LIMIT'};const l=limits();l[id]=n;write(LIMIT_KEY,l);window.dispatchEvent(new CustomEvent('sug:rewards-change'));return{ok:true,monthlyLimit:n}}
+function redeem(id){const api=window.SuGPointsV2716;if(!api)return{ok:false,reason:'POINTS_NOT_READY'};const item=catalog().find(x=>x.id===id);if(!item)return{ok:false,reason:'NOT_FOUND'};if(!item.costReady)return{ok:false,reason:'COST_NOT_SET'};if(item.monthlyLimit<=0||item.redeemedThisMonth>=item.monthlyLimit)return{ok:false,reason:'MONTHLY_ITEM_LIMIT'};const w=api.wallet(),b=api.budget();if(Number(w.balance||0)<item.points)return{ok:false,reason:'POINTS_LOW'};if(Number(b.usedCostYen||0)+Number(item.costYen||0)>Number(b.maxCostYen||20000))return{ok:false,reason:'MONTHLY_BUDGET'};const s=state(),code=`SUG-${Date.now().toString(36).toUpperCase()}-${Math.random().toString(36).slice(2,6).toUpperCase()}`;w.balance-=item.points;w.events.unshift({id:`redeem:${code}`,points:-item.points,category:'REDEEM',label:item.name,meta:{rewardId:item.id,costYen:item.costYen,code},at:new Date().toISOString(),day:api.dayKey(),month:api.monthKey()});write('sug_points_v1',w);b.usedCostYen=Number(b.usedCostYen||0)+Number(item.costYen||0);write('sug_points_budget_v1',b);const r={code,rewardId:item.id,name:item.name,points:item.points,costYen:item.costYen,status:'ISSUED',at:new Date().toISOString(),month:api.monthKey()};s.redemptions.unshift(r);s.redemptions=s.redemptions.slice(0,100);write(KEY,s);window.dispatchEvent(new CustomEvent('sug:points-change',{detail:{wallet:w,redemption:r}}));return{ok:true,redemption:r,wallet:w,budget:b}}
+window.SuGRewardsV2736={catalog,state,costs,limits,setCost,setLimit,redeemedCount,redeem};
+})();

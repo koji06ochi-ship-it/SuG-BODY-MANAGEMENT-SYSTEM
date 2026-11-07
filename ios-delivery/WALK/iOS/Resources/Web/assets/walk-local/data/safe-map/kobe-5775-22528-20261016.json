@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5775-22528-20261016",
+  "lat": 34.65378336410355,
+  "lng": 135.17008943369768,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/eefc847063919187",
+      "lat": 34.6523526854648,
+      "lng": 135.170896764535,
+      "category": "SAFE",
+      "name": "神戸市立　吉田中学校",
+      "address": "神戸市兵庫区吉田町1-5-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区吉田町1-5-1",
+      "district": "兵庫区",
+      "sourceRow": 2043,
+      "sourceRows": [
+        2043
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/99bcfa699aed0921",
+      "lat": 34.6557021094126,
+      "lng": 135.168098513908,
+      "category": "SAFE",
+      "name": "浜山地域福祉センター",
+      "address": "神戸市兵庫区御崎町1丁目2-4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区御崎町1丁目2-4",
+      "district": "兵庫区",
+      "sourceRow": 2071,
+      "sourceRows": [
+        2071
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4c2fe155684dcf68",
+      "lat": 34.6543444842822,
+      "lng": 135.168317314517,
+      "category": "SAFE",
+      "name": "エクセルスカイ御崎公園",
+      "address": "神戸市兵庫区吉田町2丁目35番6号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区吉田町2丁目35番6号",
+      "district": "兵庫区",
+      "sourceRow": 2107,
+      "sourceRows": [
+        2107
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/067fbaadf4bd0297",
+      "lat": 34.6509064864721,
+      "lng": 135.170279853284,
+      "category": "SAFE",
+      "name": "株式会社　築港遠矢浜倉庫",
+      "address": "神戸市兵庫区遠矢浜町5-27",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区遠矢浜町5-27",
+      "district": "兵庫区",
+      "sourceRow": 2119,
+      "sourceRows": [
+        2119
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e3cfd56d6f8ec993",
+      "lat": 34.6551738376872,
+      "lng": 135.169499517214,
+      "category": "SAFE",
+      "name": "兵庫県警　兵庫警察署　御崎公園交番",
+      "address": "神戸市兵庫区御崎町１丁目１－２",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区御崎町１丁目１－２",
+      "district": "兵庫区",
+      "sourceRow": 2150,
+      "sourceRows": [
+        2150
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0b015e7c799577b6",
+      "lat": 34.6542205813024,
+      "lng": 135.173444638728,
+      "category": "SAFE",
+      "name": "オリンピア兵庫",
+      "address": "神戸市兵庫区小松通5丁目1-14",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区小松通5丁目1-14",
+      "district": "兵庫区",
+      "sourceRow": 2152,
+      "sourceRows": [
+        2152
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

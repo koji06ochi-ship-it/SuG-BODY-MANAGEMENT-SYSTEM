@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5778-22521-20261016",
+  "lat": 34.66881691360835,
+  "lng": 135.1280577463705,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/8454e0f464729e89",
+      "lat": 34.6683193732829,
+      "lng": 135.128258697786,
+      "category": "SAFE",
+      "name": "板宿地域福祉センター",
+      "address": "神戸市須磨区禅昌寺町2丁目1－5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区禅昌寺町2丁目1－5",
+      "district": "須磨区",
+      "sourceRow": 162,
+      "sourceRows": [
+        162
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e0e9b943c1f6fffd",
+      "lat": 34.6693144539338,
+      "lng": 135.127856794955,
+      "category": "SAFE",
+      "name": "禅昌寺幼稚園（学校法人　神撫山学園）",
+      "address": "神戸市須磨区禅昌寺町2丁目5-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区禅昌寺町2丁目5-1",
+      "district": "須磨区",
+      "sourceRow": 176,
+      "sourceRows": [
+        176
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

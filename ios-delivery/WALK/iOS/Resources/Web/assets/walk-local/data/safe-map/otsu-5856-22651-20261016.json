@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "otsu-5856-22651-20261016",
+  "lat": 35.13899907333333,
+  "lng": 135.91007520000002,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "大津市",
+  "source": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+  "sourceUrl": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/999caef4-7e90-4fd2-98eb-fd94368e9a2f/resource/3e5b513e-de51-4459-af70-6fda94e1bed3/download/od405902026022700200.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2025-03-12",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "7899826cf95c365a07c87b3ad05aa2aa7d4adeb440a2c57269c84f98c1d85ea8",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/otsu/aed/a078459c8edca8f8",
+      "lat": 35.13841083,
+      "lng": 135.9116697,
+      "category": "SAFE",
+      "name": "真野北公民館",
+      "address": "大津市緑町4番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市緑町4番1号",
+      "district": "大津市",
+      "sourceRow": 62,
+      "sourceRows": [
+        62
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/cc806d6c312cfa7c",
+      "lat": 35.1375625,
+      "lng": 135.9074817,
+      "category": "SAFE",
+      "name": "大津市立真野中学校",
+      "address": "大津市清風町24番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市清風町24番1号",
+      "district": "大津市",
+      "sourceRow": 64,
+      "sourceRows": [
+        64
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/85036085d9336d86",
+      "lat": 35.14102389,
+      "lng": 135.9110742,
+      "category": "SAFE",
+      "name": "大津市立真野北小学校",
+      "address": "大津市緑町15番2号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市緑町15番2号",
+      "district": "大津市",
+      "sourceRow": 65,
+      "sourceRows": [
+        65
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

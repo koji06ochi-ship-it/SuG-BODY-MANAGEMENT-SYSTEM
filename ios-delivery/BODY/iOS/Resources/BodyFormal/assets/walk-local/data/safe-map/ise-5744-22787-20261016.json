@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5744-22787-20261016",
+  "lat": 34.46765059720095,
+  "lng": 136.72303766012152,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/8b9b60ed5958e066",
+      "lat": 34.4685793583617,
+      "lng": 136.722428798675,
+      "category": "SAFE",
+      "name": "なないろ学童クラブ",
+      "address": "伊勢市宇治浦田2-16-43",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市宇治浦田2-16-43",
+      "sourceRow": 113,
+      "sourceRows": [
+        113
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/45d91efdcc82a4eb",
+      "lat": 34.4667218360402,
+      "lng": 136.723646521568,
+      "category": "SAFE",
+      "name": "市営宇治駐車場（管理棟）",
+      "address": "伊勢市宇治浦田1丁目市営宇治駐車場管理棟内",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市宇治浦田1丁目市営宇治駐車場管理棟内",
+      "sourceRow": 151,
+      "sourceRows": [
+        151
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

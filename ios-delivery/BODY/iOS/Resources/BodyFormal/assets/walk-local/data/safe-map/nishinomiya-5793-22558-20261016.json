@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5793-22558-20261016",
+  "lat": 34.76281006800001,
+  "lng": 135.34974852,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/4b86403e46a62a21",
+      "lat": 34.76232595,
+      "lng": 135.3523479,
+      "category": "SAFE",
+      "name": "学校法人関西学院　聖和キャンパス",
+      "address": "兵庫県西宮市岡田山７－５４",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市岡田山７－５４",
+      "district": "西宮市",
+      "sourceRow": 677,
+      "sourceRows": [
+        677
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/9968eb5fe0f61c4a",
+      "lat": 34.76292496,
+      "lng": 135.3486594,
+      "category": "SAFE",
+      "name": "おやどまりクリニック",
+      "address": "兵庫県西宮市上ヶ原四番町４－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市上ヶ原四番町４－１",
+      "district": "西宮市",
+      "sourceRow": 683,
+      "sourceRows": [
+        683
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/b30a7f54c5bf9a9b",
+      "lat": 34.76263231,
+      "lng": 135.3486485,
+      "category": "SAFE",
+      "name": "ニシイチドラッグ健康館上ヶ原店",
+      "address": "兵庫県西宮市上ヶ原四番町３－１６",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市上ヶ原四番町３－１６",
+      "district": "西宮市",
+      "sourceRow": 686,
+      "sourceRows": [
+        686
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/e3145371d36421b0",
+      "lat": 34.76365509,
+      "lng": 135.3502778,
+      "category": "SAFE",
+      "name": "グラン・フェルティ甲東園",
+      "address": "兵庫県西宮市上ケ原四番町４－３３",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市上ケ原四番町４－３３",
+      "district": "西宮市",
+      "sourceRow": 692,
+      "sourceRows": [
+        692
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/fa38a55c5088ef5c",
+      "lat": 34.76251203,
+      "lng": 135.348809,
+      "category": "SAFE",
+      "name": "ゆとり庵上ケ原",
+      "address": "兵庫県西宮市上ケ原四番町３－22",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市上ケ原四番町３－22",
+      "district": "西宮市",
+      "sourceRow": 699,
+      "sourceRows": [
+        699
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5797-22755",
+  "lat": 34.7865362,
+  "lng": 136.5338266,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.786849,
+      "lng": 136.535152,
+      "category": "SAFE",
+      "name": "河芸保健センター",
+      "address": "津市河芸町浜田774",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "河芸町浜田774",
+      "district": "河芸",
+      "sourceRow": 151,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/292e36db48787dc4",
+      "sourceRows": [
+        151
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.786453,
+      "lng": 136.535084,
+      "category": "SAFE",
+      "name": "河芸体育館",
+      "address": "津市河芸町浜田774",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "河芸町浜田774",
+      "district": "河芸",
+      "sourceRow": 153,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/e04e569542ff6626",
+      "sourceRows": [
+        153
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.78502,
+      "lng": 136.53379,
+      "category": "SAFE",
+      "name": "河芸公民館",
+      "address": "津市河芸町浜田742",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "河芸町浜田742",
+      "district": "河芸",
+      "sourceRow": 154,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/755adf5477386005",
+      "sourceRows": [
+        154
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.787642,
+      "lng": 136.531873,
+      "category": "SAFE",
+      "name": "河芸ほほえみセンター",
+      "address": "津市河芸町浜田868",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "河芸町浜田868",
+      "district": "河芸",
+      "sourceRow": 157,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/ba681df2a4b59198",
+      "sourceRows": [
+        157
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.786717,
+      "lng": 136.533234,
+      "category": "SAFE",
+      "name": "河芸図書館",
+      "address": "津市河芸町浜田782",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "河芸町浜田782",
+      "district": "河芸",
+      "sourceRow": 168,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/d3b5750b684dead1",
+      "sourceRows": [
+        168
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5780-22516-20261016",
+  "lat": 34.683306649270975,
+  "lng": 135.10082649357926,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/de112edf24521bd1",
+      "lat": 34.6823097955263,
+      "lng": 135.099649440254,
+      "category": "SAFE",
+      "name": "神戸市立　東落合中学校",
+      "address": "神戸市須磨区東落合2-15",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区東落合2-15",
+      "district": "須磨区",
+      "sourceRow": 48,
+      "sourceRows": [
+        48
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1ba515c6640af5e8",
+      "lat": 34.6854413295103,
+      "lng": 135.101066731275,
+      "category": "SAFE",
+      "name": "神戸市立　東落合小学校",
+      "address": "神戸市須磨区東落合2丁目18番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区東落合2丁目18番1号",
+      "district": "須磨区",
+      "sourceRow": 74,
+      "sourceRows": [
+        74
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/84b62b5888ac134c",
+      "lat": 34.680034142537,
+      "lng": 135.101523071513,
+      "category": "SAFE",
+      "name": "神戸市立　花谷小学校",
+      "address": "神戸市須磨区東落合1丁目4番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区東落合1丁目4番1号",
+      "district": "須磨区",
+      "sourceRow": 75,
+      "sourceRows": [
+        75
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/da4bcc5fd9a7f469",
+      "lat": 34.6854413295103,
+      "lng": 135.101066731275,
+      "category": "SAFE",
+      "name": "神戸市立　名谷きぼうの丘幼稚園",
+      "address": "神戸市須磨区東落合2丁目18－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区東落合2丁目18－1",
+      "district": "須磨区",
+      "sourceRow": 144,
+      "sourceRows": [
+        144
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

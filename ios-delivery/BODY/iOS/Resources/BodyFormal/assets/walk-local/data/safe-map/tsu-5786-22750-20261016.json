@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5786-22750",
+  "lat": 34.71875033333333,
+  "lng": 136.50526166666668,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.718581,
+      "lng": 136.505717,
+      "category": "SAFE",
+      "name": "津市役所本庁舎",
+      "address": "津市西丸之内23-1",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "西丸之内23-1",
+      "district": "津",
+      "sourceRow": 2,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/fb5ccb1f9b70a015",
+      "sourceRows": [
+        2
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.718835,
+      "lng": 136.505034,
+      "category": "SAFE",
+      "name": "中央保健センター",
+      "address": "津市西丸之内23-1 津ﾘｰｼﾞｮﾝﾌﾟﾗｻﾞ内",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "西丸之内23-1 津ﾘｰｼﾞｮﾝﾌﾟﾗｻﾞ内",
+      "district": "津",
+      "sourceRow": 30,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/e05bfd07a1dfb94d",
+      "sourceRows": [
+        30
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.718835,
+      "lng": 136.505034,
+      "category": "SAFE",
+      "name": "夜間成人応急診療所",
+      "address": "津市西丸之内23-1 津ﾘｰｼﾞｮﾝﾌﾟﾗｻﾞ内",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "西丸之内23-1 津ﾘｰｼﾞｮﾝﾌﾟﾗｻﾞ内",
+      "district": "津",
+      "sourceRow": 31,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/b7016f8bf0ca2285",
+      "sourceRows": [
+        31
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

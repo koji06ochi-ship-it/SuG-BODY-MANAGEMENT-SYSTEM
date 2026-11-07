@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5785-22562-20261016",
+  "lat": 34.712509905,
+  "lng": 135.37407721666668,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/a72449d1e7ce5822",
+      "lat": 34.71202978,
+      "lng": 135.373365,
+      "category": "SAFE",
+      "name": "鳴尾東小学校",
+      "address": "兵庫県西宮市笠屋町３０－５０",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市笠屋町３０－５０",
+      "district": "西宮市",
+      "sourceRow": 34,
+      "sourceRows": [
+        34
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/9d4fd376bc672abb",
+      "lat": 34.71171677,
+      "lng": 135.3726874,
+      "category": "SAFE",
+      "name": "鳴尾東幼稚園",
+      "address": "兵庫県西宮市笠屋町３０－４７",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市笠屋町３０－４７",
+      "district": "西宮市",
+      "sourceRow": 75,
+      "sourceRows": [
+        75
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/1a3490d0463ec97e",
+      "lat": 34.71317938,
+      "lng": 135.3749024,
+      "category": "SAFE",
+      "name": "鳴尾保育所",
+      "address": "兵庫県西宮市笠屋町１９－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市笠屋町１９－１",
+      "district": "西宮市",
+      "sourceRow": 87,
+      "sourceRows": [
+        87
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/cecb2d27982ac257",
+      "lat": 34.71067921,
+      "lng": 135.3746372,
+      "category": "SAFE",
+      "name": "鳴尾老人福祉センター",
+      "address": "兵庫県西宮市上田中町２－７",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市上田中町２－７",
+      "district": "西宮市",
+      "sourceRow": 169,
+      "sourceRows": [
+        169
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/f7aa331516ef566f",
+      "lat": 34.71286743,
+      "lng": 135.3765679,
+      "category": "SAFE",
+      "name": "鳴尾東公民館",
+      "address": "兵庫県西宮市東鳴尾町１丁目９－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市東鳴尾町１丁目９－１",
+      "district": "西宮市",
+      "sourceRow": 197,
+      "sourceRows": [
+        197
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/76703daf68d1db80",
+      "lat": 34.71458686,
+      "lng": 135.3723034,
+      "category": "SAFE",
+      "name": "山本医院",
+      "address": "兵庫県西宮市鳴尾町２丁目１９－６",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市鳴尾町２丁目１９－６",
+      "district": "西宮市",
+      "sourceRow": 495,
+      "sourceRows": [
+        495
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

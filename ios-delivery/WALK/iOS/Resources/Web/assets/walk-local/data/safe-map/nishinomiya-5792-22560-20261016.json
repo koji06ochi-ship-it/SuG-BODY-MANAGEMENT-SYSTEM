@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5792-22560-20261016",
+  "lat": 34.75612634666666,
+  "lng": 135.36178160000003,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/7a43cb71753baf99",
+      "lat": 34.75358326,
+      "lng": 135.3652093,
+      "category": "SAFE",
+      "name": "瓦木中学校",
+      "address": "兵庫県西宮市薬師町４－１５",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市薬師町４－１５",
+      "district": "西宮市",
+      "sourceRow": 50,
+      "sourceRows": [
+        50
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/c0f9cdea83d29441",
+      "lat": 34.75377212,
+      "lng": 135.3606472,
+      "category": "SAFE",
+      "name": "高木幼稚園",
+      "address": "兵庫県西宮市伏原町３－４０",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市伏原町３－４０",
+      "district": "西宮市",
+      "sourceRow": 72,
+      "sourceRows": [
+        72
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/8ec6570f4acb302d",
+      "lat": 34.75509711,
+      "lng": 135.3613539,
+      "category": "SAFE",
+      "name": "高木北小学校",
+      "address": "兵庫県西宮市薬師町７－５",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市薬師町７－５",
+      "district": "西宮市",
+      "sourceRow": 77,
+      "sourceRows": [
+        77
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/7d2a1c04d17dd0b9",
+      "lat": 34.757441,
+      "lng": 135.3608668,
+      "category": "SAFE",
+      "name": "介護老人施設すこやかケア西宮",
+      "address": "兵庫県西宮市林田町７－１７",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市林田町７－１７",
+      "district": "西宮市",
+      "sourceRow": 168,
+      "sourceRows": [
+        168
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/f8878de7b36adfcd",
+      "lat": 34.75745182,
+      "lng": 135.3621797,
+      "category": "SAFE",
+      "name": "市立中央病院",
+      "address": "兵庫県西宮市林田町８－２４",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市林田町８－２４",
+      "district": "西宮市",
+      "sourceRow": 287,
+      "sourceRows": [
+        287
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/b37727b7095120d2",
+      "lat": 34.75679658,
+      "lng": 135.3628395,
+      "category": "SAFE",
+      "name": "丸亀製麺西宮店",
+      "address": "兵庫県西宮市林田町５－２８",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市林田町５－２８",
+      "district": "西宮市",
+      "sourceRow": 611,
+      "sourceRows": [
+        611
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/94f5fe5c2ca26bb5",
+      "lat": 34.75589496,
+      "lng": 135.3622307,
+      "category": "SAFE",
+      "name": "イオン西宮店",
+      "address": "兵庫県西宮市林田町２－２４",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市林田町２－２４",
+      "district": "西宮市",
+      "sourceRow": 620,
+      "sourceRows": [
+        620
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/38ac7aa4c568120b",
+      "lat": 34.75787881,
+      "lng": 135.3603731,
+      "category": "SAFE",
+      "name": "株式会社ホンダカーズ兵庫西宮店",
+      "address": "兵庫県西宮市下大市東町６－２８",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市下大市東町６－２８",
+      "district": "西宮市",
+      "sourceRow": 634,
+      "sourceRows": [
+        634
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/4820f682869276f3",
+      "lat": 34.75722146,
+      "lng": 135.3603342,
+      "category": "SAFE",
+      "name": "ドーミー西宮門戸",
+      "address": "兵庫県西宮市野間町５－６",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市野間町５－６",
+      "district": "西宮市",
+      "sourceRow": 641,
+      "sourceRows": [
+        641
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

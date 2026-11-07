@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5785-22547-20261016",
+  "lat": 34.7150224048941,
+  "lng": 135.285198365213,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/f20c1294a5b6115b",
+      "lat": 34.714744057305,
+      "lng": 135.285809613405,
+      "category": "SAFE",
+      "name": "サンシャインワーフ神戸管理事務所",
+      "address": "神戸市東灘区青木1-2-34",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区青木1-2-34",
+      "district": "東灘区",
+      "sourceRow": 1435,
+      "sourceRows": [
+        1435
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/28038c8f96b857f0",
+      "lat": 34.7153326712844,
+      "lng": 135.285082716087,
+      "category": "SAFE",
+      "name": "青木南地域福祉センター",
+      "address": "神戸市東灘区青木2-3-21-909",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区青木2-3-21-909",
+      "district": "東灘区",
+      "sourceRow": 1602,
+      "sourceRows": [
+        1602
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2fad4fa56c3eeca1",
+      "lat": 34.7149904860929,
+      "lng": 135.284702766147,
+      "category": "SAFE",
+      "name": "イリーゼ神戸青木",
+      "address": "神戸市東灘区青木2丁目4番26号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区青木2丁目4番26号",
+      "district": "東灘区",
+      "sourceRow": 1737,
+      "sourceRows": [
+        1737
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

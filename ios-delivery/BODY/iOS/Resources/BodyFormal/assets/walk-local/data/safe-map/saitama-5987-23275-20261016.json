@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5987-23275",
+  "lat": 35.92748828333333,
+  "lng": 139.6503176,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.92745925,
+      "lng": 139.6502882,
+      "category": "SAFE",
+      "name": "子育て支援センターみぬま",
+      "address": "さいたま市大和田町1-1387-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大和田町1-1387-1",
+      "district": "見沼区",
+      "sourceRow": 206,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/5877608ea852a181",
+      "sourceRows": [
+        206
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.927459,
+      "lng": 139.650288,
+      "category": "SAFE",
+      "name": "大和田駅南自転車駐車場",
+      "address": "さいたま市大和田町1-1387-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大和田町1-1387-1",
+      "district": "見沼区",
+      "sourceRow": 207,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/2aaf2667025b3695",
+      "sourceRows": [
+        207
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.9275466,
+      "lng": 139.6503766,
+      "category": "SAFE",
+      "name": "大和田駅南自転車駐車場",
+      "address": "さいたま市大和田町1-1387-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大和田町1-1387-1",
+      "district": "見沼区",
+      "sourceRow": 208,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/6f6065abea86d839",
+      "sourceRows": [
+        208
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

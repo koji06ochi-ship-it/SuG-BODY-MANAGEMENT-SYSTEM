@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-emergency-shelter-saitama-5986-23260",
+  "lat": 35.916796,
+  "lng": 139.563021,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "埼玉県オープンデータポータル さいたま市 指定緊急避難場所",
+  "sourceUrl": "https://opendata.pref.saitama.lg.jp/resources/4758",
+  "sourceFileUrl": "https://opendata.pref.saitama.lg.jp/resource_download/4758",
+  "sourceUpdatedAt": "2026-04-01",
+  "retrievedAt": "2026-10-16T00:00:00.000Z",
+  "sourceFileSha256": "f7e56ea919d2c9411d249c5766fbbd0f8ba4e6efd1e6a06d8facd92ab486239a",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://www.digital.go.jp/resources/open_data/",
+  "data": [
+    {
+      "id": "municipality/saitama/saitama-emergency-shelter/8447c5ce3e2e6b82",
+      "lat": 35.9117327,
+      "lng": 139.5713233,
+      "category": "SAFE",
+      "name": "土屋中学校（指定緊急避難場所）",
+      "address": "埼玉県さいたま市西区大字土屋1766-1",
+      "kind": "EMERGENCY_SHELTER",
+      "source": "https://opendata.pref.saitama.lg.jp/resources/4758",
+      "sourceLabel": "埼玉県オープンデータポータル さいたま市 指定緊急避難場所（開設状況・受入可否は未確認）",
+      "license": "PDL-1.0",
+      "sourceUpdatedAt": "2026-04-01",
+      "sourceRow": 15
+    },
+    {
+      "id": "municipality/saitama/saitama-emergency-shelter/97f8dc8167419cca",
+      "lat": 35.9094594,
+      "lng": 139.5604624,
+      "category": "SAFE",
+      "name": "県立大宮武蔵野高等学校（指定緊急避難場所）",
+      "address": "埼玉県さいたま市西区大字西遊馬1601",
+      "kind": "EMERGENCY_SHELTER",
+      "source": "https://opendata.pref.saitama.lg.jp/resources/4758",
+      "sourceLabel": "埼玉県オープンデータポータル さいたま市 指定緊急避難場所（開設状況・受入可否は未確認）",
+      "license": "PDL-1.0",
+      "sourceUpdatedAt": "2026-04-01",
+      "sourceRow": 18
+    }
+  ]
+}

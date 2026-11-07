@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5773-22520-20261016",
+  "lat": 34.64319522960725,
+  "lng": 135.1229581066365,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/8cc897e404e5e162",
+      "lat": 34.6435825312114,
+      "lng": 135.122550526261,
+      "category": "SAFE",
+      "name": "神戸市立　国民宿舎須磨荘（シーパル須磨）",
+      "address": "神戸市須磨区須磨浦通1丁目1－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区須磨浦通1丁目1－1",
+      "district": "須磨区",
+      "sourceRow": 17,
+      "sourceRows": [
+        17
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/588222b24c5308b4",
+      "lat": 34.6429345663227,
+      "lng": 135.122226901376,
+      "category": "SAFE",
+      "name": "須磨海水浴場　中央監視詰所",
+      "address": "神戸市須磨区須磨浦通1丁目",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区須磨浦通1丁目",
+      "district": "須磨区",
+      "sourceRow": 115,
+      "sourceRows": [
+        115
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/dec3726af9305b3f",
+      "lat": 34.6426812896835,
+      "lng": 135.124504472648,
+      "category": "SAFE",
+      "name": "須磨海水浴場　東監視詰所",
+      "address": "神戸市須磨区須磨浦通1丁目",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区須磨浦通1丁目",
+      "district": "須磨区",
+      "sourceRow": 116,
+      "sourceRows": [
+        116
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/59ab427834b84b9e",
+      "lat": 34.6435825312114,
+      "lng": 135.122550526261,
+      "category": "SAFE",
+      "name": "須磨海浜公園パークマネジメント組織",
+      "address": "神戸市須磨区須磨浦通1丁目1番地4パークコンシェルジュ棟",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区須磨浦通1丁目1番地4パークコンシェルジュ棟",
+      "district": "須磨区",
+      "sourceRow": 258,
+      "sourceRows": [
+        258
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5786-22557-20261016",
+  "lat": 34.719065943333334,
+  "lng": 135.3458863,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/e5b233e9c490459b",
+      "lat": 34.7188337,
+      "lng": 135.34621,
+      "category": "SAFE",
+      "name": "甲子園浜海浜公園　西多目的広場",
+      "address": "兵庫県西宮市甲子園浜３丁目",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲子園浜３丁目",
+      "district": "西宮市",
+      "sourceRow": 279,
+      "sourceRows": [
+        279
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/bbc8e82cb4051816",
+      "lat": 34.71987939,
+      "lng": 135.3468718,
+      "category": "SAFE",
+      "name": "今津パークタウン24号棟（集会室）",
+      "address": "兵庫県西宮市今津真砂町１－２４",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市今津真砂町１－２４",
+      "district": "西宮市",
+      "sourceRow": 472,
+      "sourceRows": [
+        472
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/51f0e025ab08a84d",
+      "lat": 34.71848474,
+      "lng": 135.3445771,
+      "category": "SAFE",
+      "name": "セオ商事今津物流センター",
+      "address": "兵庫県西宮市甲子園浜３丁目１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲子園浜３丁目１",
+      "district": "西宮市",
+      "sourceRow": 553,
+      "sourceRows": [
+        553
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

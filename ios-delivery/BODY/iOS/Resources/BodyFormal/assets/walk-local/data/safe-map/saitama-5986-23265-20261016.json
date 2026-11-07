@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5986-23265",
+  "lat": 35.918750635,
+  "lng": 139.59170003333335,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.917659,
+      "lng": 139.591937,
+      "category": "SAFE",
+      "name": "三橋支所",
+      "address": "さいたま市三橋6-642-4",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "三橋6-642-4",
+      "district": "西区",
+      "sourceRow": 46,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/a13f3d7188858f29",
+      "sourceRows": [
+        46
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.917659,
+      "lng": 139.591937,
+      "category": "SAFE",
+      "name": "西部文化センター",
+      "address": "さいたま市三橋6-642-4",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "三橋6-642-4",
+      "district": "西区",
+      "sourceRow": 47,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/72bb321cd7f30245",
+      "sourceRows": [
+        47
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.91770751,
+      "lng": 139.5920595,
+      "category": "SAFE",
+      "name": "西部文化センター",
+      "address": "さいたま市三橋6-642-4",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "三橋6-642-4",
+      "district": "西区",
+      "sourceRow": 48,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/14944669748a33b1",
+      "sourceRows": [
+        48,
+        49
+      ],
+      "duplicateSourceEntries": 2
+    },
+    {
+      "lat": 35.92088322,
+      "lng": 139.590284,
+      "category": "SAFE",
+      "name": "ひまわり学園",
+      "address": "さいたま市三橋6-1587",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "三橋6-1587",
+      "district": "西区",
+      "sourceRow": 50,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/4a8ea4b16b5883d5",
+      "sourceRows": [
+        50
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.92088757,
+      "lng": 139.5919232,
+      "category": "SAFE",
+      "name": "ひまわり学園",
+      "address": "さいたま市三橋6-1587",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "三橋6-1587",
+      "district": "西区",
+      "sourceRow": 51,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/8e70c0cc5c7c08f2",
+      "sourceRows": [
+        51
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

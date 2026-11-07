@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5778-22526-20261016",
+  "lat": 34.67123207558289,
+  "lng": 135.159857558017,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/8aed1df4e1524978",
+      "lat": 34.6729177741483,
+      "lng": 135.158863934988,
+      "category": "SAFE",
+      "name": "神戸市営地下鉄　上沢駅",
+      "address": "神戸市兵庫区下沢通8丁目",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区下沢通8丁目",
+      "district": "兵庫区",
+      "sourceRow": 2032,
+      "sourceRows": [
+        2032
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/77a4250daba39b91",
+      "lat": 34.6703244730875,
+      "lng": 135.159460099816,
+      "category": "SAFE",
+      "name": "神戸市立　水木小学校",
+      "address": "神戸市兵庫区水木通9丁目1-8",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区水木通9丁目1-8",
+      "district": "兵庫区",
+      "sourceRow": 2057,
+      "sourceRows": [
+        2057
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f2896b62756b8bc5",
+      "lat": 34.671094295858,
+      "lng": 135.158920564428,
+      "category": "SAFE",
+      "name": "ルンビニー愛児園",
+      "address": "神戸市兵庫区中道通9丁目1－8",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区中道通9丁目1－8",
+      "district": "兵庫区",
+      "sourceRow": 2102,
+      "sourceRows": [
+        2102
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/100f12c70cbe3590",
+      "lat": 34.6681312719805,
+      "lng": 135.1607557037,
+      "category": "SAFE",
+      "name": "水木地域福祉センター",
+      "address": "神戸市兵庫区駅前通3丁目2-26 駅前住宅内",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区駅前通3丁目2-26 駅前住宅内",
+      "district": "兵庫区",
+      "sourceRow": 2141,
+      "sourceRows": [
+        2141
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/85fabd4a4a81b371",
+      "lat": 34.6736925628402,
+      "lng": 135.161287487153,
+      "category": "SAFE",
+      "name": "木村整形外科",
+      "address": "神戸市兵庫区下沢通6丁目2-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区下沢通6丁目2-2",
+      "district": "兵庫区",
+      "sourceRow": 2157,
+      "sourceRows": [
+        2157
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

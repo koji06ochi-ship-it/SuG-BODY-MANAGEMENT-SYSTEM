@@ -1,0 +1,133 @@
+{
+  "checkedAt": "2026-10-26T14:21:23.507Z",
+  "scope": "Square Sandbox approved four-object catalog creation",
+  "environment": "sandbox",
+  "productionConnected": false,
+  "status": "created_verified",
+  "merchant": {
+    "found": true,
+    "idMasked": "***4DBN",
+    "status": "ACTIVE",
+    "country": "JP",
+    "currency": "JPY"
+  },
+  "preflight": {
+    "duplicateFree": true,
+    "counts": {
+      "item": 0,
+      "itemVariation": 0,
+      "plan": 0,
+      "variation": 0
+    },
+    "approvedObjectCount": 4,
+    "approvedDraftChecks": {
+      "exactlyOneNestedItemVariation": true,
+      "itemName": true,
+      "itemNotTaxable": true,
+      "itemVariationName": true,
+      "itemVariationParent": true,
+      "itemVariationPrice": true,
+      "planName": true,
+      "planEligibleItem": true,
+      "planVariationName": true,
+      "planVariationParent": true,
+      "planVariationPrice": true,
+      "approvedTypesOnly": true
+    },
+    "afterCounts": {
+      "item": 1,
+      "itemVariation": 1,
+      "plan": 1,
+      "variation": 1
+    }
+  },
+  "verification": {
+    "item": {
+      "found": true,
+      "idMasked": "***GN6O",
+      "name": "S.u.G BODY"
+    },
+    "itemVariation": {
+      "found": true,
+      "idMasked": "***43HM",
+      "name": "一般向け月額",
+      "parentItemIdMasked": "***GN6O",
+      "pricingType": "FIXED_PRICING",
+      "amount": 1480,
+      "currency": "JPY"
+    },
+    "plan": {
+      "found": true,
+      "idMasked": "***TY6F",
+      "name": "S.u.G BODY 一般向け"
+    },
+    "variation": {
+      "found": true,
+      "idMasked": "***KBN2",
+      "name": "月額1,480円（税込）",
+      "amount": 1480,
+      "currency": "JPY",
+      "cadence": "MONTHLY",
+      "periods": null,
+      "canProrate": false
+    },
+    "relationships": {
+      "itemVariationLinkedItem": true,
+      "planEligibleItem": true,
+      "variationLinkedPlan": true
+    },
+    "tax": {
+      "finalCatalogPriceJpy": 1480,
+      "itemTaxable": false,
+      "itemTaxReferenceCount": 0,
+      "additionalTaxObjectCreated": false,
+      "actualChargeTested": false
+    },
+    "checks": {
+      "itemType": true,
+      "itemName": true,
+      "itemNotTaxable": true,
+      "itemVariationType": true,
+      "itemVariationName": true,
+      "itemVariationParent": true,
+      "itemVariationPricing": true,
+      "itemVariationAmount": true,
+      "itemVariationCurrency": true,
+      "planType": true,
+      "planName": true,
+      "eligibleItem": true,
+      "variationType": true,
+      "variationName": true,
+      "linkedPlan": true,
+      "onePhase": true,
+      "monthly": true,
+      "indefinite": true,
+      "staticPrice": true,
+      "amount": true,
+      "currency": true,
+      "noProration": true
+    }
+  },
+  "apiOperations": {
+    "getCount": 5,
+    "postCount": 3,
+    "postEndpoints": [
+      "/v2/catalog/object",
+      "/v2/catalog/object",
+      "/v2/catalog/object"
+    ]
+  },
+  "mutations": {
+    "approvedCatalogItem": 1,
+    "approvedCatalogItemVariation": 1,
+    "approvedSubscriptionPlan": 1,
+    "approvedSubscriptionPlanVariation": 1,
+    "webhook": 0,
+    "customer": 0,
+    "subscription": 0,
+    "payment": 0,
+    "refund": 0,
+    "database": 0,
+    "production": 0
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5788-22544-20261016",
+  "lat": 34.729870623667374,
+  "lng": 135.267075759569,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/9b96c0b9a667e3f1",
+      "lat": 34.7297244846105,
+      "lng": 135.267981069824,
+      "category": "SAFE",
+      "name": "甲南大学　正門",
+      "address": "神戸市東灘区岡本8丁目9-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区岡本8丁目9-1",
+      "district": "東灘区",
+      "sourceRow": 1436,
+      "sourceRows": [
+        1436
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/915dbf3f3518cbc3",
+      "lat": 34.7297889587429,
+      "lng": 135.268341318105,
+      "category": "SAFE",
+      "name": "甲南大学　3号館1階医務室",
+      "address": "神戸市東灘区岡本8丁目9-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区岡本8丁目9-1",
+      "district": "東灘区",
+      "sourceRow": 1437,
+      "sourceRows": [
+        1437
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/dde11d76d228cfa1",
+      "lat": 34.7296898229219,
+      "lng": 135.269137571054,
+      "category": "SAFE",
+      "name": "甲南大学　5号館3階サイバーライブラリー",
+      "address": "神戸市東灘区岡本8丁目9-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区岡本8丁目9-1",
+      "district": "東灘区",
+      "sourceRow": 1438,
+      "sourceRows": [
+        1438
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e7f8292f6c5fa46e",
+      "lat": 34.7290161846527,
+      "lng": 135.267873263783,
+      "category": "SAFE",
+      "name": "甲南大学　図書館1階カウンター",
+      "address": "神戸市東灘区岡本8丁目9-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区岡本8丁目9-1",
+      "district": "東灘区",
+      "sourceRow": 1439,
+      "sourceRows": [
+        1439
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7c31d4f457aa956c",
+      "lat": 34.7301328461492,
+      "lng": 135.264358959792,
+      "category": "SAFE",
+      "name": "甲南大学　13号館管理人室",
+      "address": "神戸市東灘区西岡本6丁目1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区西岡本6丁目1-1",
+      "district": "東灘区",
+      "sourceRow": 1440,
+      "sourceRows": [
+        1440
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/01b6f55d9b002426",
+      "lat": 34.730871444927,
+      "lng": 135.264762374856,
+      "category": "SAFE",
+      "name": "甲南大学　7号館管理人室",
+      "address": "神戸市東灘区岡本字十文字山1200",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区岡本字十文字山1200",
+      "district": "東灘区",
+      "sourceRow": 1441,
+      "sourceRows": [
+        1441
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

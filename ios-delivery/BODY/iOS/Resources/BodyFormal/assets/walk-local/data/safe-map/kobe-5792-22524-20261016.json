@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5792-22524-20261016",
+  "lat": 34.756425071972004,
+  "lng": 135.14630040125752,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/86c952a0ca82a1d1",
+      "lat": 34.7561345314297,
+      "lng": 135.147264825775,
+      "category": "SAFE",
+      "name": "神戸市水道局北部水道管理事務所",
+      "address": "神戸市北区日の峰1丁目14-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区日の峰1丁目14-1",
+      "district": "北区",
+      "sourceRow": 2441,
+      "sourceRows": [
+        2441
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/13858ef029d47012",
+      "lat": 34.7567156125143,
+      "lng": 135.14533597674,
+      "category": "SAFE",
+      "name": "ほそかわ歯科クリニック",
+      "address": "神戸市北区日の峰3丁目2-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区日の峰3丁目2-5",
+      "district": "北区",
+      "sourceRow": 2574,
+      "sourceRows": [
+        2574
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

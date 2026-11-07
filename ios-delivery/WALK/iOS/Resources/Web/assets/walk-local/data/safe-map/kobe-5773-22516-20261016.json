@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5773-22516-20261016",
+  "lat": 34.639397807984295,
+  "lng": 135.1015484578145,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/111fa73ef3ab60b6",
+      "lat": 34.6406562256022,
+      "lng": 135.10112964007,
+      "category": "SAFE",
+      "name": "須磨浦の里（社会福祉法人　あんず会　特別養護老人ホーム）",
+      "address": "神戸市須磨区一ノ谷町3丁目3-21",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区一ノ谷町3丁目3-21",
+      "district": "須磨区",
+      "sourceRow": 15,
+      "sourceRows": [
+        15
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5ca8b50246f0fc30",
+      "lat": 34.6381393903664,
+      "lng": 135.101967275559,
+      "category": "SAFE",
+      "name": "神戸市立　須磨海づり公園　売店　（財）こうべみのりの公社",
+      "address": "神戸市須磨区一ノ谷町5丁目",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区一ノ谷町5丁目",
+      "district": "須磨区",
+      "sourceRow": 30,
+      "sourceRows": [
+        30
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

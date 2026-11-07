@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5775-22505-20261016",
+  "lat": 34.650981543744535,
+  "lng": 135.03456092598768,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/6bcebbeef9697cbe",
+      "lat": 34.650566142791,
+      "lng": 135.034168713295,
+      "category": "SAFE",
+      "name": "コスモ舞子坂",
+      "address": "神戸市垂水区南多聞台4丁目1番25",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区南多聞台4丁目1番25",
+      "district": "垂水区",
+      "sourceRow": 340,
+      "sourceRows": [
+        340
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1a56926e34aaad60",
+      "lat": 34.6503884104231,
+      "lng": 135.034926439136,
+      "category": "SAFE",
+      "name": "幼保連携型認定こども園　心の森",
+      "address": "神戸市垂水区清水が丘3丁目1-16",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区清水が丘3丁目1-16",
+      "district": "垂水区",
+      "sourceRow": 405,
+      "sourceRows": [
+        405
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0a826990782d090b",
+      "lat": 34.6519900780195,
+      "lng": 135.034587625532,
+      "category": "SAFE",
+      "name": "多夢の森保育園（社会福祉法人　みかり会）",
+      "address": "神戸市垂水区南多聞台4丁目4-50",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区南多聞台4丁目4-50",
+      "district": "垂水区",
+      "sourceRow": 406,
+      "sourceRows": [
+        406
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5780-22512-20261016",
+  "lat": 34.68292868564062,
+  "lng": 135.0743653256665,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/f2ddc1951c7a242d",
+      "lat": 34.6809139566746,
+      "lng": 135.073555342248,
+      "category": "SAFE",
+      "name": "オリックス野球クラブ㈱　ほっともっとフィールド神戸",
+      "address": "神戸市須磨区緑台3251-10",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区緑台3251-10",
+      "district": "須磨区",
+      "sourceRow": 8,
+      "sourceRows": [
+        8
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/da07dadcf4654712",
+      "lat": 34.6809089339659,
+      "lng": 135.076569801924,
+      "category": "SAFE",
+      "name": "神戸総合運動公園管理センター",
+      "address": "神戸市須磨区緑台",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区緑台",
+      "district": "須磨区",
+      "sourceRow": 10,
+      "sourceRows": [
+        10
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a19071ce80030805",
+      "lat": 34.6817435961212,
+      "lng": 135.075702146372,
+      "category": "SAFE",
+      "name": "神戸市営地下鉄　総合運動公園駅",
+      "address": "神戸市須磨区緑台",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区緑台",
+      "district": "須磨区",
+      "sourceRow": 24,
+      "sourceRows": [
+        24
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e8e6725c94e8a803",
+      "lat": 34.6820419227662,
+      "lng": 135.075625364081,
+      "category": "SAFE",
+      "name": "ファミリーマート　神戸総合運動公園店",
+      "address": "神戸市須磨区緑台3251-8",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区緑台3251-8",
+      "district": "須磨区",
+      "sourceRow": 194,
+      "sourceRows": [
+        194
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/12a7cba0a27aea9f",
+      "lat": 34.6829703748261,
+      "lng": 135.073169725292,
+      "category": "SAFE",
+      "name": "朝日ゴルフ株式会社",
+      "address": "神戸市須磨区弥栄台2丁目2番2号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区弥栄台2丁目2番2号",
+      "district": "須磨区",
+      "sourceRow": 235,
+      "sourceRows": [
+        235
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/dc3907867038e7c7",
+      "lat": 34.6859456120453,
+      "lng": 135.073446580931,
+      "category": "SAFE",
+      "name": "アシックス商事株式会社",
+      "address": "神戸市須磨区弥栄台3丁目5番2号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区弥栄台3丁目5番2号",
+      "district": "須磨区",
+      "sourceRow": 236,
+      "sourceRows": [
+        236
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/83a8628e191ba6dd",
+      "lat": 34.6838321095737,
+      "lng": 135.073407109713,
+      "category": "SAFE",
+      "name": "旭食品株式会社",
+      "address": "神戸市須磨区弥栄台2丁目5番4号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区弥栄台2丁目5番4号",
+      "district": "須磨区",
+      "sourceRow": 240,
+      "sourceRows": [
+        240
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/82bb9dc0cd9b087e",
+      "lat": 34.6850729791519,
+      "lng": 135.073446534771,
+      "category": "SAFE",
+      "name": "㈱ファミリア",
+      "address": "神戸市須磨区弥栄台3丁目13-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区弥栄台3丁目13-2",
+      "district": "須磨区",
+      "sourceRow": 246,
+      "sourceRows": [
+        246
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

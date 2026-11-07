@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5791-22555-20261016",
+  "lat": 34.74803586666667,
+  "lng": 135.33120969333334,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/b91ae533be41de13",
+      "lat": 34.74625235,
+      "lng": 135.3315934,
+      "category": "SAFE",
+      "name": "ニコニコ桜保育園",
+      "address": "兵庫県西宮市南郷町８－１２",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市南郷町８－１２",
+      "district": "西宮市",
+      "sourceRow": 407,
+      "sourceRows": [
+        407
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/cc3610f70584a806",
+      "lat": 34.74661277,
+      "lng": 135.3314403,
+      "category": "SAFE",
+      "name": "㈱宇佐美ｴﾅｼﾞｰ西宮苦楽園SS",
+      "address": "兵庫県西宮市南郷町８－１７",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市南郷町８－１７",
+      "district": "西宮市",
+      "sourceRow": 419,
+      "sourceRows": [
+        419
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/2e80935dbb735e60",
+      "lat": 34.75124248,
+      "lng": 135.33059538,
+      "category": "SAFE",
+      "name": "ウエルシア西宮北名次店",
+      "address": "兵庫県西宮市北名次町５－４１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市北名次町５－４１",
+      "district": "西宮市",
+      "sourceRow": 424,
+      "sourceRows": [
+        424
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

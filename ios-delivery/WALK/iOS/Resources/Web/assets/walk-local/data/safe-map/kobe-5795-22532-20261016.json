@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5795-22532-20261016",
+  "lat": 34.7741294921922,
+  "lng": 135.19587564762224,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/675c54d94c1b0b98",
+      "lat": 34.7721258519187,
+      "lng": 135.196034446544,
+      "category": "SAFE",
+      "name": "神戸市立　大池中学校",
+      "address": "神戸市北区西大池2-24-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区西大池2-24-3",
+      "district": "北区",
+      "sourceRow": 2194,
+      "sourceRows": [
+        2194
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/99920e5dfbb47873",
+      "lat": 34.7744174584057,
+      "lng": 135.196074421308,
+      "category": "SAFE",
+      "name": "特別養護老人ホーム　駒どりの郷",
+      "address": "神戸市北区西大池2丁目7-41",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区西大池2丁目7-41",
+      "district": "北区",
+      "sourceRow": 2432,
+      "sourceRows": [
+        2432
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2e33249f9352dcbe",
+      "lat": 34.7756425095945,
+      "lng": 135.19571401035,
+      "category": "SAFE",
+      "name": "大池保育園",
+      "address": "神戸市北区西大池1丁目21-11",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区西大池1丁目21-11",
+      "district": "北区",
+      "sourceRow": 2476,
+      "sourceRows": [
+        2476
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/513f10bf4345a90f",
+      "lat": 34.7743321488499,
+      "lng": 135.195679712287,
+      "category": "SAFE",
+      "name": "小規模多機能　いろどりの家・大池",
+      "address": "神戸市北区西大池2丁目7-31",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区西大池2丁目7-31",
+      "district": "北区",
+      "sourceRow": 2506,
+      "sourceRows": [
+        2506
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5781-22528-20261016",
+  "lat": 34.68873331111085,
+  "lng": 135.1700860322343,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/33c0c03d8a06d4da",
+      "lat": 34.6862393244378,
+      "lng": 135.172925019126,
+      "category": "SAFE",
+      "name": "大倉山公園",
+      "address": "神戸市中央区楠町7丁目4番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区楠町7丁目4番",
+      "district": "中央区",
+      "sourceRow": 1095,
+      "sourceRows": [
+        1095
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9650fa834d5f81cd",
+      "lat": 34.6877438712691,
+      "lng": 135.169717738512,
+      "category": "SAFE",
+      "name": "神戸市立　平野保育所",
+      "address": "神戸市兵庫区下祇園町6-22",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区下祇園町6-22",
+      "district": "兵庫区",
+      "sourceRow": 2052,
+      "sourceRows": [
+        2052
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ade2bed0ad2d0c92",
+      "lat": 34.6910592713709,
+      "lng": 135.168298930593,
+      "category": "SAFE",
+      "name": "播州信用金庫　平野支店",
+      "address": "神戸市兵庫区上祇園町3番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区上祇園町3番1号",
+      "district": "兵庫区",
+      "sourceRow": 2062,
+      "sourceRows": [
+        2062
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8e3df6c948c800d3",
+      "lat": 34.6882055301493,
+      "lng": 135.171854228205,
+      "category": "SAFE",
+      "name": "浄土真宗本願寺派西法尊光寺",
+      "address": "神戸市兵庫区馬場町10-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区馬場町10-1",
+      "district": "兵庫区",
+      "sourceRow": 2089,
+      "sourceRows": [
+        2089
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a1dd29342dd53a89",
+      "lat": 34.6880799259023,
+      "lng": 135.169388536298,
+      "category": "SAFE",
+      "name": "神戸少年鑑別所",
+      "address": "神戸市兵庫区下祇園町40-7",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区下祇園町40-7",
+      "district": "兵庫区",
+      "sourceRow": 2120,
+      "sourceRows": [
+        2120
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/80839567bde174ed",
+      "lat": 34.6911663473514,
+      "lng": 135.170561739166,
+      "category": "SAFE",
+      "name": "奥平野財産区管理会　平野会館",
+      "address": "神戸市兵庫区神田町11番10号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区神田町11番10号",
+      "district": "兵庫区",
+      "sourceRow": 2121,
+      "sourceRows": [
+        2121
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1a07949bb4d1f2d9",
+      "lat": 34.6877438712691,
+      "lng": 135.169717738512,
+      "category": "SAFE",
+      "name": "平野児童館",
+      "address": "神戸市兵庫区下祇園町6-22",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区下祇園町6-22",
+      "district": "兵庫区",
+      "sourceRow": 2135,
+      "sourceRows": [
+        2135
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8b089a5ec115c5a3",
+      "lat": 34.6893826916929,
+      "lng": 135.168448573923,
+      "category": "SAFE",
+      "name": "グループホーム　たのしい家大倉山",
+      "address": "神戸市兵庫区下祇園町32-21",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区下祇園町32-21",
+      "district": "兵庫区",
+      "sourceRow": 2147,
+      "sourceRows": [
+        2147
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9b673f71bc2f64ef",
+      "lat": 34.6889789665549,
+      "lng": 135.169861785774,
+      "category": "SAFE",
+      "name": "神戸市立　神戸祇園小学校",
+      "address": "神戸市兵庫区下祗園町11番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区下祗園町11番",
+      "district": "兵庫区",
+      "sourceRow": 2153,
+      "sourceRows": [
+        2153
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

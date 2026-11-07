@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5774-22523-20261016",
+  "lat": 34.64871065420016,
+  "lng": 135.1404311799318,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/e301730da24ad194",
+      "lat": 34.649967448084,
+      "lng": 135.141465093079,
+      "category": "SAFE",
+      "name": "神戸市立　駒ｹ林小学校",
+      "address": "神戸市長田区野田町6丁目1-16",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区野田町6丁目1-16",
+      "district": "長田区",
+      "sourceRow": 1272,
+      "sourceRows": [
+        1272
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/743cfefc28e21661",
+      "lat": 34.646394848432,
+      "lng": 135.138302245314,
+      "category": "SAFE",
+      "name": "昭和シェル石油(株)神戸事業所",
+      "address": "神戸市長田区浪松町6丁目1－17",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区浪松町6丁目1－17",
+      "district": "長田区",
+      "sourceRow": 1273,
+      "sourceRows": [
+        1273
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/47b7e47967e87262",
+      "lat": 34.6494885105846,
+      "lng": 135.140473157519,
+      "category": "SAFE",
+      "name": "神戸野田高等学校",
+      "address": "神戸市長田区海運町6-1-7",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区海運町6-1-7",
+      "district": "長田区",
+      "sourceRow": 1278,
+      "sourceRows": [
+        1278
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ba6ba4278f21904c",
+      "lat": 34.6491063834127,
+      "lng": 135.139839920483,
+      "category": "SAFE",
+      "name": "神戸市立　本庄保育所",
+      "address": "神戸市長田区本庄町6丁目6-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区本庄町6丁目6-3",
+      "district": "長田区",
+      "sourceRow": 1288,
+      "sourceRows": [
+        1288
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/215a4d131143cc84",
+      "lat": 34.6485960804875,
+      "lng": 135.142075483264,
+      "category": "SAFE",
+      "name": "神戸市立　長楽児童館",
+      "address": "神戸市長田区海運町7丁目1-23",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区海運町7丁目1-23",
+      "district": "長田区",
+      "sourceRow": 1300,
+      "sourceRows": [
+        1300
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5774-22522-20261016",
+  "lat": 34.64792559015691,
+  "lng": 135.13437271005625,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/55d7a5667a713ee7",
+      "lat": 34.6486889439413,
+      "lng": 135.133442990273,
+      "category": "SAFE",
+      "name": "神戸市立　南須磨公民館",
+      "address": "神戸市須磨区青葉町2丁目2-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区青葉町2丁目2-3",
+      "district": "須磨区",
+      "sourceRow": 32,
+      "sourceRows": [
+        32
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f5c5cabee015de29",
+      "lat": 34.6480679191121,
+      "lng": 135.132638948714,
+      "category": "SAFE",
+      "name": "神戸市立　鷹取中学校",
+      "address": "神戸市須磨区青葉町3-1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区青葉町3-1-1",
+      "district": "須磨区",
+      "sourceRow": 43,
+      "sourceRows": [
+        43
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/487106bd274b030f",
+      "lat": 34.6454982493577,
+      "lng": 135.137509876141,
+      "category": "SAFE",
+      "name": "JX日鉱日石エネルギー株式会社　神戸油槽所",
+      "address": "神戸市須磨区外浜町1丁目1番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区外浜町1丁目1番1号",
+      "district": "須磨区",
+      "sourceRow": 55,
+      "sourceRows": [
+        55
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6de79f55388f2a2d",
+      "lat": 34.646010213591,
+      "lng": 135.136088309072,
+      "category": "SAFE",
+      "name": "神戸市環境局須磨事業所",
+      "address": "神戸市須磨区小寺町2丁目5-16",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区小寺町2丁目5-16",
+      "district": "須磨区",
+      "sourceRow": 108,
+      "sourceRows": [
+        108
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9b49c66ee7559125",
+      "lat": 34.64948743517,
+      "lng": 135.133364706036,
+      "category": "SAFE",
+      "name": "神戸市立　たかとり保育所",
+      "address": "神戸市須磨区行平町2丁目2－17",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区行平町2丁目2－17",
+      "district": "須磨区",
+      "sourceRow": 123,
+      "sourceRows": [
+        123
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ec33d9ea189b0ed0",
+      "lat": 34.64948743517,
+      "lng": 135.133364706036,
+      "category": "SAFE",
+      "name": "神戸市立　たかとり児童館",
+      "address": "神戸市須磨区行平町2丁目2-17",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区行平町2丁目2-17",
+      "district": "須磨区",
+      "sourceRow": 130,
+      "sourceRows": [
+        130
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/90d20e74c1de20a3",
+      "lat": 34.6466274619053,
+      "lng": 135.132840866262,
+      "category": "SAFE",
+      "name": "阪神高速トール神戸㈱若宮営業所",
+      "address": "神戸市須磨区鷹取町4丁目31－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区鷹取町4丁目31－1",
+      "district": "須磨区",
+      "sourceRow": 137,
+      "sourceRows": [
+        137
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0f30aa7d7a95b098",
+      "lat": 34.6495370630079,
+      "lng": 135.135731277916,
+      "category": "SAFE",
+      "name": "西神戸県税事務所",
+      "address": "神戸市長田区浪松町3丁目2-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区浪松町3丁目2-5",
+      "district": "長田区",
+      "sourceRow": 1316,
+      "sourceRows": [
+        1316
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

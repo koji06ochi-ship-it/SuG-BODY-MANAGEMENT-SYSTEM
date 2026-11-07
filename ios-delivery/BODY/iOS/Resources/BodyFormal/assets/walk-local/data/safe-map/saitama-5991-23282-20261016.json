@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5991-23282",
+  "lat": 35.950642040000005,
+  "lng": 139.69410191,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.95129744,
+      "lng": 139.6938063,
+      "category": "SAFE",
+      "name": "岩槻駅東口コミュニティセンター",
+      "address": "さいたま市本町3-1-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "本町3-1-1",
+      "district": "岩槻区",
+      "sourceRow": 606,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/99835dfdcb70b1ce",
+      "sourceRows": [
+        606,
+        607,
+        608,
+        609
+      ],
+      "duplicateSourceEntries": 4
+    },
+    {
+      "lat": 35.950357,
+      "lng": 139.693866,
+      "category": "SAFE",
+      "name": "子育て支援センターいわつき",
+      "address": "さいたま市本町3-1-1 WATSU西館４階",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "本町3-1-1 WATSU西館４階",
+      "district": "岩槻区",
+      "sourceRow": 610,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/17d75226a61acc5f",
+      "sourceRows": [
+        610
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.95001044,
+      "lng": 139.6941559,
+      "category": "SAFE",
+      "name": "岩槻区役所",
+      "address": "さいたま市本町3-2-5",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "本町3-2-5",
+      "district": "岩槻区",
+      "sourceRow": 611,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/50a10f5a0df89383",
+      "sourceRows": [
+        611,
+        612,
+        613
+      ],
+      "duplicateSourceEntries": 3
+    },
+    {
+      "lat": 35.95042116,
+      "lng": 139.6947301,
+      "category": "SAFE",
+      "name": "岩槻駅東口公共駐車場",
+      "address": "さいたま市本町3-2-5",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "本町3-2-5",
+      "district": "岩槻区",
+      "sourceRow": 614,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/ebd63ea76fe7fe42",
+      "sourceRows": [
+        614,
+        615
+      ],
+      "duplicateSourceEntries": 2
+    }
+  ]
+}

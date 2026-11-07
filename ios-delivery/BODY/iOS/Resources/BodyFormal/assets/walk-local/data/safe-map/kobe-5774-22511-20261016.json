@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5774-22511-20261016",
+  "lat": 34.64631980869832,
+  "lng": 135.0680847911995,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/a5f6575987505454",
+      "lat": 34.6469912588485,
+      "lng": 135.066974732865,
+      "category": "SAFE",
+      "name": "神戸市建設局垂水建設事務所",
+      "address": "神戸市垂水区福田5丁目6-20",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区福田5丁目6-20",
+      "district": "垂水区",
+      "sourceRow": 357,
+      "sourceRows": [
+        357
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/80532d1f14e9e939",
+      "lat": 34.6455855542279,
+      "lng": 135.067717226634,
+      "category": "SAFE",
+      "name": "ことぶき保育園",
+      "address": "神戸市垂水区福田4丁目6番18号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区福田4丁目6番18号",
+      "district": "垂水区",
+      "sourceRow": 363,
+      "sourceRows": [
+        363
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d084f8c9cfa9777e",
+      "lat": 34.6464037054253,
+      "lng": 135.068227863581,
+      "category": "SAFE",
+      "name": "特別養護老人ホーム　向陽荘",
+      "address": "神戸市垂水区福田5丁目2-21",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区福田5丁目2-21",
+      "district": "垂水区",
+      "sourceRow": 418,
+      "sourceRows": [
+        418
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/cad4a293b863b7ac",
+      "lat": 34.6462987162916,
+      "lng": 135.069419341718,
+      "category": "SAFE",
+      "name": "名谷PA（西日本高速道路株式会社関西支社第二神明道路事務所）",
+      "address": "神戸市垂水区名谷町字権行司1179-6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区名谷町字権行司1179-6",
+      "district": "垂水区",
+      "sourceRow": 458,
+      "sourceRows": [
+        458
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5794-22560-20261016",
+  "lat": 34.7670438175,
+  "lng": 135.361590575,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/e12bfc63a2352d6d",
+      "lat": 34.76637211,
+      "lng": 135.3601347,
+      "category": "SAFE",
+      "name": "ポピンズ小規模保育園アクティブラーニングスクール甲東園",
+      "address": "兵庫県西宮市甲東園１丁目１－６パセオ甲東園206",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲東園１丁目１－６パセオ甲東園206",
+      "district": "西宮市",
+      "sourceRow": 118,
+      "sourceRows": [
+        118
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/8469a363f71e1017",
+      "lat": 34.765181,
+      "lng": 135.3629306,
+      "category": "SAFE",
+      "name": "コープこうべコープ甲東園",
+      "address": "兵庫県西宮市上大市３丁目４－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市上大市３丁目４－１",
+      "district": "西宮市",
+      "sourceRow": 593,
+      "sourceRows": [
+        593
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/4603e47ead0d4f13",
+      "lat": 34.76698614,
+      "lng": 135.3601577,
+      "category": "SAFE",
+      "name": "イケダ歯科医院",
+      "address": "兵庫県西宮市甲東園１丁目５－４１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲東園１丁目５－４１",
+      "district": "西宮市",
+      "sourceRow": 629,
+      "sourceRows": [
+        629
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/a784315daf16e452",
+      "lat": 34.76963602,
+      "lng": 135.3631393,
+      "category": "SAFE",
+      "name": "医療法人社団　ケイ歯科クリニック",
+      "address": "兵庫県西宮市段上町２丁目１５－３",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市段上町２丁目１５－３",
+      "district": "西宮市",
+      "sourceRow": 652,
+      "sourceRows": [
+        652
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

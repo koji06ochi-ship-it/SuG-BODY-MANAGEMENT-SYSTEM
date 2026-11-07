@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5790-22524-20261016",
+  "lat": 34.740978547848435,
+  "lng": 135.14880356912167,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/42132538da45ea1f",
+      "lat": 34.7404019561834,
+      "lng": 135.149639126682,
+      "category": "SAFE",
+      "name": "神戸市立　桜ノ宮児童館",
+      "address": "神戸市北区甲栄台2丁目4－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区甲栄台2丁目4－1",
+      "district": "北区",
+      "sourceRow": 2342,
+      "sourceRows": [
+        2342
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ca5c1a248a4a7707",
+      "lat": 34.7419353414372,
+      "lng": 135.149000988055,
+      "category": "SAFE",
+      "name": "桜の宮地域福祉センター",
+      "address": "神戸市北区甲栄台2丁目2－20",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区甲栄台2丁目2－20",
+      "district": "北区",
+      "sourceRow": 2357,
+      "sourceRows": [
+        2357
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/927e9f05dfeec827",
+      "lat": 34.7405983459247,
+      "lng": 135.147770592628,
+      "category": "SAFE",
+      "name": "兵庫県警　神戸北警察署",
+      "address": "神戸市北区甲栄台3丁目6－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区甲栄台3丁目6－1",
+      "district": "北区",
+      "sourceRow": 2405,
+      "sourceRows": [
+        2405
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

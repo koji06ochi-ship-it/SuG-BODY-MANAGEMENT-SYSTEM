@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5791-22741",
+  "lat": 34.74994733333333,
+  "lng": 136.45106366666667,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.750173,
+      "lng": 136.450775,
+      "category": "SAFE",
+      "name": "村主公民館",
+      "address": "津市安濃町連部69-1",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "安濃町連部69-1",
+      "district": "安濃",
+      "sourceRow": 200,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/634f57b70377fe3a",
+      "sourceRows": [
+        200
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.749365,
+      "lng": 136.451082,
+      "category": "SAFE",
+      "name": "村主幼稚園",
+      "address": "津市安濃町連部91-5",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "安濃町連部91-5",
+      "district": "安濃",
+      "sourceRow": 206,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/a2d384cd6fbe759d",
+      "sourceRows": [
+        206
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.750304,
+      "lng": 136.451334,
+      "category": "SAFE",
+      "name": "村主小学校",
+      "address": "津市安濃町連部68",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "安濃町連部68",
+      "district": "安濃",
+      "sourceRow": 210,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/657353f73dc3cbe8",
+      "sourceRows": [
+        210
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

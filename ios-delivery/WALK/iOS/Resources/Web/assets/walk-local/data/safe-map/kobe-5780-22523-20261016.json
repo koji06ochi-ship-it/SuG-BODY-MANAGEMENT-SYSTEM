@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5780-22523-20261016",
+  "lat": 34.68383832247584,
+  "lng": 135.14003267868858,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/8a43043e64183c20",
+      "lat": 34.6832302550079,
+      "lng": 135.140187077172,
+      "category": "SAFE",
+      "name": "丸山地域福祉センター",
+      "address": "神戸市長田区丸山町2丁目-3-50",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区丸山町2丁目-3-50",
+      "district": "長田区",
+      "sourceRow": 1296,
+      "sourceRows": [
+        1296
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0b6f3f33c3a905c8",
+      "lat": 34.6858169384504,
+      "lng": 135.140479046473,
+      "category": "SAFE",
+      "name": "コープこうべ　コープ丸山",
+      "address": "神戸市長田区西丸山町1丁目7－23",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区西丸山町1丁目7－23",
+      "district": "長田区",
+      "sourceRow": 1334,
+      "sourceRows": [
+        1334
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/14188a6697587ce8",
+      "lat": 34.683884443367,
+      "lng": 135.139718970337,
+      "category": "SAFE",
+      "name": "神戸市立ケアハウス松寿園",
+      "address": "神戸市長田区丸山町2丁目3-17",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区丸山町2丁目3-17",
+      "district": "長田区",
+      "sourceRow": 1335,
+      "sourceRows": [
+        1335
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/38547a656324ca07",
+      "lat": 34.683029720546,
+      "lng": 135.139591222289,
+      "category": "SAFE",
+      "name": "丸山病院",
+      "address": "神戸市長田区丸山町3丁目4-22",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区丸山町3丁目4-22",
+      "district": "長田区",
+      "sourceRow": 1347,
+      "sourceRows": [
+        1347
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/cf68c1560f48b6c3",
+      "lat": 34.6832302550079,
+      "lng": 135.140187077172,
+      "category": "SAFE",
+      "name": "神戸市総合療育センター",
+      "address": "神戸市長田区丸山町2丁目3-50",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区丸山町2丁目3-50",
+      "district": "長田区",
+      "sourceRow": 1348,
+      "sourceRows": [
+        1348
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

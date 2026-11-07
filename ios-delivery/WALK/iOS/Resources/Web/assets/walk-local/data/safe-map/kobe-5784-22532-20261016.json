@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5784-22532-20261016",
+  "lat": 34.707112611360586,
+  "lng": 135.195584509205,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/64da6469648aa9b5",
+      "lat": 34.7059811461205,
+      "lng": 135.195162685296,
+      "category": "SAFE",
+      "name": "ANAクラウンプラザホテル神戸",
+      "address": "神戸市中央区加納町1丁目3番2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区加納町1丁目3番2",
+      "district": "中央区",
+      "sourceRow": 864,
+      "sourceRows": [
+        864
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9856f20fdbcf3643",
+      "lat": 34.7056467289604,
+      "lng": 135.195545226296,
+      "category": "SAFE",
+      "name": "神戸市営地下鉄　新神戸駅",
+      "address": "神戸市中央区加納町1丁目",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区加納町1丁目",
+      "district": "中央区",
+      "sourceRow": 878,
+      "sourceRows": [
+        878
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/77490a3e09136c99",
+      "lat": 34.7059811461205,
+      "lng": 135.195162685296,
+      "category": "SAFE",
+      "name": "JR　新神戸駅",
+      "address": "神戸市中央区加納町1-3-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区加納町1-3-1",
+      "district": "中央区",
+      "sourceRow": 929,
+      "sourceRows": [
+        929
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8edb2d8390324c65",
+      "lat": 34.7099755063839,
+      "lng": 135.196795272717,
+      "category": "SAFE",
+      "name": "神戸第一高等学校",
+      "address": "神戸市中央区葺合町寺ヶ谷1番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区葺合町寺ヶ谷1番地",
+      "district": "中央区",
+      "sourceRow": 1057,
+      "sourceRows": [
+        1057
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f51ee15ab01dbcc0",
+      "lat": 34.7059675912525,
+      "lng": 135.196990082246,
+      "category": "SAFE",
+      "name": "ジークレフ新神戸タワー",
+      "address": "神戸市中央区熊内町7丁目6-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区熊内町7丁目6-1",
+      "district": "中央区",
+      "sourceRow": 1084,
+      "sourceRows": [
+        1084
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/071dd151a49c1efa",
+      "lat": 34.7091235493257,
+      "lng": 135.193851103379,
+      "category": "SAFE",
+      "name": "雄滝茶屋",
+      "address": "神戸市中央区葺合町布引遊園地45",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区葺合町布引遊園地45",
+      "district": "中央区",
+      "sourceRow": 1214,
+      "sourceRows": [
+        1214
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

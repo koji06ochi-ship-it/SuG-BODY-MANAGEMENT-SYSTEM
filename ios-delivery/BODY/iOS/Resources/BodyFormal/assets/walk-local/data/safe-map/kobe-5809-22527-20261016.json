@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5809-22527-20261016",
+  "lat": 34.855328041786244,
+  "lng": 135.1654339207153,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/6ebdf29ae0208553",
+      "lat": 34.8549470450559,
+      "lng": 135.165157094258,
+      "category": "SAFE",
+      "name": "神戸市立　大沢中学校",
+      "address": "神戸市北区大沢町中大沢976",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区大沢町中大沢976",
+      "district": "北区",
+      "sourceRow": 2195,
+      "sourceRows": [
+        2195
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/01dd39a38ab9d60d",
+      "lat": 34.8549470450559,
+      "lng": 135.165157094258,
+      "category": "SAFE",
+      "name": "神戸市立　大沢小学校",
+      "address": "神戸市北区大沢町中大沢976",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区大沢町中大沢976",
+      "district": "北区",
+      "sourceRow": 2250,
+      "sourceRows": [
+        2250
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/30ff5c9053a76cda",
+      "lat": 34.8587160663224,
+      "lng": 135.164519517465,
+      "category": "SAFE",
+      "name": "兵庫六甲農業協同組合　大沢支店",
+      "address": "神戸市北区大沢町中大沢字尾上1-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区大沢町中大沢字尾上1-2",
+      "district": "北区",
+      "sourceRow": 2299,
+      "sourceRows": [
+        2299
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6dc8d10ad5c7844d",
+      "lat": 34.8549470450559,
+      "lng": 135.165157094258,
+      "category": "SAFE",
+      "name": "神戸市立　大沢幼稚園",
+      "address": "神戸市北区大沢町中大沢976番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区大沢町中大沢976番",
+      "district": "北区",
+      "sourceRow": 2355,
+      "sourceRows": [
+        2355
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f810b1cb608492e9",
+      "lat": 34.8545127702567,
+      "lng": 135.166471093539,
+      "category": "SAFE",
+      "name": "大沢地域福祉センター",
+      "address": "神戸市北区大沢町中大沢字泓996-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区大沢町中大沢字泓996-1",
+      "district": "北区",
+      "sourceRow": 2379,
+      "sourceRows": [
+        2379
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/466ad54cf42d04a4",
+      "lat": 34.8542832851678,
+      "lng": 135.166161271327,
+      "category": "SAFE",
+      "name": "神戸市北区北神支所　大沢連絡所",
+      "address": "神戸市北区大沢町中大沢1000-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区大沢町中大沢1000-1",
+      "district": "北区",
+      "sourceRow": 2446,
+      "sourceRows": [
+        2446
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/eb6d3ac3143a698d",
+      "lat": 34.8549430355891,
+      "lng": 135.165414279902,
+      "category": "SAFE",
+      "name": "神戸市立　大沢児童館",
+      "address": "神戸市北区大沢町中大沢984",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区大沢町中大沢984",
+      "district": "北区",
+      "sourceRow": 2481,
+      "sourceRows": [
+        2481
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

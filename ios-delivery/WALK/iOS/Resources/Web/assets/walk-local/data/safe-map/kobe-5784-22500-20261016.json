@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5784-22500-20261016",
+  "lat": 34.7080780300984,
+  "lng": 135.001899114111,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/dc6b2c0d1f4eacdb",
+      "lat": 34.7065010530092,
+      "lng": 135.002027008178,
+      "category": "SAFE",
+      "name": "神戸市立　樫野台小学校",
+      "address": "神戸市西区樫野台3丁目3番地の1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区樫野台3丁目3番地の1",
+      "district": "西区",
+      "sourceRow": 551,
+      "sourceRows": [
+        551
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8ef4f66deeb941b9",
+      "lat": 34.709280976904,
+      "lng": 135.001266825711,
+      "category": "SAFE",
+      "name": "オーク・スクエア西神中央団地管理組合",
+      "address": "神戸市西区樫野台5丁目3番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区樫野台5丁目3番地",
+      "district": "西区",
+      "sourceRow": 635,
+      "sourceRows": [
+        635
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4c73ec1099f09887",
+      "lat": 34.708452060382,
+      "lng": 135.002403508444,
+      "category": "SAFE",
+      "name": "樫野台地域福祉センター",
+      "address": "神戸市西区樫野台5丁目4-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区樫野台5丁目4-2",
+      "district": "西区",
+      "sourceRow": 708,
+      "sourceRows": [
+        708
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

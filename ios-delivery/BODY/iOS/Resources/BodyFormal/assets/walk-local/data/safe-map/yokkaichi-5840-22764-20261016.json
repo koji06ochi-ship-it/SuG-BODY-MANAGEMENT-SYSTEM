@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "id": "yokkaichi-5840-22764-20261016",
+  "lat": 35.040674175999996,
+  "lng": 136.58859769999998,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "四日市市",
+  "source": "四日市市内公共施設 AED設置箇所一覧",
+  "sourceUrl": "https://data.bodik.jp/dataset/242021_00127",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/422f8da8-0b3c-4d84-b8dd-d88d18e914ce/resource/2a5eee8b-c455-4c2e-8553-b0d3d36e5ef2/download/242021_aed.csv",
+  "sourceUpdatedAt": "2024-12-18",
+  "sourcePageUpdatedAt": "2025-01-24",
+  "retrievedAt": "2026-10-15T15:44:16.747Z",
+  "sourceFileSha256": "c0880c81977c7fc444213ee84ef31a7b2e9e34f12d31e892064cbabb7d5159cf",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/yokkaichi/aed/b3d476a562cceed2",
+      "lat": 35.04082621,
+      "lng": 136.5889335,
+      "category": "SAFE",
+      "name": "下野小学校",
+      "address": "四日市市朝明町475-1",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市朝明町475-1",
+      "sourceRow": 30,
+      "sourceRows": [
+        30
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/07a59f7f6ceaf132",
+      "lat": 35.04082395,
+      "lng": 136.5889335,
+      "category": "SAFE",
+      "name": "下野小学校",
+      "address": "四日市市朝明町475-1",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市朝明町475-1",
+      "sourceRow": 31,
+      "sourceRows": [
+        31
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/0725f1bb93cc9573",
+      "lat": 35.04004165,
+      "lng": 136.5894477,
+      "category": "SAFE",
+      "name": "下野幼稚園",
+      "address": "四日市市朝明町464",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市朝明町464",
+      "sourceRow": 123,
+      "sourceRows": [
+        123
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/c348b11e06feb03f",
+      "lat": 35.0405476,
+      "lng": 136.5874195,
+      "category": "SAFE",
+      "name": "下野こども園",
+      "address": "四日市市朝明町498-1",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市朝明町498-1",
+      "sourceRow": 139,
+      "sourceRows": [
+        139
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/151213fe31e30181",
+      "lat": 35.04113147,
+      "lng": 136.5882543,
+      "category": "SAFE",
+      "name": "下野地区市民センター",
+      "address": "四日市市朝明町914-3",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市朝明町914-3",
+      "sourceRow": 156,
+      "sourceRows": [
+        156
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

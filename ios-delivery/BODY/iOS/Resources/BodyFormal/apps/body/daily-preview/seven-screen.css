@@ -1,0 +1,12 @@
+/* Existing warm white / gold / charcoal palette and supplied artwork retained. */
+.bottom{grid-template-columns:repeat(6,minmax(0,1fr));gap:0;padding-left:3px;padding-right:3px}
+.bottom button{font-size:9px;padding:5px 1px;white-space:nowrap;min-width:0}
+.bottom span{font-size:18px}.bottom .active{background:#f5ecd7;border-radius:8px;color:#795d23}
+.screen-actions{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.screen-actions button,.screen-index button{border:1px solid #d0c8b7;background:#fff;color:#3f3b32;border-radius:10px;padding:13px 12px;min-height:44px;font:inherit;font-size:12px}
+.screen-actions button{flex:1 1 120px}.tool-link{display:block;color:#795d23;font-size:13px;font-weight:600;line-height:1.7;padding:13px 0;overflow-wrap:anywhere}
+.screen-index{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:24px 0}.screen-index h2{grid-column:1/-1}.screen-index button{text-align:left}.screen-index button:last-child{grid-column:1/-1}
+.connection-state{display:inline-block;border-radius:6px;background:#f2eee5;color:#554b37;padding:7px 10px;font-size:12px}.connection-list{font-size:12px;line-height:1.7}.connection-list dt{margin-top:15px;font-weight:600}.connection-list dd{margin:3px 0 0;color:#61636a}
+#care{margin-top:32px;padding-top:24px;border-top:1px solid #dddcd6}#care>h2{font-size:24px;margin:14px 0}#settings .panel{overflow-wrap:anywhere}.tool-entry h2{font-size:18px}.guide-copy{width:100%;padding-right:24px}
+#body531Plan,#trainingForm,#recoveryForm,#care,#foodForm{scroll-margin-top:16px}
+@media(max-width:360px){.bottom button{font-size:8px}.screen-index{gap:7px}}

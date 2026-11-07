@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5784-22728",
+  "lat": 34.706271666666666,
+  "lng": 136.37068133333332,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.70669,
+      "lng": 136.370736,
+      "category": "SAFE",
+      "name": "榊原公民館",
+      "address": "津市榊原町5108-1",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "榊原町5108-1",
+      "district": "久居",
+      "sourceRow": 127,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/d40036afe93e43f8",
+      "sourceRows": [
+        127
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.706732,
+      "lng": 136.368911,
+      "category": "SAFE",
+      "name": "榊原幼稚園",
+      "address": "津市榊原町5156",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "榊原町5156",
+      "district": "久居",
+      "sourceRow": 137,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/fcb2de93acb12caa",
+      "sourceRows": [
+        137
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.705393,
+      "lng": 136.372397,
+      "category": "SAFE",
+      "name": "榊原小学校",
+      "address": "津市榊原町5848",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "榊原町5848",
+      "district": "久居",
+      "sourceRow": 148,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/77fed4c01b053891",
+      "sourceRows": [
+        148
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

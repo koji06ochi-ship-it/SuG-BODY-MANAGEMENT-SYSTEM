@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5988-23271",
+  "lat": 35.93043,
+  "lng": 139.631,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.93043,
+      "lng": 139.631,
+      "category": "SAFE",
+      "name": "土呂駅西口自転車駐車場",
+      "address": "さいたま市土呂町1-6-5",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "土呂町1-6-5",
+      "district": "北区",
+      "sourceRow": 65,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/bf77939f5d229824",
+      "sourceRows": [
+        65
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5987-23267",
+  "lat": 35.92446585166666,
+  "lng": 139.60538053333335,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.92322167,
+      "lng": 139.6052611,
+      "category": "SAFE",
+      "name": "日進公園コミュニティセンター",
+      "address": "さいたま市日進町1-312-2",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "日進町1-312-2",
+      "district": "北区",
+      "sourceRow": 68,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/bff9f43e50ddde44",
+      "sourceRows": [
+        68,
+        69,
+        70
+      ],
+      "duplicateSourceEntries": 3
+    },
+    {
+      "lat": 35.9263081,
+      "lng": 139.6042299,
+      "category": "SAFE",
+      "name": "日進西保育園",
+      "address": "さいたま市日進町1-800-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "日進町1-800-1",
+      "district": "北区",
+      "sourceRow": 71,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/4b4928c15238ef7a",
+      "sourceRows": [
+        71
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.925622,
+      "lng": 139.604739,
+      "category": "SAFE",
+      "name": "老人福祉センターしもか荘",
+      "address": "さいたま市日進町1-800-105",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "日進町1-800-105",
+      "district": "北区",
+      "sourceRow": 72,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/0aef338536f875fe",
+      "sourceRows": [
+        72
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.9252,
+      "lng": 139.607531,
+      "category": "SAFE",
+      "name": "日進放課後児童クラブ（日進小第一学童保育の会）",
+      "address": "さいたま市日進町2-911 日進小学校内",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "日進町2-911 日進小学校内",
+      "district": "北区",
+      "sourceRow": 74,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/adeae53761ffa963",
+      "sourceRows": [
+        74
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5780-22531-20261016",
+  "lat": 34.683194661461194,
+  "lng": 135.18844814158703,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/7cabc77f8992a32d",
+      "lat": 34.6836862275305,
+      "lng": 135.187791440067,
+      "category": "SAFE",
+      "name": "㈱ホテルオークラ神戸",
+      "address": "神戸市中央区波止場町2-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区波止場町2-1",
+      "district": "中央区",
+      "sourceRow": 809,
+      "sourceRows": [
+        809
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6ad0b17e9830913d",
+      "lat": 34.6831090576679,
+      "lng": 135.188802257072,
+      "category": "SAFE",
+      "name": "神戸海洋博物館・カワサキワールド",
+      "address": "神戸市中央区波止場町2-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区波止場町2-2",
+      "district": "中央区",
+      "sourceRow": 828,
+      "sourceRows": [
+        828
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3a88b84802719876",
+      "lat": 34.6850045582005,
+      "lng": 135.188890517443,
+      "category": "SAFE",
+      "name": "サニーピア医療保険協会",
+      "address": "神戸市中央区波止場町3-12",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区波止場町3-12",
+      "district": "中央区",
+      "sourceRow": 833,
+      "sourceRows": [
+        833
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/951feb42d0b83903",
+      "lat": 34.6846797646256,
+      "lng": 135.189986588024,
+      "category": "SAFE",
+      "name": "早駒運輸㈱",
+      "address": "神戸市中央区波止場町2-7",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区波止場町2-7",
+      "district": "中央区",
+      "sourceRow": 837,
+      "sourceRows": [
+        837
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/cf4573d98f15e012",
+      "lat": 34.6802370507547,
+      "lng": 135.188416268921,
+      "category": "SAFE",
+      "name": "神戸メリケンパークオリエンタルホテル",
+      "address": "神戸市中央区波止場町5番6号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区波止場町5番6号",
+      "district": "中央区",
+      "sourceRow": 928,
+      "sourceRows": [
+        928
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4fc80a36380023dd",
+      "lat": 34.682451309988,
+      "lng": 135.186801777995,
+      "category": "SAFE",
+      "name": "神戸ポートタワー",
+      "address": "神戸市中央区波止場町5番地5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区波止場町5番地5",
+      "district": "中央区",
+      "sourceRow": 986,
+      "sourceRows": [
+        986
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

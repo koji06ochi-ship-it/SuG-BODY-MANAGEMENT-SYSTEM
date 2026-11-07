@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5777-22523-20261016",
+  "lat": 34.66400511524413,
+  "lng": 135.1424430713357,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/63a1caabef7e05f2",
+      "lat": 34.6634424697926,
+      "lng": 135.143816851246,
+      "category": "SAFE",
+      "name": "常盤アリーナ(兵庫県立文化体育館)",
+      "address": "神戸市長田区蓮池町1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区蓮池町1-1",
+      "district": "長田区",
+      "sourceRow": 1226,
+      "sourceRows": [
+        1226
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e943b768ee13fe65",
+      "lat": 34.6661961712942,
+      "lng": 135.140345969191,
+      "category": "SAFE",
+      "name": "神戸常盤大学",
+      "address": "神戸市長田区大谷町2丁目6番2号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区大谷町2丁目6番2号",
+      "district": "長田区",
+      "sourceRow": 1233,
+      "sourceRows": [
+        1233
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/94df182424e1b833",
+      "lat": 34.6623767046456,
+      "lng": 135.14316639357,
+      "category": "SAFE",
+      "name": "神戸市立　蓮池小学校",
+      "address": "神戸市長田区大谷町1丁目1－10",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区大谷町1丁目1－10",
+      "district": "長田区",
+      "sourceRow": 1265,
+      "sourceRows": [
+        1265
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

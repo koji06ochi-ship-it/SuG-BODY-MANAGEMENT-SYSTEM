@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5781-22506-20261016",
+  "lat": 34.687237865898354,
+  "lng": 135.0408245438795,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/c06976b25a152a3f",
+      "lat": 34.6882362171274,
+      "lng": 135.041923472165,
+      "category": "SAFE",
+      "name": "神戸市営地下鉄　伊川谷駅",
+      "address": "神戸市西区前開南町1丁目",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区前開南町1丁目",
+      "district": "西区",
+      "sourceRow": 497,
+      "sourceRows": [
+        497
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ef944a71746dc34e",
+      "lat": 34.6862395146693,
+      "lng": 135.039725615594,
+      "category": "SAFE",
+      "name": "ロイヤルホームセンター伊川谷",
+      "address": "神戸市西区伊川谷町前開南町1丁目1-15",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区伊川谷町前開南町1丁目1-15",
+      "district": "西区",
+      "sourceRow": 729,
+      "sourceRows": [
+        729
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

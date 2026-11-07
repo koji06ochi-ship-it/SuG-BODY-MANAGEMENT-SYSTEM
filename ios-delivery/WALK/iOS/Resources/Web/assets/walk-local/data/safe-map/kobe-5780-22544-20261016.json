@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5780-22544-20261016",
+  "lat": 34.68358180167548,
+  "lng": 135.2683740573228,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/d84d5f810cad818d",
+      "lat": 34.6833379577255,
+      "lng": 135.267627947994,
+      "category": "SAFE",
+      "name": "甲南大学　六アイ体育館医務室",
+      "address": "神戸市東灘区向洋町中8-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町中8-2",
+      "district": "東灘区",
+      "sourceRow": 1442,
+      "sourceRows": [
+        1442
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ec58beb89bf8e97e",
+      "lat": 34.6823088884248,
+      "lng": 135.26792161222,
+      "category": "SAFE",
+      "name": "甲南大学　六アイ南グラウンド",
+      "address": "神戸市東灘区向洋町中9-4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町中9-4",
+      "district": "東灘区",
+      "sourceRow": 1443,
+      "sourceRows": [
+        1443
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/00b324eee0380de4",
+      "lat": 34.6823088884248,
+      "lng": 135.26792161222,
+      "category": "SAFE",
+      "name": "甲南学園　甲南大学三木瀧蔵記念体育館",
+      "address": "神戸市東灘区向洋町中9丁目4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町中9丁目4",
+      "district": "東灘区",
+      "sourceRow": 1590,
+      "sourceRows": [
+        1590
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0751ec4b8767d51a",
+      "lat": 34.685931699459,
+      "lng": 135.268829730534,
+      "category": "SAFE",
+      "name": "神戸レディースフットボールセンター",
+      "address": "神戸市東灘区向洋町中7丁目1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町中7丁目1-1",
+      "district": "東灘区",
+      "sourceRow": 1591,
+      "sourceRows": [
+        1591
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c618f65b8180245a",
+      "lat": 34.6840215743433,
+      "lng": 135.269569383646,
+      "category": "SAFE",
+      "name": "セレゾン6-aiフットサルクラブ",
+      "address": "神戸市東灘区向洋町中8-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町中8-1",
+      "district": "東灘区",
+      "sourceRow": 1627,
+      "sourceRows": [
+        1627
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

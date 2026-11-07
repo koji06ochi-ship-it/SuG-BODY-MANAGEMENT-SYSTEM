@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5798-22535-20261016",
+  "lat": 34.78978968364056,
+  "lng": 135.21409613041772,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/0d796cad40d5f218",
+      "lat": 34.7898492213277,
+      "lng": 135.214038853689,
+      "category": "SAFE",
+      "name": "神戸市立　唐櫃小学校",
+      "address": "神戸市北区唐櫃台2-39-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区唐櫃台2-39-1",
+      "district": "北区",
+      "sourceRow": 2199,
+      "sourceRows": [
+        2199
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c0e6b7d65ccd6528",
+      "lat": 34.7900611322049,
+      "lng": 135.214830677879,
+      "category": "SAFE",
+      "name": "神戸市立　からと保育所",
+      "address": "神戸市北区唐櫃台2丁目38番5号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区唐櫃台2丁目38番5号",
+      "district": "北区",
+      "sourceRow": 2328,
+      "sourceRows": [
+        2328
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/97d69dd62a5a6ebb",
+      "lat": 34.7904799974256,
+      "lng": 135.214880177515,
+      "category": "SAFE",
+      "name": "神戸市立　からと幼稚園",
+      "address": "神戸市北区唐櫃台2丁目38－10",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区唐櫃台2丁目38－10",
+      "district": "北区",
+      "sourceRow": 2352,
+      "sourceRows": [
+        2352
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bada673324aed652",
+      "lat": 34.7886680759958,
+      "lng": 135.214716371508,
+      "category": "SAFE",
+      "name": "唐櫃地域福祉センター",
+      "address": "神戸市北区唐櫃台3丁目27-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区唐櫃台3丁目27-1",
+      "district": "北区",
+      "sourceRow": 2387,
+      "sourceRows": [
+        2387
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6c2eb47d664d5256",
+      "lat": 34.790990958291,
+      "lng": 135.212134110301,
+      "category": "SAFE",
+      "name": "コープこうべ　コープからと",
+      "address": "神戸市北区唐櫃台2丁目23番8号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区唐櫃台2丁目23番8号",
+      "district": "北区",
+      "sourceRow": 2403,
+      "sourceRows": [
+        2403
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/85e4a70ead2c419e",
+      "lat": 34.789811308948,
+      "lng": 135.215223615147,
+      "category": "SAFE",
+      "name": "神戸市立　からと児童館",
+      "address": "神戸市北区唐櫃台2丁目38－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区唐櫃台2丁目38－1",
+      "district": "北区",
+      "sourceRow": 2461,
+      "sourceRows": [
+        2461
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/aaed3ed42ec689e6",
+      "lat": 34.7886670912909,
+      "lng": 135.212849106885,
+      "category": "SAFE",
+      "name": "シラセ歯科",
+      "address": "神戸市北区唐櫃台2丁目11-15",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区唐櫃台2丁目11-15",
+      "district": "北区",
+      "sourceRow": 2542,
+      "sourceRows": [
+        2542
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

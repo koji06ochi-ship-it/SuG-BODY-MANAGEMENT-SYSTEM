@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#070708">
+<title>S.u.G BODY HUB V27.82</title>
+<style>
+:root{--bg:#070708;--card:#101012;--line:#2d2d33;--gold:#d8b35b;--gold2:#f3d98b;--txt:#f7f7f7;--muted:#8d8d95;--blue:#61adff;--pink:#ff5fa8}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:radial-gradient(circle at 50% -10%,#29200f 0,#0d0d10 32%,#060607 74%);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans",sans-serif}body{padding:calc(16px + env(safe-area-inset-top)) 16px calc(28px + env(safe-area-inset-bottom))}.wrap{max-width:720px;margin:auto}.brand{display:flex;align-items:center;gap:12px;padding:14px 2px 24px}.seal{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;border:1px solid #a9873d;background:#090909;color:var(--gold2);font-weight:1000;box-shadow:0 0 24px #d8b35b18}.ey{font-size:9px;font-weight:900;letter-spacing:.2em;color:var(--gold2)}h1{font-size:34px;line-height:1;margin:5px 0 8px;letter-spacing:-.04em}.sub{font-size:11px;line-height:1.65;color:var(--muted)}.grid{display:grid;gap:12px}.card{position:relative;overflow:hidden;border:1px solid var(--line);background:linear-gradient(150deg,#151518,#0d0d10 64%);border-radius:23px;padding:20px;text-align:left;color:#fff;min-height:178px;cursor:pointer}.card:active{transform:scale(.992)}.card:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:-80px;top:-80px;filter:blur(6px);opacity:.14}.card.normal{border-color:#5a4b2c}.card.normal:before{background:var(--gold)}.card.rom{border-color:#294d71}.card.rom:before{background:var(--blue)}.card.miss{border-color:#713456;background:linear-gradient(145deg,#171319,#0d0d11 58%,#0f1520)}.card.miss:before{background:linear-gradient(135deg,var(--pink),var(--blue));opacity:.22}.tag{display:inline-flex;align-items:center;gap:6px;border:1px solid #38383f;border-radius:999px;padding:5px 8px;font-size:8px;font-weight:900;letter-spacing:.1em}.normal .tag{color:var(--gold2);border-color:#5a4b2c}.rom .tag{color:#9fd0ff;border-color:#294d71}.miss .tag{color:#ff9ac8;border-color:#713456}.card h2{font-size:23px;margin:14px 0 7px;letter-spacing:-.03em}.card p{font-size:10px;line-height:1.7;color:#a3a3aa;margin:0;max-width:88%}.go{position:absolute;right:18px;bottom:17px;font-size:20px;font-weight:900}.normal .go{color:var(--gold2)}.rom .go{color:var(--blue)}.miss .go{color:var(--pink)}.shared{margin-top:14px;border:1px solid #242429;border-radius:17px;padding:14px;background:#0c0c0e}.shared b{font-size:10px;color:#d7d7dc}.shared p{font-size:9px;color:#717179;line-height:1.65;margin:5px 0 0}.foot{text-align:center;color:#45454b;font-size:8px;padding-top:18px;letter-spacing:.08em}@media(min-width:660px){.grid{grid-template-columns:1fr 1fr}.card.normal{grid-column:1/-1;min-height:160px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="brand">
+    <div class="seal">S.u.G</div>
+    <div><div class="ey">S.u.G OSAKA · MEMBER · V27.82</div><h1>BODY</h1><div class="sub">目的は分ける。身体データはつなぐ。</div></div>
+  </header>
+
+  <section class="grid">
+    <button class="card normal" data-dest="normal" type="button">
+      <span class="tag">GENERAL BODY</span>
+      <h2>通常 BODY</h2>
+      <p>筋肥大・減量・健康・回復・食事・トレーニング記録。一般会員のBODY管理。</p>
+      <span class="go">→</span>
+    </button>
+
+    <button class="card rom" data-dest="rom" type="button">
+      <span class="tag">SHARED ASSESSMENT</span>
+      <h2>ROM / CARE</h2>
+      <p>AROM / PROM、左右差、SHR、胸椎、動作、CARE反応を共通評価。</p>
+      <span class="go">→</span>
+    </button>
+
+    <button class="card miss" data-dest="miss" type="button">
+      <span class="tag">BEST OF MISS</span>
+      <h2>BEAUTY BODY</h2>
+      <p>脚ライン・姿勢/歩行・ヒップ・デコルテ・FACEなど、美ボディ目標から逆算。</p>
+      <span class="go">→</span>
+    </button>
+  </section>
+
+  <section class="shared"><b>COMMON DATA</b><p>HealthKit・回復・体重/体組成・栄養・ROM/CAREは共通基盤として扱い、通常BODYとBEST OF MISSで重複実装しない。</p></section>
+  <div class="foot">S.u.G BODY MANAGEMENT SYSTEM</div>
+</main>
+<script src="../shared/rom-care-v27.82.js?v=27.82"></script>
+<script>
+const qs=new URLSearchParams(location.search);const native=qs.get('native')==='ios';
+const suffix=native?'?native=ios&v=27.82':'?v=27.82';
+const routes={normal:'./index.html'+suffix,miss:'./best-of-miss-demo-v27.76.html'+suffix};
+document.querySelectorAll('[data-dest]').forEach(b=>b.addEventListener('click',()=>{
+  if(b.dataset.dest==='rom')return window.SuGRomCare.open({source:'hub',section:'rom',native});
+  const u=routes[b.dataset.dest];if(u)location.href=u;
+}));
+</script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5778-22505-20261016",
+  "lat": 34.67000218418831,
+  "lng": 135.03446307771313,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/0f8f63479f42ee33",
+      "lat": 34.6681018467147,
+      "lng": 135.033986427751,
+      "category": "SAFE",
+      "name": "木下内科クリニック",
+      "address": "神戸市西区伊川谷町有瀬308-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区伊川谷町有瀬308-1",
+      "district": "西区",
+      "sourceRow": 568,
+      "sourceRows": [
+        568
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/99123f951bdf0efa",
+      "lat": 34.6721182967885,
+      "lng": 135.033597706996,
+      "category": "SAFE",
+      "name": "特別養護老人ホーム　永栄園",
+      "address": "神戸市西区伊川谷町長坂800",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区伊川谷町長坂800",
+      "district": "西区",
+      "sourceRow": 597,
+      "sourceRows": [
+        597
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f9e4ef1a40e27cfa",
+      "lat": 34.6709614407444,
+      "lng": 135.035734898838,
+      "category": "SAFE",
+      "name": "兵庫県立　伊川谷高等学校　職員室",
+      "address": "神戸市西区伊川谷町長坂910-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区伊川谷町長坂910-5",
+      "district": "西区",
+      "sourceRow": 601,
+      "sourceRows": [
+        601
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5eb20195913d51b6",
+      "lat": 34.6709614407444,
+      "lng": 135.035734898838,
+      "category": "SAFE",
+      "name": "兵庫県立　伊川谷高等学校　体育教官室",
+      "address": "神戸市西区伊川谷町長坂910-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区伊川谷町長坂910-5",
+      "district": "西区",
+      "sourceRow": 602,
+      "sourceRows": [
+        602
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ae6df074650a7c69",
+      "lat": 34.6709614407444,
+      "lng": 135.035734898838,
+      "category": "SAFE",
+      "name": "兵庫県立　伊川谷高等学校　グラウンド",
+      "address": "神戸市西区伊川谷町長坂910-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区伊川谷町長坂910-5",
+      "district": "西区",
+      "sourceRow": 603,
+      "sourceRows": [
+        603
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c1f75ad6e1de3ea3",
+      "lat": 34.6693302912288,
+      "lng": 135.035580418427,
+      "category": "SAFE",
+      "name": "株式会社　あかつき",
+      "address": "神戸市西区伊川谷町有瀬27",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区伊川谷町有瀬27",
+      "district": "西区",
+      "sourceRow": 627,
+      "sourceRows": [
+        627
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e1d5e632cb263758",
+      "lat": 34.6689859504561,
+      "lng": 135.032361395871,
+      "category": "SAFE",
+      "name": "介護老人保健福祉施設　風と緑",
+      "address": "神戸市西区伊川谷町有瀬317番地2号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区伊川谷町有瀬317番地2号",
+      "district": "西区",
+      "sourceRow": 628,
+      "sourceRows": [
+        628
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/60cbbb15be45e4eb",
+      "lat": 34.6685967660852,
+      "lng": 135.032973976146,
+      "category": "SAFE",
+      "name": "タルミグリーンテニスクラブ",
+      "address": "神戸市西区伊川谷町有瀬318",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区伊川谷町有瀬318",
+      "district": "西区",
+      "sourceRow": 737,
+      "sourceRows": [
+        737
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5787-22549-20261016",
+  "lat": 34.72602238516625,
+  "lng": 135.29603095882263,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/d6dacc894edf20dc",
+      "lat": 34.7248352867107,
+      "lng": 135.294481508653,
+      "category": "SAFE",
+      "name": "神戸市立　東灘小学校",
+      "address": "神戸市東灘区深江北町2丁目4-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区深江北町2丁目4-1",
+      "district": "東灘区",
+      "sourceRow": 1407,
+      "sourceRows": [
+        1407
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6641c3305dfcc55f",
+      "lat": 34.7231259025269,
+      "lng": 135.299560445821,
+      "category": "SAFE",
+      "name": "川島クリニック",
+      "address": "神戸市東灘区深江南町1丁目12-13",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区深江南町1丁目12-13",
+      "district": "東灘区",
+      "sourceRow": 1427,
+      "sourceRows": [
+        1427
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d9418a874b1b8640",
+      "lat": 34.7278911714714,
+      "lng": 135.294284289671,
+      "category": "SAFE",
+      "name": "甲南山手保育園",
+      "address": "神戸市東灘区本庄町1丁目10番2号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区本庄町1丁目10番2号",
+      "district": "東灘区",
+      "sourceRow": 1538,
+      "sourceRows": [
+        1538
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1c622672ba9d5167",
+      "lat": 34.7272775671354,
+      "lng": 135.297086138902,
+      "category": "SAFE",
+      "name": "グランダ甲南山手",
+      "address": "神戸市東灘区深江北町1丁目15-4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区深江北町1丁目15-4",
+      "district": "東灘区",
+      "sourceRow": 1579,
+      "sourceRows": [
+        1579
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/06734a3faa48e12b",
+      "lat": 34.726330851653,
+      "lng": 135.294100297936,
+      "category": "SAFE",
+      "name": "きらり保育園",
+      "address": "神戸市東灘区本庄町1-3-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区本庄町1-3-1",
+      "district": "東灘区",
+      "sourceRow": 1619,
+      "sourceRows": [
+        1619
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b7f045d489fdb7b7",
+      "lat": 34.7257242013913,
+      "lng": 135.299208679344,
+      "category": "SAFE",
+      "name": "第2きらり保育園",
+      "address": "神戸市東灘区深江本町1-13-25",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区深江本町1-13-25",
+      "district": "東灘区",
+      "sourceRow": 1620,
+      "sourceRows": [
+        1620
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4c79b061e3a76b9a",
+      "lat": 34.7275318598407,
+      "lng": 135.29525776685,
+      "category": "SAFE",
+      "name": "茶屋本庄園",
+      "address": "神戸市東灘区本庄町1丁目8-13　ｵﾙﾃﾝｼｱKOBE1階",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区本庄町1丁目8-13　ｵﾙﾃﾝｼｱKOBE1階",
+      "district": "東灘区",
+      "sourceRow": 1651,
+      "sourceRows": [
+        1651
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/76d25e72aadd7610",
+      "lat": 34.7254622406006,
+      "lng": 135.294268543404,
+      "category": "SAFE",
+      "name": "青い鳥学園　第1幼稚園",
+      "address": "神戸市東灘区深江北町2丁目9-22",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区深江北町2丁目9-22",
+      "district": "東灘区",
+      "sourceRow": 1655,
+      "sourceRows": [
+        1655
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

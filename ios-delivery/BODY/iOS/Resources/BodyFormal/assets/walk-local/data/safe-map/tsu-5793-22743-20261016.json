@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5793-22743",
+  "lat": 34.7591605,
+  "lng": 136.45994000000002,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.759633,
+      "lng": 136.459887,
+      "category": "SAFE",
+      "name": "安濃公民館",
+      "address": "津市安濃町内多3653",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "安濃町内多3653",
+      "district": "安濃",
+      "sourceRow": 201,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/668e3cd3096aa212",
+      "sourceRows": [
+        201
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.759066,
+      "lng": 136.459941,
+      "category": "SAFE",
+      "name": "安濃幼稚園",
+      "address": "津市安濃町内多476",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "安濃町内多476",
+      "district": "安濃",
+      "sourceRow": 207,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/e40c783ee6591681",
+      "sourceRows": [
+        207
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.75903,
+      "lng": 136.459578,
+      "category": "SAFE",
+      "name": "安濃小学校",
+      "address": "津市安濃町内多451",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "安濃町内多451",
+      "district": "安濃",
+      "sourceRow": 211,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/9a3749f0d6e8ebf1",
+      "sourceRows": [
+        211
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.758913,
+      "lng": 136.460354,
+      "category": "SAFE",
+      "name": "安濃放課後児童クラブひまわりクラブ",
+      "address": "津市安濃町内多475",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "安濃町内多475",
+      "district": "安濃",
+      "sourceRow": 215,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/291fa543373071ab",
+      "sourceRows": [
+        215
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

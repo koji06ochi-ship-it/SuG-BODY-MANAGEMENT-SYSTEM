@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5785-22555-20261016",
+  "lat": 34.71318669,
+  "lng": 135.33243854333332,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/625a3400735ad38c",
+      "lat": 34.71317459,
+      "lng": 135.3337224,
+      "category": "SAFE",
+      "name": "西宮市食肉センター",
+      "address": "兵庫県西宮市西宮浜２丁目３２－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市西宮浜２丁目３２－１",
+      "district": "西宮市",
+      "sourceRow": 218,
+      "sourceRows": [
+        218
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/87a45bcd2e0e6499",
+      "lat": 34.71373734,
+      "lng": 135.3353344,
+      "category": "SAFE",
+      "name": "古野電気株式会社　フルノIＮTセンター",
+      "address": "兵庫県西宮市西宮浜２丁目２０",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市西宮浜２丁目２０",
+      "district": "西宮市",
+      "sourceRow": 531,
+      "sourceRows": [
+        531
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/52f255f2d19dd116",
+      "lat": 34.71083466,
+      "lng": 135.3304821,
+      "category": "SAFE",
+      "name": "新西宮ヨットハーバー",
+      "address": "兵庫県西宮市西宮浜４丁目１６－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市西宮浜４丁目１６－１",
+      "district": "西宮市",
+      "sourceRow": 534,
+      "sourceRows": [
+        534
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/e1bec5f51f30c10f",
+      "lat": 34.7144238,
+      "lng": 135.3301009,
+      "category": "SAFE",
+      "name": "松本金属株式会社　本社工場",
+      "address": "兵庫県西宮市西宮浜４丁目６－８",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市西宮浜４丁目６－８",
+      "district": "西宮市",
+      "sourceRow": 535,
+      "sourceRows": [
+        535
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/f48b55f3690aa79f",
+      "lat": 34.71222166,
+      "lng": 135.3302336,
+      "category": "SAFE",
+      "name": "生活協同組合コープこうべ　コープマリナパーク",
+      "address": "兵庫県西宮市西宮浜４丁目１４－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市西宮浜４丁目１４－１",
+      "district": "西宮市",
+      "sourceRow": 543,
+      "sourceRows": [
+        543
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/d0c90202e25f013e",
+      "lat": 34.71505948,
+      "lng": 135.3302786,
+      "category": "SAFE",
+      "name": "中井エンジニアリング株式会社兵庫導管営業所",
+      "address": "兵庫県西宮市西宮浜４丁目６－５３",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市西宮浜４丁目６－５３",
+      "district": "西宮市",
+      "sourceRow": 555,
+      "sourceRows": [
+        555
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/f01e892927622941",
+      "lat": 34.71207188,
+      "lng": 135.3317556,
+      "category": "SAFE",
+      "name": "アクアマリーン西宮浜",
+      "address": "兵庫県西宮市西宮浜４丁目１５－２",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市西宮浜４丁目１５－２",
+      "district": "西宮市",
+      "sourceRow": 557,
+      "sourceRows": [
+        557
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/89a10228a46a852c",
+      "lat": 34.71110885,
+      "lng": 135.3333652,
+      "category": "SAFE",
+      "name": "大阪大学ヨット部艇庫",
+      "address": "兵庫県西宮市西宮浜４丁目１６－３",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市西宮浜４丁目１６－３",
+      "district": "西宮市",
+      "sourceRow": 561,
+      "sourceRows": [
+        561
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/b236050f82e1d239",
+      "lat": 34.7123908,
+      "lng": 135.3309602,
+      "category": "SAFE",
+      "name": "協和マリナホスピタル",
+      "address": "兵庫県西宮市西宮浜４丁目１５－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市西宮浜４丁目１５－１",
+      "district": "西宮市",
+      "sourceRow": 564,
+      "sourceRows": [
+        564
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/566fc412686c2c6c",
+      "lat": 34.71522132,
+      "lng": 135.3333903,
+      "category": "SAFE",
+      "name": "住田建設株式会社",
+      "address": "兵庫県西宮市西宮浜２丁目３０",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市西宮浜２丁目３０",
+      "district": "西宮市",
+      "sourceRow": 574,
+      "sourceRows": [
+        574
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/28fd574045f8e3d5",
+      "lat": 34.71372889,
+      "lng": 135.3359564,
+      "category": "SAFE",
+      "name": "中山福株式会社大阪支店",
+      "address": "兵庫県西宮市西宮浜２丁目１７",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市西宮浜２丁目１７",
+      "district": "西宮市",
+      "sourceRow": 576,
+      "sourceRows": [
+        576
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/28e7d65091f3bc4e",
+      "lat": 34.71426701,
+      "lng": 135.33368282,
+      "category": "SAFE",
+      "name": "共栄紙業株式会社",
+      "address": "兵庫県西宮市西宮浜２丁目２８番地",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市西宮浜２丁目２８番地",
+      "district": "西宮市",
+      "sourceRow": 577,
+      "sourceRows": [
+        577
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

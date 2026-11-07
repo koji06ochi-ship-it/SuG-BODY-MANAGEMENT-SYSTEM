@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-shelter-saitama-5989-23285",
+  "lat": 35.9359332,
+  "lng": 139.712631,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "埼玉県オープンデータポータル さいたま市 指定避難所",
+  "sourceUrl": "https://opendata.pref.saitama.lg.jp/resources/4757",
+  "sourceFileUrl": "https://opendata.pref.saitama.lg.jp/resource_download/4757",
+  "sourceUpdatedAt": "2026-04-01",
+  "retrievedAt": "2026-10-16T00:00:00.000Z",
+  "sourceFileSha256": "42d9e75eb4293706a921f7e111077954d3d03d018c3745d1fe0a305417b0c44a",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://www.digital.go.jp/resources/open_data/",
+  "data": [
+    {
+      "id": "municipality/saitama/saitama-shelter/4446df5910448d93",
+      "lat": 35.93591304,
+      "lng": 139.7124382,
+      "category": "SAFE",
+      "name": "城南小学校（指定避難所）",
+      "address": "埼玉県さいたま市岩槻区南下新井1191-1",
+      "kind": "SHELTER",
+      "source": "https://opendata.pref.saitama.lg.jp/resources/4757",
+      "sourceLabel": "埼玉県オープンデータポータル さいたま市 指定避難所（開設状況・受入可否は未確認）",
+      "license": "PDL-1.0",
+      "sourceUpdatedAt": "2026-04-01",
+      "sourceRow": 240
+    },
+    {
+      "id": "municipality/saitama/saitama-shelter/f65ce0556e059243",
+      "lat": 35.9358986,
+      "lng": 139.7029743,
+      "category": "SAFE",
+      "name": "柏陽中学校（指定避難所）",
+      "address": "埼玉県さいたま市岩槻区真福寺454",
+      "kind": "SHELTER",
+      "source": "https://opendata.pref.saitama.lg.jp/resources/4757",
+      "sourceLabel": "埼玉県オープンデータポータル さいたま市 指定避難所（開設状況・受入可否は未確認）",
+      "license": "PDL-1.0",
+      "sourceUpdatedAt": "2026-04-01",
+      "sourceRow": 247
+    }
+  ]
+}

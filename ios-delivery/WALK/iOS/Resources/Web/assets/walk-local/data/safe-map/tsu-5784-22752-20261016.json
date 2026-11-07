@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5784-22752",
+  "lat": 34.704274,
+  "lng": 136.5147,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.704274,
+      "lng": 136.5147,
+      "category": "SAFE",
+      "name": "育生小学校",
+      "address": "津市下弁財町津興1350",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "下弁財町津興1350",
+      "district": "津",
+      "sourceRow": 79,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/21f094feadca5291",
+      "sourceRows": [
+        79
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5795-22748",
+  "lat": 34.770368000000005,
+  "lng": 136.4929515,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.770007,
+      "lng": 136.493136,
+      "category": "SAFE",
+      "name": "大里幼稚園",
+      "address": "津市大里窪田町1870",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大里窪田町1870",
+      "district": "津",
+      "sourceRow": 61,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/3c050c4e3adb9094",
+      "sourceRows": [
+        61
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.770729,
+      "lng": 136.492767,
+      "category": "SAFE",
+      "name": "大里小学校",
+      "address": "津市大里窪田町1821",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大里窪田町1821",
+      "district": "津",
+      "sourceRow": 93,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/cca2ff346fea034a",
+      "sourceRows": [
+        93
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5747-22787-20261016",
+  "lat": 34.4824673155656,
+  "lng": 136.722852588845,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/97688daea3965ae0",
+      "lat": 34.4824673155656,
+      "lng": 136.722852588845,
+      "category": "SAFE",
+      "name": "市営庭球場",
+      "address": "伊勢市楠部町89-1",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市楠部町89-1",
+      "sourceRow": 118,
+      "sourceRows": [
+        118
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

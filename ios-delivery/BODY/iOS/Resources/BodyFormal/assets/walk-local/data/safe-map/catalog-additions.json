@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "regions": [
+    {
+      "id": "sagamihara-sagami-ono",
+      "name": "相模原市南区・相模大野周辺（南区合同庁舎を基準とする1kmの一部）",
+      "lat": 35.5303197,
+      "lng": 139.430156,
+      "radius": 1000,
+      "file": "sagamihara-sagami-ono-aed-20261015.json"
+    }
+  ]
+}

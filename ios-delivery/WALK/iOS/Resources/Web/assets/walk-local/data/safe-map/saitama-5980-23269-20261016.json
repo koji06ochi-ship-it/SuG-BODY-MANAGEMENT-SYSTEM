@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5980-23269",
+  "lat": 35.88285683666666,
+  "lng": 139.61659523333333,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.882189,
+      "lng": 139.61492,
+      "category": "SAFE",
+      "name": "西与野コミュニティホール",
+      "address": "さいたま市桜丘2-6-28",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "桜丘2-6-28",
+      "district": "中央区",
+      "sourceRow": 278,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/1962381c08413ea5",
+      "sourceRows": [
+        278,
+        279
+      ],
+      "duplicateSourceEntries": 2
+    },
+    {
+      "lat": 35.88419251,
+      "lng": 139.6199457,
+      "category": "SAFE",
+      "name": "与野休日急患診療所",
+      "address": "さいたま市本町西2-9-30",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "本町西2-9-30",
+      "district": "中央区",
+      "sourceRow": 317,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/00c6b2f83cd494ed",
+      "sourceRows": [
+        317
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

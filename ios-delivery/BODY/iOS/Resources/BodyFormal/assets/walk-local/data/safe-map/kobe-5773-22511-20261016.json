@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5773-22511-20261016",
+  "lat": 34.64095414925228,
+  "lng": 135.0687847960879,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/93083ff164040281",
+      "lat": 34.6403327109216,
+      "lng": 135.070944773076,
+      "category": "SAFE",
+      "name": "神戸市立　乙木小学校",
+      "address": "神戸市垂水区美山台2丁目1－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区美山台2丁目1－1",
+      "district": "垂水区",
+      "sourceRow": 304,
+      "sourceRows": [
+        304
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7b0d00b50110469a",
+      "lat": 34.64116375412,
+      "lng": 135.066575095398,
+      "category": "SAFE",
+      "name": "神戸市立　福田小学校",
+      "address": "神戸市垂水区乙木3－3－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区乙木3－3－1",
+      "district": "垂水区",
+      "sourceRow": 307,
+      "sourceRows": [
+        307
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/201870ecaa6ba5c8",
+      "lat": 34.6426915120042,
+      "lng": 135.066185997571,
+      "category": "SAFE",
+      "name": "播州信用金庫　垂水支店",
+      "address": "神戸市垂水区東垂水町字菅ノ口633-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区東垂水町字菅ノ口633-1",
+      "district": "垂水区",
+      "sourceRow": 325,
+      "sourceRows": [
+        325
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6a09aad02e2bcf6d",
+      "lat": 34.6425150510831,
+      "lng": 135.071938342007,
+      "category": "SAFE",
+      "name": "神戸市立　青山台こばと幼稚園",
+      "address": "神戸市垂水区青山台4丁目8－30",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区青山台4丁目8－30",
+      "district": "垂水区",
+      "sourceRow": 360,
+      "sourceRows": [
+        360
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/cbba11728ed9c399",
+      "lat": 34.6426915120042,
+      "lng": 135.066185997571,
+      "category": "SAFE",
+      "name": "コープこうべ　コープ福田",
+      "address": "神戸市垂水区東垂水町字菅の口634-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区東垂水町字菅の口634-1",
+      "district": "垂水区",
+      "sourceRow": 365,
+      "sourceRows": [
+        365
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/137fd84e66c771a8",
+      "lat": 34.6385022422151,
+      "lng": 135.069650895724,
+      "category": "SAFE",
+      "name": "乙木地域福祉センター",
+      "address": "神戸市垂水区美山台1丁目9-40",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区美山台1丁目9-40",
+      "district": "垂水区",
+      "sourceRow": 393,
+      "sourceRows": [
+        393
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5028d50331eac214",
+      "lat": 34.6414269967714,
+      "lng": 135.067113464774,
+      "category": "SAFE",
+      "name": "福田地域福祉センター",
+      "address": "神戸市垂水区乙木3丁目3－2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区乙木3丁目3－2",
+      "district": "垂水区",
+      "sourceRow": 394,
+      "sourceRows": [
+        394
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c8fa8295343a8e55",
+      "lat": 34.6397162018255,
+      "lng": 135.070179307016,
+      "category": "SAFE",
+      "name": "神戸市立　乙木児童館",
+      "address": "神戸市垂水区美山台2丁目1番2号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区美山台2丁目1番2号",
+      "district": "垂水区",
+      "sourceRow": 397,
+      "sourceRows": [
+        397
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/12027ac2aa61c1a9",
+      "lat": 34.6395473623254,
+      "lng": 135.070289291654,
+      "category": "SAFE",
+      "name": "おとぎ認定こども園",
+      "address": "神戸市垂水区美山台2丁目1-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区美山台2丁目1-3",
+      "district": "垂水区",
+      "sourceRow": 444,
+      "sourceRows": [
+        444
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

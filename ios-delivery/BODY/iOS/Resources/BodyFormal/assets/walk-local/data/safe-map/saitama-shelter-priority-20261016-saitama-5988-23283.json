@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-shelter-saitama-5988-23283",
+  "lat": 35.9337231,
+  "lng": 139.7014645,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "埼玉県オープンデータポータル さいたま市 指定避難所",
+  "sourceUrl": "https://opendata.pref.saitama.lg.jp/resources/4757",
+  "sourceFileUrl": "https://opendata.pref.saitama.lg.jp/resource_download/4757",
+  "sourceUpdatedAt": "2026-04-01",
+  "retrievedAt": "2026-10-16T00:00:00.000Z",
+  "sourceFileSha256": "42d9e75eb4293706a921f7e111077954d3d03d018c3745d1fe0a305417b0c44a",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://www.digital.go.jp/resources/open_data/",
+  "data": [
+    {
+      "id": "municipality/saitama/saitama-shelter/1d01d9d1578334e1",
+      "lat": 35.9334352,
+      "lng": 139.7015702,
+      "category": "SAFE",
+      "name": "柏崎小学校（指定避難所）",
+      "address": "埼玉県さいたま市岩槻区柏崎762",
+      "kind": "SHELTER",
+      "source": "https://opendata.pref.saitama.lg.jp/resources/4757",
+      "sourceLabel": "埼玉県オープンデータポータル さいたま市 指定避難所（開設状況・受入可否は未確認）",
+      "license": "PDL-1.0",
+      "sourceUpdatedAt": "2026-04-01",
+      "sourceRow": 230
+    },
+    {
+      "id": "municipality/saitama/saitama-shelter/f65ce0556e059243",
+      "lat": 35.9358986,
+      "lng": 139.7029743,
+      "category": "SAFE",
+      "name": "柏陽中学校（指定避難所）",
+      "address": "埼玉県さいたま市岩槻区真福寺454",
+      "kind": "SHELTER",
+      "source": "https://opendata.pref.saitama.lg.jp/resources/4757",
+      "sourceLabel": "埼玉県オープンデータポータル さいたま市 指定避難所（開設状況・受入可否は未確認）",
+      "license": "PDL-1.0",
+      "sourceUpdatedAt": "2026-04-01",
+      "sourceRow": 247
+    },
+    {
+      "id": "municipality/saitama/saitama-shelter/eec39dd4e11fecbf",
+      "lat": 35.94176389,
+      "lng": 139.7039359,
+      "category": "SAFE",
+      "name": "県立岩槻高等学校（指定避難所）",
+      "address": "埼玉県さいたま市岩槻区城南1-3-38",
+      "kind": "SHELTER",
+      "source": "https://opendata.pref.saitama.lg.jp/resources/4757",
+      "sourceLabel": "埼玉県オープンデータポータル さいたま市 指定避難所（開設状況・受入可否は未確認）",
+      "license": "PDL-1.0",
+      "sourceUpdatedAt": "2026-04-01",
+      "sourceRow": 250
+    }
+  ]
+}

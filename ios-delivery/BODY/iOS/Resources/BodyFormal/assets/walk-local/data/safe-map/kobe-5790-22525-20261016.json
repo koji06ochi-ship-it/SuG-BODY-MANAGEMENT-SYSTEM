@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5790-22525-20261016",
+  "lat": 34.74208885212013,
+  "lng": 135.15234888205933,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/0e4ba9b4c33d9243",
+      "lat": 34.7446060257801,
+      "lng": 135.150123693446,
+      "category": "SAFE",
+      "name": "神戸市立　甲緑小学校",
+      "address": "神戸市北区緑町7-12-10",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区緑町7-12-10",
+      "district": "北区",
+      "sourceRow": 2203,
+      "sourceRows": [
+        2203
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/408fc47c047c9573",
+      "lat": 34.740584436618,
+      "lng": 135.154450615245,
+      "category": "SAFE",
+      "name": "神戸市立　桜の宮小学校",
+      "address": "神戸市北区若葉台1丁目3番15号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区若葉台1丁目3番15号",
+      "district": "北区",
+      "sourceRow": 2239,
+      "sourceRows": [
+        2239
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8113e407609cfeac",
+      "lat": 34.7410760939623,
+      "lng": 135.152472337487,
+      "category": "SAFE",
+      "name": "北鈴どんぐり園",
+      "address": "神戸市北区若葉台1丁目10-19",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区若葉台1丁目10-19",
+      "district": "北区",
+      "sourceRow": 2504,
+      "sourceRows": [
+        2504
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

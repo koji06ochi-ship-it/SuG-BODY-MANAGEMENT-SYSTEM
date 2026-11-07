@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "yokkaichi-5830-22770-20261016",
+  "lat": 34.98314557333333,
+  "lng": 136.6207226,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "四日市市",
+  "source": "四日市市内公共施設 AED設置箇所一覧",
+  "sourceUrl": "https://data.bodik.jp/dataset/242021_00127",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/422f8da8-0b3c-4d84-b8dd-d88d18e914ce/resource/2a5eee8b-c455-4c2e-8553-b0d3d36e5ef2/download/242021_aed.csv",
+  "sourceUpdatedAt": "2024-12-18",
+  "sourcePageUpdatedAt": "2025-01-24",
+  "retrievedAt": "2026-10-15T15:44:16.747Z",
+  "sourceFileSha256": "c0880c81977c7fc444213ee84ef31a7b2e9e34f12d31e892064cbabb7d5159cf",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/yokkaichi/aed/811ed32b3c86545b",
+      "lat": 34.98318061,
+      "lng": 136.6208861,
+      "category": "SAFE",
+      "name": "海蔵小学校",
+      "address": "四日市市大字東阿倉川578-1",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市大字東阿倉川578-1",
+      "sourceRow": 14,
+      "sourceRows": [
+        14
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/bd1da3693ca91b9d",
+      "lat": 34.98318059,
+      "lng": 136.6208888,
+      "category": "SAFE",
+      "name": "海蔵小学校",
+      "address": "四日市市大字東阿倉川578-1",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市大字東阿倉川578-1",
+      "sourceRow": 15,
+      "sourceRows": [
+        15
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/695f7fe55651a003",
+      "lat": 34.98307552,
+      "lng": 136.6203929,
+      "category": "SAFE",
+      "name": "海蔵幼稚園",
+      "address": "四日市市大字東阿倉川580",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市大字東阿倉川580",
+      "sourceRow": 121,
+      "sourceRows": [
+        121
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

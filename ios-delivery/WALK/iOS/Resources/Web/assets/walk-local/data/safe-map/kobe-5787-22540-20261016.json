@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5787-22540-20261016",
+  "lat": 34.72415128754661,
+  "lng": 135.2431123181869,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/c099825ecb308fc7",
+      "lat": 34.7225767310255,
+      "lng": 135.245983586136,
+      "category": "SAFE",
+      "name": "御影のどか保育園（社会福祉法人　信愛学園）",
+      "address": "神戸市東灘区御影3丁目28-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影3丁目28-1",
+      "district": "東灘区",
+      "sourceRow": 1549,
+      "sourceRows": [
+        1549
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/eaf591180fa23ef2",
+      "lat": 34.7225767310255,
+      "lng": 135.245983586136,
+      "category": "SAFE",
+      "name": "信愛学園（社会福祉法人　児童養護施設）",
+      "address": "神戸市東灘区御影3丁目28-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影3丁目28-1",
+      "district": "東灘区",
+      "sourceRow": 1551,
+      "sourceRows": [
+        1551
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d6e3049bd61144ca",
+      "lat": 34.7227241221529,
+      "lng": 135.245863603029,
+      "category": "SAFE",
+      "name": "御影乳児院（社会福祉法人　信愛学園）",
+      "address": "神戸市東灘区御影３丁目２８",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影３丁目２８",
+      "district": "東灘区",
+      "sourceRow": 1552,
+      "sourceRows": [
+        1552
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3f491d3cd8c07735",
+      "lat": 34.7236201787146,
+      "lng": 135.241190108816,
+      "category": "SAFE",
+      "name": "山中眼科医院",
+      "address": "神戸市灘区高羽町2-10-13",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区高羽町2-10-13",
+      "district": "灘区",
+      "sourceRow": 1829,
+      "sourceRows": [
+        1829
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0a70abcd513fe9c0",
+      "lat": 34.7230661596206,
+      "lng": 135.240029571629,
+      "category": "SAFE",
+      "name": "神戸市立　高羽児童館",
+      "address": "神戸市灘区高羽町3-12-14",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区高羽町3-12-14",
+      "district": "灘区",
+      "sourceRow": 1910,
+      "sourceRows": [
+        1910
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a754a3f31cc88442",
+      "lat": 34.7261543963294,
+      "lng": 135.241854523749,
+      "category": "SAFE",
+      "name": "親和女子中学校・高等学校（管理棟）",
+      "address": "神戸市灘区土山町6-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区土山町6-1",
+      "district": "灘区",
+      "sourceRow": 1912,
+      "sourceRows": [
+        1912
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/35152f1b59f8341f",
+      "lat": 34.7264178551649,
+      "lng": 135.242507412671,
+      "category": "SAFE",
+      "name": "親和女子中学校・高等学校（体育職員室）",
+      "address": "神戸市灘区土山町6-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区土山町6-1",
+      "district": "灘区",
+      "sourceRow": 1913,
+      "sourceRows": [
+        1913
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/14aa5f115c12fe6c",
+      "lat": 34.7262012263522,
+      "lng": 135.241811703157,
+      "category": "SAFE",
+      "name": "親和女子中学校・高等学校（保健室）",
+      "address": "神戸市灘区土山町6-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区土山町6-1",
+      "district": "灘区",
+      "sourceRow": 1914,
+      "sourceRows": [
+        1914
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/de0c97eb07734ca8",
+      "lat": 34.7240241875339,
+      "lng": 135.242786768359,
+      "category": "SAFE",
+      "name": "若草幼稚園（学校法人　若草学園）",
+      "address": "神戸市灘区土山町1-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区土山町1-5",
+      "district": "灘区",
+      "sourceRow": 1985,
+      "sourceRows": [
+        1985
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

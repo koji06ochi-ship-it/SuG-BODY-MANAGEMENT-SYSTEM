@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-toilet-kobe-5773-22520-20261016",
+  "lat": 34.64319522960725,
+  "lng": 135.1229581066365,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 こうべ・だれでもトイレ設置施設一覧",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/8150-7-2-0-4-6b25309fee96a05b04e12ffb933c34ec-a85e65c296b41803-14147bba3a42cc0c",
+  "sourceFileUrl": "https://www.city.kobe.lg.jp/documents/8150/daredemotoire_seibisisetsu202511.csv",
+  "sourceUpdatedAt": "2026-05-07",
+  "retrievedAt": "2026-10-16T00:00:00.000Z",
+  "sourceFileSha256": "bbc08e130ef592638f6f7af87b3be8ec75ebba548cf1c9d81407314407082a32",
+  "license": "CC-BY",
+  "licenseUrl": "https://data.city.kobe.lg.jp/policy/",
+  "data": [
+    {
+      "id": "municipality/kobe/kobe-toilet/1ecd1037f04aab91",
+      "lat": 34.648692,
+      "lng": 135.128456,
+      "category": "PUBLIC",
+      "name": "マックスバリュ須磨店（だれでもトイレ）",
+      "address": "兵庫県神戸市須磨区松風町3-2-1",
+      "kind": "TOILET",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/8150-7-2-0-4-6b25309fee96a05b04e12ffb933c34ec-a85e65c296b41803-14147bba3a42cc0c",
+      "sourceLabel": "神戸市 こうべ・だれでもトイレ設置施設一覧（多機能・多目的トイレ。利用可否・施設開館状況は要確認）",
+      "license": "CC-BY",
+      "sourceUpdatedAt": "2026-05-07",
+      "sourceRow": 67
+    }
+  ]
+}

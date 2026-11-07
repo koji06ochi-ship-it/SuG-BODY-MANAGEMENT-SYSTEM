@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5786-22751",
+  "lat": 34.7194292,
+  "lng": 136.50911179999997,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.718913,
+      "lng": 136.51115,
+      "category": "SAFE",
+      "name": "市民活動センター",
+      "address": "津市大門7-15",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大門7-15",
+      "district": "津",
+      "sourceRow": 6,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/5dd772d76e46e30a",
+      "sourceRows": [
+        6
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.717046,
+      "lng": 136.507106,
+      "category": "SAFE",
+      "name": "津市社会福祉センター",
+      "address": "津市丸之内27-10",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "丸之内27-10",
+      "district": "津",
+      "sourceRow": 21,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/7b043ec72655bb1e",
+      "sourceRows": [
+        21
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.718913,
+      "lng": 136.51115,
+      "category": "SAFE",
+      "name": "中央公民館",
+      "address": "津市大門7-15",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大門7-15",
+      "district": "津",
+      "sourceRow": 42,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/ea6e7ad65915e3b8",
+      "sourceRows": [
+        42
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.720479,
+      "lng": 136.50935,
+      "category": "SAFE",
+      "name": "中央保育園",
+      "address": "津市中央8-8",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "中央8-8",
+      "district": "津",
+      "sourceRow": 55,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/29076353821caed6",
+      "sourceRows": [
+        55
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.721795,
+      "lng": 136.506803,
+      "category": "SAFE",
+      "name": "養正小学校",
+      "address": "津市丸之内養正町14-1",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "丸之内養正町14-1",
+      "district": "津",
+      "sourceRow": 74,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/b12ecd1a4fa929f7",
+      "sourceRows": [
+        74
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

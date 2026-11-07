@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5780-22509-20261016",
+  "lat": 34.682931167610924,
+  "lng": 135.05653979775997,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/795522acf8cfa02f",
+      "lat": 34.6839171067206,
+      "lng": 135.05921947884,
+      "category": "SAFE",
+      "name": "神戸ＹＭＣＡ　ウェルネスセンター学園都市",
+      "address": "神戸市西区学園東町2丁目1-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区学園東町2丁目1-3",
+      "district": "西区",
+      "sourceRow": 491,
+      "sourceRows": [
+        491
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d01a85a7f44ec044",
+      "lat": 34.682287404967,
+      "lng": 135.057222989839,
+      "category": "SAFE",
+      "name": "神戸市営地下鉄　学園都市駅",
+      "address": "神戸市西区学園西町1丁目",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区学園西町1丁目",
+      "district": "西区",
+      "sourceRow": 498,
+      "sourceRows": [
+        498
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1ab33ee7d4621846",
+      "lat": 34.6832043729397,
+      "lng": 135.057817374371,
+      "category": "SAFE",
+      "name": "株式会社こうべ未来都市機構　キャンパススクェア",
+      "address": "神戸市西区学園西町1丁目4番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区学園西町1丁目4番",
+      "district": "西区",
+      "sourceRow": 540,
+      "sourceRows": [
+        540
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/90320fbfe714688c",
+      "lat": 34.6834012357588,
+      "lng": 135.055474374543,
+      "category": "SAFE",
+      "name": "ＹＭＣＡ保育園",
+      "address": "神戸市西区学園西町5丁目4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区学園西町5丁目4",
+      "district": "西区",
+      "sourceRow": 541,
+      "sourceRows": [
+        541
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/52ae2742ea940b94",
+      "lat": 34.6833419858038,
+      "lng": 135.054942409537,
+      "category": "SAFE",
+      "name": "神戸市立　小寺小学校",
+      "address": "神戸市西区学園西町5丁目5番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区学園西町5丁目5番地",
+      "district": "西区",
+      "sourceRow": 545,
+      "sourceRows": [
+        545
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/390790d864d116e6",
+      "lat": 34.6823313179559,
+      "lng": 135.056826818498,
+      "category": "SAFE",
+      "name": "神戸信用金庫 学園都市支店",
+      "address": "神戸市西区学園西町1-3-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区学園西町1-3-2",
+      "district": "西区",
+      "sourceRow": 586,
+      "sourceRows": [
+        586
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e713974fc04633b8",
+      "lat": 34.6830130743612,
+      "lng": 135.055496453502,
+      "category": "SAFE",
+      "name": "学園西町地域福祉センター",
+      "address": "神戸市西区学園西町5丁目2-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区学園西町5丁目2-3",
+      "district": "西区",
+      "sourceRow": 623,
+      "sourceRows": [
+        623
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/aafc57fec38099c2",
+      "lat": 34.6830130743612,
+      "lng": 135.055496453502,
+      "category": "SAFE",
+      "name": "神戸市立　太山寺児童館",
+      "address": "神戸市西区学園西町5丁目2番地の3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区学園西町5丁目2番地の3",
+      "district": "西区",
+      "sourceRow": 686,
+      "sourceRows": [
+        686
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0cd4128c2a4266cc",
+      "lat": 34.6836267184652,
+      "lng": 135.05605281592,
+      "category": "SAFE",
+      "name": "学園幼稚園（学校法人山田学園）",
+      "address": "神戸市西区学園西町5丁目3-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区学園西町5丁目3-2",
+      "district": "西区",
+      "sourceRow": 761,
+      "sourceRows": [
+        761
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5bd0a10d3f32ec08",
+      "lat": 34.6811753847758,
+      "lng": 135.056848809048,
+      "category": "SAFE",
+      "name": "セコム株式会社学園都市支社",
+      "address": "神戸市西区学園西町1-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区学園西町1-2",
+      "district": "西区",
+      "sourceRow": 788,
+      "sourceRows": [
+        788
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

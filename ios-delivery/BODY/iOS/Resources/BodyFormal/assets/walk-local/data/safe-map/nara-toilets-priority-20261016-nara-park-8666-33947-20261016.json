@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "nara-toilet-nara-park-8666-33947-20261016",
+  "lat": 34.664891112424236,
+  "lng": 135.78956107472268,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "奈良市",
+  "source": "奈良市 公共施設オープンデータ（トイレ設備記載）",
+  "sourceUrl": "https://www.city.nara.lg.jp/soshiki/6/9554.html",
+  "sourceFileUrl": "https://www.city.nara.lg.jp/uploaded/attachment/200211.csv",
+  "sourceUpdatedAt": "2025-09-01",
+  "retrievedAt": "2026-10-16T00:00:00.000Z",
+  "sourceFileSha256": "5dc12c3fc149c5d0b129b76a728f0da708240814317307342ec5097d62a58678",
+  "license": "CC-BY-2.1-JP",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.1/jp/",
+  "data": [
+    {
+      "id": "municipality/nara/nara-city-toilet/b4b1d554f1927f0a",
+      "lat": 34.66447,
+      "lng": 135.783454,
+      "category": "PUBLIC",
+      "name": "七条コミュニティスポーツ会館（多目的トイレ）",
+      "address": "奈良県奈良市七条1-2-1",
+      "kind": "TOILET",
+      "source": "https://www.city.nara.lg.jp/soshiki/6/9554.html",
+      "sourceLabel": "奈良市 公共施設オープンデータ（多目的トイレ有りの記載。利用可否・開館状況は要確認）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-09-01",
+      "sourceRow": 90
+    },
+    {
+      "id": "municipality/nara/nara-city-toilet/f9c58298fd966ce8",
+      "lat": 34.66576,
+      "lng": 135.79627,
+      "category": "PUBLIC",
+      "name": "子どもセンター（多目的トイレ）",
+      "address": "奈良県奈良市柏木町263-2",
+      "kind": "TOILET",
+      "source": "https://www.city.nara.lg.jp/soshiki/6/9554.html",
+      "sourceLabel": "奈良市 公共施設オープンデータ（多目的トイレ有りの記載。利用可否・開館状況は要確認）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-09-01",
+      "sourceRow": 197
+    },
+    {
+      "id": "municipality/nara/nara-city-toilet/56fe858e08c6dca1",
+      "lat": 34.665444,
+      "lng": 135.79674,
+      "category": "PUBLIC",
+      "name": "子どもセンター発達支援親子教室（多目的トイレ）",
+      "address": "奈良県奈良市柏木町263-2",
+      "kind": "TOILET",
+      "source": "https://www.city.nara.lg.jp/soshiki/6/9554.html",
+      "sourceLabel": "奈良市 公共施設オープンデータ（多目的トイレ有りの記載。利用可否・開館状況は要確認）",
+      "license": "CC-BY-2.1-JP",
+      "sourceUpdatedAt": "2025-09-01",
+      "sourceRow": 198
+    }
+  ]
+}

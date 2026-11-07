@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5751-22784-20261016",
+  "lat": 34.508811790927375,
+  "lng": 136.708527428671,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/005a5e84508f90d2",
+      "lat": 34.5095364566133,
+      "lng": 136.707673270998,
+      "category": "SAFE",
+      "name": "伊勢市ハートプラザみその",
+      "address": "伊勢市御薗町長屋2767",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市御薗町長屋2767",
+      "sourceRow": 130,
+      "sourceRows": [
+        130
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/abd3e8f212a887ba",
+      "lat": 34.508027,
+      "lng": 136.708673,
+      "category": "SAFE",
+      "name": "伊勢市立御薗小学校　体育館",
+      "address": "伊勢市御薗町長屋1074-9",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市御薗町長屋1074-9",
+      "sourceRow": 141,
+      "sourceRows": [
+        141
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/16ed0af205c758ce",
+      "lat": 34.5086897148621,
+      "lng": 136.709520079175,
+      "category": "SAFE",
+      "name": "伊勢市立御薗小学校",
+      "address": "伊勢市御薗町長屋1074-9",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市御薗町長屋1074-9",
+      "sourceRow": 142,
+      "sourceRows": [
+        142
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/a8dca01fd2fa8ce1",
+      "lat": 34.5093262185005,
+      "lng": 136.708348489983,
+      "category": "SAFE",
+      "name": "伊勢市御薗放課後児童ｸﾗﾌﾞ",
+      "address": "伊勢市御薗町長屋2794-1　御薗こどもﾌﾟﾗｻﾞ内",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市御薗町長屋2794-1　御薗こどもﾌﾟﾗｻﾞ内",
+      "sourceRow": 143,
+      "sourceRows": [
+        143
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/be205e3c32539b02",
+      "lat": 34.508479564661,
+      "lng": 136.708422303199,
+      "category": "SAFE",
+      "name": "伊勢市立御薗第一保育園",
+      "address": "伊勢市御薗町長屋416-1",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市御薗町長屋416-1",
+      "sourceRow": 145,
+      "sourceRows": [
+        145
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

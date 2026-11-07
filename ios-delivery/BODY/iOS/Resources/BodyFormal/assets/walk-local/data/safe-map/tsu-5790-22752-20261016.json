@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5790-22752",
+  "lat": 34.7444345,
+  "lng": 136.517469,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.744258,
+      "lng": 136.51774,
+      "category": "SAFE",
+      "name": "北立誠幼稚園",
+      "address": "津市江戸橋一丁目76-2",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "江戸橋一丁目76-2",
+      "district": "津",
+      "sourceRow": 62,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/0c32aa550f0ae5bb",
+      "sourceRows": [
+        62
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.744611,
+      "lng": 136.517198,
+      "category": "SAFE",
+      "name": "北立誠小学校",
+      "address": "津市江戸橋一丁目30",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "江戸橋一丁目30",
+      "district": "津",
+      "sourceRow": 77,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/1775d53d15ea84c8",
+      "sourceRows": [
+        77
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

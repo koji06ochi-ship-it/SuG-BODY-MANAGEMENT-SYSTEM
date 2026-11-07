@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5984-23277",
+  "lat": 35.90484798,
+  "lng": 139.66471185,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.90484996,
+      "lng": 139.6647337,
+      "category": "SAFE",
+      "name": "海老沼放課後児童クラブ",
+      "address": "さいたま市東新井710-78",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "東新井710-78",
+      "district": "見沼区",
+      "sourceRow": 231,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/161b4e42523de0b6",
+      "sourceRows": [
+        231
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.904846,
+      "lng": 139.66469,
+      "category": "SAFE",
+      "name": "片柳老人憩いの家",
+      "address": "さいたま市東新井710-78",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "東新井710-78",
+      "district": "見沼区",
+      "sourceRow": 232,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/da27c85a5a7c03b4",
+      "sourceRows": [
+        232
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

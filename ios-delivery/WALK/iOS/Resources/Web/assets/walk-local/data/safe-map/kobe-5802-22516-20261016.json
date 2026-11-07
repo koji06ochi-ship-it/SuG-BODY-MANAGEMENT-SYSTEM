@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5802-22516-20261016",
+  "lat": 34.81308266006024,
+  "lng": 135.09879807527068,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/0ef66f8473d2463b",
+      "lat": 34.8124398515341,
+      "lng": 135.100143849148,
+      "category": "SAFE",
+      "name": "介護老人保健施設うらら",
+      "address": "神戸市北区淡河町淡河字長松寺574",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区淡河町淡河字長松寺574",
+      "district": "北区",
+      "sourceRow": 2270,
+      "sourceRows": [
+        2270
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e08413f09204ebfa",
+      "lat": 34.8139708254903,
+      "lng": 135.098680878093,
+      "category": "SAFE",
+      "name": "兵庫六甲農業協同組合　淡河支店",
+      "address": "神戸市北区淡河町淡河字久保垣748-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区淡河町淡河字久保垣748-1",
+      "district": "北区",
+      "sourceRow": 2297,
+      "sourceRows": [
+        2297
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1309de8fbc8048de",
+      "lat": 34.8128373031563,
+      "lng": 135.097569498571,
+      "category": "SAFE",
+      "name": "兵庫六甲農業協同組合　農協市場館　道の駅淡河",
+      "address": "神戸市北区淡河町淡河字弘法垣643-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区淡河町淡河字弘法垣643-1",
+      "district": "北区",
+      "sourceRow": 2304,
+      "sourceRows": [
+        2304
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

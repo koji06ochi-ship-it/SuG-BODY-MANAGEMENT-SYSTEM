@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5779-22744",
+  "lat": 34.6755025,
+  "lng": 136.46650725,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.677373,
+      "lng": 136.465052,
+      "category": "SAFE",
+      "name": "久居老人福祉センター",
+      "address": "津市久居西鷹跡町365-1",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "久居西鷹跡町365-1",
+      "district": "久居",
+      "sourceRow": 118,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/14fee23e5aae7e38",
+      "sourceRows": [
+        118
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.675054,
+      "lng": 136.466249,
+      "category": "SAFE",
+      "name": "巽ヶ丘幼稚園",
+      "address": "津市久居東鷹跡町177-5",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "久居東鷹跡町177-5",
+      "district": "久居",
+      "sourceRow": 132,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/f6b3059c75b691e5",
+      "sourceRows": [
+        132
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.675323,
+      "lng": 136.465277,
+      "category": "SAFE",
+      "name": "誠之小学校",
+      "address": "津市久居西鷹跡町424",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "久居西鷹跡町424",
+      "district": "久居",
+      "sourceRow": 143,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/2b1773717886a1a3",
+      "sourceRows": [
+        143
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.67426,
+      "lng": 136.469451,
+      "category": "SAFE",
+      "name": "久居ふるさと文学館",
+      "address": "津市久居東鷹跡町2-3",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "久居東鷹跡町2-3",
+      "district": "久居",
+      "sourceRow": 150,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/6ec4a468dec3c448",
+      "sourceRows": [
+        150
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

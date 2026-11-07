@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5777-22534-20261016",
+  "lat": 34.66478286249895,
+  "lng": 135.2088133793377,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/d1f8350939e3af08",
+      "lat": 34.6670177020053,
+      "lng": 135.204569316998,
+      "category": "SAFE",
+      "name": "兵庫医科大学　神戸キャンパス",
+      "address": "神戸市中央区港島1-3-6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島1-3-6",
+      "district": "中央区",
+      "sourceRow": 866,
+      "sourceRows": [
+        866
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8f890632c82d949b",
+      "lat": 34.6638224487309,
+      "lng": 135.209231696409,
+      "category": "SAFE",
+      "name": "介護老人福祉施設　ぽー愛",
+      "address": "神戸市中央区港島中町5-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島中町5-2",
+      "district": "中央区",
+      "sourceRow": 868,
+      "sourceRows": [
+        868
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c15c8192312b1232",
+      "lat": 34.663246619916,
+      "lng": 135.20933710015,
+      "category": "SAFE",
+      "name": "神戸ポートピアスティ",
+      "address": "神戸市中央区港島中町5-2-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島中町5-2-3",
+      "district": "中央区",
+      "sourceRow": 875,
+      "sourceRows": [
+        875
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ca96679064636c6a",
+      "lat": 34.6642482742695,
+      "lng": 135.209906030774,
+      "category": "SAFE",
+      "name": "株式会社こうべ未来都市機構　神戸国際交流会館",
+      "address": "神戸市中央区港島中町6丁目",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島中町6丁目",
+      "district": "中央区",
+      "sourceRow": 918,
+      "sourceRows": [
+        918
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/371e26e000f28c9c",
+      "lat": 34.6661138558025,
+      "lng": 135.209930100921,
+      "category": "SAFE",
+      "name": "ポートピアプラザC棟",
+      "address": "神戸市中央区港島中町6丁目14",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島中町6丁目14",
+      "district": "中央区",
+      "sourceRow": 942,
+      "sourceRows": [
+        942
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1597525f362dd474",
+      "lat": 34.6642482742695,
+      "lng": 135.209906030774,
+      "category": "SAFE",
+      "name": "ポートライナー 市民広場駅",
+      "address": "神戸市中央区港島中町6丁目",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区港島中町6丁目",
+      "district": "中央区",
+      "sourceRow": 950,
+      "sourceRows": [
+        950
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

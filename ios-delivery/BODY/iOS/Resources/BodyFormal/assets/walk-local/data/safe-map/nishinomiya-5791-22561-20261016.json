@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5791-22561-20261016",
+  "lat": 34.749227206,
+  "lng": 135.36753182,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/b6bbd8c6e2034428",
+      "lat": 34.74666295,
+      "lng": 135.3678491,
+      "category": "SAFE",
+      "name": "瓦林小学校",
+      "address": "兵庫県西宮市瓦林町２６－１９",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市瓦林町２６－１９",
+      "district": "西宮市",
+      "sourceRow": 20,
+      "sourceRows": [
+        20
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/5fdd80d3f0b01214",
+      "lat": 34.75147881,
+      "lng": 135.3669914,
+      "category": "SAFE",
+      "name": "リッツナーサリー保育園",
+      "address": "兵庫県西宮市大森町１４－１６",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市大森町１４－１６",
+      "district": "西宮市",
+      "sourceRow": 122,
+      "sourceRows": [
+        122
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/b3c0d2c8da81c7f5",
+      "lat": 34.74798043,
+      "lng": 135.3686704,
+      "category": "SAFE",
+      "name": "ＭＡＭＡ＆ＫＩＤＳ　大森園",
+      "address": "兵庫県西宮市大森町６－５７",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市大森町６－５７",
+      "district": "西宮市",
+      "sourceRow": 151,
+      "sourceRows": [
+        151
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/83dd94116659878f",
+      "lat": 34.74871413,
+      "lng": 135.3668849,
+      "category": "SAFE",
+      "name": "兵庫六甲農業協同組合瓦木支店",
+      "address": "兵庫県西宮市大森町２－５３",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市大森町２－５３",
+      "district": "西宮市",
+      "sourceRow": 597,
+      "sourceRows": [
+        597
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/8ed2b57c5054d1c1",
+      "lat": 34.75129971,
+      "lng": 135.3672633,
+      "category": "SAFE",
+      "name": "コープこうべコープミニ大森",
+      "address": "兵庫県西宮市大森町１５－３",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市大森町１５－３",
+      "district": "西宮市",
+      "sourceRow": 653,
+      "sourceRows": [
+        653
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

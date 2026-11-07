@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5805-22546-20261016",
+  "lat": 34.83566825,
+  "lng": 135.2788064,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/6a623b1719640798",
+      "lat": 34.83566825,
+      "lng": 135.2788064,
+      "category": "SAFE",
+      "name": "特別養護老人ホーム名塩さくら苑",
+      "address": "兵庫県西宮市名塩さくら台２丁目４４",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市名塩さくら台２丁目４４",
+      "district": "西宮市",
+      "sourceRow": 712,
+      "sourceRows": [
+        712
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

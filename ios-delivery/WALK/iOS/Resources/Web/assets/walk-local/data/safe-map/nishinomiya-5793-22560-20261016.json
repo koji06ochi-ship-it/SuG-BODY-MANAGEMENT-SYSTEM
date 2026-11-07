@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5793-22560-20261016",
+  "lat": 34.760013738333335,
+  "lng": 135.3629868,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/a99f22d4a692117a",
+      "lat": 34.75877311,
+      "lng": 135.3625869,
+      "category": "SAFE",
+      "name": "げんき保育園　門戸厄神園",
+      "address": "兵庫県西宮市林田町１０－２１　LAPIS1階",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市林田町１０－２１　LAPIS1階",
+      "district": "西宮市",
+      "sourceRow": 149,
+      "sourceRows": [
+        149
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/af33b8341e227965",
+      "lat": 34.75869404,
+      "lng": 135.3621935,
+      "category": "SAFE",
+      "name": "グランダ門戸厄神",
+      "address": "兵庫県西宮市林田町１０－１０",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市林田町１０－１０",
+      "district": "西宮市",
+      "sourceRow": 607,
+      "sourceRows": [
+        607
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/32573989184ca34b",
+      "lat": 34.76036606,
+      "lng": 135.364514,
+      "category": "SAFE",
+      "name": "播州信用金庫西宮北支店",
+      "address": "兵庫県西宮市若山町１１－６",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市若山町１１－６",
+      "district": "西宮市",
+      "sourceRow": 627,
+      "sourceRows": [
+        627
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/8016760897f48a35",
+      "lat": 34.76258862,
+      "lng": 135.3625559,
+      "category": "SAFE",
+      "name": "山本デンタルクリニック",
+      "address": "兵庫県西宮市上大市２丁目３－１９",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市上大市２丁目３－１９",
+      "district": "西宮市",
+      "sourceRow": 631,
+      "sourceRows": [
+        631
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/c3e407cd93a5533b",
+      "lat": 34.76012088,
+      "lng": 135.3633801,
+      "category": "SAFE",
+      "name": "兵庫日産自動車株式会社甲東園店",
+      "address": "兵庫県西宮市下大市東町２５－１９",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市下大市東町２５－１９",
+      "district": "西宮市",
+      "sourceRow": 639,
+      "sourceRows": [
+        639
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/d58e2da242943517",
+      "lat": 34.75953972,
+      "lng": 135.3626904,
+      "category": "SAFE",
+      "name": "FIT BASE24　門戸厄神店",
+      "address": "兵庫県西宮市下大市東町２４－１５",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市下大市東町２４－１５",
+      "district": "西宮市",
+      "sourceRow": 661,
+      "sourceRows": [
+        661
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

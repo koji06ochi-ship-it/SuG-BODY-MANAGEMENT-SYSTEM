@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5777-22525-20261016",
+  "lat": 34.66577457071353,
+  "lng": 135.15325186386116,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/47ee55a56499bfb2",
+      "lat": 34.6664067846136,
+      "lng": 135.153735525907,
+      "category": "SAFE",
+      "name": "神戸高速鉄道㈱　高速長田駅",
+      "address": "神戸市長田区北町1－2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区北町1－2",
+      "district": "長田区",
+      "sourceRow": 1224,
+      "sourceRows": [
+        1224
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9f4b79188cd52606",
+      "lat": 34.66569698603,
+      "lng": 135.150904267758,
+      "category": "SAFE",
+      "name": "神戸市　長田区役所",
+      "address": "神戸市長田区北町3丁目4番地の3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区北町3丁目4番地の3",
+      "district": "長田区",
+      "sourceRow": 1232,
+      "sourceRows": [
+        1232
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a77c57da4de22d28",
+      "lat": 34.6659592877987,
+      "lng": 135.155118120227,
+      "category": "SAFE",
+      "name": "神戸市立　御蔵小学校",
+      "address": "神戸市長田区一番町4丁目1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区一番町4丁目1",
+      "district": "長田区",
+      "sourceRow": 1268,
+      "sourceRows": [
+        1268
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2113b5c683a55393",
+      "lat": 34.666297986777,
+      "lng": 135.15098901746,
+      "category": "SAFE",
+      "name": "兵庫県警　長田警察署",
+      "address": "神戸市長田区北町3丁目4番9号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区北町3丁目4番9号",
+      "district": "長田区",
+      "sourceRow": 1307,
+      "sourceRows": [
+        1307
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1f02b9b26a7049bd",
+      "lat": 34.6637510815987,
+      "lng": 135.155554010881,
+      "category": "SAFE",
+      "name": "おかばやし内科医院",
+      "address": "神戸市長田区菅原通4丁目202-3　キクヤ第２ビル２階",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区菅原通4丁目202-3　キクヤ第２ビル２階",
+      "district": "長田区",
+      "sourceRow": 1344,
+      "sourceRows": [
+        1344
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d7d67cd7dd1e61d3",
+      "lat": 34.6665352974632,
+      "lng": 135.153210240934,
+      "category": "SAFE",
+      "name": "ライフ長田店",
+      "address": "神戸市長田区北町１丁目４",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区北町１丁目４",
+      "district": "長田区",
+      "sourceRow": 1356,
+      "sourceRows": [
+        1356
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

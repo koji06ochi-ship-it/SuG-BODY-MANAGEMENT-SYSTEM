@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5781-22526-20261016",
+  "lat": 34.68788934608226,
+  "lng": 135.1593669833916,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/f394808724ace90d",
+      "lat": 34.6910709800966,
+      "lng": 135.160599734624,
+      "category": "SAFE",
+      "name": "社会福祉法人報恩会　ラグナケア千鳥山荘",
+      "address": "神戸市兵庫区千鳥町3－5－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区千鳥町3－5－1",
+      "district": "兵庫区",
+      "sourceRow": 2104,
+      "sourceRows": [
+        2104
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b3dd8b4dd00900f9",
+      "lat": 34.6866314622918,
+      "lng": 135.15830715772,
+      "category": "SAFE",
+      "name": "熊野地域福祉センター",
+      "address": "神戸市兵庫区熊野町3丁目12－18",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区熊野町3丁目12－18",
+      "district": "兵庫区",
+      "sourceRow": 2106,
+      "sourceRows": [
+        2106
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/89252964c54bea69",
+      "lat": 34.6863514803708,
+      "lng": 135.160452027139,
+      "category": "SAFE",
+      "name": "神戸市立　友生支援学校",
+      "address": "神戸市兵庫区夢野町1丁目1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区夢野町1丁目1",
+      "district": "兵庫区",
+      "sourceRow": 2118,
+      "sourceRows": [
+        2118
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/85165ee2e1f785df",
+      "lat": 34.6886080552552,
+      "lng": 135.160266227754,
+      "category": "SAFE",
+      "name": "コープこうべ　コープミニ石井店",
+      "address": "神戸市兵庫区石井町8丁目2番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区石井町8丁目2番1号",
+      "district": "兵庫区",
+      "sourceRow": 2123,
+      "sourceRows": [
+        2123
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7652fb8853362c25",
+      "lat": 34.6867847523969,
+      "lng": 135.157209769721,
+      "category": "SAFE",
+      "name": "幼保連携型認定こども園ゆりかごこども園",
+      "address": "神戸市兵庫区氷室町2丁目14番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区氷室町2丁目14番1号",
+      "district": "兵庫区",
+      "sourceRow": 2133,
+      "sourceRows": [
+        2133
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

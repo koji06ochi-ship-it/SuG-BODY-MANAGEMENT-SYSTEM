@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5781-22530-20261016",
+  "lat": 34.69010446679047,
+  "lng": 135.18366916711614,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/575510444ea50c25",
+      "lat": 34.6862395530705,
+      "lng": 135.181055129599,
+      "category": "SAFE",
+      "name": "阪神電気鉄道㈱　花隈駅",
+      "address": "神戸市中央区北長狭通6－3－5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区北長狭通6－3－5",
+      "district": "中央区",
+      "sourceRow": 810,
+      "sourceRows": [
+        810
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c832cc030b9c4b0f",
+      "lat": 34.6914987092993,
+      "lng": 135.182091465497,
+      "category": "SAFE",
+      "name": "兵庫県災害対策センター",
+      "address": "神戸市中央区中山手通5丁目2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区中山手通5丁目2",
+      "district": "中央区",
+      "sourceRow": 841,
+      "sourceRows": [
+        841
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/24c227c923d3c9df",
+      "lat": 34.6908342258551,
+      "lng": 135.183164397986,
+      "category": "SAFE",
+      "name": "神戸市営地下鉄　県庁前駅",
+      "address": "神戸市中央区下山手通5丁目",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区下山手通5丁目",
+      "district": "中央区",
+      "sourceRow": 880,
+      "sourceRows": [
+        880
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e4a4bd7a1246ac0c",
+      "lat": 34.6908858712694,
+      "lng": 135.185791593747,
+      "category": "SAFE",
+      "name": "神戸市立　神戸諏訪山児童館",
+      "address": "神戸市中央区北長狭通4－9－5　元町北会館2階",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区北長狭通4－9－5　元町北会館2階",
+      "district": "中央区",
+      "sourceRow": 909,
+      "sourceRows": [
+        909
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d1653ef0dfd387e1",
+      "lat": 34.6860983118507,
+      "lng": 135.18290585423,
+      "category": "SAFE",
+      "name": "こうべまちづくりセンター",
+      "address": "神戸市中央区元町通4-2-14",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区元町通4-2-14",
+      "district": "中央区",
+      "sourceRow": 920,
+      "sourceRows": [
+        920
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a62db7941f978a6f",
+      "lat": 34.6901945047936,
+      "lng": 135.185355779219,
+      "category": "SAFE",
+      "name": "神戸市立　神戸生田中学校",
+      "address": "神戸市中央区北長狭通4-10-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区北長狭通4-10-1",
+      "district": "中央区",
+      "sourceRow": 970,
+      "sourceRows": [
+        970
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0ae57ccb345a8e8d",
+      "lat": 34.6910725794014,
+      "lng": 135.183218534571,
+      "category": "SAFE",
+      "name": "三井住友銀行　兵庫県庁出張所",
+      "address": "神戸市中央区下山手通5-10-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区下山手通5-10-1",
+      "district": "中央区",
+      "sourceRow": 987,
+      "sourceRows": [
+        987
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/66a886206ecf4319",
+      "lat": 34.6908858712694,
+      "lng": 135.185791593747,
+      "category": "SAFE",
+      "name": "諏訪山地域福祉センター",
+      "address": "神戸市中央区北長狭通4-9-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区北長狭通4-9-5",
+      "district": "中央区",
+      "sourceRow": 1008,
+      "sourceRows": [
+        1008
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/30f0bd35bda9cf41",
+      "lat": 34.6907621183186,
+      "lng": 135.185792097723,
+      "category": "SAFE",
+      "name": "神戸市立　神戸幼稚園",
+      "address": "神戸市中央区北長狭通4-9-17",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区北長狭通4-9-17",
+      "district": "中央区",
+      "sourceRow": 1044,
+      "sourceRows": [
+        1044
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1ae3fa62c88382ed",
+      "lat": 34.6870418116519,
+      "lng": 135.185336579853,
+      "category": "SAFE",
+      "name": "ライオンズタワー神戸元町",
+      "address": "神戸市中央区栄町通3－6－27",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区栄町通3－6－27",
+      "district": "中央区",
+      "sourceRow": 1054,
+      "sourceRows": [
+        1054
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e1d621231f1f0256",
+      "lat": 34.6899748958129,
+      "lng": 135.182937869969,
+      "category": "SAFE",
+      "name": "兵庫県看護協会（公益社団法人）",
+      "address": "神戸市中央区下山手通5丁目6-24",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区下山手通5丁目6-24",
+      "district": "中央区",
+      "sourceRow": 1075,
+      "sourceRows": [
+        1075
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/06fa041359fe0d1b",
+      "lat": 34.6917710848237,
+      "lng": 135.181066316086,
+      "category": "SAFE",
+      "name": "聖ミカエル幼保連携型認定こども園",
+      "address": "神戸市中央区中山手通6丁目5-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区中山手通6丁目5-1",
+      "district": "中央区",
+      "sourceRow": 1154,
+      "sourceRows": [
+        1154
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a968d4962924365c",
+      "lat": 34.6914398569872,
+      "lng": 135.183216554654,
+      "category": "SAFE",
+      "name": "兵庫県庁　第１号館",
+      "address": "神戸市中央区下山手通5-10-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区下山手通5-10-1",
+      "district": "中央区",
+      "sourceRow": 1167,
+      "sourceRows": [
+        1167
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0d584e04a2accbea",
+      "lat": 34.6919305161189,
+      "lng": 135.183827993836,
+      "category": "SAFE",
+      "name": "兵庫県庁　第２号館",
+      "address": "神戸市中央区下山手通5-10-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区下山手通5-10-1",
+      "district": "中央区",
+      "sourceRow": 1168,
+      "sourceRows": [
+        1168
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/cc32c3b8ea8c317e",
+      "lat": 34.6909370913345,
+      "lng": 135.183485746025,
+      "category": "SAFE",
+      "name": "兵庫県庁　別館健康管理センター",
+      "address": "神戸市中央区下山手通5-10-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区下山手通5-10-1",
+      "district": "中央区",
+      "sourceRow": 1170,
+      "sourceRows": [
+        1170
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

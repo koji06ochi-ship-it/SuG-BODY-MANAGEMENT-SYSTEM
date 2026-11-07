@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5787-22542-20261016",
+  "lat": 34.72589361171123,
+  "lng": 135.25494173335,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/473b1776bed38069",
+      "lat": 34.7246666984857,
+      "lng": 135.252837225375,
+      "category": "SAFE",
+      "name": "阪急　御影駅",
+      "address": "神戸市東灘区御影2丁目1番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影2丁目1番1号",
+      "district": "東灘区",
+      "sourceRow": 1512,
+      "sourceRows": [
+        1512
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b05fe16ee628dc66",
+      "lat": 34.7254002902542,
+      "lng": 135.25499475248,
+      "category": "SAFE",
+      "name": "グランダ御影山手弐番館",
+      "address": "神戸市東灘区御影山手1丁目2－31",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影山手1丁目2－31",
+      "district": "東灘区",
+      "sourceRow": 1523,
+      "sourceRows": [
+        1523
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6f31d53beb85ac79",
+      "lat": 34.7257078923076,
+      "lng": 135.254563997102,
+      "category": "SAFE",
+      "name": "グランダ御影山手",
+      "address": "神戸市東灘区御影山手1丁目2－26",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影山手1丁目2－26",
+      "district": "東灘区",
+      "sourceRow": 1531,
+      "sourceRows": [
+        1531
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/71f5e67596d87cec",
+      "lat": 34.7273548103216,
+      "lng": 135.254493682643,
+      "category": "SAFE",
+      "name": "ザ・ガーデンプレイス蘇州園",
+      "address": "神戸市東灘区住吉山手4丁目7-28",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区住吉山手4丁目7-28",
+      "district": "東灘区",
+      "sourceRow": 1539,
+      "sourceRows": [
+        1539
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e86b833cd802f6c6",
+      "lat": 34.727056812682,
+      "lng": 135.256340673509,
+      "category": "SAFE",
+      "name": "みかげ倶楽部",
+      "address": "神戸市東灘区住吉山手2丁目11-26",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区住吉山手2丁目11-26",
+      "district": "東灘区",
+      "sourceRow": 1540,
+      "sourceRows": [
+        1540
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c771d9d6c06abf72",
+      "lat": 34.7237654754408,
+      "lng": 135.256046743663,
+      "category": "SAFE",
+      "name": "香雪美術館",
+      "address": "神戸市東灘区御影郡家2丁目12-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区御影郡家2丁目12-1",
+      "district": "東灘区",
+      "sourceRow": 1711,
+      "sourceRows": [
+        1711
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/fa378d872dce9aea",
+      "lat": 34.7273033024867,
+      "lng": 135.255315058678,
+      "category": "SAFE",
+      "name": "神愛子供ホーム",
+      "address": "神戸市東灘区住吉山手4丁目7-35",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区住吉山手4丁目7-35",
+      "district": "東灘区",
+      "sourceRow": 1712,
+      "sourceRows": [
+        1712
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

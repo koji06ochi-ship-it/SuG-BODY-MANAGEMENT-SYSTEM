@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5791-22556-20261016",
+  "lat": 34.748268501666665,
+  "lng": 135.33999216666666,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/14ec37b4ff29d2c4",
+      "lat": 34.74629004,
+      "lng": 135.3363417,
+      "category": "SAFE",
+      "name": "大社小学校",
+      "address": "兵庫県西宮市桜谷町９－７",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市桜谷町９－７",
+      "district": "西宮市",
+      "sourceRow": 6,
+      "sourceRows": [
+        6
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/7e821066770f8314",
+      "lat": 34.74863027,
+      "lng": 135.3407998,
+      "category": "SAFE",
+      "name": "大社保育所",
+      "address": "兵庫県西宮市神垣町７－３２",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市神垣町７－３２",
+      "district": "西宮市",
+      "sourceRow": 102,
+      "sourceRows": [
+        102
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/a29907f51fb08b09",
+      "lat": 34.74714188,
+      "lng": 135.3412375,
+      "category": "SAFE",
+      "name": "大社公民館",
+      "address": "兵庫県西宮市柳本町１－３７",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市柳本町１－３７",
+      "district": "西宮市",
+      "sourceRow": 201,
+      "sourceRows": [
+        201
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/7deffe6b042e0d7e",
+      "lat": 34.75139786,
+      "lng": 135.3399476,
+      "category": "SAFE",
+      "name": "広田山荘",
+      "address": "兵庫県西宮市大社町７－１７",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市大社町７－１７",
+      "district": "西宮市",
+      "sourceRow": 268,
+      "sourceRows": [
+        268
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/62268b5e8848803d",
+      "lat": 34.74758555,
+      "lng": 135.3419623,
+      "category": "SAFE",
+      "name": "スマイルコート広田",
+      "address": "兵庫県西宮市柳本町１－２２",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市柳本町１－２２",
+      "district": "西宮市",
+      "sourceRow": 415,
+      "sourceRows": [
+        415
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/1ba2665861e79af1",
+      "lat": 34.74856541,
+      "lng": 135.3396641,
+      "category": "SAFE",
+      "name": "グランダ夙川東",
+      "address": "兵庫県西宮市神垣町６－１３",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市神垣町６－１３",
+      "district": "西宮市",
+      "sourceRow": 421,
+      "sourceRows": [
+        421
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5802-22517-20261016",
+  "lat": 34.815259043987005,
+  "lng": 135.10305937123732,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/8a39e15d2b96fb71",
+      "lat": 34.816146731053,
+      "lng": 135.102128751236,
+      "category": "SAFE",
+      "name": "神戸市立　淡河小学校",
+      "address": "神戸市北区淡河町萩原524番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区淡河町萩原524番地",
+      "district": "北区",
+      "sourceRow": 2253,
+      "sourceRows": [
+        2253
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f02a0ac328e83d0e",
+      "lat": 34.8168668362427,
+      "lng": 135.102701214059,
+      "category": "SAFE",
+      "name": "神戸市立　淡河好徳幼稚園",
+      "address": "神戸市北区淡河町萩原1087",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区淡河町萩原1087",
+      "district": "北区",
+      "sourceRow": 2351,
+      "sourceRows": [
+        2351
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/14c4e3560bf98a14",
+      "lat": 34.8127635646653,
+      "lng": 135.104348148417,
+      "category": "SAFE",
+      "name": "淡河地域福祉センター",
+      "address": "神戸市北区淡河町萩原桶垣内323",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区淡河町萩原桶垣内323",
+      "district": "北区",
+      "sourceRow": 2388,
+      "sourceRows": [
+        2388
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

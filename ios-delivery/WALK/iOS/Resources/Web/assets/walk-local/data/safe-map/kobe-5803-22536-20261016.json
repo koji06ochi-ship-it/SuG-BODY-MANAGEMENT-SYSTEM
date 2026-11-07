@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5803-22536-20261016",
+  "lat": 34.82106543412311,
+  "lng": 135.21982409609947,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/1ab95aae3ceb5b69",
+      "lat": 34.8210288058172,
+      "lng": 135.221586146693,
+      "category": "SAFE",
+      "name": "神戸市　北区役所　北神支所",
+      "address": "神戸市北区藤原台中町1丁目2番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区藤原台中町1丁目2番1号",
+      "district": "北区",
+      "sourceRow": 2181,
+      "sourceRows": [
+        2181
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e27e43bba7cd1111",
+      "lat": 34.8210288058172,
+      "lng": 135.221586146693,
+      "category": "SAFE",
+      "name": "神戸市立　北図書館北神分館",
+      "address": "神戸市北区藤原台中町1-2-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区藤原台中町1-2-1",
+      "district": "北区",
+      "sourceRow": 2213,
+      "sourceRows": [
+        2213
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/fbbb1a93110da8aa",
+      "lat": 34.8204131983654,
+      "lng": 135.217688258669,
+      "category": "SAFE",
+      "name": "神戸市立　有野小学校",
+      "address": "神戸市北区藤原台中町3丁目17-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区藤原台中町3丁目17-1",
+      "district": "北区",
+      "sourceRow": 2229,
+      "sourceRows": [
+        2229
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/93669e926ef77c5d",
+      "lat": 34.8218788777652,
+      "lng": 135.220321094781,
+      "category": "SAFE",
+      "name": "みなと銀行　藤原台支店",
+      "address": "神戸市北区藤原台中町1-2-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区藤原台中町1-2-2",
+      "district": "北区",
+      "sourceRow": 2285,
+      "sourceRows": [
+        2285
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2a968fdce6f06148",
+      "lat": 34.8225047895071,
+      "lng": 135.21941696453,
+      "category": "SAFE",
+      "name": "北神区文化センター",
+      "address": "神戸市北区藤原台中町1丁目3－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区藤原台中町1丁目3－1",
+      "district": "北区",
+      "sourceRow": 2359,
+      "sourceRows": [
+        2359
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/46b19966e23783bd",
+      "lat": 34.8218788777652,
+      "lng": 135.220321094781,
+      "category": "SAFE",
+      "name": "イオン藤原台店",
+      "address": "神戸市北区藤原台中町1-2-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区藤原台中町1-2-2",
+      "district": "北区",
+      "sourceRow": 2429,
+      "sourceRows": [
+        2429
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0a895025b7226c31",
+      "lat": 34.8204629570026,
+      "lng": 135.216901302044,
+      "category": "SAFE",
+      "name": "六甲藤原台幼稚園",
+      "address": "神戸市北区藤原台中町3丁目17-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区藤原台中町3丁目17-2",
+      "district": "北区",
+      "sourceRow": 2459,
+      "sourceRows": [
+        2459
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/dfd2f7f0edef2c15",
+      "lat": 34.8185503456088,
+      "lng": 135.21851271133,
+      "category": "SAFE",
+      "name": "つきかげ認定こども園",
+      "address": "神戸市北区藤原台中町2丁目5-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区藤原台中町2丁目5-1",
+      "district": "北区",
+      "sourceRow": 2462,
+      "sourceRows": [
+        2462
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/cf363a2be47ab289",
+      "lat": 34.8210288058172,
+      "lng": 135.221586146693,
+      "category": "SAFE",
+      "name": "西尾歯科クリニック",
+      "address": "神戸市北区藤原台中町1丁目2-1　北神中央ビル3階",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区藤原台中町1丁目2-1　北神中央ビル3階",
+      "district": "北区",
+      "sourceRow": 2546,
+      "sourceRows": [
+        2546
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/acfdb4bc220bcf21",
+      "lat": 34.8218788777652,
+      "lng": 135.220321094781,
+      "category": "SAFE",
+      "name": "三井住友銀行エコール・リラ藤原台店出張所",
+      "address": "神戸市北区藤原台中町1丁目2番地2エコール・リラSC本館5階",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区藤原台中町1丁目2番地2エコール・リラSC本館5階",
+      "district": "北区",
+      "sourceRow": 2585,
+      "sourceRows": [
+        2585
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

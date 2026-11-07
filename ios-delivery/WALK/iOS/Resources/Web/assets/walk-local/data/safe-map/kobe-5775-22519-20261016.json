@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5775-22519-20261016",
+  "lat": 34.652324296259884,
+  "lng": 135.11714765674742,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/0fbf164aa91d974d",
+      "lat": 34.6530448436964,
+      "lng": 135.115373064843,
+      "category": "SAFE",
+      "name": "神戸市立　北須磨小学校",
+      "address": "神戸市須磨区離宮西町2丁目1－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区離宮西町2丁目1－1",
+      "district": "須磨区",
+      "sourceRow": 65,
+      "sourceRows": [
+        65
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5b16b750eb481f6e",
+      "lat": 34.6534895383693,
+      "lng": 135.116246168445,
+      "category": "SAFE",
+      "name": "神戸市立　須磨離宮公園",
+      "address": "神戸市須磨区東須磨1丁目1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区東須磨1丁目1",
+      "district": "須磨区",
+      "sourceRow": 97,
+      "sourceRows": [
+        97
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ffeb228d37196b6a",
+      "lat": 34.6514905399604,
+      "lng": 135.11876365854,
+      "category": "SAFE",
+      "name": "北須磨地域福祉センター",
+      "address": "神戸市須磨区離宮前町2丁目7-24",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区離宮前町2丁目7-24",
+      "district": "須磨区",
+      "sourceRow": 146,
+      "sourceRows": [
+        146
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/867ad165209950f8",
+      "lat": 34.6520069782781,
+      "lng": 135.116062486165,
+      "category": "SAFE",
+      "name": "特別養護老人ホーム・離宮しあわせ荘",
+      "address": "神戸市須磨区離宮西町2丁目2-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区離宮西町2丁目2-3",
+      "district": "須磨区",
+      "sourceRow": 206,
+      "sourceRows": [
+        206
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/13a85da0e2c65404",
+      "lat": 34.6515895809952,
+      "lng": 135.119292905744,
+      "category": "SAFE",
+      "name": "介護付き有料老人ホーム　あいハート離宮前",
+      "address": "神戸市須磨区離宮前町2丁目5-38",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区離宮前町2丁目5-38",
+      "district": "須磨区",
+      "sourceRow": 220,
+      "sourceRows": [
+        220
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,344 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5799-22541-20261016",
+  "lat": 34.7968142969533,
+  "lng": 135.2487248195168,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/35a59caefc4719e8",
+      "lat": 34.7977917580871,
+      "lng": 135.24768538521,
+      "category": "SAFE",
+      "name": "有馬温泉観光総合案内所",
+      "address": "神戸市北区有馬町790番地3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有馬町790番地3",
+      "district": "北区",
+      "sourceRow": 2174,
+      "sourceRows": [
+        2174
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/51b79f39be108199",
+      "lat": 34.7967953253352,
+      "lng": 135.247910239013,
+      "category": "SAFE",
+      "name": "有馬本温泉　金の湯",
+      "address": "神戸市北区有馬町833",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有馬町833",
+      "district": "北区",
+      "sourceRow": 2175,
+      "sourceRows": [
+        2175
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e9bf66bfd1928acd",
+      "lat": 34.797877679511,
+      "lng": 135.250897552447,
+      "category": "SAFE",
+      "name": "㈱有馬ビューホテル",
+      "address": "神戸市北区有馬町池の尻292-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有馬町池の尻292-2",
+      "district": "北区",
+      "sourceRow": 2182,
+      "sourceRows": [
+        2182
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/43317771857778de",
+      "lat": 34.797877679511,
+      "lng": 135.250897552447,
+      "category": "SAFE",
+      "name": "㈱有馬ビューホテル　太閤の湯",
+      "address": "神戸市北区有馬町池の尻292-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有馬町池の尻292-2",
+      "district": "北区",
+      "sourceRow": 2183,
+      "sourceRows": [
+        2183
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/343725e23eff2df6",
+      "lat": 34.798331305735,
+      "lng": 135.248525926441,
+      "category": "SAFE",
+      "name": "兵衛旅館",
+      "address": "神戸市北区有馬町1904",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有馬町1904",
+      "district": "北区",
+      "sourceRow": 2215,
+      "sourceRows": [
+        2215
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/79a088317053ef12",
+      "lat": 34.7957745724693,
+      "lng": 135.247544122898,
+      "category": "SAFE",
+      "name": "㈱有馬館　有馬ロイヤルホテル",
+      "address": "神戸市北区有馬町987",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有馬町987",
+      "district": "北区",
+      "sourceRow": 2223,
+      "sourceRows": [
+        2223
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/47d66b5a706db7bf",
+      "lat": 34.7992386848398,
+      "lng": 135.246316703168,
+      "category": "SAFE",
+      "name": "神戸電鉄㈱　有馬温泉駅",
+      "address": "神戸市北区有馬町字ウツギ谷266-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有馬町字ウツギ谷266-2",
+      "district": "北区",
+      "sourceRow": 2289,
+      "sourceRows": [
+        2289
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/97f11fcf8795d1ed",
+      "lat": 34.7987301100236,
+      "lng": 135.247556524375,
+      "category": "SAFE",
+      "name": "川崎重工業健康保険組合　泉郷荘",
+      "address": "神戸市北区有馬町1257",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有馬町1257",
+      "district": "北区",
+      "sourceRow": 2294,
+      "sourceRows": [
+        2294
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e1225adcf4310533",
+      "lat": 34.7959543648895,
+      "lng": 135.247153900347,
+      "category": "SAFE",
+      "name": "角の坊旅館",
+      "address": "神戸市北区有馬町878番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有馬町878番地",
+      "district": "北区",
+      "sourceRow": 2318,
+      "sourceRows": [
+        2318
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5232b783b852ef94",
+      "lat": 34.797545505281,
+      "lng": 135.247825165808,
+      "category": "SAFE",
+      "name": "中の坊　瑞苑",
+      "address": "神戸市北区有馬町808番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有馬町808番",
+      "district": "北区",
+      "sourceRow": 2319,
+      "sourceRows": [
+        2319
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1dc62ad982cb9780",
+      "lat": 34.7941547970891,
+      "lng": 135.248986819225,
+      "category": "SAFE",
+      "name": "かんぽの宿　有馬",
+      "address": "神戸市北区有馬町1617の1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有馬町1617の1",
+      "district": "北区",
+      "sourceRow": 2343,
+      "sourceRows": [
+        2343
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6fb82bedef033ec6",
+      "lat": 34.794867033768,
+      "lng": 135.251744088495,
+      "category": "SAFE",
+      "name": "ザ　グランリゾートプリンセス有馬",
+      "address": "神戸市北区有馬町1338",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有馬町1338",
+      "district": "北区",
+      "sourceRow": 2371,
+      "sourceRows": [
+        2371
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b834508163c47d46",
+      "lat": 34.7980629007416,
+      "lng": 135.246937992047,
+      "category": "SAFE",
+      "name": "有馬御苑",
+      "address": "神戸市北区有馬町1296",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有馬町1296",
+      "district": "北区",
+      "sourceRow": 2372,
+      "sourceRows": [
+        2372
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c7a41169a43d44ad",
+      "lat": 34.7945145119199,
+      "lng": 135.24962125487,
+      "category": "SAFE",
+      "name": "東急ハーヴェストクラブ有馬六彩",
+      "address": "神戸市北区有馬町341-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有馬町341-1",
+      "district": "北区",
+      "sourceRow": 2412,
+      "sourceRows": [
+        2412
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c560c0e29f238249",
+      "lat": 34.7970024796607,
+      "lng": 135.249497096176,
+      "category": "SAFE",
+      "name": "高山荘　華野",
+      "address": "神戸市北区有馬町400-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有馬町400-1",
+      "district": "北区",
+      "sourceRow": 2418,
+      "sourceRows": [
+        2418
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9269f2caa27be81a",
+      "lat": 34.7958487963621,
+      "lng": 135.250225062408,
+      "category": "SAFE",
+      "name": "有馬保育園",
+      "address": "神戸市北区有馬町1644",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有馬町1644",
+      "district": "北区",
+      "sourceRow": 2458,
+      "sourceRows": [
+        2458
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b2999485859bbd7b",
+      "lat": 34.7954755429823,
+      "lng": 135.248996546411,
+      "category": "SAFE",
+      "name": "有馬温泉 銀の湯",
+      "address": "神戸市北区有馬町1039-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区有馬町1039-1",
+      "district": "北区",
+      "sourceRow": 2514,
+      "sourceRows": [
+        2514
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

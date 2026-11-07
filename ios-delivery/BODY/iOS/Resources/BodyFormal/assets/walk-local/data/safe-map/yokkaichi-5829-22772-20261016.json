@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "yokkaichi-5829-22772-20261016",
+  "lat": 34.976662902,
+  "lng": 136.63621044,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "四日市市",
+  "source": "四日市市内公共施設 AED設置箇所一覧",
+  "sourceUrl": "https://data.bodik.jp/dataset/242021_00127",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/422f8da8-0b3c-4d84-b8dd-d88d18e914ce/resource/2a5eee8b-c455-4c2e-8553-b0d3d36e5ef2/download/242021_aed.csv",
+  "sourceUpdatedAt": "2024-12-18",
+  "sourcePageUpdatedAt": "2025-01-24",
+  "retrievedAt": "2026-10-15T15:44:16.747Z",
+  "sourceFileSha256": "c0880c81977c7fc444213ee84ef31a7b2e9e34f12d31e892064cbabb7d5159cf",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/yokkaichi/aed/d644c1be0dc1a0ce",
+      "lat": 34.97761061,
+      "lng": 136.6349816,
+      "category": "SAFE",
+      "name": "橋北中学校",
+      "address": "四日市市高浜町1-4",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市高浜町1-4",
+      "sourceRow": 70,
+      "sourceRows": [
+        70,
+        71
+      ],
+      "duplicateSourceEntries": 2
+    },
+    {
+      "id": "municipality/yokkaichi/aed/b64fda5847f3ac77",
+      "lat": 34.97602959,
+      "lng": 136.6370306,
+      "category": "SAFE",
+      "name": "橋北こども園",
+      "address": "四日市市東新町26-32",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市東新町26-32",
+      "sourceRow": 132,
+      "sourceRows": [
+        132
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/197b84a09b2d8557",
+      "lat": 34.97603185,
+      "lng": 136.6370292,
+      "category": "SAFE",
+      "name": "橋北交流会館",
+      "address": "四日市市東新町26-32",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市東新町26-32",
+      "sourceRow": 238,
+      "sourceRows": [
+        238
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/e1eacea9cb101d57",
+      "lat": 34.97603185,
+      "lng": 136.6370292,
+      "category": "SAFE",
+      "name": "橋北交流会館（体育館）",
+      "address": "四日市市東新町26-32",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市東新町26-32",
+      "sourceRow": 239,
+      "sourceRows": [
+        239
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

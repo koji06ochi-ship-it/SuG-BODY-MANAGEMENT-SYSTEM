@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5810-22536-20261016",
+  "lat": 34.861798397356246,
+  "lng": 135.21830514078175,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/ba28567ec7360e77",
+      "lat": 34.8610019033902,
+      "lng": 135.218334743401,
+      "category": "SAFE",
+      "name": "神戸市立　鹿の子台小学校",
+      "address": "神戸市北区鹿の子台北町6-34-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鹿の子台北町6-34-1",
+      "district": "北区",
+      "sourceRow": 2205,
+      "sourceRows": [
+        2205
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5c1e752a7350c23b",
+      "lat": 34.8619790810861,
+      "lng": 135.218122967563,
+      "category": "SAFE",
+      "name": "鹿の子台地域福祉センター",
+      "address": "神戸市北区鹿の子台北町6丁目34－3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鹿の子台北町6丁目34－3",
+      "district": "北区",
+      "sourceRow": 2310,
+      "sourceRows": [
+        2310
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8813db0089c6aa3a",
+      "lat": 34.8622335238626,
+      "lng": 135.2186398846,
+      "category": "SAFE",
+      "name": "神戸鹿の子幼稚園",
+      "address": "神戸市北区鹿の子台北町6丁目34－2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鹿の子台北町6丁目34－2",
+      "district": "北区",
+      "sourceRow": 2469,
+      "sourceRows": [
+        2469
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6dc37c03fe242d15",
+      "lat": 34.8619790810861,
+      "lng": 135.218122967563,
+      "category": "SAFE",
+      "name": "神戸市立　鹿の子台児童館",
+      "address": "神戸市北区鹿の子台北町6丁目34－3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鹿の子台北町6丁目34－3",
+      "district": "北区",
+      "sourceRow": 2512,
+      "sourceRows": [
+        2512
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

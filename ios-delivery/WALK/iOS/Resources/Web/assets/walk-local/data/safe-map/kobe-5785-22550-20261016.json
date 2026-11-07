@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5785-22550-20261016",
+  "lat": 34.7119590505627,
+  "lng": 135.301903121895,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/40e8157dc57be7bd",
+      "lat": 34.7108603280373,
+      "lng": 135.302803926319,
+      "category": "SAFE",
+      "name": "剣菱酒造株式会社　浜蔵兼瓶詰工場",
+      "address": "神戸市東灘区深江浜町53番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区深江浜町53番地",
+      "district": "東灘区",
+      "sourceRow": 1471,
+      "sourceRows": [
+        1471
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/79647fbddbcd702f",
+      "lat": 34.7130577730881,
+      "lng": 135.301002317471,
+      "category": "SAFE",
+      "name": "深江浜公園",
+      "address": "神戸市東灘区深江浜町59",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区深江浜町59",
+      "district": "東灘区",
+      "sourceRow": 1616,
+      "sourceRows": [
+        1616
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

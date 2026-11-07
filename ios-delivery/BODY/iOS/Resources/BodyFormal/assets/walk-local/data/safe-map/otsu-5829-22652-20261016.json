@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "otsu-5829-22652-20261016",
+  "lat": 34.978516805,
+  "lng": 135.9135839,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "大津市",
+  "source": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+  "sourceUrl": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/999caef4-7e90-4fd2-98eb-fd94368e9a2f/resource/3e5b513e-de51-4459-af70-6fda94e1bed3/download/od405902026022700200.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2025-03-12",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "7899826cf95c365a07c87b3ad05aa2aa7d4adeb440a2c57269c84f98c1d85ea8",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/otsu/aed/6e6f3fa02ce3218d",
+      "lat": 34.97825389,
+      "lng": 135.9145142,
+      "category": "SAFE",
+      "name": "あおぞら保育園",
+      "address": "大津市大江一丁目36番1号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市大江一丁目36番1号",
+      "district": "大津市",
+      "sourceRow": 332,
+      "sourceRows": [
+        332
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/84e267e9c4169f5c",
+      "lat": 34.97877972,
+      "lng": 135.9126536,
+      "category": "SAFE",
+      "name": "玉野浦保育園",
+      "address": "大津市玉野浦12－1",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市玉野浦12－1",
+      "district": "大津市",
+      "sourceRow": 390,
+      "sourceRows": [
+        390
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

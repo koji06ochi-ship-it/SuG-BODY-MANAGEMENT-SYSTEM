@@ -1,0 +1,401 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5785-22537-20261016",
+  "lat": 34.7127190392906,
+  "lng": 135.22439783540966,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/22d09eb583d10c40",
+      "lat": 34.714503905827,
+      "lng": 135.227620689107,
+      "category": "SAFE",
+      "name": "神戸市灘区医師会",
+      "address": "神戸市灘区水道筋1－24",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区水道筋1－24",
+      "district": "灘区",
+      "sourceRow": 1759,
+      "sourceRows": [
+        1759
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/32cef08d8aeb70e9",
+      "lat": 34.7127267039088,
+      "lng": 135.223332318488,
+      "category": "SAFE",
+      "name": "神戸信用金庫　西灘支店",
+      "address": "神戸市灘区水道筋4丁目2－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区水道筋4丁目2－1",
+      "district": "灘区",
+      "sourceRow": 1781,
+      "sourceRows": [
+        1781
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bb97f2ccef68c1bf",
+      "lat": 34.7113927233396,
+      "lng": 135.222518914105,
+      "category": "SAFE",
+      "name": "稗田わくわくクラブ",
+      "address": "神戸市灘区岸地通4丁目2－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区岸地通4丁目2－1",
+      "district": "灘区",
+      "sourceRow": 1783,
+      "sourceRows": [
+        1783
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6c5c82b04c39e203",
+      "lat": 34.7113927233396,
+      "lng": 135.222518914105,
+      "category": "SAFE",
+      "name": "神戸市立　稗田小学校",
+      "address": "神戸市灘区岸地通4丁目2－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区岸地通4丁目2－1",
+      "district": "灘区",
+      "sourceRow": 1803,
+      "sourceRows": [
+        1803
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/24d0bde68fa3bf89",
+      "lat": 34.7139142706696,
+      "lng": 135.227240710452,
+      "category": "SAFE",
+      "name": "播州信用金庫　灘支店",
+      "address": "神戸市灘区水道筋1丁目6－3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区水道筋1丁目6－3",
+      "district": "灘区",
+      "sourceRow": 1808,
+      "sourceRows": [
+        1808
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7a0ad2bab5c27870",
+      "lat": 34.7129876702873,
+      "lng": 135.224496457522,
+      "category": "SAFE",
+      "name": "みなと銀行　水道筋支店",
+      "address": "神戸市灘区水道筋3－10－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区水道筋3－10－1",
+      "district": "灘区",
+      "sourceRow": 1817,
+      "sourceRows": [
+        1817
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1a81cbfaaedfff93",
+      "lat": 34.7156338352543,
+      "lng": 135.227942621869,
+      "category": "SAFE",
+      "name": "村山医院",
+      "address": "神戸市灘区篠原南町5-5-13",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区篠原南町5-5-13",
+      "district": "灘区",
+      "sourceRow": 1835,
+      "sourceRows": [
+        1835
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ade5a102ea1e4812",
+      "lat": 34.7128159381987,
+      "lng": 135.222827487504,
+      "category": "SAFE",
+      "name": "中林整形外科クリニック",
+      "address": "神戸市灘区水道筋4-3-14",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区水道筋4-3-14",
+      "district": "灘区",
+      "sourceRow": 1843,
+      "sourceRows": [
+        1843
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/11fe60854ffa31cc",
+      "lat": 34.7142052012802,
+      "lng": 135.223792595693,
+      "category": "SAFE",
+      "name": "内科クリニック岡田",
+      "address": "神戸市灘区中原通2-1-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区中原通2-1-3",
+      "district": "灘区",
+      "sourceRow": 1844,
+      "sourceRows": [
+        1844
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/96b404a91663e322",
+      "lat": 34.7100375449881,
+      "lng": 135.223912371632,
+      "category": "SAFE",
+      "name": "瀬戸本医院",
+      "address": "神戸市灘区泉通5-1-8",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区泉通5-1-8",
+      "district": "灘区",
+      "sourceRow": 1845,
+      "sourceRows": [
+        1845
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a93040acfd08c7b0",
+      "lat": 34.7126290137644,
+      "lng": 135.222309029199,
+      "category": "SAFE",
+      "name": "川口クリニック",
+      "address": "神戸市灘区水道筋5-2-17",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区水道筋5-2-17",
+      "district": "灘区",
+      "sourceRow": 1852,
+      "sourceRows": [
+        1852
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2e966ad2a08f1e6c",
+      "lat": 34.7131318945176,
+      "lng": 135.225106736236,
+      "category": "SAFE",
+      "name": "㈱阪神観光　メッチャはんくら",
+      "address": "神戸市灘区水道筋2-16-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区水道筋2-16-3",
+      "district": "灘区",
+      "sourceRow": 1869,
+      "sourceRows": [
+        1869
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3b9da114d314556e",
+      "lat": 34.7106078251966,
+      "lng": 135.223623024087,
+      "category": "SAFE",
+      "name": "神戸市立　稗田学童保育コーナー",
+      "address": "神戸市灘区大内通5丁目1-8",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区大内通5丁目1-8",
+      "district": "灘区",
+      "sourceRow": 1889,
+      "sourceRows": [
+        1889
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7d017adf958d6306",
+      "lat": 34.7103545833383,
+      "lng": 135.222470198228,
+      "category": "SAFE",
+      "name": "灘公共職業安定所",
+      "address": "神戸市灘区大内通5-2-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区大内通5-2-2",
+      "district": "灘区",
+      "sourceRow": 1909,
+      "sourceRows": [
+        1909
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f63c5a44428f22a4",
+      "lat": 34.712942178685,
+      "lng": 135.222886596331,
+      "category": "SAFE",
+      "name": "水道筋協同組合",
+      "address": "神戸市灘区水道筋４丁目２?６",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区水道筋４丁目２?６",
+      "district": "灘区",
+      "sourceRow": 1931,
+      "sourceRows": [
+        1931
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d92b163264d03048",
+      "lat": 34.7129387364567,
+      "lng": 135.223997896541,
+      "category": "SAFE",
+      "name": "メチャスロ（株式会社阪神観光）",
+      "address": "神戸市灘区水道筋3-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区水道筋3-3",
+      "district": "灘区",
+      "sourceRow": 1939,
+      "sourceRows": [
+        1939
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/eae57cef2f89e6d8",
+      "lat": 34.7142067474313,
+      "lng": 135.227760803215,
+      "category": "SAFE",
+      "name": "兵庫県警　灘警察署",
+      "address": "神戸市灘区水道筋1丁目24-8",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区水道筋1丁目24-8",
+      "district": "灘区",
+      "sourceRow": 1975,
+      "sourceRows": [
+        1975
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/fb6ced764e33e6ec",
+      "lat": 34.7119770208812,
+      "lng": 135.223421739431,
+      "category": "SAFE",
+      "name": "日新信用金庫　西灘支店",
+      "address": "神戸市灘区岸地通4丁目4-15",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区岸地通4丁目4-15",
+      "district": "灘区",
+      "sourceRow": 1986,
+      "sourceRows": [
+        1986
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6aa13aa7f0cc19e4",
+      "lat": 34.7152411500438,
+      "lng": 135.227003228385,
+      "category": "SAFE",
+      "name": "グルメシティ灘店",
+      "address": "神戸市灘区篠原南町6丁目1-31",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区篠原南町6丁目1-31",
+      "district": "灘区",
+      "sourceRow": 2003,
+      "sourceRows": [
+        2003
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ddd8b1e0ae1579c4",
+      "lat": 34.7107411184039,
+      "lng": 135.223174376063,
+      "category": "SAFE",
+      "name": "灘中央自治会館",
+      "address": "神戸市灘区大内通5丁目2番地1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区大内通5丁目2番地1",
+      "district": "灘区",
+      "sourceRow": 2007,
+      "sourceRows": [
+        2007
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5804-22549-20261016",
+  "lat": 34.828867945,
+  "lng": 135.295896825,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/5966747fac9f0453",
+      "lat": 34.82833013,
+      "lng": 135.2944662,
+      "category": "SAFE",
+      "name": "西宮名塩神姫レストラン",
+      "address": "兵庫県西宮市塩瀬町名塩字蛇豆９０６",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市塩瀬町名塩字蛇豆９０６",
+      "district": "西宮市",
+      "sourceRow": 713,
+      "sourceRows": [
+        713
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/16250e9ad8d9b18d",
+      "lat": 34.82899054,
+      "lng": 135.2959908,
+      "category": "SAFE",
+      "name": "中国自動車道西宮名塩サービスエリア(上り線)",
+      "address": "兵庫県西宮市塩瀬町名塩字白阪１２５２",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市塩瀬町名塩字白阪１２５２",
+      "district": "西宮市",
+      "sourceRow": 714,
+      "sourceRows": [
+        714
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/fce71177081b7327",
+      "lat": 34.82821878,
+      "lng": 135.2943767,
+      "category": "SAFE",
+      "name": "(株)西日本宇佐美山陽支店　西宮名塩SA下りSS",
+      "address": "兵庫県西宮市塩瀬町名塩字蛇豆９２２",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市塩瀬町名塩字蛇豆９２２",
+      "district": "西宮市",
+      "sourceRow": 724,
+      "sourceRows": [
+        724
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/aee11957629c894c",
+      "lat": 34.82993233,
+      "lng": 135.2987536,
+      "category": "SAFE",
+      "name": "名塩会館",
+      "address": "兵庫県西宮市名塩２丁目９－３８",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市名塩２丁目９－３８",
+      "district": "西宮市",
+      "sourceRow": 727,
+      "sourceRows": [
+        727
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

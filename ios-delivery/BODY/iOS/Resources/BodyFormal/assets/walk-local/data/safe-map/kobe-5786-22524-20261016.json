@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5786-22524-20261016",
+  "lat": 34.719364112827094,
+  "lng": 135.147637502113,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/30284c19ddf70401",
+      "lat": 34.7199323780308,
+      "lng": 135.147546932543,
+      "category": "SAFE",
+      "name": "鈴蘭台荘（社会福祉法人）",
+      "address": "神戸市北区鈴蘭台東町2－4－6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鈴蘭台東町2－4－6",
+      "district": "北区",
+      "sourceRow": 2262,
+      "sourceRows": [
+        2262
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/19bd123d73045c71",
+      "lat": 34.7187958476234,
+      "lng": 135.147728071683,
+      "category": "SAFE",
+      "name": "特別養護老人ホーム　梅香園",
+      "address": "神戸市北区山田町小部字南山2-35",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町小部字南山2-35",
+      "district": "北区",
+      "sourceRow": 2523,
+      "sourceRows": [
+        2523
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

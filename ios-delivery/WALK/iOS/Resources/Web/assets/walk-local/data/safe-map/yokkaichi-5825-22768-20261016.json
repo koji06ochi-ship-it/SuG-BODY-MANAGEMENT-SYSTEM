@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "id": "yokkaichi-5825-22768-20261016",
+  "lat": 34.95223644916666,
+  "lng": 136.6121489,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "四日市市",
+  "source": "四日市市内公共施設 AED設置箇所一覧",
+  "sourceUrl": "https://data.bodik.jp/dataset/242021_00127",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/422f8da8-0b3c-4d84-b8dd-d88d18e914ce/resource/2a5eee8b-c455-4c2e-8553-b0d3d36e5ef2/download/242021_aed.csv",
+  "sourceUpdatedAt": "2024-12-18",
+  "sourcePageUpdatedAt": "2025-01-24",
+  "retrievedAt": "2026-10-15T15:44:16.747Z",
+  "sourceFileSha256": "c0880c81977c7fc444213ee84ef31a7b2e9e34f12d31e892064cbabb7d5159cf",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/yokkaichi/aed/5cf8707ea1ee6196",
+      "lat": 34.95285752,
+      "lng": 136.6121712,
+      "category": "SAFE",
+      "name": "中央緑地運動施設",
+      "address": "四日市市日永東1丁目3番21号",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市日永東1丁目3番21号",
+      "sourceRow": 193,
+      "sourceRows": [
+        193
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/4baef08da8e9e488",
+      "lat": 34.95286809,
+      "lng": 136.6134276,
+      "category": "SAFE",
+      "name": "中央緑地運動施設（総合体育館）",
+      "address": "四日市市日永東1丁目3番21号",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市日永東1丁目3番21号",
+      "sourceRow": 194,
+      "sourceRows": [
+        194
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/b668a53390e0904e",
+      "lat": 34.95286582,
+      "lng": 136.6134304,
+      "category": "SAFE",
+      "name": "中央緑地運動施設（総合体育館）",
+      "address": "四日市市日永東1丁目3番21号",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市日永東1丁目3番21号",
+      "sourceRow": 195,
+      "sourceRows": [
+        195
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/64dc043027983c74",
+      "lat": 34.95286471,
+      "lng": 136.6134262,
+      "category": "SAFE",
+      "name": "中央緑地運動施設（総合体育館）",
+      "address": "四日市市日永東1丁目3番21号",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市日永東1丁目3番21号",
+      "sourceRow": 196,
+      "sourceRows": [
+        196
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/5f35c9e8977d24b2",
+      "lat": 34.95287031,
+      "lng": 136.6134345,
+      "category": "SAFE",
+      "name": "中央緑地運動施設（総合体育館）",
+      "address": "四日市市日永東1丁目3番21号",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市日永東1丁目3番21号",
+      "sourceRow": 197,
+      "sourceRows": [
+        197
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/0b17ffdfa18ddc18",
+      "lat": 34.95269191,
+      "lng": 136.6139505,
+      "category": "SAFE",
+      "name": "中央緑地運動施設（中央第2体育館）",
+      "address": "四日市市日永東1丁目3番21号",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市日永東1丁目3番21号",
+      "sourceRow": 198,
+      "sourceRows": [
+        198
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/d2dada27900eaeba",
+      "lat": 34.95285753,
+      "lng": 136.6121698,
+      "category": "SAFE",
+      "name": "中央緑地運動施設（中央ﾌｯﾄﾎﾞｰﾙ場）",
+      "address": "四日市市日永東1丁目3番21号",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市日永東1丁目3番21号",
+      "sourceRow": 199,
+      "sourceRows": [
+        199
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/5768e751edb1f47e",
+      "lat": 34.95109999,
+      "lng": 136.6121088,
+      "category": "SAFE",
+      "name": "中央緑地運動施設（中央陸上競技場）",
+      "address": "四日市市日永東1丁目3番21号",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市日永東1丁目3番21号",
+      "sourceRow": 201,
+      "sourceRows": [
+        201
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/e3a581f5ad1aaeb9",
+      "lat": 34.95125935,
+      "lng": 136.6106095,
+      "category": "SAFE",
+      "name": "四日市市介護予防等拠点施設（ステップ四日市）",
+      "address": "四日市市日永東1丁目2-27",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市日永東1丁目2-27",
+      "sourceRow": 262,
+      "sourceRows": [
+        262
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/c29162fa2031e457",
+      "lat": 34.95152067,
+      "lng": 136.6099307,
+      "category": "SAFE",
+      "name": "四日市市勤労者・市民交流センター",
+      "address": "四日市市日永東1丁目2-25",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市日永東1丁目2-25",
+      "sourceRow": 263,
+      "sourceRows": [
+        263
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/f90216666e525d9d",
+      "lat": 34.95140747,
+      "lng": 136.6102583,
+      "category": "SAFE",
+      "name": "四日市市勤労者・市民交流センター",
+      "address": "四日市市日永東1丁目2-25",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市日永東1丁目2-25",
+      "sourceRow": 264,
+      "sourceRows": [
+        264
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/1df166512d1b4316",
+      "lat": 34.95167402,
+      "lng": 136.6108693,
+      "category": "SAFE",
+      "name": "四日市市登校サポートセンター",
+      "address": "四日市市日永東 1 丁目2-28",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市日永東 1 丁目2-28",
+      "sourceRow": 272,
+      "sourceRows": [
+        272
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

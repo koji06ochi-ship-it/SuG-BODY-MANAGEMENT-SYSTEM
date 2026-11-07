@@ -1,0 +1,330 @@
+{
+  "schemaVersion": 1,
+  "id": "osaka",
+  "name": "南森町周辺の一部",
+  "lat": 34.696,
+  "lng": 135.512,
+  "radius": 600,
+  "partial": true,
+  "limit": 80,
+  "retrievedAt": "2026-10-14T05:30:21.060Z",
+  "osmTimestamp": "2026-10-14T05:28:42Z",
+  "source": "OpenStreetMap contributors",
+  "sourceUrl": "https://www.openstreetmap.org/copyright",
+  "license": "ODbL-1.0",
+  "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "query": "[out:json][timeout:15][maxsize:16777216];(nwr[amenity~\"^(police|fire_station|hospital|toilets|townhall|community_centre)$\"](around:600,34.696,135.512);nwr[emergency=defibrillator](around:600,34.696,135.512);nwr[leisure=park](around:600,34.696,135.512);nwr[railway~\"^(station|halt)$\"](around:600,34.696,135.512);nwr[highway=bus_stop](around:600,34.696,135.512););out center 80;",
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "data": [
+    {
+      "id": "node/1422989329",
+      "lat": 34.695893,
+      "lng": 135.510884,
+      "category": "SAFE",
+      "name": "大阪市消防局北消防署南森町出張所",
+      "address": "",
+      "kind": "fire_station",
+      "source": "https://www.openstreetmap.org/node/1422989329"
+    },
+    {
+      "id": "node/1422990854",
+      "lat": 34.6953425,
+      "lng": 135.5057135,
+      "category": "PUBLIC",
+      "name": "大阪法務局 北出張所",
+      "address": "",
+      "kind": "townhall",
+      "source": "https://www.openstreetmap.org/node/1422990854"
+    },
+    {
+      "id": "node/1422991461",
+      "lat": 34.6977917,
+      "lng": 135.5104218,
+      "category": "SAFE",
+      "name": "天満警察署南森町交番",
+      "address": "",
+      "kind": "police",
+      "source": "https://www.openstreetmap.org/node/1422991461"
+    },
+    {
+      "id": "node/1422991468",
+      "lat": 34.6923991,
+      "lng": 135.512011,
+      "category": "SAFE",
+      "name": "天満警察署天神橋北交番",
+      "address": "",
+      "kind": "police",
+      "source": "https://www.openstreetmap.org/node/1422991468"
+    },
+    {
+      "id": "node/2347044557",
+      "lat": 34.697106,
+      "lng": 135.514988,
+      "category": "MOVE",
+      "name": "堀川小学校前",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/2347044557"
+    },
+    {
+      "id": "node/2347057784",
+      "lat": 34.6969865,
+      "lng": 135.5169227,
+      "category": "MOVE",
+      "name": "東天満",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/2347057784"
+    },
+    {
+      "id": "node/2569658433",
+      "lat": 34.6974498,
+      "lng": 135.514188,
+      "category": "MOVE",
+      "name": "堀川小学校前",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/2569658433"
+    },
+    {
+      "id": "node/2569658441",
+      "lat": 34.6972712,
+      "lng": 135.5168585,
+      "category": "MOVE",
+      "name": "東天満",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/2569658441"
+    },
+    {
+      "id": "node/2569658455",
+      "lat": 34.6979263,
+      "lng": 135.5071293,
+      "category": "MOVE",
+      "name": "西天満",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/2569658455"
+    },
+    {
+      "id": "node/2847498663",
+      "lat": 34.6961454,
+      "lng": 135.5121553,
+      "category": "PUBLIC",
+      "name": "天満宮内無料トイレ",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/node/2847498663"
+    },
+    {
+      "id": "node/4427865859",
+      "lat": 34.697738,
+      "lng": 135.5101173,
+      "category": "MOVE",
+      "name": "南森町",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/4427865859"
+    },
+    {
+      "id": "node/5361492848",
+      "lat": 34.6977527,
+      "lng": 135.5099222,
+      "category": "MOVE",
+      "name": "南森町(西)",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/5361492848"
+    },
+    {
+      "id": "node/7829401273",
+      "lat": 34.6975782,
+      "lng": 135.5110024,
+      "category": "MOVE",
+      "name": "南森町",
+      "address": "",
+      "kind": "station",
+      "source": "https://www.openstreetmap.org/node/7829401273"
+    },
+    {
+      "id": "node/7829401274",
+      "lat": 34.6975137,
+      "lng": 135.5111553,
+      "category": "MOVE",
+      "name": "南森町",
+      "address": "",
+      "kind": "station",
+      "source": "https://www.openstreetmap.org/node/7829401274"
+    },
+    {
+      "id": "node/8068690419",
+      "lat": 34.6973362,
+      "lng": 135.5126257,
+      "category": "MOVE",
+      "name": "大阪天満宮",
+      "address": "",
+      "kind": "station",
+      "source": "https://www.openstreetmap.org/node/8068690419"
+    },
+    {
+      "id": "node/9579619734",
+      "lat": 34.6975974,
+      "lng": 135.5119941,
+      "category": "MOVE",
+      "name": "南森町(大阪天満宮)",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9579619734"
+    },
+    {
+      "id": "node/9579619737",
+      "lat": 34.6973457,
+      "lng": 135.5119769,
+      "category": "MOVE",
+      "name": "南森町(大阪天満宮)",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9579619737"
+    },
+    {
+      "id": "way/54037338",
+      "lat": 34.6924226,
+      "lng": 135.5077718,
+      "category": "PUBLIC",
+      "name": "中之島公園",
+      "address": "",
+      "kind": "park",
+      "source": "https://www.openstreetmap.org/way/54037338"
+    },
+    {
+      "id": "way/54037340",
+      "lat": 34.6917424,
+      "lng": 135.5106238,
+      "category": "PUBLIC",
+      "name": "剣先公園",
+      "address": "",
+      "kind": "park",
+      "source": "https://www.openstreetmap.org/way/54037340"
+    },
+    {
+      "id": "way/154096302",
+      "lat": 34.6985603,
+      "lng": 135.5080512,
+      "category": "PUBLIC",
+      "name": "西天満公園",
+      "address": "",
+      "kind": "park",
+      "source": "https://www.openstreetmap.org/way/154096302"
+    },
+    {
+      "id": "way/161620251",
+      "lat": 34.7010539,
+      "lng": 135.5143407,
+      "category": "PUBLIC",
+      "name": "与力町公園",
+      "address": "",
+      "kind": "park",
+      "source": "https://www.openstreetmap.org/way/161620251"
+    },
+    {
+      "id": "way/161620558",
+      "lat": 34.6941035,
+      "lng": 135.5146297,
+      "category": "PUBLIC",
+      "name": "滝川公園",
+      "address": "",
+      "kind": "park",
+      "source": "https://www.openstreetmap.org/way/161620558"
+    },
+    {
+      "id": "way/161621411",
+      "lat": 34.691977,
+      "lng": 135.5146066,
+      "category": "PUBLIC",
+      "name": "南天満公園",
+      "address": "",
+      "kind": "park",
+      "source": "https://www.openstreetmap.org/way/161621411"
+    },
+    {
+      "id": "way/179071406",
+      "lat": 34.6949219,
+      "lng": 135.5055101,
+      "category": "SAFE",
+      "name": "大阪府天満警察署",
+      "address": "",
+      "kind": "police",
+      "source": "https://www.openstreetmap.org/way/179071406"
+    },
+    {
+      "id": "way/195847174",
+      "lat": 34.7004742,
+      "lng": 135.5120888,
+      "category": "PUBLIC",
+      "name": "堀川児童遊園地",
+      "address": "",
+      "kind": "park",
+      "source": "https://www.openstreetmap.org/way/195847174"
+    },
+    {
+      "id": "way/220002950",
+      "lat": 34.6919344,
+      "lng": 135.5098321,
+      "category": "PUBLIC",
+      "name": "名称未登録",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/way/220002950"
+    },
+    {
+      "id": "way/220002953",
+      "lat": 34.6946746,
+      "lng": 135.5146782,
+      "category": "PUBLIC",
+      "name": "集会所",
+      "address": "",
+      "kind": "community_centre",
+      "source": "https://www.openstreetmap.org/way/220002953"
+    },
+    {
+      "id": "way/229170138",
+      "lat": 34.6959419,
+      "lng": 135.5078702,
+      "category": "PUBLIC",
+      "name": "西天満どんぐり公園",
+      "address": "",
+      "kind": "park",
+      "source": "https://www.openstreetmap.org/way/229170138"
+    },
+    {
+      "id": "way/231514786",
+      "lat": 34.692331,
+      "lng": 135.5125861,
+      "category": "PUBLIC",
+      "name": "名称未登録",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/way/231514786"
+    },
+    {
+      "id": "way/267344834",
+      "lat": 34.6929828,
+      "lng": 135.5054497,
+      "category": "PUBLIC",
+      "name": "中之島公園 公会堂前広場",
+      "address": "",
+      "kind": "park",
+      "source": "https://www.openstreetmap.org/way/267344834"
+    },
+    {
+      "id": "way/397584311",
+      "lat": 34.6927461,
+      "lng": 135.5075815,
+      "category": "PUBLIC",
+      "name": "名称未登録",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/way/397584311"
+    }
+  ]
+}

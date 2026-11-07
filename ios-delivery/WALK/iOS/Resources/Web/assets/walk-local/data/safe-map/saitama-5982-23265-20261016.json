@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5982-23265",
+  "lat": 35.8937973225,
+  "lng": 139.592416275,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.893938,
+      "lng": 139.591685,
+      "category": "SAFE",
+      "name": "植水支所",
+      "address": "さいたま市中野林173-2",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "中野林173-2",
+      "district": "西区",
+      "sourceRow": 11,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/5e3208f0271c3401",
+      "sourceRows": [
+        11
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.893749,
+      "lng": 139.592113,
+      "category": "SAFE",
+      "name": "植水老人憩いの家",
+      "address": "さいたま市中野林174-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "中野林174-1",
+      "district": "西区",
+      "sourceRow": 12,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/b0b88c8c3ca2d50a",
+      "sourceRows": [
+        12
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.89382879,
+      "lng": 139.5921677,
+      "category": "SAFE",
+      "name": "植水放課後児童クラブ",
+      "address": "さいたま市中野林174-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "中野林174-1",
+      "district": "西区",
+      "sourceRow": 13,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/0ae859452f24d3d1",
+      "sourceRows": [
+        13
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.8936735,
+      "lng": 139.5936994,
+      "category": "SAFE",
+      "name": "植水第二放課後児童クラブ",
+      "address": "さいたま市中野林225-3",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "中野林225-3",
+      "district": "西区",
+      "sourceRow": 14,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/d5e5e421c5ff1542",
+      "sourceRows": [
+        14
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

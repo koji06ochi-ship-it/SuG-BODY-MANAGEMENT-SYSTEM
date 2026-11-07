@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5751-22778-20261016",
+  "lat": 34.5068820666102,
+  "lng": 136.671709328794,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/19f677fc77735b17",
+      "lat": 34.506816596912,
+      "lng": 136.673920351895,
+      "category": "SAFE",
+      "name": "伊勢市立小俣小学校",
+      "address": "伊勢市小俣町元町663-１",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市小俣町元町663-１",
+      "sourceRow": 53,
+      "sourceRows": [
+        53
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/793be4d3622b9249",
+      "lat": 34.506402,
+      "lng": 136.673553,
+      "category": "SAFE",
+      "name": "伊勢市立小俣小学校　体育館",
+      "address": "伊勢市小俣町元町663-１",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市小俣町元町663-１",
+      "sourceRow": 54,
+      "sourceRows": [
+        54
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/ba7d94030c87a2e0",
+      "lat": 34.507476060077,
+      "lng": 136.669521046476,
+      "category": "SAFE",
+      "name": "伊勢市立小俣中学校",
+      "address": "伊勢市小俣町相合750",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市小俣町相合750",
+      "sourceRow": 73,
+      "sourceRows": [
+        73
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/a8b033aee65bdb9b",
+      "lat": 34.507652,
+      "lng": 136.670647,
+      "category": "SAFE",
+      "name": "伊勢市立小俣中学校　体育館",
+      "address": "伊勢市小俣町相合750",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市小俣町相合750",
+      "sourceRow": 74,
+      "sourceRows": [
+        74
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/55477e0390c63642",
+      "lat": 34.5070673336483,
+      "lng": 136.671484744754,
+      "category": "SAFE",
+      "name": "伊勢市立小俣幼稚園",
+      "address": "伊勢市小俣町本町1",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市小俣町本町1",
+      "sourceRow": 77,
+      "sourceRows": [
+        77
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/ff1ade0c92d65851",
+      "lat": 34.5072182074767,
+      "lng": 136.673076152801,
+      "category": "SAFE",
+      "name": "伊勢市小俣放課後児童ｸﾗﾌﾞ",
+      "address": "伊勢市小俣町元町662-1　小俣児童館内",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市小俣町元町662-1　小俣児童館内",
+      "sourceRow": 106,
+      "sourceRows": [
+        106
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/9a7158c474943cac",
+      "lat": 34.5060036021233,
+      "lng": 136.670344591627,
+      "category": "SAFE",
+      "name": "小俣農村環境改善センター",
+      "address": "伊勢市小俣町本町3",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市小俣町本町3",
+      "sourceRow": 126,
+      "sourceRows": [
+        126
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/2f29aeeebd4f0fa2",
+      "lat": 34.5064207326443,
+      "lng": 136.671127742799,
+      "category": "SAFE",
+      "name": "小俣図書館",
+      "address": "伊勢市小俣町本町2",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市小俣町本町2",
+      "sourceRow": 128,
+      "sourceRows": [
+        128
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5787-22557-20261016",
+  "lat": 34.72460815,
+  "lng": 135.34607221333331,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/2fb0a7122434d65e",
+      "lat": 34.72203382,
+      "lng": 135.3472386,
+      "category": "SAFE",
+      "name": "株式会社小西印刷所",
+      "address": "兵庫県西宮市今津西浜町２－６０",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市今津西浜町２－６０",
+      "district": "西宮市",
+      "sourceRow": 559,
+      "sourceRows": [
+        559
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/af6730b639baef53",
+      "lat": 34.72393747,
+      "lng": 135.3472634,
+      "category": "SAFE",
+      "name": "大阪ガス今津総合グラウンド",
+      "address": "兵庫県西宮市今津西浜町１－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市今津西浜町１－１",
+      "district": "西宮市",
+      "sourceRow": 560,
+      "sourceRows": [
+        560
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/5bc64463f09dbaf2",
+      "lat": 34.72785316,
+      "lng": 135.34371464,
+      "category": "SAFE",
+      "name": "三日月建設株式会社",
+      "address": "兵庫県西宮市東町１丁目１０－２７",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市東町１丁目１０－２７",
+      "district": "西宮市",
+      "sourceRow": 581,
+      "sourceRows": [
+        581
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

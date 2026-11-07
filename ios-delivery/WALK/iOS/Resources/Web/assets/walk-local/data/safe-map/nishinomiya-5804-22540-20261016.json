@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5804-22540-20261016",
+  "lat": 34.828628763333334,
+  "lng": 135.24155613333332,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/e413f0e701bbb715",
+      "lat": 34.82754467,
+      "lng": 135.2427332,
+      "category": "SAFE",
+      "name": "山口中学校",
+      "address": "兵庫県西宮市山口町上山口２丁目３－４３",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市山口町上山口２丁目３－４３",
+      "district": "西宮市",
+      "sourceRow": 60,
+      "sourceRows": [
+        60
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/48715107a183dce7",
+      "lat": 34.8284964,
+      "lng": 135.2402258,
+      "category": "SAFE",
+      "name": "山口センター",
+      "address": "兵庫県西宮市山口町下山口４丁目１－８",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市山口町下山口４丁目１－８",
+      "district": "西宮市",
+      "sourceRow": 237,
+      "sourceRows": [
+        237
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/1c508d90b87ffdf2",
+      "lat": 34.82984522,
+      "lng": 135.2417094,
+      "category": "SAFE",
+      "name": "西宮山口ＪＡセンター",
+      "address": "兵庫県西宮市山口町下山口５丁目２－14",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市山口町下山口５丁目２－14",
+      "district": "西宮市",
+      "sourceRow": 765,
+      "sourceRows": [
+        765
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

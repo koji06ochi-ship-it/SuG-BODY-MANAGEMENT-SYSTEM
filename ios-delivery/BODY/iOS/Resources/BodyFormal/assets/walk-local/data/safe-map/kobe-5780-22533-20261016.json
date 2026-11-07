@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5780-22533-20261016",
+  "lat": 34.68359426125625,
+  "lng": 135.2000821637212,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/e703b6c130c67f24",
+      "lat": 34.6851911741235,
+      "lng": 135.198167860925,
+      "category": "SAFE",
+      "name": "神戸税関",
+      "address": "神戸市中央区新港町12-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区新港町12-1",
+      "district": "中央区",
+      "sourceRow": 933,
+      "sourceRows": [
+        933
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a7ef3b76b650d07a",
+      "lat": 34.6850504406148,
+      "lng": 135.199301508576,
+      "category": "SAFE",
+      "name": "デザイン・クリエイティブセンター神戸（ＫＩＩＴＯ）",
+      "address": "神戸市中央区小野浜町1-4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区小野浜町1-4",
+      "district": "中央区",
+      "sourceRow": 944,
+      "sourceRows": [
+        944
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/034b39290b086a79",
+      "lat": 34.6839559086749,
+      "lng": 135.198880394837,
+      "category": "SAFE",
+      "name": "一般財団法人神戸港湾福利厚生協会",
+      "address": "神戸市中央区新港町5-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区新港町5-2",
+      "district": "中央区",
+      "sourceRow": 955,
+      "sourceRows": [
+        955
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/563cc3a96ced9323",
+      "lat": 34.6818535103854,
+      "lng": 135.201944762916,
+      "category": "SAFE",
+      "name": "神戸新交通株式会社　ポートターミナル駅",
+      "address": "神戸市中央区新港町新港第4突堤",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区新港町新港第4突堤",
+      "district": "中央区",
+      "sourceRow": 969,
+      "sourceRows": [
+        969
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9cd638b41a363436",
+      "lat": 34.6804640931241,
+      "lng": 135.202896946497,
+      "category": "SAFE",
+      "name": "株式会社フェリーセンター",
+      "address": "神戸市中央区新港町4番地5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区新港町4番地5",
+      "district": "中央区",
+      "sourceRow": 983,
+      "sourceRows": [
+        983
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4506ec8d66a2ba28",
+      "lat": 34.6850504406148,
+      "lng": 135.199301508576,
+      "category": "SAFE",
+      "name": "神戸市立三宮図書館",
+      "address": "神戸市中央区小野浜町1番地4デザイン・クリエイティブセンター神戸（KIITO）　２階",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区小野浜町1番地4デザイン・クリエイティブセンター神戸（KIITO）　２階",
+      "district": "中央区",
+      "sourceRow": 988,
+      "sourceRows": [
+        988
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

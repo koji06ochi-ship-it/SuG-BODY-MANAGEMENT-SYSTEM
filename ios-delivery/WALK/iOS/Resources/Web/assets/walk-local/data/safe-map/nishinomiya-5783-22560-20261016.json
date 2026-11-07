@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5783-22560-20261016",
+  "lat": 34.70231793399999,
+  "lng": 135.36535628000001,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/8df5182afa32c23e",
+      "lat": 34.69870386,
+      "lng": 135.3652419,
+      "category": "SAFE",
+      "name": "県立総合体育館",
+      "address": "兵庫県西宮市鳴尾浜１丁目１６－８",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市鳴尾浜１丁目１６－８",
+      "district": "西宮市",
+      "sourceRow": 454,
+      "sourceRows": [
+        454
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/02d2e9e59e75d71d",
+      "lat": 34.70369543,
+      "lng": 135.3657166,
+      "category": "SAFE",
+      "name": "兵庫県立西宮南高等学校",
+      "address": "兵庫県西宮市高須町２丁目1-43",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市高須町２丁目1-43",
+      "district": "西宮市",
+      "sourceRow": 465,
+      "sourceRows": [
+        465
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/0cac5e3920f275f7",
+      "lat": 34.70304802,
+      "lng": 135.3657814,
+      "category": "SAFE",
+      "name": "ノア・インドアステージ西宮",
+      "address": "兵庫県西宮市鳴尾浜１丁目１－３",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市鳴尾浜１丁目１－３",
+      "district": "西宮市",
+      "sourceRow": 471,
+      "sourceRows": [
+        471
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/f437d337055f0acc",
+      "lat": 34.70322049,
+      "lng": 135.3656848,
+      "category": "SAFE",
+      "name": "熊野の郷",
+      "address": "兵庫県西宮市鳴尾浜１丁目１－３",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市鳴尾浜１丁目１－３",
+      "district": "西宮市",
+      "sourceRow": 474,
+      "sourceRows": [
+        474
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/9a9879485fcf2ffd",
+      "lat": 34.70292187,
+      "lng": 135.3643567,
+      "category": "SAFE",
+      "name": "日本スウェージロックFST株式会社",
+      "address": "兵庫県西宮市鳴尾浜１丁目１－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市鳴尾浜１丁目１－１",
+      "district": "西宮市",
+      "sourceRow": 478,
+      "sourceRows": [
+        478
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

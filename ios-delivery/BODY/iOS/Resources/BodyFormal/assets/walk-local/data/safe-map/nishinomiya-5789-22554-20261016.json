@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5789-22554-20261016",
+  "lat": 34.736152128,
+  "lng": 135.3267951,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/d162606e6543515d",
+      "lat": 34.73813268,
+      "lng": 135.329294,
+      "category": "SAFE",
+      "name": "チャイルドハート保育サロンさくら夙川園",
+      "address": "兵庫県西宮市神楽町８－１８　シャレード夙川１Ｆ",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市神楽町８－１８　シャレード夙川１Ｆ",
+      "district": "西宮市",
+      "sourceRow": 116,
+      "sourceRows": [
+        116
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/ad6ba39ae148ed36",
+      "lat": 34.73444865,
+      "lng": 135.3246783,
+      "category": "SAFE",
+      "name": "保育園　パステルの森",
+      "address": "兵庫県西宮市弓場町１－２　モンブラン 1階",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市弓場町１－２　モンブラン 1階",
+      "district": "西宮市",
+      "sourceRow": 141,
+      "sourceRows": [
+        141
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/c26bcc7be9849285",
+      "lat": 34.73573663,
+      "lng": 135.3258488,
+      "category": "SAFE",
+      "name": "香櫨園市民館分館",
+      "address": "兵庫県西宮市屋敷町１２－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市屋敷町１２－１",
+      "district": "西宮市",
+      "sourceRow": 252,
+      "sourceRows": [
+        252
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/51ea49c7c57b43fb",
+      "lat": 34.73797336,
+      "lng": 135.3251198,
+      "category": "SAFE",
+      "name": "大手前大学",
+      "address": "兵庫県西宮市御茶家所町６－４２",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市御茶家所町６－４２",
+      "district": "西宮市",
+      "sourceRow": 298,
+      "sourceRows": [
+        298
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/67be9b7eb4d9c7a6",
+      "lat": 34.73446932,
+      "lng": 135.3290346,
+      "category": "SAFE",
+      "name": "阪神電鉄香櫨園駅",
+      "address": "兵庫県西宮市松下町１－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市松下町１－１",
+      "district": "西宮市",
+      "sourceRow": 341,
+      "sourceRows": [
+        341
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

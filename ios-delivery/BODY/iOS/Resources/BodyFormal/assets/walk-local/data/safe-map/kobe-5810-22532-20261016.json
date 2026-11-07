@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5810-22532-20261016",
+  "lat": 34.8647450412075,
+  "lng": 135.194450604971,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/60c7f9aff4d7e6db",
+      "lat": 34.8658328261257,
+      "lng": 135.194584136344,
+      "category": "SAFE",
+      "name": "神戸市立　長尾小学校",
+      "address": "神戸市北区上津台3丁目4番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区上津台3丁目4番1号",
+      "district": "北区",
+      "sourceRow": 2251,
+      "sourceRows": [
+        2251
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/666a39e53c2e0772",
+      "lat": 34.8653655061782,
+      "lng": 135.193513696601,
+      "category": "SAFE",
+      "name": "オリンピア神戸北保育園",
+      "address": "神戸市北区上津台6丁目1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区上津台6丁目1-1",
+      "district": "北区",
+      "sourceRow": 2483,
+      "sourceRows": [
+        2483
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0abb6c9d3394ebb3",
+      "lat": 34.8630367913186,
+      "lng": 135.195253981968,
+      "category": "SAFE",
+      "name": "上津台LAKUU自治会　集会所",
+      "address": "神戸市北区上津台2-19-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区上津台2-19-1",
+      "district": "北区",
+      "sourceRow": 2490,
+      "sourceRows": [
+        2490
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

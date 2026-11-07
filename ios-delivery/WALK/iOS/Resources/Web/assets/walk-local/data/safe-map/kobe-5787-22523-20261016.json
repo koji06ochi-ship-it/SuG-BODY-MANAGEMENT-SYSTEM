@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5787-22523-20261016",
+  "lat": 34.72495646617392,
+  "lng": 135.14227672703458,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/727695a70cedc159",
+      "lat": 34.7251883424072,
+      "lng": 135.140936175577,
+      "category": "SAFE",
+      "name": "神戸市立　鈴蘭台小学校",
+      "address": "神戸市北区鈴蘭台南町2丁目14－24",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鈴蘭台南町2丁目14－24",
+      "district": "北区",
+      "sourceRow": 2243,
+      "sourceRows": [
+        2243
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e59fb5311a371fd7",
+      "lat": 34.7251883424072,
+      "lng": 135.140936175577,
+      "category": "SAFE",
+      "name": "鈴蘭台地域福祉センター",
+      "address": "神戸市北区鈴蘭台南町2丁目14－24",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鈴蘭台南町2丁目14－24",
+      "district": "北区",
+      "sourceRow": 2360,
+      "sourceRows": [
+        2360
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6fdc1d0c46ba303a",
+      "lat": 34.7241070973419,
+      "lng": 135.143472988114,
+      "category": "SAFE",
+      "name": "鈴蘭台幼稚園",
+      "address": "神戸市北区鈴蘭台南町1丁目2-15",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鈴蘭台南町1丁目2-15",
+      "district": "北区",
+      "sourceRow": 2502,
+      "sourceRows": [
+        2502
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c2441259af662777",
+      "lat": 34.7240131266228,
+      "lng": 135.143141247353,
+      "category": "SAFE",
+      "name": "すずらんキッズ保育園",
+      "address": "神戸市北区鈴蘭台南町1丁目4-40",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鈴蘭台南町1丁目4-40",
+      "district": "北区",
+      "sourceRow": 2503,
+      "sourceRows": [
+        2503
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6a0ea1b29fc69f45",
+      "lat": 34.7262854220905,
+      "lng": 135.142897048552,
+      "category": "SAFE",
+      "name": "看護小規模多機能型居宅介護　うさぎの丘鈴蘭台",
+      "address": "神戸市北区鈴蘭台西町１－１６－３",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鈴蘭台西町１－１６－３",
+      "district": "北区",
+      "sourceRow": 2575,
+      "sourceRows": [
+        2575
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

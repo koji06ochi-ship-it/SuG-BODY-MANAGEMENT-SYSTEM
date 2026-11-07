@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5804-22539-20261016",
+  "lat": 34.826644449999996,
+  "lng": 135.23618146666666,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/965e52d68a891715",
+      "lat": 34.82745887,
+      "lng": 135.2371038,
+      "category": "SAFE",
+      "name": "山口小学校",
+      "address": "兵庫県西宮市山口町下山口４丁目２３－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市山口町下山口４丁目２３－１",
+      "district": "西宮市",
+      "sourceRow": 37,
+      "sourceRows": [
+        37
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/9ff24c0cc13327e4",
+      "lat": 34.82716332,
+      "lng": 135.2354317,
+      "category": "SAFE",
+      "name": "流通東体育館",
+      "address": "兵庫県西宮市山口町阪神流通センター１丁目５－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市山口町阪神流通センター１丁目５－１",
+      "district": "西宮市",
+      "sourceRow": 189,
+      "sourceRows": [
+        189
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/fea8d967ffddec42",
+      "lat": 34.82531116,
+      "lng": 135.2360089,
+      "category": "SAFE",
+      "name": "那須梱包株式会社西宮包装センター",
+      "address": "兵庫県西宮市山口町阪神流通センター１丁目６５",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市山口町阪神流通センター１丁目６５",
+      "district": "西宮市",
+      "sourceRow": 756,
+      "sourceRows": [
+        756
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

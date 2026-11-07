@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5787-22521-20261016",
+  "lat": 34.72329220488833,
+  "lng": 135.129012316906,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/8551950ec3cbfbad",
+      "lat": 34.7221719008229,
+      "lng": 135.128721459597,
+      "category": "SAFE",
+      "name": "ウエルシア　神戸鳴子店",
+      "address": "神戸市北区鳴子1丁目14-10",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鳴子1丁目14-10",
+      "district": "北区",
+      "sourceRow": 2435,
+      "sourceRows": [
+        2435
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3dbc7063f70b26c8",
+      "lat": 34.7220527009311,
+      "lng": 135.126320690079,
+      "category": "SAFE",
+      "name": "社会福祉法人頌栄会　認定こども園　頌栄保育園",
+      "address": "神戸市北区鳴子2丁目11-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区鳴子2丁目11-2",
+      "district": "北区",
+      "sourceRow": 2452,
+      "sourceRows": [
+        2452
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5d96d6f2566d4ce6",
+      "lat": 34.725652012911,
+      "lng": 135.131994801042,
+      "category": "SAFE",
+      "name": "西鈴蘭台頌栄保育園",
+      "address": "神戸市北区南五葉2丁目3-11",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区南五葉2丁目3-11",
+      "district": "北区",
+      "sourceRow": 2489,
+      "sourceRows": [
+        2489
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

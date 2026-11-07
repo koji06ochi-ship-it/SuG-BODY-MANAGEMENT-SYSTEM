@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5773-22504-20261016",
+  "lat": 34.64189666189883,
+  "lng": 135.02762720576266,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/467c1a2c7ff7c49a",
+      "lat": 34.6419247911044,
+      "lng": 135.024904811554,
+      "category": "SAFE",
+      "name": "舞子すみれ園",
+      "address": "神戸市垂水区西舞子6丁目1-13",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区西舞子6丁目1-13",
+      "district": "垂水区",
+      "sourceRow": 432,
+      "sourceRows": [
+        432
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ef68cd9e3bbb1107",
+      "lat": 34.6427758066087,
+      "lng": 135.02894461474,
+      "category": "SAFE",
+      "name": "舞子幼稚園",
+      "address": "神戸市垂水区西舞子４丁目2-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区西舞子４丁目2-5",
+      "district": "垂水区",
+      "sourceRow": 440,
+      "sourceRows": [
+        440
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/233cdd7aafad876b",
+      "lat": 34.6409893879834,
+      "lng": 135.029032190994,
+      "category": "SAFE",
+      "name": "幼保連携型認定こども園　舞子保育園",
+      "address": "神戸市垂水区西舞子2丁目12-27",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区西舞子2丁目12-27",
+      "district": "垂水区",
+      "sourceRow": 441,
+      "sourceRows": [
+        441
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

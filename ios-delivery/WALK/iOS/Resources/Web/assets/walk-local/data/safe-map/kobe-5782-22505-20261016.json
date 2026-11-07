@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5782-22505-20261016",
+  "lat": 34.6972423836477,
+  "lng": 135.031623050017,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/2a2d1da164058c94",
+      "lat": 34.697033960483,
+      "lng": 135.03047981876,
+      "category": "SAFE",
+      "name": "神戸市立　井吹台中学校",
+      "address": "神戸市西区井吹台西町2-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区井吹台西町2-3",
+      "district": "西区",
+      "sourceRow": 505,
+      "sourceRows": [
+        505
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/46591eb8d598a480",
+      "lat": 34.6974508068124,
+      "lng": 135.032766281274,
+      "category": "SAFE",
+      "name": "なでしこレディースホスピタル（医療法人　三友会）",
+      "address": "神戸市西区井吹台東町2丁目13番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区井吹台東町2丁目13番地",
+      "district": "西区",
+      "sourceRow": 749,
+      "sourceRows": [
+        749
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

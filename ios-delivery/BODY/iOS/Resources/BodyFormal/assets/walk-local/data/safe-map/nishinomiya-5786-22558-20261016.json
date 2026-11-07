@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5786-22558-20261016",
+  "lat": 34.718991888333335,
+  "lng": 135.3499032166667,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/a8e9df43ae577bf0",
+      "lat": 34.71909833,
+      "lng": 135.3530667,
+      "category": "SAFE",
+      "name": "南甲子園小学校",
+      "address": "兵庫県西宮市南甲子園３丁目９－１６",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市南甲子園３丁目９－１６",
+      "district": "西宮市",
+      "sourceRow": 30,
+      "sourceRows": [
+        30
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/8ab4f09e11e72fea",
+      "lat": 34.71886384,
+      "lng": 135.3485008,
+      "category": "SAFE",
+      "name": "真砂中学校",
+      "address": "兵庫県西宮市今津真砂町１－１０",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市今津真砂町１－１０",
+      "district": "西宮市",
+      "sourceRow": 54,
+      "sourceRows": [
+        54
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/5de9ee33f479fded",
+      "lat": 34.71970006,
+      "lng": 135.3501075,
+      "category": "SAFE",
+      "name": "今津体育館",
+      "address": "兵庫県西宮市今津真砂町１－４",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市今津真砂町１－４",
+      "district": "西宮市",
+      "sourceRow": 183,
+      "sourceRows": [
+        183
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/6e6a874153bbe7a4",
+      "lat": 34.71717335,
+      "lng": 135.3484342,
+      "category": "SAFE",
+      "name": "甲子園浜海浜公園　東多目的広場",
+      "address": "兵庫県西宮市甲子園浜３丁目",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲子園浜３丁目",
+      "district": "西宮市",
+      "sourceRow": 278,
+      "sourceRows": [
+        278
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/c42e1165ba3ca0f4",
+      "lat": 34.72013215,
+      "lng": 135.3490948,
+      "category": "SAFE",
+      "name": "県営西宮真砂高層住宅",
+      "address": "兵庫県西宮市今津真砂町１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市今津真砂町１",
+      "district": "西宮市",
+      "sourceRow": 441,
+      "sourceRows": [
+        441
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/e7992466d5c55760",
+      "lat": 34.7189836,
+      "lng": 135.3502153,
+      "category": "SAFE",
+      "name": "兵庫県立西宮今津高等学校",
+      "address": "兵庫県西宮市浜甲子園４丁目1-5",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市浜甲子園４丁目1-5",
+      "district": "西宮市",
+      "sourceRow": 446,
+      "sourceRows": [
+        446
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

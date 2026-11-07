@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5808-22536-20261016",
+  "lat": 34.85259448344583,
+  "lng": 135.21848229931751,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/c4e2d74b2c32a4ec",
+      "lat": 34.8504495626229,
+      "lng": 135.216486354241,
+      "category": "SAFE",
+      "name": "ウエルシア　神戸北八多店",
+      "address": "神戸市北区八多町中231-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区八多町中231-1",
+      "district": "北区",
+      "sourceRow": 2437,
+      "sourceRows": [
+        2437
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/01f1ee4607882436",
+      "lat": 34.8537880785334,
+      "lng": 135.220020558398,
+      "category": "SAFE",
+      "name": "メゾン悠遊（株式会社不老）",
+      "address": "神戸市北区八多町中894番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区八多町中894番",
+      "district": "北区",
+      "sourceRow": 2447,
+      "sourceRows": [
+        2447
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6042a957481d9d47",
+      "lat": 34.8539900537082,
+      "lng": 135.219725632678,
+      "category": "SAFE",
+      "name": "株式会社ネオライフサポート　グラン悠遊",
+      "address": "神戸市北区八多町中888",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区八多町中888",
+      "district": "北区",
+      "sourceRow": 2474,
+      "sourceRows": [
+        2474
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e375d77172d1758b",
+      "lat": 34.8521502389188,
+      "lng": 135.217696651953,
+      "category": "SAFE",
+      "name": "しわ歯科医院",
+      "address": "神戸市北区八多町中1061番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区八多町中1061番地",
+      "district": "北区",
+      "sourceRow": 2545,
+      "sourceRows": [
+        2545
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5980-23270",
+  "lat": 35.883830117142864,
+  "lng": 139.62377124285715,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.882769,
+      "lng": 139.625375,
+      "category": "SAFE",
+      "name": "与野本町第１自転車駐車場",
+      "address": "さいたま市本町東2-128",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "本町東2-128",
+      "district": "中央区",
+      "sourceRow": 319,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/34f7e22810e207c2",
+      "sourceRows": [
+        319
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.88406596,
+      "lng": 139.6235736,
+      "category": "SAFE",
+      "name": "子育て支援センターよの",
+      "address": "さいたま市本町東3-5-23",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "本町東3-5-23",
+      "district": "中央区",
+      "sourceRow": 320,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/0bf77b113b675d0f",
+      "sourceRows": [
+        320
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.8840107,
+      "lng": 139.6233934,
+      "category": "SAFE",
+      "name": "与野本町小学校放課後子ども居場所事業",
+      "address": "さいたま市本町東3-5-23",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "本町東3-5-23",
+      "district": "中央区",
+      "sourceRow": 321,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/0401c0cdd178c8b8",
+      "sourceRows": [
+        321
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.88349772,
+      "lng": 139.6239729,
+      "category": "SAFE",
+      "name": "与野本町コミュニティセンター",
+      "address": "さいたま市本町東3-5-43",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "本町東3-5-43",
+      "district": "中央区",
+      "sourceRow": 322,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/03cbffae3c8c191d",
+      "sourceRows": [
+        322,
+        323,
+        324
+      ],
+      "duplicateSourceEntries": 3
+    },
+    {
+      "lat": 35.885472,
+      "lng": 139.622138,
+      "category": "SAFE",
+      "name": "与野本町デイサービスセンター",
+      "address": "さいたま市本町東4-7-20",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "本町東4-7-20",
+      "district": "中央区",
+      "sourceRow": 325,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/0c9e9beee92dcc52",
+      "sourceRows": [
+        325
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

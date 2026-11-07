@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5775-22507-20261016",
+  "lat": 34.65158017156224,
+  "lng": 135.0447465988585,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/85fdc78f68d3dc34",
+      "lat": 34.6529063473029,
+      "lng": 135.046794991816,
+      "category": "SAFE",
+      "name": "神戸市立　多聞南小学校",
+      "address": "神戸市垂水区本多聞5丁目2－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区本多聞5丁目2－1",
+      "district": "垂水区",
+      "sourceRow": 317,
+      "sourceRows": [
+        317
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4627d47734d8e000",
+      "lat": 34.6509097723278,
+      "lng": 135.044595059321,
+      "category": "SAFE",
+      "name": "神戸市環境局垂水事業所",
+      "address": "神戸市垂水区本多聞7丁目1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区本多聞7丁目1-1",
+      "district": "垂水区",
+      "sourceRow": 337,
+      "sourceRows": [
+        337
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/acb4440f7fba7696",
+      "lat": 34.65115439454,
+      "lng": 135.045298062871,
+      "category": "SAFE",
+      "name": "多聞南地域福祉センター",
+      "address": "神戸市垂水区本多聞6丁目8-12",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区本多聞6丁目8-12",
+      "district": "垂水区",
+      "sourceRow": 380,
+      "sourceRows": [
+        380
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9c4ea8f66f3af65f",
+      "lat": 34.6514385762945,
+      "lng": 135.044122771325,
+      "category": "SAFE",
+      "name": "神戸市立　自立援助ホームこどもの家",
+      "address": "神戸市垂水区本多聞7丁目2-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区本多聞7丁目2-3",
+      "district": "垂水区",
+      "sourceRow": 400,
+      "sourceRows": [
+        400
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/43e6faeea95188c2",
+      "lat": 34.6516135525696,
+      "lng": 135.043149125741,
+      "category": "SAFE",
+      "name": "特別養護老人ホーム　本多聞ケアホーム",
+      "address": "神戸市垂水区本多聞7丁目2-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区本多聞7丁目2-2",
+      "district": "垂水区",
+      "sourceRow": 402,
+      "sourceRows": [
+        402
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/68f9dff72ec6afce",
+      "lat": 34.6521813080346,
+      "lng": 135.044711615838,
+      "category": "SAFE",
+      "name": "本多聞南公園",
+      "address": "神戸市垂水区本多聞7-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区本多聞7-3",
+      "district": "垂水区",
+      "sourceRow": 412,
+      "sourceRows": [
+        412
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/71afce52333d242d",
+      "lat": 34.6514385762945,
+      "lng": 135.044122771325,
+      "category": "SAFE",
+      "name": "西部在宅障害者福祉センター",
+      "address": "神戸市垂水区本多聞７丁目２-３",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区本多聞７丁目２-３",
+      "district": "垂水区",
+      "sourceRow": 435,
+      "sourceRows": [
+        435
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/72bd436aa15fb390",
+      "lat": 34.650998845134,
+      "lng": 135.045178392631,
+      "category": "SAFE",
+      "name": "神戸市環境局垂水事業所（事務室・東館）",
+      "address": "神戸市垂水区本多聞6丁目8番地10",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区本多聞6丁目8番地10",
+      "district": "垂水区",
+      "sourceRow": 481,
+      "sourceRows": [
+        481
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

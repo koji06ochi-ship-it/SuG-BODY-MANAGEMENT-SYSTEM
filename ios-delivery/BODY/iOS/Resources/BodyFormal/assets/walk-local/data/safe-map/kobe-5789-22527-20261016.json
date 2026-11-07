@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5789-22527-20261016",
+  "lat": 34.73781936309542,
+  "lng": 135.1643233607124,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/cdf3fbe0644150c8",
+      "lat": 34.7394257854154,
+      "lng": 135.162298343805,
+      "category": "SAFE",
+      "name": "兵庫県立　神戸甲北高等学校",
+      "address": "神戸市北区大脇台9-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区大脇台9-1",
+      "district": "北区",
+      "sourceRow": 2222,
+      "sourceRows": [
+        2222
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/80aabf17ff0f7088",
+      "lat": 34.7389746489645,
+      "lng": 135.16391426401,
+      "category": "SAFE",
+      "name": "兵庫県立　神戸特別支援学校",
+      "address": "神戸市北区大脇台10番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区大脇台10番1号",
+      "district": "北区",
+      "sourceRow": 2225,
+      "sourceRows": [
+        2225
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ef1428f088ed998e",
+      "lat": 34.7360579750012,
+      "lng": 135.16508489321,
+      "category": "SAFE",
+      "name": "神戸弘陵学園",
+      "address": "神戸市北区山田町小部妙賀山10－4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町小部妙賀山10－4",
+      "district": "北区",
+      "sourceRow": 2261,
+      "sourceRows": [
+        2261
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1add5a258ab5078e",
+      "lat": 34.7365643070311,
+      "lng": 135.166917782454,
+      "category": "SAFE",
+      "name": "特別養護老人ホーム　六甲の館",
+      "address": "神戸市北区山田町小部字妙賀山13-17",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町小部字妙賀山13-17",
+      "district": "北区",
+      "sourceRow": 2505,
+      "sourceRows": [
+        2505
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/fa40da6dcd0d2c51",
+      "lat": 34.7380740990649,
+      "lng": 135.163401520083,
+      "category": "SAFE",
+      "name": "白百合学園",
+      "address": "神戸市北区大脇台12-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区大脇台12-1",
+      "district": "北区",
+      "sourceRow": 2552,
+      "sourceRows": [
+        2552
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

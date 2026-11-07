@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5804-22533-20261016",
+  "lat": 34.826442627811446,
+  "lng": 135.1991504394705,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/c10d3fcc0bdac4c0",
+      "lat": 34.8265754009836,
+      "lng": 135.199258006135,
+      "category": "SAFE",
+      "name": "兵庫六甲農業協同組合　八多支店",
+      "address": "神戸市北区八多町附物783-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区八多町附物783-2",
+      "district": "北区",
+      "sourceRow": 2300,
+      "sourceRows": [
+        2300
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c16ca0a015c156f5",
+      "lat": 34.8263098546393,
+      "lng": 135.199042872806,
+      "category": "SAFE",
+      "name": "神戸市北区北神支所　八多連絡所",
+      "address": "神戸市北区八多町附物782-7",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区八多町附物782-7",
+      "district": "北区",
+      "sourceRow": 2449,
+      "sourceRows": [
+        2449
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

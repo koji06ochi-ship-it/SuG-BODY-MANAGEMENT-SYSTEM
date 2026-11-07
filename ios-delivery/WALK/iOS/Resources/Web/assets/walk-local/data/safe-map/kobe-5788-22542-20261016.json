@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5788-22542-20261016",
+  "lat": 34.7327483062773,
+  "lng": 135.25460588286398,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/a73fad80c8547d57",
+      "lat": 34.7334536260166,
+      "lng": 135.254694215522,
+      "category": "SAFE",
+      "name": "住吉山手コモンズ　マンション管理組合",
+      "address": "神戸市東灘区住吉山手7丁目2－3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区住吉山手7丁目2－3",
+      "district": "東灘区",
+      "sourceRow": 1502,
+      "sourceRows": [
+        1502
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/da2d3fb24270ddf6",
+      "lat": 34.732042986538,
+      "lng": 135.254517550206,
+      "category": "SAFE",
+      "name": "神戸大学附属中等教育学校",
+      "address": "神戸市東灘区住吉山手5丁目11-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区住吉山手5丁目11-1",
+      "district": "東灘区",
+      "sourceRow": 1663,
+      "sourceRows": [
+        1663
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

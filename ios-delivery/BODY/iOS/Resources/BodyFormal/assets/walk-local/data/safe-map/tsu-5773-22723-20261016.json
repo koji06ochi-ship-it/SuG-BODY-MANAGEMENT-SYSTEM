@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5773-22723",
+  "lat": 34.639465,
+  "lng": 136.339821,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.639369,
+      "lng": 136.340173,
+      "category": "SAFE",
+      "name": "白山保健センター",
+      "address": "津市白山町川口892 白山保健福祉ｾﾝﾀｰ内",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "白山町川口892 白山保健福祉ｾﾝﾀｰ内",
+      "district": "白山",
+      "sourceRow": 248,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/b55a28e7a9757cad",
+      "sourceRows": [
+        248
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.639513,
+      "lng": 136.339645,
+      "category": "SAFE",
+      "name": "白山総合支所",
+      "address": "津市白山町川口892",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "白山町川口892",
+      "district": "白山",
+      "sourceRow": 249,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/4737752cd7c5504e",
+      "sourceRows": [
+        249
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.639513,
+      "lng": 136.339645,
+      "category": "SAFE",
+      "name": "白山市民会館",
+      "address": "津市白山町川口892",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "白山町川口892",
+      "district": "白山",
+      "sourceRow": 260,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/df3f52ce4c7a8375",
+      "sourceRows": [
+        260
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5781-22518-20261016",
+  "lat": 34.68962672244444,
+  "lng": 135.1107903268424,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/4a525f94ea8a9eb3",
+      "lat": 34.6918591245695,
+      "lng": 135.109869599615,
+      "category": "SAFE",
+      "name": "神戸市立　須磨北中学校",
+      "address": "神戸市須磨区東白川台5-1-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区東白川台5-1-1",
+      "district": "須磨区",
+      "sourceRow": 40,
+      "sourceRows": [
+        40
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/850773b984df37aa",
+      "lat": 34.689439937695,
+      "lng": 135.109458370034,
+      "category": "SAFE",
+      "name": "株式会社　平成お湯物語（チムジルバンスパ神戸）",
+      "address": "神戸市須磨区車奥中ノ尾772-6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区車奥中ノ尾772-6",
+      "district": "須磨区",
+      "sourceRow": 88,
+      "sourceRows": [
+        88
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/395e487ba821b5e0",
+      "lat": 34.6865898661075,
+      "lng": 135.110528450693,
+      "category": "SAFE",
+      "name": "グランドパレス上須磨",
+      "address": "神戸市須磨区若草町1-2-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区若草町1-2-5",
+      "district": "須磨区",
+      "sourceRow": 99,
+      "sourceRows": [
+        99
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1ce555849d4bb848",
+      "lat": 34.6901223419251,
+      "lng": 135.112047606935,
+      "category": "SAFE",
+      "name": "神戸市立　若草児童館",
+      "address": "神戸市須磨区若草町3丁目14－9",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区若草町3丁目14－9",
+      "district": "須磨区",
+      "sourceRow": 135,
+      "sourceRows": [
+        135
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a4e723bcc1aed806",
+      "lat": 34.6901223419251,
+      "lng": 135.112047606935,
+      "category": "SAFE",
+      "name": "若草地域福祉センター",
+      "address": "神戸市須磨区若草町3丁目14－9",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区若草町3丁目14－9",
+      "district": "須磨区",
+      "sourceRow": 149,
+      "sourceRows": [
+        149
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

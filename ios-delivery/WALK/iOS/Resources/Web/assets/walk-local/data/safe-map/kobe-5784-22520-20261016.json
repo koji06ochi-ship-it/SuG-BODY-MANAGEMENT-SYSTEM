@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5784-22520-20261016",
+  "lat": 34.70617448280213,
+  "lng": 135.120898633027,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/7a91504a42a2a2ff",
+      "lat": 34.7056036598698,
+      "lng": 135.120289625015,
+      "category": "SAFE",
+      "name": "神戸拘置所",
+      "address": "神戸市北区ひよどり北町2－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区ひよどり北町2－1",
+      "district": "北区",
+      "sourceRow": 2188,
+      "sourceRows": [
+        2188
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5b526a25a58d7118",
+      "lat": 34.7075374431004,
+      "lng": 135.120292589895,
+      "category": "SAFE",
+      "name": "神戸市民防災総合センター",
+      "address": "神戸市北区ひよどり北町3－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区ひよどり北町3－1",
+      "district": "北区",
+      "sourceRow": 2189,
+      "sourceRows": [
+        2189
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/846c72b12106b5df",
+      "lat": 34.7053823454362,
+      "lng": 135.122113684171,
+      "category": "SAFE",
+      "name": "鵯越斎場",
+      "address": "神戸市北区山田町下谷上字中一里山14-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町下谷上字中一里山14-1",
+      "district": "北区",
+      "sourceRow": 2520,
+      "sourceRows": [
+        2520
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

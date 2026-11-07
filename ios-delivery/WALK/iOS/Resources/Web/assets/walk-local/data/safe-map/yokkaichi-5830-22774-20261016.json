@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "id": "yokkaichi-5830-22774-20261016",
+  "lat": 34.98354258714286,
+  "lng": 136.64704878571428,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "四日市市",
+  "source": "四日市市内公共施設 AED設置箇所一覧",
+  "sourceUrl": "https://data.bodik.jp/dataset/242021_00127",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/422f8da8-0b3c-4d84-b8dd-d88d18e914ce/resource/2a5eee8b-c455-4c2e-8553-b0d3d36e5ef2/download/242021_aed.csv",
+  "sourceUpdatedAt": "2024-12-18",
+  "sourcePageUpdatedAt": "2025-01-24",
+  "retrievedAt": "2026-10-15T15:44:16.747Z",
+  "sourceFileSha256": "c0880c81977c7fc444213ee84ef31a7b2e9e34f12d31e892064cbabb7d5159cf",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/yokkaichi/aed/edaa1801492b1a92",
+      "lat": 34.98009608,
+      "lng": 136.6461219,
+      "category": "SAFE",
+      "name": "霞ヶ浦緑地運動施設（霞ヶ浦第１野球場）",
+      "address": "四日市市大字羽津甲5169番地",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市大字羽津甲5169番地",
+      "sourceRow": 202,
+      "sourceRows": [
+        202
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/52f4665ddd93fc09",
+      "lat": 34.9811591,
+      "lng": 136.6468887,
+      "category": "SAFE",
+      "name": "霞ヶ浦緑地運動施設（霞ケ浦第３野球場）",
+      "address": "四日市市大字羽津甲5169番地",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市大字羽津甲5169番地",
+      "sourceRow": 203,
+      "sourceRows": [
+        203
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/78f945c29cbefcba",
+      "lat": 34.98404367,
+      "lng": 136.6483832,
+      "category": "SAFE",
+      "name": "霞ヶ浦緑地運動施設（霞ケ浦体育館）",
+      "address": "四日市市大字羽津甲5169番地",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市大字羽津甲5169番地",
+      "sourceRow": 204,
+      "sourceRows": [
+        204
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/7fdb5a56c325b3f4",
+      "lat": 34.98579901,
+      "lng": 136.6490625,
+      "category": "SAFE",
+      "name": "霞ヶ浦緑地運動施設（四日市テニスセンター）",
+      "address": "四日市市大字羽津甲5169番地",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市大字羽津甲5169番地",
+      "sourceRow": 206,
+      "sourceRows": [
+        206
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/0d135531e15a4745",
+      "lat": 34.98517021,
+      "lng": 136.6455809,
+      "category": "SAFE",
+      "name": "四日市競輪場",
+      "address": "四日市市大字羽津甲5163",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市大字羽津甲5163",
+      "sourceRow": 234,
+      "sourceRows": [
+        234
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/060903b492e6ae8c",
+      "lat": 34.98516347,
+      "lng": 136.6455768,
+      "category": "SAFE",
+      "name": "四日市競輪場",
+      "address": "四日市市大字羽津甲5163",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市大字羽津甲5163",
+      "sourceRow": 235,
+      "sourceRows": [
+        235
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/c3caa357dba62ec2",
+      "lat": 34.98336657,
+      "lng": 136.6477275,
+      "category": "SAFE",
+      "name": "四日市ドーム",
+      "address": "四日市市大字羽津甲５１６９番地",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市大字羽津甲５１６９番地",
+      "sourceRow": 279,
+      "sourceRows": [
+        279
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

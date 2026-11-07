@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5782-22547-20261016",
+  "lat": 34.695772142265724,
+  "lng": 135.28437385774225,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/b9337a1f1b7078e7",
+      "lat": 34.6970673490172,
+      "lng": 135.282531721062,
+      "category": "SAFE",
+      "name": "商船三井さんふらわあ　神戸港のりば",
+      "address": "神戸市東灘区向洋町東3丁目1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町東3丁目1",
+      "district": "東灘区",
+      "sourceRow": 1499,
+      "sourceRows": [
+        1499
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/48e0574ce3cf54e6",
+      "lat": 34.6966873382753,
+      "lng": 135.284975759327,
+      "category": "SAFE",
+      "name": "阪九フェリー",
+      "address": "神戸市東灘区向洋町東3丁目2－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町東3丁目2－1",
+      "district": "東灘区",
+      "sourceRow": 1500,
+      "sourceRows": [
+        1500
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4291ebceb8d23164",
+      "lat": 34.6943585609354,
+      "lng": 135.283380292467,
+      "category": "SAFE",
+      "name": "大本紙料株式会社　大本リサイクルセンター（ORC）",
+      "address": "神戸市東灘区向洋町東2丁目4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町東2丁目4",
+      "district": "東灘区",
+      "sourceRow": 1704,
+      "sourceRows": [
+        1704
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/86ec783e64c59238",
+      "lat": 34.694975320835,
+      "lng": 135.286607658113,
+      "category": "SAFE",
+      "name": "大本紙料株式会社　六甲アイランド本社工場",
+      "address": "神戸市東灘区向洋町東3丁目17",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区向洋町東3丁目17",
+      "district": "東灘区",
+      "sourceRow": 1705,
+      "sourceRows": [
+        1705
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

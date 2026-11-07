@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5780-22527-20261016",
+  "lat": 34.68265781884749,
+  "lng": 135.1650820410546,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/3d491b1ee2f26145",
+      "lat": 34.6804919839948,
+      "lng": 135.165484536244,
+      "category": "SAFE",
+      "name": "神戸市　兵庫区役所",
+      "address": "神戸市兵庫区荒田町1丁目21-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区荒田町1丁目21-1",
+      "district": "兵庫区",
+      "sourceRow": 2034,
+      "sourceRows": [
+        2034
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e219b42aaef1d9e4",
+      "lat": 34.6818739125306,
+      "lng": 135.164064675125,
+      "category": "SAFE",
+      "name": "セブンガーデン",
+      "address": "神戸市兵庫区東山町2丁目3-18",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区東山町2丁目3-18",
+      "district": "兵庫区",
+      "sourceRow": 2050,
+      "sourceRows": [
+        2050
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8e5dc64c333e710b",
+      "lat": 34.6818667718989,
+      "lng": 135.162216451915,
+      "category": "SAFE",
+      "name": "神戸市立　湊川児童館",
+      "address": "神戸市兵庫区東山町4丁目-20-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区東山町4丁目-20-1",
+      "district": "兵庫区",
+      "sourceRow": 2086,
+      "sourceRows": [
+        2086
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/f12db5a0aea379d3",
+      "lat": 34.6842314035971,
+      "lng": 135.163712948936,
+      "category": "SAFE",
+      "name": "神戸市建設局中部建設事務所",
+      "address": "神戸市兵庫区湊川町2丁目1－12",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区湊川町2丁目1－12",
+      "district": "兵庫区",
+      "sourceRow": 2087,
+      "sourceRows": [
+        2087
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/098a635bb9f9331f",
+      "lat": 34.6845720399979,
+      "lng": 135.167339548198,
+      "category": "SAFE",
+      "name": "みなと幼稚園",
+      "address": "神戸市兵庫区荒田町3丁目20-4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区荒田町3丁目20-4",
+      "district": "兵庫区",
+      "sourceRow": 2100,
+      "sourceRows": [
+        2100
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/05672980f52ea076",
+      "lat": 34.6815206931821,
+      "lng": 135.166952639303,
+      "category": "SAFE",
+      "name": "荒田地域福祉センター",
+      "address": "神戸市兵庫区荒田町2丁目19番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区荒田町2丁目19番1号",
+      "district": "兵庫区",
+      "sourceRow": 2113,
+      "sourceRows": [
+        2113
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/090f1dc79732c7c4",
+      "lat": 34.6857239109597,
+      "lng": 135.16364327657,
+      "category": "SAFE",
+      "name": "菊水地域福祉センター",
+      "address": "神戸市兵庫区菊水町2丁目1-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区菊水町2丁目1-2",
+      "district": "兵庫区",
+      "sourceRow": 2128,
+      "sourceRows": [
+        2128
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bd4b2f9477b634ad",
+      "lat": 34.6825171413858,
+      "lng": 135.162874537601,
+      "category": "SAFE",
+      "name": "せのお医院",
+      "address": "神戸市兵庫区東山町4丁目8-1　神戸東山ビル4階",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区東山町4丁目8-1　神戸東山ビル4階",
+      "district": "兵庫区",
+      "sourceRow": 2159,
+      "sourceRows": [
+        2159
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a502f32c911371a1",
+      "lat": 34.6834775173011,
+      "lng": 135.166462978059,
+      "category": "SAFE",
+      "name": "おかだ整形外科",
+      "address": "神戸市兵庫区荒田町4丁目1-16　シャトラングリーンパーク1F",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区荒田町4丁目1-16　シャトラングリーンパーク1F",
+      "district": "兵庫区",
+      "sourceRow": 2163,
+      "sourceRows": [
+        2163
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/48e36b5cef4d364d",
+      "lat": 34.6825673642439,
+      "lng": 135.16559001785,
+      "category": "SAFE",
+      "name": "真境名歯科医院",
+      "address": "神戸市兵庫区荒田町4丁目7-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区荒田町4丁目7-3",
+      "district": "兵庫区",
+      "sourceRow": 2167,
+      "sourceRows": [
+        2167
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1cbe9be3c3dc0577",
+      "lat": 34.6820821806441,
+      "lng": 135.166414046409,
+      "category": "SAFE",
+      "name": "荒田公園駐車場（ポート産業株式会社）",
+      "address": "神戸市兵庫区荒田町2丁目",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区荒田町2丁目",
+      "district": "兵庫区",
+      "sourceRow": 2169,
+      "sourceRows": [
+        2169
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/af8ab64c892df30b",
+      "lat": 34.6809689064339,
+      "lng": 135.166228836445,
+      "category": "SAFE",
+      "name": "ダイエー湊川店",
+      "address": "神戸市兵庫区荒田町2丁目18-10",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区荒田町2丁目18-10",
+      "district": "兵庫区",
+      "sourceRow": 2171,
+      "sourceRows": [
+        2171
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

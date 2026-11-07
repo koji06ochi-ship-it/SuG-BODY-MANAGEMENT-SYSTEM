@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5776-22510-20261016",
+  "lat": 34.65701860038645,
+  "lng": 135.06285966056151,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/d97367528c613163",
+      "lat": 34.6575674958586,
+      "lng": 135.062305417531,
+      "category": "SAFE",
+      "name": "神戸国際大学附属高等学校",
+      "address": "神戸市垂水区学が丘5丁目1－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区学が丘5丁目1－1",
+      "district": "垂水区",
+      "sourceRow": 290,
+      "sourceRows": [
+        290
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d828572c520c88bf",
+      "lat": 34.6564697049143,
+      "lng": 135.063413903592,
+      "category": "SAFE",
+      "name": "ディアージュ神戸",
+      "address": "神戸市垂水区学ヶ丘5丁目1－4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区学ヶ丘5丁目1－4",
+      "district": "垂水区",
+      "sourceRow": 297,
+      "sourceRows": [
+        297
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

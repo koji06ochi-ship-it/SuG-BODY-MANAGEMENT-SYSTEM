@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5772-22513-20261016",
+  "lat": 34.636184009408275,
+  "lng": 135.08194279852964,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/f616fd445fe995a9",
+      "lat": 34.637991969968,
+      "lng": 135.081320303367,
+      "category": "SAFE",
+      "name": "神戸市立　塩屋小学校",
+      "address": "神戸市垂水区塩屋町3丁目18番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区塩屋町3丁目18番1号",
+      "district": "垂水区",
+      "sourceRow": 303,
+      "sourceRows": [
+        303
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/50b40a2037d76c96",
+      "lat": 34.6358970435669,
+      "lng": 135.08283096383,
+      "category": "SAFE",
+      "name": "神戸信用金庫　塩屋支店",
+      "address": "神戸市垂水区塩屋町3-15-19",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区塩屋町3-15-19",
+      "district": "垂水区",
+      "sourceRow": 335,
+      "sourceRows": [
+        335
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/00f12fc9be54b726",
+      "lat": 34.6345008533985,
+      "lng": 135.081835379242,
+      "category": "SAFE",
+      "name": "神戸市立　塩屋児童館",
+      "address": "神戸市垂水区塩屋町4丁目3－9",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区塩屋町4丁目3－9",
+      "district": "垂水区",
+      "sourceRow": 346,
+      "sourceRows": [
+        346
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0264c798aa37edd4",
+      "lat": 34.6345008533985,
+      "lng": 135.081835379242,
+      "category": "SAFE",
+      "name": "塩屋地域福祉センター",
+      "address": "神戸市垂水区塩屋町4丁目3-9",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区塩屋町4丁目3-9",
+      "district": "垂水区",
+      "sourceRow": 384,
+      "sourceRows": [
+        384
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ca3687a202dd6b77",
+      "lat": 34.6367308944147,
+      "lng": 135.080490770457,
+      "category": "SAFE",
+      "name": "特別養護老人ホーム　塩屋さくら苑",
+      "address": "神戸市垂水区塩屋町4丁目25-11",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区塩屋町4丁目25-11",
+      "district": "垂水区",
+      "sourceRow": 411,
+      "sourceRows": [
+        411
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a1e517f23b611baf",
+      "lat": 34.6374824417031,
+      "lng": 135.08334399504,
+      "category": "SAFE",
+      "name": "しおやこども園",
+      "address": "神戸市垂水区塩屋町3丁目23-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区塩屋町3丁目23-1",
+      "district": "垂水区",
+      "sourceRow": 445,
+      "sourceRows": [
+        445
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5787-22554-20261016",
+  "lat": 34.72649486,
+  "lng": 135.3253003,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/316a5920be398b57",
+      "lat": 34.72649486,
+      "lng": 135.3253003,
+      "category": "SAFE",
+      "name": "香櫨園テニスクラブ",
+      "address": "兵庫県西宮市大浜町２－４８",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市大浜町２－４８",
+      "district": "西宮市",
+      "sourceRow": 523,
+      "sourceRows": [
+        523
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

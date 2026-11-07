@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "yokkaichi-5821-22762-20261016",
+  "lat": 34.92727582,
+  "lng": 136.57730043333333,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "四日市市",
+  "source": "四日市市内公共施設 AED設置箇所一覧",
+  "sourceUrl": "https://data.bodik.jp/dataset/242021_00127",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/422f8da8-0b3c-4d84-b8dd-d88d18e914ce/resource/2a5eee8b-c455-4c2e-8553-b0d3d36e5ef2/download/242021_aed.csv",
+  "sourceUpdatedAt": "2024-12-18",
+  "sourcePageUpdatedAt": "2025-01-24",
+  "retrievedAt": "2026-10-15T15:44:16.747Z",
+  "sourceFileSha256": "c0880c81977c7fc444213ee84ef31a7b2e9e34f12d31e892064cbabb7d5159cf",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/yokkaichi/aed/af5b87e8e50be823",
+      "lat": 34.9274567,
+      "lng": 136.577687,
+      "category": "SAFE",
+      "name": "内部小学校",
+      "address": "四日市市釆女町888-1",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市釆女町888-1",
+      "sourceRow": 4,
+      "sourceRows": [
+        4
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/313ff01712a5f5e7",
+      "lat": 34.92745442,
+      "lng": 136.5776924,
+      "category": "SAFE",
+      "name": "内部小学校",
+      "address": "四日市市釆女町888-1",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市釆女町888-1",
+      "sourceRow": 5,
+      "sourceRows": [
+        5
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/36a6547acd4f7ebe",
+      "lat": 34.92691634,
+      "lng": 136.5765219,
+      "category": "SAFE",
+      "name": "内部幼稚園",
+      "address": "四日市市釆女町911",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市釆女町911",
+      "sourceRow": 119,
+      "sourceRows": [
+        119
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5771-22510-20261016",
+  "lat": 34.62914405554517,
+  "lng": 135.06225204951573,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/6e1485a4661084ef",
+      "lat": 34.6281067428886,
+      "lng": 135.065047768692,
+      "category": "SAFE",
+      "name": "神戸市建設局西水環境センター",
+      "address": "神戸市垂水区平磯1丁目1－65",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区平磯1丁目1－65",
+      "district": "垂水区",
+      "sourceRow": 267,
+      "sourceRows": [
+        267
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bd28437c12a46611",
+      "lat": 34.6310873189428,
+      "lng": 135.062452360753,
+      "category": "SAFE",
+      "name": "たけのこども園",
+      "address": "神戸市垂水区山手2丁目3-18",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区山手2丁目3-18",
+      "district": "垂水区",
+      "sourceRow": 433,
+      "sourceRows": [
+        433
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/53eb3d2ad6cfac5d",
+      "lat": 34.6307034010075,
+      "lng": 135.060903405583,
+      "category": "SAFE",
+      "name": "たけのこども園 そら分園",
+      "address": "神戸市垂水区中道2丁目3-5　第一生命ビル1階",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区中道2丁目3-5　第一生命ビル1階",
+      "district": "垂水区",
+      "sourceRow": 434,
+      "sourceRows": [
+        434
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c30a7265fceed583",
+      "lat": 34.6266787593418,
+      "lng": 135.060604663035,
+      "category": "SAFE",
+      "name": "垂水スポーツガーデン",
+      "address": "神戸市垂水区平磯1-1-55",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区平磯1-1-55",
+      "district": "垂水区",
+      "sourceRow": 456,
+      "sourceRows": [
+        456
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

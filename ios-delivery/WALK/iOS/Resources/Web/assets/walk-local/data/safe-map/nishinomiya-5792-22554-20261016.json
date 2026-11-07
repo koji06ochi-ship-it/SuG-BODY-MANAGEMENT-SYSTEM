@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5792-22554-20261016",
+  "lat": 34.75401719666667,
+  "lng": 135.32690878000002,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/a7d8cd18cd2e35e1",
+      "lat": 34.7521256,
+      "lng": 135.3265619,
+      "category": "SAFE",
+      "name": "北夙川小学校",
+      "address": "兵庫県西宮市石刎町１１－２１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市石刎町１１－２１",
+      "district": "西宮市",
+      "sourceRow": 4,
+      "sourceRows": [
+        4
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/c42b5fe82ca8d455",
+      "lat": 34.75367399,
+      "lng": 135.3283877,
+      "category": "SAFE",
+      "name": "甲山福祉センター",
+      "address": "兵庫県西宮市石刎町１９－１３",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市石刎町１９－１３",
+      "district": "西宮市",
+      "sourceRow": 401,
+      "sourceRows": [
+        401
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/9795a5f67f260c99",
+      "lat": 34.756252,
+      "lng": 135.32577674,
+      "category": "SAFE",
+      "name": "チャームスイート苦楽園",
+      "address": "兵庫県西宮市西平町１０－５",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市西平町１０－５",
+      "district": "西宮市",
+      "sourceRow": 426,
+      "sourceRows": [
+        426
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

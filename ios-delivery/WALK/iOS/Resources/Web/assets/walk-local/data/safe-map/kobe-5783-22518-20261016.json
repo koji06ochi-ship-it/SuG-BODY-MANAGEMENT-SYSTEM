@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5783-22518-20261016",
+  "lat": 34.7024438161666,
+  "lng": 135.111351613466,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/13945cfb03674740",
+      "lat": 34.7024438161666,
+      "lng": 135.111351613466,
+      "category": "SAFE",
+      "name": "神戸明生園　障害者支援施設",
+      "address": "神戸市北区山田町下谷上字中一里山14-1　しあわせの村内",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町下谷上字中一里山14-1　しあわせの村内",
+      "district": "北区",
+      "sourceRow": 2427,
+      "sourceRows": [
+        2427
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5780-22528-20261016",
+  "lat": 34.68271526714143,
+  "lng": 135.1716065212348,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/be8db97de279c602",
+      "lat": 34.6838575538229,
+      "lng": 135.172910035961,
+      "category": "SAFE",
+      "name": "神戸文化ホール",
+      "address": "神戸市中央区楠町4丁目2－2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区楠町4丁目2－2",
+      "district": "中央区",
+      "sourceRow": 836,
+      "sourceRows": [
+        836
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a6a766582ba70116",
+      "lat": 34.6815172111794,
+      "lng": 135.173835226304,
+      "category": "SAFE",
+      "name": "神戸市水道局中部センター",
+      "address": "神戸市中央区橘通3丁目4-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区橘通3丁目4-2",
+      "district": "中央区",
+      "sourceRow": 1063,
+      "sourceRows": [
+        1063
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a2226f4fe24b89aa",
+      "lat": 34.684367100671,
+      "lng": 135.17204890287,
+      "category": "SAFE",
+      "name": "神戸市立　湊翔楠中学校",
+      "address": "神戸市中央区楠町4丁目2-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区楠町4丁目2-5",
+      "district": "中央区",
+      "sourceRow": 1108,
+      "sourceRows": [
+        1108
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/91ef4ecee6ea0ded",
+      "lat": 34.6832580097107,
+      "lng": 135.172407332257,
+      "category": "SAFE",
+      "name": "大倉山駐車場",
+      "address": "神戸市中央区楠町4丁目",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区楠町4丁目",
+      "district": "中央区",
+      "sourceRow": 1116,
+      "sourceRows": [
+        1116
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/30baa4fd6c625d9c",
+      "lat": 34.6844986339517,
+      "lng": 135.172571938913,
+      "category": "SAFE",
+      "name": "神戸市立青少年センター",
+      "address": "神戸市中央区楠町4丁目2番地3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区楠町4丁目2番地3",
+      "district": "中央区",
+      "sourceRow": 1156,
+      "sourceRows": [
+        1156
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/aed069ce9833e35b",
+      "lat": 34.6804082632895,
+      "lng": 135.173296255487,
+      "category": "SAFE",
+      "name": "奥田歯科医院",
+      "address": "神戸市中央区橘通4丁目2番地6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区橘通4丁目2番地6",
+      "district": "中央区",
+      "sourceRow": 1199,
+      "sourceRows": [
+        1199
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7e18712da0949827",
+      "lat": 34.680689186783,
+      "lng": 135.169589393188,
+      "category": "SAFE",
+      "name": "東横イン　神戸湊川公園",
+      "address": "神戸市兵庫区福原町32－13",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区福原町32－13",
+      "district": "兵庫区",
+      "sourceRow": 2099,
+      "sourceRows": [
+        2099
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8f9dbac116210fb1",
+      "lat": 34.6847993892737,
+      "lng": 135.168073447265,
+      "category": "SAFE",
+      "name": "宝地院保育園",
+      "address": "神戸市兵庫区荒田町3丁目17-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区荒田町3丁目17-1",
+      "district": "兵庫区",
+      "sourceRow": 2126,
+      "sourceRows": [
+        2126
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/64481041b84f2d7f",
+      "lat": 34.683296908467,
+      "lng": 135.169614078354,
+      "category": "SAFE",
+      "name": "兵庫県健康財団　保健検診センター（公益財団法人）",
+      "address": "神戸市兵庫区荒田町2丁目1-12",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区荒田町2丁目1-12",
+      "district": "兵庫区",
+      "sourceRow": 2138,
+      "sourceRows": [
+        2138
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bad904feb5b49601",
+      "lat": 34.6804604142654,
+      "lng": 135.171718601749,
+      "category": "SAFE",
+      "name": "西橘自治会館",
+      "address": "神戸市兵庫区西橘通1丁目3-11",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区西橘通1丁目3-11",
+      "district": "兵庫区",
+      "sourceRow": 2142,
+      "sourceRows": [
+        2142
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

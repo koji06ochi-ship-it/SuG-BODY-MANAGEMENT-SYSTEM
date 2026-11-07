@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5772-22509-20261016",
+  "lat": 34.63503791365535,
+  "lng": 135.058455150926,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/31147b73feba9a4d",
+      "lat": 34.635134556538,
+      "lng": 135.059877930309,
+      "category": "SAFE",
+      "name": "オービーホーム馬場通",
+      "address": "神戸市垂水区馬場通5-11",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区馬場通5-11",
+      "district": "垂水区",
+      "sourceRow": 419,
+      "sourceRows": [
+        419
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/82eb23d4aaf12e4f",
+      "lat": 34.6349412707727,
+      "lng": 135.057032371543,
+      "category": "SAFE",
+      "name": "大口歯科医院",
+      "address": "神戸市垂水区瑞ケ丘9-10",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市垂水区瑞ケ丘9-10",
+      "district": "垂水区",
+      "sourceRow": 470,
+      "sourceRows": [
+        470
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

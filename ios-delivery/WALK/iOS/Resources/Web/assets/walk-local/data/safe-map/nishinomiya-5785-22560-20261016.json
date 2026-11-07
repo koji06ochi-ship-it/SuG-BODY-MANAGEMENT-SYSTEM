@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5785-22560-20261016",
+  "lat": 34.712699205,
+  "lng": 135.3639237,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/f0e9c830d9b6f0bd",
+      "lat": 34.71208337,
+      "lng": 135.3645572,
+      "category": "SAFE",
+      "name": "武庫川女子大学付属中・高等学校",
+      "address": "兵庫県西宮市枝川町４－１６",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市枝川町４－１６",
+      "district": "西宮市",
+      "sourceRow": 453,
+      "sourceRows": [
+        453
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/308d6da013e0290f",
+      "lat": 34.71359196,
+      "lng": 135.362273,
+      "category": "SAFE",
+      "name": "武庫川女子大学浜甲子園キャンパス",
+      "address": "兵庫県西宮市甲子園九番町１１－６８",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲子園九番町１１－６８",
+      "district": "西宮市",
+      "sourceRow": 461,
+      "sourceRows": [
+        461
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/72089bcee5fc72ac",
+      "lat": 34.71492213,
+      "lng": 135.3635319,
+      "category": "SAFE",
+      "name": "ロイヤルアーク甲子園フローレス",
+      "address": "兵庫県西宮市甲子園九番町１１－２３",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲子園九番町１１－２３",
+      "district": "西宮市",
+      "sourceRow": 486,
+      "sourceRows": [
+        486
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/bb738e7cdf3b3bff",
+      "lat": 34.71019936,
+      "lng": 135.3653327,
+      "category": "SAFE",
+      "name": "ドラッグユタカ浜甲子園店",
+      "address": "兵庫県西宮市枝川町９－２０",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市枝川町９－２０",
+      "district": "西宮市",
+      "sourceRow": 513,
+      "sourceRows": [
+        513
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

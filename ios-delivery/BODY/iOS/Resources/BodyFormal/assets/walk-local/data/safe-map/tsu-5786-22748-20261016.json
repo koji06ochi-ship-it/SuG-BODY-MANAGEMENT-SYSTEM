@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5786-22748",
+  "lat": 34.71982166666667,
+  "lng": 136.49028633333333,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.71808,
+      "lng": 136.48828,
+      "category": "SAFE",
+      "name": "新町保育園",
+      "address": "津市桜田町7-1",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "桜田町7-1",
+      "district": "津",
+      "sourceRow": 57,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/773b7a9fd0f22def",
+      "sourceRows": [
+        57
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.720565,
+      "lng": 136.489838,
+      "category": "SAFE",
+      "name": "新町幼稚園",
+      "address": "津市新町三丁目4-20",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "新町三丁目4-20",
+      "district": "津",
+      "sourceRow": 65,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/fef0d2c379bec465",
+      "sourceRows": [
+        65
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.72082,
+      "lng": 136.492741,
+      "category": "SAFE",
+      "name": "新町小学校",
+      "address": "津市八町三丁目3-1",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "八町三丁目3-1",
+      "district": "津",
+      "sourceRow": 80,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/cb05b16e3d0f404e",
+      "sourceRows": [
+        80
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

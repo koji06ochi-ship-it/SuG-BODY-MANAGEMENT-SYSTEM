@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5775-22520-20261016",
+  "lat": 34.651746831496325,
+  "lng": 135.124629127212,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/4a4fd2790d74362b",
+      "lat": 34.6512781333712,
+      "lng": 135.125130428057,
+      "category": "SAFE",
+      "name": "月見山連合自治会館",
+      "address": "神戸市須磨区北町1丁目天井川公園内",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区北町1丁目天井川公園内",
+      "district": "須磨区",
+      "sourceRow": 89,
+      "sourceRows": [
+        89
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/1858689b3904a5fb",
+      "lat": 34.6508889050942,
+      "lng": 135.125851140399,
+      "category": "SAFE",
+      "name": "神戸信用金庫　月見山支店",
+      "address": "神戸市須磨区北町1－2－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区北町1－2－1",
+      "district": "須磨区",
+      "sourceRow": 91,
+      "sourceRows": [
+        91
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3bb62198b6103621",
+      "lat": 34.6547779638435,
+      "lng": 135.122266934434,
+      "category": "SAFE",
+      "name": "ヨハネ会（社会福祉法人）",
+      "address": "神戸市須磨区奥山畑町2番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区奥山畑町2番地",
+      "district": "須磨区",
+      "sourceRow": 120,
+      "sourceRows": [
+        120
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/62bb9dcc339eefa9",
+      "lat": 34.6500423236764,
+      "lng": 135.125268005958,
+      "category": "SAFE",
+      "name": "ふじわら内科クリニック",
+      "address": "神戸市須磨区南町2丁目5-29",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区南町2丁目5-29",
+      "district": "須磨区",
+      "sourceRow": 226,
+      "sourceRows": [
+        226
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

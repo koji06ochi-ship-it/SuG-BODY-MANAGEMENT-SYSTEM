@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5779-22511-20261016",
+  "lat": 34.67868294013166,
+  "lng": 135.0671805305044,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/d7ee60a23c720c3f",
+      "lat": 34.6793775586626,
+      "lng": 135.067292044149,
+      "category": "SAFE",
+      "name": "神戸市立　工業高等専門学校　クラブ棟",
+      "address": "神戸市西区学園東町8-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区学園東町8-3",
+      "district": "西区",
+      "sourceRow": 514,
+      "sourceRows": [
+        514
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/87b6b9eda658c310",
+      "lat": 34.6788220159759,
+      "lng": 135.066464260234,
+      "category": "SAFE",
+      "name": "神戸市立　工業高等専門学校　一般科棟",
+      "address": "神戸市西区学園東町8-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区学園東町8-3",
+      "district": "西区",
+      "sourceRow": 515,
+      "sourceRows": [
+        515
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/28c52425841e66a6",
+      "lat": 34.6788481878846,
+      "lng": 135.068059727975,
+      "category": "SAFE",
+      "name": "神戸市立　工業高等専門学校　本部棟",
+      "address": "神戸市西区学園東町8-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区学園東町8-3",
+      "district": "西区",
+      "sourceRow": 516,
+      "sourceRows": [
+        516
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6958dfc418a26b60",
+      "lat": 34.6775921343968,
+      "lng": 135.066713275405,
+      "category": "SAFE",
+      "name": "神戸市立　工業高等専門学校　体育館",
+      "address": "神戸市西区学園東町8-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区学園東町8-3",
+      "district": "西区",
+      "sourceRow": 517,
+      "sourceRows": [
+        517
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c77f5f2da1f073a2",
+      "lat": 34.6787748037384,
+      "lng": 135.067373344759,
+      "category": "SAFE",
+      "name": "神戸市立　工業高等専門学校　専門科棟",
+      "address": "神戸市西区学園東町8-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区学園東町8-3",
+      "district": "西区",
+      "sourceRow": 518,
+      "sourceRows": [
+        518
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

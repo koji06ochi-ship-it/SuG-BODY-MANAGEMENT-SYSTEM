@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5791-22753",
+  "lat": 34.747828,
+  "lng": 136.523264,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.747828,
+      "lng": 136.523264,
+      "category": "SAFE",
+      "name": "栗真小学校国児分校",
+      "address": "津市栗真町屋町524",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "栗真町屋町524",
+      "district": "津",
+      "sourceRow": 91,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/36f5bc276c487feb",
+      "sourceRows": [
+        91
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.747828,
+      "lng": 136.523264,
+      "category": "SAFE",
+      "name": "一身田中学校国児分校",
+      "address": "津市栗真町屋町524",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "栗真町屋町524",
+      "district": "津",
+      "sourceRow": 106,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/1c0c4d71829aada7",
+      "sourceRows": [
+        106
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

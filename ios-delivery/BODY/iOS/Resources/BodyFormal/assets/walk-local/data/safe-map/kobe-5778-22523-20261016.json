@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5778-22523-20261016",
+  "lat": 34.670968353302364,
+  "lng": 135.14130631511634,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/3fbeb222fb21dde5",
+      "lat": 34.6702912497468,
+      "lng": 135.143042288997,
+      "category": "SAFE",
+      "name": "兵庫県立　長田高等学校",
+      "address": "神戸市長田区池田谷町2丁目5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区池田谷町2丁目5",
+      "district": "長田区",
+      "sourceRow": 1234,
+      "sourceRows": [
+        1234
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6c3b548075fd793d",
+      "lat": 34.6682466332197,
+      "lng": 135.139742282828,
+      "category": "SAFE",
+      "name": "神戸市立　西代中学校",
+      "address": "神戸市長田区上池田2-4-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区上池田2-4-1",
+      "district": "長田区",
+      "sourceRow": 1243,
+      "sourceRows": [
+        1243
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/10fe5723ae424173",
+      "lat": 34.6702912497468,
+      "lng": 135.143042288997,
+      "category": "SAFE",
+      "name": "兵庫県立　長田商業高等学校",
+      "address": "神戸市長田区池田谷町2丁目5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区池田谷町2丁目5",
+      "district": "長田区",
+      "sourceRow": 1250,
+      "sourceRows": [
+        1250
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c8ca5e29179ed60c",
+      "lat": 34.6723871446214,
+      "lng": 135.143011745128,
+      "category": "SAFE",
+      "name": "神戸市立　長田小学校",
+      "address": "神戸市長田区西山町2丁目4－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区西山町2丁目4－1",
+      "district": "長田区",
+      "sourceRow": 1266,
+      "sourceRows": [
+        1266
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/063dd1cfe7dd9b9f",
+      "lat": 34.6702478089056,
+      "lng": 135.138619249172,
+      "category": "SAFE",
+      "name": "高取台サンハイツ",
+      "address": "神戸市長田区上池田3丁目17－8",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区上池田3丁目17－8",
+      "district": "長田区",
+      "sourceRow": 1285,
+      "sourceRows": [
+        1285
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/cfb44b3770e81355",
+      "lat": 34.6723871446214,
+      "lng": 135.143011745128,
+      "category": "SAFE",
+      "name": "長田地域福祉センター",
+      "address": "神戸市長田区西山町2丁目4－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区西山町2丁目4－1",
+      "district": "長田区",
+      "sourceRow": 1313,
+      "sourceRows": [
+        1313
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7f860c3112f8c087",
+      "lat": 34.6723084113839,
+      "lng": 135.140406946492,
+      "category": "SAFE",
+      "name": "高齢者ケアセンターながたサテライト宮丘",
+      "address": "神戸市長田区宮丘1丁目3－11",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区宮丘1丁目3－11",
+      "district": "長田区",
+      "sourceRow": 1322,
+      "sourceRows": [
+        1322
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/916ac6993b900d96",
+      "lat": 34.6699201252681,
+      "lng": 135.138432647208,
+      "category": "SAFE",
+      "name": "高取台幼稚園",
+      "address": "神戸市長田区上池田3丁目17-6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区上池田3丁目17-6",
+      "district": "長田区",
+      "sourceRow": 1324,
+      "sourceRows": [
+        1324
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d2e6f889bd124736",
+      "lat": 34.6726354122076,
+      "lng": 135.142447642097,
+      "category": "SAFE",
+      "name": "株式会社神戸珈琲",
+      "address": "神戸市長田区上池田6丁目8番地23",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区上池田6丁目8番地23",
+      "district": "長田区",
+      "sourceRow": 1368,
+      "sourceRows": [
+        1368
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

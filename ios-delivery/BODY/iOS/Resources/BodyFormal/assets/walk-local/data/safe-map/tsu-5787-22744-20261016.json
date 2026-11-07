@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5787-22744",
+  "lat": 34.72468833333333,
+  "lng": 136.468559,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.726044,
+      "lng": 136.466436,
+      "category": "SAFE",
+      "name": "津市民プール",
+      "address": "津市殿村150",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "殿村150",
+      "district": "津",
+      "sourceRow": 16,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/0b2ed40aaa9eb15d",
+      "sourceRows": [
+        16
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.723664,
+      "lng": 136.469283,
+      "category": "SAFE",
+      "name": "西部市民センター",
+      "address": "津市野田1-1",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "野田1-1",
+      "district": "津",
+      "sourceRow": 23,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/bc8eb5e8f745cea9",
+      "sourceRows": [
+        23
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.724357,
+      "lng": 136.469958,
+      "category": "SAFE",
+      "name": "水道局",
+      "address": "津市殿村5",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "殿村5",
+      "district": "津",
+      "sourceRow": 37,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/11bbf120a056b185",
+      "sourceRows": [
+        37
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

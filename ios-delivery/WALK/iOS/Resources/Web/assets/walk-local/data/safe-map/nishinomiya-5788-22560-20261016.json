@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5788-22560-20261016",
+  "lat": 34.73204470333334,
+  "lng": 135.36259868888888,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/a0456eb81812c4c0",
+      "lat": 34.73052016,
+      "lng": 135.3651439,
+      "category": "SAFE",
+      "name": "春風小学校",
+      "address": "兵庫県西宮市上甲子園３丁目８－３９",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市上甲子園３丁目８－３９",
+      "district": "西宮市",
+      "sourceRow": 26,
+      "sourceRows": [
+        26
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/f6a72845fce20219",
+      "lat": 34.73389182,
+      "lng": 135.3643392,
+      "category": "SAFE",
+      "name": "上甲子園中学校",
+      "address": "兵庫県西宮市上甲子園４丁目９－１１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市上甲子園４丁目９－１１",
+      "district": "西宮市",
+      "sourceRow": 52,
+      "sourceRows": [
+        52
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/8284458e0bafa5ac",
+      "lat": 34.7307379,
+      "lng": 135.3608862,
+      "category": "SAFE",
+      "name": "西宮支援学校",
+      "address": "兵庫県西宮市甲子園春風町２-２９",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲子園春風町２-２９",
+      "district": "西宮市",
+      "sourceRow": 62,
+      "sourceRows": [
+        62
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/a941fee5b1284e2f",
+      "lat": 34.73150398,
+      "lng": 135.3600058,
+      "category": "SAFE",
+      "name": "春風幼稚園",
+      "address": "兵庫県西宮市今津野田町２－６",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市今津野田町２－６",
+      "district": "西宮市",
+      "sourceRow": 74,
+      "sourceRows": [
+        74
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/46e67dde7754ee54",
+      "lat": 34.73041437,
+      "lng": 135.3614698,
+      "category": "SAFE",
+      "name": "春風公民館",
+      "address": "兵庫県西宮市甲子園春風町２－２１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲子園春風町２－２１",
+      "district": "西宮市",
+      "sourceRow": 203,
+      "sourceRows": [
+        203
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/e8bf266a51d6ca4e",
+      "lat": 34.73239227,
+      "lng": 135.3657129,
+      "category": "SAFE",
+      "name": "瓦林公園センター",
+      "address": "兵庫県西宮市上甲子園３丁目７－４",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市上甲子園３丁目７－４",
+      "district": "西宮市",
+      "sourceRow": 262,
+      "sourceRows": [
+        262
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/3801d951a9a60131",
+      "lat": 34.73354747,
+      "lng": 135.3632801,
+      "category": "SAFE",
+      "name": "ジークレフ上甲子園",
+      "address": "兵庫県西宮市上甲子園４丁目９－６６",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市上甲子園４丁目９－６６",
+      "district": "西宮市",
+      "sourceRow": 370,
+      "sourceRows": [
+        370
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/831aeb5abe6f5187",
+      "lat": 34.73394406,
+      "lng": 135.3608032,
+      "category": "SAFE",
+      "name": "西宮市社会福祉事業団　上甲子園地域包括支援センター",
+      "address": "兵庫県西宮市上甲子園５丁目７-21",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市上甲子園５丁目７-21",
+      "district": "西宮市",
+      "sourceRow": 372,
+      "sourceRows": [
+        372
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/331bb516e39e4014",
+      "lat": 34.7314503,
+      "lng": 135.3617471,
+      "category": "SAFE",
+      "name": "社会福祉法人新湊福祉会　和の郷上甲子園",
+      "address": "兵庫県西宮市甲子園春風町１－20",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲子園春風町１－20",
+      "district": "西宮市",
+      "sourceRow": 378,
+      "sourceRows": [
+        378
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

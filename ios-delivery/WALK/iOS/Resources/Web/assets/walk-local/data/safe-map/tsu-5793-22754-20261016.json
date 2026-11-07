@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5793-22754",
+  "lat": 34.759973,
+  "lng": 136.52885500000002,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.759093,
+      "lng": 136.529155,
+      "category": "SAFE",
+      "name": "白塚公民館",
+      "address": "津市白塚町5205",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "白塚町5205",
+      "district": "津",
+      "sourceRow": 47,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/1d55694d3ae579db",
+      "sourceRows": [
+        47
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.760853,
+      "lng": 136.528555,
+      "category": "SAFE",
+      "name": "白塚小学校",
+      "address": "津市白塚町4463",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "白塚町4463",
+      "district": "津",
+      "sourceRow": 89,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/ba7c8fd00a5146ca",
+      "sourceRows": [
+        89
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

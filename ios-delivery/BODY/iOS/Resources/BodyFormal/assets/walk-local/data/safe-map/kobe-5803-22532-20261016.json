@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5803-22532-20261016",
+  "lat": 34.82191437977103,
+  "lng": 135.19663249656332,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/3b9dd83b267b57b2",
+      "lat": 34.8223878028333,
+      "lng": 135.19549087886,
+      "category": "SAFE",
+      "name": "神戸市立　八多中学校",
+      "address": "神戸市北区八多町附物876",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区八多町附物876",
+      "district": "北区",
+      "sourceRow": 2209,
+      "sourceRows": [
+        2209
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bc0776e171ba1806",
+      "lat": 34.8216776682399,
+      "lng": 135.197203305415,
+      "category": "SAFE",
+      "name": "神戸市立　八多児童館",
+      "address": "神戸市北区八多町附物393－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区八多町附物393－1",
+      "district": "北区",
+      "sourceRow": 2329,
+      "sourceRows": [
+        2329
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/eb761f30223991f1",
+      "lat": 34.8216776682399,
+      "lng": 135.197203305415,
+      "category": "SAFE",
+      "name": "八多地域福祉センター",
+      "address": "神戸市北区八多町附物393－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区八多町附物393－1",
+      "district": "北区",
+      "sourceRow": 2377,
+      "sourceRows": [
+        2377
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

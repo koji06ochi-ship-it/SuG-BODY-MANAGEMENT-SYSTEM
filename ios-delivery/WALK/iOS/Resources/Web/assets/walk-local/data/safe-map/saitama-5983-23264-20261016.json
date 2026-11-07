@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5983-23264",
+  "lat": 35.90361406333333,
+  "lng": 139.58740153333335,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.9036393,
+      "lng": 139.5875339,
+      "category": "SAFE",
+      "name": "佐知川放課後児童クラブ",
+      "address": "さいたま市佐知川299-16",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "佐知川299-16",
+      "district": "西区",
+      "sourceRow": 4,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/1ef860a95f416d61",
+      "sourceRows": [
+        4
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.90364809,
+      "lng": 139.5875343,
+      "category": "SAFE",
+      "name": "春光園うえみず",
+      "address": "さいたま市佐知川299-16",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "佐知川299-16",
+      "district": "西区",
+      "sourceRow": 5,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/c8590801a5ec891c",
+      "sourceRows": [
+        5
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.9035548,
+      "lng": 139.5871364,
+      "category": "SAFE",
+      "name": "植水保育園",
+      "address": "さいたま市佐知川306",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "佐知川306",
+      "district": "西区",
+      "sourceRow": 6,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/7c770100fe866d20",
+      "sourceRows": [
+        6
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

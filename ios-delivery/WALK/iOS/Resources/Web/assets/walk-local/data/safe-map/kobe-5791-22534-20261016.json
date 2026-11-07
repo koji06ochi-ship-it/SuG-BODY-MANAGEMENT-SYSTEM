@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5791-22534-20261016",
+  "lat": 34.7488854252847,
+  "lng": 135.209930791247,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/65f66c9e4042eccc",
+      "lat": 34.7488854252847,
+      "lng": 135.209930791247,
+      "category": "SAFE",
+      "name": "神戸市立　六甲山牧場(六甲山ＱＢＢチーズ館)",
+      "address": "神戸市灘区六甲山町中一里山1の1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区六甲山町中一里山1の1",
+      "district": "灘区",
+      "sourceRow": 1774,
+      "sourceRows": [
+        1774
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4d27b9e90a137b17",
+      "lat": 34.7488854252847,
+      "lng": 135.209930791247,
+      "category": "SAFE",
+      "name": "神戸市立　自然の家",
+      "address": "神戸市灘区六甲山町中一里山1－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区六甲山町中一里山1－1",
+      "district": "灘区",
+      "sourceRow": 1780,
+      "sourceRows": [
+        1780
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e8760c640b391be3",
+      "lat": 34.7488854252847,
+      "lng": 135.209930791247,
+      "category": "SAFE",
+      "name": "神戸市立　六甲山牧場(北入場口管理事務所)",
+      "address": "神戸市灘区六甲山町中一里山1番地１",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区六甲山町中一里山1番地１",
+      "district": "灘区",
+      "sourceRow": 2001,
+      "sourceRows": [
+        2001
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

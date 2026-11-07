@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5782-22535-20261016",
+  "lat": 34.69593739751672,
+  "lng": 135.211571615884,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/709b1dd87bd5f5dc",
+      "lat": 34.6928786737365,
+      "lng": 135.21080986897,
+      "category": "SAFE",
+      "name": "㈱兵食　八突冷蔵庫",
+      "address": "神戸市中央区小野浜町9-96",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区小野浜町9-96",
+      "district": "中央区",
+      "sourceRow": 825,
+      "sourceRows": [
+        825
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d1ac15863539a193",
+      "lat": 34.6979013700059,
+      "lng": 135.210826234305,
+      "category": "SAFE",
+      "name": "神戸市立　なぎさ小学校",
+      "address": "神戸市中央区脇浜海岸通2-4-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区脇浜海岸通2-4-1",
+      "district": "中央区",
+      "sourceRow": 943,
+      "sourceRows": [
+        943
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/45391dc6c0b4b062",
+      "lat": 34.6975200843465,
+      "lng": 135.212770369836,
+      "category": "SAFE",
+      "name": "神戸海洋気象台",
+      "address": "神戸市中央区脇浜海岸通1-4-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区脇浜海岸通1-4-3",
+      "district": "中央区",
+      "sourceRow": 1033,
+      "sourceRows": [
+        1033
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7a457b3d4b641203",
+      "lat": 34.6957995235496,
+      "lng": 135.210092799349,
+      "category": "SAFE",
+      "name": "神戸海岸通ハーバーフラッツ",
+      "address": "神戸市中央区脇浜海岸通4丁目1番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区脇浜海岸通4丁目1番",
+      "district": "中央区",
+      "sourceRow": 1142,
+      "sourceRows": [
+        1142
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/44fd7829c70bf0f7",
+      "lat": 34.6955873359451,
+      "lng": 135.21335880696,
+      "category": "SAFE",
+      "name": "HATなぎさの湯",
+      "address": "神戸市中央区脇浜海岸通1-3-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区脇浜海岸通1-3-3",
+      "district": "中央区",
+      "sourceRow": 1153,
+      "sourceRows": [
+        1153
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

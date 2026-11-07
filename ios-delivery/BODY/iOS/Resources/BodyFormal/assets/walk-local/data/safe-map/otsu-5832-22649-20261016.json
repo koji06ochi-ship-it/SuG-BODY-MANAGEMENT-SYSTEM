@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "otsu-5832-22649-20261016",
+  "lat": 34.99671472,
+  "lng": 135.89502240000002,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "大津市",
+  "source": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+  "sourceUrl": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/999caef4-7e90-4fd2-98eb-fd94368e9a2f/resource/3e5b513e-de51-4459-af70-6fda94e1bed3/download/od405902026022700200.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2025-03-12",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "7899826cf95c365a07c87b3ad05aa2aa7d4adeb440a2c57269c84f98c1d85ea8",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/otsu/aed/f66e73b5294b0e97",
+      "lat": 34.99572472,
+      "lng": 135.8955081,
+      "category": "SAFE",
+      "name": "一般財団法人近畿健康管理センター",
+      "address": "大津市木下町10番10号",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市木下町10番10号",
+      "district": "大津市",
+      "sourceRow": 258,
+      "sourceRows": [
+        258
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/07c53c29e6b8f81a",
+      "lat": 34.99770472,
+      "lng": 135.8945367,
+      "category": "SAFE",
+      "name": "大津湖岸なぎさ公園プール",
+      "address": "大津市由美浜地先",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市由美浜地先",
+      "district": "大津市",
+      "sourceRow": 265,
+      "sourceRows": [
+        265
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

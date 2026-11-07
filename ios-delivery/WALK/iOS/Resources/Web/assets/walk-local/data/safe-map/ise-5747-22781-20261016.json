@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5747-22781-20261016",
+  "lat": 34.482501301470904,
+  "lng": 136.6895853398375,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/a86f1befb94b9321",
+      "lat": 34.4826686029418,
+      "lng": 136.690198679675,
+      "category": "SAFE",
+      "name": "伊勢市立伊勢宮川中学校",
+      "address": "伊勢市二俣4-5-3",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市二俣4-5-3",
+      "sourceRow": 62,
+      "sourceRows": [
+        62
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/ee12a15d463aeae6",
+      "lat": 34.482334,
+      "lng": 136.688972,
+      "category": "SAFE",
+      "name": "伊勢市立伊勢宮川中学校　体育館",
+      "address": "伊勢市二俣4-5-3",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市二俣4-5-3",
+      "sourceRow": 63,
+      "sourceRows": [
+        63
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

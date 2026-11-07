@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5784-22558-20261016",
+  "lat": 34.70854232,
+  "lng": 135.34987385,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/2d41c1d9b6f7b26d",
+      "lat": 34.70952039,
+      "lng": 135.350115,
+      "category": "SAFE",
+      "name": "甲子園浜海浜公園　沖地区",
+      "address": "兵庫県西宮市甲子園浜１丁目２－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲子園浜１丁目２－１",
+      "district": "西宮市",
+      "sourceRow": 277,
+      "sourceRows": [
+        277
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/436b1251cde6011e",
+      "lat": 34.70756425,
+      "lng": 135.3496327,
+      "category": "SAFE",
+      "name": "アコーディア・ガーデン甲子園浜",
+      "address": "兵庫県西宮市甲子園浜１丁目７－２",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市甲子園浜１丁目７－２",
+      "district": "西宮市",
+      "sourceRow": 551,
+      "sourceRows": [
+        551
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

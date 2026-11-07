@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5814-22527-20261016",
+  "lat": 34.8889463816224,
+  "lng": 135.167293858072,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/79470b90cf173a1d",
+      "lat": 34.8889463816224,
+      "lng": 135.167293858072,
+      "category": "SAFE",
+      "name": "青い空の郷",
+      "address": "神戸市北区長尾町上津4663番地の3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区長尾町上津4663番地の3",
+      "district": "北区",
+      "sourceRow": 2267,
+      "sourceRows": [
+        2267
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/80bc08b761c57297",
+      "lat": 34.8889463816224,
+      "lng": 135.167293858072,
+      "category": "SAFE",
+      "name": "有馬高原病院",
+      "address": "神戸市北区長尾町上津4663番地の3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区長尾町上津4663番地の3",
+      "district": "北区",
+      "sourceRow": 2268,
+      "sourceRows": [
+        2268
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

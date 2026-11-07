@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5795-22531-20261016",
+  "lat": 34.770499226957696,
+  "lng": 135.188781837151,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/15b37d2539577225",
+      "lat": 34.7702096599311,
+      "lng": 135.188244822856,
+      "category": "SAFE",
+      "name": "堀坂歯科医院",
+      "address": "神戸市北区山田町上谷上字古々谷26-4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町上谷上字古々谷26-4",
+      "district": "北区",
+      "sourceRow": 2534,
+      "sourceRows": [
+        2534
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8a067a95e38b9750",
+      "lat": 34.7707887939843,
+      "lng": 135.189318851446,
+      "category": "SAFE",
+      "name": "医療法人社団まほし会　真星病院",
+      "address": "神戸市北区山田町上谷上字古古谷12-3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市北区山田町上谷上字古古谷12-3",
+      "district": "北区",
+      "sourceRow": 2561,
+      "sourceRows": [
+        2561
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

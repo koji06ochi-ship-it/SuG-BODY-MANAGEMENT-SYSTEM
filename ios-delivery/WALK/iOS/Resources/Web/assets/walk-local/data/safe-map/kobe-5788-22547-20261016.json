@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5788-22547-20261016",
+  "lat": 34.72974572921783,
+  "lng": 135.28569611755233,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/ac77b62627a5084f",
+      "lat": 34.7281029434992,
+      "lng": 135.286470302962,
+      "category": "SAFE",
+      "name": "神戸市立　本山第三小学校",
+      "address": "神戸市東灘区本山中町1丁目2-35",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区本山中町1丁目2-35",
+      "district": "東灘区",
+      "sourceRow": 1412,
+      "sourceRows": [
+        1412
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/41d20a4677163310",
+      "lat": 34.7285838851959,
+      "lng": 135.287292350215,
+      "category": "SAFE",
+      "name": "メディカルグループホーム甲南山手（社会福祉法人　千種会）",
+      "address": "神戸市東灘区本山中町1丁目15-7",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区本山中町1丁目15-7",
+      "district": "東灘区",
+      "sourceRow": 1569,
+      "sourceRows": [
+        1569
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/150ca3764024a30d",
+      "lat": 34.7325503589584,
+      "lng": 135.28332569948,
+      "category": "SAFE",
+      "name": "神戸薬科大学",
+      "address": "神戸市東灘区本山北町4丁目19-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区本山北町4丁目19-1",
+      "district": "東灘区",
+      "sourceRow": 1573,
+      "sourceRows": [
+        1573
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

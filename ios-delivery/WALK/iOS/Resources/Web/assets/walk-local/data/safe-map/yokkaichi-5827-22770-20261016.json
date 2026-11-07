@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "yokkaichi-5827-22770-20261016",
+  "lat": 34.96354939,
+  "lng": 136.622965,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "四日市市",
+  "source": "四日市市内公共施設 AED設置箇所一覧",
+  "sourceUrl": "https://data.bodik.jp/dataset/242021_00127",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/422f8da8-0b3c-4d84-b8dd-d88d18e914ce/resource/2a5eee8b-c455-4c2e-8553-b0d3d36e5ef2/download/242021_aed.csv",
+  "sourceUpdatedAt": "2024-12-18",
+  "sourcePageUpdatedAt": "2025-01-24",
+  "retrievedAt": "2026-10-15T15:44:16.747Z",
+  "sourceFileSha256": "c0880c81977c7fc444213ee84ef31a7b2e9e34f12d31e892064cbabb7d5159cf",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/yokkaichi/aed/99a13b3a11fa6e48",
+      "lat": 34.96201205,
+      "lng": 136.6218807,
+      "category": "SAFE",
+      "name": "浜田小学校",
+      "address": "四日市市北浜田町１３番６号",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市北浜田町１３番６号",
+      "sourceRow": 50,
+      "sourceRows": [
+        50
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/bf57e6e430c6c4f2",
+      "lat": 34.9620143,
+      "lng": 136.6218808,
+      "category": "SAFE",
+      "name": "浜田小学校",
+      "address": "四日市市北浜田町１３番６号",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市北浜田町１３番６号",
+      "sourceRow": 51,
+      "sourceRows": [
+        51
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/5192e080e0099327",
+      "lat": 34.96518071,
+      "lng": 136.6236947,
+      "category": "SAFE",
+      "name": "四日市市総合会館",
+      "address": "四日市市諏訪町2番2号",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市諏訪町2番2号",
+      "sourceRow": 270,
+      "sourceRows": [
+        270
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/a5992c6e58c175b9",
+      "lat": 34.9649905,
+      "lng": 136.6244038,
+      "category": "SAFE",
+      "name": "四日市市役所",
+      "address": "四日市市諏訪町１番5号",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市諏訪町１番5号",
+      "sourceRow": 276,
+      "sourceRows": [
+        276
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

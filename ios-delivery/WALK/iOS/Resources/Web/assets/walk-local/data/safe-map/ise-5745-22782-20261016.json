@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5745-22782-20261016",
+  "lat": 34.47373151814613,
+  "lng": 136.697165829203,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/0c422bdc7f6ec94f",
+      "lat": 34.4739367536804,
+      "lng": 136.697368812272,
+      "category": "SAFE",
+      "name": "伊勢市立宮山小学校",
+      "address": "伊勢市旭町319",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市旭町319",
+      "sourceRow": 35,
+      "sourceRows": [
+        35
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/cf7af4e9620f36c8",
+      "lat": 34.473713,
+      "lng": 136.697269,
+      "category": "SAFE",
+      "name": "伊勢市立宮山小学校　体育館",
+      "address": "伊勢市旭町319",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市旭町319",
+      "sourceRow": 36,
+      "sourceRows": [
+        36
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/d5d111e1b2ad247e",
+      "lat": 34.473544800758,
+      "lng": 136.696859675337,
+      "category": "SAFE",
+      "name": "ひまわり学童ｸﾗﾌﾞ",
+      "address": "伊勢市旭町319　宮山小学校敷地内",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市旭町319　宮山小学校敷地内",
+      "sourceRow": 94,
+      "sourceRows": [
+        94
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

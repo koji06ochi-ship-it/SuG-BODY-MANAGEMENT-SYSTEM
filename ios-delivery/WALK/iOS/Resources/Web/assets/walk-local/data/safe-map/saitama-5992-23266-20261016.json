@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5992-23266",
+  "lat": 35.954911725,
+  "lng": 139.5980434,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.95532245,
+      "lng": 139.5977808,
+      "category": "SAFE",
+      "name": "大宮別所第二放課後児童クラブ（キッズスペースうちゅう）",
+      "address": "さいたま市別所町42-1",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "別所町42-1",
+      "district": "北区",
+      "sourceRow": 86,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/c5492214efe17460",
+      "sourceRows": [
+        86
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.954501,
+      "lng": 139.598306,
+      "category": "SAFE",
+      "name": "大宮別所放課後児童クラブ（キッズスペースきぼう）",
+      "address": "さいたま市別所町42-7",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "別所町42-7",
+      "district": "北区",
+      "sourceRow": 87,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/1d108ea54fb03296",
+      "sourceRows": [
+        87
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

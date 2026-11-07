@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "yokkaichi-5831-22761-20261016",
+  "lat": 34.988351995,
+  "lng": 136.56793770000002,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "四日市市",
+  "source": "四日市市内公共施設 AED設置箇所一覧",
+  "sourceUrl": "https://data.bodik.jp/dataset/242021_00127",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/422f8da8-0b3c-4d84-b8dd-d88d18e914ce/resource/2a5eee8b-c455-4c2e-8553-b0d3d36e5ef2/download/242021_aed.csv",
+  "sourceUpdatedAt": "2024-12-18",
+  "sourcePageUpdatedAt": "2025-01-24",
+  "retrievedAt": "2026-10-15T15:44:16.747Z",
+  "sourceFileSha256": "c0880c81977c7fc444213ee84ef31a7b2e9e34f12d31e892064cbabb7d5159cf",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/yokkaichi/aed/1139e32a7b21c727",
+      "lat": 34.98822529,
+      "lng": 136.567502,
+      "category": "SAFE",
+      "name": "人権プラザ神前",
+      "address": "四日市市寺方町2281番地",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市寺方町2281番地",
+      "sourceRow": 189,
+      "sourceRows": [
+        189
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/8012234575baa20c",
+      "lat": 34.9884787,
+      "lng": 136.5683734,
+      "category": "SAFE",
+      "name": "寺方児童集会所",
+      "address": "四日市市寺方町2251番地",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市寺方町2251番地",
+      "sourceRow": 190,
+      "sourceRows": [
+        190
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

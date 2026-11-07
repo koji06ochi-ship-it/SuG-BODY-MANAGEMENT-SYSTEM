@@ -1,0 +1,820 @@
+{
+  "schemaVersion": 1,
+  "id": "tokyo",
+  "name": "東京駅周辺の一部",
+  "lat": 35.681,
+  "lng": 139.767,
+  "radius": 600,
+  "partial": true,
+  "limit": 80,
+  "retrievedAt": "2026-10-14T05:28:58.217Z",
+  "osmTimestamp": "2026-10-14T05:27:41Z",
+  "source": "OpenStreetMap contributors",
+  "sourceUrl": "https://www.openstreetmap.org/copyright",
+  "license": "ODbL-1.0",
+  "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "query": "[out:json][timeout:15][maxsize:16777216];(nwr[amenity~\"^(police|fire_station|hospital|toilets|townhall|community_centre)$\"](around:600,35.681,139.767);nwr[emergency=defibrillator](around:600,35.681,139.767);nwr[leisure=park](around:600,35.681,139.767);nwr[railway~\"^(station|halt)$\"](around:600,35.681,139.767);nwr[highway=bus_stop](around:600,35.681,139.767););out center 80;",
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "data": [
+    {
+      "id": "node/734869271",
+      "lat": 35.6838921,
+      "lng": 139.7690851,
+      "category": "MOVE",
+      "name": "呉服橋",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/734869271"
+    },
+    {
+      "id": "node/734869272",
+      "lat": 35.6841255,
+      "lng": 139.7692687,
+      "category": "MOVE",
+      "name": "呉服橋",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/734869272"
+    },
+    {
+      "id": "node/860366896",
+      "lat": 35.68379,
+      "lng": 139.7689147,
+      "category": "MOVE",
+      "name": "東京駅日本橋口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/860366896"
+    },
+    {
+      "id": "node/1350269220",
+      "lat": 35.6854873,
+      "lng": 139.7703224,
+      "category": "PUBLIC",
+      "name": "名称未登録",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/node/1350269220"
+    },
+    {
+      "id": "node/1420766273",
+      "lat": 35.6798771,
+      "lng": 139.7706973,
+      "category": "SAFE",
+      "name": "中央警察署八重洲通交番",
+      "address": "東京都 中央区 15",
+      "kind": "police",
+      "source": "https://www.openstreetmap.org/node/1420766273"
+    },
+    {
+      "id": "node/1420766508",
+      "lat": 35.680187,
+      "lng": 139.768258,
+      "category": "SAFE",
+      "name": "丸の内警察署八重洲口交番",
+      "address": "東京都千代田区丸の内1-9-1",
+      "kind": "police",
+      "source": "https://www.openstreetmap.org/node/1420766508"
+    },
+    {
+      "id": "node/1923768928",
+      "lat": 35.6846087,
+      "lng": 139.7664613,
+      "category": "MOVE",
+      "name": "大手町",
+      "address": "",
+      "kind": "station",
+      "source": "https://www.openstreetmap.org/node/1923768928"
+    },
+    {
+      "id": "node/2091867931",
+      "lat": 35.6802725,
+      "lng": 139.768375,
+      "category": "MOVE",
+      "name": "東京駅八重洲口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/2091867931"
+    },
+    {
+      "id": "node/2130348073",
+      "lat": 35.681354,
+      "lng": 139.769458,
+      "category": "SAFE",
+      "name": "Koban",
+      "address": "",
+      "kind": "police",
+      "source": "https://www.openstreetmap.org/node/2130348073"
+    },
+    {
+      "id": "node/2149761647",
+      "lat": 35.6812546,
+      "lng": 139.766706,
+      "category": "MOVE",
+      "name": "東京",
+      "address": "東京都 千代田区 1",
+      "kind": "station",
+      "source": "https://www.openstreetmap.org/node/2149761647"
+    },
+    {
+      "id": "node/2202847573",
+      "lat": 35.6811611,
+      "lng": 139.7647161,
+      "category": "MOVE",
+      "name": "東京駅南口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/2202847573"
+    },
+    {
+      "id": "node/2628270811",
+      "lat": 35.6808972,
+      "lng": 139.7647011,
+      "category": "MOVE",
+      "name": "東京駅丸の内南口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/2628270811"
+    },
+    {
+      "id": "node/2628270814",
+      "lat": 35.6807221,
+      "lng": 139.7648141,
+      "category": "MOVE",
+      "name": "東京駅丸の内南口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/2628270814"
+    },
+    {
+      "id": "node/2744463657",
+      "lat": 35.680919,
+      "lng": 139.7728023,
+      "category": "MOVE",
+      "name": "日本橋高島屋",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/2744463657"
+    },
+    {
+      "id": "node/3426416188",
+      "lat": 35.6795104,
+      "lng": 139.7681467,
+      "category": "MOVE",
+      "name": "東京駅八重洲口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/3426416188"
+    },
+    {
+      "id": "node/3426416189",
+      "lat": 35.6796447,
+      "lng": 139.7682325,
+      "category": "MOVE",
+      "name": "東京駅八重洲口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/3426416189"
+    },
+    {
+      "id": "node/3426416190",
+      "lat": 35.6797928,
+      "lng": 139.7683256,
+      "category": "MOVE",
+      "name": "東京駅八重洲口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/3426416190"
+    },
+    {
+      "id": "node/3426416198",
+      "lat": 35.6791654,
+      "lng": 139.7724166,
+      "category": "MOVE",
+      "name": "通り三丁目",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/3426416198"
+    },
+    {
+      "id": "node/3426416199",
+      "lat": 35.6794597,
+      "lng": 139.7708871,
+      "category": "MOVE",
+      "name": "通り三丁目",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/3426416199"
+    },
+    {
+      "id": "node/3861582257",
+      "lat": 35.6800959,
+      "lng": 139.7682627,
+      "category": "MOVE",
+      "name": "東京駅八重洲口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/3861582257"
+    },
+    {
+      "id": "node/3861582258",
+      "lat": 35.6800232,
+      "lng": 139.7682295,
+      "category": "MOVE",
+      "name": "東京駅八重洲口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/3861582258"
+    },
+    {
+      "id": "node/3861582957",
+      "lat": 35.6799492,
+      "lng": 139.7681918,
+      "category": "MOVE",
+      "name": "東京駅八重洲口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/3861582957"
+    },
+    {
+      "id": "node/3861583452",
+      "lat": 35.6794648,
+      "lng": 139.767961,
+      "category": "MOVE",
+      "name": "東京駅八重洲口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/3861583452"
+    },
+    {
+      "id": "node/3861583743",
+      "lat": 35.6793848,
+      "lng": 139.7679272,
+      "category": "MOVE",
+      "name": "東京駅八重洲口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/3861583743"
+    },
+    {
+      "id": "node/3861583957",
+      "lat": 35.6798962,
+      "lng": 139.7681695,
+      "category": "MOVE",
+      "name": "東京駅八重洲口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/3861583957"
+    },
+    {
+      "id": "node/3861583999",
+      "lat": 35.6797358,
+      "lng": 139.7680901,
+      "category": "MOVE",
+      "name": "東京駅八重洲口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/3861583999"
+    },
+    {
+      "id": "node/3861584057",
+      "lat": 35.6798122,
+      "lng": 139.7681311,
+      "category": "MOVE",
+      "name": "東京駅八重洲口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/3861584057"
+    },
+    {
+      "id": "node/3861584389",
+      "lat": 35.6795338,
+      "lng": 139.7679927,
+      "category": "MOVE",
+      "name": "東京駅八重洲口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/3861584389"
+    },
+    {
+      "id": "node/4104584583",
+      "lat": 35.6824133,
+      "lng": 139.7651043,
+      "category": "MOVE",
+      "name": "東京駅丸の内北口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/4104584583"
+    },
+    {
+      "id": "node/4104584584",
+      "lat": 35.6824942,
+      "lng": 139.7655116,
+      "category": "MOVE",
+      "name": "東京駅丸の内北口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/4104584584"
+    },
+    {
+      "id": "node/4104584586",
+      "lat": 35.6821398,
+      "lng": 139.7658605,
+      "category": "MOVE",
+      "name": "東京駅丸の内北口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/4104584586"
+    },
+    {
+      "id": "node/4104584587",
+      "lat": 35.6828187,
+      "lng": 139.7656958,
+      "category": "MOVE",
+      "name": "東京駅丸の内北口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/4104584587"
+    },
+    {
+      "id": "node/4104584588",
+      "lat": 35.6822274,
+      "lng": 139.7650409,
+      "category": "MOVE",
+      "name": "東京駅丸の内北口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/4104584588"
+    },
+    {
+      "id": "node/4160355094",
+      "lat": 35.678858,
+      "lng": 139.763585,
+      "category": "MOVE",
+      "name": "東京国際フォーラム前",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/4160355094"
+    },
+    {
+      "id": "node/4160369090",
+      "lat": 35.677669,
+      "lng": 139.763426,
+      "category": "MOVE",
+      "name": "東京国際フォーラム前",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/4160369090"
+    },
+    {
+      "id": "node/4536759391",
+      "lat": 35.6792606,
+      "lng": 139.7679559,
+      "category": "MOVE",
+      "name": "東京駅八重洲口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/4536759391"
+    },
+    {
+      "id": "node/4646514990",
+      "lat": 35.6823148,
+      "lng": 139.7699166,
+      "category": "MOVE",
+      "name": "東京駅八重洲北口・鉄鋼ビル",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/4646514990"
+    },
+    {
+      "id": "node/4740881765",
+      "lat": 35.678205,
+      "lng": 139.761949,
+      "category": "MOVE",
+      "name": "馬場先門",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/4740881765"
+    },
+    {
+      "id": "node/4740881768",
+      "lat": 35.6784753,
+      "lng": 139.7617639,
+      "category": "MOVE",
+      "name": "馬場先門",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/4740881768"
+    },
+    {
+      "id": "node/4749153530",
+      "lat": 35.679996,
+      "lng": 139.7640105,
+      "category": "MOVE",
+      "name": "丸の内三菱ビル",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/4749153530"
+    },
+    {
+      "id": "node/4961787967",
+      "lat": 35.6832972,
+      "lng": 139.7613617,
+      "category": "PUBLIC",
+      "name": "名称未登録",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/node/4961787967"
+    },
+    {
+      "id": "node/5409192473",
+      "lat": 35.6840162,
+      "lng": 139.7626637,
+      "category": "MOVE",
+      "name": "大手町",
+      "address": "",
+      "kind": "station",
+      "source": "https://www.openstreetmap.org/node/5409192473"
+    },
+    {
+      "id": "node/5694761898",
+      "lat": 35.6810038,
+      "lng": 139.7638723,
+      "category": "SAFE",
+      "name": "名称未登録",
+      "address": "",
+      "kind": "defibrillator",
+      "source": "https://www.openstreetmap.org/node/5694761898"
+    },
+    {
+      "id": "node/6191069634",
+      "lat": 35.6836413,
+      "lng": 139.7625484,
+      "category": "PUBLIC",
+      "name": "名称未登録",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/node/6191069634"
+    },
+    {
+      "id": "node/6193732167",
+      "lat": 35.6820173,
+      "lng": 139.7649584,
+      "category": "MOVE",
+      "name": "東京",
+      "address": "",
+      "kind": "station",
+      "source": "https://www.openstreetmap.org/node/6193732167"
+    },
+    {
+      "id": "node/6206669779",
+      "lat": 35.6803213,
+      "lng": 139.7616161,
+      "category": "MOVE",
+      "name": "二重橋前〈丸の内〉",
+      "address": "",
+      "kind": "station",
+      "source": "https://www.openstreetmap.org/node/6206669779"
+    },
+    {
+      "id": "node/6240689967",
+      "lat": 35.6820843,
+      "lng": 139.7733976,
+      "category": "MOVE",
+      "name": "日本橋",
+      "address": "",
+      "kind": "station",
+      "source": "https://www.openstreetmap.org/node/6240689967"
+    },
+    {
+      "id": "node/6397053334",
+      "lat": 35.6778056,
+      "lng": 139.7643496,
+      "category": "PUBLIC",
+      "name": "名称未登録",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/node/6397053334"
+    },
+    {
+      "id": "node/6397075518",
+      "lat": 35.6777091,
+      "lng": 139.7650001,
+      "category": "PUBLIC",
+      "name": "名称未登録",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/node/6397075518"
+    },
+    {
+      "id": "node/7093756541",
+      "lat": 35.6823758,
+      "lng": 139.7662055,
+      "category": "PUBLIC",
+      "name": "名称未登録",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/node/7093756541"
+    },
+    {
+      "id": "node/7786715954",
+      "lat": 35.676696,
+      "lng": 139.7700412,
+      "category": "MOVE",
+      "name": "京橋",
+      "address": "",
+      "kind": "station",
+      "source": "https://www.openstreetmap.org/node/7786715954"
+    },
+    {
+      "id": "node/9349818267",
+      "lat": 35.6827622,
+      "lng": 139.77283,
+      "category": "MOVE",
+      "name": "日本橋",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9349818267"
+    },
+    {
+      "id": "node/9349837849",
+      "lat": 35.6834593,
+      "lng": 139.771674,
+      "category": "MOVE",
+      "name": "呉服橋",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9349837849"
+    },
+    {
+      "id": "node/9349837850",
+      "lat": 35.6822557,
+      "lng": 139.7700754,
+      "category": "MOVE",
+      "name": "東京駅八重洲北口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9349837850"
+    },
+    {
+      "id": "node/9444566518",
+      "lat": 35.6805083,
+      "lng": 139.7647391,
+      "category": "MOVE",
+      "name": "東京駅丸の内南口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9444566518"
+    },
+    {
+      "id": "node/9510182284",
+      "lat": 35.6809798,
+      "lng": 139.7728261,
+      "category": "MOVE",
+      "name": "日本橋二丁目",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9510182284"
+    },
+    {
+      "id": "node/9510182285",
+      "lat": 35.6795527,
+      "lng": 139.7706738,
+      "category": "MOVE",
+      "name": "八重洲地下街",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9510182285"
+    },
+    {
+      "id": "node/9510242358",
+      "lat": 35.6827058,
+      "lng": 139.7648757,
+      "category": "MOVE",
+      "name": "新丸ビル",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9510242358"
+    },
+    {
+      "id": "node/9510242360",
+      "lat": 35.6854779,
+      "lng": 139.7658114,
+      "category": "MOVE",
+      "name": "大手町タワー",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9510242360"
+    },
+    {
+      "id": "node/9510242366",
+      "lat": 35.6847194,
+      "lng": 139.7632116,
+      "category": "MOVE",
+      "name": "三井住友銀行",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9510242366"
+    },
+    {
+      "id": "node/9510242367",
+      "lat": 35.6816033,
+      "lng": 139.7622419,
+      "category": "MOVE",
+      "name": "郵船ビル",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9510242367"
+    },
+    {
+      "id": "node/9510242368",
+      "lat": 35.6796122,
+      "lng": 139.7615612,
+      "category": "MOVE",
+      "name": "丸の内マイプラザ",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9510242368"
+    },
+    {
+      "id": "node/9510311243",
+      "lat": 35.680135,
+      "lng": 139.7722967,
+      "category": "MOVE",
+      "name": "日本橋三丁目",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9510311243"
+    },
+    {
+      "id": "node/9510311245",
+      "lat": 35.6769975,
+      "lng": 139.7701453,
+      "category": "MOVE",
+      "name": "京橋二丁目",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9510311245"
+    },
+    {
+      "id": "node/9510311246",
+      "lat": 35.6786792,
+      "lng": 139.7711896,
+      "category": "MOVE",
+      "name": "京橋一丁目",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9510311246"
+    },
+    {
+      "id": "node/9762140196",
+      "lat": 35.677719,
+      "lng": 139.7641076,
+      "category": "MOVE",
+      "name": "東京国際フォーラム前",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/9762140196"
+    },
+    {
+      "id": "node/10618652362",
+      "lat": 35.6790105,
+      "lng": 139.7688872,
+      "category": "MOVE",
+      "name": "バスターミナル東京八重洲 地下B",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/10618652362"
+    },
+    {
+      "id": "node/10618652363",
+      "lat": 35.6791717,
+      "lng": 139.7689918,
+      "category": "MOVE",
+      "name": "バスターミナル東京八重洲 地下B",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/10618652363"
+    },
+    {
+      "id": "node/10618652364",
+      "lat": 35.6793177,
+      "lng": 139.7690789,
+      "category": "MOVE",
+      "name": "バスターミナル東京八重洲 地下B",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/10618652364"
+    },
+    {
+      "id": "node/10618652365",
+      "lat": 35.6790497,
+      "lng": 139.7686149,
+      "category": "MOVE",
+      "name": "バスターミナル東京八重洲 地下B",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/10618652365"
+    },
+    {
+      "id": "node/10618652366",
+      "lat": 35.6791848,
+      "lng": 139.7687021,
+      "category": "MOVE",
+      "name": "バスターミナル東京八重洲 地下B",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/10618652366"
+    },
+    {
+      "id": "node/10618652367",
+      "lat": 35.6793253,
+      "lng": 139.7687893,
+      "category": "MOVE",
+      "name": "バスターミナル東京八重洲 地下B",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/10618652367"
+    },
+    {
+      "id": "node/11329319854",
+      "lat": 35.6811412,
+      "lng": 139.7674549,
+      "category": "MOVE",
+      "name": "東京",
+      "address": "",
+      "kind": "station",
+      "source": "https://www.openstreetmap.org/node/11329319854"
+    },
+    {
+      "id": "node/11329319855",
+      "lat": 35.6809626,
+      "lng": 139.7679859,
+      "category": "MOVE",
+      "name": "東京",
+      "address": "",
+      "kind": "station",
+      "source": "https://www.openstreetmap.org/node/11329319855"
+    },
+    {
+      "id": "node/11513601480",
+      "lat": 35.6788694,
+      "lng": 139.7687705,
+      "category": "PUBLIC",
+      "name": "名称未登録",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/node/11513601480"
+    },
+    {
+      "id": "node/11513601481",
+      "lat": 35.6789364,
+      "lng": 139.7685775,
+      "category": "PUBLIC",
+      "name": "名称未登録",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/node/11513601481"
+    },
+    {
+      "id": "node/11513601482",
+      "lat": 35.6789827,
+      "lng": 139.7685837,
+      "category": "PUBLIC",
+      "name": "名称未登録",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/node/11513601482"
+    },
+    {
+      "id": "node/12054476974",
+      "lat": 35.6801238,
+      "lng": 139.7655076,
+      "category": "MOVE",
+      "name": "東京駅丸の内南口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/12054476974"
+    },
+    {
+      "id": "node/12054476975",
+      "lat": 35.6799887,
+      "lng": 139.7655907,
+      "category": "MOVE",
+      "name": "東京駅丸の内南口",
+      "address": "",
+      "kind": "bus_stop",
+      "source": "https://www.openstreetmap.org/node/12054476975"
+    },
+    {
+      "id": "node/12544038173",
+      "lat": 35.6833361,
+      "lng": 139.7680136,
+      "category": "PUBLIC",
+      "name": "名称未登録",
+      "address": "",
+      "kind": "toilets",
+      "source": "https://www.openstreetmap.org/node/12544038173"
+    }
+  ]
+}

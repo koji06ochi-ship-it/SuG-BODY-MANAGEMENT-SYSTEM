@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "otsu-5827-22657-20261016",
+  "lat": 34.964567168,
+  "lng": 135.94383138,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "大津市",
+  "source": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+  "sourceUrl": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/999caef4-7e90-4fd2-98eb-fd94368e9a2f/resource/3e5b513e-de51-4459-af70-6fda94e1bed3/download/od405902026022700200.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2025-03-12",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "7899826cf95c365a07c87b3ad05aa2aa7d4adeb440a2c57269c84f98c1d85ea8",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/otsu/aed/e87cf500255b2b46",
+      "lat": 34.96314472,
+      "lng": 135.9435147,
+      "category": "SAFE",
+      "name": "龍谷大学　瀬田学舎",
+      "address": "大津市瀬田大江町横谷1番地5",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市瀬田大江町横谷1番地5",
+      "district": "大津市",
+      "sourceRow": 349,
+      "sourceRows": [
+        349
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/45c163f2ccee1231",
+      "lat": 34.9622875,
+      "lng": 135.9424658,
+      "category": "SAFE",
+      "name": "龍谷大学　瀬田学舎",
+      "address": "大津市瀬田大江町横谷1番地5",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市瀬田大江町横谷1番地5",
+      "district": "大津市",
+      "sourceRow": 356,
+      "sourceRows": [
+        356
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/91ed72b648ae65be",
+      "lat": 34.96269167,
+      "lng": 135.942205,
+      "category": "SAFE",
+      "name": "龍谷大学　瀬田学舎",
+      "address": "大津市瀬田大江町横谷1番地5",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市瀬田大江町横谷1番地5",
+      "district": "大津市",
+      "sourceRow": 363,
+      "sourceRows": [
+        363
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/7f69f3fc5eb27553",
+      "lat": 34.96758667,
+      "lng": 135.9461456,
+      "category": "SAFE",
+      "name": "滋賀県立図書館",
+      "address": "大津市瀬田南大萱町1740番地の1",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市瀬田南大萱町1740番地の1",
+      "district": "大津市",
+      "sourceRow": 415,
+      "sourceRows": [
+        415
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/otsu/aed/ecb61f3a97a8be97",
+      "lat": 34.96712528,
+      "lng": 135.9448258,
+      "category": "SAFE",
+      "name": "滋賀県立美術館",
+      "address": "大津市瀬田南大萱町1740番地1",
+      "kind": "AED",
+      "source": "https://www.city.otsu.lg.jp/soshiki/075/2363/od/40590.html",
+      "sourceLabel": "大津市 AED設置事業所一覧（BODIK配布CSV）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "大津市瀬田南大萱町1740番地1",
+      "district": "大津市",
+      "sourceRow": 418,
+      "sourceRows": [
+        418
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

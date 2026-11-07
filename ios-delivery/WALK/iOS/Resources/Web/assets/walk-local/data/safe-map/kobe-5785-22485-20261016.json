@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5785-22485-20261016",
+  "lat": 34.7116465801005,
+  "lng": 134.914158605746,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/864f4c55c8252c0d",
+      "lat": 34.7116465801005,
+      "lng": 134.914158605746,
+      "category": "SAFE",
+      "name": "中嶋石油株式会社セルフ岩岡Ｓ.Ｓ.",
+      "address": "神戸市西区岩岡町古郷2602-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区岩岡町古郷2602-1",
+      "district": "西区",
+      "sourceRow": 569,
+      "sourceRows": [
+        569
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5785-22501-20261016",
+  "lat": 34.71179647805716,
+  "lng": 135.01025391779402,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/0fe66fb44a3511c5",
+      "lat": 34.7139624921496,
+      "lng": 135.009272450394,
+      "category": "SAFE",
+      "name": "神戸市立　西神中学校",
+      "address": "神戸市西区竹の台5-21",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区竹の台5-21",
+      "district": "西区",
+      "sourceRow": 521,
+      "sourceRows": [
+        521
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/db7279981f67e6fe",
+      "lat": 34.7113942171517,
+      "lng": 135.011623033848,
+      "category": "SAFE",
+      "name": "神戸市立　竹の台児童館",
+      "address": "神戸市西区竹の台2丁目20-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区竹の台2丁目20-1",
+      "district": "西区",
+      "sourceRow": 689,
+      "sourceRows": [
+        689
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6831f83af7bf97c7",
+      "lat": 34.711374371763,
+      "lng": 135.011476935236,
+      "category": "SAFE",
+      "name": "たけのプラザ集会所",
+      "address": "神戸市西区竹の台2丁目20-4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区竹の台2丁目20-4",
+      "district": "西区",
+      "sourceRow": 695,
+      "sourceRows": [
+        695
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b626c4d1ab9ed7f9",
+      "lat": 34.7113942171517,
+      "lng": 135.011623033848,
+      "category": "SAFE",
+      "name": "竹の台地域福祉センター",
+      "address": "神戸市西区竹の台2-20-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区竹の台2-20-1",
+      "district": "西区",
+      "sourceRow": 715,
+      "sourceRows": [
+        715
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/919a6615da114082",
+      "lat": 34.711279198364,
+      "lng": 135.006051118202,
+      "category": "SAFE",
+      "name": "マイコート樫野台　集会所",
+      "address": "神戸市西区樫野台6丁目1-119",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区樫野台6丁目1-119",
+      "district": "西区",
+      "sourceRow": 736,
+      "sourceRows": [
+        736
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2cb39dfbe6eafa30",
+      "lat": 34.711374371763,
+      "lng": 135.011476935236,
+      "category": "SAFE",
+      "name": "神戸市立西神中央駅前南自転車駐車場",
+      "address": "神戸市西区竹の台2丁目20-4",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市西区竹の台2丁目20-4",
+      "district": "西区",
+      "sourceRow": 785,
+      "sourceRows": [
+        785
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

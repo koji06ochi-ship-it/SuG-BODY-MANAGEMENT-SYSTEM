@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5780-22525-20261016",
+  "lat": 34.681165432907974,
+  "lng": 135.1525783713183,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/6e4e1ba6d509e629",
+      "lat": 34.6803621518261,
+      "lng": 135.150517870879,
+      "category": "SAFE",
+      "name": "丸正建設株式会社",
+      "address": "神戸市長田区房王寺町7丁目2－7",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区房王寺町7丁目2－7",
+      "district": "長田区",
+      "sourceRow": 1274,
+      "sourceRows": [
+        1274
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/5d76ed78295b7a2a",
+      "lat": 34.6800154397716,
+      "lng": 135.151042980686,
+      "category": "SAFE",
+      "name": "ディサービスセンターふれんど神戸",
+      "address": "神戸市長田区房王寺町7丁目1－7",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区房王寺町7丁目1－7",
+      "district": "長田区",
+      "sourceRow": 1287,
+      "sourceRows": [
+        1287
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3b450c9d9aaac43d",
+      "lat": 34.6819587251359,
+      "lng": 135.153284840495,
+      "category": "SAFE",
+      "name": "神戸市立　夢野中学校",
+      "address": "神戸市兵庫区鵯越町10番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区鵯越町10番1号",
+      "district": "兵庫区",
+      "sourceRow": 2042,
+      "sourceRows": [
+        2042
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0b0684d9c354e88a",
+      "lat": 34.6810164242689,
+      "lng": 135.153415173487,
+      "category": "SAFE",
+      "name": "ひよどり地域福祉センター",
+      "address": "神戸市兵庫区菊水町10丁目12－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区菊水町10丁目12－1",
+      "district": "兵庫区",
+      "sourceRow": 2075,
+      "sourceRows": [
+        2075
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4ea0cf8962c892eb",
+      "lat": 34.6800767676382,
+      "lng": 135.154257693802,
+      "category": "SAFE",
+      "name": "海光園（社会福祉法人）",
+      "address": "神戸市兵庫区菊水町10丁目40",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区菊水町10丁目40",
+      "district": "兵庫区",
+      "sourceRow": 2082,
+      "sourceRows": [
+        2082
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/58ffd8e4c7975eb3",
+      "lat": 34.6808044172652,
+      "lng": 135.153297857224,
+      "category": "SAFE",
+      "name": "たちえ幼稚園",
+      "address": "神戸市兵庫区菊水町10-39-25",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区菊水町10-39-25",
+      "district": "兵庫区",
+      "sourceRow": 2134,
+      "sourceRows": [
+        2134
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/666de0d43ac4b107",
+      "lat": 34.6839241044499,
+      "lng": 135.152232182655,
+      "category": "SAFE",
+      "name": "医療法人社団大有会介護老人保健施設ドリームヒルズ滝山",
+      "address": "神戸市兵庫区滝山町7-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市兵庫区滝山町7-2",
+      "district": "兵庫区",
+      "sourceRow": 2148,
+      "sourceRows": [
+        2148
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

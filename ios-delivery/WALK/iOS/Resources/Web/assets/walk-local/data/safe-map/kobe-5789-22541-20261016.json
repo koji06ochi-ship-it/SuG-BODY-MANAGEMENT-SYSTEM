@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5789-22541-20261016",
+  "lat": 34.73730098235697,
+  "lng": 135.2503600183883,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/64b91f9035d6e11e",
+      "lat": 34.7389104865655,
+      "lng": 135.250679248559,
+      "category": "SAFE",
+      "name": "神戸市立　渦が森小学校",
+      "address": "神戸市東灘区渦森台1-12-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区渦森台1-12-1",
+      "district": "東灘区",
+      "sourceRow": 1385,
+      "sourceRows": [
+        1385
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/8a53d93c5dbdc8bc",
+      "lat": 34.7342331982705,
+      "lng": 135.250375730878,
+      "category": "SAFE",
+      "name": "特別養護老人ホーム　友愛苑",
+      "address": "神戸市東灘区鴨子ヶ原2丁目14-17",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区鴨子ヶ原2丁目14-17",
+      "district": "東灘区",
+      "sourceRow": 1451,
+      "sourceRows": [
+        1451
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/cd3b2c6f5ebb7b6f",
+      "lat": 34.7393836603272,
+      "lng": 135.251274789569,
+      "category": "SAFE",
+      "name": "神戸市立　渦森台保育所",
+      "address": "神戸市東灘区渦森台1丁目13－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区渦森台1丁目13－1",
+      "district": "東灘区",
+      "sourceRow": 1480,
+      "sourceRows": [
+        1480
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/05bf9111e5e32f3c",
+      "lat": 34.7357239170203,
+      "lng": 135.249919417082,
+      "category": "SAFE",
+      "name": "コープこうべ　コープ渦森台",
+      "address": "神戸市東灘区渦森台2丁目14番",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区渦森台2丁目14番",
+      "district": "東灘区",
+      "sourceRow": 1516,
+      "sourceRows": [
+        1516
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b339f26d94b5b3e2",
+      "lat": 34.7390650557693,
+      "lng": 135.251620175667,
+      "category": "SAFE",
+      "name": "渦が森幼稚園",
+      "address": "神戸市東灘区渦森台1丁目8-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区渦森台1丁目8-1",
+      "district": "東灘区",
+      "sourceRow": 1714,
+      "sourceRows": [
+        1714
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/19f35d06a31c2837",
+      "lat": 34.736489576189,
+      "lng": 135.248290748575,
+      "category": "SAFE",
+      "name": "渦森会館",
+      "address": "神戸市東灘区渦森台2丁目21番地",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区渦森台2丁目21番地",
+      "district": "東灘区",
+      "sourceRow": 1748,
+      "sourceRows": [
+        1748
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

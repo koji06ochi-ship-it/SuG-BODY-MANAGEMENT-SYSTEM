@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "id": "ise-5748-22782-20261016",
+  "lat": 34.49056009008813,
+  "lng": 136.69513918032413,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "伊勢市",
+  "source": "伊勢市内のAED設置場所（市関連施設）",
+  "sourceUrl": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+  "sourceFileUrl": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/002/483/aed20260401.kml",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-06-19",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "4020cead388baa55e48b88a4fd8cb406bd7c65984b698132f18dfbd2942a553a",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/ise/aed/3dbeb9514d76aaad",
+      "lat": 34.4885139403073,
+      "lng": 136.69641169341,
+      "category": "SAFE",
+      "name": "伊勢市立早修小学校",
+      "address": "伊勢市常磐3-10-19",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市常磐3-10-19",
+      "sourceRow": 23,
+      "sourceRows": [
+        23
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/0eefbabed4629ff6",
+      "lat": 34.488207,
+      "lng": 136.696344,
+      "category": "SAFE",
+      "name": "伊勢市立早修小学校　体育館",
+      "address": "伊勢市常磐3-10-19",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市常磐3-10-19",
+      "sourceRow": 24,
+      "sourceRows": [
+        24
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/593ab0d6b42bbb29",
+      "lat": 34.4922273999744,
+      "lng": 136.6920897425,
+      "category": "SAFE",
+      "name": "伊勢市立中島小学校",
+      "address": "伊勢市二俣1-2-17",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市二俣1-2-17",
+      "sourceRow": 25,
+      "sourceRows": [
+        25
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/965b5d0ded1a60fd",
+      "lat": 34.49238,
+      "lng": 136.692652,
+      "category": "SAFE",
+      "name": "伊勢市立中島小学校　体育館",
+      "address": "伊勢市二俣1-2-17",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市二俣1-2-17",
+      "sourceRow": 26,
+      "sourceRows": [
+        26
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/426970ef4ba51f32",
+      "lat": 34.4934609522414,
+      "lng": 136.696701429957,
+      "category": "SAFE",
+      "name": "伊勢市立保育所きらら館",
+      "address": "伊勢市常磐2-4-40",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市常磐2-4-40",
+      "sourceRow": 86,
+      "sourceRows": [
+        86
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/25f38a38c2f1f2a2",
+      "lat": 34.489314283909,
+      "lng": 136.695920100764,
+      "category": "SAFE",
+      "name": "すみれ学童ｸﾗﾌﾞ",
+      "address": "伊勢市常磐3-10-44　旧早修幼稚園",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市常磐3-10-44　旧早修幼稚園",
+      "sourceRow": 91,
+      "sourceRows": [
+        91
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/ise/aed/ab33914b92167671",
+      "lat": 34.4898170541848,
+      "lng": 136.695855295638,
+      "category": "SAFE",
+      "name": "市民武道館",
+      "address": "伊勢市常磐3-8-9",
+      "kind": "AED",
+      "source": "https://www.city.ise.mie.jp/bousai_kyukyu/kyukyu/aed/1002483.html",
+      "sourceLabel": "伊勢市内のAED設置場所（市関連施設）",
+      "license": "CC-BY-4.0",
+      "originalAddress": "伊勢市常磐3-8-9",
+      "sourceRow": 124,
+      "sourceRows": [
+        124
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

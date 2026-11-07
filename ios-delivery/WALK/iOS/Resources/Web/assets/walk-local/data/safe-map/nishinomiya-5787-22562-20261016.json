@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5787-22562-20261016",
+  "lat": 34.724444495,
+  "lng": 135.3743714833333,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/3dd123d1abf8de6b",
+      "lat": 34.72553351,
+      "lng": 135.3725781,
+      "category": "SAFE",
+      "name": "鳴尾北小学校",
+      "address": "兵庫県西宮市学文殿町２丁目２－７",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市学文殿町２丁目２－７",
+      "district": "西宮市",
+      "sourceRow": 35,
+      "sourceRows": [
+        35
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/4170511b99c33a32",
+      "lat": 34.72413389,
+      "lng": 135.3747701,
+      "category": "SAFE",
+      "name": "学文中学校",
+      "address": "兵庫県西宮市学文殿町１丁目５－７",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市学文殿町１丁目５－７",
+      "district": "西宮市",
+      "sourceRow": 59,
+      "sourceRows": [
+        59
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/872293cd3711ac72",
+      "lat": 34.72405684,
+      "lng": 135.3727814,
+      "category": "SAFE",
+      "name": "学文殿保育所",
+      "address": "兵庫県西宮市学文殿町１丁目６－２２",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市学文殿町１丁目６－２２",
+      "district": "西宮市",
+      "sourceRow": 88,
+      "sourceRows": [
+        88
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/46cd89512b2e15e2",
+      "lat": 34.72204518,
+      "lng": 135.374485,
+      "category": "SAFE",
+      "name": "武庫川敬愛保育園　甲子園けやき散歩道",
+      "address": "兵庫県西宮市里中町1丁目１－５　ドルチェ東甲子園1階",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市里中町1丁目１－５　ドルチェ東甲子園1階",
+      "district": "西宮市",
+      "sourceRow": 152,
+      "sourceRows": [
+        152
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/ffbaca8e3fc9593e",
+      "lat": 34.72426273,
+      "lng": 135.3721919,
+      "category": "SAFE",
+      "name": "鳴尾北老人いこいの家",
+      "address": "兵庫県西宮市学文殿町2-4-29",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市学文殿町2-4-29",
+      "district": "西宮市",
+      "sourceRow": 173,
+      "sourceRows": [
+        173
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/4f68b7e3da3dd9ff",
+      "lat": 34.72417928,
+      "lng": 135.3725377,
+      "category": "SAFE",
+      "name": "学文公民館",
+      "address": "兵庫県西宮市学文殿町２丁目４－２４",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市学文殿町２丁目４－２４",
+      "district": "西宮市",
+      "sourceRow": 207,
+      "sourceRows": [
+        207
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/a19f399f908f3c82",
+      "lat": 34.72586706,
+      "lng": 135.3758094,
+      "category": "SAFE",
+      "name": "コープ西宮東店",
+      "address": "兵庫県西宮市小松北町１丁目６－４４",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市小松北町１丁目６－４４",
+      "district": "西宮市",
+      "sourceRow": 435,
+      "sourceRows": [
+        435
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/31ccbc86682906e3",
+      "lat": 34.72227374,
+      "lng": 135.3749679,
+      "category": "SAFE",
+      "name": "尼崎信用金庫鳴尾支店",
+      "address": "兵庫県西宮市学文殿町１丁目１０－１８",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市学文殿町１丁目１０－１８",
+      "district": "西宮市",
+      "sourceRow": 468,
+      "sourceRows": [
+        468
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/73b7e36e2f0a67c2",
+      "lat": 34.72671122,
+      "lng": 135.3727835,
+      "category": "SAFE",
+      "name": "グランダ甲子園",
+      "address": "兵庫県西宮市若草町２丁目８－３１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市若草町２丁目８－３１",
+      "district": "西宮市",
+      "sourceRow": 488,
+      "sourceRows": [
+        488
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/3120442b67a0166a",
+      "lat": 34.72628396,
+      "lng": 135.3775652,
+      "category": "SAFE",
+      "name": "株式会社ベネッセスタイルケアまどか武庫川",
+      "address": "兵庫県西宮市小松北町１丁目２－２３",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市小松北町１丁目２－２３",
+      "district": "西宮市",
+      "sourceRow": 489,
+      "sourceRows": [
+        489
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/8b61c03bd014b615",
+      "lat": 34.72452635,
+      "lng": 135.3758263,
+      "category": "SAFE",
+      "name": "西宮市社会福祉事業団小松北町事業所",
+      "address": "兵庫県西宮市小松北町２丁目８－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市小松北町２丁目８－１",
+      "district": "西宮市",
+      "sourceRow": 500,
+      "sourceRows": [
+        500
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/f28b81b9ada542e6",
+      "lat": 34.72346018,
+      "lng": 135.3761613,
+      "category": "SAFE",
+      "name": "JOY Fit２４鳴尾",
+      "address": "兵庫県西宮市小松西町１丁目２－６",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市小松西町１丁目２－６",
+      "district": "西宮市",
+      "sourceRow": 517,
+      "sourceRows": [
+        517
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

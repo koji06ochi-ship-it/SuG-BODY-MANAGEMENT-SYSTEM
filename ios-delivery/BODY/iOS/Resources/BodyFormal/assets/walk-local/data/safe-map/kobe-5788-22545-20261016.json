@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5788-22545-20261016",
+  "lat": 34.72855266500595,
+  "lng": 135.27354503630775,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/9635260fb99660bb",
+      "lat": 34.7288351552513,
+      "lng": 135.271649685644,
+      "category": "SAFE",
+      "name": "松蔭おかもと保育園",
+      "address": "神戸市東灘区岡本7丁目3-14",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区岡本7丁目3-14",
+      "district": "東灘区",
+      "sourceRow": 1612,
+      "sourceRows": [
+        1612
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/78227bd4bbfa6de8",
+      "lat": 34.7284802464808,
+      "lng": 135.275480108096,
+      "category": "SAFE",
+      "name": "岡本ハーベスト保育園",
+      "address": "神戸市東灘区岡本1丁目11-5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区岡本1丁目11-5",
+      "district": "東灘区",
+      "sourceRow": 1640,
+      "sourceRows": [
+        1640
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/3d44cc34644fa04b",
+      "lat": 34.7288814220318,
+      "lng": 135.274918952735,
+      "category": "SAFE",
+      "name": "光の園幼稚園",
+      "address": "神戸市東灘区岡本1丁目14-12",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区岡本1丁目14-12",
+      "district": "東灘区",
+      "sourceRow": 1641,
+      "sourceRows": [
+        1641
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a27534081a00b7c8",
+      "lat": 34.7280138362599,
+      "lng": 135.272131398756,
+      "category": "SAFE",
+      "name": "岡本信愛幼稚園",
+      "address": "神戸市東灘区岡本2丁目11-20",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市東灘区岡本2丁目11-20",
+      "district": "東灘区",
+      "sourceRow": 1645,
+      "sourceRows": [
+        1645
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

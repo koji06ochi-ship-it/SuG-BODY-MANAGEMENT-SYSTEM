@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5784-22534-20261016",
+  "lat": 34.706349140036195,
+  "lng": 135.2071306383845,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/627b964fa68c1943",
+      "lat": 34.7054980726022,
+      "lng": 135.20646585994,
+      "category": "SAFE",
+      "name": "神戸市立　春日野小学校",
+      "address": "神戸市中央区宮本通7-1-6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区宮本通7-1-6",
+      "district": "中央区",
+      "sourceRow": 947,
+      "sourceRows": [
+        947
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/976c6d5ae6e68121",
+      "lat": 34.7042820562658,
+      "lng": 135.207126027109,
+      "category": "SAFE",
+      "name": "やまだ整形外科クリニック",
+      "address": "神戸市中央区割塚通7-2-1　コンフォート春日野2階",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区割塚通7-2-1　コンフォート春日野2階",
+      "district": "中央区",
+      "sourceRow": 1117,
+      "sourceRows": [
+        1117
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/0e328234d71b1172",
+      "lat": 34.7077654664006,
+      "lng": 135.206586720838,
+      "category": "SAFE",
+      "name": "神戸平成病院",
+      "address": "神戸市中央区上筒井通6丁目2-43",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区上筒井通6丁目2-43",
+      "district": "中央区",
+      "sourceRow": 1133,
+      "sourceRows": [
+        1133
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7ccb72cc9eb90172",
+      "lat": 34.7078509648762,
+      "lng": 135.208343945651,
+      "category": "SAFE",
+      "name": "池端歯科医院",
+      "address": "神戸市中央区上筒井通5丁目1番地3神戸上筒井郵便局ビル2階",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市中央区上筒井通5丁目1番地3神戸上筒井郵便局ビル2階",
+      "district": "中央区",
+      "sourceRow": 1196,
+      "sourceRows": [
+        1196
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

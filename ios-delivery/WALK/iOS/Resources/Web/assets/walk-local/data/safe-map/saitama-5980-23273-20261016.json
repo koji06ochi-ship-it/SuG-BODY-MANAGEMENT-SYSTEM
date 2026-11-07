@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5980-23273",
+  "lat": 35.885782,
+  "lng": 139.639783,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.885782,
+      "lng": 139.639783,
+      "category": "SAFE",
+      "name": "与野駅市民の窓口",
+      "address": "さいたま市上木崎2-2-2",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "上木崎2-2-2",
+      "district": "浦和区",
+      "sourceRow": 376,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/46ab5fb0bb5a5179",
+      "sourceRows": [
+        376
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

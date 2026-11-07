@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5775-22525-20261016",
+  "lat": 34.65342580792672,
+  "lng": 135.1514325096968,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/d42e79d003621b2a",
+      "lat": 34.655294691878,
+      "lng": 135.151374557007,
+      "category": "SAFE",
+      "name": "神戸市立　真陽小学校",
+      "address": "神戸市長田区二葉町1丁目5－5",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区二葉町1丁目5－5",
+      "district": "長田区",
+      "sourceRow": 1271,
+      "sourceRows": [
+        1271
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/e08a2b2142b833b5",
+      "lat": 34.652557814656,
+      "lng": 135.151092860982,
+      "category": "SAFE",
+      "name": "神戸市立　駒栄保育所",
+      "address": "神戸市長田区駒栄町3丁目1-17",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区駒栄町3丁目1-17",
+      "district": "長田区",
+      "sourceRow": 1298,
+      "sourceRows": [
+        1298
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6cc58b5ccfbeabc7",
+      "lat": 34.6522440593897,
+      "lng": 135.150605159913,
+      "category": "SAFE",
+      "name": "近田幼稚園",
+      "address": "神戸市長田区駒栄町4丁目1-11",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区駒栄町4丁目1-11",
+      "district": "長田区",
+      "sourceRow": 1327,
+      "sourceRows": [
+        1327
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9e26ec17db5ffdf1",
+      "lat": 34.6521733604963,
+      "lng": 135.151916026601,
+      "category": "SAFE",
+      "name": "美肌温泉　あぐろの湯",
+      "address": "神戸市長田区南駒栄町1-6",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区南駒栄町1-6",
+      "district": "長田区",
+      "sourceRow": 1354,
+      "sourceRows": [
+        1354
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/b39f8b1763a942d2",
+      "lat": 34.6548591132136,
+      "lng": 135.152173943981,
+      "category": "SAFE",
+      "name": "はっぴーの家ろっけん",
+      "address": "神戸市長田区二葉町1丁目1－8",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市長田区二葉町1丁目1－8",
+      "district": "長田区",
+      "sourceRow": 1362,
+      "sourceRows": [
+        1362
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

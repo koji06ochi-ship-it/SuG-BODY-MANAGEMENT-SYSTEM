@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "saitama-5973-23271",
+  "lat": 35.843357478,
+  "lng": 139.63055634,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "さいたま市",
+  "source": "さいたま市 AED設置場所一覧",
+  "sourceUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+  "sourceFileUrl": "https://www.city.saitama.lg.jp/002/001/017/005/p084060_d/fil/settibasho_csv.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-08-25",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "79187767793866750c09dc9ff6edadcefebee05383eded8695fee710bc429e92",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.city.saitama.lg.jp/006/013/014/001/p040342.html",
+  "data": [
+    {
+      "lat": 35.84306469,
+      "lng": 139.6313591,
+      "category": "SAFE",
+      "name": "療育センターさくら草",
+      "address": "さいたま市田島2-16-2",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "田島2-16-2",
+      "district": "桜区",
+      "sourceRow": 351,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/a852836b759df2a8",
+      "sourceRows": [
+        351,
+        352
+      ],
+      "duplicateSourceEntries": 2
+    },
+    {
+      "lat": 35.84341881,
+      "lng": 139.6312158,
+      "category": "SAFE",
+      "name": "西浦和放課後児童クラブ",
+      "address": "さいたま市田島2-16-7",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "田島2-16-7",
+      "district": "桜区",
+      "sourceRow": 353,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/9791cc0df1cac7da",
+      "sourceRows": [
+        353
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.8434562,
+      "lng": 139.6314637,
+      "category": "SAFE",
+      "name": "田島保育園",
+      "address": "さいたま市田島2-16-7",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "田島2-16-7",
+      "district": "桜区",
+      "sourceRow": 354,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/d3261533c91b49f5",
+      "sourceRows": [
+        354
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 35.843783,
+      "lng": 139.627384,
+      "category": "SAFE",
+      "name": "西浦和駅市民の窓口",
+      "address": "さいたま市田島5-9-15",
+      "kind": "AED",
+      "source": "https://www.city.saitama.lg.jp/002/001/017/005/p084060.html",
+      "sourceLabel": "さいたま市 AED設置場所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "田島5-9-15",
+      "district": "桜区",
+      "sourceRow": 355,
+      "installationCount": null,
+      "id": "municipality/saitama/aed/be4bc03e37e12535",
+      "sourceRows": [
+        355
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

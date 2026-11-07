@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "yokkaichi-5821-22770-20261016",
+  "lat": 34.9278672525,
+  "lng": 136.62099634999998,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "四日市市",
+  "source": "四日市市内公共施設 AED設置箇所一覧",
+  "sourceUrl": "https://data.bodik.jp/dataset/242021_00127",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/422f8da8-0b3c-4d84-b8dd-d88d18e914ce/resource/2a5eee8b-c455-4c2e-8553-b0d3d36e5ef2/download/242021_aed.csv",
+  "sourceUpdatedAt": "2024-12-18",
+  "sourcePageUpdatedAt": "2025-01-24",
+  "retrievedAt": "2026-10-15T15:44:16.747Z",
+  "sourceFileSha256": "c0880c81977c7fc444213ee84ef31a7b2e9e34f12d31e892064cbabb7d5159cf",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/yokkaichi/aed/0640aef6fb275312",
+      "lat": 34.92711698,
+      "lng": 136.620942,
+      "category": "SAFE",
+      "name": "塩浜中学校",
+      "address": "四日市市塩浜4096",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市塩浜4096",
+      "sourceRow": 78,
+      "sourceRows": [
+        78
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/42f80c100963d3e0",
+      "lat": 34.92711472,
+      "lng": 136.6209433,
+      "category": "SAFE",
+      "name": "塩浜中学校",
+      "address": "四日市市塩浜4096",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市塩浜4096",
+      "sourceRow": 79,
+      "sourceRows": [
+        79
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/f719363982d75fca",
+      "lat": 34.92873608,
+      "lng": 136.6210037,
+      "category": "SAFE",
+      "name": "塩浜子育て支援センター",
+      "address": "四日市市大字塩浜887‐1",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市大字塩浜887‐1",
+      "sourceRow": 230,
+      "sourceRows": [
+        230
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/51a14ed109e71e04",
+      "lat": 34.92850123,
+      "lng": 136.6210964,
+      "category": "SAFE",
+      "name": "塩浜児童館",
+      "address": "四日市市大字塩浜887‐1",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市大字塩浜887‐1",
+      "sourceRow": 232,
+      "sourceRows": [
+        232
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

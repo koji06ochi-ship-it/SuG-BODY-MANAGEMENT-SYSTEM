@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5777-22517-20261016",
+  "lat": 34.66665676080861,
+  "lng": 135.1044196189352,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/0edbfd237f06ac4a",
+      "lat": 34.6668068543055,
+      "lng": 135.102844855201,
+      "category": "SAFE",
+      "name": "杉村歯科医院",
+      "address": "神戸市須磨区多井畑東町3-2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区多井畑東町3-2",
+      "district": "須磨区",
+      "sourceRow": 18,
+      "sourceRows": [
+        18
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/a6fd74497d3c0e6d",
+      "lat": 34.6626850356745,
+      "lng": 135.104056119417,
+      "category": "SAFE",
+      "name": "奥須磨ゴルフセンター",
+      "address": "神戸市須磨区多井畑池ノ奥上12-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区多井畑池ノ奥上12-1",
+      "district": "須磨区",
+      "sourceRow": 51,
+      "sourceRows": [
+        51
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/50df090c106ce2be",
+      "lat": 34.667930638021,
+      "lng": 135.105065706686,
+      "category": "SAFE",
+      "name": "啓明学院中学校・高等学校　第１体育館",
+      "address": "神戸市須磨区横尾9－5－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区横尾9－5－1",
+      "district": "須磨区",
+      "sourceRow": 59,
+      "sourceRows": [
+        59
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/9aff29797864e21c",
+      "lat": 34.667930638021,
+      "lng": 135.105065706686,
+      "category": "SAFE",
+      "name": "啓明学院中学校・高等学校　プール棟",
+      "address": "神戸市須磨区横尾9－5－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区横尾9－5－1",
+      "district": "須磨区",
+      "sourceRow": 60,
+      "sourceRows": [
+        60
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ccfb679674238517",
+      "lat": 34.667930638021,
+      "lng": 135.105065706686,
+      "category": "SAFE",
+      "name": "啓明学院中学校・高等学校　第２体育館",
+      "address": "神戸市須磨区横尾9－5－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区横尾9－5－1",
+      "district": "須磨区",
+      "sourceRow": 61,
+      "sourceRows": [
+        61
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

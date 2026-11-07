@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "tsu-5794-22739",
+  "lat": 34.7678375,
+  "lng": 136.4372165,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "津市",
+  "source": "津市 AED設置施設一覧",
+  "sourceUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "sourceFileUrl": "https://www.info.city.tsu.mie.jp/_res/projects/default_project/_page_/001/008/442/43472.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-10-07",
+  "retrievedAt": "2026-10-15T15:30:57.149Z",
+  "sourceFileSha256": "ce9128ae8ac94f6b88b7830dd88afd2123c0345633d317e6a27c89fae9f04142",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+  "data": [
+    {
+      "lat": 34.769129,
+      "lng": 136.43615,
+      "category": "SAFE",
+      "name": "安濃中央総合公園内体育館",
+      "address": "津市安濃町田端上野818",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "安濃町田端上野818",
+      "district": "安濃",
+      "sourceRow": 196,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/351b2ad0d901d45a",
+      "sourceRows": [
+        196
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "lat": 34.766546,
+      "lng": 136.438283,
+      "category": "SAFE",
+      "name": "明合放課後児童クラブさくらんぼクラブ",
+      "address": "津市安濃町田端上野874-25",
+      "kind": "AED",
+      "source": "https://www.info.city.tsu.mie.jp/kurashi/koseki_juuminhyou/1002332/1008442.html",
+      "sourceLabel": "津市 AED設置施設一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "安濃町田端上野874-25",
+      "district": "安濃",
+      "sourceRow": 214,
+      "installationCount": null,
+      "id": "municipality/tsu/aed/f92654898e289ec0",
+      "sourceRows": [
+        214
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "yokkaichi-5819-22772-20261016",
+  "lat": 34.91597212,
+  "lng": 136.63587646666667,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "四日市市",
+  "source": "四日市市内公共施設 AED設置箇所一覧",
+  "sourceUrl": "https://data.bodik.jp/dataset/242021_00127",
+  "sourceFileUrl": "https://data.bodik.jp/dataset/422f8da8-0b3c-4d84-b8dd-d88d18e914ce/resource/2a5eee8b-c455-4c2e-8553-b0d3d36e5ef2/download/242021_aed.csv",
+  "sourceUpdatedAt": "2024-12-18",
+  "sourcePageUpdatedAt": "2025-01-24",
+  "retrievedAt": "2026-10-15T15:44:16.747Z",
+  "sourceFileSha256": "c0880c81977c7fc444213ee84ef31a7b2e9e34f12d31e892064cbabb7d5159cf",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "data": [
+    {
+      "id": "municipality/yokkaichi/aed/1594d0db36882c87",
+      "lat": 34.91408868,
+      "lng": 136.6356274,
+      "category": "SAFE",
+      "name": "楠中央緑地運動施設（楠体育館）",
+      "address": "四日市市楠町北五味塚1215番地1",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市楠町北五味塚1215番地1",
+      "sourceRow": 207,
+      "sourceRows": [
+        207
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/46688b13b9faac64",
+      "lat": 34.9169219,
+      "lng": 136.6357721,
+      "category": "SAFE",
+      "name": "楠ふれあいセンター",
+      "address": "四日市市楠町北五味塚1452番地1",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市楠町北五味塚1452番地1",
+      "sourceRow": 244,
+      "sourceRows": [
+        244
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/yokkaichi/aed/a83f5c5332ba7c3c",
+      "lat": 34.91690578,
+      "lng": 136.6362299,
+      "category": "SAFE",
+      "name": "楠保健福祉センター",
+      "address": "四日市市楠町北五味塚1450-1",
+      "kind": "AED",
+      "source": "https://data.bodik.jp/dataset/242021_00127",
+      "sourceLabel": "四日市市内公共施設 AED設置箇所一覧",
+      "license": "CC-BY-4.0",
+      "originalAddress": "四日市市楠町北五味塚1450-1",
+      "sourceRow": 245,
+      "sourceRows": [
+        245
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

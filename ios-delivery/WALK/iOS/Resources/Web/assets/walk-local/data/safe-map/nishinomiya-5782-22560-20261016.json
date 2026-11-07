@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "nishinomiya-5782-22560-20261016",
+  "lat": 34.69506612333333,
+  "lng": 135.36364833333332,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "西宮市",
+  "source": "西宮市 AED（公式データを加工して作成）",
+  "sourceUrl": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+  "sourceFileUrl": "https://opendata.nishi.or.jp/opendata/files/1/aed.csv",
+  "sourceUpdatedAt": "2026-07-30",
+  "sourcePageUpdatedAt": "2026-07-30",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "33e307b90ca73eb1dba420f47cfd6c1e9ade640de6a96144badffb98467a7ea2",
+  "license": "PDL-1.0",
+  "licenseUrl": "https://opendata.nishi.or.jp/opendata/kiyaku.pdf",
+  "data": [
+    {
+      "id": "municipality/nishinomiya/aed/b9cf85aef2425730",
+      "lat": 34.69387118,
+      "lng": 135.3617745,
+      "category": "SAFE",
+      "name": "三基食品　株式会社",
+      "address": "兵庫県西宮市鳴尾浜３丁目１２－４",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市鳴尾浜３丁目１２－４",
+      "district": "西宮市",
+      "sourceRow": 445,
+      "sourceRows": [
+        445
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/b1637a83a8fe0795",
+      "lat": 34.69516034,
+      "lng": 135.3659923,
+      "category": "SAFE",
+      "name": "大栄環境株式会社　西宮事業所",
+      "address": "兵庫県西宮市鳴尾浜２丁目１７－１",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市鳴尾浜２丁目１７－１",
+      "district": "西宮市",
+      "sourceRow": 450,
+      "sourceRows": [
+        450
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/nishinomiya/aed/be23ce1bd969faaa",
+      "lat": 34.69616685,
+      "lng": 135.3631782,
+      "category": "SAFE",
+      "name": "フジッコ株式会社　鳴尾生産事業",
+      "address": "兵庫県西宮市鳴尾浜１丁目２２－５",
+      "kind": "AED",
+      "source": "https://opendata.nishi.or.jp/opendata/ResultDetail.php?id=1",
+      "sourceLabel": "西宮市 AED（公式データを加工して作成）",
+      "license": "PDL-1.0",
+      "originalAddress": "兵庫県西宮市鳴尾浜１丁目２２－５",
+      "district": "西宮市",
+      "sourceRow": 470,
+      "sourceRows": [
+        470
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

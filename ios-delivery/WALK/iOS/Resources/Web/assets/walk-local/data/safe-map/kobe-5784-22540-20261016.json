@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5784-22540-20261016",
+  "lat": 34.70633843543786,
+  "lng": 135.24127478578058,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/c2668d28fbf6c55a",
+      "lat": 34.7087915132785,
+      "lng": 135.241450926483,
+      "category": "SAFE",
+      "name": "㈱サザンモール六甲",
+      "address": "神戸市灘区新在家南町1丁目2－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区新在家南町1丁目2－1",
+      "district": "灘区",
+      "sourceRow": 1779,
+      "sourceRows": [
+        1779
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/74ce297ab48981c9",
+      "lat": 34.7043504218579,
+      "lng": 135.241230754573,
+      "category": "SAFE",
+      "name": "神戸製鋼所　神戸製鉄所総合事務所",
+      "address": "神戸市灘区灘浜東町2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区灘浜東町2",
+      "district": "灘区",
+      "sourceRow": 1953,
+      "sourceRows": [
+        1953
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/2fc0c1838fdb988a",
+      "lat": 34.7043504218579,
+      "lng": 135.241230754573,
+      "category": "SAFE",
+      "name": "神戸製鋼所　神戸製鉄所更衣室棟",
+      "address": "神戸市灘区灘浜東町2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区灘浜東町2",
+      "district": "灘区",
+      "sourceRow": 1954,
+      "sourceRows": [
+        1954
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c2301a25deb67c15",
+      "lat": 34.7043504218579,
+      "lng": 135.241230754573,
+      "category": "SAFE",
+      "name": "神戸製鋼所　神戸製鉄所保全センター",
+      "address": "神戸市灘区灘浜東町2",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区灘浜東町2",
+      "district": "灘区",
+      "sourceRow": 1955,
+      "sourceRows": [
+        1955
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/ce7f1cbe6fa59c89",
+      "lat": 34.7041326046229,
+      "lng": 135.241362076676,
+      "category": "SAFE",
+      "name": "神戸製鋼所　神鋼神戸発電所内タービン棟",
+      "address": "神戸市灘区灘浜東町3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区灘浜東町3",
+      "district": "灘区",
+      "sourceRow": 1956,
+      "sourceRows": [
+        1956
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/94c29bea2ed6e205",
+      "lat": 34.7096021513114,
+      "lng": 135.240967307103,
+      "category": "SAFE",
+      "name": "阪神　新在家駅",
+      "address": "神戸市灘区新在家北町1丁目4-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区新在家北町1丁目4-1",
+      "district": "灘区",
+      "sourceRow": 1964,
+      "sourceRows": [
+        1964
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/65c572168ab703f4",
+      "lat": 34.7087915132785,
+      "lng": 135.241450926483,
+      "category": "SAFE",
+      "name": "ジョイフィット　サザンモール六甲",
+      "address": "神戸市灘区新在家南町1丁目2番地1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市灘区新在家南町1丁目2番地1",
+      "district": "灘区",
+      "sourceRow": 2009,
+      "sourceRows": [
+        2009
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5781-22515-20261016",
+  "lat": 34.687863124643734,
+  "lng": 135.09319229135582,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/ab20e6a69d9b24c7",
+      "lat": 34.6864898011018,
+      "lng": 135.094643452929,
+      "category": "SAFE",
+      "name": "兵庫県六甲農業協和組合　須磨支店",
+      "address": "神戸市須磨区北落合1丁目4－36",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区北落合1丁目4－36",
+      "district": "須磨区",
+      "sourceRow": 100,
+      "sourceRows": [
+        100
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/cadeaef37da1e9d9",
+      "lat": 34.6896159545812,
+      "lng": 135.095253024355,
+      "category": "SAFE",
+      "name": "神港園サニーライフ白川",
+      "address": "神戸市須磨区白川台1丁目35－3",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区白川台1丁目35－3",
+      "district": "須磨区",
+      "sourceRow": 133,
+      "sourceRows": [
+        133
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/7898040496c3d779",
+      "lat": 34.688464150123,
+      "lng": 135.09074761937,
+      "category": "SAFE",
+      "name": "松尾地域福祉センター",
+      "address": "神戸市須磨区北落合3丁目2－1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区北落合3丁目2－1",
+      "district": "須磨区",
+      "sourceRow": 153,
+      "sourceRows": [
+        153
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bc5071fc1595d656",
+      "lat": 34.6879309989025,
+      "lng": 135.093575911265,
+      "category": "SAFE",
+      "name": "やまびこ保育園",
+      "address": "神戸市須磨区北落合2丁目11-15",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区北落合2丁目11-15",
+      "district": "須磨区",
+      "sourceRow": 203,
+      "sourceRows": [
+        203
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d23c894b3870d624",
+      "lat": 34.6868147185102,
+      "lng": 135.09174144886,
+      "category": "SAFE",
+      "name": "神戸市立　松尾小学校",
+      "address": "神戸市須磨区北落合2丁目13番1号",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区北落合2丁目13番1号",
+      "district": "須磨区",
+      "sourceRow": 232,
+      "sourceRows": [
+        232
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

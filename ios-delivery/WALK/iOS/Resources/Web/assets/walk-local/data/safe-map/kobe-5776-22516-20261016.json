@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5776-22516-20261016",
+  "lat": 34.6594708332206,
+  "lng": 135.0988327016005,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/f97ccb9d0ad48742",
+      "lat": 34.6616088430192,
+      "lng": 135.09971787144,
+      "category": "SAFE",
+      "name": "奥須磨公園",
+      "address": "神戸市須磨区多井畑字池の奥山18",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区多井畑字池の奥山18",
+      "district": "須磨区",
+      "sourceRow": 101,
+      "sourceRows": [
+        101
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/bde18a7f5c19248a",
+      "lat": 34.657332823422,
+      "lng": 135.097947531761,
+      "category": "SAFE",
+      "name": "神戸国際中学校・高等学校",
+      "address": "神戸市須磨区高倉台7丁目21-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区高倉台7丁目21-1",
+      "district": "須磨区",
+      "sourceRow": 214,
+      "sourceRows": [
+        214
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}

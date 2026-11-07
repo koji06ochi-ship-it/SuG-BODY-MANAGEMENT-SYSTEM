@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "kobe-5776-22518-20261016",
+  "lat": 34.65740696283706,
+  "lng": 135.1094165335028,
+  "radius": 1000,
+  "partial": true,
+  "coverageComplete": false,
+  "city": "神戸市",
+  "source": "神戸市 まちかど救急ステーション（AED）",
+  "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "sourceFileUrl": "https://www2.wagmap.jp/kobecity/kobecity/opendata/map_999/CSV/opendata_89.csv",
+  "sourceUpdatedAt": null,
+  "sourcePageUpdatedAt": "2026-07-23",
+  "retrievedAt": "2026-10-15T15:42:23.401Z",
+  "sourceFileSha256": "af9bbc2ccb032593b356ceb4558ac7dda06a12b17b33a1947dd62dc9730355fc",
+  "license": "CC-BY",
+  "licenseUrl": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+  "data": [
+    {
+      "id": "municipality/kobe/aed/8c7c7fcc07b1e9b6",
+      "lat": 34.6577368094703,
+      "lng": 135.109683733226,
+      "category": "SAFE",
+      "name": "神戸女子大学　M館　事務室前",
+      "address": "神戸市須磨区東須磨青山2-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区東須磨青山2-1",
+      "district": "須磨区",
+      "sourceRow": 3,
+      "sourceRows": [
+        3
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/d756158c07e41ea4",
+      "lat": 34.6569306385491,
+      "lng": 135.110801965358,
+      "category": "SAFE",
+      "name": "神戸女子大学　H館　保健室前",
+      "address": "神戸市須磨区東須磨青山2-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区東須磨青山2-1",
+      "district": "須磨区",
+      "sourceRow": 4,
+      "sourceRows": [
+        4
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/6fda07a3d64cb0dd",
+      "lat": 34.6566574280044,
+      "lng": 135.109695316741,
+      "category": "SAFE",
+      "name": "神戸女子大学　R館　食堂棟1階",
+      "address": "神戸市須磨区東須磨青山2-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区東須磨青山2-1",
+      "district": "須磨区",
+      "sourceRow": 5,
+      "sourceRows": [
+        5
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/4aab485d75ad07d9",
+      "lat": 34.6582003915052,
+      "lng": 135.108049922596,
+      "category": "SAFE",
+      "name": "神戸女子大学　G館　体育文化ホール",
+      "address": "神戸市須磨区東須磨青山2-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区東須磨青山2-1",
+      "district": "須磨区",
+      "sourceRow": 6,
+      "sourceRows": [
+        6
+      ],
+      "duplicateSourceEntries": 1
+    },
+    {
+      "id": "municipality/kobe/aed/c0114aabc2b9d0ef",
+      "lat": 34.6575095466563,
+      "lng": 135.108851729593,
+      "category": "SAFE",
+      "name": "神戸女子大学　守衛室",
+      "address": "神戸市須磨区東須磨青山2-1",
+      "kind": "AED",
+      "source": "https://catalog.city.kobe.lg.jp/dataset/machikadokyukyustation",
+      "sourceLabel": "神戸市 まちかど救急ステーション（AED）",
+      "license": "CC-BY",
+      "originalAddress": "神戸市須磨区東須磨青山2-1",
+      "district": "須磨区",
+      "sourceRow": 7,
+      "sourceRows": [
+        7
+      ],
+      "duplicateSourceEntries": 1
+    }
+  ]
+}
