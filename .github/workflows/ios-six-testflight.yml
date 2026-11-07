@@ -127,9 +127,10 @@ jobs:
           printf '%s\n' 'Upload acceptance does not prove Apple processing, TestFlight availability or iPhone operation. New batch signing IDs remain in this run log; no existing signing asset is revoked.' >> "$GITHUB_STEP_SUMMARY"
       - name: Preserve only separately approved encrypted signing recovery
         if: always() && inputs.preflight_only != true && inputs.retain_signing_recovery == true
-        uses: actions/upload-artifact@v4
-        with:
-          name: sug-signing-recovery-${{ github.run_id }}
-          path: ${{ runner.temp }}/sug-six-signing/signing-recovery.enc
-          retention-days: 1
-          if-no-files-found: error
+        run: |
+          python3 - <<'PY'
+          import os,pathlib,base64
+          p=pathlib.Path(os.environ['RUNNER_TEMP'])/'sug-six-signing/signing-recovery.enc'
+          raw=p.read_bytes();assert raw.startswith(b'SUGSR1')
+          print('SUG_SIGNING_RECOVERY_CIPHERTEXT='+base64.b64encode(raw).decode())
+          PY
