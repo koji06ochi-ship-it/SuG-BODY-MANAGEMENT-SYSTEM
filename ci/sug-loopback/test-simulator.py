@@ -10,21 +10,25 @@ choices=[d for runtime,group in devices.items() if '.iOS-' in runtime for d in g
 assert choices,'No available iPhone Simulator runtime; do not fake a launch result'
 device=sorted(choices,key=lambda d:(d['state']!='Booted',d['name']))[0];udid=device['udid']
 if device['state']!='Booted':run('xcrun','simctl','boot',udid)
-run('xcrun','simctl','bootstatus',udid,'-b',timeout=180)
+run('xcrun','simctl','bootstatus',udid,'-b',timeout=240)
 product=pathlib.Path(os.environ['RUNNER_TEMP'])/('sug-six-'+app+'-iphonesimulator')/'Build/Products/Debug-iphonesimulator'/(scheme+'.app')
 assert product.is_dir(),product
-run('xcrun','simctl','install',udid,str(product))
+run('xcrun','simctl','install',udid,str(product),timeout=240)
+logfile=pathlib.Path(os.environ['RUNNER_TEMP'])/('simulator-startup-'+app+'.log')
+logoutput=logfile.open('w')
+stream=subprocess.Popen(['xcrun','simctl','spawn',udid,'log','stream','--level','info','--style','compact','--predicate','subsystem == \"'+bundle+'\" AND category == \"startup\"'],stdout=logoutput,stderr=subprocess.STDOUT,text=True)
+time.sleep(1)
 run('xcrun','simctl','launch',udid,bundle)
 ready=False;events=[]
-for attempt in range(12):
+for attempt in range(45):
     try:
         with urllib.request.urlopen('http://127.0.0.1:'+str(port)+'/index.html',timeout=3) as r:ready=r.status==200
     except Exception:pass
-    raw=run('xcrun','simctl','spawn',udid,'log','show','--last','2m','--style','json','--predicate','subsystem == "'+bundle+'" AND category == "startup"',timeout=25)
-    try:events=[e.get('eventMessage','') for e in json.loads(raw)]
-    except json.JSONDecodeError:events=[]
+    streamed=logfile.read_text(errors='replace').splitlines()
+    events=[line for line in streamed if 'sug_startup' in line]
     if ready and any('stage=webview_ready' in e for e in events):break
     time.sleep(2)
+print('ACTUAL_SIMULATOR_OBSERVATION='+json.dumps({'app':app,'HTTP200':ready,'events':events,'streamExited':stream.poll(),'logTail':logfile.read_text(errors='replace').splitlines()[-12:]}),flush=True)
 assert ready,'Full app did not serve its bundled entry on its fixed loopback port'
 assert any('stage=listener_ready' in e for e in events),'No listener-ready event from the actual app'
 assert any('stage=webview_ready' in e for e in events),'No completed WKWebView navigation from the actual app'
@@ -41,3 +45,7 @@ for attempt in range(10):
 else:raise AssertionError('Application failed to serve after terminate/relaunch')
 print('ACTUAL_SIMULATOR_RELAUNCH='+json.dumps({'app':app,'HTTP200':True,'userRecordsModified':False,'inputAndRecordRestorationVerified':False,'physicalIPhoneVerified':False}),flush=True)
 run('xcrun','simctl','terminate',udid,bundle)
+
+stream.terminate()
+stream.wait(timeout=10)
+logoutput.close()
