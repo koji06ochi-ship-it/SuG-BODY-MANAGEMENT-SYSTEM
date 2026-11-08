@@ -1,4 +1,4 @@
-name: SUG priority five - approved existing-app repairs
+name: SUG pending additional WALK check - existing four-app delivery
 on:
   push:
     branches: ['sug/ios-six-testflight-20261108']
@@ -26,7 +26,7 @@ jobs:
   way-confirmed:
     if: github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' && github.ref == 'refs/heads/sug/ios-six-testflight-20261108' && github.event.repository.private == false && github.actor == 'koji06ochi-ship-it' && github.event_name == 'workflow_dispatch' && inputs.confirm_approved_build == true && github.run_attempt == 1
     runs-on: macos-26
-    timeout-minutes: 5
+    timeout-minutes: 2
     steps:
       - uses: actions/checkout@v4
         with:
@@ -38,7 +38,7 @@ jobs:
     needs: way-confirmed
     if: always() && github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' && github.ref == 'refs/heads/sug/ios-six-testflight-20261108' && github.event.repository.private == false && github.actor == 'koji06ochi-ship-it' && github.event_name == 'workflow_dispatch' && inputs.confirm_approved_build == true && github.run_attempt == 1
     runs-on: macos-26
-    timeout-minutes: 12
+    timeout-minutes: 2
     env:
       SUG_PRIORITY_PATCH_APPROVED: 'yes'
     steps:
@@ -72,7 +72,7 @@ jobs:
     needs: body
     if: always() && github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' && github.ref == 'refs/heads/sug/ios-six-testflight-20261108' && github.event.repository.private == false && github.actor == 'koji06ochi-ship-it' && github.event_name == 'workflow_dispatch' && inputs.confirm_approved_build == true && github.run_attempt == 1
     runs-on: macos-26
-    timeout-minutes: 12
+    timeout-minutes: 2
     env:
       SUG_PRIORITY_PATCH_APPROVED: 'yes'
     steps:
@@ -140,7 +140,7 @@ jobs:
     needs: walk
     if: always() && github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' && github.ref == 'refs/heads/sug/ios-six-testflight-20261108' && github.event.repository.private == false && github.actor == 'koji06ochi-ship-it' && github.event_name == 'workflow_dispatch' && inputs.confirm_approved_build == true && github.run_attempt == 1
     runs-on: macos-26
-    timeout-minutes: 12
+    timeout-minutes: 2
     env:
       SUG_PRIORITY_PATCH_APPROVED: 'yes'
     steps:

@@ -5,8 +5,8 @@ if sys.argv[1]=='--inherit':
     names={'WAY':'way-confirmed','BODY':'body','eVo':'evo','WALK':'walk','GLOW':'glow'}
     assert app in names
     repository='koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM'
-    previous=42464168841
-    initial='6bdc50322e6a8dd02bf0aa9989fdf5090c6dcdb2'
+    previous=42466358262
+    initial='a2c86dac09b06b051377a52ccf71c0761dca7812'
     current=os.environ['GITHUB_SHA']
     assert re.fullmatch('[0-9a-f]{40}',current)
     def public_get(suffix):
@@ -24,6 +24,15 @@ if sys.argv[1]=='--inherit':
     job=matching[0]
     outcomes={s['name']:s.get('conclusion')=='success' for s in job.get('steps',[])}
     inherited={'reuse':job['conclusion']=='success','network':outcomes.get('Execute original and repaired Network.framework listeners',False),'simulator':outcomes.get('Full Simulator app launch and relaunch without deletion',False),'photos':outcomes.get('Actual macOS WebKit photo persistence and restore integration',False)}
+    if app=='WALK' and not inherited['network']:
+        original=public_get('/actions/runs/42464168841')
+        assert original['head_sha']=='6bdc50322e6a8dd02bf0aa9989fdf5090c6dcdb2' and original['status']=='completed'
+        unchanged=public_get('/compare/'+original['head_sha']+'...'+current)
+        assert unchanged['status']=='ahead' and all(f['filename'] in ci_only for f in unchanged['files'])
+        original_jobs=public_get('/actions/runs/42464168841/jobs')['jobs']
+        original_walk=[j for j in original_jobs if j['name']=='walk']
+        assert len(original_walk)==1
+        inherited['network']=any(step['name']=='Execute original and repaired Network.framework listeners' and step['conclusion']=='success' for step in original_walk[0]['steps'])
     with open(os.environ['GITHUB_OUTPUT'],'a') as output:
         for key,value in inherited.items():output.write(key+'='+str(value).lower()+'\n')
     print('INHERITED_VERIFICATION='+json.dumps({'app':app,'previousRun':previous,'previousJob':job['id'],'applicationAndResourceTreeUnchanged':True,'checks':inherited,'freshRuntimeClaim':False}),flush=True)
@@ -34,7 +43,26 @@ bundle={'BODY':'jp.sugosaka.member','eVo':'jp.sugosaka.evolink','WALK':'jp.sugos
 port={'BODY':5411,'eVo':5412,'WALK':5413,'GLOW':5414}[app]
 entry={'BODY':'/apps/body/daily-preview/index.html','eVo':'/top.html','WALK':'/walk-quest.html','GLOW':'/index.html'}[app]
 
-def run(*args,timeout=90):return subprocess.run(args,check=True,capture_output=True,text=True,timeout=timeout).stdout
+def run(*args,timeout=90):
+    started=time.monotonic()
+    try:
+        return subprocess.run(args,check=True,capture_output=True,text=True,timeout=timeout).stdout
+    except subprocess.TimeoutExpired:
+        diagnosis={'app':app,'command':list(args[:3]),'timeoutSeconds':timeout,'classification':'simulator_command_timeout','appStartupFailureProven':False,'physicalIPhoneVerified':False}
+        if args[:3]==('xcrun','simctl','launch'):
+            try:
+                with urllib.request.urlopen('http://127.0.0.1:'+str(port)+entry,timeout=3) as response:diagnosis['HTTP200']=response.status==200
+            except Exception:diagnosis['HTTP200']=False
+            evidence=pathlib.Path(os.environ['RUNNER_TEMP'])/('simulator-startup-'+app+'.log')
+            diagnosis['startupEvents']=[line for line in evidence.read_text(errors='replace').splitlines() if 'sug_startup' in line][-20:] if evidence.exists() else []
+            try:
+                sockets=subprocess.run(['lsof','-nP','-iTCP:'+str(port),'-sTCP:LISTEN','-Fpn'],capture_output=True,text=True,timeout=10)
+                diagnosis['loopbackSocketObservation']=sockets.stdout.splitlines()
+            except Exception:diagnosis['loopbackSocketObservation']='unavailable'
+        print('SIMULATOR_FAILURE_DIAGNOSTICS='+json.dumps(diagnosis),flush=True)
+        raise
+    finally:
+        print('SIMULATOR_STAGE_TIMING='+json.dumps({'app':app,'command':list(args[:3]),'elapsedSeconds':round(time.monotonic()-started,3),'timeoutSeconds':timeout}),flush=True)
 devices=json.loads(run('xcrun','simctl','list','devices','available','--json'))['devices']
 choices=[d for runtime,group in devices.items() if '.iOS-' in runtime for d in group if d.get('isAvailable') and 'iPhone' in d['name']]
 assert choices,'No available iPhone Simulator runtime; do not fake a launch result'
@@ -52,7 +80,7 @@ for attempt in range(30):
     if 'Filtering the log data' in logfile.read_text(errors='replace'):break
     time.sleep(1)
 else:raise AssertionError('Simulator log reader never became ready; application not launched')
-launched=run('xcrun','simctl','launch',udid,bundle)
+launched=run('xcrun','simctl','launch',udid,bundle,timeout=240)
 pid=re.search(r':\s*(\d+)\s*$',launched)
 assert pid,'Simulator launch did not report an application PID'
 pid=pid.group(1)
@@ -81,7 +109,7 @@ binding=verify_binding(pid)
 print('ACTUAL_SIMULATOR_LAUNCH='+json.dumps({'app':app,'device':device['name'],'bundle':bundle,'port':port,'HTTP200':ready,'WKDidFinishObserved':True,'actualListenerBinding':binding,'listenerInfoLogObserved':any('stage=listener_ready' in e for e in events),'events':events,'physicalIPhoneVerified':False}),flush=True)
 run('xcrun','simctl','terminate',udid,bundle)
 # Re-launch without deleting/reinstalling the application or WK data store.
-relaunched=run('xcrun','simctl','launch',udid,bundle)
+relaunched=run('xcrun','simctl','launch',udid,bundle,timeout=240)
 new_pid=re.search(r':\s*(\d+)\s*$',relaunched)
 assert new_pid and new_pid.group(1)!=pid,'Relaunch must create a new application process'
 for attempt in range(10):
