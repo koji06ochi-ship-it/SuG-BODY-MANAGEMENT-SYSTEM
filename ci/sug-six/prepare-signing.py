@@ -21,8 +21,8 @@ def main():
     if args.replace_owned_failed_identity and (args.preflight_only or args.reuse_recovery or os.environ.get('SUG_REPLACE_FAILED_IDENTITY_APPROVED')!='yes'):
         raise RuntimeError('Specific failed-resource replacement approval required')
     reused_profiles=json.loads(args.reuse_profiles_json)
-    if reused_profiles and (not args.reuse_recovery or args.preflight_only or set(reused_profiles)!={'GLOW','oTo'} or reused_profiles!={'GLOW':'39XH2BFPRU','oTo':'LYS3324XW9'}):
-        raise RuntimeError('Only the approved existing GLOW/oTo profiles may be reused')
+    if reused_profiles and (not args.reuse_recovery or args.preflight_only or set(reused_profiles)!={'BODY','eVo','WALK','GLOW'} or reused_profiles!={'BODY':'3W4H35XA57','eVo':'FX9N4PLPA5','WALK':'22B4PZKN25','GLOW':'39XH2BFPRU'}):
+        raise RuntimeError('Only the approved existing BODY/eVo/WALK/GLOW profiles may be reused')
     apps=json.loads(args.apps_json)
     if reused_profiles and set(apps)!=set(reused_profiles):raise RuntimeError('Unexpected existing-profile targets')
     allowed={'BODY','eVo','WALK','WAY','GLOW','oTo'}

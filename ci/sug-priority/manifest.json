@@ -1,0 +1,142 @@
+{
+  "format": "SUG_PRIORITY_PATCH_V1",
+  "files": [
+    {
+      "path": "BODY/iOS/Sources/BundleHTTPServer.swift",
+      "original": "C:\\Users\\User\\.codex\\visualizations\\2026\\11\\06\\01a1af02-e123-7881-a395-d3828a4c2664\\six-ios-runner-rehearsal-20261108\\BODY\\iOS\\Sources\\BundleHTTPServer.swift",
+      "baselineSHA256": "f73446ce661c6d26a31b7f36e33bdbf63eeaa513dec74a39ba52b01f28077801",
+      "candidateSHA256": "c691d2fddc94378d4c5e2ef1d4be7e1d4794376a5d26dffc6b5092e3e0c31a84",
+      "bytes": 10089,
+      "kind": "file",
+      "publicSource": "patches/BODY/iOS/Sources/BundleHTTPServer.swift"
+    },
+    {
+      "path": "eVo/iOS/Sources/BundleHTTPServer.swift",
+      "original": "C:\\Users\\User\\.codex\\visualizations\\2026\\11\\06\\01a1af02-e123-7881-a395-d3828a4c2664\\six-ios-runner-rehearsal-20261108\\eVo\\iOS\\Sources\\BundleHTTPServer.swift",
+      "baselineSHA256": "f73446ce661c6d26a31b7f36e33bdbf63eeaa513dec74a39ba52b01f28077801",
+      "candidateSHA256": "c691d2fddc94378d4c5e2ef1d4be7e1d4794376a5d26dffc6b5092e3e0c31a84",
+      "bytes": 10089,
+      "kind": "file",
+      "publicSource": "patches/eVo/iOS/Sources/BundleHTTPServer.swift"
+    },
+    {
+      "path": "WALK/iOS/Sources/BundleHTTPServer.swift",
+      "original": "C:\\Users\\User\\.codex\\visualizations\\2026\\11\\06\\01a1af02-e123-7881-a395-d3828a4c2664\\six-ios-runner-rehearsal-20261108\\WALK\\iOS\\Sources\\BundleHTTPServer.swift",
+      "baselineSHA256": "f73446ce661c6d26a31b7f36e33bdbf63eeaa513dec74a39ba52b01f28077801",
+      "candidateSHA256": "c691d2fddc94378d4c5e2ef1d4be7e1d4794376a5d26dffc6b5092e3e0c31a84",
+      "bytes": 10089,
+      "kind": "file",
+      "publicSource": "patches/WALK/iOS/Sources/BundleHTTPServer.swift"
+    },
+    {
+      "path": "BODY/iOS/Sources/BodyBootView.swift",
+      "original": "C:\\Users\\User\\.codex\\visualizations\\2026\\11\\06\\01a1af02-e123-7881-a395-d3828a4c2664\\six-ios-runner-rehearsal-20261108\\BODY\\iOS\\Sources\\BodyBootView.swift",
+      "baselineSHA256": "e895fa13a8655e7423f43dd059ea0bc8b1d5076c039ff9644866b357a459e4ca",
+      "candidateSHA256": "f34706e1a504b1938e57abfb7d17ef91304aabcf42cea8a35eb0a833650ecfc6",
+      "bytes": 341,
+      "kind": "file",
+      "publicSource": "patches/BODY/iOS/Sources/BodyBootView.swift"
+    },
+    {
+      "path": "BODY/iOS/Sources/MemberWebView.swift",
+      "original": "C:\\Users\\User\\.codex\\visualizations\\2026\\11\\06\\01a1af02-e123-7881-a395-d3828a4c2664\\six-ios-runner-rehearsal-20261108\\BODY\\iOS\\Sources\\MemberWebView.swift",
+      "baselineSHA256": "8a0cf17c0d09891fd566af4f5664cddf4b5dff80d33ad0f15dd4a25bec1e9eb5",
+      "candidateSHA256": "23bbe2689f56a8bb0a5d9ccf7213d270bdaf47a00acf57ef87de379d0c24b623",
+      "bytes": 32199,
+      "kind": "file",
+      "publicSource": "patches/BODY/iOS/Sources/MemberWebView.swift"
+    },
+    {
+      "path": "eVo/iOS/Sources/EvolinkWebView.swift",
+      "original": "C:\\Users\\User\\.codex\\visualizations\\2026\\11\\06\\01a1af02-e123-7881-a395-d3828a4c2664\\six-ios-runner-rehearsal-20261108\\eVo\\iOS\\Sources\\EvolinkWebView.swift",
+      "baselineSHA256": "e92e07cea8ce50a353c50b3f0ee82bce1faae4d9209e6f77e8fc87ff4571d169",
+      "candidateSHA256": "104264e4fc7a4838d2448b0b16b639192d6391ecb472b40ff735667e61071ec7",
+      "bytes": 6311,
+      "kind": "file",
+      "publicSource": "patches/eVo/iOS/Sources/EvolinkWebView.swift"
+    },
+    {
+      "path": "WALK/iOS/Sources/WalkApp.swift",
+      "original": "C:\\Users\\User\\.codex\\visualizations\\2026\\11\\06\\01a1af02-e123-7881-a395-d3828a4c2664\\six-ios-runner-rehearsal-20261108\\WALK\\iOS\\Sources\\WalkApp.swift",
+      "baselineSHA256": "4ce84ec6dec82bb93b3269dadf8a9352ca7f016dffca234d24fa8de4b5565343",
+      "candidateSHA256": "65315c105103fff0e2b2d8bfd832e6788613a40a960e37f247458f0b5652af82",
+      "bytes": 14316,
+      "kind": "file",
+      "publicSource": "patches/WALK/iOS/Sources/WalkApp.swift"
+    },
+    {
+      "path": "GLOW/iOS/Resources/Web/index.html",
+      "original": "C:\\Users\\User\\.codex\\visualizations\\2026\\11\\06\\01a1af02-e123-7881-a395-d3828a4c2664\\six-ios-runner-rehearsal-20261108\\GLOW\\iOS\\Resources\\Web\\index.html",
+      "baselineSHA256": "ed02d4bd7edd33b59d4db2b231017212fe79f3be1323af0fcc98adfc0cfd75a4",
+      "candidateSHA256": "539bfbbfb3153b2e7f74d3182bdc64d5176338b05a8de6c55ba339b167661a33",
+      "bytes": 239499,
+      "kind": "edits",
+      "publicSource": "glow-html-edits.json"
+    },
+    {
+      "path": "GLOW/iOS/Resources/Web/device-records.js",
+      "original": "C:\\Users\\User\\.codex\\visualizations\\2026\\11\\06\\01a1af02-e123-7881-a395-d3828a4c2664\\six-ios-runner-rehearsal-20261108\\GLOW\\iOS\\Resources\\Web\\device-records.js",
+      "baselineSHA256": "8369c7a3b07b40a096e7cc78c0473704776736b5c276c3411b96eca9c7544884",
+      "candidateSHA256": "348b37bd4e0f8237e6f68910fb50f2e97b3fe4d896ec4d8b99feacf0d9b98741",
+      "bytes": 3879,
+      "kind": "file",
+      "publicSource": "patches/GLOW/iOS/Resources/Web/device-records.js"
+    },
+    {
+      "path": "GLOW/iOS/Sources/DeviceConfiguration.swift",
+      "original": "C:\\Users\\User\\.codex\\visualizations\\2026\\11\\06\\01a1af02-e123-7881-a395-d3828a4c2664\\six-ios-runner-rehearsal-20261108\\GLOW\\iOS\\Sources\\DeviceConfiguration.swift",
+      "baselineSHA256": "fd910e48830e37d302e2e821df59742825b6a543e684140c1b58980d71d9c4fa",
+      "candidateSHA256": "450237d79adc2dc4b6bf3682a9dd7c36c6c07606bf313863ea0d49d13ce376d3",
+      "bytes": 247,
+      "kind": "file",
+      "publicSource": "patches/GLOW/iOS/Sources/DeviceConfiguration.swift"
+    },
+    {
+      "path": "GLOW/iOS/Sources/NativeRecordExport.swift",
+      "original": "C:\\Users\\User\\.codex\\visualizations\\2026\\11\\06\\01a1af02-e123-7881-a395-d3828a4c2664\\six-ios-runner-rehearsal-20261108\\GLOW\\iOS\\Sources\\NativeRecordExport.swift",
+      "baselineSHA256": "d5e3aa065f133de0f521cfa789020b67c0fa4e157ac6c858312e7682744a8e67",
+      "candidateSHA256": "c85d27af9b149167b1925112119a6449373a92b706b5866c12a9a82b3480f517",
+      "bytes": 2346,
+      "kind": "file",
+      "publicSource": "patches/GLOW/iOS/Sources/NativeRecordExport.swift"
+    },
+    {
+      "path": "GLOW/iOS/Resources/Web/glow-photo-store.js",
+      "original": null,
+      "baselineSHA256": null,
+      "candidateSHA256": "e6077bdd2ef495983667c2497a9fe29ec826a481cae8a630e47eba407e349b03",
+      "bytes": 6581,
+      "kind": "file",
+      "publicSource": "patches/GLOW/iOS/Resources/Web/glow-photo-store.js"
+    },
+    {
+      "path": "GLOW/iOS/Resources/Web/glow-photos.js",
+      "original": null,
+      "baselineSHA256": null,
+      "candidateSHA256": "6da354fcb1c8b1ccaa8fed5b0992288cb04f6148bfb180a4123f8a3b492ec949",
+      "bytes": 6118,
+      "kind": "file",
+      "publicSource": "patches/GLOW/iOS/Resources/Web/glow-photos.js"
+    },
+    {
+      "path": "GLOW/iOS/Sources/BundleHTTPServer.swift",
+      "original": "C:\\Users\\User\\.codex\\visualizations\\2026\\11\\06\\01a1af02-e123-7881-a395-d3828a4c2664\\six-ios-runner-rehearsal-20261108\\GLOW\\iOS\\Sources\\BundleHTTPServer.swift",
+      "baselineSHA256": "93cc99baf781efdaac1b6075f07bf94f74786712eb098c15224f48a1319bd5eb",
+      "candidateSHA256": "1dd5018c7b4a54ec719e788787839d767d761657271880a85823feeb5339587e",
+      "bytes": 11913,
+      "kind": "file",
+      "publicSource": "../sug-loopback/patches/GLOW/iOS/Sources/BundleHTTPServer.swift",
+      "reuseExistingPublicFile": true
+    },
+    {
+      "path": "GLOW/iOS/Sources/DeviceWebView.swift",
+      "original": "C:\\Users\\User\\.codex\\visualizations\\2026\\11\\06\\01a1af02-e123-7881-a395-d3828a4c2664\\six-ios-runner-rehearsal-20261108\\GLOW\\iOS\\Sources\\DeviceWebView.swift",
+      "baselineSHA256": "2c4e4501e44964b8d81bf43e4c01edd4c34d86ef61d361e84727eba36dbce225",
+      "candidateSHA256": "8c471897220b81d2fd1d047804b0a00929b384a955eea2f1e816091aec7175ed",
+      "bytes": 7917,
+      "kind": "file",
+      "publicSource": "../sug-loopback/patches/GLOW/iOS/Sources/DeviceWebView.swift",
+      "reuseExistingPublicFile": true
+    }
+  ]
+}
