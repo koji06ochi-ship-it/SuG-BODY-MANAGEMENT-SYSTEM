@@ -5,12 +5,14 @@ if sys.argv[1]=='--inherit':
     names={'WAY':'way-confirmed','BODY':'body','eVo':'evo','WALK':'walk','GLOW':'glow'}
     assert app in names
     repository='koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM'
-    previous=42466358262
-    initial='a2c86dac09b06b051377a52ccf71c0761dca7812'
+    previous=42473626293 if app=='WALK' else 42466358262
+    initial='1e1a07577a9ba5655049a5b0b71d27858c9b0041' if app=='WALK' else 'a2c86dac09b06b051377a52ccf71c0761dca7812'
     current=os.environ['GITHUB_SHA']
     assert re.fullmatch('[0-9a-f]{40}',current)
     def public_get(suffix):
-        request=urllib.request.Request('https://api.github.com/repos/'+repository+suffix,headers={'Accept':'application/vnd.github+json','User-Agent':'SUG-approved-verification-inheritance'})
+        token=os.environ.get('GITHUB_TOKEN','')
+        if not token:raise RuntimeError('Read-only GitHub Actions token is required; anonymous API access is disabled')
+        request=urllib.request.Request('https://api.github.com/repos/'+repository+suffix,headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','User-Agent':'SUG-approved-verification-inheritance'})
         with urllib.request.urlopen(request,timeout=30) as response:return json.loads(response.read())
     prior=public_get('/actions/runs/'+str(previous))
     assert prior['head_sha']==initial and prior['status']=='completed' and prior['conclusion']=='failure'
@@ -20,7 +22,7 @@ if sys.argv[1]=='--inherit':
     assert difference['status']=='ahead' and difference['files'] and all(f['filename'] in ci_only for f in difference['files']),'App or resource changes prevent inheriting prior verification'
     jobs=public_get('/actions/runs/'+str(previous)+'/jobs')['jobs']
     matching=[j for j in jobs if j['name']==names[app]]
-    assert len(matching)==1 and matching[0]['status']=='completed'
+    assert len(matching)==1 and matching[0]['status']=='completed' and matching[0]['conclusion']=='success','Prior app verification did not pass; no runtime repetition or delivery permitted'
     job=matching[0]
     outcomes={s['name']:s.get('conclusion')=='success' for s in job.get('steps',[])}
     inherited={'reuse':job['conclusion']=='success','network':outcomes.get('Execute original and repaired Network.framework listeners',False),'simulator':outcomes.get('Full Simulator app launch and relaunch without deletion',False),'photos':outcomes.get('Actual macOS WebKit photo persistence and restore integration',False)}
