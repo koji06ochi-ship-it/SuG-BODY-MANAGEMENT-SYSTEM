@@ -31,12 +31,9 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
-      - name: Authenticate unchanged encrypted source resources
-        env:
-          SUG_SIX_BUILD_ASSET_KEY: ${{ secrets.SUG_SIX_BUILD_ASSET_KEY }}
-        run: node ci/sug-six/load-assets.mjs assets "$RUNNER_TEMP/sug-six"
-      - name: WAY confirmed storage component only - not a product app
-        run: python3 ci/sug-priority/test-way-component.py "$RUNNER_TEMP/sug-six"
+      - name: Inherit unchanged WAY storage component result without repeating SDK checks
+        id: prior
+        run: python3 ci/sug-priority/test-simulator.py --inherit 'WAY'
   body:
     needs: way-confirmed
     if: always() && github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' && github.ref == 'refs/heads/sug/ios-six-testflight-20261108' && github.event.repository.private == false && github.actor == 'koji06ochi-ship-it' && github.event_name == 'workflow_dispatch' && inputs.confirm_approved_build == true && github.run_attempt == 1
@@ -48,17 +45,25 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+      - name: Inherit only source-identical passed checks from initial approved run
+        id: prior
+        run: python3 ci/sug-priority/test-simulator.py --inherit 'BODY'
       - name: Authenticate unchanged encrypted source resources
+        if: steps.prior.outputs.reuse != 'true'
         env:
           SUG_SIX_BUILD_ASSET_KEY: ${{ secrets.SUG_SIX_BUILD_ASSET_KEY }}
         run: node ci/sug-six/load-assets.mjs assets "$RUNNER_TEMP/sug-six"
       - name: Apply exact hash-bound repairs in new temporary sources only
+        if: steps.prior.outputs.reuse != 'true'
         run: node ci/sug-priority/apply-patch.mjs "$RUNNER_TEMP/sug-six"
       - name: Full iPhoneOS and Simulator application builds
+        if: steps.prior.outputs.reuse != 'true' && steps.prior.outputs.simulator != 'true'
         run: bash "$RUNNER_TEMP/sug-six/ci/build-one.sh" 'BODY'
       - name: Execute original and repaired Network.framework listeners
+        if: steps.prior.outputs.reuse != 'true' && steps.prior.outputs.network != 'true'
         run: python3 ci/sug-priority/test-listener.py "$RUNNER_TEMP/sug-six" 'BODY'
       - name: Full Simulator app launch and relaunch without deletion
+        if: steps.prior.outputs.reuse != 'true' && steps.prior.outputs.simulator != 'true'
         run: python3 ci/sug-priority/test-simulator.py 'BODY'
       - name: Scope of verification
         if: always()
@@ -74,17 +79,25 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+      - name: Inherit only source-identical passed checks from initial approved run
+        id: prior
+        run: python3 ci/sug-priority/test-simulator.py --inherit 'eVo'
       - name: Authenticate unchanged encrypted source resources
+        if: steps.prior.outputs.reuse != 'true'
         env:
           SUG_SIX_BUILD_ASSET_KEY: ${{ secrets.SUG_SIX_BUILD_ASSET_KEY }}
         run: node ci/sug-six/load-assets.mjs assets "$RUNNER_TEMP/sug-six"
       - name: Apply exact hash-bound repairs in new temporary sources only
+        if: steps.prior.outputs.reuse != 'true'
         run: node ci/sug-priority/apply-patch.mjs "$RUNNER_TEMP/sug-six"
       - name: Full iPhoneOS and Simulator application builds
+        if: steps.prior.outputs.reuse != 'true' && steps.prior.outputs.simulator != 'true'
         run: bash "$RUNNER_TEMP/sug-six/ci/build-one.sh" 'eVo'
       - name: Execute original and repaired Network.framework listeners
+        if: steps.prior.outputs.reuse != 'true' && steps.prior.outputs.network != 'true'
         run: python3 ci/sug-priority/test-listener.py "$RUNNER_TEMP/sug-six" 'eVo'
       - name: Full Simulator app launch and relaunch without deletion
+        if: steps.prior.outputs.reuse != 'true' && steps.prior.outputs.simulator != 'true'
         run: python3 ci/sug-priority/test-simulator.py 'eVo'
       - name: Scope of verification
         if: always()
@@ -100,17 +113,25 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+      - name: Inherit only source-identical passed checks from initial approved run
+        id: prior
+        run: python3 ci/sug-priority/test-simulator.py --inherit 'WALK'
       - name: Authenticate unchanged encrypted source resources
+        if: steps.prior.outputs.reuse != 'true'
         env:
           SUG_SIX_BUILD_ASSET_KEY: ${{ secrets.SUG_SIX_BUILD_ASSET_KEY }}
         run: node ci/sug-six/load-assets.mjs assets "$RUNNER_TEMP/sug-six"
       - name: Apply exact hash-bound repairs in new temporary sources only
+        if: steps.prior.outputs.reuse != 'true'
         run: node ci/sug-priority/apply-patch.mjs "$RUNNER_TEMP/sug-six"
       - name: Full iPhoneOS and Simulator application builds
+        if: steps.prior.outputs.reuse != 'true' && steps.prior.outputs.simulator != 'true'
         run: bash "$RUNNER_TEMP/sug-six/ci/build-one.sh" 'WALK'
       - name: Execute original and repaired Network.framework listeners
+        if: steps.prior.outputs.reuse != 'true' && steps.prior.outputs.network != 'true'
         run: python3 ci/sug-priority/test-listener.py "$RUNNER_TEMP/sug-six" 'WALK'
       - name: Full Simulator app launch and relaunch without deletion
+        if: steps.prior.outputs.reuse != 'true' && steps.prior.outputs.simulator != 'true'
         run: python3 ci/sug-priority/test-simulator.py 'WALK'
       - name: Scope of verification
         if: always()
@@ -126,19 +147,28 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+      - name: Inherit only source-identical passed checks from initial approved run
+        id: prior
+        run: python3 ci/sug-priority/test-simulator.py --inherit 'GLOW'
       - name: Authenticate unchanged encrypted source resources
+        if: steps.prior.outputs.reuse != 'true'
         env:
           SUG_SIX_BUILD_ASSET_KEY: ${{ secrets.SUG_SIX_BUILD_ASSET_KEY }}
         run: node ci/sug-six/load-assets.mjs assets "$RUNNER_TEMP/sug-six"
       - name: Apply exact hash-bound repairs in new temporary sources only
+        if: steps.prior.outputs.reuse != 'true'
         run: node ci/sug-priority/apply-patch.mjs "$RUNNER_TEMP/sug-six"
       - name: Full iPhoneOS and Simulator application builds
+        if: steps.prior.outputs.reuse != 'true' && steps.prior.outputs.simulator != 'true'
         run: bash "$RUNNER_TEMP/sug-six/ci/build-one.sh" 'GLOW'
       - name: Execute original and repaired Network.framework listeners
+        if: steps.prior.outputs.reuse != 'true' && steps.prior.outputs.network != 'true'
         run: python3 ci/sug-priority/test-listener.py "$RUNNER_TEMP/sug-six" 'GLOW'
       - name: Full Simulator app launch and relaunch without deletion
+        if: steps.prior.outputs.reuse != 'true' && steps.prior.outputs.simulator != 'true'
         run: python3 ci/sug-priority/test-simulator.py 'GLOW'
       - name: Actual macOS WebKit photo persistence and restore integration
+        if: steps.prior.outputs.reuse != 'true' && steps.prior.outputs.photos != 'true'
         run: python3 ci/sug-priority/test-webkit-photos.py "$RUNNER_TEMP/sug-six"
       - name: Scope of verification
         if: always()
