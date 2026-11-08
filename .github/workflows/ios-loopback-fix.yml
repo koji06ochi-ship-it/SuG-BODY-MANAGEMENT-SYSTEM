@@ -1,0 +1,120 @@
+name: SUG GLOW oTo - approved loopback runtime repair
+on:
+  push:
+    branches: ['sug/ios-six-testflight-20261108']
+    paths: ['.github/workflows/ios-loopback-fix.yml']
+  workflow_dispatch:
+    inputs:
+      confirm_approved_build:
+        type: boolean
+        default: false
+        required: true
+      confirm_approved_delivery:
+        type: boolean
+        default: false
+        required: true
+      recovery_ciphertext:
+        type: string
+        required: true
+        description: 'Existing approved AES-GCM signing recovery only; no new signing identity'
+permissions:
+  contents: read
+concurrency:
+  group: sug-glow-oto-loopback-repair-approved
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' && github.ref == 'refs/heads/sug/ios-six-testflight-20261108' && github.event.repository.private == false && github.actor == 'koji06ochi-ship-it' && github.event_name == 'workflow_dispatch' && inputs.confirm_approved_build == true && github.run_attempt == 1
+    runs-on: macos-26
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        app: [GLOW, oTo]
+    env:
+      SUG_LOOPBACK_PATCH_APPROVED: 'yes'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Authenticate existing resources and apply four hash-bound source patches
+        env:
+          SUG_SIX_BUILD_ASSET_KEY: ${{ secrets.SUG_SIX_BUILD_ASSET_KEY }}
+        run: node ci/sug-six/load-assets.mjs assets "$RUNNER_TEMP/sug-six"
+      - name: Full iPhoneOS and Simulator builds
+        run: bash "$RUNNER_TEMP/sug-six/ci/build-one.sh" '${{ matrix.app }}'
+      - name: Actual Network.framework baseline and repaired listener execution
+        run: python3 ci/sug-loopback/test-listener.py "$RUNNER_TEMP/sug-six" '${{ matrix.app }}'
+      - name: Actual full Simulator app startup and terminate-relaunch
+        run: python3 ci/sug-loopback/test-simulator.py '${{ matrix.app }}'
+      - name: State the limits of these results
+        if: always()
+        run: |
+          printf '%s\n' 'GLOW/oTo network repair only. Native host and Simulator results are not physical-iPhone input/save/restore verification. No AI, Apple API, signing or upload in verification jobs.' >> "$GITHUB_STEP_SUMMARY"
+  private-testflight:
+    needs: verify
+    if: needs.verify.result == 'success' && inputs.confirm_approved_delivery == true && github.run_attempt == 1
+    runs-on: macos-26
+    timeout-minutes: 30
+    env:
+      APPS_JSON: '["GLOW","oTo"]'
+      BUILD_NUMBERS_JSON: '{"GLOW":"2","oTo":"2"}'
+      ASC_API_KEY_ID: MM98J638B7
+      ASC_API_ISSUER_ID: d3a981e0-7557-4223-a67f-d026debee303
+      SUG_SIGNING_APPROVED: 'yes'
+      SUG_LOOPBACK_PATCH_APPROVED: 'yes'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Authenticate resources and apply the SAME verified source patches
+        env:
+          SUG_SIX_BUILD_ASSET_KEY: ${{ secrets.SUG_SIX_BUILD_ASSET_KEY }}
+        run: node ci/sug-six/load-assets.mjs assets "$RUNNER_TEMP/sug-six"
+      - name: Isolated existing signing dependencies
+        run: |
+          python3 -m venv "$RUNNER_TEMP/sug-sign-python"
+          "$RUNNER_TEMP/sug-sign-python/bin/python" -m pip install --quiet --disable-pip-version-check pyjwt cryptography requests
+          echo "$RUNNER_TEMP/sug-sign-python/bin" >> "$GITHUB_PATH"
+      - name: Read-only reuse of existing certificate and exact existing GLOW/oTo profiles
+        env:
+          ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
+          SUG_SIX_BUILD_ASSET_KEY: ${{ secrets.SUG_SIX_BUILD_ASSET_KEY }}
+          SUG_SIGNING_RECOVERY_APPROVED: 'yes'
+          SUG_SIGNING_RECOVERY_CIPHERTEXT: ${{ inputs.recovery_ciphertext }}
+        run: python3 ci/sug-six/prepare-signing.py --root "$RUNNER_TEMP/sug-six" --work "$RUNNER_TEMP/sug-six-signing" --apps-json "$APPS_JSON" --approve-apple-signing --reuse-recovery --reuse-profiles-json '{"GLOW":"39XH2BFPRU","oTo":"LYS3324XW9"}'
+      - name: Ephemeral keychain configuration
+        run: |
+          python3 - <<'PY'
+          import json,os,pathlib,secrets
+          p=pathlib.Path(os.environ['RUNNER_TEMP'])/'sug-six-signing'
+          private=json.loads((p/'private.json').read_text());password=secrets.token_urlsafe(24)
+          print('::add-mask::'+private['password']);print('::add-mask::'+password)
+          with open(os.environ['GITHUB_ENV'],'a') as f:
+              f.write('SUG_P12_PASSWORD='+private['password']+'\nSUG_KEYCHAIN_PASSWORD='+password+'\n')
+          PY
+      - name: Sign and upload EACH repaired app exactly once
+        env:
+          ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
+          SUG_UPLOAD_APPROVED: 'yes'
+        run: |
+          KEYCHAIN="$RUNNER_TEMP/sug-six-signing.keychain-db"
+          security create-keychain -p "$SUG_KEYCHAIN_PASSWORD" "$KEYCHAIN"
+          security set-keychain-settings -lut 21600 "$KEYCHAIN"
+          security unlock-keychain -p "$SUG_KEYCHAIN_PASSWORD" "$KEYCHAIN"
+          security import "$RUNNER_TEMP/sug-six-signing/distribution.p12" -P "$SUG_P12_PASSWORD" -A -t cert -f pkcs12 -k "$KEYCHAIN"
+          security list-keychain -d user -s "$KEYCHAIN" login.keychain-db
+          security set-key-partition-list -S apple-tool:,apple: -s -k "$SUG_KEYCHAIN_PASSWORD" "$KEYCHAIN"
+          python3 - <<'PY'
+          import json,os,subprocess
+          failures=[]
+          for app in ['GLOW','oTo']:
+              result=subprocess.run(['bash','ci/sug-six/signed-archive.sh',os.environ['RUNNER_TEMP']+'/sug-six',app,os.environ['RUNNER_TEMP']+'/sug-six-signing'],env={**os.environ,'SUG_BUILD_NUMBER':'2'})
+              print('SUG_DELIVERY_RESULT='+json.dumps({'app':app,'buildNumber':'2','exitCode':result.returncode}),flush=True)
+              if result.returncode:failures.append(app)
+          if failures:raise SystemExit('No automatic resend: '+','.join(failures))
+          PY
+      - name: Scope and preservation record
+        if: always()
+        run: |
+          printf '%s\n' 'GLOW/oTo build2 only. Existing certificate/profiles read-only. No new certificate/profile/key, no revocation/deletion, no AI, no external testers or production submission, no paid artifacts/cache.' >> "$GITHUB_STEP_SUMMARY"

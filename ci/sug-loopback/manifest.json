@@ -1,0 +1,25 @@
+{
+  "format": "SUG_LOOPBACK_PATCH_V1",
+  "files": [
+    {
+      "path": "GLOW/iOS/Sources/BundleHTTPServer.swift",
+      "baselineSHA256": "93cc99baf781efdaac1b6075f07bf94f74786712eb098c15224f48a1319bd5eb",
+      "candidateSHA256": "1dd5018c7b4a54ec719e788787839d767d761657271880a85823feeb5339587e"
+    },
+    {
+      "path": "GLOW/iOS/Sources/DeviceWebView.swift",
+      "baselineSHA256": "2c4e4501e44964b8d81bf43e4c01edd4c34d86ef61d361e84727eba36dbce225",
+      "candidateSHA256": "8c471897220b81d2fd1d047804b0a00929b384a955eea2f1e816091aec7175ed"
+    },
+    {
+      "path": "oTo/iOS/Sources/BundleHTTPServer.swift",
+      "baselineSHA256": "93cc99baf781efdaac1b6075f07bf94f74786712eb098c15224f48a1319bd5eb",
+      "candidateSHA256": "1dd5018c7b4a54ec719e788787839d767d761657271880a85823feeb5339587e"
+    },
+    {
+      "path": "oTo/iOS/Sources/DeviceWebView.swift",
+      "baselineSHA256": "2c4e4501e44964b8d81bf43e4c01edd4c34d86ef61d361e84727eba36dbce225",
+      "candidateSHA256": "8c471897220b81d2fd1d047804b0a00929b384a955eea2f1e816091aec7175ed"
+    }
+  ]
+}

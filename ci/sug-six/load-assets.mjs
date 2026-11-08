@@ -12,3 +12,11 @@ const inputs=JSON.parse(fs.readFileSync(inputFile));if(inputs.format!=='SUG_IOS_
 for(const entry of inputs.files){if(entry.path.startsWith('/')||entry.path.includes('\\')||entry.path.split('/').includes('..'))throw Error('Unsafe input path');const p=path.join(output,entry.path);if(fs.lstatSync(p).isSymbolicLink()||fs.statSync(p).size!==entry.bytes||digest(p)!==entry.sha256)throw Error('Input integrity mismatch: '+entry.path)}
 for(const name of ['build-one.sh','bundle-contract.mjs'])fs.copyFileSync(path.join(output,name),path.join(output,'ci',name));
 console.log(JSON.stringify({authenticated:true,verifiedFiles:inputs.files.length,apps:inputs.apps,credentialsPrinted:false}));
+
+// Explicitly approved source-only patch, after full authenticated baseline verification.
+if(process.env.SUG_LOOPBACK_PATCH_APPROVED==='yes'){
+ const {fileURLToPath}=await import('node:url');
+ const patch=fileURLToPath(new URL('../sug-loopback/apply-patch.mjs',import.meta.url));
+ const result=spawnSync(process.execPath,[patch,output],{stdio:'inherit',env:process.env});
+ if(result.status!==0)throw Error('Loopback patch failed; no build/sign/upload permitted');
+}

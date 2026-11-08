@@ -11,6 +11,7 @@ def main():
     parser.add_argument('--preflight-only',action='store_true')
     parser.add_argument('--register-missing-bundles',action='store_true')
     parser.add_argument('--reuse-recovery',action='store_true')
+    parser.add_argument('--reuse-profiles-json',default='{}')
     parser.add_argument('--replace-owned-failed-identity',action='store_true')
     args=parser.parse_args()
     if not args.approve_apple_signing or os.environ.get('SUG_SIGNING_APPROVED')!='yes':
@@ -19,7 +20,11 @@ def main():
         raise RuntimeError('Registration is isolated from archive/signing execution')
     if args.replace_owned_failed_identity and (args.preflight_only or args.reuse_recovery or os.environ.get('SUG_REPLACE_FAILED_IDENTITY_APPROVED')!='yes'):
         raise RuntimeError('Specific failed-resource replacement approval required')
+    reused_profiles=json.loads(args.reuse_profiles_json)
+    if reused_profiles and (not args.reuse_recovery or args.preflight_only or set(reused_profiles)!={'GLOW','oTo'} or reused_profiles!={'GLOW':'39XH2BFPRU','oTo':'LYS3324XW9'}):
+        raise RuntimeError('Only the approved existing GLOW/oTo profiles may be reused')
     apps=json.loads(args.apps_json)
+    if reused_profiles and set(apps)!=set(reused_profiles):raise RuntimeError('Unexpected existing-profile targets')
     allowed={'BODY','eVo','WALK','WAY','GLOW','oTo'}
     if not apps or len(apps)>6 or len(set(apps))!=len(apps) or any(a not in allowed for a in apps):
         raise RuntimeError('Unexpected signing targets')
@@ -43,6 +48,7 @@ def main():
     spec=importlib.util.spec_from_file_location('sug_legacy',module_path);legacy=importlib.util.module_from_spec(spec);spec.loader.exec_module(legacy)
     original_request=legacy.request
     def request(method,path,**kwargs):
+        if reused_profiles and method!='GET':raise RuntimeError('Existing-profile repair permits read-only Apple signing queries only')
         legacy.HEADERS['Authorization']='Bearer '+legacy.make_token()
         kwargs['attempts']=3 if method=='GET' else 1
         return original_request(method,path,**kwargs)
@@ -71,6 +77,9 @@ def main():
             builds=request('GET','/builds',params={'filter[app]':matches[0]['id'],'sort':'-uploadedDate','limit':200,'include':'buildBetaDetail,betaGroups'})
             versions=[b.get('attributes',{}).get('version','') for b in builds.get('data',[])]
             info['existingBuildNumbers']=versions
+            if reused_profiles:
+                number=json.loads(os.environ['BUILD_NUMBERS_JSON']).get(identity['app'])
+                if number in versions:raise RuntimeError('Build number already exists; no automatic resend')
             numeric=[int(v) for v in versions if v.isascii() and v.isdigit()]
             info['proposedBuildNumber']=str(max([0]+numeric)+1)
             details={d['id']:d for d in builds.get('included',[]) if d['type']=='buildBetaDetails'}
@@ -127,6 +136,7 @@ def main():
         recovered=json.loads(AESGCM(recovery_key).decrypt(blob[6:18],blob[18:],b'SUG_SIGNING_RECOVERY_V1'))
         if recovered.get('format')!='SUG_SIGNING_RECOVERY_V1' or recovered.get('apiKeysIncluded') is not False:raise RuntimeError('Wrong recovery payload')
         cert_id=recovered['certificateId']
+        if reused_profiles and cert_id!='LYFMNJP5Z5':raise RuntimeError('Existing signing certificate differs from the approved identity')
         if not cert_id.isalnum() or len(cert_id)>32:raise RuntimeError('Invalid recovered certificate ID')
         created=request('GET','/certificates/'+cert_id)['data']
         if created['attributes']['certificateType'] not in {'DISTRIBUTION','IOS_DISTRIBUTION'}:raise RuntimeError('Wrong certificate type')
@@ -158,10 +168,18 @@ def main():
     time.sleep(5)  # Existing propagation delay; never retry a possibly completed mutation.
     for target in targets:
         # Existing proven profile payload, with the correct app name, one POST per target.
-        profile=request('POST','/profiles',body={'data':{'type':'profiles','attributes':{'name':'S.u.G '+target['app']+' CI '+str(os.environ.get('GITHUB_RUN_ID',int(time.time()))),'profileType':'IOS_APP_STORE'},'relationships':{'bundleId':{'data':{'type':'bundleIds','id':target['bundleResourceId']}},'certificates':{'data':[{'type':'certificates','id':created['id']}]}}}})['data']
+        if reused_profiles:
+            profile=request('GET','/profiles/'+reused_profiles[target['app']],params={'include':'certificates,bundleId'})['data']
+            links=profile.get('relationships',{})
+            if profile['attributes'].get('profileState')!='ACTIVE' or profile['attributes'].get('profileType')!='IOS_APP_STORE':raise RuntimeError('Existing profile is not active App Store distribution')
+            if (links.get('bundleId',{}).get('data') or {}).get('id')!=target['bundleResourceId']:raise RuntimeError('Existing profile belongs to another bundle')
+            if [c['id'] for c in links.get('certificates',{}).get('data',[])]!=[state['certificateId']]:raise RuntimeError('Existing profile certificate mismatch')
+            print('REUSED_BATCH_PROFILE_ID='+target['app']+':'+profile['id'],flush=True)
+        else:
+            profile=request('POST','/profiles',body={'data':{'type':'profiles','attributes':{'name':'S.u.G '+target['app']+' CI '+str(os.environ.get('GITHUB_RUN_ID',int(time.time()))),'profileType':'IOS_APP_STORE'},'relationships':{'bundleId':{'data':{'type':'bundleIds','id':target['bundleResourceId']}},'certificates':{'data':[{'type':'certificates','id':created['id']}]}}}})['data']
         output=work/(target['app']+'.mobileprovision')
         state['profiles'].append({'app':target['app'],'id':profile['id'],'path':str(output)});save()
-        print('NEW_BATCH_PROFILE_ID='+target['app']+':'+str(profile['id']))
+        if not reused_profiles:print('NEW_BATCH_PROFILE_ID='+target['app']+':'+str(profile['id']))
         output.write_bytes(base64.b64decode(profile['attributes']['profileContent']));os.chmod(output,0o600)
     print(json.dumps({'preparedTargets':[a['app'] for a in targets],'newCertificates':0 if args.reuse_recovery else 1,'oldAssetsDeleted':False,'privateFilesPublished':False}))
 
