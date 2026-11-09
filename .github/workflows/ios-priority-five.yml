@@ -1,8 +1,5 @@
-name: SUG existing four-app PASS receipts - first approved delivery
+name: SUG BODY 1006 - integrated iPhone update
 on:
-  push:
-    branches: ['sug/ios-six-testflight-20261108']
-    paths: ['.github/workflows/ios-priority-five.yml']
   workflow_dispatch:
     inputs:
       confirm_approved_build:
@@ -16,130 +13,91 @@ on:
       recovery_ciphertext:
         type: string
         required: true
-        description: 'Existing approved AES-GCM signing recovery only; no new signing identity'
 permissions:
   contents: read
-  actions: read
-env:
-  GITHUB_TOKEN: ${{ github.token }}
 concurrency:
-  group: sug-priority-five-approved
+  group: sug-body-1006-once
   cancel-in-progress: false
 jobs:
-  way-confirmed:
+  verify-body:
     if: github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' && github.ref == 'refs/heads/sug/ios-six-testflight-20261108' && github.event.repository.private == false && github.actor == 'koji06ochi-ship-it' && github.event_name == 'workflow_dispatch' && inputs.confirm_approved_build == true && github.run_attempt == 1
     runs-on: macos-26
-    timeout-minutes: 2
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-      - name: Inherit unchanged WAY storage component result without repeating SDK checks
-        id: prior
-        run: python3 ci/sug-priority/test-simulator.py --inherit 'WAY'
-  body:
-    needs: way-confirmed
-    if: always() && github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' && github.ref == 'refs/heads/sug/ios-six-testflight-20261108' && github.event.repository.private == false && github.actor == 'koji06ochi-ship-it' && github.event_name == 'workflow_dispatch' && inputs.confirm_approved_build == true && github.run_attempt == 1
-    runs-on: macos-26
-    timeout-minutes: 2
+    timeout-minutes: 20
     env:
-      SUG_PRIORITY_PATCH_APPROVED: 'yes'
+      SUG_BODY_1006_APPROVED: 'yes'
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
-      - name: Inherit only source-identical passed checks from initial approved run
-        id: prior
-        run: python3 ci/sug-priority/test-simulator.py --inherit 'BODY'
-      - name: Scope of verification
-        if: always()
-        run: echo 'These runtime checks are not physical iPhone GPS/HealthKit/input/save/restore completion.' >> "$GITHUB_STEP_SUMMARY"
-  evo:
-    needs: body
-    if: always() && github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' && github.ref == 'refs/heads/sug/ios-six-testflight-20261108' && github.event.repository.private == false && github.actor == 'koji06ochi-ship-it' && github.event_name == 'workflow_dispatch' && inputs.confirm_approved_build == true && github.run_attempt == 1
-    runs-on: macos-26
-    timeout-minutes: 2
-    env:
-      SUG_PRIORITY_PATCH_APPROVED: 'yes'
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-      - name: Inherit only source-identical passed checks from initial approved run
-        id: prior
-        run: python3 ci/sug-priority/test-simulator.py --inherit 'eVo'
-      - name: Scope of verification
-        if: always()
-        run: echo 'These runtime checks are not physical iPhone GPS/HealthKit/input/save/restore completion.' >> "$GITHUB_STEP_SUMMARY"
-  walk:
-    needs: evo
-    if: always() && github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' && github.ref == 'refs/heads/sug/ios-six-testflight-20261108' && github.event.repository.private == false && github.actor == 'koji06ochi-ship-it' && github.event_name == 'workflow_dispatch' && inputs.confirm_approved_build == true && github.run_attempt == 1
-    runs-on: macos-26
-    timeout-minutes: 2
-    env:
-      SUG_PRIORITY_PATCH_APPROVED: 'yes'
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-      - name: Inherit only source-identical passed checks from initial approved run
-        id: prior
-        run: python3 ci/sug-priority/test-simulator.py --inherit 'WALK'
-      - name: Scope of verification
-        if: always()
-        run: echo 'These runtime checks are not physical iPhone GPS/HealthKit/input/save/restore completion.' >> "$GITHUB_STEP_SUMMARY"
-  glow:
-    needs: walk
-    if: always() && github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' && github.ref == 'refs/heads/sug/ios-six-testflight-20261108' && github.event.repository.private == false && github.actor == 'koji06ochi-ship-it' && github.event_name == 'workflow_dispatch' && inputs.confirm_approved_build == true && github.run_attempt == 1
-    runs-on: macos-26
-    timeout-minutes: 2
-    env:
-      SUG_PRIORITY_PATCH_APPROVED: 'yes'
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-      - name: Inherit only source-identical passed checks from initial approved run
-        id: prior
-        run: python3 ci/sug-priority/test-simulator.py --inherit 'GLOW'
-      - name: Scope of verification
-        if: always()
-        run: echo 'These runtime checks are not physical iPhone GPS/HealthKit/input/save/restore completion.' >> "$GITHUB_STEP_SUMMARY"
-  private-testflight:
-    needs: [body, evo, walk, glow]
-    if: needs.body.result == 'success' && needs.evo.result == 'success' && needs.walk.result == 'success' && needs.glow.result == 'success' && inputs.confirm_approved_delivery == true && github.run_attempt == 1
-    runs-on: macos-26
-    timeout-minutes: 30
-    env:
-      APPS_JSON: '["BODY","eVo","WALK","GLOW"]'
-      BUILD_NUMBERS_JSON: '{"BODY":"1005","eVo":"3","WALK":"2","GLOW":"3"}'
-      ASC_API_KEY_ID: MM98J638B7
-      ASC_API_ISSUER_ID: d3a981e0-7557-4223-a67f-d026debee303
-      SUG_SIGNING_APPROVED: 'yes'
-      SUG_PRIORITY_PATCH_APPROVED: 'yes'
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-      - name: Authenticate resources and apply the SAME verified source patches
+      - name: Read current Apple BODY build numbers before any SDK build
+        env:
+          ASC_API_KEY_ID: MM98J638B7
+          ASC_API_ISSUER_ID: d3a981e0-7557-4223-a67f-d026debee303
+          ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
+        run: |
+          python3 -m venv "$RUNNER_TEMP/sug-build-readonly"
+          "$RUNNER_TEMP/sug-build-readonly/bin/python" -m pip install --quiet --disable-pip-version-check pyjwt cryptography requests
+          "$RUNNER_TEMP/sug-build-readonly/bin/python" - <<'PY'
+          import os,base64,time,json,jwt,requests
+          raw=os.environ['ASC_API_KEY_P8'].strip().replace('\\n','\n')
+          key=raw if raw.startswith('-----BEGIN ') else base64.b64decode(raw,validate=True).decode()
+          now=int(time.time())
+          token=jwt.encode({'iss':os.environ['ASC_API_ISSUER_ID'],'iat':now-5,'exp':now+600,'aud':'appstoreconnect-v1'},key,algorithm='ES256',headers={'kid':os.environ['ASC_API_KEY_ID'],'typ':'JWT'})
+          response=requests.get('https://api.appstoreconnect.apple.com/v1/builds',params={'filter[app]':'6809570298','sort':'-uploadedDate','limit':200},headers={'Authorization':'Bearer '+token},timeout=45)
+          if response.status_code!=200:raise SystemExit('BODY read-only build check HTTP '+str(response.status_code)+'; no retry or build')
+          rows=response.json().get('data',[]);numbers=[r.get('attributes',{}).get('version','') for r in rows]
+          numeric=[int(n) for n in numbers if n.isascii() and n.isdigit()]
+          if not rows or '1006' in numbers or max(numeric,default=0)>=1006:raise SystemExit('BODY1006 cannot be used; no build, renumber, signing or upload')
+          print('BODY_APPLE_BUILD_READONLY='+json.dumps({'appStoreId':'6809570298','latestNumericBuild':max(numeric),'candidate':'1006','candidateUnused':True,'processing':[{'build':r['attributes'].get('version'),'state':r['attributes'].get('processingState')} for r in rows[:3]],'mutations':0}))
+          PY
+      - name: Reuse authenticated original assets and apply exact BODY integration
         env:
           SUG_SIX_BUILD_ASSET_KEY: ${{ secrets.SUG_SIX_BUILD_ASSET_KEY }}
-        run: node ci/sug-six/load-assets.mjs assets "$RUNNER_TEMP/sug-six"
-      - name: Apply the same exact verified repair hashes
-        run: node ci/sug-priority/apply-patch.mjs "$RUNNER_TEMP/sug-six"
-      - name: Isolated existing signing dependencies
+        run: |
+          node ci/sug-six/load-assets.mjs assets "$RUNNER_TEMP/sug-six"
+          node ci/sug-body-1006/apply.mjs --apply "$RUNNER_TEMP/sug-six"
+      - name: BODY both SDKs once and minimal actual launch-relaunch
+        run: |
+          bash "$RUNNER_TEMP/sug-six/ci/build-one.sh" BODY
+          python3 ci/sug-body-1006/test-simulator.py BODY
+      - name: Verification boundary
+        if: always()
+        run: echo 'BODY only. SDK/Simulator is not physical-iPhone input/save/restore/HealthKit verification. No automatic retry.' >> "$GITHUB_STEP_SUMMARY"
+  private-testflight:
+    needs: verify-body
+    if: needs.verify-body.result == 'success' && inputs.confirm_approved_delivery == true && github.run_attempt == 1
+    runs-on: macos-26
+    timeout-minutes: 15
+    env:
+      SUG_BODY_1006_APPROVED: 'yes'
+      SUG_SIGNING_APPROVED: 'yes'
+      APPS_JSON: '["BODY"]'
+      BUILD_NUMBERS_JSON: '{"BODY":"1006"}'
+      ASC_API_KEY_ID: MM98J638B7
+      ASC_API_ISSUER_ID: d3a981e0-7557-4223-a67f-d026debee303
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Load the same exact integrated BODY source
+        env:
+          SUG_SIX_BUILD_ASSET_KEY: ${{ secrets.SUG_SIX_BUILD_ASSET_KEY }}
+        run: |
+          node ci/sug-six/load-assets.mjs assets "$RUNNER_TEMP/sug-six"
+          node ci/sug-body-1006/apply.mjs --apply "$RUNNER_TEMP/sug-six"
+      - name: Existing signing dependencies only
         run: |
           python3 -m venv "$RUNNER_TEMP/sug-sign-python"
           "$RUNNER_TEMP/sug-sign-python/bin/python" -m pip install --quiet --disable-pip-version-check pyjwt cryptography requests
           echo "$RUNNER_TEMP/sug-sign-python/bin" >> "$GITHUB_PATH"
-      - name: Read-only reuse of existing certificate and exact existing BODY/eVo/WALK/GLOW profiles
+      - name: Confirm unused1006 and reuse exact existing BODY identity
         env:
           ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
           SUG_SIX_BUILD_ASSET_KEY: ${{ secrets.SUG_SIX_BUILD_ASSET_KEY }}
           SUG_SIGNING_RECOVERY_APPROVED: 'yes'
           SUG_SIGNING_RECOVERY_CIPHERTEXT: ${{ inputs.recovery_ciphertext }}
-        run: python3 ci/sug-six/prepare-signing.py --root "$RUNNER_TEMP/sug-six" --work "$RUNNER_TEMP/sug-six-signing" --apps-json "$APPS_JSON" --approve-apple-signing --reuse-recovery --reuse-profiles-json '{"BODY":"3W4H35XA57","eVo":"FX9N4PLPA5","WALK":"22B4PZKN25","GLOW":"39XH2BFPRU"}'
-      - name: Ephemeral keychain configuration
+        run: python3 ci/sug-body-1006/prepare-signing.py --root "$RUNNER_TEMP/sug-six" --work "$RUNNER_TEMP/sug-six-signing" --apps-json "$APPS_JSON" --approve-apple-signing --reuse-recovery --reuse-profiles-json '{"BODY":"3W4H35XA57"}'
+      - name: Import existing identity into ephemeral keychain
         run: |
           python3 - <<'PY'
           import json,os,pathlib,secrets
@@ -149,28 +107,67 @@ jobs:
           with open(os.environ['GITHUB_ENV'],'a') as f:
               f.write('SUG_P12_PASSWORD='+private['password']+'\nSUG_KEYCHAIN_PASSWORD='+password+'\n')
           PY
-      - name: Sign and upload EACH repaired app exactly once
+      - name: Archive sign and upload BODY1006 once
         env:
           ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
+          SUG_BUILD_NUMBER: '1006'
           SUG_UPLOAD_APPROVED: 'yes'
         run: |
-          KEYCHAIN="$RUNNER_TEMP/sug-six-signing.keychain-db"
+          KEYCHAIN="$RUNNER_TEMP/sug-body1006.keychain-db"
           security create-keychain -p "$SUG_KEYCHAIN_PASSWORD" "$KEYCHAIN"
-          security set-keychain-settings -lut 21600 "$KEYCHAIN"
+          security set-keychain-settings -lut 7200 "$KEYCHAIN"
           security unlock-keychain -p "$SUG_KEYCHAIN_PASSWORD" "$KEYCHAIN"
           security import "$RUNNER_TEMP/sug-six-signing/distribution.p12" -P "$SUG_P12_PASSWORD" -A -t cert -f pkcs12 -k "$KEYCHAIN"
           security list-keychain -d user -s "$KEYCHAIN" login.keychain-db
           security set-key-partition-list -S apple-tool:,apple: -s -k "$SUG_KEYCHAIN_PASSWORD" "$KEYCHAIN"
-          python3 - <<'PY'
-          import json,os,subprocess
-          failures=[]
-          for app in ['BODY','eVo','WALK','GLOW']:
-              result=subprocess.run(['bash','ci/sug-six/signed-archive.sh',os.environ['RUNNER_TEMP']+'/sug-six',app,os.environ['RUNNER_TEMP']+'/sug-six-signing'],env={**os.environ,'SUG_BUILD_NUMBER':json.loads(os.environ['BUILD_NUMBERS_JSON'])[app]})
-              print('SUG_DELIVERY_RESULT='+json.dumps({'app':app,'buildNumber':json.loads(os.environ['BUILD_NUMBERS_JSON'])[app],'exitCode':result.returncode}),flush=True)
-              if result.returncode:failures.append(app)
-          if failures:raise SystemExit('No automatic resend: '+','.join(failures))
-          PY
-      - name: Scope and preservation record
-        if: always()
+          bash ci/sug-six/signed-archive.sh "$RUNNER_TEMP/sug-six" BODY "$RUNNER_TEMP/sug-six-signing"
+      - name: Verify Apple processing and enable only existing owner internal group
+        env:
+          ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
+          SUG_BODY_INTERNAL_APPROVED: 'yes'
+          SUG_BODY_ENCRYPTION_DECLARATION_APPROVED: 'yes'
         run: |
-          printf '%s\n' 'BODY1005/eVo3/WALK2/GLOW3 only. Existing certificate/profiles read-only. No new certificate/profile/key, no revocation/deletion, no AI, no external testers or production submission, no paid artifacts/cache.' >> "$GITHUB_STEP_SUMMARY"
+          python3 - <<'PY'
+          import os,base64,time,json,jwt,requests
+          assert os.environ['SUG_BODY_INTERNAL_APPROVED']=='yes'
+          app='6809570298';group='3cc7ff5e-ae5e-474a-8321-313de0af275b';build=None
+          raw=os.environ['ASC_API_KEY_P8'].strip().replace('\\n','\n');key=raw if raw.startswith('-----BEGIN ') else base64.b64decode(raw,validate=True).decode()
+          now=int(time.time());token=jwt.encode({'iss':os.environ['ASC_API_ISSUER_ID'],'iat':now-5,'exp':now+900,'aud':'appstoreconnect-v1'},key,algorithm='ES256',headers={'kid':os.environ['ASC_API_KEY_ID'],'typ':'JWT'})
+          headers={'Authorization':'Bearer '+token,'Content-Type':'application/json'}
+          def request(method,path,body=None,params=None):
+              allowed=(method=='GET' and (path=='/builds' or path in ['/betaGroups/'+group,'/betaGroups/'+group+'/app','/betaGroups/'+group+'/builds'] or (build and path=='/builds/'+build+'?include=buildBetaDetail')))
+              allowed=allowed or (method=='PATCH' and build and path=='/builds/'+build and body=={'data':{'type':'builds','id':build,'attributes':{'usesNonExemptEncryption':False}}})
+              allowed=allowed or (method=='POST' and build and path=='/betaGroups/'+group+'/relationships/builds' and body=={'data':[{'type':'builds','id':build}]})
+              assert allowed,'Outside exact BODY internal scope'
+              response=requests.request(method,'https://api.appstoreconnect.apple.com/v1'+path,headers=headers,json=body,params=params,timeout=45)
+              if response.status_code not in (200,204):raise SystemExit('BODY Apple follow-through HTTP '+str(response.status_code)+'; no mutation retry')
+              return response.json() if response.content else {}
+          target=None
+          for attempt in range(24):
+              rows=request('GET','/builds',params={'filter[app]':app,'sort':'-uploadedDate','limit':200}).get('data',[])
+              matches=[r for r in rows if r['attributes'].get('version')=='1006']
+              assert len(matches)<=1,'Ambiguous BODY1006'
+              target=matches[0] if matches else None
+              state=target['attributes'].get('processingState') if target else 'NOT_VISIBLE'
+              print('BODY_APPLE_PROCESSING='+json.dumps({'build':'1006','state':state,'readAttempt':attempt+1}),flush=True)
+              if state=='VALID':build=target['id'];break
+              if state in ('FAILED','INVALID'):raise SystemExit('Apple rejected BODY1006; no resend')
+              time.sleep(15)
+          if not build:raise SystemExit('Apple processing unconfirmed within bounded polling; do not resend')
+          g=request('GET','/betaGroups/'+group)['data'];assert g['attributes']['name']=='SUG BODY TEST' and g['attributes']['isInternalGroup'] is True and g['attributes'].get('publicLinkEnabled') is not True
+          assert request('GET','/betaGroups/'+group+'/app')['data']['id']==app
+          exempt=target['attributes'].get('usesNonExemptEncryption')
+          if exempt is True:raise SystemExit('Unexpected encryption declaration; do not override')
+          if exempt is None:
+              assert os.environ['SUG_BODY_ENCRYPTION_DECLARATION_APPROVED']=='yes'
+              request('PATCH','/builds/'+build,{'data':{'type':'builds','id':build,'attributes':{'usesNonExemptEncryption':False}}})
+          members=request('GET','/betaGroups/'+group+'/builds',params={'limit':200}).get('data',[])
+          if not any(x['id']==build for x in members):request('POST','/betaGroups/'+group+'/relationships/builds',{'data':[{'type':'builds','id':build}]})
+          members=request('GET','/betaGroups/'+group+'/builds',params={'limit':200}).get('data',[]);assert any(x['id']==build for x in members),'Internal group membership not confirmed'
+          details=request('GET','/builds/'+build+'?include=buildBetaDetail');states=[x['attributes'].get('internalBuildState') for x in details.get('included',[]) if x['type']=='buildBetaDetails']
+          print('BODY_INTERNAL_TESTFLIGHT_RESULT='+json.dumps({'app':'BODY','build':'1006','buildId':build,'processingState':'VALID','internalGroup':group,'groupMembershipConfirmed':True,'internalBuildStates':states,'externalInvites':0,'productionReleases':0,'physicalIPhoneVerified':False}),flush=True)
+          if states!=['IN_BETA_TESTING']:raise SystemExit('Internal group assigned; final testing state not confirmed')
+          PY
+      - name: Delivery boundary
+        if: always()
+        run: echo 'BODY1006 only, one upload; certificate LYFMNJP5Z5/profile3W4H35XA57 reused. New signing assets0, retries0, other apps0, production0, AI0, paid artifacts/cache0. Apple processing/internal availability/device operation are separate.' >> "$GITHUB_STEP_SUMMARY"
