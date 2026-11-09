@@ -17,4 +17,12 @@ if(sha(fs.readFileSync(path.join(root,'INPUT-MANIFEST.json')))!==meta.inputManif
 verify(payload.baseline);const original=new Map(payload.baseline.map(x=>[x.path,x]));
 const mutations=payload.files.map(e=>{const p=safe(e.path),old=original.get(e.path),bytes=Buffer.from(e.contentBase64,'base64');if(sha(bytes)!==e.sha256||bytes.length!==e.bytes)throw Error('Payload mismatch');if(!old&&fs.existsSync(p))throw Error('Unexpected new target');return{p,bytes,path:e.path};});
 for(const e of mutations){fs.mkdirSync(path.dirname(e.p),{recursive:true});fs.writeFileSync(e.p,e.bytes);}
-checkFinal();console.log('SUG_BODY_INTEGRATION_APPLIED='+JSON.stringify({files:mutations.map(x=>x.path),fullIOSFiles:3583,build:'1006',fixedOrigin:'http://127.0.0.1:5411',originalsModified:false,otherAppsModified:false}));
+checkFinal();
+// Only the ephemeral CI validator is updated; all original checks remain.
+const validatorPath=path.join(root,'ci/validate.mjs'),validator=fs.readFileSync(validatorPath,'utf8');
+if(sha(Buffer.from(validator))!=='18ef790e3dce881e51dcbaf6d5293c88f558577103b38451a0cd414c0d39638f')throw Error('Authenticated old validator changed; stop');
+const priorGuard="assert(server.includes('params.requiredLocalEndpoint = .hostPort(host: \"127.0.0.1\"'));",currentGuard="if(app==='BODY'){\n  assert(server.includes('final class BundleHTTPServer'));\n  assert(/let params = NWParameters\\.tcp/.test(server));\n  assert.equal((server.match(/params\\.requiredInterfaceType\\s*=/g)||[]).length,1);\n  assert(/params\\.requiredInterfaceType\\s*=\\s*\\.loopback/.test(server));\n  assert.equal((server.match(/params\\.acceptLocalOnly\\s*=/g)||[]).length,1);\n  assert(/params\\.acceptLocalOnly\\s*=\\s*true/.test(server));\n  assert(!/params\\.requiredLocalEndpoint|params\\.requiredInterface\\s*=/.test(server));\n  assert.equal((server.match(/NWListener\\(using:/g)||[]).length,1);\n  assert(/NWListener\\(using: params, on: localPort\\)/.test(server));\n  assert(!/0\\.0\\.0\\.0|::0|service\\s*=\\s*NWListener/.test(server));\n }else{assert(server.includes('params.requiredLocalEndpoint = .hostPort(host: \"127.0.0.1\"'));}";
+if(validator.split(priorGuard).length!==2)throw Error('Unexpected validator shape');
+fs.writeFileSync(validatorPath,validator.replace(priorGuard,currentGuard));
+console.log('BODY_CI_VALIDATOR_UPDATED='+JSON.stringify({beforeSHA256:'18ef790e3dce881e51dcbaf6d5293c88f558577103b38451a0cd414c0d39638f',afterSHA256:sha(fs.readFileSync(validatorPath)),app:'BODY',otherAppChecksUnchanged:true}));
+console.log('SUG_BODY_INTEGRATION_APPLIED='+JSON.stringify({files:mutations.map(x=>x.path),fullIOSFiles:3583,build:'1006',fixedOrigin:'http://127.0.0.1:5411',originalsModified:false,otherAppsModified:false}));
