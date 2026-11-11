@@ -25,7 +25,7 @@ function exact(before,after){
 }
 exact(`                guard let self else { connection.cancel(); return }
                 connection.start(queue: self.queue)`,`                guard let self else { connection.cancel(); return }
-                // Fixed diagnostic stages only; no user data or request paths.
+                // Only fixed diagnostic stages; never log request path, headers, or health data.
                 self.logger.notice("sug_http_connection state=accepted")
                 connection.stateUpdateHandler = { [weak self] state in
                     switch state {
@@ -46,7 +46,8 @@ exact(`            else { c.cancel() }
     }
     private func respond`);
 exact(String.raw`        guard parts.count == 3, parts[2].hasPrefix("HTTP/1."), ["GET", "HEAD"].contains(String(parts[0])),
-              lines.dropFirst().contains(where: { $0.lowercased() == "host: 127.0.0.1:\(port)" }) else {`,String.raw`        // HTTP header names are case insensitive; keep fixed loopback host.
+              lines.dropFirst().contains(where: { $0.lowercased() == "host: 127.0.0.1:\(port)" }) else {`,String.raw`        // HTTP header field-names are case-insensitive and whitespace after ':' is optional.
+        // The host value remains pinned to the app's private loopback origin.
         let validHost = lines.dropFirst().contains { line in
             guard let separator = line.firstIndex(of: ":") else { return false }
             let name = String(line[..<separator]).trimmingCharacters(in: .whitespacesAndNewlines)
@@ -54,7 +55,8 @@ exact(String.raw`        guard parts.count == 3, parts[2].hasPrefix("HTTP/1."), 
             return name.caseInsensitiveCompare("host") == .orderedSame && value == "127.0.0.1:\(port)"
         }
         guard parts.count == 3, parts[2].hasPrefix("HTTP/1."), ["GET", "HEAD"].contains(String(parts[0])), validHost else {`);
-exact(`        c.send(content: all, completion: .contentProcessed { _ in c.cancel() })`,`        // Prevent immediate TCP RST while the WebView reads the response.
+exact(`        c.send(content: all, completion: .contentProcessed { _ in c.cancel() })`,`        // A processed send is not proof that the peer received the bytes.
+        // An immediate cancel can cause a TCP RST while WKWebView is still reading.
         c.send(content: all, contentContext: .finalMessage, isComplete: true,
                completion: .contentProcessed { [weak self] sendError in
             if sendError != nil {
@@ -63,7 +65,9 @@ exact(`        c.send(content: all, completion: .contentProcessed { _ in c.cance
                 return
             }
             self?.logger.debug("sug_http_reply state=sent")
-            // Bounded idle timer already handles cleanup.
+            // The final message already signals end-of-response. Avoid an extra
+            // near-immediate cancel, which can reset a still-draining TCP stream.
+            // The existing bounded idle timer remains the cleanup fallback.
         })`);
 assert.equal(sha(source),fixedSha,'Candidate SHA mismatch; stop without change');
 if(mode==='--apply'){
