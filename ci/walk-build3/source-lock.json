@@ -1,0 +1,15 @@
+{
+  "format": "SUG_WALK_BUILD3_SOURCE_V1",
+  "sourceRepository": "koji06ochi-ship-it/sug-private-engine",
+  "sourceCommit": "abfe0768bb007c3eb764f6c1686c67f7ede7b6b9",
+  "gameplayCommit": "48c5aa47f372b2d04eea0dff5b46137b459f0856",
+  "iOSTree": "2a58aa90a3be4f741baec852fac36d90ef5aa4d5",
+  "webTree": "e4a0967dfa24dd64c4d4da7047e20040c3f7cbe7",
+  "fileCount": 3473,
+  "plaintextSHA256": "e3292a084b008629d842b67d3dfbdd7b19f045a821aff8799c2bb912ec780931",
+  "ciphertextSHA256": "6dcbbcb51c66a6bfaea4f067c72671bac24c0bf37fb2f950a804e1c5fdafac02",
+  "ciphertextBytes": 24315820,
+  "newProject": false,
+  "newKey": false,
+  "uploaded": false
+}

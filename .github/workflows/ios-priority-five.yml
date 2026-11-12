@@ -1,0 +1,81 @@
+name: WALK Build 3 archive only - standard public Mac
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_archive_only:
+        type: boolean
+        required: true
+        default: false
+      recovery_ciphertext:
+        type: string
+        required: true
+permissions:
+  contents: write
+concurrency:
+  group: sug-walk-build3-archive-only
+  cancel-in-progress: false
+jobs:
+  walk-only:
+    if: github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' && github.ref == 'refs/heads/walk-build3-free-archive-20261112' && github.event.repository.private == false && github.actor == 'koji06ochi-ship-it' && github.run_attempt == 1 && inputs.confirm_archive_only == true
+    runs-on: macos-26
+    timeout-minutes: 30
+    env:
+      SUG_SIGNING_APPROVED: 'yes'
+      SUG_BUILD_NUMBER: '3'
+      ASC_API_KEY_ID: MM98J638B7
+      ASC_API_ISSUER_ID: d3a981e0-7557-4223-a67f-d026debee303
+      SUG_SIX_BUILD_ASSET_KEY: ${{ secrets.SUG_SIX_BUILD_ASSET_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Confirm existing secrets without printing values
+        env:
+          ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
+        run: |
+          test -n "$SUG_SIX_BUILD_ASSET_KEY"
+          test -n "$ASC_API_KEY_P8"
+      - name: Isolated established crypto dependency
+        run: |
+          python3 -m venv "$RUNNER_TEMP/walk-crypto"
+          "$RUNNER_TEMP/walk-crypto/bin/python" -m pip install --quiet --disable-pip-version-check cryptography
+          echo "$RUNNER_TEMP/walk-crypto/bin" >> "$GITHUB_PATH"
+      - name: Authenticate fixed latest source without plaintext publication
+        run: python3 ci/walk-build3/hydrate-source.py
+      - name: Read-only reuse of existing WALK signing identity
+        env:
+          ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
+          SUG_SIGNING_RECOVERY_CIPHERTEXT: ${{ inputs.recovery_ciphertext }}
+        run: python3 ci/walk-build3/prepare-existing-signing.py
+      - name: Compile latest iPhoneOS source
+        id: iphoneos
+        run: |
+          xcodebuild -project "$RUNNER_TEMP/walk-build3-source/WALK/iOS/SuGWALK.xcodeproj" -scheme SuGWALK -configuration Release -sdk iphoneos -destination 'generic/platform=iOS' -derivedDataPath "$RUNNER_TEMP/walk-build3-ios" CODE_SIGNING_ALLOWED=NO build > "$RUNNER_TEMP/iphoneos.log" 2>&1
+          echo IPHONEOS_BUILD_SUCCEEDED
+      - name: Compile latest Simulator source
+        id: simulator
+        run: |
+          xcodebuild -project "$RUNNER_TEMP/walk-build3-source/WALK/iOS/SuGWALK.xcodeproj" -scheme SuGWALK -configuration Release -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath "$RUNNER_TEMP/walk-build3-sim" CODE_SIGNING_ALLOWED=NO build > "$RUNNER_TEMP/simulator.log" 2>&1
+          echo SIMULATOR_BUILD_SUCCEEDED
+      - name: Import existing identity to ephemeral runner keychain
+        run: |
+          KEYCHAIN="$RUNNER_TEMP/walk-build3.keychain-db"
+          security create-keychain -p "$SUG_KEYCHAIN_PASSWORD" "$KEYCHAIN"
+          security set-keychain-settings -lut 21600 "$KEYCHAIN"
+          security unlock-keychain -p "$SUG_KEYCHAIN_PASSWORD" "$KEYCHAIN"
+          security import "$RUNNER_TEMP/walk-build3-signing/distribution.p12" -P "$SUG_P12_PASSWORD" -A -t cert -f pkcs12 -k "$KEYCHAIN"
+          security list-keychain -d user -s "$KEYCHAIN" login.keychain-db
+          security set-key-partition-list -S apple-tool:,apple: -s -k "$SUG_KEYCHAIN_PASSWORD" "$KEYCHAIN"
+      - name: Archive and export IPA only - no upload implementation
+        id: archive
+        run: |
+          bash ci/walk-build3/signed-archive-only.sh "$RUNNER_TEMP/walk-build3-source" WALK "$RUNNER_TEMP/walk-build3-signing" > "$RUNNER_TEMP/archive.log" 2>&1
+          echo SIGNED_ARCHIVE_AND_IPA_EXPORTED
+      - name: Retain encrypted IPA and diagnostics without metered artifacts
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          IPHONEOS_OUTCOME: ${{ steps.iphoneos.outcome }}
+          SIMULATOR_OUTCOME: ${{ steps.simulator.outcome }}
+          ARCHIVE_OUTCOME: ${{ steps.archive.outcome }}
+        run: python3 ci/walk-build3/seal-result.py
