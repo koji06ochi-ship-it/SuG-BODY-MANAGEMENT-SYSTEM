@@ -1,0 +1,15 @@
+{
+  "format": "SUG_WALK_BUILD3_RESULT_V1",
+  "sourceCommit": "abfe0768bb007c3eb764f6c1686c67f7ede7b6b9",
+  "runId": "43182626102",
+  "appleUploaded": false,
+  "iPhoneOS": "success",
+  "Simulator": "success",
+  "archive": "success",
+  "ciphertextSHA256": "ef530ae95cf24a68f66eeab6be3259e4990a10683e50f535851267198f920401",
+  "ciphertextBytes": 26291709,
+  "ipaSHA256": "b553ce3bb48a8c545086f5339c1f6ba282f81f0e714fddb9bd1fe5f48d4cac06",
+  "ipaBytes": 26872957,
+  "ActionsArtifactUploads": 0,
+  "cacheSaves": 0
+}
