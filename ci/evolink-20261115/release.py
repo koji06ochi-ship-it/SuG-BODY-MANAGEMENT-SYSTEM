@@ -54,6 +54,11 @@ def prepare():
     expected=json.loads((HERE/'candidate-manifest.json').read_text())
     for row in expected['files']:assert sha((source/row['path']).read_bytes())==row['sha256'],row['path']
     assert BUNDLE in (source/'project.yml').read_text()
+    info_path=source/'SuGEvolink/Sources/Info.plist';original_info=info_path.read_bytes()
+    old_info=plistlib.loads(original_info);new_info=plistlib.loads((HERE/'Info.plist').read_bytes())
+    assert new_info=={**old_info,'NSHealthUpdateUsageDescription':'EVOLINKはヘルスケアのデータを読み取り表示します。ヘルスケアへのデータ書き込みは行いません。'}
+    info_path.write_bytes((HERE/'Info.plist').read_bytes())
+    save('release-overlay.json',{'file':'SuGEvolink/Sources/Info.plist','originalSHA256':sha(original_info),'releaseSHA256':sha(info_path.read_bytes()),'onlySemanticChange':'NSHealthUpdateUsageDescription','healthkitWriteAuthorizationAdded':False,'reason':'Apple upload validation 90683 requires purpose string'})
     rec=(HERE/'signing-recovery.enc').read_bytes();assert rec[:6]==b'SUGSR1'
     recovered=json.loads(AESGCM(key()).decrypt(rec[6:18],rec[18:],b'SUG_SIGNING_RECOVERY_V1'))
     assert recovered['certificateId']==CERT and recovered['apiKeysIncluded'] is False
@@ -94,7 +99,7 @@ def verify():
         roots=[n for n in z.namelist() if n.startswith('Payload/') and n.count('/')==2 and n.endswith('.app/Info.plist')];assert len(roots)==1
         prefix=roots[0][:-len('Info.plist')];info=plistlib.loads(z.read(roots[0]))
         assert info['CFBundleIdentifier']==BUNDLE and info['CFBundleVersion']==NUMBER and info['CFBundleShortVersionString']=='1.0.0'
-        assert info.get('NSHealthShareUsageDescription') and info.get('NSLocalNetworkUsageDescription')
+        assert info.get('NSHealthShareUsageDescription') and info.get('NSHealthUpdateUsageDescription') and info.get('NSLocalNetworkUsageDescription')
         assert info['UISupportedInterfaceOrientations']==['UIInterfaceOrientationPortrait']
         checked=[]
         for row in expected['files']:
@@ -105,7 +110,7 @@ def verify():
     app=extracted/prefix;subprocess.run(['codesign','--verify','--deep','--strict',str(app)],check=True)
     result=subprocess.run(['codesign','-d','--entitlements',':-',str(app)],stdout=subprocess.PIPE,stderr=subprocess.PIPE,check=True)
     ent=plistlib.loads(result.stdout);assert ent['application-identifier'].endswith('.'+BUNDLE) and ent.get('com.apple.developer.healthkit') is True and ent.get('get-task-allow') is not True
-    save('ipa-verification.json',{'bundleId':BUNDLE,'buildNumber':NUMBER,'version':info['CFBundleShortVersionString'],'ipaSHA256':sha(ipa[0].read_bytes()),'ipaBytes':ipa[0].stat().st_size,'bundledWebFilesHashVerified':len(checked),'strictSignatureVerified':True,'healthkit':True,'debugEntitlement':False,'portraitOnly':True,'sourceCandidateUnmodified':True})
+    save('ipa-verification.json',{'bundleId':BUNDLE,'buildNumber':NUMBER,'version':info['CFBundleShortVersionString'],'ipaSHA256':sha(ipa[0].read_bytes()),'ipaBytes':ipa[0].stat().st_size,'bundledWebFilesHashVerified':len(checked),'strictSignatureVerified':True,'healthkit':True,'debugEntitlement':False,'portraitOnly':True,'candidateWebContentUnmodified':True,'releaseOverlayFiles':['SuGEvolink/Sources/Info.plist']})
     print('IPA_VERIFY_PASS: strict signature, bundle/build/permissions, all candidate WebContent bytes match')
 def upload():
     assert (PROOF/'ipa-verification.json').exists()
