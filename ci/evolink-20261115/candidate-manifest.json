@@ -1,0 +1,315 @@
+{
+  "archiveSHA256": "b0292e4e9ad2286f56c8e3d06c1a80265ef927fcf8ab457ef968072439575851",
+  "files": [
+    {
+      "path": "package.json",
+      "bytes": 36,
+      "sha256": "a7f9006b16f687ab9804b8e6d3299626ee5f8709ce5456c3f3f6b6839871464c"
+    },
+    {
+      "path": "project.yml",
+      "bytes": 831,
+      "sha256": "f6d86ee3282f8aa8c790e115b4894ea6529426756612b576d2dc81d8565a0227"
+    },
+    {
+      "path": "server/server.cjs",
+      "bytes": 14673,
+      "sha256": "cdb07b0ba15a0175aea2ce96cfa851a7ac203cef56d8fddcaca708ed58783e85"
+    },
+    {
+      "path": "server/reused/responses-provider.cjs",
+      "bytes": 5539,
+      "sha256": "b2b5146e8350445b85f10cdd4b3a29d633d2dad0f58b4c1444194141daee5cc3"
+    },
+    {
+      "path": "server/reused/EVOLINK_ADAPT_ENGINE_CANDIDATE.js",
+      "bytes": 2592,
+      "sha256": "3c2b3d42225eb4eafc19b9d5932d234e13dbe23213b765c99d17a57d0149bf76"
+    },
+    {
+      "path": "server/reused/EVOLINK_COACH_MEMORY.js",
+      "bytes": 18872,
+      "sha256": "52264aa8781e404e1a8be544e8dcfe7241dfd87ee2b20a3c854e7ab0057fb39c"
+    },
+    {
+      "path": "server/reused/api-error-metadata.cjs",
+      "bytes": 2266,
+      "sha256": "7159d74637c769b37e4602f59e6130f8586890b6065b5ecb1c8c282ec7da64f2"
+    },
+    {
+      "path": "server/reused/EVOLINK_ADAPT_PSYCHOLOGY_CANDIDATE.js",
+      "bytes": 1924,
+      "sha256": "98485f7a48ff107a88a9e435b271baa88febb74539aafaac6bfe45888cc0f196"
+    },
+    {
+      "path": "server/reused/EVOLINK_TRAINING_DATA.js",
+      "bytes": 5407,
+      "sha256": "f70ac998c326484742f8ab2f1a10eab8ce56eae3413057a8c7558017576a7807"
+    },
+    {
+      "path": "server/reused/EVOLINK_AI_CONVERSATION_CANDIDATE.js",
+      "bytes": 5307,
+      "sha256": "fe0459c9479b570934747aeaece1f36e2be9379414e64316e36b847227deef28"
+    },
+    {
+      "path": "server/reused/EVOLINK_COACH_ADAPT_BRIDGE_CANDIDATE.js",
+      "bytes": 1230,
+      "sha256": "b9d988a8f9247d1757e8bad01e4b4d25e6dc53dc840b739ce9bc220a9b6faa8e"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-readable-pages.js",
+      "bytes": 3861,
+      "sha256": "de91c6f1e10a49a511f40f749f2b84f30088c8c117abf9550027f146ef8c6144"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-readable-pages.css",
+      "bytes": 5283,
+      "sha256": "9444f9381fa470bae68f2f989695438b8a19291c5393b2f912d225630a1a3bd9"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-completion.js",
+      "bytes": 9782,
+      "sha256": "ef60af12302e7ebe349335fb10569b0d067a19980f85b7e31cdd938560301187"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-final-visual.css",
+      "bytes": 5841,
+      "sha256": "ffa2e70e542e26cd09b663b5347f2890c0f790acdec6c40c69c8c71600c73128"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-v12-adapt.css",
+      "bytes": 2511,
+      "sha256": "ad46fece15dafaf48c066e76d268049e680dbf6deef77194b83274c3e2b3b27f"
+    },
+    {
+      "path": "SuGEvolink/WebContent/native-health-bridge.js",
+      "bytes": 5514,
+      "sha256": "a2b595818657d8cf5b7b115f2dab22d8ae94f49a996d8f94a0b8661f3c369b1f"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-premium-phase2.css",
+      "bytes": 4539,
+      "sha256": "8172a02795257ac4d323590ecb0b36edc3b2800004c3b40fe4d728ce68dd64db"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-home-functional.css",
+      "bytes": 8904,
+      "sha256": "8cfdd1e9903063c8e3f38acdf41f2311e566643273e0b054ff5df6af61c4a1ac"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-mountain-reference-original.jpg",
+      "bytes": 238762,
+      "sha256": "f44dd5f8decb16352c23ed445685dc29b5ad62e8f777c7e6c39fb288e00f3ca0"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-english-content-data.js",
+      "bytes": 106160,
+      "sha256": "0900f1d30c99098280e7a61ca75cfdf8552e4efc782c8b6b79b69e9916be1771"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-otohime-dialogue.js",
+      "bytes": 24426,
+      "sha256": "9e80554156072bc9c44113f58687b586a0ca2b86a6b63b3cf5d47534ca771b44"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-home-otohime-blackhair-approved.png",
+      "bytes": 246136,
+      "sha256": "e4300fc7a3d96df2d62f35638faf42c957ce9443aace5561a57bcf7e336eab61"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-premium-phase1.css",
+      "bytes": 3610,
+      "sha256": "d007fbbc798b7c5eb6ff871c12bb39928cd9594561fc2753ed57ed93fc7344df"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-english-content.js",
+      "bytes": 5226,
+      "sha256": "a1f1c3bca38e7282859d6979296c8bedeecddcc68a24d01b6e803aba2742fc74"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-v7-premium.css",
+      "bytes": 8052,
+      "sha256": "f3514d09a4cf7aea9c0de4a7bee0d7ca037ade55926f3fe35dd43489bf01b9c9"
+    },
+    {
+      "path": "SuGEvolink/WebContent/EVOLINK_OFFLINE.html",
+      "bytes": 15250128,
+      "sha256": "b1e5768ae5144169c1aa0f69859506473dec0076e489cc94ec81d5bf719b98fa"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-formal.css",
+      "bytes": 12337,
+      "sha256": "eb714f834ba62872c6863c80d0f7bb9936e2d8e0e433074c5534e05d2817d3b0"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-v7-mountain-detail.jpg",
+      "bytes": 38046,
+      "sha256": "58acdf7cc0f305c70f2f44497e9288e31fb65247633b922e48d80304bc361c19"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-v10-mirror.css",
+      "bytes": 2486,
+      "sha256": "6afea61f835cc3ea43b05397df37c752967a3f718a74495f81bdaba5ce9e6c0e"
+    },
+    {
+      "path": "SuGEvolink/WebContent/native-coach-bridge.js",
+      "bytes": 1696,
+      "sha256": "21a768ba4a24286822c22b25765fd4c0e3b89e3ecc246d6029c08a469836c7fe"
+    },
+    {
+      "path": "SuGEvolink/WebContent/EVOLINK_OFFICIAL_LOGO_ORIGINAL.jpg",
+      "bytes": 282780,
+      "sha256": "f0c2698bc43a3588b53f41a25403b13f0839876c420f91cb43372ec6edb81c3a"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-home-scenic.jpg",
+      "bytes": 27910,
+      "sha256": "2078364504fb022b01650e650fbce2790c7fac212b5bbb65c50c6f7768ba1b48"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-adopted-reference.jpg",
+      "bytes": 294489,
+      "sha256": "99c3e14f859e12d4719b1522c4e3e8a20cc0d9f8cf89d7cdff245a0ca482fc93"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-home-functional.js",
+      "bytes": 7556,
+      "sha256": "b97409c43864037460af32356ed83e6370a03ebdffb2078011d5fcffb449bfb6"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-accepted-final-presentation.css",
+      "bytes": 7555,
+      "sha256": "8f5813e1b782531aab17debb8da5cbe1168f36de25257229338ffec5e44a1dcd"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-v8-refinement.css",
+      "bytes": 5113,
+      "sha256": "9a49324e39f8579b3ca884896b123b550a27cd41e1f267b669b0f9eef84082aa"
+    },
+    {
+      "path": "SuGEvolink/WebContent/EVOLINK_OFFICIAL_LOGO_TRANSPARENT_DERIVED.png",
+      "bytes": 999057,
+      "sha256": "8836c1d696c435f295fc64713a04b8192f3daf6c8ed688a584c1bc9bb4a77fe1"
+    },
+    {
+      "path": "SuGEvolink/WebContent/native-files-bridge.js",
+      "bytes": 1926,
+      "sha256": "b83902d59556bbe409639f95936e7e0f8b92de61c9df8252df4cd4f9c4165258"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-v13-records.css",
+      "bytes": 2551,
+      "sha256": "001038aebc3b71bf3f2f4937fa655361b96a008daadd1ca577c43e9d83354ec0"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-v11-coach.css",
+      "bytes": 3980,
+      "sha256": "91f939dae5f529f2cfa872e0b385a648233bce34f96439f50b21128ae1188a38"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-formal.js",
+      "bytes": 2451,
+      "sha256": "b57b4fe70f4070ba10b3afd7f41e8eb02ba33f6e5113b9e31a1076f86b3e7213"
+    },
+    {
+      "path": "SuGEvolink/WebContent/EVOLINK_HOME_ADOPTED_REFERENCE.png",
+      "bytes": 2163778,
+      "sha256": "3ed8e9c6251b100dd2b8bc847bf903721051d15ee2a65865669bab1cc9edf556"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-hide-brand-characters.css",
+      "bytes": 1132,
+      "sha256": "4705313c1789a1f6746d0ddb2e13c013a1000236bdd56a2a6e01c7bcfa50091a"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-v9-nutrition.css",
+      "bytes": 2503,
+      "sha256": "60ec348c06ca63689be430ea5af47333184cc21a063c24613ac14875c99907b0"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-v7-premium.js",
+      "bytes": 41645,
+      "sha256": "4ffa6af948406cc43166dd67e0c076ef156054095b10991f8545991edc638896"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-records-screen.js",
+      "bytes": 2480,
+      "sha256": "5abf000b826d02ef388ab0ba0d769470aa50038556eed3b2fd41229423982339"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-training-integration.js",
+      "bytes": 2544,
+      "sha256": "1f9371c7b00ba91accd424604cce1daf3dbf458d14ef0d65b055f6dc52afa823"
+    },
+    {
+      "path": "SuGEvolink/WebContent/evo-v8-training-stages.css",
+      "bytes": 4179,
+      "sha256": "f501fb0cbabde5f46d36275bd7940e6f663d3abe1a3affa2bd903bdc43aa9ae5"
+    },
+    {
+      "path": "SuGEvolink/Sources/EvolinkWebView.swift",
+      "bytes": 4958,
+      "sha256": "ad420c973ca39fa1d35943b03b5631b21b4ab7ab96ac88fd898c162b77a4d27e"
+    },
+    {
+      "path": "SuGEvolink/Sources/EvolinkHealthService.swift",
+      "bytes": 2121,
+      "sha256": "ccd16ddb7f9fdc489310d4312c0f747eb48f93e8b492cb4c8afd434fc8daf3e0"
+    },
+    {
+      "path": "SuGEvolink/Sources/EvolinkMainView.swift",
+      "bytes": 2693,
+      "sha256": "facba73548e692cc9291ca2dd7e85bca1d0397673878d4d8947a2121523b3ad6"
+    },
+    {
+      "path": "SuGEvolink/Sources/SuGEvolink.entitlements",
+      "bytes": 235,
+      "sha256": "53a65b186d7eb1deb8c4c0c1eacaf0907fff347df215243fae683f16ced39269"
+    },
+    {
+      "path": "SuGEvolink/Sources/SuGEvolinkApp.swift",
+      "bytes": 192,
+      "sha256": "7fa93077c4fa339088d51a59addf354c1f04b3b54e1736e3ffb201b569ecaaa8"
+    },
+    {
+      "path": "SuGEvolink/Sources/EvolinkFileExport.swift",
+      "bytes": 3276,
+      "sha256": "3d43e4fe1ffe07cb179c21872692256f7608de33417a5b29aa4ebcd2713aeb6c"
+    },
+    {
+      "path": "SuGEvolink/Sources/EvolinkCoachRelay.swift",
+      "bytes": 10405,
+      "sha256": "2f847c559006a6cbc0189e9ed8761d7dc8856a4efc2c48d3c0e4cd09db0385b6"
+    },
+    {
+      "path": "SuGEvolink/Sources/Info.plist",
+      "bytes": 1435,
+      "sha256": "4cf739f69e75cef1f11edbd3d3040a92de6850896a5b82a137586d13445cf40a"
+    },
+    {
+      "path": "SuGEvolink/Sources/EvolinkHealthReader.swift",
+      "bytes": 6650,
+      "sha256": "4b1d12d5765f9720539b88a109861068fbfb95caf1a2d3916bae9600efba0584"
+    },
+    {
+      "path": "SuGEvolink/Sources/en.lproj/InfoPlist.strings",
+      "bytes": 112,
+      "sha256": "d21db1fb3b32835171f8e070e5aae9618305a48a3f8e4ed39471415e858b0b71"
+    },
+    {
+      "path": "SuGEvolink/Sources/ja.lproj/InfoPlist.strings",
+      "bytes": 183,
+      "sha256": "4f1c9fa0bb7cd70ca5690f5e2c93eae790eacae52aec3b59ec23451520790ecd"
+    },
+    {
+      "path": "SuGEvolink/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "bytes": 135,
+      "sha256": "4d6950960607c5306cc5e88489003ced936c155e7e8bde5e0e6daf47a469e82f"
+    },
+    {
+      "path": "SuGEvolink/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+      "bytes": 415668,
+      "sha256": "a3be8597a40009613eeda752fb57aaddd19b45145572a24ddd09c2b5651fa2bf"
+    }
+  ]
+}
