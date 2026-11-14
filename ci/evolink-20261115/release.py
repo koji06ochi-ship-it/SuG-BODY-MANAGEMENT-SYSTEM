@@ -70,8 +70,8 @@ def prepare():
     group=api('GET','/betaGroups/'+GROUP,params={'include':'app'})['data']
     assert group['attributes']['isInternalGroup'] is True and group['relationships']['app']['data']['id']==APP
     bundles=api('GET','/bundleIds',params={'filter[identifier]':BUNDLE})['data'];assert len(bundles)==1
-    profiles,_=all_data('/bundleIds/'+bundles[0]['id']+'/profiles',{'limit':200,'include':'certificates'})
-    matches=[p for p in profiles if p['attributes']['profileType']=='IOS_APP_STORE' and p['attributes']['profileState']=='ACTIVE' and CERT in [c['id'] for c in p.get('relationships',{}).get('certificates',{}).get('data',[])]]
+    profiles,_=all_data('/profiles',{'limit':200,'include':'bundleId,certificates','filter[profileType]':'IOS_APP_STORE','filter[profileState]':'ACTIVE'})
+    matches=[p for p in profiles if p.get('relationships',{}).get('bundleId',{}).get('data',{}).get('id')==bundles[0]['id'] and p['attributes']['profileType']=='IOS_APP_STORE' and p['attributes']['profileState']=='ACTIVE' and CERT in [c['id'] for c in p.get('relationships',{}).get('certificates',{}).get('data',[])]]
     assert matches,'No active existing EVOLINK profile for recovered certificate; no new asset created'
     profile=sorted(matches,key=lambda p:p['attributes']['expirationDate'],reverse=True)[0]
     raw_profile=base64.b64decode(profile['attributes']['profileContent'])
