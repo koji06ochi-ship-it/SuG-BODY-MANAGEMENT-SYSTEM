@@ -1,0 +1,9 @@
+Running altool at path '/Applications/Xcode_26.6.app/Contents/SharedFrameworks/ContentDelivery.framework/Resources/altool'...
+
+2026-11-14 23:39:43.064  INFO: [ContentDelivery.Uploader.877064340] 
+==========================================
+UPLOAD SUCCEEDED with no errors
+Delivery UUID: 11e89447-aa66-4f31-a5e1-7d92ae78b36c
+Transferred 16204750 bytes in 0.697 seconds (23.2MB/s, 185.981Mbps)
+==========================================
+No errors uploading archive at '/Users/runner/work/_temp/evolink-20261115/ipa/SuGEvolink.ipa'.

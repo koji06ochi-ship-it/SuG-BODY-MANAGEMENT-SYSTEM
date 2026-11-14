@@ -1,0 +1,16 @@
+{
+  "bundleId": "jp.sugosaka.evolink",
+  "buildNumber": "4",
+  "version": "1.0.0",
+  "ipaSHA256": "4c5d50e8430d00275c98500a90a33f753f8e3553e74ddff48228d3ed0ab2606b",
+  "ipaBytes": 16204750,
+  "bundledWebFilesHashVerified": 38,
+  "strictSignatureVerified": true,
+  "healthkit": true,
+  "debugEntitlement": false,
+  "portraitOnly": true,
+  "candidateWebContentUnmodified": true,
+  "releaseOverlayFiles": [
+    "SuGEvolink/Sources/Info.plist"
+  ]
+}

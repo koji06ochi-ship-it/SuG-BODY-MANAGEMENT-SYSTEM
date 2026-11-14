@@ -1,0 +1,8 @@
+{
+  "file": "SuGEvolink/Sources/Info.plist",
+  "originalSHA256": "4cf739f69e75cef1f11edbd3d3040a92de6850896a5b82a137586d13445cf40a",
+  "releaseSHA256": "dba5d22ba9acee3deb672748d01f9af584b13306bc117d4b8c2bb767c97434bf",
+  "onlySemanticChange": "NSHealthUpdateUsageDescription",
+  "healthkitWriteAuthorizationAdded": false,
+  "reason": "Apple upload validation 90683 requires purpose string"
+}
