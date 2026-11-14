@@ -1,0 +1,16 @@
+Running altool at path '/Applications/Xcode_26.6.app/Contents/SharedFrameworks/ContentDelivery.framework/Resources/altool'...
+
+2026-11-14 23:34:05.668 ERROR: [ContentDelivery.Uploader.80701C340] 
+=======================================
+UPLOAD FAILED with 1 error
+=======================================
+2026-11-14 23:34:05.670 ERROR: [altool.80701C340] Missing purpose string in Info.plist. Your app’s code references one or more APIs that access sensitive user data, or the app has one or more entitlements that permit such access. The Info.plist file for the “SuGEvolink.app” bundle should contain a NSHealthUpdateUsageDescription key with a user-facing purpose string explaining clearly and completely why your app needs the data. If you’re using external libraries or SDKs, they may reference APIs that require a purpose string. While your app might not use these APIs, a purpose string is still required. For details, visit: https://developer.apple.com/documentation/uikit/protecting_the_user_s_privacy/requesting_access_to_protected_resources. (90683) The server’s response was: ‘{
+    code = 90683;
+    description = "Missing purpose string in Info.plist. Your app\U2019s code references one or more APIs that access sensitive user data, or the app has one or more entitlements that permit such access. The Info.plist file for the \U201cSuGEvolink.app\U201d bundle should contain a NSHealthUpdateUsageDescription key with a user-facing purpose string explaining clearly and completely why your app needs the data. If you\U2019re using external libraries or SDKs, they may reference APIs that require a purpose string. While your app might not use these APIs, a purpose string is still required. For details, visit: https://developer.apple.com/documentation/uikit/protecting_the_user_s_privacy/requesting_access_to_protected_resources.";
+}’.
+   NSUnderlyingError : A server error occurred. (-19241)
+      code : 90683
+      description : Missing purpose string in Info.plist. Your app’s code references one or more APIs that access sensitive user data, or the app has one or more entitlements that permit such access. The Info.plist file for the “SuGEvolink.app” bundle should contain a NSHealthUpdateUsageDescription key with a user-facing purpose string explaining clearly and completely why your app needs the data. If you’re using external libraries or SDKs, they may reference APIs that require a purpose string. While your app might not use these APIs, a purpose string is still required. For details, visit: https://developer.apple.com/documentation/uikit/protecting_the_user_s_privacy/requesting_access_to_protected_resources.
+   iris-code : 90683
+2026-11-14 23:34:05.672 ERROR: [altool.101582E10] ExitFailure (31)
+Failed to upload package.
