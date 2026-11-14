@@ -45,5 +45,7 @@ jobs:
           git add -- ci/evolink-20261115/results/
           if ! git diff --cached --quiet; then
             git commit -m 'EVOLINK build 4 execution evidence and encrypted IPA [skip ci]'
-            git push origin HEAD:refs/heads/sug/evolink-7screen-testflight-20261115-results
+            RESULT_BRANCH="sug/evolink-7screen-testflight-20261115-results-${GITHUB_RUN_ID}"
+            git push origin "HEAD:refs/heads/$RESULT_BRANCH"
+            echo "Evidence: https://github.com/$GITHUB_REPOSITORY/tree/$RESULT_BRANCH/ci/evolink-20261115/results" >> "$GITHUB_STEP_SUMMARY"
           fi
