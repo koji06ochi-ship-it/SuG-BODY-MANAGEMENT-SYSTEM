@@ -1,0 +1,55 @@
+name: EVOLINK Build 5 r2 - signed IPA, separate Apple approval
+on:
+  push:
+    branches: ['sug/evolink-build5-r2-20261115']
+    paths: ['.github/workflows/evolink-build5-r2-20261115.yml','ci/evolink-build5-20261115/**']
+permissions:
+  contents: write
+concurrency:
+  group: evolink-build5-r2-20261115
+  cancel-in-progress: false
+jobs:
+  signed-ipa:
+    if: github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' && github.actor == 'koji06ochi-ship-it' && github.run_attempt == 1
+    runs-on: macos-26
+    timeout-minutes: 35
+    env:
+      EVOLINK_BUILD_NUMBER: '5'
+      EVOLINK_SOURCE_COMMIT: 'f1b485557b42cc324c20207376d9a6192072e4b3'
+      EVOLINK_SOURCE_BRANCH: 'release/evolink-build5-r2-20261115'
+      EVOLINK_APPLE_UPLOAD_APPROVED: 'false'
+      ASC_API_KEY_ID: MM98J638B7
+      ASC_API_ISSUER_ID: d3a981e0-7557-4223-a67f-d026debee303
+      ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
+      SUG_SIX_BUILD_ASSET_KEY: ${{ secrets.SUG_SIX_BUILD_ASSET_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install isolated dependencies on standard public runner
+        run: |
+          python3 -m py_compile ci/evolink-build5-20261115/release.py
+          python3 -m venv "$RUNNER_TEMP/evolink-python"
+          "$RUNNER_TEMP/evolink-python/bin/python" -m pip install --quiet --disable-pip-version-check 'cryptography==50.0.2' 'PyJWT==2.10.1' 'requests==2.32.5'
+          echo "$RUNNER_TEMP/evolink-python/bin" >> "$GITHUB_PATH"
+      - name: Authenticate exact r2 source commit and reuse existing signing assets
+        run: python3 ci/evolink-build5-20261115/release.py prepare
+      - name: Archive iPhoneOS build 5 and export Apple Distribution IPA
+        run: bash ci/evolink-build5-20261115/build.sh
+      - name: Verify signed IPA, Info.plist, entitlements and all r2 WebContent
+        run: python3 ci/evolink-build5-20261115/release.py verify
+      - name: Save verified IPA in an unpublished draft pending Apple approval
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 ci/evolink-build5-20261115/release.py draft
+      - name: Preserve evidence and encrypted IPA without Actions artifact storage
+        if: always()
+        run: |
+          python3 ci/evolink-build5-20261115/release.py preserve
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- ci/evolink-build5-20261115/results/
+          if ! git diff --cached --quiet; then
+            git commit -m 'EVOLINK build 5 signed IPA evidence - Apple upload not approved [skip ci]'
+            RESULT_BRANCH="sug/evolink-build5-r2-results-$GITHUB_RUN_ID"
+            git push origin "HEAD:refs/heads/$RESULT_BRANCH"
+            echo "Evidence: https://github.com/$GITHUB_REPOSITORY/tree/$RESULT_BRANCH/ci/evolink-build5-20261115/results" >> "$GITHUB_STEP_SUMMARY"
+          fi
