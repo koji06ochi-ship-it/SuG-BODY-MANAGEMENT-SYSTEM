@@ -1,0 +1,9 @@
+{
+  "accepted": true,
+  "buildNumber": "5",
+  "sourceCommit": "f1b485557b42cc324c20207376d9a6192072e4b3",
+  "ipaSHA256": "ffeeb95a0c13863af8eefd09857e93ccaff804ebbd01c646830293e4e158a6c4",
+  "ipaBytes": 16213992,
+  "skippedDuplicate": false,
+  "rebuilt": false
+}

@@ -1,0 +1,15 @@
+{
+  "bundleId": "jp.sugosaka.evolink",
+  "buildNumber": "5",
+  "version": "1.0.0",
+  "ipaSHA256": "ffeeb95a0c13863af8eefd09857e93ccaff804ebbd01c646830293e4e158a6c4",
+  "ipaBytes": 16213992,
+  "bundledWebFilesHashVerified": 40,
+  "strictSignatureVerified": true,
+  "healthkit": true,
+  "debugEntitlement": false,
+  "portraitOnly": true,
+  "candidateWebContentUnmodified": true,
+  "releaseOverlayFiles": [],
+  "approvedUIRemake": "r2"
+}

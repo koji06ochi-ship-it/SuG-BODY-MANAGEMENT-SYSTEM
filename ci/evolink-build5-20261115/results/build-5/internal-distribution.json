@@ -1,0 +1,11 @@
+{
+  "buildId": "e70b81d3-b454-4884-b94f-8f5ca1ef8edb",
+  "buildNumber": "5",
+  "version": "1.0.0",
+  "groupId": "ce8dec95-58b3-4a93-96d9-87e1e719e6bb",
+  "groupName": "SUG eVo iPhone Internal",
+  "internalDistributionComplete": false,
+  "apiError": "Apple request failed: GET /builds/e70b81d3-b454-4884-b94f-8f5ca1ef8edb/betaGroups HTTP 403 ['FORBIDDEN_ERROR']",
+  "appStoreConnectUIVerificationRequired": true,
+  "appStoreSubmission": false
+}

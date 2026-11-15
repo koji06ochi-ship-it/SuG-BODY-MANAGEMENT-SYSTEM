@@ -1,0 +1,14 @@
+{
+  "ipaSHA256": "ffeeb95a0c13863af8eefd09857e93ccaff804ebbd01c646830293e4e158a6c4",
+  "ipaBytes": 16213992,
+  "originalBuildRun": 43684961682,
+  "originalDraftAsset": 750054208,
+  "sourceCommit": "f1b485557b42cc324c20207376d9a6192072e4b3",
+  "userExplicitAppleUploadAndInternalDistributionApproval": true,
+  "appId": "6828511589",
+  "bundleId": "jp.sugosaka.evolink",
+  "version": "1.0.0",
+  "buildNumber": "5",
+  "groupId": "ce8dec95-58b3-4a93-96d9-87e1e719e6bb",
+  "rebuilt": false
+}
