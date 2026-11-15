@@ -1,0 +1,11 @@
+{
+  "releaseId": 445854974,
+  "draft": true,
+  "published": false,
+  "tag": "evolink-build5-ipa-43684961682",
+  "assetId": 750054208,
+  "assetApiUrl": "https://api.github.com/repos/koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM/releases/assets/750054208",
+  "ipaBytes": 16213992,
+  "ipaSHA256": "ffeeb95a0c13863af8eefd09857e93ccaff804ebbd01c646830293e4e158a6c4",
+  "appleUploadPerformed": false
+}

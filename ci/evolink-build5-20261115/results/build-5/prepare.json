@@ -1,0 +1,19 @@
+{
+  "sourceCommit": "f1b485557b42cc324c20207376d9a6192072e4b3",
+  "originalFilesHashVerified": 73,
+  "bundleId": "jp.sugosaka.evolink",
+  "appId": "6828511589",
+  "buildNumber": "5",
+  "existingBuildNumbers": [
+    "4",
+    "3",
+    "2"
+  ],
+  "existingCertificateId": "LYFMNJP5Z5",
+  "existingProfileId": "FX9N4PLPA5",
+  "existingProfileName": "S.u.G eVo CI 42423629967",
+  "certificateSHA256": "4c64b7930c20963f92b22bcadc0ad129dc5b499c53e8dd873f33d76a4e8f0ff4",
+  "newCertificates": 0,
+  "newProfiles": 0,
+  "internalGroupId": "ce8dec95-58b3-4a93-96d9-87e1e719e6bb"
+}
