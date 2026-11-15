@@ -1,0 +1,55 @@
+name: EVOLINK Build 5 approved IPA upload and internal distribution - no rebuild
+on:
+  push:
+    branches: ['sug/evolink-build5-upload-20261115']
+    paths: ['.github/workflows/evolink-build5-upload-20261115.yml','ci/evolink-build5-upload-20261115/**']
+permissions:
+  contents: write
+concurrency:
+  group: evolink-build5-approved-upload
+  cancel-in-progress: false
+jobs:
+  upload-internal:
+    if: github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' && github.actor == 'koji06ochi-ship-it' && github.run_attempt == 1
+    runs-on: macos-26
+    timeout-minutes: 30
+    env:
+      EVOLINK_BUILD_NUMBER: '5'
+      EVOLINK_SOURCE_COMMIT: f1b485557b42cc324c20207376d9a6192072e4b3
+      EVOLINK_APPLE_UPLOAD_APPROVED: 'true'
+      ASC_API_KEY_ID: MM98J638B7
+      ASC_API_ISSUER_ID: d3a981e0-7557-4223-a67f-d026debee303
+      ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
+      SUG_SIX_BUILD_ASSET_KEY: ${{ secrets.SUG_SIX_BUILD_ASSET_KEY }}
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install isolated upload dependencies without building app
+        run: |
+          python3 -m py_compile ci/evolink-build5-upload-20261115/upload.py
+          python3 -m venv "$RUNNER_TEMP/evolink-python"
+          "$RUNNER_TEMP/evolink-python/bin/python" -m pip install --quiet --disable-pip-version-check 'cryptography==50.0.2' 'PyJWT==2.10.1' 'requests==2.32.5'
+          echo "$RUNNER_TEMP/evolink-python/bin" >> "$GITHUB_PATH"
+      - name: Restore approved IPA and compare exact SHA256 and size
+        run: python3 ci/evolink-build5-upload-20261115/upload.py restore
+      - name: Verify actual IPA signature, bundle, version, build and r2 resources
+        run: python3 ci/evolink-build5-upload-20261115/upload.py verify
+      - name: Upload approved IPA once unless matching Build 5 already exists
+        run: python3 ci/evolink-build5-upload-20261115/upload.py upload
+      - name: Wait for Apple processing result without reuploading
+        run: python3 ci/evolink-build5-upload-20261115/upload.py processing
+      - name: Attach existing internal group and verify beta testing state
+        run: python3 ci/evolink-build5-upload-20261115/upload.py distribute
+      - name: Preserve sanitized logs and encrypted IPA separately from distribution result
+        if: always()
+        run: |
+          python3 ci/evolink-build5-upload-20261115/upload.py preserve
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- ci/evolink-build5-20261115/results/
+          if ! git diff --cached --quiet; then
+            git commit -m 'EVOLINK build 5 approved upload and processing evidence [skip ci]'
+            RESULT_BRANCH="sug/evolink-build5-upload-results-$GITHUB_RUN_ID"
+            git push origin "HEAD:refs/heads/$RESULT_BRANCH"
+            echo "Evidence: https://github.com/$GITHUB_REPOSITORY/tree/$RESULT_BRANCH/ci/evolink-build5-20261115/results" >> "$GITHUB_STEP_SUMMARY"
+          fi
