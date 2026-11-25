@@ -1,0 +1,22 @@
+{
+  "name": "S.u.G SWAG（エスユージー スワッグ）",
+  "short_name": "S.u.G SWAG",
+  "description": "OWN YOUR STYLE. LIVE YOUR LIFE. 身体もしなやかに、心もしなやかに。身体能力・回復・心理・生活習慣を総合支援するS.u.G公式アプリ。",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#FF007F",
+  "theme_color": "#FF1493",
+  "lang": "ja",
+  "icons": [
+    {
+      "src": "assets/swag-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/swag-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

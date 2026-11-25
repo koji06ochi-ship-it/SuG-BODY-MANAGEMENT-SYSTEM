@@ -286,6 +286,7 @@ final class MemberWebViewStore: ObservableObject {
         recoveryConfidence: Double,
         workouts: [HealthWorkoutSummary],
         labResults: [HealthLabResultSummary],
+        extras: BodyRenewalHealthExtras? = nil,
         authorizationRequestCompleted: Bool,
         syncedAt: Date?
     ) {
@@ -338,6 +339,22 @@ final class MemberWebViewStore: ObservableObject {
         if let stressScore { payload["stressScore"] = stressScore; sample("stressScore", stressScore) }
         if let recoveryStatus { payload["recoveryStatus"] = recoveryStatus }
         if let stressStatus { payload["stressStatus"] = stressStatus }
+        if let extras {
+            if let v = extras.timeInDaylightMinutes { payload["timeInDaylightMinutes"] = v; sample("timeInDaylight", v) }
+            if let v = extras.mindfulMinutesToday { payload["mindfulMinutesToday"] = v; sample("mindfulSession", v) }
+            if let v = extras.latestStateOfMindValence { payload["latestStateOfMindValence"] = v; sample("stateOfMind", v) }
+            if let v = extras.walkingSpeedKmh { payload["walkingSpeedKmh"] = v; sample("walkingSpeed", v) }
+            if let v = extras.walkingStepLengthCm { payload["walkingStepLengthCm"] = v; sample("walkingStepLength", v) }
+            if let v = extras.walkingAsymmetryPercent { payload["walkingAsymmetryPercent"] = v; sample("walkingAsymmetry", v) }
+            if let v = extras.walkingSteadinessPercent { payload["walkingSteadinessPercent"] = v; sample("walkingSteadiness", v) }
+            if let v = extras.dietaryEnergyKcalToday { payload["dietaryEnergyKcalToday"] = v; sample("dietaryEnergy", v) }
+            if let v = extras.dietaryProteinGToday { payload["dietaryProteinGToday"] = v; sample("dietaryProtein", v) }
+            if let v = extras.dietaryFatGToday { payload["dietaryFatGToday"] = v; sample("dietaryFat", v) }
+            if let v = extras.dietaryCarbsGToday { payload["dietaryCarbsGToday"] = v; sample("dietaryCarbs", v) }
+            if let v = extras.dietaryFiberGToday { payload["dietaryFiberGToday"] = v; sample("dietaryFiber", v) }
+            if let v = extras.dietaryWaterMlToday { payload["dietaryWaterMlToday"] = v; sample("dietaryWater", v) }
+            if let v = extras.alcoholicBeveragesToday { payload["alcoholicBeveragesToday"] = v; sample("alcoholicBeverages", v) }
+        }
 
         let workoutPayload: [[String: Any]] = workouts.map { workout in
             var item: [String: Any] = [
@@ -375,9 +392,9 @@ final class MemberWebViewStore: ObservableObject {
 
     func deliverPendingHealth() {
         guard let json=pendingHealthJSON else { return }
-        if initialURL.isFileURL {
+        if initialURL.isFileURL || initialURL.host == "127.0.0.1" {
             guard BodyNativeBridge.isTrusted(webView.url) else { return }
-            webView.evaluateJavaScript("window.SuGBodyNative?.receiveHealth(\(json))") { [weak self] result, error in
+            webView.evaluateJavaScript("(function(){const p=\(json);window.__SUG_NATIVE_HEALTH__=p;window.dispatchEvent(new CustomEvent('sug:native-health',{detail:p}));return true;})()") { [weak self] result, error in
                 if error == nil, result as? Bool == true { self?.pendingHealthJSON = nil }
             }
             return
@@ -433,7 +450,7 @@ struct MemberWebView: UIViewRepresentable {
         func webView(_ web: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
             guard var host = web.window?.rootViewController else { completionHandler(); return }
             while let next = host.presentedViewController { host = next }
-            let alert = UIAlertController(title: "S.u.G", message: message, preferredStyle: .alert)
+            let alert = UIAlertController(title: "S.u.G SWAG", message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in completionHandler() }); host.present(alert, animated: true)
         }
         func webView(_ web: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Void) {

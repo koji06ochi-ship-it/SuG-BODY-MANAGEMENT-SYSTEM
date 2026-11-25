@@ -46,6 +46,7 @@ final class HealthKitManager: ObservableObject {
     @Published var sleepHours: Double?
     @Published var recentWorkouts: [HealthWorkoutSummary] = []
     @Published var recentLabResults: [HealthLabResultSummary] = []
+    @Published var bodyExtras: BodyRenewalHealthExtras?
     @Published var recoveryScore: Int?
     @Published var stressScore: Int?
     @Published var recoveryStatus: String?
@@ -76,6 +77,9 @@ final class HealthKitManager: ObservableObject {
             HKCategoryType.categoryType(forIdentifier: .sleepAnalysis)
         ].compactMap { $0 }.forEach { types.insert($0) }
         types.insert(HKObjectType.workoutType())
+        if let mindful = HKCategoryType.categoryType(forIdentifier: .mindfulSession) { types.insert(mindful) }
+        if #available(iOS 17.0, *), let daylight = HKQuantityType.quantityType(forIdentifier: .timeInDaylight) { types.insert(daylight) }
+        if #available(iOS 18.0, *) { types.insert(HKObjectType.stateOfMindType()) }
         return types
     }
 
@@ -87,7 +91,7 @@ final class HealthKitManager: ObservableObject {
         }
 
         do {
-            try await store.requestAuthorization(toShare: [], read: readTypes)
+            try await store.requestAuthorization(toShare: bodyRenewalShareTypes, read: bodyRenewalReadTypes)
             authorizationRequestCompleted = true
             errorMessage = nil
             await refreshToday()
@@ -167,6 +171,7 @@ final class HealthKitManager: ObservableObject {
         sleepHours = sleepValue
         recentWorkouts = workoutsValue
         recentLabResults = []
+        bodyExtras = await fetchBodyRenewalExtras(store: store)
 
         let state = Self.estimateRecoveryAndStress(
             sleepHours: sleepValue,
@@ -548,5 +553,240 @@ final class HealthKitManager: ObservableObject {
         case .mixedCardio: return "ミックスカーディオ"
         default: return "ワークアウト"
         }
+    }
+}
+
+
+// MARK: - S.u.G BODY Renewal (Section 15: 26 HealthKit Types, Read/Write, SyncIdentifier Dedup)
+struct BodyRenewalHealthExtras: Sendable {
+    let timeInDaylightMinutes: Double?
+    let mindfulMinutesToday: Double?
+    let latestStateOfMindValence: Double?
+    let walkingSpeedKmh: Double?
+    let walkingStepLengthCm: Double?
+    let walkingAsymmetryPercent: Double?
+    let walkingSteadinessPercent: Double?
+    let dietaryEnergyKcalToday: Double?
+    let dietaryProteinGToday: Double?
+    let dietaryFatGToday: Double?
+    let dietaryCarbsGToday: Double?
+    let dietaryFiberGToday: Double?
+    let dietaryWaterMlToday: Double?
+    let alcoholicBeveragesToday: Double?
+}
+
+extension HealthKitManager {
+    var bodyRenewalReadTypes: Set<HKObjectType> {
+        var types = Set<HKObjectType>()
+        let qIds: [HKQuantityTypeIdentifier] = [
+            .stepCount, .distanceWalkingRunning, .activeEnergyBurned, .appleExerciseTime,
+            .bodyMass, .bodyFatPercentage, .leanBodyMass,
+            .heartRate, .restingHeartRate, .heartRateVariabilitySDNN,
+            .vo2Max, .respiratoryRate, .oxygenSaturation,
+            .walkingSpeed, .walkingStepLength, .walkingAsymmetryPercentage,
+            .appleWalkingSteadiness,
+            .dietaryEnergyConsumed, .dietaryProtein, .dietaryFatTotal,
+            .dietaryCarbohydrates, .dietaryFiber, .dietaryWater,
+            .numberOfAlcoholicBeverages
+        ]
+        for id in qIds {
+            if let t = HKQuantityType.quantityType(forIdentifier: id) { types.insert(t) }
+        }
+        if #available(iOS 17.0, *),
+           let daylight = HKQuantityType.quantityType(forIdentifier: .timeInDaylight) {
+            types.insert(daylight)
+        }
+        if let sleep = HKCategoryType.categoryType(forIdentifier: .sleepAnalysis) { types.insert(sleep) }
+        if let mindful = HKCategoryType.categoryType(forIdentifier: .mindfulSession) { types.insert(mindful) }
+        if #available(iOS 18.0, *) {
+            types.insert(HKObjectType.stateOfMindType())
+        }
+        types.insert(HKObjectType.workoutType())
+        return types
+    }
+
+    var bodyRenewalShareTypes: Set<HKSampleType> {
+        var types = Set<HKSampleType>()
+        let writableQIds: [HKQuantityTypeIdentifier] = [
+            .bodyMass, .bodyFatPercentage,
+            .dietaryEnergyConsumed, .dietaryProtein, .dietaryFatTotal,
+            .dietaryCarbohydrates, .dietaryFiber, .dietaryWater,
+            .numberOfAlcoholicBeverages
+        ]
+        for id in writableQIds {
+            if let t = HKQuantityType.quantityType(forIdentifier: id) { types.insert(t) }
+        }
+        if let mindful = HKCategoryType.categoryType(forIdentifier: .mindfulSession) { types.insert(mindful) }
+        if #available(iOS 18.0, *) {
+            types.insert(HKObjectType.stateOfMindType())
+        }
+        types.insert(HKObjectType.workoutType())
+        return types
+    }
+
+    func requestBodyRenewalAuthorization(store: HKHealthStore) async throws {
+        guard HKHealthStore.isHealthDataAvailable() else { return }
+        try await store.requestAuthorization(toShare: bodyRenewalShareTypes, read: bodyRenewalReadTypes)
+    }
+
+    func saveMindfulSession(store: HKHealthStore, syncId: String, startDate: Date, endDate: Date, exerciseType: String) async throws {
+        guard let type = HKCategoryType.categoryType(forIdentifier: .mindfulSession), endDate > startDate else { return }
+        let sample = HKCategorySample(
+            type: type,
+            value: HKCategoryValue.notApplicable.rawValue,
+            start: startDate,
+            end: endDate,
+            metadata: [HKMetadataKeySyncIdentifier: syncId, HKMetadataKeySyncVersion: 1, "SuGBodyExerciseType": exerciseType]
+        )
+        try await store.save(sample)
+    }
+
+    @available(iOS 18.0, *)
+    func saveStateOfMind(store: HKHealthStore, syncId: String, date: Date, isDailyMood: Bool, valence: Double) async throws {
+        let sample = HKStateOfMind(
+            date: date,
+            kind: isDailyMood ? .dailyMood : .momentaryEmotion,
+            valence: max(-1.0, min(1.0, valence)),
+            labels: [],
+            associations: [],
+            metadata: [HKMetadataKeySyncIdentifier: syncId, HKMetadataKeySyncVersion: 1]
+        )
+        try await store.save(sample)
+    }
+
+
+    func saveWorkout(store: HKHealthStore, syncId: String, activityName: String, startDate: Date, endDate: Date, distanceMeters: Double?, energyKcal: Double?) async throws {
+        guard endDate > startDate else { return }
+        let activityType: HKWorkoutActivityType
+        switch activityName.lowercased() {
+        case "running", "run": activityType = .running
+        case "walking", "walk": activityType = .walking
+        case "hyrox", "functional": activityType = .functionalStrengthTraining
+        case "mobility", "flexibility", "stretch": activityType = .flexibility
+        default: activityType = .traditionalStrengthTraining
+        }
+        let config = HKWorkoutConfiguration()
+        config.activityType = activityType
+        config.locationType = (activityType == .running || activityType == .walking) ? .outdoor : .indoor
+        let builder = HKWorkoutBuilder(healthStore: store, configuration: config, device: .local())
+        try await builder.beginCollection(at: startDate)
+        var samples: [HKSample] = []
+        if let kcal = energyKcal, kcal > 0, let energyType = HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned) {
+            samples.append(HKQuantitySample(type: energyType, quantity: HKQuantity(unit: .kilocalorie(), doubleValue: kcal), start: startDate, end: endDate))
+        }
+        if let dist = distanceMeters, dist > 0, let distType = HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning) {
+            samples.append(HKQuantitySample(type: distType, quantity: HKQuantity(unit: .meter(), doubleValue: dist), start: startDate, end: endDate))
+        }
+        if !samples.isEmpty {
+            try await builder.addSamples(samples)
+        }
+        try await builder.addMetadata([HKMetadataKeySyncIdentifier: syncId, HKMetadataKeySyncVersion: 1, "SuGSwagActivity": activityName])
+        try await builder.endCollection(at: endDate)
+        _ = try await builder.finishWorkout()
+    }
+
+    func saveQuantitySample(store: HKHealthStore, identifier: HKQuantityTypeIdentifier, unit: HKUnit, value: Double, date: Date, syncId: String) async throws {
+        guard let type = HKQuantityType.quantityType(forIdentifier: identifier), value >= 0 else { return }
+        let sample = HKQuantitySample(
+            type: type,
+            quantity: HKQuantity(unit: unit, doubleValue: value),
+            start: date,
+            end: date,
+            metadata: [HKMetadataKeySyncIdentifier: syncId, HKMetadataKeySyncVersion: 1]
+        )
+        try await store.save(sample)
+    }
+
+    func fetchBodyRenewalExtras(store: HKHealthStore) async -> BodyRenewalHealthExtras {
+        let startOfDay = Calendar.current.startOfDay(for: Date())
+        let now = Date()
+
+        func sumToday(_ id: HKQuantityTypeIdentifier, unit: HKUnit) async -> Double? {
+            guard let type = HKQuantityType.quantityType(forIdentifier: id) else { return nil }
+            let pred = HKQuery.predicateForSamples(withStart: startOfDay, end: now, options: .strictStartDate)
+            return await withCheckedContinuation { cont in
+                let q = HKStatisticsQuery(quantityType: type, quantitySamplePredicate: pred, options: .cumulativeSum) { _, stats, _ in
+                    cont.resume(returning: stats?.sumQuantity()?.doubleValue(for: unit))
+                }
+                store.execute(q)
+            }
+        }
+
+        func latestSample(_ id: HKQuantityTypeIdentifier, unit: HKUnit) async -> Double? {
+            guard let type = HKQuantityType.quantityType(forIdentifier: id) else { return nil }
+            return await withCheckedContinuation { cont in
+                let sort = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
+                let q = HKSampleQuery(sampleType: type, predicate: nil, limit: 1, sortDescriptors: [sort]) { _, samples, _ in
+                    let sample = samples?.first as? HKQuantitySample
+                    cont.resume(returning: sample?.quantity.doubleValue(for: unit))
+                }
+                store.execute(q)
+            }
+        }
+
+        var daylightMin: Double? = nil
+        if #available(iOS 17.0, *) {
+            daylightMin = await sumToday(.timeInDaylight, unit: .minute())
+        }
+
+        var mindfulMin: Double? = nil
+        if let mType = HKCategoryType.categoryType(forIdentifier: .mindfulSession) {
+            mindfulMin = await withCheckedContinuation { cont in
+                let mPred = HKQuery.predicateForSamples(withStart: startOfDay, end: now, options: .strictStartDate)
+                let q = HKSampleQuery(sampleType: mType, predicate: mPred, limit: HKObjectQueryNoLimit, sortDescriptors: nil) { _, samples, _ in
+                    let totalSec = (samples ?? []).reduce(0.0) { acc, s in acc + max(0, s.endDate.timeIntervalSince(s.startDate)) }
+                    cont.resume(returning: totalSec > 0 ? totalSec / 60.0 : nil)
+                }
+                store.execute(q)
+            }
+        }
+
+        var stateOfMindValence: Double? = nil
+        if #available(iOS 18.0, *) {
+            let somType = HKObjectType.stateOfMindType()
+            stateOfMindValence = await withCheckedContinuation { cont in
+                let sort = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
+                let somPred = HKQuery.predicateForSamples(withStart: startOfDay, end: now, options: .strictStartDate)
+                let q = HKSampleQuery(sampleType: somType, predicate: somPred, limit: 1, sortDescriptors: [sort]) { _, samples, _ in
+                    let som = samples?.first as? HKStateOfMind
+                    cont.resume(returning: som?.valence)
+                }
+                store.execute(q)
+            }
+        }
+
+        async let wSpeed = latestSample(.walkingSpeed, unit: HKUnit.meter().unitDivided(by: .second()))
+        async let wLen = latestSample(.walkingStepLength, unit: HKUnit.meter())
+        async let wAsym = latestSample(.walkingAsymmetryPercentage, unit: .percent())
+        async let wStead = latestSample(.appleWalkingSteadiness, unit: .percent())
+        async let kcal = sumToday(.dietaryEnergyConsumed, unit: .kilocalorie())
+        async let prot = sumToday(.dietaryProtein, unit: .gram())
+        async let fat = sumToday(.dietaryFatTotal, unit: .gram())
+        async let carb = sumToday(.dietaryCarbohydrates, unit: .gram())
+        async let fiber = sumToday(.dietaryFiber, unit: .gram())
+        async let water = sumToday(.dietaryWater, unit: .literUnit(with: .milli))
+        async let alcCount = sumToday(.numberOfAlcoholicBeverages, unit: .count())
+
+        let speedMs = await wSpeed
+        let lenM = await wLen
+        let asymPct = await wAsym
+        let steadPct = await wStead
+
+        return BodyRenewalHealthExtras(
+            timeInDaylightMinutes: daylightMin,
+            mindfulMinutesToday: mindfulMin,
+            latestStateOfMindValence: stateOfMindValence,
+            walkingSpeedKmh: speedMs.map { $0 * 3.6 },
+            walkingStepLengthCm: lenM.map { $0 * 100.0 },
+            walkingAsymmetryPercent: asymPct.map { $0 * 100.0 },
+            walkingSteadinessPercent: steadPct.map { $0 * 100.0 },
+            dietaryEnergyKcalToday: await kcal,
+            dietaryProteinGToday: await prot,
+            dietaryFatGToday: await fat,
+            dietaryCarbsGToday: await carb,
+            dietaryFiberGToday: await fiber,
+            dietaryWaterMlToday: await water,
+            alcoholicBeveragesToday: await alcCount
+        )
     }
 }

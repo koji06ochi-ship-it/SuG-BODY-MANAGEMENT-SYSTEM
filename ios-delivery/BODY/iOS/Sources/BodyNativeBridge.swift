@@ -26,7 +26,7 @@ final class BodyNativeBridge: NSObject, WKScriptMessageHandler, WKScriptMessageH
 
     static func isTrusted(_ url: URL?) -> Bool {
         guard let url else { return false }
-        if url.scheme == "http", url.host == "127.0.0.1", url.port == 5411, url.path == "/apps/body/daily-preview/index.html" { return true }
+        if url.scheme == "http", url.host == "127.0.0.1", url.port == 5411, ["/apps/body/daily-preview/index.html", "/apps/body/daily-preview/legacy.html"].contains(url.path) { return true }
         guard url.isFileURL, let resources = Bundle.main.resourceURL else { return false }
         let expected = resources.appendingPathComponent("BodyFormal/apps/body/daily-preview/index.html").standardizedFileURL.path
         return url.standardizedFileURL.path == expected
@@ -65,6 +65,20 @@ final class BodyNativeBridge: NSObject, WKScriptMessageHandler, WKScriptMessageH
         case "gpsStop": if let id = body["id"] as? Int { remove(id) }
         case "gpsStopAll": stopAll()
         case "healthRequest": NotificationCenter.default.post(name: .init("SuGBodyRequestHealth"), object: nil)
+        case "healthWrite": NotificationCenter.default.post(name: .init("SuGBodyWriteHealth"), object: nil, userInfo: body)
+        case "openWalkApp":
+            let payload = body["payload"] as? [String: Any] ?? [:]
+            var comps = URLComponents()
+            comps.scheme = "sug-walk"
+            comps.host = "swag-sync"
+            comps.queryItems = [
+                URLQueryItem(name: "app", value: "S.u.G SWAG"),
+                URLQueryItem(name: "stage", value: String(describing: payload["growthStage"] ?? "")),
+                URLQueryItem(name: "level", value: String(describing: payload["level"] ?? 1)),
+                URLQueryItem(name: "exp", value: String(describing: payload["totalExp"] ?? 0)),
+                URLQueryItem(name: "coins", value: String(describing: payload["coins"] ?? 0))
+            ]
+            if let url = comps.url { UIApplication.shared.open(url) }
         case "exportJSON": if let text = body["json"] as? String { exportJSON(text) }
         default: break
         }

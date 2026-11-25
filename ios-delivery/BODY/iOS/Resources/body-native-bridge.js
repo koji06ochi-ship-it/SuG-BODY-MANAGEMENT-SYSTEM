@@ -25,7 +25,9 @@
  Object.defineProperty(navigator,'geolocation',{value:geolocation,configurable:true});
  window.SuGNativeTransport={
   requestHealth:()=>post({kind:'healthRequest'}),
+  writeHealth:(action,payload)=>post({kind:'healthWrite',action,payload:payload||{}}),
   exportJSON:json=>post({kind:'exportJSON',json}),
+  openWalkApp:payload=>post({kind:'openWalkApp',payload:payload||{}}),
   receiveGPS(message){const c=callbacks.get(message.id);if(!c)return;if(message.error){c.error?.(message.error);callbacks.delete(message.id)}else{if(!c.watch)callbacks.delete(message.id);c.success(message.position)}}
  };
  window.addEventListener('pagehide',()=>{callbacks.clear();post({kind:'gpsStopAll'})});

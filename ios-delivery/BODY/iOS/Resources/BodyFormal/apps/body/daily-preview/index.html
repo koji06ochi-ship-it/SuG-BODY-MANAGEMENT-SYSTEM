@@ -1,20 +1,541 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10251d"><title>BODY｜毎日の身体と歩く生活</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="light-theme.css"><link rel="stylesheet" href="seven-screen.css"><link rel="stylesheet" href="management.css"><link rel="stylesheet" href="premium-ui.css"><!-- isolated local review: external SDK not loaded; original bridge remains --><script src="body-supabase-bridge.js"></script><script src="food-image-core.js"></script><script src="body-automation-core.js"></script><script src="access-core.js"></script><link rel="stylesheet" href="formal-body.css"></head>
-<body><main class="app">
-<header><a class="brand" href="#today"><img src="assets/sug-logo.jpeg" alt="提供されたS.u.G OSAKA正式ロゴ"><strong>BODY</strong></a><button data-page="record" class="avatar" aria-label="基本情報を開く">自分</button></header>
-<div class="preview">操作候補 · 本人記録／実ポイントとは別領域</div>
-<section id="today" class="page">
- <div class="eyebrow" id="date"></div><div class="title-row"><h1>今日の自分に、<br>ちょうどいい一歩。</h1><span class="small-seal">MOVE<br>RECOVER<br>GROW</span></div>
- <div class="guide"><div class="guide-copy"><span class="eyebrow">DAILY CONDITION</span><h2>今日は、どんな調子？</h2><p>歩いた量も、食べたものも、眠れた時間も。あなたの一日に合わせて。</p><button class="primary" data-page="recovery">今日の調子を記録 <span>↗</span></button></div></div>
- <div class="section-head"><h2>今日の記録</h2><span>自分のペースで</span></div>
- <div class="metrics"><button data-page="map"><span>歩数</span><b id="stepsMetric">—</b><small>歩</small></button><button data-page="map"><span>歩いた距離</span><b id="distanceMetric">—</b><small>km</small></button><button data-page="recovery"><span>睡眠</span><b id="sleepMetric">—</b><small>時間</small></button><button data-page="record"><span>体重</span><b id="weightMetric">—</b><small>kg</small></button></div>
- <article class="training"><span class="eyebrow">YOUR DAILY PLAN</span><h2>目標と、今日の状態から。</h2><p id="planText">基本情報と今日の調子を記録しましょう。</p><div class="chips"><span id="goalChip">目標：未設定</span><span>自動提案は接続待ち</span></div><a href="../index.html#body-training">既存BODYの運動・記録を開く ↗</a></article>
- <div class="panel"><span class="eyebrow">TODAY FOOD & ACTIVITY</span><h2 id="todayFood">食事は未記録</h2><p id="recordSummary"></p></div><div class="quick"><button data-page="food"><span>FOOD</span><b>食事を写真で記録</b><small>選ぶ → 確認 → 保存 ↗</small></button><button data-page="care"><span>BODY CARE</span><b>気になる動きを確認</b><small>10部位から選ぶ ↗</small></button></div>
- <div class="cast-guide compact"><img src="assets/zenn-trainer-original.jpg" alt="利用者が提供した善くんトレーナー衣装の全身原画像"><div><h2>今日の小さな一歩を。</h2><p>歩く・食べる・休む。できたことから記録しよう。</p></div></div><button class="point-strip" data-page="record"><span>続けた行動を、次のケアへ。</span><b>ポイント・割引 →</b></button>
-</section>
-<section id="food" class="page" hidden><span class="eyebrow">FOOD JOURNAL</span><h1>食べたものを、<br>一枚から。</h1><p class="lead">写真を選んで、料理と量を確認。無理なく、今日の記録へ。</p><div class="cast-guide"><img src="assets/otohime-trainer-original.jpg" alt="利用者が提供した音姫トレーナー衣装の全身原画像"><div><h2>まずは、一食から。</h2><p>食べたものを責めずに、今日の記録へ。</p></div></div><form id="foodForm"><label class="photo-picker">＋ 食事の写真を選ぶ<input id="photo" type="file" accept="image/*"></label><img id="photoPreview" alt="選択した食事写真" hidden><p class="note">写真は端末内でプレビューします。AI解析は未接続。料理・栄養値は手入力で保存できます。写真本体は保存しません。</p><div class="panel"><label>料理名<input name="dish" required maxlength="100" placeholder="例：ごはんと焼き魚"></label><label>食べた量<input name="portion" required maxlength="80" placeholder="例：ごはん小盛り、魚1切れ"></label><div class="form-grid"><label>エネルギー kcal<input name="kcal" type="number" min="0" max="10000" step="1"></label><label>たんぱく質 g<input name="protein" type="number" min="0" max="1000" step="0.1"></label><label>脂質 g<input name="fat" type="number" min="0" max="1000" step="0.1"></label><label>炭水化物 g<input name="carbs" type="number" min="0" max="2000" step="0.1"></label></div><button id="foodSubmit" class="primary" type="submit">内容を確認して保存</button><button id="cancelFoodEdit" type="button" class="wide" hidden>修正をやめる</button></div></form><article class="panel"><span class="eyebrow">TODAY TOTAL</span><h2 id="foodTotal">未入力</h2><p id="foodMacros"></p><p id="foodCompleteness" class="note"></p></article><h2>今日の食事</h2><div id="foodList" class="list"></div></section>
-<section id="map" class="page" hidden><span class="eyebrow">WALK & MAP</span><h1>歩く時間も、<br>身体づくりに。</h1><div class="cast-guide"><img src="assets/walker.jpeg" alt="提供された歩行キャラクター"><div><h2>歩いた分も、自分の記録。</h2><p>歩数と距離を、今日の活動につなげよう。</p></div></div><div class="map-art" aria-label="地図の配置イメージ。実地図ではありません"><div class="river"></div><div class="road r1"></div><div class="road r2"></div><span class="map-label l1">スタート</span><span class="map-label l2">目的地</span><div class="route"></div><span class="map-pin p1">●</span><span class="map-pin p2">◎</span><span class="map-caption">配置イメージ · GPS／実地図は未接続</span></div><div class="panel"><h2>今日、どれくらい歩いた？</h2><form id="walkForm"><div class="form-grid"><label>歩数<input name="steps" type="number" min="0" max="200000" step="1" required></label><label>距離 km<input name="distance" type="number" min="0" max="300" step="0.01" required></label></div><button class="primary">歩行記録を保存</button></form><p class="note">現在は手入力。GPS実測距離とHealthKitの歩数は、接続後に取得元と日時を表示します。</p></div><div class="panel"><h2>歩いた分を、今日の活動量へ。</h2><p>歩行とトレーニングを合わせて振り返り、睡眠・回復も含めて次の実践につなぎます。</p><p class="note">歩行時間・強度の連携、重複集計の防止は組込み工程で対応。</p></div></section>
-<section id="recovery" class="page" hidden><span class="eyebrow">RECOVERY CHECK</span><h1>がんばる前に、<br>今の調子を。</h1><div class="cast-guide"><img src="assets/sleeper.jpeg" alt="提供された夜更かしキャラクター"><div><h2>眠れた日も、眠れなかった日も。</h2><p>そのまま記録して、今日の調子を確かめよう。</p></div></div><form id="recoveryForm" class="panel"><label>睡眠時間<input name="sleep" type="number" min="0" max="24" step="0.1" required></label><label>疲れ<select name="fatigue"><option value="">選択してください</option><option>少ない</option><option>いつも通り</option><option>強い</option></select></label><label>ストレス<select name="stress"><option value="">選択してください</option><option>少ない</option><option>いつも通り</option><option>強い</option></select></label><label>気になる痛み<select name="pain"><option value="">選択してください</option><option>なし</option><option>あり</option></select></label><button class="primary">今日の調子を保存</button></form><button class="wide" data-page="care">気になる部位を確認する →</button></section>
-<section id="care" class="page" hidden><span class="eyebrow">CHECK · CARE · RECHECK</span><h1>気になる動きから、<br>自分を知る。</h1><p class="lead">どこが気になりますか？</p><div class="cast-guide"><img src="assets/zenn-trainer-original.jpg" alt="利用者が提供した善くんトレーナー衣装の全身原画像"><div><h2>いきなり鍛える、その前に。</h2><p>気になる動きを確認して、前後の変化を残そう。</p></div></div><div id="careGrid" class="care-grid"></div><article id="careDetail" class="panel" hidden><span class="eyebrow">気づきを残す</span><h2 id="careTitle"></h2><form id="careForm"><label>どんな動き・場面で気になる？<textarea name="observation" required maxlength="1000" placeholder="気になる動き、いつから、左右の違いなど"></textarea></label><label>確認したいこと・仮説<textarea name="hypothesis" maxlength="1000" placeholder="原因と決めつけず、確認したいことを記録"></textarea></label><label>行ったケア・運動<textarea name="action" maxlength="1000" placeholder="実際に行った内容だけ記録"></textarea></label><label>前後の変化<textarea name="change" maxlength="1000" placeholder="変化なし・悪化もそのまま記録"></textarea></label><button class="primary">確認記録を保存</button></form><p class="note">一般的な確認・ケア情報と、自分の記録を分けて表示しています。痛みの原因を診断しません。</p><a href="#recovery">既存の身体チェックへ ↗</a></article></section>
-<section id="record" class="page" hidden><span class="eyebrow">MY BODY</span><h1>積み重ねを、<br>これからの自分へ。</h1><div class="cast-guide"><img src="assets/zenn-trainer-original.jpg" alt="利用者が提供した善くんトレーナー衣装の全身原画像"><div><h2>自分のペースで、積み重ねる。</h2><p>記録は誰かとの比較ではなく、自分の変化を見るために。</p></div></div><details class="panel" open><summary>基本情報・目標</summary><form id="profileForm"><label>名前<input name="name" maxlength="40" autocomplete="nickname" required></label><div class="form-grid"><label>身長 cm<input name="height" type="number" min="50" max="250" step="0.1" required></label><label>体重 kg<input name="weight" type="number" min="10" max="400" step="0.1" required></label><label>体脂肪率 %（任意）<input name="bodyfat" type="number" min="1" max="70" step="0.1"></label><label>目標体重 kg（任意）<input name="target" type="number" min="10" max="400" step="0.1"></label></div><label>目的<select name="goal"><option>減量</option><option>体重維持</option><option>筋肉増量</option><option>体力をつけたい</option><option>筋肉をつけたい</option><option>体重を管理したい</option><option>動きやすい身体にしたい</option></select></label><button class="primary">基本情報を保存</button></form></details><div class="member-card"><span class="eyebrow">S.u.G MEMBER · 表示候補</span><h2 id="memberName">あなたの記録</h2><span>利用可能ポイント</span><b>— <small>pt</small></b><p>本人のポイントは未接続</p></div><article class="panel"><h2>続けた行動を、割引へ。</h2><p>歩行やトレーニングの実施をポイントに。対象サービスの割引へつなげます。</p><p class="note">還元率・上限・対象サービスは未確定。候補画面では付与・消費・割引発行を行いません。</p></article><h2>この候補画面の記録</h2><div id="recordList" class="list"></div><details class="panel"><summary>体重の推移</summary><div id="weightHistory" class="list"></div></details><details class="panel"><summary>これまでの食事</summary><div id="allFoodHistory" class="list"></div></details><details class="panel"><summary>既存BODYの運動記録</summary><p class="note">同じブラウザー・オリジンにある通常BODY記録を読み取り専用で表示します。ポイントの付与はしません。</p><button id="readExisting" class="wide">既存の記録を参照</button><div id="existingRecords" class="list"></div></details><button id="export" class="wide">記録をJSONで保存</button><p class="note">このブラウザーの専用保存。JSONで別の独立領域へ引き継げます。クラウド同期は未接続。</p><details class="panel"><summary>JSONから記録を引き継ぐ</summary><label>引き継ぎJSON<input id="importFile" type="file" accept="application/json,.json"></label><p id="importSummary" class="note">この画面から出力したJSONを選んでください。今ある記録は上書きしません。</p><button id="restoreConfirm" class="primary" disabled>新しい領域へ復元</button><a id="restoreLink" hidden>復元した記録を開いて続ける →</a></details></section>
-<footer>操作画面候補／外部AI送信は本人確認後のみ</footer></main><nav class="bottom" aria-label="メイン"><button data-page="today" class="active"><span>◉</span>今日</button><button data-page="food"><span>◫</span>食事</button><button data-page="map"><span>⌖</span>MAP</button><button data-page="record"><span>▣</span>記録・会員証</button></nav><div id="toast" role="status" aria-live="polite"></div><script src="training-core.js"></script><script src="recheck-core.js"></script><script src="../../../assets/quest/person-gps-core-20260905.js"></script><script src="walk-core.js"></script><script src="management-core.js"></script><script src="daily-core.js"></script><script src="app.js"></script><script src="continuation.js"></script><script src="care-guidance.js"></script><script src="training.js"></script><script src="sheet-training.js"></script><script src="training-explain.js"></script><script src="training-reuse.js"></script><script src="plan-save.js"></script><script src="plan-progress.js"></script><script src="today-connect.js"></script><script src="food-review-core.js"></script><script src="food-review.js"></script><script src="menu-content.js"></script><script src="journal-core.js"></script><script src="journal-ui.js"></script><script src="health-intake-core.js"></script><script src="health-intake.js"></script><script src="prescription-core.js"></script><script src="prescription-ui.js"></script><script src="recheck-ui.js"></script><script src="walk-ui.js"></script><script src="food-transport.js"></script><script src="food-connection.js"></script><script src="seven-screen.js"></script><script src="food-catalog.js"></script><script src="body-ai-client-core.js"></script><script src="body-access-client.js"></script><script src="nutrition-ui.js"></script><script src="integration-ui.js"></script><script src="formal-body.js"></script></body></html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#FF1493">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="S.u.G SWAG">
+<meta name="description" content="S.u.G SWAG（エスユージー スワッグ）｜OWN YOUR STYLE. LIVE YOUR LIFE. 身体もしなやかに、心もしなやかに。">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="assets/swag-icon-180.png">
+<title>S.u.G SWAG｜OWN YOUR STYLE. LIVE YOUR LIFE.</title>
+<link rel="stylesheet" href="recovery-refresh.css">
+</head>
+<body class="body-formal">
+<div class="app-shell">
+  <header class="hero-header">
+    <div class="hero-brand">
+      <img src="assets/sug-bear-logo.png" alt="S.u.G SWAG 公式ピンククマロゴ">
+      <div>
+        <h1 class="hero-title">S.u.G SWAG</h1>
+        <span class="reading-tag">エスユージー スワッグ</span>
+        <p class="hero-sub">OWN YOUR STYLE. LIVE YOUR LIFE.</p>
+        <p class="hero-concept">身体もしなやかに、心もしなやかに。</p>
+      </div>
+    </div>
+    <button class="header-pill" data-go="mybody">MY BODY</button>
+  </header>
+
+  <div class="hk-bar">
+    <div class="hk-bar-top">
+      <a class="hk-bar-link" href="legacy.html">従来のBODY機能・既存記録を開く</a>
+      <span id="hkStatus" class="muted" style="font-weight:800">HealthKit: 未接続</span>
+    </div>
+    <div class="hk-bar-btns">
+      <button id="hkConnect" class="btn-gold">ヘルスケア連携</button>
+      <button id="hkRefresh" class="btn-ghost">同期</button>
+    </div>
+  </div>
+
+  <div class="status-ribbon">
+    <span id="ribbonDate">読み込み中...</span>
+    <span id="ribbonConn">HealthKit: iPhone検証待ち / AI: 未接続</span>
+  </div>
+
+  <!-- 1. TOP | TODAY -->
+  <section id="page-today" class="page active">
+    <div class="card gold-edge">
+      <span class="eyebrow">TODAY｜今日の問いかけ</span>
+      <h2>今日はどんな一日にしたいですか？</h2>
+      <div class="chip-row" id="intentChips">
+        <button class="chip" data-intent="仕事も集中しつつ夜はゆったり休む">仕事×ゆとり</button>
+        <button class="chip" data-intent="身体をしなやかに動かして気分転換する">しなやかに動く</button>
+        <button class="chip" data-intent="休日・美味しい食事や散歩を楽しむ">休日・日常を楽しむ</button>
+        <button class="chip" data-intent="今日は回復を最優先に整える">回復を最優先</button>
+      </div>
+      <label class="field">今日の意図・目標
+        <input type="text" id="todayIntentInput" placeholder="例：午後は散歩して夜はゆっくり入浴する">
+      </label>
+      <div class="grid-2">
+        <label class="field">今日の気分
+          <select id="todayMoodSelect">
+            <option value="">未選択</option>
+            <option value="爽快・前向き">爽快・前向き</option>
+            <option value="おだやか">おだやか</option>
+            <option value="少し疲れ気味">少し疲れ気味</option>
+            <option value="緊張・ストレスあり">緊張・ストレスあり</option>
+          </select>
+        </label>
+        <label class="field">今日の歩数（手入力/未取得）
+          <input type="number" id="todayStepsInput" min="0" max="150000" placeholder="未取得">
+        </label>
+      </div>
+      <button class="btn-primary" id="saveTodayBtn">今日の状態を保存</button>
+    </div>
+
+    <div class="card">
+      <span class="eyebrow">RECOVERY SCORE（参考値） &amp; SWAG AVATAR</span>
+      <div class="score-ring-row">
+        <div class="score-badge">
+          <div class="num" id="todayScoreNum">--</div>
+          <div class="lbl" id="todayScoreStatus">未評価</div>
+        </div>
+        <div style="flex:1">
+          <h2 id="todayAvatarStage" style="margin-bottom:4px">整えビギナー</h2>
+          <div class="muted" id="todayAvatarMsg">今日も自分のペースで、心地よい一日にしよう。</div>
+          <div class="chip-row" style="margin-top:6px">
+            <span class="chip" id="todayCoverageChip">カバー率 0%</span>
+            <span class="chip gold" id="todayBehaviorChip">回復行動 0/12</span>
+            <span class="chip" id="todayExpChip">Lv.1 · 0 EXP</span>
+            <span class="chip gold" id="todayCoinChip">0 COIN</span>
+          </div>
+        </div>
+      </div>
+      <p class="muted" style="margin:8px 0 0;font-size:11px">※ウェルネス参考値であり、医学的診断ではありません。未取得項目は0として扱いません。</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="metric-box"><span>睡眠状態</span><b id="todaySleepVal">未取得</b><small id="todaySleepSub">昨日比: —</small></div>
+      <div class="metric-box"><span>身体疲労 / 精神状態</span><b id="todayFatigueVal">未取得</b><small id="todayStressSub">ストレス: 未取得</small></div>
+      <div class="metric-box"><span>今日のおすすめ行動</span><b id="todayRecAction" style="font-size:13px;line-height:1.35">まずは状態を入力</b><small>RECOVERYと連動</small></div>
+      <div class="metric-box"><span>S.u.G WALK 連携</span><b id="todayWalkState" style="font-size:13px;line-height:1.35">オフライン待機</b><small>独立アプリ相互連携</small></div>
+    </div>
+
+    <div class="card" style="margin-top:10px">
+      <span class="eyebrow">AI COACH oTo MESSAGE</span>
+      <div style="display:flex;align-items:center;gap:12px;margin:6px 0">
+        <img src="assets/oto-coach.jpg" alt="AIコーチ oTo" style="width:64px;height:64px;object-fit:contain;border:none;background:transparent;flex-shrink:0">
+        <p id="todayCoachMsg" style="margin:0;font-size:13px;font-weight:700;line-height:1.45"></p>
+      </div>
+      <div class="grid-2">
+        <button class="btn-ghost" data-go="recovery">RECOVERYを開く</button>
+        <button class="btn-gold" data-go="aicoach">AI COACHに相談</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. RECOVERY -->
+  <section id="page-recovery" class="page">
+    <div class="card gold-edge">
+      <span class="eyebrow">RECOVERY｜状態と行動を分離</span>
+      <h2>回復状態スコア（12条件準拠）</h2>
+      <div class="score-ring-row">
+        <div class="score-badge">
+          <div class="num" id="recScoreNum">--</div>
+          <div class="lbl" id="recScoreBadge">未評価</div>
+        </div>
+        <div style="flex:1">
+          <div style="font-size:13px;font-weight:900" id="recConfText">信頼度: データ不足</div>
+          <div class="muted" id="recExplainText">2領域以上・カバー率25%以上で算出します。未取得項目で不当に減点しません。</div>
+        </div>
+      </div>
+      <div id="recDomainBreakdown" style="margin-top:10px"></div>
+    </div>
+
+    <div class="card">
+      <span class="eyebrow">7日間・28日間トレンド &amp; 飲酒翌日比較</span>
+      <div id="recTrendChart" style="margin:6px 0"></div>
+      <div id="recMindRelationBox" class="list-row">心の状態・睡眠・日光・マインドフルネス・歩行指標を観測します。</div>
+      <div id="recAlcoholNextDay" class="list-row">前日の飲酒記録と翌日の睡眠・心拍・HRVを比較表示します。</div>
+    </div>
+
+    <div class="card">
+      <span class="eyebrow">1. 回復状態の評価（12項目）</span>
+      <div class="grid-2">
+        <label class="field">睡眠時間 (h)<input type="number" step="0.1" min="0" max="24" id="recSleepHours" placeholder="未取得"></label>
+        <label class="field">睡眠の満足度 (1-5)<select id="recSleepQual"><option value="">未取得</option><option value="5">5: 非常に良い</option><option value="4">4: 良い</option><option value="3">3: 普通</option><option value="2">2: 浅い</option><option value="1">1: 不十分</option></select></label>
+        <label class="field">睡眠リズム規則性 (1-5)<select id="recSleepReg"><option value="">未取得</option><option value="5">5: 規則的</option><option value="4">4: 概ね一定</option><option value="3">3: ややズレ</option><option value="2">2: 不規則</option><option value="1">1: 乱れ大</option></select></label>
+        <label class="field">安静時心拍 bpm<input type="number" min="30" max="150" id="recRhr" placeholder="未取得"></label>
+        <label class="field">HRV SDNN (ms)<input type="number" min="5" max="250" id="recHrv" placeholder="未取得"></label>
+        <label class="field">身体疲労 (1少-5強)<select id="recPhysFatigue"><option value="">未取得</option><option value="1">1: なし</option><option value="2">2: 軽い</option><option value="3">3: 普通</option><option value="4">4: 強い</option><option value="5">5: 限界</option></select></label>
+        <label class="field">筋肉痛 (1少-5強)<select id="recSoreness"><option value="">未取得</option><option value="1">1: なし</option><option value="2">2: 軽い</option><option value="3">3: 普通</option><option value="4">4: 強い</option><option value="5">5: 強い痛み</option></select></label>
+        <label class="field">運動負荷 (1少-5強)<select id="recExLoad"><option value="">未取得</option><option value="1">1: 休養</option><option value="2">2: 軽負荷</option><option value="3">3: 適度</option><option value="4">4: 高負荷</option><option value="5">5: 過負荷</option></select></label>
+        <label class="field">精神的疲労 (1少-5強)<select id="recMentFatigue"><option value="">未取得</option><option value="1">1: なし</option><option value="2">2: 軽い</option><option value="3">3: 普通</option><option value="4">4: 強い</option><option value="5">5: 強い</option></select></label>
+        <label class="field">ストレス (1少-5強)<select id="recStress"><option value="">未取得</option><option value="1">1: 穏やか</option><option value="2">2: 少し</option><option value="3">3: 普通</option><option value="4">4: 高い</option><option value="5">5: 非常に高い</option></select></label>
+        <label class="field">身体のこわばり (1少-5強)<select id="recStiff"><option value="">未取得</option><option value="1">1: 柔軟</option><option value="2">2: 少し</option><option value="3">3: 普通</option><option value="4">4: 硬い</option><option value="5">5: かなり硬い</option></select></label>
+        <label class="field">主観的な元気さ (1-5)<select id="recEnergy"><option value="">未取得</option><option value="5">5: 充実</option><option value="4">4: 元気</option><option value="3">3: 普通</option><option value="2">2: 低め</option><option value="1">1: 消耗</option></select></label>
+      </div>
+      <button class="btn-primary" id="saveRecStateBtn">回復状態を保存</button>
+    </div>
+
+    <div class="card">
+      <span class="eyebrow">2. 回復行動の管理（実施しても状態点数は自動加算しません）</span>
+      <div class="check-grid" id="recBehaviorGrid"></div>
+      <button class="btn-gold" id="saveRecBehBtn">回復行動を保存</button>
+    </div>
+  </section>
+
+  <!-- 3. TRAINING -->
+  <section id="page-training" class="page">
+    <div id="trainRecoveryWarn" class="warn-box" style="display:none"></div>
+    <div class="card gold-edge">
+      <span class="eyebrow">TRAINING｜総合身体能力＆8大原理原則</span>
+      <h2>しなやかに強く、原理で動く</h2>
+      <p class="muted" style="margin:0 0 6px">筋力だけでなく、柔軟性・動作効率・ランニング持久力・HYROX等の機能的トレーニングまで一括管理します。</p>
+      <div class="chip-row" id="principleChips"></div>
+      <div id="principleDetail" class="list-row" style="margin-top:8px">原則をタップすると解説が表示されます。</div>
+    </div>
+
+    <div class="card">
+      <span class="eyebrow">運動ログ・筋トレ / ラン / HYROX / 動作効率</span>
+      <div class="chip-row" id="trModeChips" style="margin-bottom:8px">
+        <button class="chip active" data-trmode="strength">筋トレ(1RM/RIR)</button>
+        <button class="chip" data-trmode="running">ランニング・持久力</button>
+        <button class="chip" data-trmode="hyrox">HYROX・機能的</button>
+        <button class="chip" data-trmode="mobility">柔軟性・動作効率</button>
+      </div>
+      <div id="hyroxPresetWrap" style="display:none;margin-bottom:8px">
+        <div class="muted" style="font-weight:800">HYROX 8ステーション プリセット（タップで種目入力）</div>
+        <div class="chip-row" id="hyroxStationChips"></div>
+      </div>
+      <div class="grid-2">
+        <label class="field">種目<input type="text" id="trExercise" placeholder="例：ゴブレットスクワット / 5kmラン"></label>
+        <label class="field">部位・カテゴリ
+          <select id="trPart">
+            <option>脚・股関節</option>
+            <option>胸・押す</option>
+            <option>背中・引く</option>
+            <option>体幹・呼吸</option>
+            <option>ランニング・持久力</option>
+            <option>HYROX・機能的トレーニング</option>
+            <option>柔軟性・動作効率</option>
+          </select>
+        </label>
+        <label class="field">重量 kg<input type="number" step="0.5" min="0" id="trWeight" placeholder="例：20"></label>
+        <label class="field">回数 reps<input type="number" min="0" id="trReps" placeholder="例：10"></label>
+        <label class="field">セット数<input type="number" min="1" id="trSets" placeholder="例：3"></label>
+        <label class="field">RPE (1-10) <span id="trRirPreview" class="overload-pill">RIR --</span><input type="number" min="1" max="10" id="trRpe" placeholder="例：7"></label>
+        <label class="field">距離 km（ラン/HYROX）<input type="number" step="0.01" min="0" id="trDistanceKm" placeholder="例：5.0"></label>
+        <label class="field">時間 分 <span id="trPacePreview" class="overload-pill">--:-- /km</span><input type="number" step="0.5" min="0" id="trDurationMin" placeholder="例：28"></label>
+        <label class="field">心拍ゾーン / 強度
+          <select id="trZone">
+            <option value="">未選択</option>
+            <option value="Z1 (回復ジョグ)">Z1 (回復ジョグ)</option>
+            <option value="Z2 (有酸素ベース)">Z2 (有酸素ベース)</option>
+            <option value="Z3 (テンポ)">Z3 (テンポ)</option>
+            <option value="Z4 (閾値・HYROX)">Z4 (閾値・HYROX)</option>
+            <option value="Z5 (最大努力)">Z5 (最大努力)</option>
+          </select>
+        </label>
+        <label class="field">インターバル秒<input type="number" min="0" max="600" id="trInterval" placeholder="例：90"></label>
+      </div>
+      <label class="field">フォーム・動作効率メモ<input type="text" id="trMemo" placeholder="例：股関節ヒンジ安定 / ピッチ176"></label>
+      <button class="btn-primary" id="saveTrainingBtn">トレーニングを記録</button>
+      <button class="btn-gold" id="aiMenuProposalBtn">AI COACHメニュー提案（回復連動）</button>
+      <div id="aiMenuOutput" class="list-row" style="display:none;margin-top:8px"></div>
+    </div>
+
+    <div class="card">
+      <span class="eyebrow">週間ボリューム・持久力集計 &amp; 漸進性過負荷</span>
+      <div id="weeklyEnduranceSummary" class="list-row">直近7日間のランニング距離・HYROX・動作効率集計を表示します。</div>
+      <div id="weeklyVolumeList"></div>
+      <h3>今日の種目（1RM・RIR・前回比較付き）</h3>
+      <div id="trainingLogList"></div>
+    </div>
+  </section>
+
+  <!-- 4. LIFESTYLE -->
+  <section id="page-lifestyle" class="page">
+    <div class="subtabs" id="lifestyleTabs">
+      <button class="subtab-btn active" data-sub="meals">食事</button>
+      <button class="subtab-btn" data-sub="hydration">水分</button>
+      <button class="subtab-btn" data-sub="sleep">睡眠</button>
+      <button class="subtab-btn" data-sub="bath">入浴</button>
+      <button class="subtab-btn" data-sub="sunwalk">日光・散歩</button>
+      <button class="subtab-btn" data-sub="gut">腸内環境</button>
+      <button class="subtab-btn" data-sub="alcohol">飲酒・休肝日</button>
+    </div>
+
+    <div id="sub-meals" class="subpanel active card">
+      <span class="eyebrow">MEALS｜食事管理</span>
+      <label class="field">料理名<input type="text" id="mealDish" placeholder="例：鮭定食と味噌汁"></label>
+      <div class="grid-2">
+        <label class="field">kcal<input type="number" id="mealKcal" placeholder="620"></label>
+        <label class="field">P (g)<input type="number" step="0.1" id="mealP" placeholder="32"></label>
+        <label class="field">F (g)<input type="number" step="0.1" id="mealF" placeholder="18"></label>
+        <label class="field">C (g)<input type="number" step="0.1" id="mealC" placeholder="78"></label>
+        <label class="field">食物繊維 (g)<input type="number" step="0.1" id="mealFiber" placeholder="7"></label>
+        <label class="field">食事時間<input type="time" id="mealTime"></label>
+      </div>
+      <label class="field">食前空腹感・食後満足感メモ<input type="text" id="mealHunger" placeholder="例：腹八分でちょうどよい"></label>
+      <button class="btn-primary" id="saveMealBtn">食事を記録</button>
+      <div id="mealSummaryList" style="margin-top:10px"></div>
+    </div>
+
+    <div id="sub-hydration" class="subpanel card">
+      <span class="eyebrow">HYDRATION｜水分管理</span>
+      <label class="field">本日の水分摂取量 (ml)<input type="number" id="hydMl" placeholder="1500"></label>
+      <label class="field">発汗量・運動時補給<input type="text" id="hydSweat" placeholder="例：散歩中に300ml補給"></label>
+      <label class="check-item"><input type="checkbox" id="hydElec"> 電解質（塩分・ミネラル）を補給した</label>
+      <button class="btn-primary" id="saveHydBtn">水分記録を保存</button>
+    </div>
+
+    <div id="sub-sleep" class="subpanel card">
+      <span class="eyebrow">SLEEP｜睡眠管理</span>
+      <div class="grid-2">
+        <label class="field">就寝時刻<input type="time" id="slBed"></label>
+        <label class="field">起床時刻<input type="time" id="slWake"></label>
+        <label class="field">夜間覚醒回数<input type="number" min="0" id="slWaking" placeholder="0"></label>
+        <label class="field">昼寝 (分)<input type="number" min="0" id="slNap" placeholder="0"></label>
+      </div>
+      <button class="btn-primary" id="saveSleepDetailBtn">睡眠詳細を保存</button>
+    </div>
+
+    <div id="sub-bath" class="subpanel card">
+      <span class="eyebrow">BATH｜入浴管理</span>
+      <div class="grid-2">
+        <label class="field">入浴形態<select id="bathType"><option value="">未記録</option><option value="湯船">湯船</option><option value="シャワー">シャワー</option></select></label>
+        <label class="field">湯温 (℃)<input type="number" id="bathTemp" placeholder="40"></label>
+        <label class="field">入浴時間 (分)<input type="number" id="bathMin" placeholder="15"></label>
+        <label class="field">入浴後の変化<input type="text" id="bathChange" placeholder="例：肩が軽くなった"></label>
+      </div>
+      <button class="btn-primary" id="saveBathBtn">入浴記録を保存</button>
+    </div>
+
+    <div id="sub-sunwalk" class="subpanel card">
+      <span class="eyebrow">SUNLIGHT &amp; WALK</span>
+      <div class="grid-2">
+        <label class="field">歩行時間 (分)<input type="number" id="swWalkMin" placeholder="30"></label>
+        <label class="field">屋外活動 (分)<input type="number" id="swOutMin" placeholder="20"></label>
+      </div>
+      <label class="check-item"><input type="checkbox" id="swMorningLight"> 朝の光を浴びた</label>
+      <button class="btn-primary" id="saveSunWalkBtn">日光・散歩を保存</button>
+    </div>
+
+    <div id="sub-gut" class="subpanel card">
+      <span class="eyebrow">GUT｜腸内環境管理</span>
+      <div class="grid-2">
+        <label class="field">排便回数<input type="number" min="0" id="gutCount" placeholder="1"></label>
+        <label class="field">ブリストル便形状 (1-7)<select id="gutBristol"><option value="">未記録</option><option value="1">1: コロコロ硬い</option><option value="2">2: 硬め</option><option value="3">3: やや硬め</option><option value="4">4: 理想的なバナナ状</option><option value="5">5: やや軟らかい</option><option value="6">6: 泥状</option><option value="7">7: 水様</option></select></label>
+      </div>
+      <label class="field">腹部膨満感 (1少-5強)<select id="gutBloat"><option value="">未記録</option><option value="1">1: なし</option><option value="2">2: 軽い</option><option value="3">3: 普通</option><option value="4">4: 張りあり</option><option value="5">5: 強い</option></select></label>
+      <label class="check-item"><input type="checkbox" id="gutFerm"> 発酵食品を摂った</label>
+      <button class="btn-primary" id="saveGutBtn">腸内環境を保存</button>
+    </div>
+
+    <div id="sub-alcohol" class="subpanel card">
+      <span class="eyebrow">ALCOHOL｜飲酒・休肝日（ml×度数%÷100×0.8）</span>
+      <p class="muted">未記録と「飲酒なし（休肝日）」を明確に区別します。罪悪感ではなく身体反応の理解が目的です。</p>
+      <div class="chip-row">
+        <button class="chip" id="alcSetNoneBtn">今日は休肝日 (0g)</button>
+        <button class="chip" id="alcSetUnrecBtn">未記録に戻す</button>
+      </div>
+      <div class="grid-2" style="margin-top:8px">
+        <label class="field">飲料の種類<input type="text" id="alcName" placeholder="例：ビール"></label>
+        <label class="field">時間帯<input type="text" id="alcTime" placeholder="例：20:00"></label>
+        <label class="field">飲酒量 (ml)<input type="number" min="1" id="alcMl" placeholder="500"></label>
+        <label class="field">アルコール度数 (%)<input type="number" step="0.1" min="0" max="96" id="alcAbv" placeholder="5"></label>
+      </div>
+      <button class="btn-primary" id="addDrinkBtn">飲料を追加・合算</button>
+      <div id="alcSummaryBox" class="list-row" style="margin-top:10px"></div>
+      <div id="alcDrinksList"></div>
+    </div>
+  </section>
+
+  <!-- 5. RESET -->
+  <section id="page-reset" class="page">
+    <div class="card gold-edge">
+      <span class="eyebrow">RESET｜360度呼吸・横隔膜・胸郭・骨盤連動</span>
+      <h2>呼吸エクササイズ &amp; ペーサー</h2>
+      <label class="field">エクササイズ種目
+        <select id="resetExerciseSelect">
+          <option value="360度呼吸（横隔膜・胸郭・骨盤連動）">360度呼吸（横隔膜・胸郭・骨盤連動）</option>
+          <option value="90/90呼吸（腹横筋・腹斜筋・骨盤底筋）">90/90呼吸（腹横筋・腹斜筋・骨盤底筋）</option>
+          <option value="横向き呼吸（片側胸郭拡張）">横向き呼吸（片側胸郭拡張）</option>
+          <option value="胸椎回旋・伸展モビリティ">胸椎回旋・伸展モビリティ</option>
+          <option value="全身ストレッチ（筋膜・関節連動）">全身ストレッチ（筋膜・関節連動）</option>
+          <option value="マインドフルネス呼吸瞑想">マインドフルネス呼吸瞑想</option>
+          <option value="ボディスキャン（頭頂〜足趾）">ボディスキャン（頭頂〜足趾）</option>
+        </select>
+      </label>
+      <div class="chip-row" id="timerDurChips">
+        <button class="chip active" data-min="1">1分</button>
+        <button class="chip" data-min="3">3分</button>
+        <button class="chip" data-min="5">5分</button>
+        <button class="chip" data-min="10">10分</button>
+      </div>
+      <div class="pacer-circle-wrap">
+        <div class="pacer-circle" id="pacerCircle">
+          <div id="pacerPhase" style="font-size:16px">準備</div>
+          <div id="pacerTimer" style="font-size:22px;margin-top:2px">01:00</div>
+        </div>
+        <p class="muted" style="margin:10px 0 0;text-align:center">4秒吸う（360度・背面・横隔膜へ）→ 6秒吐く（腹横筋・腹斜筋・骨盤底筋が連動）。無理な息止めは行いません。</p>
+      </div>
+      <div class="grid-2">
+        <button class="btn-primary" id="pacerStartBtn">開始 / 再開</button>
+        <button class="btn-ghost" id="pacerStopBtn">停止・リセット</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="eyebrow">BEFORE / AFTER 比較・記録</span>
+      <div class="grid-2">
+        <label class="field">実施前の軽さ (1-5)<input type="number" min="1" max="5" id="resBefore" placeholder="3"></label>
+        <label class="field">実施後の軽さ (1-5)<input type="number" min="1" max="5" id="resAfter" placeholder="4"></label>
+      </div>
+      <label class="field">気づき・呼吸の入りやすさメモ<input type="text" id="resNote" placeholder="例：背中側に息が入りやすくなった"></label>
+      <button class="btn-gold" id="saveResetBtn">RESET記録を保存</button>
+      <div id="resetLogList" style="margin-top:10px"></div>
+    </div>
+
+    <div class="card">
+      <span class="eyebrow">外部YouTube動画紹介（公式リンク方式）</span>
+      <p class="muted" style="margin:0 0 6px">動画の無断転載・ダウンロード・再配信は行わず、公式YouTubeリンクで安全に紹介します。</p>
+      <div class="yt-card">
+        <span class="status-badge-pending">ご連絡済み・返信待ち（未提携／公式リンク紹介）</span>
+        <div style="font-size:14px;font-weight:900;color:var(--ink)">ズボラストレッチ（深井裕樹氏）公式チャンネル</div>
+        <p class="muted" style="margin:4px 0">ご本人に連携のご連絡済みで現在返信待ちのため、正式提携とは表記せず、公式YouTube検索・チャンネルへの外部リンクのみご案内しています。</p>
+        <a class="yt-link-btn" href="https://www.youtube.com/@zuborastretch" target="_blank" rel="noopener noreferrer">公式YouTubeを開く ↗</a>
+      </div>
+
+      <h3 style="margin-top:12px">マイストレッチ動画ブックマーク（YouTube公式URLのみ）</h3>
+      <div class="grid-2">
+        <label class="field">タイトル<input type="text" id="ytTitleInput" placeholder="例：寝る前5分ストレッチ"></label>
+        <label class="field">カテゴリ
+          <select id="ytCatSelect">
+            <option value="360度呼吸">360度呼吸</option>
+            <option value="胸椎・肩甲骨">胸椎・肩甲骨</option>
+            <option value="股関節・骨盤">股関節・骨盤</option>
+            <option value="ラン後ケア">ラン後ケア</option>
+            <option value="ストレッチ">ストレッチ</option>
+          </select>
+        </label>
+      </div>
+      <label class="field">公式YouTube URL（youtube.com / youtu.be のみ）<input type="url" id="ytUrlInput" placeholder="https://www.youtube.com/watch?v=..."></label>
+      <button class="btn-ghost" id="addYtLinkBtn">公式YouTubeリンクを追加</button>
+      <div id="ytBookmarkList" style="margin-top:8px"></div>
+    </div>
+
+    <div class="card">
+      <span class="eyebrow">身体の連動性（8部位チェーン）</span>
+      <p class="muted">単独の筋肉ではなく、<strong>横隔膜・胸郭・肋骨 → 胸椎 → 肩甲骨 → 腹横筋・腹斜筋・骨盤底筋 → 骨盤 → 股関節 → 足関節 → 足趾</strong>の協調でしなやかな動きを整えます。</p>
+    </div>
+  </section>
+
+  <!-- 6. AI COACH -->
+  <section id="page-aicoach" class="page">
+    <div class="card gold-edge">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+        <img src="assets/oto-coach.jpg" alt="AIコーチ oTo" style="width:76px;height:76px;object-fit:contain;border:none;background:transparent;flex-shrink:0">
+        <div>
+          <span class="eyebrow">AI COACH oTo｜心理学×行動科学×日常</span>
+          <h2 style="margin:0">oToに相談（全12分野）</h2>
+        </div>
+      </div>
+      <div class="warn-box" id="coachStatusBox">外部AI APIは未接続です。未接続時はオフライン心理・行動ガイドを表示し、架空のライブAI応答は生成しません。</div>
+      <details style="margin-bottom:8px">
+        <summary class="muted" style="cursor:pointer;font-weight:800">既存AI接続・本人同意・費用制御設定</summary>
+        <div style="margin-top:6px">
+          <label class="check-item"><input type="checkbox" id="aiSendConsentChk"> 表示中の記録（最小項目のみ）をAIへ送信することに同意する</label>
+          <label class="check-item" style="margin-top:4px"><input type="checkbox" id="aiCostApprovedChk"> 費用制御・利用上限に同意し既存AI API接続を有効化する</label>
+          <label class="field">既存AI APIエンドポイント (https://)
+            <input type="text" id="aiEndpointInput" placeholder="https://<your-vercel-host>/api/swag-coach">
+          </label>
+          <label class="field">会員認証トークン（セッション内のみ保持・保存しません）
+            <input type="text" id="aiTokenInput" placeholder="会員認証トークン（任意）">
+          </label>
+        </div>
+      </details>
+      <div class="chip-row" id="coachTopicChips">
+        <button class="chip active" data-topic="training">トレーニング</button>
+        <button class="chip" data-topic="nutrition">栄養</button>
+        <button class="chip" data-topic="sleep">睡眠</button>
+        <button class="chip" data-topic="fatigue">疲労</button>
+        <button class="chip" data-topic="stress">ストレス</button>
+        <button class="chip" data-topic="relationships">人間関係</button>
+        <button class="chip" data-topic="romance">恋愛</button>
+        <button class="chip" data-topic="work">仕事</button>
+        <button class="chip" data-topic="future">将来</button>
+        <button class="chip" data-topic="confidence">自信</button>
+        <button class="chip" data-topic="habit">習慣</button>
+        <button class="chip" data-topic="holiday">休日の過ごし方</button>
+      </div>
+      <div id="coachChatLog" style="margin-top:10px"></div>
+      <label class="field">相談内容を入力
+        <textarea id="coachInput" placeholder="例：今週忙しくて疲れているので、休日の整え方を相談したい"></textarea>
+      </label>
+      <button class="btn-primary" id="coachSendBtn">AI COACH / 心理ガイドに相談</button>
+    </div>
+  </section>
+
+  <!-- 7. MY BODY -->
+  <section id="page-mybody" class="page">
+    <div class="card gold-edge">
+      <span class="eyebrow">MY BODY｜SWAGアバター育成＆総合EXP</span>
+      <div class="score-ring-row">
+        <img src="assets/sug-bear-logo.png" alt="S.u.G SWAG 公式ピンククマ" style="width:76px;height:76px;object-fit:contain">
+        <div style="flex:1">
+          <h2 id="myAvatarTitle" style="margin-bottom:4px">整えビギナー</h2>
+          <div class="muted" id="myAvatarSub">表情: おだやか / 衣装: ピンク・ゴールドパーカー</div>
+          <div class="muted" id="myAvatarExpText" style="font-weight:800;color:var(--pink-deep);margin-top:3px">Lv.1 · 総合 0 EXP · 0 COIN</div>
+          <div class="exp-bar-wrap"><div class="exp-bar-fill" id="myAvatarExpBar" style="width:0%"></div></div>
+        </div>
+      </div>
+      <div id="myAvatarGrowthBreakdown" class="chip-row" style="margin-top:8px"></div>
+      <label class="field" style="margin-top:8px">解放済み衣装を着替える（レベル＆COINで解放）
+        <select id="myOutfitSelect"></select>
+      </label>
+      <p class="muted" style="margin-top:8px;font-size:11px">※トレーニングだけでなく、休養・睡眠・栄養・散歩・呼吸・挑戦・生活習慣で成長します（習慣のゲーム的表現であり身体的予測ではありません）。</p>
+    </div>
+
+    <div class="card">
+      <span class="eyebrow">称号100種類（正式マスターデータ読込・自動判定エンジン）</span>
+      <div class="title-slot-box" id="titles100Slot">
+        <strong>ステータス：正式100種類マスター一覧データ未格納（待機中）</strong><br>
+        <span class="muted">仕様に基づき、仮の100種類を独自生成していません。過去に策定された正式一覧（JSON/CSV）を読み込むと自動で解放判定へ接続されます。</span>
+      </div>
+      <label class="field" style="margin-top:8px">正式称号100種類マスターを読み込む（JSON / CSV）
+        <input type="file" id="importTitles100File" accept=".json,.csv,application/json,text/csv">
+      </label>
+      <div id="unlockedTitlesList" style="margin-top:6px"></div>
+    </div>
+
+    <div class="card">
+      <span class="eyebrow">身体記録</span><p class="muted">回復スコアはウェルネス参考値であり医学的診断ではありません。</p>
+      <div class="grid-2">
+        <label class="field">体重 (kg)<input type="number" step="0.1" id="mbWeight" placeholder="未記録"></label>
+        <label class="field">体脂肪率 (%)<input type="number" step="0.1" id="mbBodyFat" placeholder="未記録"></label>
+      </div>
+      <label class="field">関節可動域・痛み部位メモ<input type="text" id="mbPainNote" placeholder="例：右肩やや張り・診断ではなく記録"></label>
+      <button class="btn-primary" id="saveBodyMetricsBtn">身体記録を保存</button>
+    </div>
+
+    <div class="card">
+      <span class="eyebrow">S.u.G WALK 相互連携（独立アプリ維持・健康/心理ログ厳格除外）</span>
+      <p class="muted" style="margin:0 0 6px">アバター・コイン/経験値・歩数・散歩/休日/スポーツ・店舗/観光スポットへの導線を連携します。健康情報や心理相談の内容は店舗・第三者へ送信しません。</p>
+      <label class="check-item" style="margin-bottom:6px"><input type="checkbox" id="walkSyncConsentChk"> S.u.G WALKとの送受信に同意する</label>
+      <div id="walkSyncStatus" class="muted" style="margin-bottom:6px">未同期（同意後に送受信可能）</div>
+      <pre id="walkPayloadPreview" style="font-size:11px;background:#FFF4FA;padding:10px;border-radius:12px;overflow:auto;margin:4px 0"></pre>
+      <div class="grid-2">
+        <button class="btn-gold" id="syncWalkBtn">S.u.G WALKと送受信</button>
+        <button class="btn-ghost" id="openWalkAppBtn" style="margin-top:8px">WALKアプリを開く ↗</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="eyebrow">設定・バックアップ・復元</span>
+      <div class="grid-2">
+        <button class="btn-gold" id="exportJsonBtn">JSONエクスポート</button>
+        <button class="btn-ghost" id="resetDemoBtn" disabled>初期化（保護中）</button>
+      </div>
+      <label class="field" style="margin-top:8px">JSONから復元<input type="file" id="importJsonFile" accept="application/json,.json"></label>
+    </div>
+  </section>
+
+  <nav class="bottom-nav" aria-label="メインナビゲーション">
+    <button class="nav-btn active" data-go="today"><span class="ico">☀</span>TODAY</button>
+    <button class="nav-btn" data-go="recovery"><span class="ico">♥</span>RECOVERY</button>
+    <button class="nav-btn" data-go="training"><span class="ico">⚡</span>TRAINING</button>
+    <button class="nav-btn" data-go="lifestyle"><span class="ico">✿</span>LIFESTYLE</button>
+    <button class="nav-btn" data-go="reset"><span class="ico">◎</span>RESET</button>
+    <button class="nav-btn" data-go="aicoach"><span class="ico">✦</span>COACH</button>
+    <button class="nav-btn" data-go="mybody"><span class="ico">★</span>MY BODY</button>
+  </nav>
+</div>
+
+<div class="toast" id="toastBox"></div>
+<script src="body-ai-client-core.js"></script><script src="walk-core.js"></script><script src="healthkit-bridge.js"></script><script src="swag-training-engine.js"></script><script src="swag-progression.js"></script><script src="swag-youtube.js"></script><script src="recovery-refresh.js"></script>
+</body>
+</html>

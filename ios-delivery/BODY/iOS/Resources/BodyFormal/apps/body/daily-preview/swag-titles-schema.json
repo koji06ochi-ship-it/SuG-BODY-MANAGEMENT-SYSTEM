@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "app": "S.u.G SWAG",
+  "status": "AWAITING_OFFICIAL_100_TITLES_MASTER",
+  "note": "正式な称号100種類マスター一覧は原本リポジトリおよびWorkspace内に未格納のため、禁止事項に従い仮の100種類を捏造していません。正式一覧（JSONまたはCSV）をMY BODY画面から読み込むか、このファイルのitems配列へ配置してください。",
+  "supportedMetrics": [
+    "trainingCount",
+    "runningKm",
+    "hyroxCount",
+    "goodSleepDays",
+    "restDays",
+    "mealCount",
+    "hydrationDays",
+    "walkDays",
+    "totalSteps",
+    "resetCount",
+    "behaviorChecks",
+    "alcoholFreeDays",
+    "loggedDays"
+  ],
+  "items": []
+}

@@ -1,5 +1,6 @@
 {
   "app": "BODY",
+  "displayName": "S.u.G SWAG",
   "scheme": "SuGBODY",
   "bundleIdentifier": "jp.sugosaka.member",
   "registrationEvidence": "Existing TestFlight marker",
