@@ -70,7 +70,11 @@ struct ContentView: View {
                 ]
                 if let data = try? JSONSerialization.data(withJSONObject: result),
                    let json = String(data: data, encoding: .utf8) {
-                    bodyStore.webView.evaluateJavaScript("window.dispatchEvent(new CustomEvent('sug:healthkit-result',{detail:\(json)}))")
+                    do {
+                        _ = try await bodyStore.webView.evaluateJavaScript("window.dispatchEvent(new CustomEvent('sug:healthkit-result',{detail:\(json)}))")
+                    } catch {
+                        NSLog("SWAG JavaScript bridge error: %@", error.localizedDescription)
+                    }
                 }
             }
         }
@@ -164,7 +168,11 @@ struct ContentView: View {
                 let detail: [String: Any] = ["action": action, "ok": ok, "error": errMsg]
                 if let data = try? JSONSerialization.data(withJSONObject: detail),
                    let json = String(data: data, encoding: .utf8) {
-                    bodyStore.webView.evaluateJavaScript("window.dispatchEvent(new CustomEvent('sug:native-health-write-result',{detail:\(json)}))")
+                    do {
+                        _ = try await bodyStore.webView.evaluateJavaScript("window.dispatchEvent(new CustomEvent('sug:native-health-write-result',{detail:\(json)}))")
+                    } catch {
+                        NSLog("SWAG JavaScript bridge error: %@", error.localizedDescription)
+                    }
                 }
             }
         }
@@ -180,7 +188,11 @@ struct ContentView: View {
             let detail: [String: Any] = ["host": url.host ?? "", "params": params]
             if let data = try? JSONSerialization.data(withJSONObject: detail),
                let json = String(data: data, encoding: .utf8) {
-                bodyStore.webView.evaluateJavaScript("window.dispatchEvent(new CustomEvent('sug:walk-incoming',{detail:\(json)}))")
+                bodyStore.webView.evaluateJavaScript("window.dispatchEvent(new CustomEvent('sug:walk-incoming',{detail:\(json)}))", completionHandler: { _, error in
+                    if let error {
+                        NSLog("SWAG JavaScript bridge error: %@", error.localizedDescription)
+                    }
+                })
             }
         }
         .onChange(of: scenePhase) { _, phase in
