@@ -4,7 +4,7 @@
   "branch": "codex/body-existing-auth-ios-20261127",
   "certificateId": "LYFMNJP5Z5",
   "certificateSHA256": "4c64b7930c20963f92b22bcadc0ad129dc5b499c53e8dd873f33d76a4e8f0ff4",
-  "recoverySHA256": "71bd3f3daa47cc596c754dd521ff68391421e3dbbc8708d3591d0b77f01353ed",
+  "recoverySHA256": "cac5acfd25ce1d4b276c3c102964927c91bbf2fbdfb0deaad1520a2ad56616b0",
   "recoverySourceRef": "883ca7d032185f578001a44ad3934c0775a199c0",
   "recoverySourcePath": "ci/evolink-20261115/signing-recovery.enc",
   "team": "YW84NCLLKF",
