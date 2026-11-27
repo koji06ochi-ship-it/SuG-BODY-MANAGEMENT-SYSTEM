@@ -24,7 +24,9 @@ final class BundleHTTPServer: ObservableObject {
             let params = NWParameters.tcp
             let localPort = NWEndpoint.Port(rawValue: port)!
             params.requiredLocalEndpoint = .hostPort(host: "127.0.0.1", port: localPort)
-            let value = try NWListener(using: params, on: localPort)
+            // requiredLocalEndpoint already supplies the loopback address and fixed port.
+            // Use that endpoint directly; a second port argument can fail with EINVAL.
+            let value = try NWListener(using: params)
             value.stateUpdateHandler = { [weak self] state in
                 DispatchQueue.main.async {
                     switch state {
