@@ -7,7 +7,7 @@ on:
         description: Read accepted build status or run the newly approved SWAG 1008 startup fix
         required: true
         type: choice
-        options: [internal-status, swag-1008, swag-1008-complete]
+        options: [internal-status, swag-1008, swag-1008-complete, swag-1008-upload-status]
         default: internal-status
       expected_sha:
         description: Exact reviewed branch commit
@@ -74,7 +74,7 @@ jobs:
   accepted-build-internal-status:
     if: >-
       (inputs.mode == 'internal-status' ||
-       (inputs.mode == 'swag-1008-complete' && inputs.approve_swag_1008_internal_delivery)) &&
+       ((inputs.mode == 'swag-1008-complete' || inputs.mode == 'swag-1008-upload-status') && inputs.approve_swag_1008_internal_delivery)) &&
       github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' &&
       github.event.repository.private == false &&
       github.ref_name == 'codex/body-existing-auth-ios-20261127' &&
@@ -96,6 +96,7 @@ jobs:
             /integration/ios-existing-auth/status-internal.py
             /integration/ios-existing-auth/complete-internal.py
             /integration/ios-existing-auth/swag-1008-complete.py
+            /integration/ios-existing-auth/swag-1008-upload-status.py
             /integration/ios-existing-auth/swag-1008-policy.json
       - name: Existing isolated authentication dependencies
         run: |
@@ -113,3 +114,9 @@ jobs:
           ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
         run: |
           "$RUNNER_TEMP/sug-existing-auth-python/bin/python" integration/ios-existing-auth/swag-1008-complete.py
+      - name: Read SWAG 1008 Apple upload history without tester details
+        if: inputs.mode == 'swag-1008-upload-status'
+        env:
+          ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
+        run: |
+          "$RUNNER_TEMP/sug-existing-auth-python/bin/python" integration/ios-existing-auth/swag-1008-upload-status.py
