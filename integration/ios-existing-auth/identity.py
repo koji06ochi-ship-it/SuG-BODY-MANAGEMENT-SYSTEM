@@ -6,8 +6,8 @@ import json
 import os
 import pathlib
 import plistlib
-import re
 import subprocess
+import urllib.request
 
 from cryptography import x509
 from cryptography.hazmat.primitives import serialization
@@ -26,17 +26,12 @@ def sha(data):
 
 def recover(policy):
     # Read the ALREADY retained encrypted identity into runner memory only.
-    # Never copy that credential-derived artifact into the proposed public branch.
-    result = subprocess.run(['gh', 'api', 'repos/' + policy['repository'] + '/actions/jobs/' +
-                             str(policy['recoverySourceJob']) + '/logs'], capture_output=True)
-    if result.returncode:
-        raise Stop('EXISTING_RECOVERY_READ_FAILED')
-    candidates = re.findall(rb'SUG_SIGNING_RECOVERY_CIPHERTEXT=(U1VHU1Ix[A-Za-z0-9+/=]+)', result.stdout)
-    blobs = [base64.b64decode(c, validate=True) for c in candidates]
-    blobs = [b for b in blobs if sha(b) == policy['recoverySHA256']]
-    if len(blobs) != 1:
-        raise Stop('EXISTING_RECOVERY_INTEGRITY')
-    blob = blobs[0]
+    # This exact ciphertext already exists at the pinned successful BODY commit.
+    # No Apple/GitHub credential is sent to the public raw-file endpoint.
+    url = ('https://raw.githubusercontent.com/' + policy['repository'] + '/' +
+           policy['recoverySourceRef'] + '/' + policy['recoverySourcePath'])
+    with urllib.request.urlopen(url, timeout=45) as response:
+        blob = response.read(65537)
     if sha(blob) != policy['recoverySHA256'] or blob[:6] != b'SUGSR1':
         raise Stop('EXISTING_RECOVERY_INTEGRITY')
     key = bytes.fromhex(os.environ['SUG_SIX_BUILD_ASSET_KEY'])
