@@ -1,19 +1,24 @@
-name: SUG existing BODY authentication - current WALK and SWAG
+name: SUG SWAG 1008 startup fix - existing BODY authentication
 
 on:
   workflow_dispatch:
     inputs:
       mode:
-        description: Read-only existing-auth preflight or approved current-source delivery
+        description: Read accepted build status or run the newly approved SWAG 1008 startup fix
         required: true
         type: choice
-        options: [preflight, deliver, internal-status, complete-internal]
-        default: preflight
+        options: [internal-status, swag-1008, swag-1008-complete]
+        default: internal-status
       expected_sha:
         description: Exact reviewed branch commit
         required: true
         type: string
       confirm_zero_additional_payment:
+        required: true
+        type: boolean
+        default: false
+      approve_swag_1008_internal_delivery:
+        description: New approval for one free macOS job, real iOS startup check, signing and existing internal group delivery of SWAG 1008 only
         required: true
         type: boolean
         default: false
@@ -26,9 +31,50 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  swag-1008-startup-fix:
+    if: >-
+      inputs.mode == 'swag-1008' && inputs.approve_swag_1008_internal_delivery &&
+      github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' &&
+      github.event.repository.private == false &&
+      github.ref_name == 'codex/body-existing-auth-ios-20261127' &&
+      github.actor == 'koji06ochi-ship-it' && github.run_attempt == 1 &&
+      inputs.expected_sha == github.sha && inputs.confirm_zero_additional_payment
+    runs-on: macos-26-intel
+    timeout-minutes: 30
+    env:
+      ASC_API_KEY_ID: MM98J638B7
+      ASC_API_ISSUER_ID: d3a981e0-7557-4223-a67f-d026debee303
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /integration/ios-existing-auth/*.py
+            /integration/ios-existing-auth/swag-1008-policy.json
+            /integration/ios-existing-auth/swag-1008-input.enc
+      - uses: actions/checkout@v4
+        with:
+          ref: 4bbfd7a5285856a4531be1335b6cf22d4e48bfe6
+          path: swag-1008-source
+          persist-credentials: false
+          sparse-checkout: ios-delivery/BODY/iOS
+      - name: Existing isolated signing dependencies
+        run: |
+          python3 -m venv "$RUNNER_TEMP/sug-existing-auth-python"
+          "$RUNNER_TEMP/sug-existing-auth-python/bin/python" -m pip install --quiet --disable-pip-version-check cryptography==46.0.3 PyJWT==2.10.1
+      - name: Verify actual iOS startup, then sign and deliver SWAG 1008 once
+        env:
+          SUG_SWAG1008_APPROVED: ${{ inputs.approve_swag_1008_internal_delivery }}
+          ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
+          SUG_SIX_BUILD_ASSET_KEY: ${{ secrets.SUG_SIX_BUILD_ASSET_KEY }}
+        run: |
+          "$RUNNER_TEMP/sug-existing-auth-python/bin/python" integration/ios-existing-auth/swag-1008.py
+
   accepted-build-internal-status:
     if: >-
-      (inputs.mode == 'internal-status' || inputs.mode == 'complete-internal') &&
+      (inputs.mode == 'internal-status' ||
+       (inputs.mode == 'swag-1008-complete' && inputs.approve_swag_1008_internal_delivery)) &&
       github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' &&
       github.event.repository.private == false &&
       github.ref_name == 'codex/body-existing-auth-ios-20261127' &&
@@ -49,6 +95,8 @@ jobs:
             /integration/ios-existing-auth/policy.json
             /integration/ios-existing-auth/status-internal.py
             /integration/ios-existing-auth/complete-internal.py
+            /integration/ios-existing-auth/swag-1008-complete.py
+            /integration/ios-existing-auth/swag-1008-policy.json
       - name: Existing isolated authentication dependencies
         run: |
           python3 -m venv "$RUNNER_TEMP/sug-existing-auth-python"
@@ -59,69 +107,9 @@ jobs:
           ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
         run: |
           "$RUNNER_TEMP/sug-existing-auth-python/bin/python" integration/ios-existing-auth/status-internal.py
-      - name: Complete approved internal distribution of the two accepted builds
-        if: inputs.mode == 'complete-internal'
+      - name: Complete processing of accepted SWAG 1008 without signing or upload
+        if: inputs.mode == 'swag-1008-complete'
         env:
           ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
         run: |
-          "$RUNNER_TEMP/sug-existing-auth-python/bin/python" integration/ios-existing-auth/complete-internal.py
-
-  existing-auth-preflight:
-    if: >-
-      (inputs.mode == 'preflight' || inputs.mode == 'deliver') &&
-      github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' &&
-      github.event.repository.private == false &&
-      github.ref_name == 'codex/body-existing-auth-ios-20261127' &&
-      github.actor == 'koji06ochi-ship-it' && github.run_attempt == 1 &&
-      inputs.expected_sha == github.sha && inputs.confirm_zero_additional_payment
-    runs-on: ubuntu-latest
-    timeout-minutes: 8
-    env:
-      ASC_API_KEY_ID: MM98J638B7
-      ASC_API_ISSUER_ID: d3a981e0-7557-4223-a67f-d026debee303
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-          sparse-checkout: integration/ios-existing-auth
-      - name: Existing isolated signing dependencies
-        run: |
-          python3 -m venv "$RUNNER_TEMP/sug-existing-auth-python"
-          "$RUNNER_TEMP/sug-existing-auth-python/bin/python" -m pip install --quiet --disable-pip-version-check cryptography==46.0.3 PyJWT==2.10.1
-      - name: Existing identity and internal target verification - no private data output
-        env:
-          ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
-          SUG_SIX_BUILD_ASSET_KEY: ${{ secrets.SUG_SIX_BUILD_ASSET_KEY }}
-        run: |
-          "$RUNNER_TEMP/sug-existing-auth-python/bin/python" integration/ios-existing-auth/preflight.py
-
-  current-signed-delivery:
-    needs: existing-auth-preflight
-    if: >-
-      inputs.mode == 'deliver' &&
-      needs.existing-auth-preflight.result == 'success' &&
-      github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' &&
-      github.event.repository.private == false &&
-      github.ref_name == 'codex/body-existing-auth-ios-20261127' &&
-      github.actor == 'koji06ochi-ship-it' && github.run_attempt == 1 &&
-      inputs.expected_sha == github.sha && inputs.confirm_zero_additional_payment
-    runs-on: macos-26-intel
-    timeout-minutes: 30
-    env:
-      ASC_API_KEY_ID: MM98J638B7
-      ASC_API_ISSUER_ID: d3a981e0-7557-4223-a67f-d026debee303
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-          sparse-checkout: integration/ios-existing-auth
-      - name: Existing isolated signing dependencies
-        run: |
-          python3 -m venv "$RUNNER_TEMP/sug-existing-auth-python"
-          "$RUNNER_TEMP/sug-existing-auth-python/bin/python" -m pip install --quiet --disable-pip-version-check cryptography==46.0.3 PyJWT==2.10.1
-      - name: Sign current originals once and deliver only to existing internal groups
-        env:
-          ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
-          SUG_SIX_BUILD_ASSET_KEY: ${{ secrets.SUG_SIX_BUILD_ASSET_KEY }}
-        run: |
-          "$RUNNER_TEMP/sug-existing-auth-python/bin/python" integration/ios-existing-auth/deliver.py
+          "$RUNNER_TEMP/sug-existing-auth-python/bin/python" integration/ios-existing-auth/swag-1008-complete.py
