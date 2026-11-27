@@ -31,7 +31,8 @@ def diagnosis(raw):
     if 0 <= start < end:
         try:
             visit(plistlib.loads(raw[start:end + len(b'</plist>')]))
-        except (ValueError, plistlib.InvalidFileException):
+        except Exception:
+            # A malformed XML response must not hide the codes already extracted.
             pass
     lower = text.lower()
     patterns = {
