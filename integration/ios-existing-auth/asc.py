@@ -42,7 +42,7 @@ class Apple:
     def __init__(self):
         self.pem = existing_pem()
 
-    def request(self, path, params=None, body=None):
+    def request(self, path, params=None, body=None, method=None):
         url = path if path.startswith('https://') else 'https://api.appstoreconnect.apple.com/v1' + path
         if urllib.parse.urlsplit(url).netloc != 'api.appstoreconnect.apple.com':
             raise Stop('APPLE_PAGINATION_HOST')
@@ -52,11 +52,18 @@ class Apple:
         token = jwt.encode({'iss': os.environ['ASC_API_ISSUER_ID'], 'iat': now - 5,
                             'exp': now + 600, 'aud': 'appstoreconnect-v1'}, self.pem,
                            algorithm='ES256', headers={'kid': os.environ['ASC_API_KEY_ID'], 'typ': 'JWT'})
-        if body is not None and not (path == '/profiles' or
-                (path.startswith('/builds/') and path.endswith('/relationships/betaGroups'))):
+        method = method or ('GET' if body is None else 'POST')
+        approved_post = method == 'POST' and (path == '/profiles' or
+                (path.startswith('/builds/') and path.endswith('/relationships/betaGroups')))
+        build_match = re.fullmatch(r'/builds/([A-Za-z0-9-]+)', path)
+        approved_exemption = (method == 'PATCH' and build_match and body == {'data': {
+            'type': 'builds', 'id': build_match.group(1),
+            'attributes': {'usesNonExemptEncryption': False}}})
+        if ((body is not None and not (approved_post or approved_exemption)) or
+                (body is None and method != 'GET')):
             raise Stop('APPLE_MUTATION_OUTSIDE_APPROVAL')
         data = None if body is None else json.dumps(body).encode()
-        req = urllib.request.Request(url, data=data, method='GET' if body is None else 'POST',
+        req = urllib.request.Request(url, data=data, method=method,
                                      headers={'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json'})
         try:
             with urllib.request.urlopen(req, timeout=45) as response:

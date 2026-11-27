@@ -7,7 +7,7 @@ on:
         description: Read-only existing-auth preflight or approved current-source delivery
         required: true
         type: choice
-        options: [preflight, deliver, internal-status]
+        options: [preflight, deliver, internal-status, complete-internal]
         default: preflight
       expected_sha:
         description: Exact reviewed branch commit
@@ -28,14 +28,14 @@ concurrency:
 jobs:
   accepted-build-internal-status:
     if: >-
-      inputs.mode == 'internal-status' &&
+      (inputs.mode == 'internal-status' || inputs.mode == 'complete-internal') &&
       github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' &&
       github.event.repository.private == false &&
       github.ref_name == 'codex/body-existing-auth-ios-20261127' &&
       github.actor == 'koji06ochi-ship-it' && github.run_attempt == 1 &&
       inputs.expected_sha == github.sha && inputs.confirm_zero_additional_payment
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 18
     env:
       ASC_API_KEY_ID: MM98J638B7
       ASC_API_ISSUER_ID: d3a981e0-7557-4223-a67f-d026debee303
@@ -48,15 +48,23 @@ jobs:
             /integration/ios-existing-auth/asc.py
             /integration/ios-existing-auth/policy.json
             /integration/ios-existing-auth/status-internal.py
+            /integration/ios-existing-auth/complete-internal.py
       - name: Existing isolated authentication dependencies
         run: |
           python3 -m venv "$RUNNER_TEMP/sug-existing-auth-python"
           "$RUNNER_TEMP/sug-existing-auth-python/bin/python" -m pip install --quiet --disable-pip-version-check cryptography==46.0.3 PyJWT==2.10.1
       - name: Read accepted builds and existing internal access only
+        if: inputs.mode == 'internal-status'
         env:
           ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
         run: |
           "$RUNNER_TEMP/sug-existing-auth-python/bin/python" integration/ios-existing-auth/status-internal.py
+      - name: Complete approved internal distribution of the two accepted builds
+        if: inputs.mode == 'complete-internal'
+        env:
+          ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
+        run: |
+          "$RUNNER_TEMP/sug-existing-auth-python/bin/python" integration/ios-existing-auth/complete-internal.py
 
   existing-auth-preflight:
     if: >-
