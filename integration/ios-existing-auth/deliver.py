@@ -68,6 +68,10 @@ def assign_internal(api, target, number, deadline):
             if state in ('FAILED', 'INVALID'):
                 raise Stop('APPLE_PROCESSING_' + state)
             if state == 'VALID':
+                groups = api.rows('/betaGroups', {'filter[builds]': build['id'],
+                                                  'filter[isInternalGroup]': 'true', 'limit': 200})
+                if any(g['id'] == target['groupId'] for g in groups):
+                    assigned = True
                 if not assigned:
                     api.request('/builds/' + build['id'] + '/relationships/betaGroups',
                                 body={'data': [{'type': 'betaGroups', 'id': target['groupId']}]})
