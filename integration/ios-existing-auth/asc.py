@@ -92,6 +92,8 @@ def existing_targets(api, policy):
     """Keep every name, email, group ID and tester ID in memory on the runner."""
     targets = {}
     for app in ('SWAG', 'WALK'):
+        if app not in policy['apps']:
+            continue
         config = policy['apps'][app]
         rows = api.rows('/apps', {'filter[bundleId]': config['bundle'], 'limit': 10})
         rows = [r for r in rows if r['attributes']['bundleId'] == config['bundle']]
@@ -108,7 +110,8 @@ def existing_targets(api, policy):
         else:
             prior = set()
             for build in api.rows('/builds', {'filter[app]': app_id, 'filter[version]': '6', 'limit': 200}):
-                prior.update(g['id'] for g in api.rows('/builds/' + build['id'] + '/betaGroups', {'limit': 200}))
+                prior.update(g['id'] for g in api.rows('/betaGroups',
+                    {'filter[builds]': build['id'], 'filter[isInternalGroup]': 'true', 'limit': 200}))
             groups = [g for g in groups if g['id'] in prior]
         candidates = []
         for group in groups:

@@ -72,7 +72,8 @@ def assign_internal(api, target, number, deadline):
                     api.request('/builds/' + build['id'] + '/relationships/betaGroups',
                                 body={'data': [{'type': 'betaGroups', 'id': target['groupId']}]})
                     assigned = True
-                groups = api.rows('/builds/' + build['id'] + '/betaGroups', {'limit': 200})
+                groups = api.rows('/betaGroups', {'filter[builds]': build['id'],
+                                                  'filter[isInternalGroup]': 'true', 'limit': 200})
                 if not any(g['id'] == target['groupId'] for g in groups):
                     raise Stop('EXISTING_INTERNAL_ASSIGNMENT_NOT_CONFIRMED')
                 detail = api.request('/builds/' + build['id'] + '/buildBetaDetail')['data']['attributes']

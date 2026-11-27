@@ -20,7 +20,6 @@ on:
 
 permissions:
   contents: read
-  actions: read
 
 concurrency:
   group: sug-existing-identity-delivery
@@ -29,7 +28,7 @@ concurrency:
 jobs:
   existing-auth-preflight:
     if: >-
-      inputs.mode == 'preflight' &&
+      (inputs.mode == 'preflight' || inputs.mode == 'deliver') &&
       github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' &&
       github.event.repository.private == false &&
       github.ref_name == 'codex/body-existing-auth-ios-20261127' &&
@@ -53,13 +52,14 @@ jobs:
         env:
           ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
           SUG_SIX_BUILD_ASSET_KEY: ${{ secrets.SUG_SIX_BUILD_ASSET_KEY }}
-          GH_TOKEN: ${{ github.token }}
         run: |
           "$RUNNER_TEMP/sug-existing-auth-python/bin/python" integration/ios-existing-auth/preflight.py
 
   current-signed-delivery:
+    needs: existing-auth-preflight
     if: >-
       inputs.mode == 'deliver' &&
+      needs.existing-auth-preflight.result == 'success' &&
       github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' &&
       github.event.repository.private == false &&
       github.ref_name == 'codex/body-existing-auth-ios-20261127' &&
@@ -83,6 +83,5 @@ jobs:
         env:
           ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
           SUG_SIX_BUILD_ASSET_KEY: ${{ secrets.SUG_SIX_BUILD_ASSET_KEY }}
-          GH_TOKEN: ${{ github.token }}
         run: |
           "$RUNNER_TEMP/sug-existing-auth-python/bin/python" integration/ios-existing-auth/deliver.py

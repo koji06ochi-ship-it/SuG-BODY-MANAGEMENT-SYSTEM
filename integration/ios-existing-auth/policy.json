@@ -13,7 +13,49 @@
   "maximumNewSWAGProfiles": 1,
   "artifactUploads": false,
   "apps": {
-    "WALK": {"bundle": "jp.sugosaka.walk", "scheme": "SuGWALK", "version": "1.0.0", "minimumBuild": 8},
-    "SWAG": {"bundle": "jp.sugosaka.member", "appId": "6809570298", "scheme": "SuGBODY", "version": "1.0.0", "minimumBuild": 1007}
+    "WALK": {
+      "bundle": "jp.sugosaka.walk",
+      "scheme": "SuGWALK",
+      "version": "1.0.0",
+      "minimumBuild": 8
+    },
+    "SWAG": {
+      "bundle": "jp.sugosaka.member",
+      "appId": "6809570298",
+      "scheme": "SuGBODY",
+      "version": "1.0.0",
+      "minimumBuild": 1007
+    }
+  },
+  "currentInput": {
+    "sourceRefs": {
+      "walkNative": "913075d692ee9a1744fc20c962600819280807f3",
+      "walkWeb": "39440489b9203ba83036b9f2b06168a00a9faaf6",
+      "swag": "0eb0ab86f567e4c325fd50f6ad792bbd09deacdb"
+    },
+    "manifestSHA256": "0ab5c02cbf3ea9011da8a762d5f81bab65ae24c3fd953e30ac948f7690c0dde5",
+    "plaintextPackageSHA256": "fc49564b104f87ad57f0709ea69f4084b8822c864a4eee1d565bf562aff10bba",
+    "ciphertextSHA256": "9ba042204dc6c40c9aec54c98cf7e0c58211375d797f79dbf6393b692495a306",
+    "parts": [
+      {
+        "name": "current-source.000.enc",
+        "bytes": 47185920,
+        "sha256": "711dbfdb318e9e9344e00d2248e06c7ca196d660297420d8f13f35f534f1655a"
+      },
+      {
+        "name": "current-source.001.enc",
+        "bytes": 47185920,
+        "sha256": "22f9e156e9c6afc657cb57c3c9c03a7152a5341344ad35812aa30f906e46baa9"
+      },
+      {
+        "name": "current-source.002.enc",
+        "bytes": 34269811,
+        "sha256": "88eb38488d57b0c65e2d88b7226339b2c55a60cc214d709f532be96d3b8f2475"
+      }
+    ],
+    "fileCount": 7247,
+    "secretsIncluded": false,
+    "testerInformationIncluded": false,
+    "oldEncryptedApplicationAssetsUsed": false
   }
 }
