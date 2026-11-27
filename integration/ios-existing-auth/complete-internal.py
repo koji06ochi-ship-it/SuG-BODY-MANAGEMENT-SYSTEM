@@ -29,6 +29,10 @@ def finish(api, target, number, deadline):
     if attrs.get('usesNonExemptEncryption') not in (None, False):
         raise Stop('ENCRYPTION_DECLARATION_DIFFERS_FROM_REVIEW')
     detail_path = '/builds/' + build['id'] + '/buildBetaDetail'
+    group = api.request('/betaGroups/' + target['groupId'])['data']['attributes']
+    if group.get('isInternalGroup') is not True:
+        raise Stop('EXISTING_TARGET_IS_NOT_INTERNAL')
+    automatic_access = group.get('hasAccessToAllBuilds') is True
     state = api.request(detail_path)['data']['attributes'].get('internalBuildState')
     if attrs.get('usesNonExemptEncryption') is None:
         if state != 'MISSING_EXPORT_COMPLIANCE':
@@ -46,7 +50,9 @@ def finish(api, target, number, deadline):
             raise Stop('APPLE_INTERNAL_' + state)
         if state in ('READY_FOR_BETA_TESTING', 'IN_BETA_TESTING'):
             associated = any(g['id'] == target['groupId'] for g in groups_for_build(api, build['id']))
-            if not associated and not assignment_attempted:
+            # Automatic groups propagate asynchronously after compliance is saved.
+            # They reject a premature explicit assignment with HTTP 422.
+            if not associated and not automatic_access and not assignment_attempted:
                 api.request('/builds/' + build['id'] + '/relationships/betaGroups', body={
                     'data': [{'type': 'betaGroups', 'id': target['groupId']}]})
                 assignment_attempted = True
