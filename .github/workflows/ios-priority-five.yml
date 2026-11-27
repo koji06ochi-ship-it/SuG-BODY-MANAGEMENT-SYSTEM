@@ -1,0 +1,88 @@
+name: SUG existing BODY authentication - current WALK and SWAG
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Read-only existing-auth preflight or approved current-source delivery
+        required: true
+        type: choice
+        options: [preflight, deliver]
+        default: preflight
+      expected_sha:
+        description: Exact reviewed branch commit
+        required: true
+        type: string
+      confirm_zero_additional_payment:
+        required: true
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: sug-existing-identity-delivery
+  cancel-in-progress: false
+
+jobs:
+  existing-auth-preflight:
+    if: >-
+      inputs.mode == 'preflight' &&
+      github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' &&
+      github.event.repository.private == false &&
+      github.ref_name == 'codex/body-existing-auth-ios-20261127' &&
+      github.actor == 'koji06ochi-ship-it' && github.run_attempt == 1 &&
+      inputs.expected_sha == github.sha && inputs.confirm_zero_additional_payment
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      ASC_API_KEY_ID: MM98J638B7
+      ASC_API_ISSUER_ID: d3a981e0-7557-4223-a67f-d026debee303
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: integration/ios-existing-auth
+      - name: Existing isolated signing dependencies
+        run: |
+          python3 -m venv "$RUNNER_TEMP/sug-existing-auth-python"
+          "$RUNNER_TEMP/sug-existing-auth-python/bin/python" -m pip install --quiet --disable-pip-version-check cryptography==46.0.3 PyJWT==2.10.1
+      - name: Existing identity and internal target verification - no private data output
+        env:
+          ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
+          SUG_SIX_BUILD_ASSET_KEY: ${{ secrets.SUG_SIX_BUILD_ASSET_KEY }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          "$RUNNER_TEMP/sug-existing-auth-python/bin/python" integration/ios-existing-auth/preflight.py
+
+  current-signed-delivery:
+    if: >-
+      inputs.mode == 'deliver' &&
+      github.repository == 'koji06ochi-ship-it/SuG-BODY-MANAGEMENT-SYSTEM' &&
+      github.event.repository.private == false &&
+      github.ref_name == 'codex/body-existing-auth-ios-20261127' &&
+      github.actor == 'koji06ochi-ship-it' && github.run_attempt == 1 &&
+      inputs.expected_sha == github.sha && inputs.confirm_zero_additional_payment
+    runs-on: macos-26-intel
+    timeout-minutes: 30
+    env:
+      ASC_API_KEY_ID: MM98J638B7
+      ASC_API_ISSUER_ID: d3a981e0-7557-4223-a67f-d026debee303
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: integration/ios-existing-auth
+      - name: Existing isolated signing dependencies
+        run: |
+          python3 -m venv "$RUNNER_TEMP/sug-existing-auth-python"
+          "$RUNNER_TEMP/sug-existing-auth-python/bin/python" -m pip install --quiet --disable-pip-version-check cryptography==46.0.3 PyJWT==2.10.1
+      - name: Sign current originals once and deliver only to existing internal groups
+        env:
+          ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
+          SUG_SIX_BUILD_ASSET_KEY: ${{ secrets.SUG_SIX_BUILD_ASSET_KEY }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          "$RUNNER_TEMP/sug-existing-auth-python/bin/python" integration/ios-existing-auth/deliver.py
