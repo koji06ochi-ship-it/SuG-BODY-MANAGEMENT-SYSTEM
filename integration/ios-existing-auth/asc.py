@@ -3,6 +3,7 @@ import base64
 import json
 import os
 import pathlib
+import re
 import time
 import urllib.error
 import urllib.parse
@@ -63,7 +64,17 @@ class Apple:
                 return json.loads(raw) if raw else {}
         except urllib.error.HTTPError as error:
             # Do not expose response bodies, tester/group identifiers, or bearer tokens.
-            raise Stop('APPLE_HTTP_' + str(error.code)) from None
+            family = '.'.join(p.upper() for p in urllib.parse.urlsplit(url).path.split('/')
+                              if p in ('apps', 'certificates', 'profiles', 'betaGroups', 'betaTesters', 'builds', 'buildBetaDetail', 'bundleIds'))
+            codes = []
+            try:
+                for row in json.loads(error.read()).get('errors', []):
+                    code = str(row.get('code', ''))
+                    if re.fullmatch('[A-Z0-9_.-]{1,80}', code):
+                        codes.append(code)
+            except Exception:
+                pass
+            raise Stop('APPLE_HTTP_' + str(error.code) + '_' + family + '_' + '.'.join(codes)) from None
 
     def rows(self, path, params=None):
         result = []

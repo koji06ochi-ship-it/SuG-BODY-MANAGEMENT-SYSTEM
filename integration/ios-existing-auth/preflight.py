@@ -3,6 +3,7 @@ import base64
 import json
 import pathlib
 import sys
+from cryptography.hazmat.primitives import serialization
 
 from asc import Apple, Stop, existing_targets
 from identity import recover, live_certificate, existing_profiles
@@ -15,11 +16,13 @@ def main():
     policy = json.loads((HERE / 'policy.json').read_text())
     api = Apple()
     _, leaf, _, _ = recover(policy)
+    # Expose only this pinned certificate's PUBLIC DER, even if a later Apple permission check fails.
+    print('SUG_EXISTING_PUBLIC_CERTIFICATE_DER=' + base64.b64encode(
+        leaf.public_bytes(serialization.Encoding.DER)).decode(), flush=True)
     der = live_certificate(api, policy, leaf)
     targets = existing_targets(api, policy)
     profiles = existing_profiles(api, policy)
     # An X.509 certificate is public; its distribution private key never leaves the runner.
-    print('SUG_EXISTING_PUBLIC_CERTIFICATE_DER=' + base64.b64encode(der).decode(), flush=True)
     status = {'authentication': 'EXISTING_BODY_SECRET_OK', 'existingKeyPair': 'MATCH',
               'newCertificates': 0, 'newProfiles': 0, 'uploads': 0,
               'apps': {app: {'existingTargetVerified': app in targets, 'existingProfileReusable': app in profiles}
