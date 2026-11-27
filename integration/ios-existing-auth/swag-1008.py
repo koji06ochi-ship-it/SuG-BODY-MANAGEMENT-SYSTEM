@@ -73,10 +73,22 @@ def main():
         helper.CONFIG = policy
         helper.toolchain()
         identity.mkdir(mode=0o700); output.mkdir(mode=0o700)
-        stage = 'ACTUAL_IOS_STARTUP'
-        spec = importlib.util.spec_from_file_location('swag_startup', HERE / 'swag-startup-smoke.py')
-        smoke = importlib.util.module_from_spec(spec); spec.loader.exec_module(smoke)
-        smoke.startup(destination, temp, output / 'startup.log')
+        stage = 'VERIFIED_ACTUAL_IOS_STARTUP_PROVENANCE'
+        if os.environ.get('SUG_SWAG1008_REUSE_VERIFIED_STARTUP') != 'true':
+            raise Stop('SWAG1008_UPLOAD_RESUMPTION_REQUIRES_PRIOR_ACTUAL_STARTUP_PROOF')
+        proof = json.loads((HERE / 'swag-1008-runtime-proof.json').read_text())
+        if (proof['runId'] != 45989334005 or proof['macJobId'] != 140472887802 or
+                proof['pipelineSHA'] != 'd5fe35721ae8e797dd7ea9343cce2122d35f6eed' or
+                proof['sourceSHA'] != sha or proof['nativeTree'] != tree or
+                proof['serverSHA256'] != policy['source']['serverSHA256'] or
+                proof['manifestSHA256'] != policy['currentInput']['manifestSHA256'] or
+                proof['build'] != '1008' or proof['realAppLaunched'] is not True or
+                proof['topHTTP'] != 200 or proof['babyZoneResourcesServed'] is not True or
+                proof['fixedIPv4LoopbackOnly'] is not True or
+                proof['topSHA256'] != digest((projects['SWAG']['web'] / 'index.html').read_bytes()) or
+                proof['babyZoneSHA256'] != digest((root / 'pipeline/pinkman-baby-zone.js').read_bytes())):
+            raise Stop('SWAG1008_PRIOR_ACTUAL_STARTUP_PROOF_DIFFERS_DO_NOT_REBUILD')
+        print('SUG_SWAG1008_PREVIOUS_ACTUAL_STARTUP_REUSED=45989334005:SAME_SOURCE_TOP_AND_BABY_ZONE', flush=True)
         stage = 'EXISTING_IDENTITY_IMPORT'
         compatible = pkcs12.serialize_key_and_certificates(b'S.u.G existing distribution', private, leaf, chain,
             serialization.PrivateFormat.PKCS12.encryption_builder().kdf_rounds(50000)
@@ -101,9 +113,9 @@ def main():
         if candidate.exists():
             raise Stop('DO_NOT_OVERWRITE_EXISTING_RUNNER_KEY')
         key_path = candidate; key_path.write_bytes(api.pem); key_path.chmod(0o600)
-        helper.run(['xcrun', 'altool', '--upload-app', '--type', 'ios', '--file', output / record['ipa'],
-                    '--apiKey', os.environ['ASC_API_KEY_ID'], '--apiIssuer', os.environ['ASC_API_ISSUER_ID']],
-                   output / 'SWAG-upload.log')
+        spec = importlib.util.spec_from_file_location('swag_upload', HERE / 'swag-1008-upload.py')
+        upload_helper = importlib.util.module_from_spec(spec); spec.loader.exec_module(upload_helper)
+        upload_helper.upload(output / record['ipa'], record['sha256'], output / 'SWAG-upload.log')
         print('SUG_UPLOAD_ACCEPTED=SWAG:1008', flush=True)
         stage = 'EXISTING_INTERNAL_GROUP_PROPAGATION'
         # Apple processing must not consume another macOS run. Continue on free Ubuntu.

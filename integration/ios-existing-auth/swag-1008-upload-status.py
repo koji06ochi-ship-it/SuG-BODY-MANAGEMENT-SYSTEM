@@ -43,6 +43,13 @@ def main():
     print('SUG_SWAG1008_APPLE_RECEIPT=' + json.dumps({
         'build': '1008', 'acceptedBuildCount': len(builds), 'processing': sorted(build_states)
     }, separators=(',', ':')), flush=True)
+    app_builds = api.rows('/builds', {'filter[app]': target['appId'], 'limit': 100})
+    numbers = [str(b.get('attributes', {}).get('version', '')) for b in app_builds]
+    numbers = [int(n) for n in numbers if re.fullmatch(r'[0-9]{1,8}', n)]
+    print('SUG_SWAG1008_APPLE_VERSION_RANGE=' + json.dumps({
+        'highestAcceptedNumericBuild': max(numbers) if numbers else None,
+        'acceptedNumericBuildHigherThan1008': any(n > 1008 for n in numbers)
+    }, separators=(',', ':')), flush=True)
     uploads = api.rows('/apps/' + target['appId'] + '/buildUploads', {'limit': 100})
     uploads = [u for u in uploads if str(u.get('attributes', {}).get('cfBundleVersion')) == '1008'
                and u.get('attributes', {}).get('cfBundleShortVersionString') == '1.0.0']

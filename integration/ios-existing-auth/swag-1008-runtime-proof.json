@@ -1,0 +1,17 @@
+{
+  "runId": 45989334005,
+  "macJobId": 140472887802,
+  "pipelineSHA": "d5fe35721ae8e797dd7ea9343cce2122d35f6eed",
+  "sourceSHA": "4bbfd7a5285856a4531be1335b6cf22d4e48bfe6",
+  "nativeTree": "9a2a20dec8c53641f40e3739ac6d2944c2151ccb",
+  "manifestSHA256": "78051584a260921f31e3248829f9825ff409074c6578a71cdc681e3b8931af44",
+  "serverSHA256": "a1c07f3531cc4446ad0a6ee26e001e134f6a787ed08cb2ac503a1f103169c52a",
+  "build": "1008",
+  "realAppLaunched": true,
+  "topHTTP": 200,
+  "topSHA256": "11c1426bc37e52788bd42b127fc1f42fb95a73c5fc788fcfa0db36777cf33782",
+  "babyZoneResourcesServed": true,
+  "babyZoneSHA256": "841521de4086243f4114921ae04c63f7689efe3810efd9a00bbae9a60807dfb2",
+  "fixedIPv4LoopbackOnly": true,
+  "physicalIPhoneVerified": false
+}
